@@ -19,11 +19,7 @@ export default function LoginPage() {
       router.replace("/");
       return;
     }
-    // 기존 사용자가 없으면 바로 회원가입 모드
-    authApi.status().then(({ has_users }) => {
-      if (!has_users) setMode("signup");
-      setCheckingAuth(false);
-    }).catch(() => setCheckingAuth(false));
+    setCheckingAuth(false);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {

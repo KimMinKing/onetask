@@ -2,6 +2,32 @@ import { getAuthHeaders } from "./api";
 
 const VAPID_PUBLIC_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? "";
 
+export async function registerServiceWorker(): Promise<ServiceWorkerRegistration | null> {
+  if (!("serviceWorker" in navigator)) return null;
+
+  try {
+    // 기존 등록된 SW가 있으면 제거
+    const existing = await navigator.serviceWorker.getRegistration();
+    if (existing) {
+      await existing.unregister();
+    }
+
+    // 새로 등록
+    const reg = await navigator.serviceWorker.register("/sw.js", {
+      scope: "/",
+    });
+    console.log("ServiceWorker registered", reg.scope);
+
+    // 활성화 대기
+    await reg.update();
+
+    return reg;
+  } catch (e) {
+    console.error("ServiceWorker registration failed", e);
+    return null;
+  }
+}
+
 function urlBase64ToUint8Array(base64String: string): ArrayBuffer {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");

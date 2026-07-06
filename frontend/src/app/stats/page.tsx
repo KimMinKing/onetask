@@ -14,6 +14,17 @@ type Overview = {
   ja_levels: { level: string; total: number; reviewed: number; mastered: number }[];
 };
 
+type Achievement = {
+  id: number;
+  code: string;
+  title: string;
+  description: string;
+  category: string;
+  icon: string;
+  requirement_value: number;
+  unlocked: boolean;
+};
+
 function ProgressBar({ value, max, color = "bg-jeok-500" }: { value: number; max: number; color?: string }) {
   const pct = max > 0 ? Math.min((value / max) * 100, 100) : 0;
   return (
@@ -82,11 +93,20 @@ export default function StatsPage() {
   const router = useRouter();
   const [data, setData] = useState<Overview | null>(null);
   const [history, setHistory] = useState<{ date: string; count: number }[]>([]);
+  const [achievements, setAchievements] = useState<Achievement[]>([]);
+  const [achievementStats, setAchievementStats] = useState<{
+    total: number;
+    unlocked: number;
+    completion_rate: number;
+    by_category: { category: string; total: number; unlocked: number }[];
+  } | null>(null);
   const [tab, setTab] = useState<LangTab>("zh");
 
   useEffect(() => {
     api.stats.overview().then(setData).catch(() => {});
     api.stats.history().then(setHistory).catch(() => {});
+    api.achievements.list().then(setAchievements).catch(() => {});
+    api.achievements.stats().then(setAchievementStats).catch(() => {});
   }, []);
 
   if (!data) return (
@@ -116,6 +136,60 @@ export default function StatsPage() {
       <div className="flex-1 px-4 py-5 space-y-4 overflow-y-auto">
         {/* 히트맵 */}
         <Heatmap data={history} />
+
+        {/* 업적 섹션 */}
+        {achievementStats && (
+          <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4">
+            <div className="flex justify-between items-center mb-3">
+              <p className="text-sm font-semibold text-stone-200">업적</p>
+              <p className="text-xs text-stone-500">{achievementStats.unlocked} / {achievementStats.total}개 해금</p>
+            </div>
+            <ProgressBar value={achievementStats.unlocked} max={achievementStats.total} color="bg-purple-500" />
+
+            {/* 카테고리별 업적 */}
+            <div className="mt-4 space-y-2">
+              {achievementStats.by_category.map((cat) => {
+                const catLabel: Record<string, string> = {
+                  streak: "🔥 연속 학습",
+                  mastery: "📚 단어 습득",
+                  consistency: "🔄 복습 달성",
+                };
+                const catUnlocked = achievements.filter((a) => a.category === cat.category && a.unlocked);
+                return (
+                  <div key={cat.category} className="flex items-center gap-3">
+                    <span className="text-xs text-stone-400 w-20">{catLabel[cat.category] || cat.category}</span>
+                    <div className="flex-1 h-1.5 bg-dark-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-purple-700 rounded-full transition-all duration-500"
+                        style={{ width: `${(cat.unlocked / (cat.total || 1)) * 100}%` }}
+                      />
+                    </div>
+                    <span className="text-xs text-stone-600">{cat.unlocked}/{cat.total}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* 해금된 업적 표시 */}
+            {achievements.filter((a) => a.unlocked).length > 0 && (
+              <div className="mt-4 pt-4 border-t border-stone-700">
+                <p className="text-xs text-stone-500 mb-2">해금된 업적</p>
+                <div className="flex flex-wrap gap-2">
+                  {achievements.filter((a) => a.unlocked).map((a) => (
+                    <div
+                      key={a.id}
+                      className="flex items-center gap-1.5 bg-purple-900/30 border border-purple-800 rounded-full px-3 py-1"
+                      title={a.description}
+                    >
+                      <span>{a.icon}</span>
+                      <span className="text-xs text-purple-300">{a.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* 언어 탭 */}
         <div className="flex bg-dark-200 rounded-2xl p-1 gap-1">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ServiceWorkerInit } from "@/components/ServiceWorkerInit";
 
 const a2g = localFont({
   src: [
@@ -17,7 +18,6 @@ const a2g = localFont({
 export const metadata: Metadata = {
   title: "onetask",
   description: "개인 학습 + 일정 대시보드",
-  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
@@ -39,6 +39,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body className={`${a2g.variable} antialiased`}>
+        <ServiceWorkerInit />
         <div id="app-frame">
           {children}
         </div>

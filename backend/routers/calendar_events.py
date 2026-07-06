@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional
+from datetime import datetime, timezone
 
 from database import get_db
 from models import CalendarEvent
@@ -13,12 +14,18 @@ class EventCreate(BaseModel):
     title: str
     event_date: str   # "YYYY-MM-DD"
     event_time: Optional[str] = None  # "HH:MM"
+    rrule: Optional[str] = None
+    recurring_until: Optional[datetime] = None
+    color: Optional[str] = None  # "#RRGGBB"
 
 
 class EventUpdate(BaseModel):
     title: Optional[str] = None
     event_date: Optional[str] = None
     event_time: Optional[str] = None
+    rrule: Optional[str] = None
+    recurring_until: Optional[datetime] = None
+    color: Optional[str] = None
 
 
 @router.get("/")
@@ -47,6 +54,24 @@ def update_event(event_id: int, body: EventUpdate, db: Session = Depends(get_db)
         event.event_date = body.event_date
     if body.event_time is not None:
         event.event_time = body.event_time
+    if body.rrule is not None:
+        event.rrule = body.rrule
+    if body.recurring_until is not None:
+        event.recurring_until = body.recurring_until
+    if body.color is not None:
+        event.color = body.color
+    db.commit()
+    db.refresh(event)
+    return event
+
+
+@router.post("/{event_id}/move")
+def move_event(event_id: int, new_date: str, db: Session = Depends(get_db)):
+    """이벤트 날짜 변경 (드래그앤드롭용)"""
+    event = db.query(CalendarEvent).filter(CalendarEvent.id == event_id).first()
+    if not event:
+        raise HTTPException(status_code=404, detail="Event not found")
+    event.event_date = new_date
     db.commit()
     db.refresh(event)
     return event

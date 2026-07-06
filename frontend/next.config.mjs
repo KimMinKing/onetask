@@ -1,16 +1,14 @@
-import withPWA from "@ducanh2912/next-pwa";
-
-const pwa = withPWA({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === "development",
-  customWorkerSrc: "src/worker",
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  // 이미지 요청을 백엔드로 프록시
+  async rewrites() {
+    return [
+      {
+        source: '/images/:path*',
+        destination: 'https://api.tradediary.site/images/:path*',
+      },
+    ];
+  },
 };
 
-export default pwa(nextConfig);
+export default nextConfig;

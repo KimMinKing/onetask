@@ -690,7 +690,7 @@ const SWIPE_THRESHOLD = 100;
 function ZhSwipeCard({ word, flipped, onFlip, onSwipe }: {
   word: Word; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void;
 }) {
-  const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const BASE_URL = "";  // Use relative path: /images/...
   const firstRender = useRef(true);
   useEffect(() => { playAudio(word.chinese); return () => stopAll(); }, []);
   useEffect(() => {

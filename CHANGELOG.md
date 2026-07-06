@@ -2,6 +2,76 @@
 
 ---
 
+## 2026-06-02
+### 완료
+- Todo/캘린더 보완 구현 완료
+  - Phase 1: Backend 반복 작업/이벤트
+    - `Task`, `CalendarEvent` 모델에 `rrule`, `recurring_until`, `color` 필드 추가
+    - `Task`, `WordCard` 모델에 `user_id` 외래키 추가
+    - `rrule_utils.py` 신규: RRule 파싱/생성 유틸리티 (dateutil.rrule 기반)
+    - `tasks.py` 라우터: 반복 작업 완료 시 다음 날짜 자동 생성 로직 추가
+    - `calendar_events.py` 라우터: 색상, 반복 설정, 드래그앤드롭 이동 API 추가
+    - `achievements.py` 라우터: 업적 체크/해금/통계 API 추가, streak/mastery/consistency 계산
+    - `tasks.py`, `achievements.py`에 user_id 필터링 추가
+  - Phase 2: 캘린더 보강
+    - `WeekView.tsx` 컴포넌트: 주별 뷰 (24시간 × 7일 그리드, 드래그앤드롭)
+    - `DayView.tsx` 컴포넌트: 일별 뷰 (24시간 타임라인, 이벤트/작업 표시)
+    - `RecurrencePicker.tsx` 컴포넌트: 반복 설정 UI (매일/매주/매월/매년, 요일 선택)
+    - `calendar/page.tsx`: 뷰 모드 토글 (월/주/일), 색상 선택, 반복 설정 UI 추가
+    - `api.ts`: `calendarEvents.move`, `tasks.create` rrule, `achievements` API 추가
+  - Phase 3: 통계/분석
+    - `stats/page.tsx`: 업적 섹션 추가 (해금 진행률, 카테고리별, 해금된 업적 표시)
+    - `achievements` API 연동: 업적 목록, 통계, 체크 기능
+
+### 변경된 파일
+- `backend/models.py` — Task, CalendarEvent, WordCard에 user_id, rrule, recurring_until, color 필드 추가
+- `backend/rrule_utils.py` — 신규: RRule 파싱/생성 유틸리티
+- `backend/routers/tasks.py` — 반복 작업 API, user_id 필터링 추가
+- `backend/routers/calendar_events.py` — 색상, 반복, 드래그앤드롭 API 추가
+- `backend/routers/achievements.py` — 업적 체크/해금/통계 API 추가
+- `frontend/src/components/WeekView.tsx` — 신규: 주별 캘린더 뷰
+- `frontend/src/components/DayView.tsx` — 신규: 일별 캘린더 뷰
+- `frontend/src/components/RecurrencePicker.tsx` — 신규: 반복 설정 UI
+- `frontend/src/app/calendar/page.tsx` — 뷰 모드 토글, 색상/반복 UI 추가
+- `frontend/src/app/stats/page.tsx` — 업적 섹션 추가
+- `frontend/src/lib/api.ts` — achievements API, calendarEvents.move 추가
+
+### 다음 세션
+- DB 마이그레이션 실행 (새 컬럼 반영)
+- 테스트: 반복 작업 완료 시 다음 날짜 생성 확인
+- 테스트: 캘린더 주/일 뷰, 드래그앤드롭 확인
+- 테스트: 업적 시스템 동작 확인
+
+---
+
+## 2026-06-01
+### 완료
+- Spring 학습 커리큘럼 구현 완료 (Python/미적분 패턴)
+  - 백엔드: `SpringTopic`, `SpringTopicCard` 모델 및 `/spring-topics` API 라우터
+  - 시드 데이터: IoC/DI, AOP, MVC, Boot, JPA, Transaction, Security, REST, Testing, Validation 등 10단계 20개 주제
+  - 프론트엔드: `spring/curriculum.ts`, `spring/challenge.ts`, `spring/page.tsx` (Python과 동일 구조)
+  - 학습 UI: 📖 학습 / ✏️ 예제 / 🧠 연습 / 🏆 도전 (4개 이상 통과 시 다음 단계 해금)
+  - 진행률 저장: localStorage 기반 spring_progress
+- 백엔드 DB 스키마 수정: `SpringTopic.difficulty` varchar(10) → varchar(20) ("intermediate" 지원)
+- 백엔드 라우터 추가: `spring_topics` 등록 (`/api/spring-topics/*`)
+- 백엔드 재빌드 완료: Docker Compose로 이미지 재생성 및 컨테이너 재시작
+- 시드 데이터 20개 완료: IoC Container부터 @Valid & Bean Validation까지
+
+### 변경된 파일
+- `backend/models.py` — SpringTopic, SpringTopicCard 모델 추가
+- `backend/routers/spring_topics.py` — 신규: Spring 학습 주제 API 라우터 (FSRS 포함)
+- `backend/routers/spring_topics.py` — SEED_TOPICS 20개 (모듈 레벨)
+- `backend/main.py` — spring_topics 라우터 등록
+- `frontend/src/app/spring/curriculum.ts` — Spring 10단계 커리큘럼 데이터
+- `frontend/src/app/spring/challenge.ts` — Spring 도전 퀴즈 10단계 × 5문제
+- `frontend/src/app/spring/page.tsx` — Spring 학습 메인 페이지 (Python과 동일 UI)
+
+### 다음 세션
+- Spring 학습 페이지 테스트 (localhost:3000/spring)
+- 필요시 백엔드 Spring API 연동 (현재는 정적 데이터만 사용)
+
+---
+
 ## 2026-04-30
 ### 완료
 - HSK3~6 단어-뜻/예문 불일치 프로덕션 DB 수정

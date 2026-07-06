@@ -1,4 +1,5 @@
-const BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// 브라우저와 서버 모두 상대 경로 사용
+const BASE = "/api";
 
 export function getAuthHeaders(): Record<string, string> {
   if (typeof window === "undefined") return {};
@@ -27,6 +28,9 @@ export interface CalendarEvent {
   event_date: string;   // "YYYY-MM-DD"
   event_time: string | null; // "HH:MM"
   created_at: string;
+  rrule: string | null;
+  recurring_until: string | null;
+  color: string | null;
 }
 
 export interface Category {
@@ -126,7 +130,7 @@ export const api = {
   tasks: {
     list: (status?: Status) =>
       req<Task[]>(`/tasks/${status ? `?status=${status}` : ""}`),
-    create: (data: { title: string; category?: string; urgency?: Urgency; due_at?: string }) =>
+    create: (data: { title: string; category?: string; urgency?: Urgency; due_at?: string; rrule?: string }) =>
       req<Task>("/tasks/", { method: "POST", body: JSON.stringify(data) }),
     update: (id: number, data: Partial<Task>) =>
       req<Task>(`/tasks/${id}`, { method: "PATCH", body: JSON.stringify(data) }),
@@ -145,12 +149,14 @@ export const api = {
   calendarEvents: {
     list: (year: number, month: number) =>
       req<CalendarEvent[]>(`/calendar-events/?year=${year}&month=${month}`),
-    create: (data: { title: string; event_date: string; event_time?: string }) =>
+    create: (data: { title: string; event_date: string; event_time?: string; color?: string; rrule?: string }) =>
       req<CalendarEvent>("/calendar-events/", { method: "POST", body: JSON.stringify(data) }),
-    update: (id: number, data: { title?: string; event_date?: string; event_time?: string }) =>
+    update: (id: number, data: { title?: string; event_date?: string; event_time?: string; color?: string; rrule?: string }) =>
       req<CalendarEvent>(`/calendar-events/${id}`, { method: "PATCH", body: JSON.stringify(data) }),
     delete: (id: number) =>
       req<{ ok: boolean }>(`/calendar-events/${id}`, { method: "DELETE" }),
+    move: (id: number, newDate: string) =>
+      req<CalendarEvent>(`/calendar-events/${id}/move?new_date=${newDate}`, { method: "POST" }),
   },
   categories: {
     list: () => req<Category[]>("/categories/"),
@@ -242,5 +248,115 @@ export const api = {
       req<{ word_id: number; is_favorite: boolean }>(`/japanese-words/${id}/favorite`, { method: "POST" }),
     favorites: (jlpt_level?: string) =>
       req<JapaneseWord[]>(`/japanese-words/favorites${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),
+  },
+  achievements: {
+    list: () => req<{
+      id: number;
+      code: string;
+      title: string;
+      description: string;
+      category: string;
+      icon: string;
+      requirement_value: number;
+      unlocked: boolean;
+    }[]>("/achievements/"),
+    check: () => req<{
+      streak: number;
+      mastery: number;
+      reviews: number;
+      new_unlocks: number;
+    }>("/achievements/check", { method: "POST" }),
+    stats: () => req<{
+      total: number;
+      unlocked: number;
+      completion_rate: number;
+      by_category: { category: string; total: number; unlocked: number }[];
+    }>("/achievements/stats"),
+  },
+  search: {
+    global: (params: { q?: string; lang?: string; level?: string; state?: number; favorites_only?: true; due_only?: true }) => {
+      const query = new URLSearchParams();
+      if (params.q) query.set("q", params.q);
+      if (params.lang) query.set("lang", params.lang);
+      if (params.level) query.set("level", params.level);
+      if (params.state !== undefined) query.set("state", params.state.toString());
+      if (params.favorites_only) query.set("favorites_only", "true");
+      if (params.due_only) query.set("due_only", "true");
+      return req<{
+        tasks: Task[];
+        chinese: Word[];
+        english: EnglishWord[];
+        japanese: JapaneseWord[];
+      }>(`/search?${query.toString()}`).then(({ chinese, english, japanese }) => [
+        ...chinese.map(w => ({ ...w, type: "chinese" as const })),
+        ...english.map(w => ({ ...w, type: "english" as const })),
+        ...japanese.map(w => ({ ...w, type: "japanese" as const })),
+      ]);
+    },
+  },
+  settings: {
+    get: () => req<{
+      daily_goal_words: number;
+      daily_goal_tasks: number;
+      notification_hour: number;
+      notification_enabled: boolean;
+      theme: string;
+      language_priority: string;
+    }>("/settings"),
+    update: (data: {
+      daily_goal_words?: number;
+      daily_goal_tasks?: number;
+      notification_hour?: number;
+      notification_enabled?: boolean;
+      theme?: string;
+      language_priority?: string;
+    }) =>
+      req<{
+        daily_goal_words: number;
+        daily_goal_tasks: number;
+        notification_hour: number;
+        notification_enabled: boolean;
+        theme: string;
+        language_priority: string;
+      }>("/settings", { method: "PUT", body: JSON.stringify(data) }),
+  },
+  quizzes: {
+    exampleQuiz: (wordLang: string) =>
+      req<{
+        question: string;
+        options: string[];
+        correct_answer: string;
+        word_id: number;
+        word_lang: string;
+        quiz_type: string;
+      }>(`/quizzes/example-quiz?word_lang=${wordLang}`),
+    sentenceCompletion: (wordLang: string) =>
+      req<{
+        question: string;
+        options: string[];
+        correct_answer: string;
+        word_id: number;
+        word_lang: string;
+        quiz_type: string;
+      }>(`/quizzes/sentence-completion?word_lang=${wordLang}`),
+    checkPronunciation: (wordLang: string) =>
+      req<{
+        word_id: number;
+        word_lang: string;
+        target_word: string;
+        instruction: string;
+        quiz_type: string;
+      }>(`/quizzes/pronunciation/check?word_lang=${wordLang}`),
+    submitAnswer: (data: {
+      word_id: number;
+      word_lang: string;
+      quiz_type: string;
+      answer: string;
+      correct: boolean;
+    }) =>
+      req<{ correct: boolean; word_id: number; quiz_type: string }>(
+        "/quizzes/answer",
+        { method: "POST", body: JSON.stringify(data) }
+      ),
   },
 };
