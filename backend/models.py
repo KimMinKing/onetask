@@ -84,7 +84,7 @@ class WordCard(Base):
     __tablename__ = "word_cards"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=True)
     word_id = Column(Integer, ForeignKey("words.id", ondelete="CASCADE"), nullable=False)
     state = Column(Integer, default=0, nullable=False)      # 0=New 1=Learning 2=Review 3=Relearning
     step = Column(Integer, default=0, nullable=True)
