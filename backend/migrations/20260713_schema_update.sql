@@ -1,8 +1,19 @@
 BEGIN;
 
 ALTER TABLE IF EXISTS public.tasks
+  ADD COLUMN IF NOT EXISTS user_id integer,
   ADD COLUMN IF NOT EXISTS rrule character varying,
   ADD COLUMN IF NOT EXISTS recurring_until timestamp with time zone;
+
+UPDATE public.tasks
+SET user_id = (
+  SELECT id
+  FROM public.users
+  ORDER BY is_master DESC, id ASC
+  LIMIT 1
+)
+WHERE user_id IS NULL
+  AND EXISTS (SELECT 1 FROM public.users);
 
 ALTER TABLE IF EXISTS public.calendar_events
   ADD COLUMN IF NOT EXISTS rrule character varying,
@@ -89,6 +100,18 @@ CREATE TABLE IF NOT EXISTS public.spring_topic_cards (
 
 DO $$
 BEGIN
+  IF EXISTS (
+    SELECT 1
+    FROM information_schema.tables
+    WHERE table_schema = 'public'
+      AND table_name = 'tasks'
+  ) THEN
+    ALTER TABLE public.tasks
+      ADD CONSTRAINT tasks_user_id_fkey
+      FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE
+      NOT VALID;
+  END IF;
+
   IF EXISTS (
     SELECT 1
     FROM information_schema.tables

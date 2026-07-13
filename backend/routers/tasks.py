@@ -86,6 +86,7 @@ def update_task(task_id: int, body: TaskUpdate, db: Session = Depends(get_db), u
             if next_date and (not task.recurring_until or next_date <= task.recurring_until):
                 # 현재 작업은 done으로 유지하고, 새 작업 생성
                 new_task = Task(
+                    user_id=user.id,
                     title=task.title,
                     category=task.category,
                     urgency=task.urgency,
@@ -93,7 +94,7 @@ def update_task(task_id: int, body: TaskUpdate, db: Session = Depends(get_db), u
                     recurring_until=task.recurring_until,
                     due_at=next_date,
                     status=Status.todo,
-                    order=db.query(func.max(Task.order)).scalar() or 0 + 1,
+                    order=(db.query(func.max(Task.order)).filter(Task.user_id == user.id).scalar() or 0) + 1,
                 )
                 db.add(new_task)
     elif data.get("status") == Status.todo:
