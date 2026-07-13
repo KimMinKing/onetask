@@ -117,6 +117,17 @@ export default function WordsPage() {
     api.japaneseWords.favorites().then((w) => setFavJaCount(w.length)).catch(() => setFavJaCount(0));
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const hskLevel = Number(params.get("hsk"));
+    if (hskLevel >= 1 && hskLevel <= 6) {
+      setSelectedLang("zh");
+      setSelectedZhLevel(hskLevel);
+      setMode("home");
+      reloadZh(hskLevel);
+    }
+  }, [reloadZh]);
+
   const startFavZh = async () => {
     setLoading(true);
     const words = await api.words.favorites();

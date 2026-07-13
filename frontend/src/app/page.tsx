@@ -152,6 +152,19 @@ export default function Home() {
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
         </Link>
         <Link
+          href="/hsk5"
+          className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-jeok-800 rounded-2xl px-5 py-4 transition-all duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-jeok-900 flex items-center justify-center text-lg font-bold text-jeok-300">
+            H5
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-stone-200">HSK5 한 달 코스</p>
+            <p className="text-xs text-stone-500 mt-0.5">HSK4 공백 보강부터 모의고사까지</p>
+          </div>
+          <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
+        </Link>
+        <Link
           href="/stats"
           className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-jeok-800 rounded-2xl px-5 py-4 transition-all duration-200 group"
         >
