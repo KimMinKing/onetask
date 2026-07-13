@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { CalendarEvent, Task } from "@/lib/api";
 
 // ChevronUp, ChevronDown을 간단히 SVG로 대신

@@ -154,7 +154,6 @@ export default function StatsPage() {
                   mastery: "📚 단어 습득",
                   consistency: "🔄 복습 달성",
                 };
-                const catUnlocked = achievements.filter((a) => a.category === cat.category && a.unlocked);
                 return (
                   <div key={cat.category} className="flex items-center gap-3">
                     <span className="text-xs text-stone-400 w-20">{catLabel[cat.category] || cat.category}</span>

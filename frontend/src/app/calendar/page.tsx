@@ -228,6 +228,7 @@ export default function CalendarPage() {
 
         {/* 월별 뷰 */}
         {viewMode === "month" && (
+          <>
 
         {/* 요일 헤더 */}
         <div className="grid grid-cols-7 mb-1">
@@ -448,6 +449,7 @@ export default function CalendarPage() {
             </div>
           </div>
         )}
+          </>
         )}
       </div>
     </div>
