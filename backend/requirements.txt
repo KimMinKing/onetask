@@ -11,3 +11,4 @@ python-multipart
 pywebpush
 apscheduler
 fsrs
+python-dateutil
