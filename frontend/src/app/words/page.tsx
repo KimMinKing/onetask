@@ -180,6 +180,12 @@ export default function WordsPage() {
     setMode("daily");
   };
 
+  const refreshFavoriteCounts = () => {
+    api.words.favorites().then((w) => setFavZhCount(w.length)).catch(() => {});
+    api.englishWords.favorites().then((w) => setFavEnCount(w.length)).catch(() => {});
+    api.japaneseWords.favorites().then((w) => setFavJaCount(w.length)).catch(() => {});
+  };
+
   const selectLang = (lang: Lang) => {
     setSelectedLang(lang);
     setMode("select");
@@ -499,7 +505,7 @@ export default function WordsPage() {
       return <ZhReviewSession words={dailyZhWords} onDone={() => {
         api.words.daily().then((w) => setDailyZhCount(w.length)).catch(() => {});
         setMode("lang-select");
-      }} onBack={() => setMode("lang-select")} />;
+      }} onBack={() => setMode("lang-select")} onFavoriteChange={refreshFavoriteCounts} />;
     }
     if (selectedLang === "ja") {
       return <JaReviewSession words={dailyJaWords} onDone={() => {
@@ -516,7 +522,7 @@ export default function WordsPage() {
   /* ── 복습/탐색 화면 위임 ── */
   if (mode === "review") {
     if (selectedLang === "zh") {
-      return <ZhReviewSession words={dueZhWords} onDone={onReviewDone} onBack={() => setMode("home")} />;
+      return <ZhReviewSession words={dueZhWords} onDone={onReviewDone} onBack={() => setMode("home")} onFavoriteChange={refreshFavoriteCounts} />;
     }
     if (selectedLang === "ja") {
       return <JaReviewSession words={dueJaWords} onDone={onReviewDone} onBack={() => setMode("home")} />;
@@ -548,7 +554,7 @@ export default function WordsPage() {
   }
   if (mode === "fav-review") {
     const onDone = () => setMode("favorites");
-    if (selectedLang === "zh") return <ZhReviewSession words={favZhWords} onDone={onDone} onBack={onDone} />;
+    if (selectedLang === "zh") return <ZhReviewSession words={favZhWords} onDone={onDone} onBack={onDone} onFavoriteChange={refreshFavoriteCounts} />;
     if (selectedLang === "ja") return <JaReviewSession words={favJaWords} onDone={onDone} onBack={onDone} />;
     return <EnReviewSession words={favEnWords} onDone={onDone} onBack={onDone} />;
   }
@@ -698,11 +704,19 @@ function HighlightedSentence({ sentence, word }: { sentence: string; word: strin
 
 const SWIPE_THRESHOLD = 100;
 
-function ZhSwipeCard({ word, flipped, onFlip, onSwipe }: {
-  word: Word; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void;
+function ZhSwipeCard({ word, flipped, onFlip, onSwipe, onFavoriteChange }: {
+  word: Word; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void; onFavoriteChange?: (id: number, isFavorite: boolean) => void;
 }) {
   const BASE_URL = "";  // Use relative path: /images/...
   const firstRender = useRef(true);
+  const [isFavorite, setIsFavorite] = useState(word.is_favorite);
+  const [favoriteBusy, setFavoriteBusy] = useState(false);
+
+  useEffect(() => {
+    setIsFavorite(word.is_favorite);
+    setFavoriteBusy(false);
+  }, [word.id, word.is_favorite]);
+
   useEffect(() => { playAudio(word.chinese); return () => stopAll(); }, []);
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }
@@ -727,6 +741,20 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe }: {
     }
   };
 
+  const toggleFavorite = async (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    if (favoriteBusy) return;
+
+    setFavoriteBusy(true);
+    try {
+      const result = await api.words.favorite(word.id);
+      setIsFavorite(result.is_favorite);
+      onFavoriteChange?.(word.id, result.is_favorite);
+    } finally {
+      setFavoriteBusy(false);
+    }
+  };
+
   return (
     <div className="relative w-full select-none" style={{ minHeight: "320px" }}>
       <motion.div style={{ opacity: rightOpacity }}
@@ -746,6 +774,18 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe }: {
             {/* 앞면 */}
             <div className="absolute inset-0 bg-dark-200 border border-white/5 rounded-3xl flex flex-col items-center justify-center gap-4 p-8 overflow-hidden"
               style={{ backfaceVisibility: "hidden" }}>
+              <button
+                type="button"
+                onClick={toggleFavorite}
+                disabled={favoriteBusy}
+                aria-label={isFavorite ? "즐겨찾기 해제" : "즐겨찾기 추가"}
+                aria-pressed={isFavorite}
+                className="absolute top-3 left-4 z-30 w-9 h-9 rounded-full bg-black/45 border border-white/10 flex items-center justify-center transition-all hover:bg-black/65 active:scale-95 disabled:opacity-60"
+              >
+                <svg width="18" height="18" viewBox="0 0 16 16" fill={isFavorite ? "#facc15" : "none"} stroke={isFavorite ? "#facc15" : "#d6d3d1"} strokeWidth="1.4">
+                  <path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L2.2 5.7l4-.6z"/>
+                </svg>
+              </button>
               {word.hsk_level && (
                 <span className="absolute top-3 right-4 text-xs text-stone-300 font-semibold z-20 bg-black/50 px-2 py-0.5 rounded-full">HSK {word.hsk_level}</span>
               )}
@@ -771,6 +811,18 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe }: {
             {/* 뒷면 */}
             <div className="absolute inset-0 bg-dark-300 border border-jeok-900 rounded-3xl flex flex-col items-center justify-center gap-3 p-8 overflow-hidden"
               style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
+              <button
+                type="button"
+                onClick={toggleFavorite}
+                disabled={favoriteBusy}
+                aria-label={isFavorite ? "즐겨찾기 해제" : "즐겨찾기 추가"}
+                aria-pressed={isFavorite}
+                className="absolute top-3 left-4 z-30 w-9 h-9 rounded-full bg-black/45 border border-white/10 flex items-center justify-center transition-all hover:bg-black/65 active:scale-95 disabled:opacity-60"
+              >
+                <svg width="18" height="18" viewBox="0 0 16 16" fill={isFavorite ? "#facc15" : "none"} stroke={isFavorite ? "#facc15" : "#d6d3d1"} strokeWidth="1.4">
+                  <path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L2.2 5.7l4-.6z"/>
+                </svg>
+              </button>
               {word.image_path && (
                 <div className="absolute inset-0 overflow-hidden rounded-3xl">
                   <img src={`${BASE_URL}/images/${word.image_path.replace("test_output/", "")}`} alt=""
@@ -807,7 +859,7 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe }: {
   );
 }
 
-function ZhReviewSession({ words, onDone, onBack }: { words: Word[]; onDone: () => void; onBack: () => void }) {
+function ZhReviewSession({ words, onDone, onBack, onFavoriteChange }: { words: Word[]; onDone: () => void; onBack: () => void; onFavoriteChange?: (id: number, isFavorite: boolean) => void }) {
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("question");
   const [results, setResults] = useState({ knew: 0, missed: 0 });
@@ -843,7 +895,7 @@ function ZhReviewSession({ words, onDone, onBack }: { words: Word[]; onDone: () 
   if (done) return <ReviewDoneScreen results={results} onDone={onDone} />;
   return (
     <ReviewLayout index={index} total={words.length} onBack={onBack} phase={phase} onReveal={reveal} onAnswer={answer} busy={busy}>
-      <ZhSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} />
+      <ZhSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} onFavoriteChange={onFavoriteChange} />
     </ReviewLayout>
   );
 }
