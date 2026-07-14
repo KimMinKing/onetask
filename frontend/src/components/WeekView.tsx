@@ -1,6 +1,7 @@
 "use client";
 
 import { CalendarEvent, Task } from "@/lib/api";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 // ChevronUp, ChevronDown을 간단히 SVG로 대신
 
@@ -25,6 +26,8 @@ export default function WeekView({
   onDateClick,
   onEventMove,
 }: WeekViewProps) {
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const today = new Date();
   const current = new Date(year, month - 1, day);
 
@@ -59,13 +62,13 @@ export default function WeekView({
     <div className="bg-dark-200 rounded-2xl overflow-hidden">
       {/* 요일 헤더 */}
       <div className="grid grid-cols-8 border-b border-stone-700">
-        <div className="p-2 text-center text-xs text-stone-500">시간</div>
+        <div className="p-2 text-center text-xs text-stone-500">{text.time}</div>
         {weekDates.map((date, i) => {
           const isToday = date.toDateString() === today.toDateString();
           return (
             <div key={i} className="p-2 text-center border-l border-stone-700">
               <div className={`text-xs ${isToday ? "text-jeok-400 font-bold" : "text-stone-400"}`}>
-                {["일", "월", "화", "수", "목", "금", "토"][i]}
+                {text.weekdays[i]}
               </div>
               <div className={`text-sm font-semibold mt-1 ${isToday ? "text-jeok-300" : "text-stone-200"}`}>
                 {date.getDate()}

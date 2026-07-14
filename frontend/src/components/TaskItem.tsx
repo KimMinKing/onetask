@@ -5,6 +5,7 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Task, Urgency } from "@/lib/api";
 import { useTaskStore } from "@/store/taskStore";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 const URGENCY_BAR: Record<Urgency, string> = {
   high:   "border-l-[3px] border-red-500",
@@ -27,6 +28,8 @@ function defaultDue(existing?: string | null) {
 
 export default function TaskItem({ task }: { task: Task }) {
   const { toggleDone, deleteTask, editTask } = useTaskStore();
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id: task.id });
 
@@ -78,8 +81,8 @@ export default function TaskItem({ task }: { task: Task }) {
   };
 
   const dueDateLabel = dueDate
-    ? new Date(`${dueDate}T00:00`).toLocaleDateString("ko-KR", { month: "numeric", day: "numeric" })
-    : "날짜";
+    ? new Date(`${dueDate}T00:00`).toLocaleDateString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { month: "numeric", day: "numeric" })
+    : text.date;
 
   /* ── 수정 모드 ── */
   if (editing) {
@@ -96,8 +99,8 @@ export default function TaskItem({ task }: { task: Task }) {
         <div className="flex gap-2 flex-wrap items-center">
           {([
             { value: "high" as Urgency, label: "🔥", active: "bg-red-900 text-red-400 border-red-700", idle: "text-stone-500 border-stone-700" },
-            { value: "normal" as Urgency, label: "보통", active: "bg-jeok-900 text-jeok-400 border-jeok-700", idle: "text-stone-500 border-stone-700" },
-            { value: "low" as Urgency, label: "언젠간", active: "bg-stone-800 text-stone-300 border-stone-600", idle: "text-stone-600 border-stone-800" },
+            { value: "normal" as Urgency, label: text.normal, active: "bg-jeok-900 text-jeok-400 border-jeok-700", idle: "text-stone-500 border-stone-700" },
+            { value: "low" as Urgency, label: text.someday, active: "bg-stone-800 text-stone-300 border-stone-600", idle: "text-stone-600 border-stone-800" },
           ]).map(({ value, label, active, idle }) => (
             <button key={value} type="button" onClick={() => setUrgency(value)}
               className={`text-xs px-2.5 py-1 rounded-full border font-medium transition-all ${urgency === value ? active : idle}`}>
@@ -108,7 +111,7 @@ export default function TaskItem({ task }: { task: Task }) {
             onClick={() => { setShowDate((v) => !v); }}
             className={`text-xs px-2.5 py-1 rounded-full border font-medium transition-all
               ${showDate ? "bg-blue-900 text-blue-300 border-blue-700" : "text-stone-500 border-stone-700"}`}>
-            🗓 {showDate ? dueDateLabel : "날짜"}
+            🗓 {showDate ? dueDateLabel : text.date}
           </button>
         </div>
         {showDate && (
@@ -123,16 +126,16 @@ export default function TaskItem({ task }: { task: Task }) {
             <button type="button" onClick={() => { try { timeRef.current?.showPicker?.(); } catch { timeRef.current?.click(); } }}
               className="relative flex items-center gap-1.5 bg-dark-300 border border-blue-800 hover:border-blue-600 rounded-xl px-3 py-1.5 text-xs text-blue-300 font-medium transition-all">
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="4.5" stroke="currentColor" strokeWidth="1.3"/><path d="M6 3.5V6l1.5 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              {dueTime || "시간"}
+              {dueTime || text.time}
               <input ref={timeRef} type="time" value={dueTime} onChange={(e) => setDueTime(e.target.value)}
                 className="absolute inset-0 opacity-0 w-full cursor-pointer" />
             </button>
           </div>
         )}
         <div className="flex gap-2 justify-end">
-          <button onClick={cancelEdit} className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1 rounded-full transition-colors">취소</button>
+          <button onClick={cancelEdit} className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1 rounded-full transition-colors">{text.cancel}</button>
           <button onClick={saveEdit} disabled={!title.trim()}
-            className="text-xs bg-jeok-600 hover:bg-jeok-500 text-white px-4 py-1 rounded-full disabled:opacity-30 transition-colors">저장</button>
+            className="text-xs bg-jeok-600 hover:bg-jeok-500 text-white px-4 py-1 rounded-full disabled:opacity-30 transition-colors">{text.save}</button>
         </div>
       </div>
     );
@@ -171,8 +174,8 @@ export default function TaskItem({ task }: { task: Task }) {
           )}
           {task.due_at && (
             <span className="text-[11px] text-blue-400 bg-blue-950 px-2 py-0.5 rounded-full">
-              🗓 {new Date(task.due_at).toLocaleDateString("ko-KR", { month: "numeric", day: "numeric" })}{" "}
-              {new Date(task.due_at).toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" })}
+              🗓 {new Date(task.due_at).toLocaleDateString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { month: "numeric", day: "numeric" })}{" "}
+              {new Date(task.due_at).toLocaleTimeString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { hour: "2-digit", minute: "2-digit" })}
             </span>
           )}
         </div>

@@ -15,9 +15,12 @@ import {
 } from "@dnd-kit/sortable";
 import { useTaskStore } from "@/store/taskStore";
 import TaskItem from "./TaskItem";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 export default function TaskList({ filter }: { filter: "todo" | "done" }) {
   const { tasks, reorderTasks } = useTaskStore();
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const sensors = useSensors(useSensor(PointerSensor));
 
   const filtered = tasks.filter((t) => t.status === filter);
@@ -36,7 +39,7 @@ export default function TaskList({ filter }: { filter: "todo" | "done" }) {
       <div className="text-center py-16">
         <p className="text-4xl mb-3">{filter === "done" ? "🌱" : "🎉"}</p>
         <p className="text-sm text-stone-600">
-          {filter === "done" ? "아직 완료한 게 없어요" : "할일이 없어요!"}
+          {filter === "done" ? text.noDone : text.noTodo}
         </p>
       </div>
     );

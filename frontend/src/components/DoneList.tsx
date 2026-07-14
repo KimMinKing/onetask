@@ -2,12 +2,13 @@
 
 import { Task } from "@/lib/api";
 import { useTaskStore } from "@/store/taskStore";
+import { COMMON_TEXT, UiLanguage, useUiLanguage } from "@/lib/i18n";
 
-function timeStr(iso: string) {
-  return new Date(iso).toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" });
+function timeStr(iso: string, uiLanguage: UiLanguage) {
+  return new Date(iso).toLocaleTimeString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { hour: "2-digit", minute: "2-digit" });
 }
 
-function DoneItem({ task }: { task: Task }) {
+function DoneItem({ task, uiLanguage }: { task: Task; uiLanguage: UiLanguage }) {
   const { toggleDone } = useTaskStore();
   const isUnexpected = task.urgency === "low";
 
@@ -38,13 +39,15 @@ function DoneItem({ task }: { task: Task }) {
       </div>
 
       {task.done_at && (
-        <span className="text-xs text-stone-700 flex-shrink-0">{timeStr(task.done_at)}</span>
+        <span className="text-xs text-stone-700 flex-shrink-0">{timeStr(task.done_at, uiLanguage)}</span>
       )}
     </div>
   );
 }
 
 export default function DoneList({ tasks }: { tasks: Task[] }) {
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const today = new Date().toDateString();
 
   const todayTasks = tasks.filter(
@@ -58,7 +61,7 @@ export default function DoneList({ tasks }: { tasks: Task[] }) {
     return (
       <div className="text-center py-16">
         <p className="text-4xl mb-3">🌱</p>
-        <p className="text-sm text-stone-600">아직 완료한 게 없어요</p>
+        <p className="text-sm text-stone-600">{text.noDone}</p>
       </div>
     );
   }
@@ -67,18 +70,18 @@ export default function DoneList({ tasks }: { tasks: Task[] }) {
     <div className="space-y-5">
       {todayTasks.length > 0 && (
         <section>
-          <p className="text-xs text-stone-600 font-medium px-1 mb-2">오늘</p>
+          <p className="text-xs text-stone-600 font-medium px-1 mb-2">{text.today}</p>
           <div className="space-y-2">
-            {todayTasks.map((t) => <DoneItem key={t.id} task={t} />)}
+            {todayTasks.map((t) => <DoneItem key={t.id} task={t} uiLanguage={uiLanguage} />)}
           </div>
         </section>
       )}
 
       {earlierTasks.length > 0 && (
         <section>
-          <p className="text-xs text-stone-600 font-medium px-1 mb-2">이전</p>
+          <p className="text-xs text-stone-600 font-medium px-1 mb-2">{text.earlier}</p>
           <div className="space-y-2">
-            {earlierTasks.map((t) => <DoneItem key={t.id} task={t} />)}
+            {earlierTasks.map((t) => <DoneItem key={t.id} task={t} uiLanguage={uiLanguage} />)}
           </div>
         </section>
       )}

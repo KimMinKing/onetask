@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { useTaskStore } from "@/store/taskStore";
 import { Urgency } from "@/lib/api";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 function defaultDue() {
   const d = new Date();
@@ -14,6 +15,8 @@ function defaultDue() {
 
 export default function AddTaskForm() {
   const { addTask, categories } = useTaskStore();
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [urgency, setUrgency] = useState<Urgency>("normal");
@@ -52,8 +55,8 @@ export default function AddTaskForm() {
   };
 
   const dueDateLabel = dueDate
-    ? new Date(`${dueDate}T00:00`).toLocaleDateString("ko-KR", { month: "numeric", day: "numeric" })
-    : "날짜";
+    ? new Date(`${dueDate}T00:00`).toLocaleDateString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { month: "numeric", day: "numeric" })
+    : text.date;
 
   return (
     <div className="mb-4">
@@ -63,7 +66,7 @@ export default function AddTaskForm() {
           className="w-full flex items-center gap-3 px-4 py-3.5 bg-dark-200 border border-dashed border-stone-700 hover:border-jeok-600 rounded-2xl text-stone-500 hover:text-jeok-400 transition-all"
         >
           <span className="text-xl leading-none">+</span>
-          <span className="text-sm font-medium">할일 추가</span>
+          <span className="text-sm font-medium">{text.addTask}</span>
         </button>
       ) : (
         <form onSubmit={submit} className="bg-dark-200 border border-stone-700 rounded-2xl p-4 space-y-4">
@@ -71,7 +74,7 @@ export default function AddTaskForm() {
             autoFocus
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="할일을 입력하세요..."
+            placeholder={text.taskPlaceholder}
             className="w-full text-stone-100 text-sm placeholder-stone-600 bg-transparent border-b border-stone-700 pb-2 outline-none focus:border-jeok-500 transition-colors"
           />
 
@@ -82,7 +85,7 @@ export default function AddTaskForm() {
                 onChange={(e) => setCategory(e.target.value)}
                 className="text-xs text-stone-300 border border-stone-700 rounded-full px-3 py-1.5 outline-none bg-dark-300 w-fit"
               >
-                <option value="">카테고리 없음</option>
+                <option value="">{text.noCategory}</option>
                 {categories.map((c) => (
                   <option key={c.id} value={c.name}>{c.name}</option>
                 ))}
@@ -91,9 +94,9 @@ export default function AddTaskForm() {
 
             <div className="flex gap-2 flex-wrap">
               {([
-                { value: "high" as Urgency, label: "🔥 급함", active: "bg-red-900 text-red-400 border-red-700", idle: "text-stone-500 border-stone-700" },
-                { value: "normal" as Urgency, label: "보통", active: "bg-jeok-900 text-jeok-400 border-jeok-700", idle: "text-stone-500 border-stone-700" },
-                { value: "low" as Urgency, label: "언젠간", active: "bg-stone-800 text-stone-300 border-stone-600", idle: "text-stone-600 border-stone-800" },
+                { value: "high" as Urgency, label: text.urgent, active: "bg-red-900 text-red-400 border-red-700", idle: "text-stone-500 border-stone-700" },
+                { value: "normal" as Urgency, label: text.normal, active: "bg-jeok-900 text-jeok-400 border-jeok-700", idle: "text-stone-500 border-stone-700" },
+                { value: "low" as Urgency, label: text.someday, active: "bg-stone-800 text-stone-300 border-stone-600", idle: "text-stone-600 border-stone-800" },
               ]).map(({ value, label, active, idle }) => (
                 <button key={value} type="button" onClick={() => setUrgency(value)}
                   className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-all ${urgency === value ? active : idle}`}>
@@ -105,7 +108,7 @@ export default function AddTaskForm() {
               <button type="button" onClick={toggleDate}
                 className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-all
                   ${showDate ? "bg-blue-900 text-blue-300 border-blue-700" : "text-stone-500 border-stone-700 hover:border-stone-500"}`}>
-                🗓 {showDate ? dueDateLabel : "날짜"}
+                🗓 {showDate ? dueDateLabel : text.date}
               </button>
             </div>
 
@@ -133,7 +136,7 @@ export default function AddTaskForm() {
                     <circle cx="6" cy="6" r="4.5" stroke="currentColor" strokeWidth="1.3"/>
                     <path d="M6 3.5V6l1.5 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  {dueTime || "시간"}
+                  {dueTime || text.time}
                   <input ref={timeRef} type="time" value={dueTime}
                     onChange={(e) => setDueTime(e.target.value)}
                     className="absolute inset-0 opacity-0 w-full cursor-pointer" />
@@ -145,11 +148,11 @@ export default function AddTaskForm() {
           <div className="flex gap-2 justify-end pt-1">
             <button type="button" onClick={cancel}
               className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1.5 rounded-full transition-colors">
-              취소
+              {text.cancel}
             </button>
             <button type="submit" disabled={!title.trim()}
               className="text-xs bg-jeok-600 hover:bg-jeok-500 text-white px-5 py-1.5 rounded-full disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
-              추가
+              {text.add}
             </button>
           </div>
         </form>

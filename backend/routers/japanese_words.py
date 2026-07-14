@@ -219,3 +219,28 @@ def translate_word_to_zh(word_id: int, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(word)
     return {"word_id": word.id, "meaning_zh": word.meaning_zh, "example_zh": word.example_zh}
+
+
+@router.post("/tools/translate-missing-zh")
+def translate_missing_to_zh(jlpt_level: Optional[str] = None, limit: int = 500, db: Session = Depends(get_db)):
+    q = db.query(JapaneseWord).filter(
+        (JapaneseWord.meaning_zh == None) | ((JapaneseWord.example_ko != None) & (JapaneseWord.example_zh == None))
+    )
+    if jlpt_level:
+        q = q.filter(JapaneseWord.jlpt_level == jlpt_level)
+    words = q.order_by(JapaneseWord.id).limit(max(1, min(limit, 2000))).all()
+
+    updated = 0
+    for word in words:
+        changed = False
+        if not word.meaning_zh:
+            word.meaning_zh = translate_ko_to_zh(word.meaning)
+            changed = changed or bool(word.meaning_zh)
+        if word.example_ko and not word.example_zh:
+            word.example_zh = translate_ko_to_zh(word.example_ko)
+            changed = changed or bool(word.example_zh)
+        if changed:
+            updated += 1
+
+    db.commit()
+    return {"updated": updated, "checked": len(words)}

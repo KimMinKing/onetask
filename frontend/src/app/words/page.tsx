@@ -223,6 +223,7 @@ export default function WordsPage() {
   const [favEnCount, setFavEnCount] = useState<number | null>(null);
   const [favJaCount, setFavJaCount] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
+  const translatedListKeys = useRef<Set<string>>(new Set());
   const t = UI_TEXT[uiLanguage];
 
   const reloadZh = useCallback(async (level: number) => {
@@ -277,6 +278,30 @@ export default function WordsPage() {
       reloadZh(hskLevel);
     }
   }, [reloadZh]);
+
+  useEffect(() => {
+    if (uiLanguage !== "zh" || mode !== "browse") return;
+
+    if (selectedLang === "en") {
+      const key = `en:${selectedEnLevel}`;
+      if (translatedListKeys.current.has(key)) return;
+      translatedListKeys.current.add(key);
+      api.englishWords.translateMissingZh(selectedEnLevel, 2000)
+        .then(() => api.englishWords.list(selectedEnLevel))
+        .then(setEnWords)
+        .catch(() => {});
+    }
+
+    if (selectedLang === "ja") {
+      const key = `ja:${selectedJaLevel}`;
+      if (translatedListKeys.current.has(key)) return;
+      translatedListKeys.current.add(key);
+      api.japaneseWords.translateMissingZh(selectedJaLevel, 2000)
+        .then(() => api.japaneseWords.list(selectedJaLevel))
+        .then(setJaWords)
+        .catch(() => {});
+    }
+  }, [mode, selectedLang, selectedEnLevel, selectedJaLevel, uiLanguage]);
 
   const startFavZh = async () => {
     setLoading(true);

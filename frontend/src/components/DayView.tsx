@@ -1,6 +1,7 @@
 "use client";
 
 import { CalendarEvent, Task } from "@/lib/api";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 interface DayViewProps {
   year: number;
@@ -21,6 +22,8 @@ export default function DayView({
   scheduledTasks,
   onEventMove,
 }: DayViewProps) {
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const today = new Date();
   const dateStr = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
   const isToday = today.getFullYear() === year && today.getMonth() + 1 === month && today.getDate() === day;
@@ -41,7 +44,7 @@ export default function DayView({
     e.preventDefault();
   };
 
-  const dateLabel = new Date(year, month - 1, day).toLocaleDateString("ko-KR", {
+  const dateLabel = new Date(year, month - 1, day).toLocaleDateString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -54,7 +57,7 @@ export default function DayView({
       <div className="px-4 py-3 border-b border-stone-700">
         <h2 className={`text-lg font-semibold ${isToday ? "text-jeok-400" : "text-stone-200"}`}>
           {dateLabel}
-          {isToday && " (오늘)"}
+          {isToday && ` (${text.today})`}
         </h2>
       </div>
 
@@ -119,7 +122,7 @@ export default function DayView({
                     <div className="font-medium text-stone-200">{t.title}</div>
                     {t.due_at && (
                       <div className="text-xs text-jeok-400 mt-1">
-                        {new Date(t.due_at).toLocaleTimeString("ko-KR", {
+                        {new Date(t.due_at).toLocaleTimeString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", {
                           hour: "2-digit",
                           minute: "2-digit",
                         })}
@@ -144,13 +147,13 @@ export default function DayView({
       {/* 하단 통계 */}
       <div className="px-4 py-3 border-t border-stone-700 flex gap-4 text-xs">
         <span className="text-stone-500">
-          완료: <span className="text-green-500 font-medium">{doneTasks.length}</span>
+          {text.done}: <span className="text-green-500 font-medium">{doneTasks.length}</span>
         </span>
         <span className="text-stone-500">
-          일정: <span className="text-blue-400 font-medium">{events.length}</span>
+          {text.calendar}: <span className="text-blue-400 font-medium">{events.length}</span>
         </span>
         <span className="text-stone-500">
-          예정: <span className="text-jeok-400 font-medium">{scheduledTasks.length}</span>
+          {text.todo}: <span className="text-jeok-400 font-medium">{scheduledTasks.length}</span>
         </span>
       </div>
     </div>

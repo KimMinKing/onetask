@@ -11,10 +11,9 @@ import { FloatingSettings } from "@/components/FloatingSettings";
 import { getUser, clearAuth } from "@/lib/auth";
 import { subscribePush } from "@/lib/push";
 import { api } from "@/lib/api";
+import { COMMON_TEXT, useUiLanguage, UiLanguage } from "@/lib/i18n";
 
 type Tab = "todo" | "done";
-type UiLanguage = "ko" | "zh";
-
 const HOME_TEXT: Record<UiLanguage, {
   nav: {
     calendar: [string, string];
@@ -52,10 +51,11 @@ export default function Home() {
   const [tab, setTab] = useState<Tab>("todo");
   const [pushPermission, setPushPermission] = useState<NotificationPermission>("default");
   const [wordToday, setWordToday] = useState<number | null>(null);
-  const [uiLanguage, setUiLanguage] = useState<UiLanguage>("ko");
+  const uiLanguage = useUiLanguage();
   const router = useRouter();
   const user = getUser();
   const text = HOME_TEXT[uiLanguage];
+  const common = COMMON_TEXT[uiLanguage];
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
   useEffect(() => {
@@ -63,17 +63,6 @@ export default function Home() {
     api.stats.overview()
       .then((s) => setWordToday(s.zh_today + s.en_today + s.ja_today))
       .catch(() => {});
-    api.settings.get()
-      .then((settings) => setUiLanguage(settings.ui_language === "zh" ? "zh" : "ko"))
-      .catch(() => {});
-
-    const handleSettingsUpdate = (event: Event) => {
-      const detail = (event as CustomEvent<{ ui_language?: string }>).detail;
-      setUiLanguage(detail?.ui_language === "zh" ? "zh" : "ko");
-    };
-
-    window.addEventListener("onetask-settings-updated", handleSettingsUpdate);
-    return () => window.removeEventListener("onetask-settings-updated", handleSettingsUpdate);
   }, []);
 
   const handleEnablePush = async () => {
@@ -87,7 +76,7 @@ export default function Home() {
   });
   const todoCount = tasks.filter((t) => t.status === "todo").length;
 
-  const dateStr = new Date().toLocaleDateString("ko-KR", {
+  const dateStr = new Date().toLocaleDateString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", {
     month: "long", day: "numeric", weekday: "short",
   });
 
@@ -106,7 +95,7 @@ export default function Home() {
             {pushPermission !== "granted" && pushPermission !== "denied" && (
               <button onClick={handleEnablePush}
                 className="text-xs text-jeok-500 hover:text-jeok-400 transition-colors">
-                🔔 알림
+                🔔 {common.notifications}
               </button>
             )}
             {user?.is_master && (
@@ -117,7 +106,7 @@ export default function Home() {
             )}
             <button onClick={() => { clearAuth(); router.replace("/login"); }}
               className="text-xs text-stone-700 hover:text-stone-500 transition-colors">
-              로그아웃
+              {common.logout}
             </button>
             <FloatingSettings />
           </div>
@@ -126,16 +115,16 @@ export default function Home() {
         <div className="flex gap-2 mt-4">
           <span className="flex items-center gap-1.5 bg-dark-200 rounded-full px-3 py-1.5 text-xs font-medium text-stone-400">
             <span className="w-1.5 h-1.5 rounded-full bg-jeok-500 inline-block" />
-            할일 {todoCount}개
+            {common.todo} {common.count(todoCount)}
           </span>
           <span className="flex items-center gap-1.5 bg-dark-200 rounded-full px-3 py-1.5 text-xs font-medium text-stone-400">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
-            오늘 완료 {doneToday.length}개
+            {common.todayDone} {common.count(doneToday.length)}
           </span>
           {wordToday !== null && wordToday > 0 && (
             <span className="flex items-center gap-1.5 bg-dark-200 rounded-full px-3 py-1.5 text-xs font-medium text-stone-400">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 inline-block" />
-              단어 {wordToday}개
+              {common.words} {common.count(wordToday)}
             </span>
           )}
         </div>
@@ -154,7 +143,7 @@ export default function Home() {
                   : "text-stone-500 hover:text-stone-300"
               }`}
             >
-              {t === "done" ? "✅ 완료" : "📋 할일"}
+              {t === "done" ? `✅ ${common.done}` : `📋 ${common.todo}`}
             </button>
           ))}
         </div>

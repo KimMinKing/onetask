@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 // 간단한 SVG 아이콘
 const ChevronDown = () => (
@@ -23,10 +24,11 @@ interface RecurrencePickerProps {
   onChange: (rrule: string | null) => void;
 }
 
-const WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"] as const;
-
 export default function RecurrencePicker({ value, onChange }: RecurrencePickerProps) {
   const [open, setOpen] = useState(false);
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage].recurring;
+  const weekdays = text.weekdays;
 
   // 현재 값 파싱
   const parseValue = (): { frequency: Frequency; interval: number; weekdays?: Weekday[] } => {
@@ -90,13 +92,13 @@ export default function RecurrencePicker({ value, onChange }: RecurrencePickerPr
   };
 
   const frequencyLabel: Record<Frequency, string> = {
-    none: "반복 안 함",
-    daily: "매일",
+    none: text.none,
+    daily: text.daily,
     weekly: current.weekdays && current.weekdays.length > 0
-      ? current.weekdays.map((d) => WEEKDAYS[d]).join(", ") + "요일"
-      : "매주",
-    monthly: "매월",
-    yearly: "매년",
+      ? current.weekdays.map((d) => weekdays[d]).join(", ") + text.suffix
+      : text.weekly,
+    monthly: text.monthly,
+    yearly: text.yearly,
   };
 
   return (
@@ -115,11 +117,11 @@ export default function RecurrencePicker({ value, onChange }: RecurrencePickerPr
         <div className="absolute top-full left-0 mt-2 bg-dark-100 border border-stone-700 rounded-xl p-3 min-w-[200px] z-10 shadow-xl">
           <div className="space-y-1">
             {([
-              { value: "none" as Frequency, label: "반복 안 함" },
-              { value: "daily" as Frequency, label: "매일" },
-              { value: "weekly" as Frequency, label: "매주" },
-              { value: "monthly" as Frequency, label: "매월" },
-              { value: "yearly" as Frequency, label: "매년" },
+              { value: "none" as Frequency, label: text.none },
+              { value: "daily" as Frequency, label: text.daily },
+              { value: "weekly" as Frequency, label: text.weekly },
+              { value: "monthly" as Frequency, label: text.monthly },
+              { value: "yearly" as Frequency, label: text.yearly },
             ]).map((freq) => (
               <button
                 key={freq.value}
@@ -141,9 +143,9 @@ export default function RecurrencePicker({ value, onChange }: RecurrencePickerPr
 
           {current.frequency === "weekly" && (
             <div className="mt-3 pt-3 border-t border-stone-700">
-              <p className="text-xs text-stone-500 mb-2">반복 요일 선택</p>
+              <p className="text-xs text-stone-500 mb-2">{text.chooseDays}</p>
               <div className="flex gap-1 flex-wrap">
-                {WEEKDAYS.map((day, i) => {
+                {weekdays.map((day, i) => {
                   const dayValue = i as Weekday;
                   const isSelected = (current.weekdays || []).includes(dayValue);
                   return (

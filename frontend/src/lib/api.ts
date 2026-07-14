@@ -218,6 +218,8 @@ export const api = {
       req<{ word_id: number; is_favorite: boolean }>(`/english-words/${id}/favorite`, { method: "POST" }),
     translateZh: (id: number) =>
       req<{ word_id: number; meaning_zh: string | null; example_zh: string | null }>(`/english-words/${id}/translate-zh`, { method: "POST" }),
+    translateMissingZh: (level?: string, limit = 500) =>
+      req<{ updated: number; checked: number }>(`/english-words/tools/translate-missing-zh?limit=${limit}${level ? `&level=${level}` : ""}`, { method: "POST" }),
     favorites: (level?: string) =>
       req<EnglishWord[]>(`/english-words/favorites${level ? `?level=${level}` : ""}`),
   },
@@ -260,6 +262,8 @@ export const api = {
       req<{ word_id: number; is_favorite: boolean }>(`/japanese-words/${id}/favorite`, { method: "POST" }),
     translateZh: (id: number) =>
       req<{ word_id: number; meaning_zh: string | null; example_zh: string | null }>(`/japanese-words/${id}/translate-zh`, { method: "POST" }),
+    translateMissingZh: (jlpt_level?: string, limit = 500) =>
+      req<{ updated: number; checked: number }>(`/japanese-words/tools/translate-missing-zh?limit=${limit}${jlpt_level ? `&jlpt_level=${jlpt_level}` : ""}`, { method: "POST" }),
     favorites: (jlpt_level?: string) =>
       req<JapaneseWord[]>(`/japanese-words/favorites${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),
   },

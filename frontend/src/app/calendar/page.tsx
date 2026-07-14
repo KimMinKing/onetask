@@ -6,11 +6,14 @@ import { api, Task, CalendarEvent } from "@/lib/api";
 import WeekView from "@/components/WeekView";
 import DayView from "@/components/DayView";
 import RecurrencePicker from "@/components/RecurrencePicker";
+import { COMMON_TEXT, useUiLanguage } from "@/lib/i18n";
 
 type ViewMode = "month" | "week" | "day";
 
 export default function CalendarPage() {
   const router = useRouter();
+  const uiLanguage = useUiLanguage();
+  const text = COMMON_TEXT[uiLanguage];
   const today = new Date();
   const [year, setYear] = useState(today.getFullYear());
   const [month, setMonth] = useState(today.getMonth() + 1);
@@ -33,12 +36,12 @@ export default function CalendarPage() {
   const [editRRule, setEditRRule] = useState<string | null>(null);
 
   const COLORS = [
-    { value: "#3B82F6", label: "파랑", class: "bg-blue-500" },
-    { value: "#EF4444", label: "빨강", class: "bg-red-500" },
-    { value: "#10B981", label: "초록", class: "bg-green-500" },
-    { value: "#F59E0B", label: "노랑", class: "bg-yellow-500" },
-    { value: "#8B5CF6", label: "보라", class: "bg-purple-500" },
-    { value: "#EC4899", label: "분홍", class: "bg-pink-500" },
+    { value: "#3B82F6", class: "bg-blue-500" },
+    { value: "#EF4444", class: "bg-red-500" },
+    { value: "#10B981", class: "bg-green-500" },
+    { value: "#F59E0B", class: "bg-yellow-500" },
+    { value: "#8B5CF6", class: "bg-purple-500" },
+    { value: "#EC4899", class: "bg-pink-500" },
   ];
 
   const load = (y: number, m: number) => {
@@ -87,7 +90,7 @@ export default function CalendarPage() {
 
   const firstDow = new Date(year, month - 1, 1).getDay();
   const daysInMonth = new Date(year, month, 0).getDate();
-  const monthLabel = new Date(year, month - 1).toLocaleDateString("ko-KR", { year: "numeric", month: "long" });
+  const monthLabel = new Date(year, month - 1).toLocaleDateString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { year: "numeric", month: "long" });
 
   const selectedDateStr = selectedDay
     ? `${year}-${String(month).padStart(2, "0")}-${String(selectedDay).padStart(2, "0")}`
@@ -153,25 +156,25 @@ export default function CalendarPage() {
             className="w-8 h-8 rounded-xl bg-dark-200 hover:bg-dark-100 flex items-center justify-center text-stone-400 hover:text-stone-200 transition-all">
             ←
           </button>
-          <h1 className="text-2xl font-bold text-stone-200">캘린더</h1>
+          <h1 className="text-2xl font-bold text-stone-200">{text.calendar}</h1>
         </div>
         <div className="flex gap-2 mt-3">
           <span className="flex items-center gap-1.5 bg-dark-200 rounded-full px-3 py-1.5 text-xs font-medium text-stone-400">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
-            {doneTasks.length}개 완료
+            {text.completedCount(doneTasks.length)}
           </span>
           <span className="flex items-center gap-1.5 bg-dark-200 rounded-full px-3 py-1.5 text-xs font-medium text-stone-400">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 inline-block" />
-            {events.length}개 일정
+            {text.eventCount(events.length)}
           </span>
         </div>
 
         {/* 뷰 모드 토글 */}
         <div className="flex gap-1 mt-3">
           {([
-            { value: "month" as ViewMode, label: "월" },
-            { value: "week" as ViewMode, label: "주" },
-            { value: "day" as ViewMode, label: "일" },
+            { value: "month" as ViewMode, label: text.byMonth },
+            { value: "week" as ViewMode, label: text.byWeek },
+            { value: "day" as ViewMode, label: text.byDay },
           ]).map((mode) => (
             <button
               key={mode.value}
@@ -182,7 +185,7 @@ export default function CalendarPage() {
                   : "bg-dark-200 text-stone-500 hover:text-stone-300"
               }`}
             >
-              {mode.label}별
+              {mode.label}
             </button>
           ))}
         </div>
@@ -232,7 +235,7 @@ export default function CalendarPage() {
 
         {/* 요일 헤더 */}
         <div className="grid grid-cols-7 mb-1">
-          {["일","월","화","수","목","금","토"].map((d, i) => (
+          {text.weekdays.map((d, i) => (
             <div key={d} className={`text-center text-xs py-1 font-medium
               ${i === 0 ? "text-red-400" : i === 6 ? "text-blue-400" : "text-stone-600"}`}>{d}</div>
           ))}
@@ -281,12 +284,12 @@ export default function CalendarPage() {
             {(selectedEvents.length > 0 || selectedScheduled.length > 0 || true) && (
               <div>
                 <div className="flex items-center justify-between px-1 mb-2">
-                  <p className="text-xs text-stone-500 font-medium">{month}월 {selectedDay}일 일정</p>
+                  <p className="text-xs text-stone-500 font-medium">{text.scheduleOn(month, selectedDay)}</p>
                   <button
                     onClick={() => setAddingEvent((v) => !v)}
                     className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
                   >
-                    + 추가
+                    {text.addEvent}
                   </button>
                 </div>
 
@@ -298,7 +301,7 @@ export default function CalendarPage() {
                       value={newTitle}
                       onChange={(e) => setNewTitle(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && addEvent()}
-                      placeholder="일정 제목..."
+                      placeholder={text.eventTitle}
                       className="w-full text-sm text-stone-100 placeholder-stone-600 bg-transparent border-b border-stone-700 pb-1.5 outline-none focus:border-blue-600 transition-colors"
                     />
                     <div className="flex items-center gap-3">
@@ -310,7 +313,7 @@ export default function CalendarPage() {
                           onChange={(e) => setNewTime(e.target.value)}
                           className="text-xs text-stone-300 border border-stone-700 rounded-lg px-2 py-1 outline-none bg-dark-300 focus:border-blue-600 transition-colors"
                         />
-                        <span className="text-xs text-stone-600">시간</span>
+                        <span className="text-xs text-stone-600">{text.time}</span>
                       </div>
 
                       {/* 색상 선택 */}
@@ -334,9 +337,9 @@ export default function CalendarPage() {
                     </div>
                     <div className="flex gap-2 justify-end pt-1">
                       <button onClick={() => { setAddingEvent(false); setNewTitle(""); setNewTime(""); setNewColor("#3B82F6"); setNewRRule(null); }}
-                        className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1 rounded-full transition-colors">취소</button>
+                        className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1 rounded-full transition-colors">{text.cancel}</button>
                       <button onClick={addEvent} disabled={!newTitle.trim()}
-                        className="text-xs bg-blue-700 hover:bg-blue-600 text-white px-4 py-1 rounded-full disabled:opacity-30 transition-colors">저장</button>
+                        className="text-xs bg-blue-700 hover:bg-blue-600 text-white px-4 py-1 rounded-full disabled:opacity-30 transition-colors">{text.save}</button>
                     </div>
                   </div>
                 )}
@@ -377,9 +380,9 @@ export default function CalendarPage() {
                       </div>
                       <div className="flex gap-2 justify-end">
                         <button onClick={() => setEditingEventId(null)}
-                          className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1 rounded-full transition-colors">취소</button>
+                          className="text-xs text-stone-600 hover:text-stone-400 px-3 py-1 rounded-full transition-colors">{text.cancel}</button>
                         <button onClick={saveEditEvent} disabled={!editTitle.trim()}
-                          className="text-xs bg-blue-700 hover:bg-blue-600 text-white px-4 py-1 rounded-full disabled:opacity-30 transition-colors">저장</button>
+                          className="text-xs bg-blue-700 hover:bg-blue-600 text-white px-4 py-1 rounded-full disabled:opacity-30 transition-colors">{text.save}</button>
                       </div>
                     </div>
                   ) : (
@@ -411,22 +414,22 @@ export default function CalendarPage() {
                     <span className={`w-2 h-2 rounded-full flex-shrink-0 ${t.status === "done" ? "bg-jeok-600" : "bg-jeok-400"}`} />
                     <div className="flex-1">
                       <span className={`text-sm ${t.status === "done" ? "line-through text-stone-600" : "text-stone-200"}`}>{t.title}</span>
-                      {t.due_at && <span className="text-xs text-jeok-500 ml-2">{new Date(t.due_at).toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" })}</span>}
+                      {t.due_at && <span className="text-xs text-jeok-500 ml-2">{new Date(t.due_at).toLocaleTimeString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { hour: "2-digit", minute: "2-digit" })}</span>}
                     </div>
                   </div>
                 ))}
 
                 {selectedEvents.length === 0 && selectedScheduled.length === 0 && !addingEvent && (
-                  <p className="text-xs text-stone-700 px-1">일정 없음</p>
+                  <p className="text-xs text-stone-700 px-1">{text.noEvents}</p>
                 )}
               </div>
             )}
 
             {/* 완료된 투두 섹션 */}
             <div>
-              <p className="text-xs text-stone-500 font-medium px-1 mb-2">{month}월 {selectedDay}일 완료</p>
+              <p className="text-xs text-stone-500 font-medium px-1 mb-2">{text.doneOn(month, selectedDay)}</p>
               {selectedDone.length === 0 ? (
-                <p className="text-xs text-stone-700 px-1">완료된 항목 없음</p>
+                <p className="text-xs text-stone-700 px-1">{text.noDoneItems}</p>
               ) : (
                 <div className="space-y-1.5">
                   {selectedDone.map((t) => (
@@ -439,7 +442,7 @@ export default function CalendarPage() {
                       <span className="flex-1 text-sm text-stone-500 line-through">{t.title}</span>
                       {t.done_at && (
                         <span className="text-xs text-stone-700 flex-shrink-0">
-                          {new Date(t.done_at).toLocaleTimeString("ko-KR", { hour: "2-digit", minute: "2-digit" })}
+                          {new Date(t.done_at).toLocaleTimeString(uiLanguage === "zh" ? "zh-CN" : "ko-KR", { hour: "2-digit", minute: "2-digit" })}
                         </span>
                       )}
                     </div>
