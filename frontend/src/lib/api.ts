@@ -304,7 +304,7 @@ export const api = {
       language_priority: string;
       obsidian_enabled: boolean;
       obsidian_vault_path: string | null;
-    }>("/settings"),
+    }>("/settings/"),
     update: (data: {
       daily_goal_words?: number;
       daily_goal_tasks?: number;
@@ -324,7 +324,7 @@ export const api = {
         language_priority: string;
         obsidian_enabled: boolean;
         obsidian_vault_path: string | null;
-      }>("/settings", { method: "PUT", body: JSON.stringify(data) }),
+      }>("/settings/", { method: "PUT", body: JSON.stringify(data) }),
     syncObsidian: () =>
       req<{ ok: boolean; synced_dates: number }>("/settings/obsidian/sync", { method: "POST" }),
   },

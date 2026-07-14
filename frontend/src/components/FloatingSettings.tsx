@@ -93,7 +93,7 @@ export function FloatingSettings() {
     <>
       <button
         type="button"
-        className="fixed-settings-button"
+        className="inline-settings-button"
         aria-label="환경설정 열기"
         onClick={() => setOpen(true)}
       >

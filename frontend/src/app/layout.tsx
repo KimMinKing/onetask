@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ServiceWorkerInit } from "@/components/ServiceWorkerInit";
-import { FloatingSettings } from "@/components/FloatingSettings";
 
 const a2g = localFont({
   src: [
@@ -42,7 +41,6 @@ export default function RootLayout({
       <body className={`${a2g.variable} antialiased`}>
         <ServiceWorkerInit />
         <div id="app-frame">
-          <FloatingSettings />
           {children}
         </div>
       </body>

@@ -7,6 +7,7 @@ import { useTaskStore } from "@/store/taskStore";
 import TaskList from "@/components/TaskList";
 import AddTaskForm from "@/components/AddTaskForm";
 import DoneList from "@/components/DoneList";
+import { FloatingSettings } from "@/components/FloatingSettings";
 import { getUser, clearAuth } from "@/lib/auth";
 import { subscribePush } from "@/lib/push";
 import { api } from "@/lib/api";
@@ -72,6 +73,7 @@ export default function Home() {
               className="text-xs text-stone-700 hover:text-stone-500 transition-colors">
               로그아웃
             </button>
+            <FloatingSettings />
           </div>
         </div>
 

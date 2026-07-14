@@ -62,16 +62,14 @@ body {
   letter-spacing: 0;
 }
 
-.fixed-settings-button {
-  position: fixed;
-  top: 12px;
-  right: calc(50% - 215px + 14px);
-  z-index: 70;
+.inline-settings-button {
+  position: relative;
+  z-index: 20;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  height: 34px;
-  padding: 0 11px;
+  height: 28px;
+  padding: 0 8px;
   border: 1px solid rgb(255 255 255 / 0.08);
   border-radius: 999px;
   background: rgb(28 25 23 / 0.92);
@@ -79,12 +77,12 @@ body {
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
-  box-shadow: 0 10px 28px rgb(0 0 0 / 0.22);
+  box-shadow: none;
   backdrop-filter: blur(12px);
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.fixed-settings-button:hover {
+.inline-settings-button:hover {
   transform: translateY(-1px);
   border-color: rgb(224 90 70 / 0.45);
 }
@@ -307,12 +305,6 @@ body {
   margin-top: 0;
 }
 
-@media (max-width: 430px) {
-  .fixed-settings-button {
-    right: 14px;
-  }
-}
-
 :root[data-theme="light"] #app-frame,
 :root[data-theme="light"] .bg-dark-400 {
   background: #f8f3ea;
@@ -419,14 +411,14 @@ body {
   border-color: rgb(47 79 67 / 0.35);
 }
 
-:root[data-theme="light"] .fixed-settings-button {
+:root[data-theme="light"] .inline-settings-button {
   border-color: rgb(52 76 68 / 0.16);
   background: rgb(255 250 242 / 0.94);
   color: #2f4f43;
-  box-shadow: 0 10px 24px rgb(88 72 49 / 0.14);
+  box-shadow: none;
 }
 
-:root[data-theme="light"] .fixed-settings-button:hover {
+:root[data-theme="light"] .inline-settings-button:hover {
   border-color: rgb(47 79 67 / 0.35);
 }
 
