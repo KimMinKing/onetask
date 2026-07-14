@@ -12,3 +12,4 @@ pywebpush
 apscheduler
 fsrs
 python-dateutil
+deep-translator

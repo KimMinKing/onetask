@@ -20,6 +20,20 @@ def ensure_runtime_migrations(engine) -> None:
     if "ui_language" not in columns:
         statements.append("ALTER TABLE user_settings ADD COLUMN ui_language VARCHAR(5) NOT NULL DEFAULT 'ko'")
 
+    if inspector.has_table("english_words"):
+        english_columns = {column["name"] for column in inspector.get_columns("english_words")}
+        if "meaning_zh" not in english_columns:
+            statements.append("ALTER TABLE english_words ADD COLUMN meaning_zh VARCHAR(500)")
+        if "example_zh" not in english_columns:
+            statements.append("ALTER TABLE english_words ADD COLUMN example_zh VARCHAR")
+
+    if inspector.has_table("japanese_words"):
+        japanese_columns = {column["name"] for column in inspector.get_columns("japanese_words")}
+        if "meaning_zh" not in japanese_columns:
+            statements.append("ALTER TABLE japanese_words ADD COLUMN meaning_zh VARCHAR(500)")
+        if "example_zh" not in japanese_columns:
+            statements.append("ALTER TABLE japanese_words ADD COLUMN example_zh VARCHAR")
+
     if not statements:
         return
 

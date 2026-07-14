@@ -9,6 +9,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import JapaneseWord, JapaneseWordCard
+from translation_utils import translate_ko_to_zh
 
 router = APIRouter(prefix="/japanese-words", tags=["japanese-words"])
 scheduler = Scheduler()
@@ -50,9 +51,11 @@ def _word_with_card(word: JapaneseWord, wc: Optional[JapaneseWordCard]) -> dict:
         "expression": word.expression,
         "reading": word.reading,
         "meaning": word.meaning,
+        "meaning_zh": word.meaning_zh,
         "jlpt_level": word.jlpt_level,
         "example_jp": word.example_jp,
         "example_ko": word.example_ko,
+        "example_zh": word.example_zh,
         "state": wc.state if wc else 0,
         "reps": wc.reps if wc else 0,
         "lapses": wc.lapses if wc else 0,
@@ -200,3 +203,19 @@ def toggle_favorite(word_id: int, db: Session = Depends(get_db)):
     word.is_favorite = not word.is_favorite
     db.commit()
     return {"word_id": word_id, "is_favorite": word.is_favorite}
+
+
+@router.post("/{word_id}/translate-zh")
+def translate_word_to_zh(word_id: int, db: Session = Depends(get_db)):
+    word = db.query(JapaneseWord).filter(JapaneseWord.id == word_id).first()
+    if not word:
+        raise HTTPException(status_code=404, detail="Word not found")
+
+    if not word.meaning_zh:
+        word.meaning_zh = translate_ko_to_zh(word.meaning)
+    if word.example_ko and not word.example_zh:
+        word.example_zh = translate_ko_to_zh(word.example_ko)
+
+    db.commit()
+    db.refresh(word)
+    return {"word_id": word.id, "meaning_zh": word.meaning_zh, "example_zh": word.example_zh}

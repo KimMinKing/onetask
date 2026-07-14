@@ -6,6 +6,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { api, Word, EnglishWord, JapaneseWord } from "@/lib/api";
 
 type Lang = "zh" | "en" | "ja";
+type UiLanguage = "ko" | "zh";
 type Mode = "lang-select" | "select" | "home" | "review" | "browse" | "today" | "daily" | "favorites" | "fav-review" | "fav-browse";
 type Phase = "question" | "answer";
 
@@ -59,6 +60,7 @@ export default function WordsPage() {
   const [selectedZhLevel, setSelectedZhLevel] = useState<number>(3);
   const [selectedEnLevel, setSelectedEnLevel] = useState<string>("B1");
   const [selectedJaLevel, setSelectedJaLevel] = useState<string>("N5");
+  const [uiLanguage, setUiLanguage] = useState<UiLanguage>("ko");
   const [stats, setStats] = useState({ total: 0, reviewed: 0, new: 0, due: 0, today: 0 });
   const [zhWords, setZhWords] = useState<Word[]>([]);
   const [enWords, setEnWords] = useState<EnglishWord[]>([]);
@@ -115,6 +117,14 @@ export default function WordsPage() {
     api.words.favorites().then((w) => setFavZhCount(w.length)).catch(() => setFavZhCount(0));
     api.englishWords.favorites().then((w) => setFavEnCount(w.length)).catch(() => setFavEnCount(0));
     api.japaneseWords.favorites().then((w) => setFavJaCount(w.length)).catch(() => setFavJaCount(0));
+    api.settings.get().then((s) => setUiLanguage(s.ui_language === "zh" ? "zh" : "ko")).catch(() => {});
+
+    const handleSettingsUpdate = (event: Event) => {
+      const detail = (event as CustomEvent<{ ui_language?: string }>).detail;
+      setUiLanguage(detail?.ui_language === "zh" ? "zh" : "ko");
+    };
+    window.addEventListener("onetask-settings-updated", handleSettingsUpdate);
+    return () => window.removeEventListener("onetask-settings-updated", handleSettingsUpdate);
   }, []);
 
   useEffect(() => {
@@ -508,12 +518,12 @@ export default function WordsPage() {
       }} onBack={() => setMode("lang-select")} onFavoriteChange={refreshFavoriteCounts} />;
     }
     if (selectedLang === "ja") {
-      return <JaReviewSession words={dailyJaWords} onDone={() => {
+      return <JaReviewSession words={dailyJaWords} uiLanguage={uiLanguage} onDone={() => {
         api.japaneseWords.daily().then((w) => setDailyJaCount(w.length)).catch(() => {});
         setMode("lang-select");
       }} onBack={() => setMode("lang-select")} />;
     }
-    return <EnReviewSession words={dailyEnWords} onDone={() => {
+    return <EnReviewSession words={dailyEnWords} uiLanguage={uiLanguage} onDone={() => {
       api.englishWords.daily().then((w) => setDailyEnCount(w.length)).catch(() => {});
       setMode("lang-select");
     }} onBack={() => setMode("lang-select")} />;
@@ -525,38 +535,38 @@ export default function WordsPage() {
       return <ZhReviewSession words={dueZhWords} onDone={onReviewDone} onBack={() => setMode("home")} onFavoriteChange={refreshFavoriteCounts} />;
     }
     if (selectedLang === "ja") {
-      return <JaReviewSession words={dueJaWords} onDone={onReviewDone} onBack={() => setMode("home")} />;
+      return <JaReviewSession words={dueJaWords} uiLanguage={uiLanguage} onDone={onReviewDone} onBack={() => setMode("home")} />;
     }
-    return <EnReviewSession words={dueEnWords} onDone={onReviewDone} onBack={() => setMode("home")} />;
+    return <EnReviewSession words={dueEnWords} uiLanguage={uiLanguage} onDone={onReviewDone} onBack={() => setMode("home")} />;
   }
   if (mode === "browse") {
     if (selectedLang === "zh") {
       return <ZhBrowseMode words={zhWords} onBack={() => setMode("home")} />;
     }
     if (selectedLang === "ja") {
-      return <JaBrowseMode words={jaWords} onBack={() => setMode("home")} />;
+      return <JaBrowseMode words={jaWords} uiLanguage={uiLanguage} onBack={() => setMode("home")} />;
     }
-    return <EnBrowseMode words={enWords} onBack={() => setMode("home")} />;
+    return <EnBrowseMode words={enWords} uiLanguage={uiLanguage} onBack={() => setMode("home")} />;
   }
   if (mode === "today") {
     if (selectedLang === "zh") {
       return <ZhBrowseMode words={todayZhWords} title="오늘 공부한 단어" onBack={() => setMode("home")} />;
     }
     if (selectedLang === "ja") {
-      return <JaBrowseMode words={todayJaWords} title="오늘 공부한 단어" onBack={() => setMode("home")} />;
+      return <JaBrowseMode words={todayJaWords} uiLanguage={uiLanguage} title="오늘 공부한 단어" onBack={() => setMode("home")} />;
     }
-    return <EnBrowseMode words={todayEnWords} title="오늘 공부한 단어" onBack={() => setMode("home")} />;
+    return <EnBrowseMode words={todayEnWords} uiLanguage={uiLanguage} title="오늘 공부한 단어" onBack={() => setMode("home")} />;
   }
   if (mode === "fav-browse") {
     if (selectedLang === "zh") return <ZhBrowseMode words={favZhWords} title="★ 즐겨찾기" onBack={() => setMode("favorites")} />;
-    if (selectedLang === "ja") return <JaBrowseMode words={favJaWords} title="★ 즐겨찾기" onBack={() => setMode("favorites")} />;
-    return <EnBrowseMode words={favEnWords} title="★ 즐겨찾기" onBack={() => setMode("favorites")} />;
+    if (selectedLang === "ja") return <JaBrowseMode words={favJaWords} uiLanguage={uiLanguage} title="★ 즐겨찾기" onBack={() => setMode("favorites")} />;
+    return <EnBrowseMode words={favEnWords} uiLanguage={uiLanguage} title="★ 즐겨찾기" onBack={() => setMode("favorites")} />;
   }
   if (mode === "fav-review") {
     const onDone = () => setMode("favorites");
     if (selectedLang === "zh") return <ZhReviewSession words={favZhWords} onDone={onDone} onBack={onDone} onFavoriteChange={refreshFavoriteCounts} />;
-    if (selectedLang === "ja") return <JaReviewSession words={favJaWords} onDone={onDone} onBack={onDone} />;
-    return <EnReviewSession words={favEnWords} onDone={onDone} onBack={onDone} />;
+    if (selectedLang === "ja") return <JaReviewSession words={favJaWords} uiLanguage={uiLanguage} onDone={onDone} onBack={onDone} />;
+    return <EnReviewSession words={favEnWords} uiLanguage={uiLanguage} onDone={onDone} onBack={onDone} />;
   }
   if (mode === "favorites") {
     const favWords = selectedLang === "zh" ? favZhWords : selectedLang === "ja" ? favJaWords : favEnWords;
@@ -976,10 +986,18 @@ function speakEnglish(word: string) {
   window.speechSynthesis.speak(utter);
 }
 
-function EnSwipeCard({ word, flipped, onFlip, onSwipe }: {
-  word: EnglishWord; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void;
+function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
+  word: EnglishWord; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void; uiLanguage: UiLanguage;
 }) {
   const firstRender = useRef(true);
+  const [meaningZh, setMeaningZh] = useState(word.meaning_zh);
+  const [exampleZh, setExampleZh] = useState(word.example_zh);
+
+  useEffect(() => {
+    setMeaningZh(word.meaning_zh);
+    setExampleZh(word.example_zh);
+  }, [word.id, word.meaning_zh, word.example_zh]);
+
   useEffect(() => {
     speakEnglish(word.word);
     return () => window.speechSynthesis.cancel();
@@ -989,6 +1007,16 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe }: {
     if (flipped && word.example_en) speakEnglish(word.example_en);
     else speakEnglish(word.word);
   }, [flipped]);
+
+  useEffect(() => {
+    if (!flipped || uiLanguage !== "zh" || meaningZh) return;
+    api.englishWords.translateZh(word.id)
+      .then((result) => {
+        setMeaningZh(result.meaning_zh);
+        setExampleZh(result.example_zh);
+      })
+      .catch(() => {});
+  }, [flipped, uiLanguage, meaningZh, word.id]);
 
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-220, 220], [-18, 18]);
@@ -1037,13 +1065,13 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe }: {
             {/* 뒷면: 한국어 뜻 */}
             <div className="absolute inset-0 bg-dark-300 border border-jeok-900 rounded-3xl flex flex-col items-center justify-center gap-3 p-8"
               style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
-              <p className="text-2xl font-bold text-stone-100 text-center leading-relaxed">{word.meaning}</p>
+              <p className="text-2xl font-bold text-stone-100 text-center leading-relaxed">{uiLanguage === "zh" ? (meaningZh || word.meaning) : word.meaning}</p>
               <p className="text-stone-500 text-sm font-light" style={{ fontFamily: "'Outfit', sans-serif" }}>{word.word}</p>
               {word.example_en && (
                 <div className="bg-black/30 rounded-xl px-4 py-2.5 mt-1 w-full">
                   <p className="text-sm text-stone-200 leading-relaxed text-center italic" style={{ fontFamily: "'Outfit', sans-serif" }}>{word.example_en}</p>
-                  {word.example_ko && (
-                    <p className="text-xs text-stone-500 text-center mt-1.5 leading-relaxed">{word.example_ko}</p>
+                  {(uiLanguage === "zh" ? (exampleZh || word.example_ko) : word.example_ko) && (
+                    <p className="text-xs text-stone-500 text-center mt-1.5 leading-relaxed">{uiLanguage === "zh" ? (exampleZh || word.example_ko) : word.example_ko}</p>
                   )}
                 </div>
               )}
@@ -1055,7 +1083,7 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe }: {
   );
 }
 
-function EnReviewSession({ words, onDone, onBack }: { words: EnglishWord[]; onDone: () => void; onBack: () => void }) {
+function EnReviewSession({ words, uiLanguage, onDone, onBack }: { words: EnglishWord[]; uiLanguage: UiLanguage; onDone: () => void; onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("question");
   const [results, setResults] = useState({ knew: 0, missed: 0 });
@@ -1091,12 +1119,12 @@ function EnReviewSession({ words, onDone, onBack }: { words: EnglishWord[]; onDo
   if (done) return <ReviewDoneScreen results={results} onDone={onDone} />;
   return (
     <ReviewLayout index={index} total={words.length} onBack={onBack} phase={phase} onReveal={reveal} onAnswer={answer} busy={busy}>
-      <EnSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} />
+      <EnSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} uiLanguage={uiLanguage} />
     </ReviewLayout>
   );
 }
 
-function EnBrowseMode({ words, onBack, title = "전체 단어" }: { words: EnglishWord[]; onBack: () => void; title?: string }) {
+function EnBrowseMode({ words, uiLanguage, onBack, title = "전체 단어" }: { words: EnglishWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string }) {
   const [query, setQuery] = useState("");
   const [favs, setFavs] = useState<Record<number, boolean>>(() =>
     Object.fromEntries(words.map((w) => [w.id, w.is_favorite]))
@@ -1129,7 +1157,7 @@ function EnBrowseMode({ words, onBack, title = "전체 단어" }: { words: Engli
               {w.level && <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.level}</span>}
               <StarButton isFav={!!favs[w.id]} onToggle={() => toggleFav(w.id)} />
             </div>
-            <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{w.meaning}</p>
+            <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{uiLanguage === "zh" ? (w.meaning_zh || w.meaning) : w.meaning}</p>
             <div className="flex items-center gap-2 mt-2">
               <span className={`text-xs font-medium ${STATE_COLOR[w.state]}`}>{STATE_LABEL[w.state]}</span>
               {w.reps > 0 && <span className="text-xs text-stone-700">· 복습 {w.reps}회</span>}
@@ -1139,7 +1167,7 @@ function EnBrowseMode({ words, onBack, title = "전체 단어" }: { words: Engli
             {w.example_en && (
               <div className="mt-2.5 pt-2.5 border-t border-white/5 space-y-1">
                 <p className="text-xs text-stone-400 italic leading-relaxed">{w.example_en}</p>
-                {w.example_ko && <p className="text-xs text-stone-600 leading-relaxed">{w.example_ko}</p>}
+                {(uiLanguage === "zh" ? (w.example_zh || w.example_ko) : w.example_ko) && <p className="text-xs text-stone-600 leading-relaxed">{uiLanguage === "zh" ? (w.example_zh || w.example_ko) : w.example_ko}</p>}
               </div>
             )}
           </div>
@@ -1149,7 +1177,7 @@ function EnBrowseMode({ words, onBack, title = "전체 단어" }: { words: Engli
   );
 }
 
-function JaBrowseMode({ words, onBack, title = "전체 단어" }: { words: JapaneseWord[]; onBack: () => void; title?: string }) {
+function JaBrowseMode({ words, uiLanguage, onBack, title = "전체 단어" }: { words: JapaneseWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string }) {
   const [query, setQuery] = useState("");
   const [favs, setFavs] = useState<Record<number, boolean>>(() =>
     Object.fromEntries(words.map((w) => [w.id, w.is_favorite]))
@@ -1189,7 +1217,7 @@ function JaBrowseMode({ words, onBack, title = "전체 단어" }: { words: Japan
               )}
               <StarButton isFav={!!favs[w.id]} onToggle={() => toggleFav(w.id)} />
             </div>
-            <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{w.meaning}</p>
+            <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{uiLanguage === "zh" ? (w.meaning_zh || w.meaning) : w.meaning}</p>
             <div className="flex items-center gap-2 mt-2">
               <span className={`text-xs font-medium ${STATE_COLOR[w.state]}`}>{STATE_LABEL[w.state]}</span>
               {w.reps > 0 && <span className="text-xs text-stone-700">· 복습 {w.reps}회</span>}
@@ -1199,7 +1227,7 @@ function JaBrowseMode({ words, onBack, title = "전체 단어" }: { words: Japan
             {w.example_jp && (
               <div className="mt-2.5 pt-2.5 border-t border-white/5 space-y-1">
                 <p className="text-xs text-stone-400 leading-relaxed">{w.example_jp}</p>
-                {w.example_ko && <p className="text-xs text-stone-600 leading-relaxed">{w.example_ko}</p>}
+                {(uiLanguage === "zh" ? (w.example_zh || w.example_ko) : w.example_ko) && <p className="text-xs text-stone-600 leading-relaxed">{uiLanguage === "zh" ? (w.example_zh || w.example_ko) : w.example_ko}</p>}
               </div>
             )}
           </div>
@@ -1293,10 +1321,18 @@ function speakJapanese(text: string) {
   window.speechSynthesis.speak(utter);
 }
 
-function JaSwipeCard({ word, flipped, onFlip, onSwipe }: {
-  word: JapaneseWord; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void;
+function JaSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
+  word: JapaneseWord; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void; uiLanguage: UiLanguage;
 }) {
   const firstRender = useRef(true);
+  const [meaningZh, setMeaningZh] = useState(word.meaning_zh);
+  const [exampleZh, setExampleZh] = useState(word.example_zh);
+
+  useEffect(() => {
+    setMeaningZh(word.meaning_zh);
+    setExampleZh(word.example_zh);
+  }, [word.id, word.meaning_zh, word.example_zh]);
+
   useEffect(() => {
     speakJapanese(word.reading);
     return () => window.speechSynthesis.cancel();
@@ -1306,6 +1342,16 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe }: {
     if (flipped && word.example_jp) speakJapanese(word.example_jp);
     else speakJapanese(word.reading);
   }, [flipped]);
+
+  useEffect(() => {
+    if (!flipped || uiLanguage !== "zh" || meaningZh) return;
+    api.japaneseWords.translateZh(word.id)
+      .then((result) => {
+        setMeaningZh(result.meaning_zh);
+        setExampleZh(result.example_zh);
+      })
+      .catch(() => {});
+  }, [flipped, uiLanguage, meaningZh, word.id]);
 
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-220, 220], [-18, 18]);
@@ -1356,7 +1402,7 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe }: {
             {/* 뒷면: 한국어 뜻 */}
             <div className="absolute inset-0 bg-dark-300 border border-jeok-900 rounded-3xl flex flex-col items-center justify-center gap-3 p-8"
               style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
-              <p className="text-2xl font-bold text-stone-100 text-center leading-relaxed">{word.meaning}</p>
+              <p className="text-2xl font-bold text-stone-100 text-center leading-relaxed">{uiLanguage === "zh" ? (meaningZh || word.meaning) : word.meaning}</p>
               <p className="text-stone-500 text-base">{word.expression}</p>
               {word.reading !== word.expression && (
                 <p className="text-stone-600 text-sm">{word.reading}</p>
@@ -1364,8 +1410,8 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe }: {
               {word.example_jp && (
                 <div className="bg-black/30 rounded-xl px-4 py-2.5 mt-1 w-full">
                   <p className="text-sm text-stone-200 leading-relaxed text-center">{word.example_jp}</p>
-                  {word.example_ko && (
-                    <p className="text-xs text-stone-500 text-center mt-1.5 leading-relaxed">{word.example_ko}</p>
+                  {(uiLanguage === "zh" ? (exampleZh || word.example_ko) : word.example_ko) && (
+                    <p className="text-xs text-stone-500 text-center mt-1.5 leading-relaxed">{uiLanguage === "zh" ? (exampleZh || word.example_ko) : word.example_ko}</p>
                   )}
                 </div>
               )}
@@ -1377,7 +1423,7 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe }: {
   );
 }
 
-function JaReviewSession({ words, onDone, onBack }: { words: JapaneseWord[]; onDone: () => void; onBack: () => void }) {
+function JaReviewSession({ words, uiLanguage, onDone, onBack }: { words: JapaneseWord[]; uiLanguage: UiLanguage; onDone: () => void; onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("question");
   const [results, setResults] = useState({ knew: 0, missed: 0 });
@@ -1413,7 +1459,7 @@ function JaReviewSession({ words, onDone, onBack }: { words: JapaneseWord[]; onD
   if (done) return <ReviewDoneScreen results={results} onDone={onDone} />;
   return (
     <ReviewLayout index={index} total={words.length} onBack={onBack} phase={phase} onReveal={reveal} onAnswer={answer} busy={busy}>
-      <JaSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} />
+      <JaSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} uiLanguage={uiLanguage} />
     </ReviewLayout>
   );
 }

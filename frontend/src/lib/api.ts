@@ -43,9 +43,11 @@ export interface JapaneseWord {
   expression: string;
   reading: string;
   meaning: string;
+  meaning_zh: string | null;
   jlpt_level: string | null;
   example_jp: string | null;
   example_ko: string | null;
+  example_zh: string | null;
   state: number;
   reps: number;
   lapses: number;
@@ -58,9 +60,11 @@ export interface EnglishWord {
   id: number;
   word: string;
   meaning: string;
+  meaning_zh: string | null;
   level: string | null;
   example_en: string | null;
   example_ko: string | null;
+  example_zh: string | null;
   state: number;
   reps: number;
   lapses: number;
@@ -211,6 +215,8 @@ export const api = {
     daily: () => req<EnglishWord[]>("/english-words/daily"),
     favorite: (id: number) =>
       req<{ word_id: number; is_favorite: boolean }>(`/english-words/${id}/favorite`, { method: "POST" }),
+    translateZh: (id: number) =>
+      req<{ word_id: number; meaning_zh: string | null; example_zh: string | null }>(`/english-words/${id}/translate-zh`, { method: "POST" }),
     favorites: (level?: string) =>
       req<EnglishWord[]>(`/english-words/favorites${level ? `?level=${level}` : ""}`),
   },
@@ -246,6 +252,8 @@ export const api = {
       ),
     favorite: (id: number) =>
       req<{ word_id: number; is_favorite: boolean }>(`/japanese-words/${id}/favorite`, { method: "POST" }),
+    translateZh: (id: number) =>
+      req<{ word_id: number; meaning_zh: string | null; example_zh: string | null }>(`/japanese-words/${id}/translate-zh`, { method: "POST" }),
     favorites: (jlpt_level?: string) =>
       req<JapaneseWord[]>(`/japanese-words/favorites${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),
   },

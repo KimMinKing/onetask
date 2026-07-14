@@ -103,9 +103,11 @@ class JapaneseWord(Base):
     expression = Column(String(100), nullable=False)   # 한자 표기 (없으면 kana)
     reading = Column(String(100), nullable=False)      # 히라가나 읽기
     meaning = Column(String(500), nullable=False)      # 한국어 뜻
+    meaning_zh = Column(String(500), nullable=True)
     jlpt_level = Column(String(2), nullable=True)      # N5/N4/N3/N2/N1
     example_jp = Column(String, nullable=True)
     example_ko = Column(String, nullable=True)
+    example_zh = Column(String, nullable=True)
     is_favorite = Column(Boolean, default=False, nullable=False, server_default="false")
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
 
@@ -131,9 +133,11 @@ class EnglishWord(Base):
     id = Column(Integer, primary_key=True, index=True)
     word = Column(String(100), nullable=False, unique=True)
     meaning = Column(String(500), nullable=False)
+    meaning_zh = Column(String(500), nullable=True)
     level = Column(String(2), nullable=True)
     example_en = Column(String, nullable=True)
     example_ko = Column(String, nullable=True)
+    example_zh = Column(String, nullable=True)
     is_favorite = Column(Boolean, default=False, nullable=False, server_default="false")
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
 
