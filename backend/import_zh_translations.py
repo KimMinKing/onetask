@@ -42,9 +42,9 @@ def import_english(path: Path, dry_run: bool) -> int:
             example_zh = _clean(row.get("example_zh"))
             example_en = _clean(row.get("example_en"))
             example_ko = _clean(row.get("example_ko"))
-            if example_en is not None:
+            if example_en is not None and not word.example_en:
                 word.example_en = example_en
-            if example_ko is not None:
+            if example_ko is not None and not word.example_ko:
                 word.example_ko = example_ko
             if meaning_zh is not None:
                 word.meaning_zh = meaning_zh
