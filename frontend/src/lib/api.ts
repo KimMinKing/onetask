@@ -236,8 +236,13 @@ export const api = {
       };
       tasks: { todo: number; done: number };
       calendar: { total: number };
-      users: { id: number; username: string; is_master: boolean }[];
+      users: { id: number; username: string; is_master: boolean; ui_language: string }[];
     }>("/admin/overview"),
+    createUser: (data: { username: string; password: string; ui_language: string }) =>
+      req<{ id: number; username: string; is_master: boolean; ui_language: string }>("/admin/users", {
+        method: "POST",
+        body: JSON.stringify(data),
+      }),
   },
   japaneseWords: {
     list: (jlpt_level?: string) => req<JapaneseWord[]>(`/japanese-words/list${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),

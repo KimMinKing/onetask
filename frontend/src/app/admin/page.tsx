@@ -13,7 +13,7 @@ interface AdminData {
   };
   tasks: { todo: number; done: number };
   calendar: { total: number };
-  users: { id: number; username: string; is_master: boolean }[];
+  users: { id: number; username: string; is_master: boolean; ui_language: string }[];
 }
 
 export default function AdminPage() {
@@ -21,6 +21,11 @@ export default function AdminPage() {
   const [data, setData] = useState<AdminData | null>(null);
   const [loading, setLoading] = useState(true);
   const [pushStatus, setPushStatus] = useState<string | null>(null);
+  const [newUsername, setNewUsername] = useState("jsy11");
+  const [newPassword, setNewPassword] = useState("jsy11");
+  const [newLanguage, setNewLanguage] = useState<"ko" | "zh">("zh");
+  const [createStatus, setCreateStatus] = useState<string | null>(null);
+  const [creating, setCreating] = useState(false);
   const user = getUser();
 
   useEffect(() => {
@@ -32,6 +37,27 @@ export default function AdminPage() {
   }, []);
 
   const logout = () => { clearAuth(); router.replace("/login"); };
+
+  const createUser = async () => {
+    setCreateStatus(null);
+    setCreating(true);
+    try {
+      const created = await api.admin.createUser({
+        username: newUsername,
+        password: newPassword,
+        ui_language: newLanguage,
+      });
+      setData((prev) => prev ? { ...prev, users: [...prev.users, created] } : prev);
+      setCreateStatus(`✓ @${created.username} 계정 생성 완료`);
+      setNewUsername("");
+      setNewPassword("");
+      setNewLanguage("zh");
+    } catch (error) {
+      setCreateStatus(error instanceof Error ? `✗ ${error.message}` : "✗ 계정 생성 실패");
+    } finally {
+      setCreating(false);
+    }
+  };
 
   const sendTestPush = async () => {
     setPushStatus("전송 중...");
@@ -136,6 +162,50 @@ export default function AdminPage() {
           )}
         </div>
 
+        {/* 계정 생성 */}
+        <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4">
+          <p className="text-xs text-stone-600 font-medium mb-3">계정 생성</p>
+          <div className="space-y-2">
+            <input
+              value={newUsername}
+              onChange={(e) => setNewUsername(e.target.value)}
+              placeholder="아이디"
+              className="w-full bg-dark-300 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-stone-200 placeholder-stone-600 outline-none focus:border-jeok-700"
+            />
+            <input
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              placeholder="비밀번호"
+              type="password"
+              className="w-full bg-dark-300 border border-white/10 rounded-xl px-3 py-2.5 text-sm text-stone-200 placeholder-stone-600 outline-none focus:border-jeok-700"
+            />
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => setNewLanguage("zh")}
+                className={`py-2.5 rounded-xl text-sm font-medium border transition-colors ${newLanguage === "zh" ? "bg-jeok-800 border-jeok-600 text-white" : "bg-dark-300 border-white/10 text-stone-500"}`}
+              >
+                중국어 UI
+              </button>
+              <button
+                onClick={() => setNewLanguage("ko")}
+                className={`py-2.5 rounded-xl text-sm font-medium border transition-colors ${newLanguage === "ko" ? "bg-jeok-800 border-jeok-600 text-white" : "bg-dark-300 border-white/10 text-stone-500"}`}
+              >
+                한국어 UI
+              </button>
+            </div>
+            <button
+              onClick={createUser}
+              disabled={creating || !newUsername.trim() || newPassword.length < 4}
+              className="w-full py-3 rounded-xl bg-jeok-700 hover:bg-jeok-600 disabled:bg-dark-300 disabled:text-stone-700 text-white text-sm font-medium transition-colors"
+            >
+              {creating ? "생성 중..." : "일반 유저 생성"}
+            </button>
+            {createStatus && (
+              <p className="text-xs text-stone-400 text-center">{createStatus}</p>
+            )}
+          </div>
+        </div>
+
         {/* 유저 목록 */}
         <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4">
           <p className="text-xs text-stone-600 font-medium mb-3">계정 목록</p>
@@ -143,6 +213,7 @@ export default function AdminPage() {
             {data.users.map((u) => (
               <div key={u.id} className="flex items-center gap-3">
                 <span className="text-sm text-stone-300">@{u.username}</span>
+                <span className="text-xs text-stone-600 border border-white/5 rounded px-1.5 py-0.5">{u.ui_language === "zh" ? "中文" : "한국어"}</span>
                 {u.is_master && (
                   <span className="text-xs text-jeok-400 border border-jeok-900 rounded px-1.5 py-0.5">master</span>
                 )}
