@@ -39,13 +39,13 @@ class TaskReorder(BaseModel):
 
 
 @router.get("/history")
-def get_task_history(year: int, month: int, db: Session = Depends(get_db)):
+def get_task_history(year: int, month: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
     import calendar as cal
     first_day = datetime(year, month, 1, tzinfo=timezone.utc)
     last_day = datetime(year, month, cal.monthrange(year, month)[1], 23, 59, 59, tzinfo=timezone.utc)
     return (
         db.query(Task)
-        .filter(Task.status == Status.done, Task.done_at >= first_day, Task.done_at <= last_day)
+        .filter(Task.user_id == user.id, Task.status == Status.done, Task.done_at >= first_day, Task.done_at <= last_day)
         .order_by(Task.done_at)
         .all()
     )
@@ -136,13 +136,13 @@ def delete_task(task_id: int, db: Session = Depends(get_db), user = Depends(get_
 
 
 @router.get("/scheduled")
-def get_scheduled_tasks(year: int, month: int, db: Session = Depends(get_db)):
+def get_scheduled_tasks(year: int, month: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
     import calendar as cal
     first_day = datetime(year, month, 1, tzinfo=timezone.utc)
     last_day = datetime(year, month, cal.monthrange(year, month)[1], 23, 59, 59, tzinfo=timezone.utc)
     return (
         db.query(Task)
-        .filter(Task.due_at >= first_day, Task.due_at <= last_day)
+        .filter(Task.user_id == user.id, Task.due_at >= first_day, Task.due_at <= last_day)
         .order_by(Task.due_at)
         .all()
     )

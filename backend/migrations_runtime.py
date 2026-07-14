@@ -34,6 +34,31 @@ def ensure_runtime_migrations(engine) -> None:
         if "example_zh" not in japanese_columns:
             statements.append("ALTER TABLE japanese_words ADD COLUMN example_zh VARCHAR")
 
+    if inspector.has_table("calendar_events"):
+        calendar_columns = {column["name"] for column in inspector.get_columns("calendar_events")}
+        if "user_id" not in calendar_columns:
+            statements.append("ALTER TABLE calendar_events ADD COLUMN user_id INTEGER")
+            if dialect == "postgresql":
+                statements.append("""
+                    UPDATE calendar_events
+                    SET user_id = (
+                        SELECT id FROM users
+                        ORDER BY is_master DESC, id ASC
+                        LIMIT 1
+                    )
+                    WHERE user_id IS NULL
+                """)
+            else:
+                statements.append("""
+                    UPDATE calendar_events
+                    SET user_id = (
+                        SELECT id FROM users
+                        ORDER BY is_master DESC, id ASC
+                        LIMIT 1
+                    )
+                    WHERE user_id IS NULL
+                """)
+
     if not statements:
         return
 

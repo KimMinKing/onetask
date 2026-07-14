@@ -24,6 +24,7 @@ export interface Task {
 
 export interface CalendarEvent {
   id: number;
+  user_id: number | null;
   title: string;
   event_date: string;   // "YYYY-MM-DD"
   event_time: string | null; // "HH:MM"

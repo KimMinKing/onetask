@@ -45,6 +45,7 @@ class CalendarEvent(Base):
     __tablename__ = "calendar_events"
 
     id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=True)
     title = Column(String, nullable=False)
     event_date = Column(String(10), nullable=False)   # "YYYY-MM-DD"
     event_time = Column(String(5), nullable=True)     # "HH:MM" optional
