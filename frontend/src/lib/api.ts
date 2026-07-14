@@ -115,11 +115,11 @@ export const authApi = {
       if (!r.ok) throw new Error((await r.json()).detail || "로그인 실패");
       return r.json() as Promise<{ access_token: string; is_master: boolean; username: string }>;
     }),
-  signup: (username: string, password: string) =>
+  signup: (username: string, password: string, ui_language?: string) =>
     fetch(`${BASE}/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password, ui_language }),
     }).then(async (r) => {
       if (!r.ok) throw new Error((await r.json()).detail || "가입 실패");
       return r.json() as Promise<{ access_token: string; is_master: boolean; username: string }>;
@@ -302,6 +302,7 @@ export const api = {
       notification_enabled: boolean;
       theme: string;
       language_priority: string;
+      ui_language: string;
       obsidian_enabled: boolean;
       obsidian_vault_path: string | null;
     }>("/settings/"),
@@ -312,6 +313,7 @@ export const api = {
       notification_enabled?: boolean;
       theme?: string;
       language_priority?: string;
+      ui_language?: string;
       obsidian_enabled?: boolean;
       obsidian_vault_path?: string | null;
     }) =>
@@ -322,6 +324,7 @@ export const api = {
         notification_enabled: boolean;
         theme: string;
         language_priority: string;
+        ui_language: string;
         obsidian_enabled: boolean;
         obsidian_vault_path: string | null;
       }>("/settings/", { method: "PUT", body: JSON.stringify(data) }),

@@ -13,14 +13,49 @@ import { subscribePush } from "@/lib/push";
 import { api } from "@/lib/api";
 
 type Tab = "todo" | "done";
+type UiLanguage = "ko" | "zh";
+
+const HOME_TEXT: Record<UiLanguage, {
+  nav: {
+    calendar: [string, string];
+    words: [string, string];
+    hsk5: [string, string];
+    stats: [string, string];
+    math: [string, string];
+    python: [string, string];
+  };
+}> = {
+  ko: {
+    nav: {
+      calendar: ["캘린더", "날짜별 완료 기록"],
+      words: ["단어 암기장", "단어 플래시카드"],
+      hsk5: ["HSK5 한 달 코스", "HSK4 공백 보강부터 모의고사까지"],
+      stats: ["학습 통계", "진행률 · 연속일 · 레벨별"],
+      math: ["AI 미적분", "중학생도 이해하는 10단계"],
+      python: ["Python AI", "변수부터 신경망까지 10단계"],
+    },
+  },
+  zh: {
+    nav: {
+      calendar: ["日历", "按日期查看完成记录"],
+      words: ["单词记忆本", "单词闪卡"],
+      hsk5: ["HSK5 一个月课程", "从 HSK4 查缺补漏到模拟考试"],
+      stats: ["学习统计", "进度 · 连续天数 · 按级别"],
+      math: ["AI 微积分", "中学生也能理解的 10 阶段"],
+      python: ["Python AI", "从变量到神经网络的 10 阶段"],
+    },
+  },
+};
 
 export default function Home() {
   const { fetchAll, tasks } = useTaskStore();
   const [tab, setTab] = useState<Tab>("todo");
   const [pushPermission, setPushPermission] = useState<NotificationPermission>("default");
   const [wordToday, setWordToday] = useState<number | null>(null);
+  const [uiLanguage, setUiLanguage] = useState<UiLanguage>("ko");
   const router = useRouter();
   const user = getUser();
+  const text = HOME_TEXT[uiLanguage];
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
   useEffect(() => {
@@ -28,6 +63,17 @@ export default function Home() {
     api.stats.overview()
       .then((s) => setWordToday(s.zh_today + s.en_today + s.ja_today))
       .catch(() => {});
+    api.settings.get()
+      .then((settings) => setUiLanguage(settings.ui_language === "zh" ? "zh" : "ko"))
+      .catch(() => {});
+
+    const handleSettingsUpdate = (event: Event) => {
+      const detail = (event as CustomEvent<{ ui_language?: string }>).detail;
+      setUiLanguage(detail?.ui_language === "zh" ? "zh" : "ko");
+    };
+
+    window.addEventListener("onetask-settings-updated", handleSettingsUpdate);
+    return () => window.removeEventListener("onetask-settings-updated", handleSettingsUpdate);
   }, []);
 
   const handleEnablePush = async () => {
@@ -135,8 +181,8 @@ export default function Home() {
             📅
           </div>
           <div>
-            <p className="text-sm font-semibold text-stone-200">캘린더</p>
-            <p className="text-xs text-stone-500 mt-0.5">날짜별 완료 기록</p>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.calendar[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.calendar[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
         </Link>
@@ -148,8 +194,8 @@ export default function Home() {
             🀄
           </div>
           <div>
-            <p className="text-sm font-semibold text-stone-200">단어 암기장</p>
-            <p className="text-xs text-stone-500 mt-0.5">단어 플래시카드</p>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.words[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.words[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
         </Link>
@@ -161,8 +207,8 @@ export default function Home() {
             H5
           </div>
           <div>
-            <p className="text-sm font-semibold text-stone-200">HSK5 한 달 코스</p>
-            <p className="text-xs text-stone-500 mt-0.5">HSK4 공백 보강부터 모의고사까지</p>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.hsk5[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.hsk5[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
         </Link>
@@ -174,8 +220,8 @@ export default function Home() {
             📊
           </div>
           <div>
-            <p className="text-sm font-semibold text-stone-200">학습 통계</p>
-            <p className="text-xs text-stone-500 mt-0.5">진행률 · 연속일 · 레벨별</p>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.stats[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.stats[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
         </Link>
@@ -187,8 +233,8 @@ export default function Home() {
             📐
           </div>
           <div>
-            <p className="text-sm font-semibold text-stone-200">AI 미적분</p>
-            <p className="text-xs text-stone-500 mt-0.5">중학생도 이해하는 10단계</p>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.math[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.math[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
         </Link>
@@ -200,8 +246,8 @@ export default function Home() {
             🐍
           </div>
           <div>
-            <p className="text-sm font-semibold text-stone-200">Python AI</p>
-            <p className="text-xs text-stone-500 mt-0.5">변수부터 신경망까지 10단계</p>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.python[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.python[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-blue-400 transition-colors">→</span>
         </Link>

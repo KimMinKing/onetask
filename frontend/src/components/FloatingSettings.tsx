@@ -12,6 +12,7 @@ type Settings = {
   notification_enabled: boolean;
   theme: string;
   language_priority: string;
+  ui_language: string;
   obsidian_enabled: boolean;
   obsidian_vault_path: string | null;
 };
@@ -64,6 +65,7 @@ export function FloatingSettings() {
     try {
       const updated = await api.settings.update({ ...settings, theme });
       setSettings(updated);
+      window.dispatchEvent(new CustomEvent("onetask-settings-updated", { detail: updated }));
       setMessage("저장했습니다.");
       setTimeout(() => setMessage(""), 2500);
     } catch (error) {
@@ -80,6 +82,7 @@ export function FloatingSettings() {
     try {
       const updated = await api.settings.update({ ...settings, theme });
       setSettings(updated);
+      window.dispatchEvent(new CustomEvent("onetask-settings-updated", { detail: updated }));
       const result = await api.settings.syncObsidian();
       setMessage(`Obsidian 동기화 완료: ${result.synced_dates}개 날짜`);
       setTimeout(() => setMessage(""), 2500);
@@ -141,6 +144,24 @@ export function FloatingSettings() {
 
             {settings && (
               <>
+                <div className="settings-section">
+                  <p className="settings-section__title">표시 언어</p>
+                  <div className="settings-segment">
+                    {[
+                      { value: "ko", label: "한국어" },
+                      { value: "zh", label: "中文" },
+                    ].map((item) => (
+                      <button
+                        key={item.value}
+                        onClick={() => setSettings({ ...settings, ui_language: item.value })}
+                        className={settings.ui_language === item.value ? "is-active" : ""}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="settings-section">
                   <div className="settings-row">
                     <div>

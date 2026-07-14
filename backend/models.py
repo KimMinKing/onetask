@@ -178,6 +178,7 @@ class UserSettings(Base):
     notification_enabled = Column(Boolean, default=True, nullable=False)
     theme = Column(String(10), default="dark", nullable=False)
     language_priority = Column(String(20), default="zh,en,ja", nullable=False)
+    ui_language = Column(String(5), default="ko", nullable=False, server_default="ko")
     obsidian_enabled = Column(Boolean, default=False, nullable=False, server_default="false")
     obsidian_vault_path = Column(String, nullable=True)
 

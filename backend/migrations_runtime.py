@@ -17,6 +17,8 @@ def ensure_runtime_migrations(engine) -> None:
             statements.append("ALTER TABLE user_settings ADD COLUMN obsidian_enabled BOOLEAN NOT NULL DEFAULT 0")
     if "obsidian_vault_path" not in columns:
         statements.append("ALTER TABLE user_settings ADD COLUMN obsidian_vault_path VARCHAR")
+    if "ui_language" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN ui_language VARCHAR(5) NOT NULL DEFAULT 'ko'")
 
     if not statements:
         return

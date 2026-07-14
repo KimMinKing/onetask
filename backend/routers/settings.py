@@ -20,6 +20,7 @@ class SettingsResponse(BaseModel):
     notification_enabled: bool
     theme: str
     language_priority: str
+    ui_language: str
     obsidian_enabled: bool
     obsidian_vault_path: Optional[str] = None
 
@@ -31,6 +32,7 @@ class SettingsUpdate(BaseModel):
     notification_enabled: Optional[bool] = None
     theme: Optional[str] = None
     language_priority: Optional[str] = None
+    ui_language: Optional[str] = None
     obsidian_enabled: Optional[bool] = None
     obsidian_vault_path: Optional[str] = None
 
@@ -66,6 +68,7 @@ def get_settings(db: Session = Depends(get_db), user: User = Depends(get_current
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
     )
@@ -112,6 +115,11 @@ def update_settings(
             raise HTTPException(status_code=400, detail="language_priority must be comma-separated zh,en,ja")
         settings.language_priority = data.language_priority
 
+    if data.ui_language is not None:
+        if data.ui_language not in ["ko", "zh"]:
+            raise HTTPException(status_code=400, detail="ui_language must be 'ko' or 'zh'")
+        settings.ui_language = data.ui_language
+
     if data.obsidian_vault_path is not None:
         path = data.obsidian_vault_path.strip()
         if path:
@@ -141,6 +149,7 @@ def update_settings(
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
     )
@@ -173,6 +182,7 @@ def update_notifications(
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
     )
@@ -207,6 +217,7 @@ def update_goals(
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
     )

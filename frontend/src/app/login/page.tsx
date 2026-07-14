@@ -28,9 +28,10 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     try {
+      const uiLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "ko";
       const res = mode === "login"
         ? await authApi.login(username.trim(), password)
-        : await authApi.signup(username.trim(), password);
+        : await authApi.signup(username.trim(), password, uiLanguage);
       setAuth(res.access_token, { username: res.username, is_master: res.is_master });
       router.replace("/");
     } catch (err: unknown) {

@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from pydantic import BaseModel
 
 from database import get_db
-from models import User
+from models import User, UserSettings
 from auth_utils import verify_password, hash_password, create_access_token, get_current_user
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -17,6 +17,7 @@ class LoginRequest(BaseModel):
 class SignupRequest(BaseModel):
     username: str
     password: str
+    ui_language: str | None = None
 
 
 def _user_response(token: str, user: User) -> dict:
@@ -52,6 +53,9 @@ def signup(body: SignupRequest, db: Session = Depends(get_db)):
     db.add(user)
     db.commit()
     db.refresh(user)
+    ui_language = body.ui_language if body.ui_language in ["ko", "zh"] else "ko"
+    db.add(UserSettings(user_id=user.id, ui_language=ui_language))
+    db.commit()
     token = create_access_token(user.id, user.is_master)
     return _user_response(token, user)
 
