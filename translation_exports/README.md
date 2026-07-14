@@ -5,13 +5,13 @@
 - `english_words_for_zh_translation.md`: human-readable source for a Chinese AI.
 - `english_words_for_zh_translation.jsonl`: machine-readable source and import template.
 
-Ask the translator to keep `id` unchanged and fill only:
+Ask the translator to keep `id`, `word`, and `level` unchanged and fill:
 
 ```jsonl
-{"id": 24, "meaning_zh": "分数", "example_zh": "今天比赛的最终比分是多少？"}
+{"id": 24, "example_en": "What was the final score?", "example_ko": "최종 점수는 몇 점이었나요?", "meaning_zh": "分数", "example_zh": "最终比分是多少？"}
 ```
 
-The final translated JSONL can include the original fields too. The import script only needs `id`, `meaning_zh`, and `example_zh`.
+The final translated JSONL can include the original fields too. The import script uses `id`, `example_en`, `example_ko`, `meaning_zh`, and `example_zh`.
 
 ## Import reviewed translations
 
