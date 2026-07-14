@@ -82,6 +82,64 @@ def _load_english_from_dump(path: Path) -> list[dict]:
     return sorted(rows, key=lambda item: ((item["level"] or ""), item["id"]))
 
 
+def _load_japanese_from_db() -> list[dict]:
+    db = SessionLocal()
+    try:
+        words = db.query(JapaneseWord).order_by(JapaneseWord.jlpt_level, JapaneseWord.id).all()
+    finally:
+        db.close()
+
+    return [
+        {
+            "id": word.id,
+            "jlpt_level": word.jlpt_level,
+            "expression": _clean(word.expression),
+            "reading": _clean(word.reading),
+            "example_jp": _clean(word.example_jp),
+            "meaning_ko": _clean(word.meaning),
+            "example_ko": _clean(word.example_ko),
+            "meaning_zh": "",
+            "example_zh": "",
+        }
+        for word in words
+    ]
+
+
+def _load_japanese_from_dump(path: Path) -> list[dict]:
+    rows: list[dict] = []
+    in_copy = False
+    columns: list[str] = []
+
+    with path.open("r", encoding="utf-8") as handle:
+        for line in handle:
+            stripped = line.rstrip("\n")
+            if not in_copy:
+                if stripped.startswith("COPY public.japanese_words "):
+                    in_copy = True
+                    column_text = stripped.split("(", 1)[1].split(")", 1)[0]
+                    columns = [column.strip() for column in column_text.split(",")]
+                continue
+
+            if stripped == r"\.":
+                break
+
+            values = [_unescape_pg_copy(value) for value in stripped.split("\t")]
+            row = dict(zip(columns, values))
+            rows.append({
+                "id": int(row["id"]),
+                "jlpt_level": row.get("jlpt_level") or None,
+                "expression": _clean(row.get("expression")),
+                "reading": _clean(row.get("reading")),
+                "example_jp": _clean(row.get("example_jp")),
+                "meaning_ko": _clean(row.get("meaning")),
+                "example_ko": _clean(row.get("example_ko")),
+                "meaning_zh": "",
+                "example_zh": "",
+            })
+
+    return sorted(rows, key=lambda item: ((item["jlpt_level"] or ""), item["id"]))
+
+
 def export_english(source: str, dump_path: Path) -> tuple[Path, Path, int]:
     words = _load_english_from_dump(dump_path) if source == "dump" else _load_english_from_db()
 
@@ -109,12 +167,8 @@ def export_english(source: str, dump_path: Path) -> tuple[Path, Path, int]:
     return md_path, jsonl_path, len(words)
 
 
-def export_japanese() -> tuple[Path, Path, int]:
-    db = SessionLocal()
-    try:
-        words = db.query(JapaneseWord).order_by(JapaneseWord.jlpt_level, JapaneseWord.id).all()
-    finally:
-        db.close()
+def export_japanese(source: str, dump_path: Path) -> tuple[Path, Path, int]:
+    words = _load_japanese_from_dump(dump_path) if source == "dump" else _load_japanese_from_db()
 
     EXPORT_DIR.mkdir(parents=True, exist_ok=True)
     md_path = EXPORT_DIR / "japanese_words_for_zh_translation.md"
@@ -122,23 +176,14 @@ def export_japanese() -> tuple[Path, Path, int]:
 
     with md_path.open("w", encoding="utf-8", newline="\n") as md, jsonl_path.open("w", encoding="utf-8", newline="\n") as jsonl:
         md.write("# Japanese Words For Chinese Translation\n\n")
-        md.write("Translate `meaning_ko` and `example_ko` into natural Simplified Chinese.\n")
-        md.write("Keep `id`, `expression`, `reading`, `jlpt_level`, and `example_jp` unchanged.\n")
-        md.write("Return JSONL with: id, meaning_zh, example_zh.\n\n")
+        md.write("Fill missing `example_jp` and `example_ko` if needed.\n")
+        md.write("Translate `meaning_ko` into natural Simplified Chinese.\n")
+        md.write("Translate `example_jp` into natural Simplified Chinese.\n")
+        md.write("Keep `id`, `expression`, `reading`, and `jlpt_level` unchanged.\n")
+        md.write("Return JSONL with: id, example_jp, example_ko, meaning_zh, example_zh.\n\n")
         md.write("## Source\n\n")
 
-        for word in words:
-            record = {
-                "id": word.id,
-                "jlpt_level": word.jlpt_level,
-                "expression": _clean(word.expression),
-                "reading": _clean(word.reading),
-                "example_jp": _clean(word.example_jp),
-                "meaning_ko": _clean(word.meaning),
-                "example_ko": _clean(word.example_ko),
-                "meaning_zh": "",
-                "example_zh": "",
-            }
+        for record in words:
             jsonl.write(json.dumps(record, ensure_ascii=False) + "\n")
             md.write(
                 f"- id: {record['id']} | level: {record['jlpt_level'] or ''} | "
@@ -162,7 +207,7 @@ def main() -> None:
     if args.lang in ["en", "all"]:
         results.append(export_english(args.source, args.dump_path))
     if args.lang in ["ja", "all"]:
-        results.append(export_japanese())
+        results.append(export_japanese(args.source, args.dump_path))
 
     for md_path, jsonl_path, count in results:
         print(f"exported {count} rows")

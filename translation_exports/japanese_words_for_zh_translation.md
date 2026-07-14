@@ -1,0 +1,23222 @@
+# Japanese Words For Chinese Translation
+
+Fill missing `example_jp` and `example_ko` if needed.
+Translate `meaning_ko` into natural Simplified Chinese.
+Translate `example_jp` into natural Simplified Chinese.
+Keep `id`, `expression`, `reading`, and `jlpt_level` unchanged.
+Return JSONL with: id, example_jp, example_ko, meaning_zh, example_zh.
+
+## Source
+
+- id: 23297 | level: N1 | [現像 / げんぞう , このフィルムを現像して下さい。]
+  - meaning_ko: 현상(필름)
+  - example_ko: 이 필름을 현상하십시오.
+- id: 23299 | level: N1 | [原則 / げんそく , 例外は原則のある証拠。]
+  - meaning_ko: 원칙
+  - example_ko: 예외는 원칙이 있는 증거.
+- id: 23303 | level: N1 | [見地 / けんち , 彼は人生を全て、金銭の見地から見る。]
+  - meaning_ko: 관점
+  - example_ko: 그는 인생을 모두 금전의 관점에서 본다.
+- id: 23309 | level: N1 | [現地 / げんち , 彼は現地人に歓迎された。]
+  - meaning_ko: 실제 장소
+  - example_ko: 그는 현지인에게 환영받았다.
+- id: 23314 | level: N1 | [限定 / げんてい , 切符の数は限定されていた。]
+  - meaning_ko: 한계
+  - example_ko: 표의 수는 제한되어 있었다.
+- id: 23322 | level: N1 | [原点 / げんてん , ]
+  - meaning_ko: 원점(좌표
+- id: 23324 | level: N1 | [原典 / げんてん , 彼の翻訳は原典に忠実だ。]
+  - meaning_ko: 원래의
+  - example_ko: 그의 번역은 원전에 충실하다.
+- id: 23328 | level: N1 | [原爆 / げんばく , 原爆は広島全体を破壊した。]
+  - meaning_ko: 원자폭탄
+  - example_ko: 원폭은 히로시마 전체를 파괴했다.
+- id: 23333 | level: N1 | [原文 / げんぶん , 訳文を原文と比較しなさい。]
+  - meaning_ko: 텍스트
+  - example_ko: 번역을 원본과 비교하십시오.
+- id: 23338 | level: N1 | [厳密 / げんみつ , 彼らは船長の命令を厳密に実行した。]
+  - meaning_ko: 엄격한
+  - example_ko: 그들은 선장의 명령을 엄격하게 수행했습니다.
+- id: 23340 | level: N1 | [賢明 / けんめい , 列車で行くのが賢明だよ。]
+  - meaning_ko: 지혜
+  - example_ko: 열차로 가는 것이 현명해.
+- id: 23342 | level: N1 | [倹約 / けんやく , 彼は倹約家だ。]
+  - meaning_ko: 절약
+  - example_ko: 그는 절약가다.
+- id: 23345 | level: N1 | [原油 / げんゆ , 原油価格の値下がりが続いている。]
+  - meaning_ko: 원유
+  - example_ko: 원유 가격 인하가 계속되고 있다.
+- id: 23353 | level: N1 | [兼用 / けんよう , この書斎は客間兼用だ。]
+  - meaning_ko: 다용도
+  - example_ko: 이 서재는 객간 겸용이다.
+- id: 23364 | level: N1 | [権力 / けんりょく , 彼は権力に屈した。]
+  - meaning_ko: (정치) 권력
+  - example_ko: 그는 권력에 굴복했다.
+- id: 23367 | level: N1 | [言論 / げんろん , 私はあらゆる人の言論に賛成だ。]
+  - meaning_ko: 논의
+  - example_ko: 나는 모든 사람의 언론에 찬성이다.
+- id: 23373 | level: N1 | [故～ / こ～ , ]
+  - meaning_ko: 고인
+- id: 23377 | level: N1 | [語彙 / ごい , 語彙力を増強したい。]
+  - meaning_ko: 어휘
+  - example_ko: 어휘력을 증강하고 싶다.
+- id: 23386 | level: N1 | [恋する / こいする , 君は恋するには若すぎる。]
+  - meaning_ko: 사랑에 빠지다
+  - example_ko: 너는 사랑하기에는 너무 젊다.
+- id: 23392 | level: N1 | [甲 / こう , 彼は頼り甲斐のある上司だ。]
+  - meaning_ko: 순위 1위
+  - example_ko: 그는 의지 보람 있는 상사다.
+- id: 23397 | level: N1 | [～光 / ～こう , ]
+  - meaning_ko: 빛
+- id: 23401 | level: N1 | [好意 / こうい , 彼は彼女の好意を得ようと願った。]
+  - meaning_ko: 좋은 뜻
+  - example_ko: 그는 그녀의 호의를 얻기를 바랐다.
+- id: 23403 | level: N1 | [行為 / こうい , 僕の行為で彼は機嫌を損じた。]
+  - meaning_ko: 행동
+  - example_ko: 내 행위로 그는 기분을 잃었다.
+- id: 23408 | level: N1 | [合意 / ごうい , 彼らは敵と合意に達した。]
+  - meaning_ko: 합의
+  - example_ko: 그들은 적과 합의에 도달했다.
+- id: 23413 | level: N1 | [工学 / こうがく , 電子工学の専門用語がわからない。]
+  - meaning_ko: 공학
+  - example_ko: 전자공학의 전문 용어를 모른다.
+- id: 23417 | level: N1 | [抗議 / こうぎ , 不正には抗議せざるをえない。]
+  - meaning_ko: 항의
+  - example_ko: 부정하게는 항의할 수밖에 없다.
+- id: 23422 | level: N1 | [合議 / ごうぎ , やがて陪審員は合議をするために法廷を出て行った。]
+  - meaning_ko: 상의
+  - example_ko: 이윽고 배심원은 합의를 하기 위해 법정을 나갔다.
+- id: 23428 | level: N1 | [皇居 / こうきょ , 最高裁判所は皇居の近くにある。]
+  - meaning_ko: 황궁
+  - example_ko: 대법원은 황궁 근처에 있다.
+- id: 23435 | level: N1 | [好況 / こうきょう , 好況と不況は交互に来る。]
+  - meaning_ko: 번영하는 조건
+  - example_ko: 호황과 불경기는 번갈아 온다.
+- id: 23440 | level: N1 | [鉱業 / こうぎょう , 鉱業はチリの主要な収入源の一つである。]
+  - meaning_ko: 광업
+  - example_ko: 광업은 칠레의 주요 수입원 중 하나입니다.
+- id: 23444 | level: N1 | [興業 / こうぎょう , ]
+  - meaning_ko: 사업을 시작하다
+- id: 23449 | level: N1 | [高原 / こうげん , 高原を散歩するのは楽しい。]
+  - meaning_ko: 대지
+  - example_ko: 고원을 산책하는 것은 재미 있습니다.
+- id: 23455 | level: N1 | [交互 / こうご , 昼と夜が交互にくる。]
+  - meaning_ko: 상호간의
+  - example_ko: 낮과 밤이 번갈아 온다.
+- id: 23460 | level: N1 | [煌々と / こうこうと , 月は煌々と輝いていた。]
+  - meaning_ko: 밝게
+  - example_ko: 달은 반짝반짝 빛났다.
+- id: 23465 | level: N1 | [考古学 / こうこがく , 私は考古学者です。]
+  - meaning_ko: 고고학
+  - example_ko: 저는 고고학자입니다.
+- id: 23470 | level: N1 | [工作 / こうさく , 工作が好きだ。]
+  - meaning_ko: 손재주
+  - example_ko: 공작을 좋아한다.
+- id: 23475 | level: N1 | [耕作 / こうさく , ３００年間、彼らは周囲の土地を耕作してきた。]
+  - meaning_ko: 경작
+  - example_ko: 300년간 그들은 주변의 땅을 경작해 왔다.
+- id: 23479 | level: N1 | [鉱山 / こうざん , その鉱山は閉鎖している。]
+  - meaning_ko: 내 거
+  - example_ko: 그 광산은 폐쇄되어 있다.
+- id: 23485 | level: N1 | [講習 / こうしゅう , 夏期講習とか始まってるのかな？]
+  - meaning_ko: 단기 코스
+  - example_ko: 여름철 강습이라든지 시작되고 있는 것일까?
+- id: 23491 | level: N1 | [口述 / こうじゅつ , 口述試験があったんです。]
+  - meaning_ko: 구두 진술
+  - example_ko: 구술 시험이있었습니다.
+- id: 23497 | level: N1 | [控除 / こうじょ , 税務署は控除を認めた。]
+  - meaning_ko: 보조금
+  - example_ko: 세무서는 공제를 인정했다.
+- id: 23499 | level: N1 | [交渉 / こうしょう , 労働組合は経営陣と交渉している。]
+  - meaning_ko: 협상
+  - example_ko: 노동조합은 경영진과 협상하고 있다.
+- id: 23504 | level: N1 | [高尚 / こうしょう , 彼は趣味が高尚です。]
+  - meaning_ko: 높은
+  - example_ko: 그는 취미가 높다.
+- id: 23508 | level: N1 | [向上 / こうじょう , 読書は知性を向上させる。]
+  - meaning_ko: 증가
+  - example_ko: 독서는 정보를 향상시킨다.
+- id: 23512 | level: N1 | [行進 / こうしん , 道は行進にさしつかえない。]
+  - meaning_ko: 3월
+  - example_ko: 길은 행진에 대처할 수 없다.
+- id: 23518 | level: N1 | [香辛料 / こうしんりょう , 好きな香辛料は？]
+  - meaning_ko: 향료
+  - example_ko: 당신이 가장 좋아하는 향신료는 무엇입니까?
+- id: 23522 | level: N1 | [降水 / こうすい , 今夏の降水量は普通でなかった。]
+  - meaning_ko: 강우
+  - example_ko: 올여름 강수량은 정상이 아니었다.
+- id: 23527 | level: N1 | [洪水 / こうずい , 彼らは大雨といえば洪水を連想した。]
+  - meaning_ko: 홍수
+  - example_ko: 그들은 폭우라고 하면 홍수를 연상했다.
+- id: 23531 | level: N1 | [合成 / ごうせい , 汚れに強い合成皮革を使用した２人掛けのソファです。]
+  - meaning_ko: 인조
+  - example_ko: 얼룩에 강한 합성 피혁을 사용한 2 인용 소파입니다.
+- id: 23536 | level: N1 | [公然 / こうぜん , 彼は公然と私を侮辱した。]
+  - meaning_ko: 공공연히
+  - example_ko: 그는 공개적으로 나를 모욕했다.
+- id: 23541 | level: N1 | [抗争 / こうそう , 新聞は２党間の抗争を報じた。]
+  - meaning_ko: 논쟁
+  - example_ko: 신문은 2당 간 항쟁을 보도했다.
+- id: 23547 | level: N1 | [構想 / こうそう , 彼女が建設的な構想を持つ。]
+  - meaning_ko: 계획
+  - example_ko: 그녀는 건설적인 개념을 가지고 있습니다.
+- id: 23552 | level: N1 | [後退 / こうたい , 彼は前進も後退もすまいと決めた。]
+  - meaning_ko: 후퇴
+  - example_ko: 그는 전진도 후퇴도 현명하다고 결정했다.
+- id: 23556 | level: N1 | [光沢 / こうたく , 光沢紙がいいな。]
+  - meaning_ko: 광택
+  - example_ko: 광택 종이가 좋다.
+- id: 23560 | level: N1 | [公団 / こうだん , 公団は建設計画の入札を募集した。]
+  - meaning_ko: 공기업
+  - example_ko: 공단은 건설계획 입찰을 모집했다.
+- id: 23566 | level: N1 | [好調 / こうちょう , 絶好調です！]
+  - meaning_ko: 만족스러운
+  - example_ko: 절호조입니다!
+- id: 23569 | level: N1 | [口頭 / こうとう , 彼は口頭試験を受けた。]
+  - meaning_ko: 경구
+  - example_ko: 그는 구두 시험을 받았다.
+- id: 23574 | level: N1 | [講読 / こうどく , ]
+  - meaning_ko: 독서
+- id: 23579 | level: N1 | [購読 / こうどく , 私は新聞を２種類購読している。]
+  - meaning_ko: 신청
+  - example_ko: 나는 신문을 2종류 구독하고 있다.
+- id: 23584 | level: N1 | [購入 / こうにゅう , 彼らは家を購入するため貯金をしている。]
+  - meaning_ko: 구입
+  - example_ko: 그들은 집을 사기 위해 돼지 저금통을 가지고 있습니다.
+- id: 23595 | level: N1 | [公認 / こうにん , トムは公認会計士なんですよね？]
+  - meaning_ko: 공식 인정
+  - example_ko: 톰은 공인 회계사입니까?
+- id: 23601 | level: N1 | [光熱費 / こうねつひ , ]
+  - meaning_ko: 연료비와 조명비
+- id: 23604 | level: N1 | [購買 / こうばい , 購買部の者に会われたほうがいいと思います。]
+  - meaning_ko: 구입
+  - example_ko: 구매부의 사람을 만나는 편이 좋다고 생각합니다.
+- id: 23609 | level: N1 | [好評 / こうひょう , その劇は好評を得た。]
+  - meaning_ko: 인기
+  - example_ko: 그 극은 호평을 얻었다.
+- id: 23614 | level: N1 | [交付 / こうふ , 奨学金が交付された。]
+  - meaning_ko: 배달하다
+  - example_ko: 장학금이 교부되었다.
+- id: 23622 | level: N1 | [公募 / こうぼ , ]
+  - meaning_ko: 대중의 호소
+- id: 23626 | level: N1 | [巧妙 / こうみょう , 人工内耳は技術的に巧妙な機器です。]
+  - meaning_ko: 영리한
+  - example_ko: 인공 내이는 기술적으로 성공적인 장비입니다.
+- id: 23632 | level: N1 | [公用 / こうよう , 彼は公用で大阪に行った。]
+  - meaning_ko: 정부 사업
+  - example_ko: 그는 공용으로 오사카에 갔다.
+- id: 23635 | level: N1 | [小売 / こうり , 新型は小売価格３万円で販売される。]
+  - meaning_ko: 소매
+  - example_ko: 신형은 소매가격 3만엔으로 판매된다.
+- id: 23639 | level: N1 | [効率 / こうりつ , 勉強は効率的にしなくてはいけない。]
+  - meaning_ko: 능률
+  - example_ko: 공부는 능률적으로 해야 한다.
+- id: 23644 | level: N1 | [公立 / こうりつ , 彼は公立学校で教育を受けた。]
+  - meaning_ko: 공기
+  - example_ko: 그는 공립학교에서 교육을 받았다.
+- id: 23649 | level: N1 | [護衛 / ごえい , 私はトムの護衛です。]
+  - meaning_ko: 경비원
+  - example_ko: 저는 톰의 호위입니다.
+- id: 23654 | level: N1 | [コーナー / コーナー , いつコーナーを曲がるかはむずかしい問題です。]
+  - meaning_ko: 모서리
+  - example_ko: 언제 코너를 구부릴 지 어려운 문제입니다.
+- id: 23660 | level: N1 | [小柄 / こがら , 彼は小柄な男です。]
+  - meaning_ko: 작은
+  - example_ko: 그는 몸집이 작은 남자입니다.
+- id: 23665 | level: N1 | [小切手 / こぎって , 彼は小切手に署名した。]
+  - meaning_ko: 확인하다
+  - example_ko: 그는 수표에 서명했다.
+- id: 23670 | level: N1 | [国産 / こくさん , さすが国産、なかなか壊れない。]
+  - meaning_ko: 국내제품
+  - example_ko: 과연 국산, 좀처럼 부서지지 않는다.
+- id: 23675 | level: N1 | [国定 / こくてい , ]
+  - meaning_ko: 국가 후원
+- id: 23679 | level: N1 | [告白 / こくはく , 彼は牧師に自分の罪を告白した。]
+  - meaning_ko: 고백
+  - example_ko: 그는 목사에게 자신의 죄를 고백했다.
+- id: 23686 | level: N1 | [国防 / こくぼう , 国防のため大きな額が計上された。]
+  - meaning_ko: 국방
+  - example_ko: 국방 때문에 큰 금액이 계상됐다.
+- id: 23691 | level: N1 | [国有 / こくゆう , 彼は我が国有数の頭脳の一人だ。]
+  - meaning_ko: 국가 소유권
+  - example_ko: 그는 우리나라 유수의 두뇌 중 하나다.
+- id: 23697 | level: N1 | [極楽 / ごくらく , 地獄極楽は心にあり。]
+  - meaning_ko: 천국
+  - example_ko: 지옥극악은 마음에 있어.
+- id: 23701 | level: N1 | [国連 / こくれん , 彼らは国連のインド代表だった。]
+  - meaning_ko: 유엔
+  - example_ko: 그들은 유엔의 인도 대표였다.
+- id: 23705 | level: N1 | [焦げ茶 / こげちゃ , ]
+  - meaning_ko: 진한 갈색
+- id: 23711 | level: N1 | [語源 / ごげん , それの語源って知ってる？]
+  - meaning_ko: 단어 루트
+  - example_ko: 그것의 어원은 알고 있니?
+- id: 23716 | level: N1 | [心地 / ここち , 僕は生きた心地がしなかった。]
+  - meaning_ko: 감정
+  - example_ko: 나는 살아있는 기분이 없었다.
+- id: 23720 | level: N1 | [心得 / こころえ , 彼女は夫の心理を心得ている。]
+  - meaning_ko: 지식
+  - example_ko: 그녀는 남편의 심리를 마음껏 얻고 있다.
+- id: 23725 | level: N1 | [心掛け / こころがけ , 身の丈に合った生活を心掛けなさい。]
+  - meaning_ko: 준비
+  - example_ko: 몸의 길이에 맞는 생활을 유의하십시오.
+- id: 23732 | level: N1 | [心掛ける / こころがける , ]
+  - meaning_ko: 명심할 것
+- id: 23737 | level: N1 | [志 / こころざし , 立志伝中の人。]
+  - meaning_ko: ~ 할 것이다
+  - example_ko: 입지전 중인 사람.
+- id: 23742 | level: N1 | [志す / こころざす , 彼はやろうと志すものは、何でもやり遂げる。]
+  - meaning_ko: 계획하다
+  - example_ko: 그가 하려고 하는 것은 무엇이든지 해낸다.
+- id: 23747 | level: N1 | [心強い / こころづよい , ありがとう。本当に心強いです。]
+  - meaning_ko: 마음을 훈훈하게 하는
+  - example_ko: 감사합니다. 정말 든든합니다.
+- id: 23752 | level: N1 | [心細い / こころぼそい , 君がいないと心細い。]
+  - meaning_ko: 어찌할 수 없는
+  - example_ko: 네가 없으면 마음이 얇다.
+- id: 23757 | level: N1 | [試み / こころみ , 彼女は再び試みる事を心決めた。]
+  - meaning_ko: 재판
+  - example_ko: 그녀는 다시 시도하는 것을 마음을 정했다.
+- id: 23761 | level: N1 | [試みる / こころみる , 彼は再び試みる事を決心した。]
+  - meaning_ko: 시도하다
+  - example_ko: 그는 다시 시도하기로 결심했다.
+- id: 23766 | level: N1 | [快い / こころよい , 食べることは私にとって快い。]
+  - meaning_ko: 즐거운
+  - example_ko: 먹는 것은 나에게 즐겁다.
+- id: 23772 | level: N1 | [誤差 / ごさ , 我々は誤差を見込んで余裕をとっておいた。]
+  - meaning_ko: 오류
+  - example_ko: 우리는 오차를 예상하고 여유를 두었다.
+- id: 23777 | level: N1 | [ございます (かん) / ございます (かん) , ]
+  - meaning_ko: (정중하다
+- id: 23779 | level: N1 | [孤児 / こじ , 両親が亡くなった子供は孤児と呼ばれる。]
+  - meaning_ko: 유아
+  - example_ko: 부모가 죽은 아이는 고아라고 불린다.
+- id: 23784 | level: N1 | [こじれる / こじれる , ]
+  - meaning_ko: 복잡해지다
+- id: 23792 | level: N1 | [こす (みずを～) / こす (みずを～) , ]
+  - meaning_ko: 긴장하다
+- id: 23797 | level: N1 | [梢 / こずえ , ]
+  - meaning_ko: 나무 꼭대기
+- id: 23800 | level: N1 | [個性 / こせい , 彼は個性が強い。]
+  - meaning_ko: 개성
+  - example_ko: 그는 개성이 강하다.
+- id: 23804 | level: N1 | [戸籍 / こせき , 彼女はまだ夫の戸籍に入っていない。]
+  - meaning_ko: 인구 조사
+  - example_ko: 그녀는 아직 남편의 호적에 들어가지 않았다.
+- id: 23810 | level: N1 | [古代 / こだい , 父は古代史に関心を持っている。]
+  - meaning_ko: 상대
+  - example_ko: 아버지는 고대사에 관심을 가지고 있다.
+- id: 23816 | level: N1 | [こたつ / こたつ , 最近寒くなってきたので、そろそろこたつを出そうか迷っている。]
+  - meaning_ko: 히터가 있는 테이블
+  - example_ko: 최근 추워져 왔기 때문에 슬슬 코타츠를 나올까 헤매고 있다.
+- id: 23821 | level: N1 | [こだわる / こだわる , 細かいことにこだわるな。]
+  - meaning_ko: 소란을 피우다
+  - example_ko: 세세한 것을 고집하지 마라.
+- id: 23823 | level: N1 | [誇張 / こちょう , 彼女には誇張癖があるようだ。]
+  - meaning_ko: 과장
+  - example_ko: 그녀에게는 과장버릇이 있는 것 같다.
+- id: 23828 | level: N1 | [こつ (をつかむ) / こつ (をつかむ) , ]
+  - meaning_ko: 비밀
+- id: 23833 | level: N1 | [滑稽 / こっけい , それは滑稽だ。]
+  - meaning_ko: 재미있는
+  - example_ko: 그것은 활기차다.
+- id: 23837 | level: N1 | [国交 / こっこう , それ以来カナダとイランの国交は断絶している。]
+  - meaning_ko: 외교관계
+  - example_ko: 그 이후 캐나다와 이란의 국교는 단절되었다.
+- id: 23842 | level: N1 | [骨董品 / こっとうひん , 彼は骨董品を見る目がある。]
+  - meaning_ko: 진품
+  - example_ko: 그는 골동품을 보는 눈이 있다.
+- id: 23847 | level: N1 | [固定 / こてい , 書棚は壁に固定したほうがいい。]
+  - meaning_ko: 정착
+  - example_ko: 책장은 벽에 고정하는 것이 좋다.
+- id: 23851 | level: N1 | [事柄 / ことがら , 彼らはその事柄を調査している。]
+  - meaning_ko: 문제
+  - example_ko: 그들은 그 일을 조사하고 있다.
+- id: 23856 | level: N1 | [孤独 / こどく , 彼女は孤独な生活を送った。]
+  - meaning_ko: 격리
+  - example_ko: 그녀는 외로운 삶을 살았습니다.
+- id: 23860 | level: N1 | [ことごとく / ことごとく , 私達の計画はことごとく失敗した。]
+  - meaning_ko: 전부
+  - example_ko: 우리의 계획은 모두 실패했다.
+- id: 23867 | level: N1 | [言付け / ことづけ , 私の言付けがあったでしょうね。]
+  - meaning_ko: 메시지를 남기려고
+  - example_ko: 내 말이 있었을거야.
+- id: 23872 | level: N1 | [殊に / ことに , ロックは殊に若者に人気だ。]
+  - meaning_ko: 특히
+  - example_ko: 록은 특히 젊은이들에게 인기다.
+- id: 23881 | level: N1 | [粉々 / こなごな , 瓶は粉々に割れた。]
+  - meaning_ko: 아주 작은 조각으로
+  - example_ko: 병은 가루로 깨졌다.
+- id: 23886 | level: N1 | [好ましい / このましい , その志望者は試験官に好ましい印象を与えた。]
+  - meaning_ko: 멋진
+  - example_ko: 그 희망자는 시험관에게 바람직한 인상을 주었다.
+- id: 23891 | level: N1 | [碁盤 / ごばん , ]
+  - meaning_ko: 탑승
+- id: 23897 | level: N1 | [個別 / こべつ , あらゆる事態を個別に分析する必要がある。]
+  - meaning_ko: 특별한 경우
+  - example_ko: 모든 사태를 개별적으로 분석할 필요가 있다.
+- id: 23902 | level: N1 | [ごまかす / ごまかす , 話ごまかすなよ。]
+  - meaning_ko: 속이다
+  - example_ko: 이야기를 속이지 마라.
+- id: 23905 | level: N1 | [細やか / こまやか , 細やかなお心遣いに感謝いたします。]
+  - meaning_ko: 마른
+  - example_ko: 섬세한 걱정에 감사드립니다.
+- id: 23910 | level: N1 | [コマーシャル / コマーシャル , テレビ番組にはコマーシャルが入る。]
+  - meaning_ko: 광고
+  - example_ko: TV 프로그램에는 광고가 들어간다.
+- id: 23914 | level: N1 | [込める / こめる , この計画はある程度の効果が見込める。]
+  - meaning_ko: 포함하다
+  - example_ko: 이 계획은 어느 정도의 효과를 기대할 수 있다.
+- id: 23919 | level: N1 | [コメント / コメント , 私はこのことにコメントする資格はない。]
+  - meaning_ko: 논평
+  - example_ko: 나는 이것에 논평할 자격이 없다.
+- id: 23927 | level: N1 | [籠もる / こもる , ]
+  - meaning_ko: 자신을 고립시키다
+- id: 23932 | level: N1 | [固有 / こゆう , 羽は鳥に固有のものだ。]
+  - meaning_ko: 특성
+  - example_ko: 깃털은 새에 고유한 것이다.
+- id: 23937 | level: N1 | [暦 / こよみ , 母方の祖父は明日還暦を迎える。]
+  - meaning_ko: 달력
+  - example_ko: 어머니의 할아버지는 내일 환력을 맞이한다.
+- id: 23942 | level: N1 | [凝らす / こらす , ]
+  - meaning_ko: 집중하다
+- id: 23947 | level: N1 | [ごらんなさい (かん) / ごらんなさい (かん) , ]
+  - meaning_ko: 바라보다
+- id: 23952 | level: N1 | [孤立 / こりつ , 何軒かの別荘が洪水で孤立した。]
+  - meaning_ko: 격리
+  - example_ko: 여러 별장이 홍수로 격리되었습니다.
+- id: 23957 | level: N1 | [懲りる / こりる , これで彼女も懲りるだろう。]
+  - meaning_ko: 경험으로 배우기
+  - example_ko: 이것으로 그녀도 징수할 것이다.
+- id: 23962 | level: N1 | [凝る / こる , カメラに凝ると抜け出せなくなる。]
+  - meaning_ko: 굳히다
+  - example_ko: 카메라에 집중하면 빠져나갈 수 없게 된다.
+- id: 23967 | level: N1 | [根気 / こんき , 少年は終日その仕事を根気よくやった。]
+  - meaning_ko: 인내심
+  - example_ko: 소년은 하루 종일 그 일을 힘차게했다.
+- id: 23972 | level: N1 | [根拠 / こんきょ , 彼は根拠のない非難にいらいらした。]
+  - meaning_ko: 기초
+  - example_ko: 그는 근거 없는 비난에 짜증을 냈다.
+- id: 23977 | level: N1 | [混血 / こんけつ , 高橋君は完全なアジア人に見えても、混血なのだと聞いた。]
+  - meaning_ko: 혼혈
+  - example_ko: 타카하시군은 완전한 아시아인으로 보이더라도 혼혈이라고 들었다.
+- id: 23981 | level: N1 | [コンタクト (レンズ) / コンタクト (レンズ) , ]
+  - meaning_ko: 연락하다
+- id: 23986 | level: N1 | [昆虫 / こんちゅう , 鳥は昆虫の天敵です。]
+  - meaning_ko: 곤충
+  - example_ko: 새는 곤충의 천적입니다.
+- id: 23991 | level: N1 | [根底 / こんてい , ]
+  - meaning_ko: 뿌리
+- id: 23997 | level: N1 | [混同 / こんどう , 欲望を愛と混同するな。]
+  - meaning_ko: 착란
+  - example_ko: 욕망을 사랑과 혼동하지 마라.
+- id: 24001 | level: N1 | [コントラスト / コントラスト , その洋服は赤と白のコントラストが美しい。]
+  - meaning_ko: 차이
+  - example_ko: 그 옷은 빨간색과 흰색의 대비가 아름답습니다.
+- id: 24006 | level: N1 | [コントロール / コントロール , 誰も私達をコントロールできない。]
+  - meaning_ko: 제어
+  - example_ko: 아무도 저희를 통제할 수 없다.
+- id: 24011 | level: N1 | [コンパス / コンパス , コンパスは北を示す。]
+  - meaning_ko: 나침반
+  - example_ko: 나침반은 북쪽을 나타냅니다.
+- id: 24014 | level: N1 | [根本 / こんぽん , 多数決原理が民主主義の根本原則だ。]
+  - meaning_ko: 기반
+  - example_ko: 다수결 원리가 민주주의의 근본 원칙이다.
+- id: 24017 | level: N1 | [財 / ざい , 財布をなくしたの。]
+  - meaning_ko: 행운
+  - example_ko: 지갑을 잃었어.
+- id: 24025 | level: N1 | [再会 / さいかい , 彼女は彼に再会するのを楽しみにしていた。]
+  - meaning_ko: 다시 만나다
+  - example_ko: 그녀는 그를 다시 만나기를 기대했다.
+- id: 24029 | level: N1 | [災害 / さいがい , 嵐は、多くの災害を引き起こした。]
+  - meaning_ko: 재난
+  - example_ko: 폭풍은 많은 재해를 일으켰습니다.
+- id: 24034 | level: N1 | [細菌 / さいきん , 細菌が病気を引き起こすことがある。]
+  - meaning_ko: 새균
+  - example_ko: 박테리아가 질병을 일으킬 수 있습니다.
+- id: 24038 | level: N1 | [細工 / さいく , あの女は不細工だ。]
+  - meaning_ko: 일하다
+  - example_ko: 그 여자는 부세공이다.
+- id: 24042 | level: N1 | [採掘 / さいくつ , 彼らは石油の採掘を行うつもりだった。]
+  - meaning_ko: 채광
+  - example_ko: 그들은 석유 채굴을 할 예정이었다.
+- id: 24047 | level: N1 | [サイクル / サイクル , リサイクルするの？]
+  - meaning_ko: 주기
+  - example_ko: 재활용?
+- id: 24052 | level: N1 | [採決 / さいけつ , 彼らはその動議について採決をした。]
+  - meaning_ko: 투표
+  - example_ko: 그들은 그 동의에 대해 채결을 했다.
+- id: 24059 | level: N1 | [再建 / さいけん , クラブの再建プランの全容が明らかになった。]
+  - meaning_ko: (사원이나 신사) 재건축
+  - example_ko: 클럽의 재건 계획의 전용이 밝혀졌다.
+- id: 24061 | level: N1 | [再現 / さいげん , 日本を再現してみた。]
+  - meaning_ko: 생식
+  - example_ko: 일본을 재현해 보았다.
+- id: 24066 | level: N1 | [財源 / ざいげん , 地方の道路整備のための財源確保が必要です。]
+  - meaning_ko: 자금 출처
+  - example_ko: 지방의 도로 정비를 위한 재원 확보가 필요합니다.
+- id: 24069 | level: N1 | [在庫 / ざいこ , 石油の在庫がきれかかっている。]
+  - meaning_ko: 비축
+  - example_ko: 석유 재고가 깨끗합니다.
+- id: 24072 | level: N1 | [採算 / さいさん , この企画は採算が取れないかもしれない。]
+  - meaning_ko: 이익
+  - example_ko: 이 기획은 채산을 취할 수 없을지도 모른다.
+- id: 24077 | level: N1 | [サイズ / サイズ , 彼のえりのサイズはいくつですか。]
+  - meaning_ko: 크기
+  - example_ko: 그의 에리의 크기는 얼마입니까?
+- id: 24081 | level: N1 | [再生 / さいせい , この教科書って再生紙でできてんだ。]
+  - meaning_ko: 재생
+  - example_ko: 이 교과서는 재생지로 만들어져 있었다.
+- id: 24089 | level: N1 | [財政 / ざいせい , 彼は財政的に困っている。]
+  - meaning_ko: 경제
+  - example_ko: 그는 재정적으로 곤란하다.
+- id: 24097 | level: N1 | [最善 / さいぜん , 彼は最善を尽くすだろう。]
+  - meaning_ko: 가장 좋은
+  - example_ko: 그는 최선을 다할 것입니다.
+- id: 24100 | level: N1 | [採択 / さいたく , 彼らはその提案を採択した。]
+  - meaning_ko: 양자
+  - example_ko: 그들은 그 제안을 채택했다.
+- id: 24103 | level: N1 | [栽培 / さいばい , 父は米を栽培している。]
+  - meaning_ko: 경작
+  - example_ko: 아버지는 쌀을 재배하고 있다.
+- id: 24113 | level: N1 | [再発 / さいはつ , 再発しますか。]
+  - meaning_ko: 반품
+  - example_ko: 재발하시겠습니까?
+- id: 24118 | level: N1 | [細胞 / さいぼう , 動物の体は細胞でできている。]
+  - meaning_ko: 셀
+  - example_ko: 동물의 몸은 세포로 만들어집니다.
+- id: 24124 | level: N1 | [採用 / さいよう , 彼らは新方針を採用した。]
+  - meaning_ko: 사용
+  - example_ko: 그들은 새로운 정책을 채택했습니다.
+- id: 24132 | level: N1 | [遮る / さえぎる , ]
+  - meaning_ko: 방해하다
+- id: 24137 | level: N1 | [さえずる / さえずる , たくさんの赤い小鳥が、いつも楽しげに木々でさえずる。]
+  - meaning_ko: 노래하다
+  - example_ko: 많은 붉은 작은 새들이 언제나 즐거움으로 나무들조차 가라앉는다.
+- id: 24141 | level: N1 | [冴える / さえる , 夜の方が頭が冴える。]
+  - meaning_ko: 명확하다
+  - example_ko: 밤이 머리가 즐겁다.
+- id: 24143 | level: N1 | [竿 / さお , 釣竿を肩にかけた処士あり。]
+  - meaning_ko: 막대
+  - example_ko: 낚싯대를 어깨에 걸친 처사 있음.
+- id: 24149 | level: N1 | [栄える / さかえる , 善人必ずしも栄える者でない。]
+  - meaning_ko: 번성하다
+  - example_ko: 선인 반드시 번성하는 사람이 아니다.
+- id: 24153 | level: N1 | [差額 / さがく , 差額はありますか。]
+  - meaning_ko: 균형
+  - example_ko: 차이가 있습니까?
+- id: 24161 | level: N1 | [杯 / さかずき , 夜、彼は外に出て一杯やる。]
+  - meaning_ko: 와인 잔
+  - example_ko: 밤에 그는 밖으로 나가서 가득합니다.
+- id: 24165 | level: N1 | [逆立ち / さかだち , 彼女は逆立ちをした。]
+  - meaning_ko: 물구나무서기
+  - example_ko: 그녀는 거꾸로 서 있었다.
+- id: 24170 | level: N1 | [さきに (いぜん) / さきに (いぜん) , ]
+  - meaning_ko: ~ 전에
+- id: 24174 | level: N1 | [詐欺 / さぎ , 詐欺師が捕まった。]
+  - meaning_ko: 사기
+  - example_ko: 사기꾼이 잡혔다.
+- id: 24177 | level: N1 | [削減 / さくげん , 彼女は支出を徐々に削減した。]
+  - meaning_ko: 자르다
+  - example_ko: 그녀는 지출을 서서히 줄였다.
+- id: 24182 | level: N1 | [錯誤 / さくご , まだ試行錯誤だな。]
+  - meaning_ko: 실수
+  - example_ko: 아직 시행착오다.
+- id: 24188 | level: N1 | [作戦 / さくせん , タイムをとって作戦を練ろう。]
+  - meaning_ko: 군사 행동
+  - example_ko: 시간을 들여 작전을 반죽하자.
+- id: 24196 | level: N1 | [叫び / さけび , 彼女は恐怖の叫び声をあげた。]
+  - meaning_ko: 외침
+  - example_ko: 그녀는 공포의 외침을 들었다.
+- id: 24201 | level: N1 | [捧げる / ささげる , 彼らは１２月２４日の晩、熱心に祈りを捧げる。]
+  - meaning_ko: 들어 올리다
+  - example_ko: 그들은 12월 24일 밤 열심히 기도를 바친다.
+- id: 24206 | level: N1 | [差し掛かる / さしかかる , ]
+  - meaning_ko: 가까이 다가가다
+- id: 24211 | level: N1 | [指図 / さしず , 私は誰の指図も受けない。]
+  - meaning_ko: 지침
+  - example_ko: 나는 누구의 지시도받지 않는다.
+- id: 24216 | level: N1 | [差し出す / さしだす , 私が彼に５０ペンスを差し出すと、彼はそれを受け取った。]
+  - meaning_ko: 발표하다
+  - example_ko: 내가 그에게 50 펜스를 내밀었을 때, 그는 그것을 받았다.
+- id: 24222 | level: N1 | [差し支える / さしつかえる , ]
+  - meaning_ko: 방해하다
+- id: 24227 | level: N1 | [授ける / さずける , 言論の自由は社会に多くの利益を授ける。]
+  - meaning_ko: 부여하다
+  - example_ko: 언론의 자유는 사회에 많은 이익을 준다.
+- id: 24232 | level: N1 | [摩する / さする , ]
+  - meaning_ko: 문지르다
+- id: 24237 | level: N1 | [さぞ (さぞや。さぞかし) / さぞ (さぞや。さぞかし) , ]
+  - meaning_ko: 나는 확신한다
+- id: 24242 | level: N1 | [定まる / さだまる , ]
+  - meaning_ko: 안정되다
+- id: 24246 | level: N1 | [定める / さだめる , 職員の選考に関する規則を次のように定める。]
+  - meaning_ko: 결정하다
+  - example_ko: 직원의 선고에 관한 규칙을 다음과 같이 정한다.
+- id: 24251 | level: N1 | [座談会 / ざだんかい , ]
+  - meaning_ko: 심포지엄
+- id: 24256 | level: N1 | [雑 / ざつ , 本や雑誌はそのままにしておきなさい。]
+  - meaning_ko: 거친
+  - example_ko: 책과 잡지는 그대로 두십시오.
+- id: 24261 | level: N1 | [雑貨 / ざっか , 彼女の父は雑貨店をしている。]
+  - meaning_ko: 잡화
+  - example_ko: 그녀의 아버지는 잡화점을 하고 있다.
+- id: 24265 | level: N1 | [殺人 / さつじん , 野望のために彼は殺人を犯した。]
+  - meaning_ko: 살인
+  - example_ko: 야망 때문에 그는 살인을 저지른다.
+- id: 24271 | level: N1 | [察する / さっする , 彼は人を観察するのが趣味だ。]
+  - meaning_ko: 추측하다
+  - example_ko: 그는 사람을 관찰하는 것이 취미다.
+- id: 24274 | level: N1 | [雑談 / ざつだん , ぜひ雑談でもしにいらしてください。]
+  - meaning_ko: 채팅
+  - example_ko: 꼭 잡담이라도 오시기 바랍니다.
+- id: 24278 | level: N1 | [さっと / さっと , 彼女は服をさっと着た。]
+  - meaning_ko: 갑자기
+  - example_ko: 그녀는 옷을 살짝 입었다.
+- id: 24285 | level: N1 | [さっぱりする / さっぱりする , ]
+  - meaning_ko: 새로 고치다
+- id: 24291 | level: N1 | [悟る / さとる , 事後に事を悟るのは容易だ。]
+  - meaning_ko: 깨달음을 얻기 위해
+  - example_ko: 사후에 일을 깨닫는 것은 쉽다.
+- id: 24297 | level: N1 | [最中 / さなか , 彼女はきゅうりを切っている最中だった。]
+  - meaning_ko: 중간에
+  - example_ko: 그녀는 오이를 자르고 있는 동안이었다.
+- id: 24300 | level: N1 | [座標 / ざひょう , ]
+  - meaning_ko: 좌표
+- id: 24305 | level: N1 | [さほど / さほど , 流れはさほど速くない。]
+  - meaning_ko: 그렇지 않다
+  - example_ko: 흐름은 그리 빠르지 않습니다.
+- id: 24311 | level: N1 | [サボる / サボる , ちょくちょくサボるよ。]
+  - meaning_ko: 수업을 빼먹다(건너뛰다)
+  - example_ko: 조금 어리석다.
+- id: 24317 | level: N1 | [様 / さま , 彼女は哀れを誘う有様だった。]
+  - meaning_ko: 상태
+  - example_ko: 그녀는 불쌍한 유혹이었다.
+- id: 24322 | level: N1 | [寒気 / さむけ , 寒気がする。]
+  - meaning_ko: 냉기
+  - example_ko: 한기가 난다.
+- id: 24327 | level: N1 | [侍 / さむらい , 俺は侍の道で生きてる。]
+  - meaning_ko: 사무라이
+  - example_ko: 나는 사무라이의 길에서 살고 있다.
+- id: 24332 | level: N1 | [さも / さも , 黙れ、さもないとたたき出すぞ。]
+  - meaning_ko: 열정적으로
+  - example_ko: 침묵, 그렇지 않으면 두드린다.
+- id: 24336 | level: N1 | [作用 / さよう , 副作用はありませんか。]
+  - meaning_ko: 작업
+  - example_ko: 부작용이 없습니까?
+- id: 24342 | level: N1 | [さらう (こどもを～) / さらう (こどもを～) , ]
+  - meaning_ko: 납치하다
+- id: 24347 | level: N1 | [障る / さわる , 咲桜の話し方って、癇に障るのよ。]
+  - meaning_ko: 방해하다
+  - example_ko: 사쿠사의 말하는 방법은 간질에 빠지는 거야.
+- id: 24351 | level: N1 | [酸 / さん , 酸性土を灰で中和する。]
+  - meaning_ko: 산
+  - example_ko: 산성 토양을 재로 중화한다.
+- id: 24356 | level: N1 | [山岳 / さんがく , 山岳救助隊は２４時間待機している。]
+  - meaning_ko: 산
+  - example_ko: 산악 구조대는 24시간 대기하고 있다.
+- id: 24362 | level: N1 | [参議院 / さんぎいん , 今週は参議院選挙が開かれる。]
+  - meaning_ko: 참의원
+  - example_ko: 이번 주에는 참의원 선거가 열린다.
+- id: 24366 | level: N1 | [産休 / さんきゅう , 彼女は来週から産休に入る。]
+  - meaning_ko: 출산 휴가
+  - example_ko: 그녀는 다음주부터 산휴로 들어간다.
+- id: 24371 | level: N1 | [サンキュー / サンキュー , ]
+  - meaning_ko: 감사합니다
+- id: 24377 | level: N1 | [残金 / ざんきん , 残金は６月３０日までに御支払いします。]
+  - meaning_ko: 남은 돈
+  - example_ko: 잔금은 6월 30일까지 지불합니다.
+- id: 24378 | level: N1 | [産後 / さんご , 女性は産後すぐに亡くなった。]
+  - meaning_ko: 산후
+  - example_ko: 여성은 산후 곧 사망했다.
+- id: 24386 | level: N1 | [残酷 / ざんこく , 彼女は私には残酷そうに見える。]
+  - meaning_ko: 잔학
+  - example_ko: 그녀는 나에게 잔인해 보인다.
+- id: 24391 | level: N1 | [産出 / さんしゅつ , その土地は穀類を豊富に産出する。]
+  - meaning_ko: 생산하다
+  - example_ko: 그 땅은 곡류를 풍부하게 산출한다.
+- id: 24397 | level: N1 | [参照 / さんしょう , 前記参照。]
+  - meaning_ko: 참조
+  - example_ko: 상기 참조.
+- id: 24402 | level: N1 | [参上 / さんじょう , 腰痛のため、小泉さんのパーティー に参上いたしません。]
+  - meaning_ko: 전화하다
+  - example_ko: 요통 때문에 고이즈미 씨의 파티에 참석하지 않습니다.
+- id: 24405 | level: N1 | [残高 / ざんだか , 残高を教えてくれますか。]
+  - meaning_ko: (은행) 잔액
+  - example_ko: 잔액을 가르쳐 주시겠습니까?
+- id: 24410 | level: N1 | [サンタクロース / サンタクロース , 彼はサンタクロースの扮装をした。]
+  - meaning_ko: 산타클로스
+  - example_ko: 그는 산타클로스의 분장을 했다.
+- id: 24414 | level: N1 | [桟橋 / さんばし , 昔ここには桟橋があったんだ。]
+  - meaning_ko: 부두
+  - example_ko: 옛날 여기에는 부두가 있었다.
+- id: 24420 | level: N1 | [賛美 / さんび , 外国人は富士山を賛美する。]
+  - meaning_ko: 칭찬
+  - example_ko: 외국인은 후지산을 찬양한다.
+- id: 24427 | level: N1 | [山腹 / さんぷく , 塔の石は山腹から手に入れました。]
+  - meaning_ko: 산허리
+  - example_ko: 탑의 돌은 산속에서 얻었습니다.
+- id: 24432 | level: N1 | [産婦人科 / さんふじんか , 最近、産婦人科の不足が問題になっているね。]
+  - meaning_ko: 산부인과
+  - example_ko: 최근 산부인과 부족이 문제가 되고 있네요.
+- id: 24436 | level: N1 | [産物 / さんぶつ , 大麦は我国の主産物である。]
+  - meaning_ko: 제품
+  - example_ko: 보리는 우리나라의 주산물이다.
+- id: 24441 | level: N1 | [山脈 / さんみゃく , 私は山脈を見た。]
+  - meaning_ko: 산맥
+  - example_ko: 나는 산맥을 보았다.
+- id: 24446 | level: N1 | [仕上がり / しあがり , 素敵な仕上がりだわ。]
+  - meaning_ko: 마치다
+  - example_ko: 멋진 마무리입니다.
+- id: 24451 | level: N1 | [仕上 / しあげ , 論文はゆっくり仕上げてはどうですか。]
+  - meaning_ko: 끝
+  - example_ko: 논문은 천천히 마무리는 어떻습니까?
+- id: 24456 | level: N1 | [仕上げる / しあげる , 明日までに仕上げる必要はありません。]
+  - meaning_ko: 마무리하다
+  - example_ko: 내일까지 마무리할 필요가 없습니다.
+- id: 24459 | level: N1 | [飼育 / しいく , 牛を飼育する。]
+  - meaning_ko: 번식
+  - example_ko: 소를 사육한다.
+- id: 24465 | level: N1 | [強いて / しいて , ]
+  - meaning_ko: 감히
+- id: 24469 | level: N1 | [シート / シート , 離着陸の際にはシートベルトをしめて下さい。]
+  - meaning_ko: 좌석
+  - example_ko: 이착륙시에는 안전 벨트를 착용하십시오.
+- id: 24474 | level: N1 | [ジーパン / ジーパン , ジーパンに穴があいた。]
+  - meaning_ko: 청바지
+  - example_ko: 지팡이에 구멍이 났다.
+- id: 24481 | level: N1 | [仕入れる / しいれる , ]
+  - meaning_ko: 재고를 확보하다
+- id: 24484 | level: N1 | [強いる / しいる , ]
+  - meaning_ko: 강제로
+- id: 24489 | level: N1 | [潮 / しお , 彼は潮時を見て発言した。]
+  - meaning_ko: 조류
+  - example_ko: 그는 조수를 보고 발언했다.
+- id: 24496 | level: N1 | [歯科 / しか , 彼女は歯科医を開業している。]
+  - meaning_ko: 치과
+  - example_ko: 그녀는 치과 의사를 개업하고 있습니다.
+- id: 24499 | level: N1 | [自我 / じが , よく「自我が強い」と言われます。]
+  - meaning_ko: 본인
+  - example_ko: 자주 「자아가 강하다」라고 합니다.
+- id: 24502 | level: N1 | [自覚 / じかく , 女として自覚なさ過ぎて怖い。]
+  - meaning_ko: 자의식이 강한
+  - example_ko: 여자로서 자각스럽고 너무 무서워.
+- id: 24505 | level: N1 | [仕掛 / しかけ , トムはわなを仕掛けた。]
+  - meaning_ko: 장치
+  - example_ko: 톰은 와나를 걸었다.
+- id: 24513 | level: N1 | [仕掛ける / しかける , 私たちは罠を仕掛けるべきだ。]
+  - meaning_ko: 누워
+  - example_ko: 우리는 함정을 갖추어야 한다.
+- id: 24517 | level: N1 | [しかしながら / しかしながら , しかしながら、品物の数が誤っていました。]
+  - meaning_ko: 하지만
+  - example_ko: 그러나 물품의 수가 잘못되었습니다.
+- id: 24522 | level: N1 | [色彩 / しきさい , 雄のくじゃくは尾の羽毛が色彩豊かである。]
+  - meaning_ko: 색상
+  - example_ko: 수컷 구이는 꼬리의 깃털이 색채 풍부하다.
+- id: 24530 | level: N1 | [式場 / しきじょう , ]
+  - meaning_ko: 예식장
+- id: 24534 | level: N1 | [しきたり / しきたり , 彼はそのしきたりをよく知っている。]
+  - meaning_ko: 관습
+  - example_ko: 그는 그 흔적을 잘 알고 있다.
+- id: 24540 | level: N1 | [事業 / じぎょう , 郵政事業は政府の独占事業です。]
+  - meaning_ko: 프로젝트
+  - example_ko: 우정 사업은 정부의 독점 사업입니다.
+- id: 24544 | level: N1 | [軽蔑 / けいべつ , 貧しい人を軽蔑するな。]
+  - meaning_ko: 경멸
+  - example_ko: 가난한 사람을 경멸하지 마라.
+- id: 24547 | level: N1 | [経歴 / けいれき , 彼はビジネスの経歴がある。]
+  - meaning_ko: 경력
+  - example_ko: 그는 사업의 경력이 있다.
+- id: 24552 | level: N1 | [経路 / けいろ , パリへの最短経路に従って]
+  - meaning_ko: 강의
+  - example_ko: 파리로가는 최단 경로에 따라
+- id: 24558 | level: N1 | [けがらわしい / けがらわしい , ]
+  - meaning_ko: 불결한
+- id: 24563 | level: N1 | [劇団 / げきだん , その劇団は３幕ものの劇を上演した。]
+  - meaning_ko: 극단
+  - example_ko: 그 극단은 3막의 극을 상연했다.
+- id: 24567 | level: N1 | [激励 / げきれい , あなたの激励の言葉に励まされました。]
+  - meaning_ko: 격려
+  - example_ko: 당신의 격려의 말에 격려되었습니다.
+- id: 24573 | level: N1 | [ゲスト / ゲスト , 誰がゲストなの？]
+  - meaning_ko: 손님
+  - example_ko: 누가 손님입니까?
+- id: 24578 | level: N1 | [獣 / けだもの , 野獣は森に住んでいる。]
+  - meaning_ko: 짐승
+  - example_ko: 야수는 숲에 살고 있습니다.
+- id: 24581 | level: N1 | [決 / けつ , 決めました。]
+  - meaning_ko: 결정
+  - example_ko: 결정했습니다.
+- id: 24589 | level: N1 | [決意 / けつい , 父は禁煙を決意した。]
+  - meaning_ko: 결정
+  - example_ko: 아버지는 금연을 결심했다.
+- id: 24596 | level: N1 | [結核 / けっかく , 最近、肺結核を患う人はほとんどいない。]
+  - meaning_ko: 결핵
+  - example_ko: 최근 폐결핵을 앓는 사람은 거의 없다.
+- id: 24598 | level: N1 | [決議 / けつぎ , 私は委員会の決議を支持した。]
+  - meaning_ko: 해결
+  - example_ko: 나는 위원회의 결의를 지지했다.
+- id: 24601 | level: N1 | [結合 / けつごう , 水素と酸素が結合して水になるのです。]
+  - meaning_ko: 콤비네이션
+  - example_ko: 수소와 산소가 결합하여 물이 되는 것입니다.
+- id: 24608 | level: N1 | [決算 / けっさん , 決算報告を申し上げます。]
+  - meaning_ko: 대차대조표
+  - example_ko: 결산 보고를 드립니다.
+- id: 24614 | level: N1 | [月謝 / げっしゃ , ピアノの月謝ちょうだい。]
+  - meaning_ko: 월 수업료
+  - example_ko: 피아노의 월사 그냥.
+- id: 24621 | level: N1 | [決勝 / けっしょう , 私達は決勝戦に進出した。]
+  - meaning_ko: 결승전 (스포츠)
+  - example_ko: 우리는 결승전에 진출했다.
+- id: 24625 | level: N1 | [結晶 / けっしょう , 彼女は紙で雪の結晶を作った。]
+  - meaning_ko: 결정
+  - example_ko: 그녀는 종이로 눈송이를 만들었습니다.
+- id: 24629 | level: N1 | [結成 / けっせい , 目標はチームを結成することです。]
+  - meaning_ko: 형성
+  - example_ko: 목표는 팀을 구성하는 것입니다.
+- id: 24634 | level: N1 | [結束 / けっそく , ]
+  - meaning_ko: 노동 조합
+- id: 24642 | level: N1 | [げっそり / げっそり , ]
+  - meaning_ko: 낙담하다
+- id: 24646 | level: N1 | [決断 / けつだん , 彼は決断力がない。]
+  - meaning_ko: 결정
+  - example_ko: 그는 결단력이 없다.
+- id: 24650 | level: N1 | [月賦 / げっぷ , このテレビを月賦で買った。]
+  - meaning_ko: 월부금
+  - example_ko: 이 TV를 월부로 샀다.
+- id: 24652 | level: N1 | [欠乏 / けつぼう , 浪費は欠乏のもと。]
+  - meaning_ko: 부족
+  - example_ko: 낭비는 부족하에.
+- id: 24660 | level: N1 | [蹴飛ばす / けとばす , ごめん！蹴飛ばすつもりじゃなかったんだ。]
+  - meaning_ko: 걷어차다
+  - example_ko: 미안! 걷어차려고 하지 않았어.
+- id: 24666 | level: N1 | [けなす / けなす , 君は、いつも私の服をけなすのだから。]
+  - meaning_ko: 욕하다
+  - example_ko: 너는 언제나 내 옷을 치우치니까.
+- id: 24671 | level: N1 | [煙たい / けむたい , あの人は煙たい。]
+  - meaning_ko: 침침한
+  - example_ko: 그 사람은 연기하고 싶다.
+- id: 24675 | level: N1 | [煙る / けむる , ]
+  - meaning_ko: 담배를 피우다(예:
+- id: 24682 | level: N1 | [家来 / けらい , ]
+  - meaning_ko: 보유자
+- id: 24687 | level: N1 | [下痢 / げり , 下痢気味です。]
+  - meaning_ko: 설사
+  - example_ko: 설사 기분입니다.
+- id: 24693 | level: N1 | [権威 / けんい , 彼は人文学の権威だ。]
+  - meaning_ko: 권한
+  - example_ko: 그는 인문학의 권위다.
+- id: 24696 | level: N1 | [兼業 / けんぎょう , ]
+  - meaning_ko: 두 가지 직업을 동시에 갖고 있는
+- id: 24700 | level: N1 | [原形 / げんけい , toのつかない不定詞を原形不定詞と言う。]
+  - meaning_ko: 원형
+  - example_ko: to가 붙지 않는 부정사를 원형 부정사라고 한다.
+- id: 24702 | level: N1 | [原型 / げんけい , ]
+  - meaning_ko: 원기
+- id: 24707 | level: N1 | [権限 / けんげん , 彼らは権限を剥奪された。]
+  - meaning_ko: 힘
+  - example_ko: 그들은 권한을 박탈당했다.
+- id: 24712 | level: N1 | [現行 / げんこう , 泥棒は現行犯でつかまった。]
+  - meaning_ko: 현재의
+  - example_ko: 도둑은 현행범으로 잡혔다.
+- id: 24715 | level: N1 | [健在 / けんざい , お父様は、ご健在ですか？]
+  - meaning_ko: 건강하다
+  - example_ko: 아빠는 건강합니까?
+- id: 24723 | level: N1 | [原作 / げんさく , そのドラマは原作と違っている。]
+  - meaning_ko: 원작
+  - example_ko: 그 드라마는 원작과 다르다.
+- id: 24727 | level: N1 | [検事 / けんじ , 検事は誘導尋問をした。]
+  - meaning_ko: 검사
+  - example_ko: 검사는 유도 심문을 했다.
+- id: 24731 | level: N1 | [原子 / げんし , 放射能が原子力発電所から漏れた。]
+  - meaning_ko: 원자
+  - example_ko: 방사능이 원자력발전소에서 누출되었다.
+- id: 24734 | level: N1 | [元首 / げんしゅ , ]
+  - meaning_ko: 자
+- id: 24744 | level: N1 | [原書 / げんしょ , この本は原書の要約版です。]
+  - meaning_ko: 원본 문서
+  - example_ko: 이 책은 원서의 요약판입니다.
+- id: 24749 | level: N1 | [懸賞 / けんしょう , 懸賞ってほんとに当たるのかね。]
+  - meaning_ko: 상품 제공
+  - example_ko: 경품은 정말로 맞는 것일까.
+- id: 24753 | level: N1 | [健全 / けんぜん , 母子ともに健全です。]
+  - meaning_ko: 건강
+  - example_ko: 모자 모두 건강합니다.
+- id: 24758 | level: N1 | [元素 / げんそ , 鉄や酸素は元素である。]
+  - meaning_ko: 요소
+  - example_ko: 철과 산소는 원소이다.
+- id: 24762 | level: N1 | [同調 / どうちょう , 私はあなたの計画に同調します。]
+  - meaning_ko: 동정
+  - example_ko: 나는 당신의 계획에 동조합니다.
+- id: 24771 | level: N1 | [到底 / とうてい , 彼の部屋は小奇麗とは到底言えない。]
+  - meaning_ko: (할 수 없다) 아마도
+  - example_ko: 그의 방은 소기려라고는 도저히 말할 수 없다.
+- id: 24775 | level: N1 | [動的 / どうてき , 彼女は行動的です。]
+  - meaning_ko: 동적
+  - example_ko: 그녀는 행동적입니다.
+- id: 24778 | level: N1 | [尊い / とうとい , 愛より尊い物はない。]
+  - meaning_ko: 귀중한
+  - example_ko: 사랑보다 소중한 것은 없다.
+- id: 24783 | level: N1 | [貴い / とうとい , 良き素質ほど貴いものはない。]
+  - meaning_ko: 귀중한
+  - example_ko: 좋은 소질만큼 귀한 것은 없다.
+- id: 24793 | level: N1 | [同等 / どうとう , 男と女は同等だと切に感じる。]
+  - meaning_ko: 평등
+  - example_ko: 남자와 여자는 동등하다고 간절히 느낀다.
+- id: 24796 | level: N1 | [堂々 / どうどう , 彼は堂々と振る舞う。]
+  - meaning_ko: 웅장한
+  - example_ko: 그는 당당하게 행동한다.
+- id: 24804 | level: N1 | [尊ぶ / とうとぶ , 我々は時間を守ることを尊ぶ。]
+  - meaning_ko: 가치를 부여하다
+  - example_ko: 우리는 시간을 지키는 것을 존중합니다.
+- id: 24810 | level: N1 | [どうにか / どうにか , どうにかそこに着くのに間に合った。]
+  - meaning_ko: 어떤 식으로든
+  - example_ko: 여하튼 거기에 도착하는 동안에 맞았다.
+- id: 24812 | level: N1 | [投入 / とうにゅう , 敵は新兵力を投入した。]
+  - meaning_ko: 던지다
+  - example_ko: 적은 신병력을 투입했다.
+- id: 24816 | level: N1 | [導入 / どうにゅう , 大手銀行の大半がこの制度を導入している。]
+  - meaning_ko: 소개
+  - example_ko: 대형 은행의 대부분이 이 제도를 도입하고 있다.
+- id: 24826 | level: N1 | [当人 / とうにん , 当人のいないところで悪口を言うべきでない。]
+  - meaning_ko: 관련된 사람
+  - example_ko: 성인이 없는 곳에서 욕을 말하면 안된다.
+- id: 24832 | level: N1 | [同封 / どうふう , 注文は全て現金同封のこと。]
+  - meaning_ko: 인클로저(예:
+  - example_ko: 주문은 모두 현금 동봉.
+- id: 24833 | level: N1 | [逃亡 / とうぼう , 彼は逃亡を図った。]
+  - meaning_ko: 탈출하다
+  - example_ko: 그는 도망을 꾀했다.
+- id: 24838 | level: N1 | [冬眠 / とうみん , 熊は冬眠します。]
+  - meaning_ko: 동면
+  - example_ko: 곰은 동면합니다.
+- id: 24842 | level: N1 | [同盟 / どうめい , 両国は互いに同盟を結んでいた。]
+  - meaning_ko: 동맹
+  - example_ko: 양국은 서로 동맹을 맺고 있었다.
+- id: 24846 | level: N1 | [どうやら / どうやら , 彼はどうやら正しいようだ。]
+  - meaning_ko: 그것은 것 같다
+  - example_ko: 그는 분명 옳은 것 같다.
+- id: 24851 | level: N1 | [動力 / どうりょく , 彼は行動力がある。]
+  - meaning_ko: 힘
+  - example_ko: 그는 행동력이 있다.
+- id: 24856 | level: N1 | [登録 / とうろく , 登録用紙は無料で入手できます。]
+  - meaning_ko: 등록
+  - example_ko: 등록 용지는 무료로 사용할 수 있습니다.
+- id: 24861 | level: N1 | [討論 / とうろん , 彼らは討論を始めた。]
+  - meaning_ko: 논의
+  - example_ko: 그들은 토론을 시작했다.
+- id: 24871 | level: N1 | [遠ざかる / とおざかる , 暗闇の中、俺は遠ざかる後姿に必死に手を伸ばす。]
+  - meaning_ko: 멀리 떠나다
+  - example_ko: 어둠 속에서 나는 멀어지는 뒷모습에 필사적으로 손을 뻗는다.
+- id: 24873 | level: N1 | [遠回り / とおまわり , 今日は遠回りをして帰ろっと。]
+  - meaning_ko: 우회
+  - example_ko: 오늘은 돌아다니며 돌아가자.
+- id: 24876 | level: N1 | [トーン / トーン , 私は事務所にストーン氏を訪ねていった。]
+  - meaning_ko: 음정
+  - example_ko: 나는 사무실에 스톤 씨를 찾아갔다.
+- id: 24883 | level: N1 | [とかく / とかく , 事故はとかく起こりがちなもの。]
+  - meaning_ko: 아무리 해도
+  - example_ko: 사고는 어쨌든 일어나기 쉽다.
+- id: 24888 | level: N1 | [とがめる / とがめる , 彼はとがめるように振り返った。]
+  - meaning_ko: 비난하다
+  - example_ko: 그는 찢어진 것처럼 되돌아 보았다.
+- id: 24894 | level: N1 | [時折 / ときおり , 時折クラブで彼に会います。]
+  - meaning_ko: 때때로
+  - example_ko: 때때로 클럽에서 그를 만난다.
+- id: 24899 | level: N1 | [とぎれる / とぎれる , ]
+  - meaning_ko: 일시 중지하다
+- id: 24903 | level: N1 | [研ぐ / とぐ , ]
+  - meaning_ko: 날카롭게하다
+- id: 24908 | level: N1 | [特技 / とくぎ , 特技は何ですか？]
+  - meaning_ko: 특별한 재능
+  - example_ko: 특기는 무엇입니까?
+- id: 24913 | level: N1 | [独裁 / どくさい , 彼らは独裁者と戦った。]
+  - meaning_ko: 절대권
+  - example_ko: 그들은 독재자와 싸웠다.
+- id: 24916 | level: N1 | [特産 / とくさん , 土産に地元の特産品を買って帰った。]
+  - meaning_ko: 전문
+  - example_ko: 선물로 현지 특산품을 사서 돌아왔다.
+- id: 24919 | level: N1 | [独自 / どくじ , 彼は独自で自分の家を建てた。]
+  - meaning_ko: 원래의
+  - example_ko: 그는 독자적으로 자신의 집을 지었다.
+- id: 24926 | level: N1 | [特集 / とくしゅう , 次号では離婚について特集します。]
+  - meaning_ko: 기능(예:
+  - example_ko: 다음 호에서는 이혼에 대해 특집합니다.
+- id: 24931 | level: N1 | [独占 / どくせん , 彼は部屋を独占している。]
+  - meaning_ko: 전매권
+  - example_ko: 그는 방을 독점하고 있습니다.
+- id: 24935 | level: N1 | [独創 / どくそう , 彼のデザインは大変独創的だ。]
+  - meaning_ko: 독창
+  - example_ko: 그의 디자인은 매우 독창적이다.
+- id: 24938 | level: N1 | [得点 / とくてん , 僕は得点を追求する。]
+  - meaning_ko: 점수
+  - example_ko: 나는 득점을 추구한다.
+- id: 24948 | level: N1 | [特派 / とくは , 彼は特派員として海外に派遣された。]
+  - meaning_ko: 특별히 보내다
+  - example_ko: 그는 특파원으로 해외로 파견되었다.
+- id: 24953 | level: N1 | [特有 / とくゆう , 同情は人間特有の感情である。]
+  - meaning_ko: 특징 (의
+  - example_ko: 동정은 인간 특유의 감정이다.
+- id: 24958 | level: N1 | [とげ (をさす) / とげ (をさす) , ]
+  - meaning_ko: 가시
+- id: 24965 | level: N1 | [遂げる / とげる , 彼はその仕事をやり遂げる力がある。]
+  - meaning_ko: 성취하다
+  - example_ko: 그는 그 일을 해낼 힘이 있다.
+- id: 24969 | level: N1 | [～どころか / ～どころか , ]
+  - meaning_ko: 꽤
+- id: 24974 | level: N1 | [年頃 / としごろ , 彼女はだいたい私と同じ年頃だ。]
+  - meaning_ko: 나이
+  - example_ko: 그녀는 대체로 나와 같은 해 무렵이다.
+- id: 24982 | level: N1 | [戸締り / とじまり , あと、戸締りよろしくな。]
+  - meaning_ko: 닫는 중
+  - example_ko: 그리고, 단단히 죄송합니다.
+- id: 24987 | level: N1 | [途上 / とじょう , 発展途上国の人口増加は急速だ。]
+  - meaning_ko: 도중/경로
+  - example_ko: 개발도상국의 인구 증가는 급속하다.
+- id: 24992 | level: N1 | [土台 / どだい , 洪水で家の土台が削り取られた。]
+  - meaning_ko: 기반
+  - example_ko: 홍수로 집의 토대가 깎여졌다.
+- id: 24997 | level: N1 | [途絶える / とだえる , ]
+  - meaning_ko: 멈추다
+- id: 25002 | level: N1 | [特許 / とっきょ , 特許権は重要な財産権である。]
+  - meaning_ko: 특별 허가
+  - example_ko: 특허권은 중요한 재산권이다.
+- id: 25006 | level: N1 | [特権 / とっけん , 彼は特権を乱用した。]
+  - meaning_ko: 특권
+  - example_ko: 그는 특권을 남용했다.
+- id: 25011 | level: N1 | [とっさに / とっさに , ]
+  - meaning_ko: 즉시
+- id: 25014 | level: N1 | [突如 / とつじょ , 突如その職員がキレた。]
+  - meaning_ko: 갑자기
+  - example_ko: 갑자기 그 직원이 깨졌다.
+- id: 25018 | level: N1 | [とって / とって , とっても好きよ。]
+  - meaning_ko: 핸들
+  - example_ko: 아주 좋아해.
+- id: 25026 | level: N1 | [突破 / とっぱ , 敵の防衛線を突破した。]
+  - meaning_ko: 돌파하다
+  - example_ko: 적의 방어선을 돌파했다.
+- id: 25031 | level: N1 | [土手 / どて , 川が土手を越えてあふれた。]
+  - meaning_ko: 둑
+  - example_ko: 강이 흙손을 넘어 넘쳤다.
+- id: 25035 | level: N1 | [届 / とどけ , 夕方までにその木の影は壁に届いた。]
+  - meaning_ko: 보고서
+  - example_ko: 저녁까지 그 나무의 그림자는 벽에 도착했습니다.
+- id: 25042 | level: N1 | [滞る / とどこおる , 支払いを滞る原因となるような問題があるのですが。]
+  - meaning_ko: 침체하다
+  - example_ko: 지불을 멈추는 원인이 되는 문제가 있습니다만.
+- id: 25045 | level: N1 | [整える / ととのえる , 彼女はヘアスタイルを整えるのに忙しかった。]
+  - meaning_ko: 정리하다
+  - example_ko: 그녀는 헤어스타일을 정돈하기에 바빴다.
+- id: 25050 | level: N1 | [止める / とどめる , 父にとって酒を止めるのは難しい。]
+  - meaning_ko: 끝내다
+  - example_ko: 아버지에게 술을 멈추는 것은 어렵다.
+- id: 25055 | level: N1 | [唱える / となえる , 彼女の提案に異議を唱えるとは君も大胆だ。]
+  - meaning_ko: 암송하다
+  - example_ko: 그녀의 제안에 이의를 제기한다고는 너도 대담하다.
+- id: 25059 | level: N1 | [殿様 / とのさま , ]
+  - meaning_ko: 영주
+- id: 25063 | level: N1 | [土俵 / どひょう , ]
+  - meaning_ko: 투기장
+- id: 25068 | level: N1 | [扉 / とびら , 冥界の扉は開かれた。]
+  - meaning_ko: 문
+  - example_ko: 명계의 문은 열렸다.
+- id: 25072 | level: N1 | [溝 / どぶ , 両者の溝が狭まった。]
+  - meaning_ko: 도랑
+  - example_ko: 양자의 홈이 좁아졌다.
+- id: 25076 | level: N1 | [徒歩 / とほ , 彼は徒歩通学だ。]
+  - meaning_ko: 걷는
+  - example_ko: 그는 도보 통학이다.
+- id: 25087 | level: N1 | [土木 / どぼく , ]
+  - meaning_ko: 공공사업
+- id: 25092 | level: N1 | [とぼける / とぼける , ]
+  - meaning_ko: 멍청하게 놀다
+- id: 25097 | level: N1 | [乏しい / とぼしい , 彼は話題の乏しい人だ。]
+  - meaning_ko: 마른
+  - example_ko: 그는 화제가 부족한 사람이다.
+- id: 25101 | level: N1 | [富 / とみ , その土壌は腐植に富んでいます。]
+  - meaning_ko: 재산
+  - example_ko: 그 토양은 부식이 풍부합니다.
+- id: 25107 | level: N1 | [富む / とむ , 天然資源に富む国は世界にたくさんはない。]
+  - meaning_ko: 부자가 되다
+  - example_ko: 천연자원이 풍부한 나라는 세계에 많지 않다.
+- id: 25112 | level: N1 | [共稼ぎ / ともかせぎ , 今では多くの家庭が共稼ぎで、夫と妻の両方が働いている。]
+  - meaning_ko: 함께 일하다
+  - example_ko: 지금은 많은 가정이 공가로 남편과 아내 모두가 일하고 있다.
+- id: 25117 | level: N1 | [伴う / ともなう , 特権はすべて責任を伴う。]
+  - meaning_ko: 동행하다
+  - example_ko: 특권은 모두 책임을 수반한다.
+- id: 25122 | level: N1 | [共働き / ともばたらき , ]
+  - meaning_ko: 맞벌이 소득(남편과 아내가 모두 일함)
+- id: 25127 | level: N1 | [ドライ / ドライ , 俺のマイナスドライバーどこにやった！！]
+  - meaning_ko: 마른
+  - example_ko: 내 일자 드라이버 어디로 했어! !
+- id: 25132 | level: N1 | [ドライクリーニング / ドライクリーニング , ]
+  - meaning_ko: 드라이 클리닝
+- id: 25137 | level: N1 | [ドライバー / ドライバー , 彼はベテランのドライバーだ。]
+  - meaning_ko: 운전사
+  - example_ko: 그는 경험있는 드라이버입니다.
+- id: 25142 | level: N1 | [ドライブイン / ドライブイン , 次のドライブインで休憩していこう。]
+  - meaning_ko: 운전하다
+  - example_ko: 다음 드라이브 인에서 휴식하자.
+- id: 25147 | level: N1 | [トラブル / トラブル , 私はトラブルに巻き込まれた。]
+  - meaning_ko: 문제 (때때로 동사로 사용됨)
+  - example_ko: 나는 문제에 휘말렸다.
+- id: 25152 | level: N1 | [トランジスター / トランジスター , トランジスターの発明は新時代を画した。]
+  - meaning_ko: 트랜지스터
+  - example_ko: 트랜지스터의 발명은 새로운 시대를 나타냈다.
+- id: 25157 | level: N1 | [とりあえず / とりあえず , とりあえずこれをやってしまおう。]
+  - meaning_ko: 즉시
+  - example_ko: 우선 이것을 해 버리자.
+- id: 25162 | level: N1 | [取扱 / とりあつかい , 遺失物取扱所はどこでしょうか。]
+  - meaning_ko: 치료
+  - example_ko: 유실물 취급소는 어디입니까?
+- id: 25167 | level: N1 | [取り扱う / とりあつかう , 算数は数を取り扱う。]
+  - meaning_ko: 치료하다
+  - example_ko: 산수는 수를 취급한다.
+- id: 25172 | level: N1 | [鳥居 / とりい , 鳥居は大きいです。]
+  - meaning_ko: 신사 아치길
+  - example_ko: 토리이는 크다.
+- id: 25176 | level: N1 | [取り替え / とりかえ , 僕はシャツを取り替えます。]
+  - meaning_ko: 교환
+  - example_ko: 나는 셔츠를 바꿉니다.
+- id: 25182 | level: N1 | [取り組む / とりくむ , そろそろ本気で仕事に取り組むころだよ。]
+  - meaning_ko: 태클하다
+  - example_ko: 이제 진심으로 일에 임할 무렵이야.
+- id: 25186 | level: N1 | [取締り / とりしまり , ]
+  - meaning_ko: 제어
+- id: 25192 | level: N1 | [取り締まる / とりしまる , 不正アクセスは、法律で取り締まるべき。]
+  - meaning_ko: 단속하다
+  - example_ko: 무단 접근은 법으로 단속되어야 한다.
+- id: 25195 | level: N1 | [取り調べる / とりしらべる , 事件の原因を取り調べるために実情調査委員会が作られた。]
+  - meaning_ko: 조사하다
+  - example_ko: 사건의 원인을 조사하기 위해 실정조사위원회가 만들어졌다.
+- id: 25198 | level: N1 | [取り立てる / とりたてる , ]
+  - meaning_ko: 수집하다
+- id: 25204 | level: N1 | [取り次ぐ / とりつぐ , ]
+  - meaning_ko: 의 대리인으로 활동하다
+- id: 25207 | level: N1 | [取り付ける / とりつける , ]
+  - meaning_ko: 제공하다
+- id: 25212 | level: N1 | [取り除く / とりのぞく , 見よ、世の罪を取り除く神の子羊。]
+  - meaning_ko: 제거하다
+  - example_ko: 보라, 세상의 죄를 없애는 하나님의 어린 양.
+- id: 25215 | level: N1 | [取引 / とりひき , 商売の取引を日を追って記録している。]
+  - meaning_ko: 업무
+  - example_ko: 장사의 거래를 날을 쫓아 기록하고 있다.
+- id: 25220 | level: N1 | [取り巻く / とりまく , 経済社会を取り巻く環境の変化が著しい。]
+  - meaning_ko: 둘러싸다
+  - example_ko: 경제사회를 둘러싼 환경의 변화가 현저하다.
+- id: 25225 | level: N1 | [取り混ぜる / とりまぜる , ]
+  - meaning_ko: 섞다
+- id: 25229 | level: N1 | [取り戻す / とりもどす , 長い休暇で彼は健康を取り戻すだろう。]
+  - meaning_ko: 되찾다
+  - example_ko: 긴 휴가로 그는 건강을 되찾을 것입니다.
+- id: 25233 | level: N1 | [取り寄せる / とりよせる , インターネットで願書を取り寄せるといいよ。]
+  - meaning_ko: 주문하다
+  - example_ko: 인터넷에서 원서를 주문하면 좋다.
+- id: 25237 | level: N1 | [ドリル / ドリル , これはドリルではない。]
+  - meaning_ko: 송곳
+  - example_ko: 이것은 드릴이 아닙니다.
+- id: 25240 | level: N1 | [副 / とりわけ , 副作用としては、視力障害があります。]
+  - meaning_ko: 특히
+  - example_ko: 부작용으로는 시력 장애가 있습니다.
+- id: 25245 | level: N1 | [とろける / とろける , ]
+  - meaning_ko: 녹다
+- id: 25252 | level: N1 | [鈍感 / どんかん , あの人、鈍感よね？]
+  - meaning_ko: 머리가 둔함
+  - example_ko: 그 사람, 둔감?
+- id: 25257 | level: N1 | [とんだ / とんだ , 彼は非常に想像力にとんだ作家です。]
+  - meaning_ko: 끔찍한
+  - example_ko: 그는 매우 상상력이 뛰어난 작가입니다.
+- id: 25266 | level: N1 | [度忘れ / どわすれ , 私は彼女の名前を度忘れした。]
+  - meaning_ko: 기억 상실
+  - example_ko: 나는 그녀의 이름을 잊었다.
+- id: 25274 | level: N1 | [問屋 / とんや , そうは問屋がおろさないぞ。]
+  - meaning_ko: 도매점
+  - example_ko: 그렇다면 도매상이 떨어지지 않는다.
+- id: 25277 | level: N1 | [内閣 / ないかく , 内閣を倒せ。]
+  - meaning_ko: 내각
+  - example_ko: 내각을 쓰러뜨려라.
+- id: 25283 | level: N1 | [乃至 / ないし , ]
+  - meaning_ko: 에서...까지
+- id: 25288 | level: N1 | [内緒 / ないしょ , 彼女は内緒で私にその話をした。]
+  - meaning_ko: 비밀
+  - example_ko: 그녀는 비밀로 나에게 그 이야기를 했다.
+- id: 25297 | level: N1 | [内心 / ないしん , 政治家は決して内心を見せない。]
+  - meaning_ko: 가장 깊은 생각
+  - example_ko: 정치인은 결코 내심을 보이지 않는다.
+- id: 25300 | level: N1 | [内蔵 / ないぞう , ]
+  - meaning_ko: 내부 장기
+- id: 25305 | level: N1 | [ナイター / ナイター , 私はよくテレビでナイターを見る。]
+  - meaning_ko: 조명 아래에서 게임(예:
+  - example_ko: 나는 잘 텔레비전에서 야간을 본다.
+- id: 25308 | level: N1 | [内部 / ないぶ , 内部分裂した家は倒れる。]
+  - meaning_ko: 내부
+  - example_ko: 내부 부분 찢어진 집은 쓰러진다.
+- id: 25312 | level: N1 | [内乱 / ないらん , イングランドはかつて内乱で分裂したことがあった。]
+  - meaning_ko: 남북 전쟁
+  - example_ko: 영국은 한때 내란으로 분열한 적이 있었다.
+- id: 25317 | level: N1 | [内陸 / ないりく , 彼は中国の内陸を旅行しました。]
+  - meaning_ko: 내륙
+  - example_ko: 그는 중국 내륙을 여행했다.
+- id: 25325 | level: N1 | [苗 / なえ , 私の苗字はワンです。]
+  - meaning_ko: 벼 모종
+  - example_ko: 내 성씨는 한
+- id: 25327 | level: N1 | [なおさら / なおさら , 無口だからなおさら彼が好きなのだ。]
+  - meaning_ko: 더욱
+  - example_ko: 무구하기 때문에 더욱 그가 좋아하는 것이다.
+- id: 25333 | level: N1 | [流し / ながし , 浮き名を流したものだ。]
+  - meaning_ko: 싱크대
+  - example_ko: 떠오르는 이름을 흘린 것이다.
+- id: 25337 | level: N1 | [長々 / ながなが , 彼は床の上に長々と横になった。]
+  - meaning_ko: 긴
+  - example_ko: 그는 바닥에 오랫동안 누워있었습니다.
+- id: 25341 | level: N1 | [中程 / なかほど , ]
+  - meaning_ko: 가운데
+- id: 25350 | level: N1 | [渚 / なぎさ , 渚に人が群がっていた。]
+  - meaning_ko: 물가
+  - example_ko: 물가에 사람이 몰려 있었다.
+- id: 25352 | level: N1 | [嘆く / なげく , 嘆くなよ。]
+  - meaning_ko: 한숨을 쉬다
+  - example_ko: 슬퍼하지 마라.
+- id: 25361 | level: N1 | [投げ出す / なげだす , 投げ出すな。]
+  - meaning_ko: 버리다
+  - example_ko: 던지지 마라.
+- id: 25365 | level: N1 | [仲人 / なこうど , あの夫婦は私たちの仲人です。]
+  - meaning_ko: 중개인
+  - example_ko: 그 부부는 우리의 중인입니다.
+- id: 25368 | level: N1 | [和やか / なごやか , 彼らは和やかに食事をした。]
+  - meaning_ko: 경증
+  - example_ko: 그들은 부드럽게 식사를 했다.
+- id: 25372 | level: N1 | [名残 / なごり , この愛鳥ともおさらばか、名残惜しいことだ。]
+  - meaning_ko: 유적
+  - example_ko: 이 애조와도 굉장히, 잔잔한 일이다.
+- id: 25375 | level: N1 | [情け / なさけ , 旅は道連れ世は情け。]
+  - meaning_ko: 동정
+  - example_ko: 여행은 길 동반세는 정.
+- id: 25384 | level: N1 | [情無い / なさけない , ]
+  - meaning_ko: 비참한
+- id: 25391 | level: N1 | [情深い / なさけぶかい , あんなに愛情深いご両親がいらっしゃるなんてあなたは幸運です。]
+  - meaning_ko: 다정한
+  - example_ko: 그렇게 애정이 많은 부모님이 계신다니 당신은 행운입니다.
+- id: 25397 | level: N1 | [詰る / なじる , ]
+  - meaning_ko: 책망하다
+- id: 25400 | level: N1 | [名高い / なだかい , 彼女は歌手として名高い。]
+  - meaning_ko: 유명한
+  - example_ko: 그녀는 가수로 유명하다.
+- id: 25405 | level: N1 | [雪崩 / なだれ , 雪崩で道路がふさがった。]
+  - meaning_ko: 눈사태
+  - example_ko: 눈사태로 도로가 막혔다.
+- id: 25411 | level: N1 | [懐く / なつく , クッキーが懐くぐらいだから、多分いい奴なんだよ。]
+  - meaning_ko: 감정적으로 애착을 가지게 되다
+  - example_ko: 쿠키가 그리워서, 어쩌면 좋은 녀석이야.
+- id: 25416 | level: N1 | [名付ける / なづける , トムは我が子をジョンと名付けることにした。]
+  - meaning_ko: 이름을 짓다
+  - example_ko: 톰은 우리 아이를 존이라고 명명하기로 했다.
+- id: 25420 | level: N1 | [何気ない / なにげない , ]
+  - meaning_ko: 평상복
+- id: 25423 | level: N1 | [なにとぞ / なにとぞ , ]
+  - meaning_ko: 제발
+- id: 25427 | level: N1 | [なにより / なにより , なによりも健康が第一です。]
+  - meaning_ko: 최대
+  - example_ko: 무엇보다도 건강이 제일입니다.
+- id: 25434 | level: N1 | [ナプキン / ナプキン , ナプキンを頂けますか。]
+  - meaning_ko: 냅킨
+  - example_ko: 냅킨을받을 수 있습니까?
+- id: 25439 | level: N1 | [名札 / なふだ , 彼は彼女の名札をちらりと見た。]
+  - meaning_ko: 명판
+  - example_ko: 그는 그녀의 이름표를 깜박거렸다.
+- id: 25443 | level: N1 | [生臭い / なまぐさい , まな板が生臭いです。]
+  - meaning_ko: 생선 냄새나 피 냄새
+  - example_ko: 도마가 생 냄새입니다.
+- id: 25447 | level: N1 | [生温い / なまぬるい , ]
+  - meaning_ko: 미적지근한
+- id: 25456 | level: N1 | [生身 / なまみ , ]
+  - meaning_ko: 살아있는 육체
+- id: 25462 | level: N1 | [鉛 / なまり , 母は１本の紐で３本の鉛筆を結わえた。]
+  - meaning_ko: 납(금속)
+  - example_ko: 어머니는 1개의 끈으로 3개의 연필을 묶었다.
+- id: 25465 | level: N1 | [滑らか / なめらか , 彼女の肌は滑らかです。]
+  - meaning_ko: 부드러움
+  - example_ko: 그녀의 피부는 부드럽습니다.
+- id: 25470 | level: N1 | [嘗める / なめる , ]
+  - meaning_ko: 핥다
+- id: 25474 | level: N1 | [悩ましい / なやましい , インフレだ。悩ましい。]
+  - meaning_ko: 매혹적인
+  - example_ko: 인플레이션이다. 괴롭다.
+- id: 25482 | level: N1 | [悩ます / なやます , 子供はしばしば両親を悩ます。]
+  - meaning_ko: 괴롭히다
+  - example_ko: 아이는 종종 부모를 괴롭힌다.
+- id: 25486 | level: N1 | [悩み / なやみ , 彼女の話好きは悩みの種だ。]
+  - meaning_ko: 근심거리)
+  - example_ko: 그녀의 이야기를 좋아하는 것은 고민의 씨앗이다.
+- id: 25491 | level: N1 | [並びに / ならびに , ]
+  - meaning_ko: 그리고
+- id: 25497 | level: N1 | [成り立つ / なりたつ , 給料があがったので生活がどうにか成り立つ。]
+  - meaning_ko: 구성하다
+  - example_ko: 월급이 올라서 생활이 어떻게든 이루어진다.
+- id: 25502 | level: N1 | [なるたけ / なるたけ , ]
+  - meaning_ko: 가능한 한
+- id: 25504 | level: N1 | [慣れ / なれ , 寮生活には慣れましたか。]
+  - meaning_ko: 관행
+  - example_ko: 기숙사 생활에 익숙해졌습니까?
+- id: 25509 | level: N1 | [馴々しい / なれなれしい , ]
+  - meaning_ko: 친숙한
+- id: 25515 | level: N1 | [～なんか / ～なんか , ]
+  - meaning_ko: 적어도 ~
+- id: 25519 | level: N1 | [ナンセンス / ナンセンス , そんなナンセンスなことはやめてくれよ。]
+  - meaning_ko: 무의미한 말
+  - example_ko: 그런 말도 안되는 것은 그만둬.
+- id: 25521 | level: N1 | [何だか / なんだか , 何だか疲れました。]
+  - meaning_ko: 조금
+  - example_ko: 뭔가 지쳤어요.
+- id: 25529 | level: N1 | [なんだかんだ / なんだかんだ , 彼は、なんだかんだ言って支払いを延期した。]
+  - meaning_ko: 뭔가 또는 다른
+  - example_ko: 그는 왠지 말해 지불을 연기했다.
+- id: 25533 | level: N1 | [なんなり / なんなり , ]
+  - meaning_ko: 아무것
+- id: 25536 | level: N1 | [荷 / に , 品物は昨日入荷しました。]
+  - meaning_ko: 짐
+  - example_ko: 물건은 어제 입하했습니다.
+- id: 25542 | level: N1 | [似通う / にかよう , ]
+  - meaning_ko: 밀접하게 닮다
+- id: 25547 | level: N1 | [にきび / にきび , 彼女の顔はにきびだらけだ。]
+  - meaning_ko: 여드름
+  - example_ko: 그녀의 얼굴은 여드름 투성이이다.
+- id: 25550 | level: N1 | [賑わう / にぎわう , ]
+  - meaning_ko: 번영하다
+- id: 25554 | level: N1 | [憎しみ / にくしみ , 恋は盲目。憎しみもまたしかり。]
+  - meaning_ko: 증오
+  - example_ko: 사랑은 맹목. 증오도 역시.
+- id: 25563 | level: N1 | [肉親 / にくしん , 彼女は肉親の一人を失った。]
+  - meaning_ko: 혈연관계
+  - example_ko: 그녀는 육부모 중 한 명을 잃었다.
+- id: 25568 | level: N1 | [肉体 / にくたい , 彼は肉体的、精神的苦痛に耐えてきた。]
+  - meaning_ko: 몸
+  - example_ko: 그는 육체적, 정신적 고통을 참아왔다.
+- id: 25573 | level: N1 | [逃げ出す / にげだす , 現実から逃げ出す。]
+  - meaning_ko: 도망치다
+  - example_ko: 현실에서 도망친다.
+- id: 25581 | level: N1 | [西日 / にしび , 西日本ではよく耳にします。]
+  - meaning_ko: 서쪽으로 가는 태양
+  - example_ko: 서일본에서는 자주 듣습니다.
+- id: 25585 | level: N1 | [滲む / にじむ , 汗が滲む。]
+  - meaning_ko: 달리다
+  - example_ko: 땀을 흘린다.
+- id: 25589 | level: N1 | [にせ物 / にせもの , ]
+  - meaning_ko: 모방
+- id: 25596 | level: N1 | [日夜 / にちや , 彼は日夜働いて過労になった。]
+  - meaning_ko: 낮과 밤
+  - example_ko: 그는 밤낮으로 일하고 과로되었다.
+- id: 25600 | level: N1 | [荷造り / にづくり , ちょうど荷造りが終わったところです。]
+  - meaning_ko: 포장
+  - example_ko: 그냥 짐이 끝난 곳입니다.
+- id: 25605 | level: N1 | [担う / になう , ]
+  - meaning_ko: 어깨에 메다
+- id: 25610 | level: N1 | [鈍る / にぶる , 飲めば飲むほど注意力が鈍る。]
+  - meaning_ko: 능력이 떨어지다
+  - example_ko: 마시면 마실수록 주의력이 둔하다.
+- id: 25615 | level: N1 | [にも関わらず / にもかかわらず , 彼女の抗議にも関わらず彼は行った。]
+  - meaning_ko: 그럼에도 불구하고
+  - example_ko: 그녀의 시위에도 불구하고 그는 갔다.
+- id: 25620 | level: N1 | [ニュアンス / ニュアンス , その言葉には微妙なニュアンスがある。]
+  - meaning_ko: 미묘한 차이
+  - example_ko: 그 말에는 미묘한 뉘앙스가 있다.
+- id: 25625 | level: N1 | [ニュー / ニュー , 彼は９時発ニューヨーク行きのシャトル便に飛び乗った。]
+  - meaning_ko: 새로운
+  - example_ko: 그는 9시 출발 뉴욕행 셔틀 항공편으로 날아갔다.
+- id: 25630 | level: N1 | [入手 / にゅうしゅ , 登録用紙は無料で入手できます。]
+  - meaning_ko: 획득
+  - example_ko: 등록 용지는 무료로 사용할 수 있습니다.
+- id: 25636 | level: N1 | [入賞 / にゅうしょう , 君が入賞したのには驚いた。]
+  - meaning_ko: (대회에서) 상이나 장소를 얻다
+  - example_ko: 네가 입상했는데 놀랐다.
+- id: 25641 | level: N1 | [入浴 / にゅうよく , 父は夕食前に入浴する。]
+  - meaning_ko: 담그다
+  - example_ko: 아버지는 저녁 식사 전에 목욕한다.
+- id: 25643 | level: N1 | [尿 / にょう , 排尿障害があります。]
+  - meaning_ko: 오줌
+  - example_ko: 배뇨 장애가 있습니다.
+- id: 25648 | level: N1 | [認識 / にんしき , 赤ん坊には善悪が認識出来ない。]
+  - meaning_ko: 인식
+  - example_ko: 아기에게는 선악을 인식할 수 없다.
+- id: 25653 | level: N1 | [妊娠 / にんしん , 彼女は妊娠中です。]
+  - meaning_ko: 임신
+  - example_ko: 그녀는 임신 중입니다.
+- id: 25658 | level: N1 | [任務 / にんむ , 彼は任務を成し遂げた。]
+  - meaning_ko: 의무
+  - example_ko: 그는 임무를 이루었다.
+- id: 25663 | level: N1 | [任命 / にんめい , 彼らは彼を理事に任命した。]
+  - meaning_ko: 약속
+  - example_ko: 그들은 그를 이사로 임명했다.
+- id: 25667 | level: N1 | [抜かす / ぬかす , 注意しなさい。君はよく何かの文字を抜かすよ。]
+  - meaning_ko: 생략하다
+  - example_ko: 조심하십시오. 너는 자주 뭔가 문자를 뽑을거야.
+- id: 25675 | level: N1 | [抜け出す / ぬけだす , 経済が今不振を抜け出すには時間がかかるだろう。]
+  - meaning_ko: 미끄러지다
+  - example_ko: 경제가 지금 부진을 벗어나는 데는 시간이 걸릴 것이다.
+- id: 25679 | level: N1 | [主 / ぬし , 彼ほど平々凡々たる主人公は珍しい。]
+  - meaning_ko: 소유자
+  - example_ko: 그만큼 평범한 주인공은 드물다.
+- id: 25687 | level: N1 | [沼 / ぬま , 彼らは沼地を通り抜けた。]
+  - meaning_ko: 늪
+  - example_ko: 그들은 늪지를 통과했다.
+- id: 25692 | level: N1 | [音色 / ねいろ , 風鈴の音色が大好きです。]
+  - meaning_ko: 톤 컬러
+  - example_ko: 풍령의 음색을 사랑 해요.
+- id: 25697 | level: N1 | [値打ち / ねうち , わらの男でも金の女の値打ちがある。]
+  - meaning_ko: 값
+  - example_ko: 밀짚 남자라도 금여자의 가치가 있다.
+- id: 25701 | level: N1 | [ネガ / ネガ , ネガティブな性格直したいな。]
+  - meaning_ko: (사진) 네거티브
+  - example_ko: 부정적인 성격을 바꾸고 싶다.
+- id: 25706 | level: N1 | [寝かせる / ねかせる , 彼女はその人形をベッドに寝かせるだろう。]
+  - meaning_ko: 잠자리에 들다
+  - example_ko: 그녀는 그 인형을 침대에 잠들게 할 것이다.
+- id: 25711 | level: N1 | [ねじまわし / ねじまわし , そのねじまわしを私は、友人から借りた。]
+  - meaning_ko: 드라이버
+  - example_ko: 그 나사 주름을 나는 친구로부터 빌렸다.
+- id: 25716 | level: N1 | [捩れる / ねじれる , ]
+  - meaning_ko: 트위스트
+- id: 25722 | level: N1 | [妬む / ねたむ , ]
+  - meaning_ko: 질투하다
+- id: 25726 | level: N1 | [ねだる / ねだる , 彼らは金をくれとしつこく親にねだる。]
+  - meaning_ko: 잔소리하다
+  - example_ko: 그들은 돈을 주고 끈질기게 부모에게 짓밟는다.
+- id: 25731 | level: N1 | [熱意 / ねつい , 彼らは熱意で燃えていた。]
+  - meaning_ko: 열성
+  - example_ko: 그들은 열의로 타오르고 있었다.
+- id: 25736 | level: N1 | [熱湯 / ねっとう , 熱湯が突然吹き出した。]
+  - meaning_ko: 끓는 물
+  - example_ko: 온수가 갑자기 불어났다.
+- id: 25742 | level: N1 | [熱量 / ねつりょう , ]
+  - meaning_ko: 발열량
+- id: 25744 | level: N1 | [粘り / ねばり , 最後まで粘り抜いてね。]
+  - meaning_ko: 끈적임
+  - example_ko: 끝까지 끈질기게 해주세요.
+- id: 25752 | level: N1 | [粘る / ねばる , トムはマラソン大会で最後まで粘るも、ライバルに敗れた。]
+  - meaning_ko: 끈끈하다
+  - example_ko: 톰은 마라톤 대회에서 끝까지 붙어도 라이벌에 패했다.
+- id: 25755 | level: N1 | [値引き / ねびき , 値引きしてもらえませんか。]
+  - meaning_ko: 가격 인하
+  - example_ko: 할인받을 수 없습니까?
+- id: 25762 | level: N1 | [根回し / ねまわし , 大統領は辞任する前にお金に困らないように根回しした。]
+  - meaning_ko: 필요한 조치를 취하다
+  - example_ko: 대통령은 사임하기 전에 돈에 곤란하지 않도록 뿌리를 내렸다.
+- id: 25767 | level: N1 | [眠たい / ねむたい , まだ眠たい。]
+  - meaning_ko: 졸린
+  - example_ko: 아직 자고 싶다.
+- id: 25770 | level: N1 | [練る / ねる , 君は胆力を練る必要がある。]
+  - meaning_ko: 반죽하다
+  - example_ko: 넌 담력을 반죽할 필요가 있다.
+- id: 25773 | level: N1 | [念 / ねん , 残念ながらそれは本当なのです。]
+  - meaning_ko: 감각
+  - example_ko: 불행히도 그것은 사실입니다.
+- id: 25778 | level: N1 | [年賀 / ねんが , 友達に年賀状を出すのを忘れてた。]
+  - meaning_ko: 새해인사
+  - example_ko: 친구에게 연하장을 내는 것을 잊었다.
+- id: 25784 | level: N1 | [念願 / ねんがん , 彼は念願を果たした。]
+  - meaning_ko: 마음속의 욕망
+  - example_ko: 그는 염원을 완수했다.
+- id: 25791 | level: N1 | [年号 / ねんごう , 新しい年号は令和に決まった。]
+  - meaning_ko: 시대의 이름
+  - example_ko: 새로운 연호는 영화로 정해졌다.
+- id: 25794 | level: N1 | [燃焼 / ねんしょう , 燃焼には酸素が必要です。]
+  - meaning_ko: 타고 있는
+  - example_ko: 연소에는 산소가 필요합니다.
+- id: 25796 | level: N1 | [年長 / ねんちょう , 僕は去年長い旅をした。]
+  - meaning_ko: 선임 순위
+  - example_ko: 나는 작년 긴 여행을 했다.
+- id: 25800 | level: N1 | [燃料 / ねんりょう , 燃料が不足していた。]
+  - meaning_ko: 연료
+  - example_ko: 연료가 부족했다.
+- id: 25808 | level: N1 | [年輪 / ねんりん , ]
+  - meaning_ko: 연간 나무 반지
+- id: 25814 | level: N1 | [ノイローゼ / ノイローゼ , ノイローゼになるかと思ったわ。]
+  - meaning_ko: 신경증 (GER: 신경증)
+  - example_ko: 노이로제가 될까 생각했어.
+- id: 25819 | level: N1 | [農耕 / のうこう , ]
+  - meaning_ko: 농업
+- id: 25823 | level: N1 | [農場 / のうじょう , 僕達は農場の近くで遊んだ。]
+  - meaning_ko: 농장
+  - example_ko: 우리는 농장 근처에서 놀았다.
+- id: 25830 | level: N1 | [農地 / のうち , 河川の盆地には普通肥沃な農地がある。]
+  - meaning_ko: 농경지
+  - example_ko: 하천 분지에는 보통 비옥한 농지가 있다.
+- id: 25833 | level: N1 | [納入 / のうにゅう , ]
+  - meaning_ko: 지불
+- id: 25838 | level: N1 | [逃す / のがす , 好機を逃すな。]
+  - meaning_ko: 풀어 놓다
+  - example_ko: 호기를 놓치지 마라.
+- id: 25843 | level: N1 | [逃れる / のがれる , 誰もが死を逃れる事ができない。]
+  - meaning_ko: 탈출하다
+  - example_ko: 모두가 죽음을 피할 수 없다.
+- id: 25851 | level: N1 | [軒並 / のきなみ , ]
+  - meaning_ko: 집들이 늘어선
+- id: 25853 | level: N1 | [望ましい / のぞましい , 彼女はひとりでやるのが望ましい。]
+  - meaning_ko: 바람직한
+  - example_ko: 그녀는 혼자서하는 것이 바람직합니다.
+- id: 25860 | level: N1 | [乗っ取る / のっとる , ]
+  - meaning_ko: 캡처
+- id: 25863 | level: N1 | [のどか / のどか , 何てのどかな昼下がりなんだろう。]
+  - meaning_ko: 조용한
+  - example_ko: 어쩐지 목가적인 오후일까.
+- id: 25868 | level: N1 | [罵る / ののしる , ]
+  - meaning_ko: 욕하다
+- id: 25874 | level: N1 | [延べ / のべ , 金の延べ棒１本を盗まれた。]
+  - meaning_ko: 선물
+  - example_ko: 금연봉 1개를 훔쳤다.
+- id: 25881 | level: N1 | [飲み込む / のみこむ , 食べ物を飲み込むとのどが痛みます。]
+  - meaning_ko: 꿀꺽 삼키다
+  - example_ko: 음식을 삼키면 목이 아프다.
+- id: 25886 | level: N1 | [乗り込む / のりこむ , 大統領は車に乗り込むところです。]
+  - meaning_ko: 탑승하다
+  - example_ko: 대통령은 차에 탑승하는 곳입니다.
+- id: 25891 | level: N1 | [刃 / は , そのナイフは刃が鋭い。]
+  - meaning_ko: 잎
+  - example_ko: 그 칼은 칼날이 날카롭다.
+- id: 25896 | level: N1 | [～派 / ～は , ]
+  - meaning_ko: 그룹
+- id: 25898 | level: N1 | [バー / バー , ＯＥのツールバーにボタンを追加・削除する。]
+  - meaning_ko: 술집
+  - example_ko: OE 툴바에 버튼을 추가 / 삭제합니다.
+- id: 25902 | level: N1 | [把握 / はあく , 彼はその情況を把握していた。]
+  - meaning_ko: 파악
+  - example_ko: 그는 그 상황을 파악했다.
+- id: 25906 | level: N1 | [パート / パート , 料理のレパートリーは限られてるの。]
+  - meaning_ko: 아르바이트
+  - example_ko: 요리의 레퍼토리는 한정되어 있다.
+- id: 25911 | level: N1 | [廃棄 / はいき , 産業廃棄物が地球を汚染する。]
+  - meaning_ko: 처분
+  - example_ko: 산업폐기물이 지구를 오염시킨다.
+- id: 25918 | level: N1 | [配給 / はいきゅう , 戦時中政府は肉を配給にした。]
+  - meaning_ko: 배포(예:
+  - example_ko: 전시중 정부는 고기를 배급으로 했다.
+- id: 25923 | level: N1 | [ばい菌 / ばいきん , ばい菌扱いするなよ。]
+  - meaning_ko: 박테리아
+  - example_ko: 세균 취급하지 마라.
+- id: 25927 | level: N1 | [配偶者 / はいぐうしゃ , 配偶者間人工授精を受けました。]
+  - meaning_ko: 배우자
+  - example_ko: 배우자간 인공수정을 받았습니다.
+- id: 25933 | level: N1 | [拝啓 / はいけい , ]
+  - meaning_ko: -- 편지의 시작 부분에 사용되는 공식적인 인사말 --
+- id: 25937 | level: N1 | [背景 / はいけい , 青空を背景に木々を描く。]
+  - meaning_ko: 배경
+  - example_ko: 푸른 하늘 배경에 나무를 그립니다.
+- id: 25942 | level: N1 | [背後 / はいご , 彼の背後には資産家が控えている。]
+  - meaning_ko: 뒤쪽에
+  - example_ko: 그의 배후에는 자산가가 앞두고 있다.
+- id: 25947 | level: N1 | [廃止 / はいし , 彼らは古い制度を廃止した。]
+  - meaning_ko: 폐지
+  - example_ko: 그들은 오래된 제도를 폐지했다.
+- id: 25954 | level: N1 | [拝借 / はいしゃく , 電話を拝借できますか。]
+  - meaning_ko: (겸손하게) (정중하게) 빌려주기
+  - example_ko: 전화를 빌릴 수 있습니까?
+- id: 25959 | level: N1 | [排除 / はいじょ , 暴力は排除しなければならない。]
+  - meaning_ko: 제외
+  - example_ko: 폭력은 배제해야 한다.
+- id: 25962 | level: N1 | [賠償 / ばいしょう , 私は彼に損害賠償を要求した。]
+  - meaning_ko: 배상금
+  - example_ko: 나는 그에게 손해배상을 요구했다.
+- id: 25967 | level: N1 | [排水 / はいすい , 学校はプールの水を月一回排水する。]
+  - meaning_ko: 배수
+  - example_ko: 학교는 수영장의 물을 월 1회 배수한다.
+- id: 25972 | level: N1 | [敗戦 / はいせん , 敗戦のうわさが広まった。]
+  - meaning_ko: 패배시키다
+  - example_ko: 패전의 소문이 퍼졌다.
+- id: 25979 | level: N1 | [配置 / はいち , 神を称え、武器を配置せよ。]
+  - meaning_ko: (자원의) 배열
+  - example_ko: 하나님을 기리며 무기를 배치하라.
+- id: 25983 | level: N1 | [配布 / はいふ , 先生はチラシを配布した。]
+  - meaning_ko: 분포
+  - example_ko: 선생님은 전단지를 배포했습니다.
+- id: 25987 | level: N1 | [配分 / はいぶん , 豊かさの配分は大問題だね。]
+  - meaning_ko: 분포
+  - example_ko: 풍요의 배분은 큰 문제군요.
+- id: 25994 | level: N1 | [敗北 / はいぼく , 実は我々は敗北を覚悟していた。]
+  - meaning_ko: 패배 (동사로는 '패배하다'를 의미)
+  - example_ko: 사실 우리는 패배를 각오하고 있었다.
+- id: 25998 | level: N1 | [倍率 / ばいりつ , 有名大学は倍率が高いから受験者も必死です。]
+  - meaning_ko: 지름
+  - example_ko: 유명 대학은 배율이 높기 때문에 응시자도 필사적입니다.
+- id: 26001 | level: N1 | [配慮 / はいりょ , 彼女は個人的な配慮をした。]
+  - meaning_ko: 고려 사항
+  - example_ko: 그녀는 개인적인 배려를 했다.
+- id: 26005 | level: N1 | [配列 / はいれつ , ]
+  - meaning_ko: 준비
+- id: 26009 | level: N1 | [破壊 / はかい , 文化は言語を破壊する。]
+  - meaning_ko: 파괴
+  - example_ko: 문화는 언어를 파괴한다.
+- id: 26014 | level: N1 | [いたわる / いたわる , ]
+  - meaning_ko: 공감하다
+- id: 26019 | level: N1 | [一概に / いちがいに , そうですね。一概には言えませんね。]
+  - meaning_ko: 무조건
+  - example_ko: 맞습니다. 일반적으로 말할 수 없습니다.
+- id: 26024 | level: N1 | [著しい / いちじるしい , 両者の間には著しい違いがある。]
+  - meaning_ko: 놀랄 만한
+  - example_ko: 양자 사이에는 현저한 차이가 있다.
+- id: 26029 | level: N1 | [一同 / いちどう , 家族一同元気です。]
+  - meaning_ko: 모두 참석
+  - example_ko: 가족 일동 건강합니다.
+- id: 26034 | level: N1 | [一部分 / いちぶぶん , 時とは、永遠の一部分である。]
+  - meaning_ko: 따로
+  - example_ko: 때는 영원한 부분이다.
+- id: 26038 | level: N1 | [一別 / いちべつ , ]
+  - meaning_ko: 이별
+- id: 26043 | level: N1 | [一面 / いちめん , 町が一面すっぽり雪をかぶった。]
+  - meaning_ko: 한편
+  - example_ko: 마을이 일면 완전히 눈을 덮었다.
+- id: 26048 | level: N1 | [一目 / いちもく , 彼女は一目で彼に惚れ込んだ。]
+  - meaning_ko: 한눈에
+  - example_ko: 그녀는 한눈에 그에게 반했다.
+- id: 26054 | level: N1 | [一様 / いちよう , ]
+  - meaning_ko: 제복
+- id: 26059 | level: N1 | [一律 / いちりつ , ]
+  - meaning_ko: 심지어
+- id: 26063 | level: N1 | [一連 / いちれん , 彼らは一連の音楽会を開催した。]
+  - meaning_ko: 시리즈
+  - example_ko: 그들은 일련의 음악회를 개최했다.
+- id: 26067 | level: N1 | [一括 / いっかつ , 一括払いでテレビを買った。]
+  - meaning_ko: 모두 함께
+  - example_ko: 일괄 지불로 TV를 샀다.
+- id: 26073 | level: N1 | [一気 / いっき , 彼は一気に手紙を書いた。]
+  - meaning_ko: 한 번에
+  - example_ko: 그는 단번에 편지를 썼다.
+- id: 26080 | level: N1 | [一挙に / いっきょに , ]
+  - meaning_ko: 단숨에
+- id: 26084 | level: N1 | [一見 / いっけん , 百聞は一見に如かず。]
+  - meaning_ko: 봐
+  - example_ko: 백문은 보기에도 불구하고.
+- id: 26093 | level: N1 | [一切 / いっさい , 彼は肉を一切れ切り取った。]
+  - meaning_ko: 예외 없이
+  - example_ko: 그는 고기를 한꺼번에 잘라냈다.
+- id: 26098 | level: N1 | [一心 / いっしん , 彼女は一心に祈っていた。]
+  - meaning_ko: 한마음
+  - example_ko: 그녀는 일심으로 기도했다.
+- id: 26102 | level: N1 | [いっそ / いっそ , その仕事はいっそやめようかと思った。]
+  - meaning_ko: 꽤
+  - example_ko: 그 일은 차라리 그만둘까 생각했다.
+- id: 26106 | level: N1 | [一変 / いっぺん , 夫妻は化学を近代科学へと一変させた。]
+  - meaning_ko: 완전한 변화
+  - example_ko: 부부는 화학을 근대 과학으로 일변시켰다.
+- id: 26109 | level: N1 | [意図 / いと , 彼は意図的に窓を割った。]
+  - meaning_ko: 의도
+  - example_ko: 그는 의도적으로 창을 깨뜨렸다.
+- id: 26114 | level: N1 | [営む / いとなむ , その島には漁業を営む人たちが住んでいた。]
+  - meaning_ko: 계속하다(예:
+  - example_ko: 그 섬에는 어업을 운영하는 사람들이 살고 있었다.
+- id: 26120 | level: N1 | [挑む / いどむ , ]
+  - meaning_ko: 도전하다
+- id: 26125 | level: N1 | [稲光 / いなびかり , 遠くに稲光が見えた。]
+  - meaning_ko: (번쩍이는) 번개
+  - example_ko: 멀리 벼가 보였다.
+- id: 26133 | level: N1 | [祈り / いのり , ご冥福をお祈りします。]
+  - meaning_ko: 기도
+  - example_ko: 명복을 기원합니다.
+- id: 26137 | level: N1 | [いびき / いびき , 彼は高いびきをかいて寝ていた。]
+  - meaning_ko: 쿨쿨
+  - example_ko: 그는 높은 삐걱 거리고 자고 있었다.
+- id: 26143 | level: N1 | [今更 / いまさら , 今更後悔しても無駄だ。]
+  - meaning_ko: 지금
+  - example_ko: 금후 후회해도 낭비다.
+- id: 26147 | level: N1 | [未だ / いまだ , 彼女は未だここに来てない。]
+  - meaning_ko: 아직
+  - example_ko: 그녀는 아직 여기에 오지 않았다.
+- id: 26154 | level: N1 | [移民 / いみん , 英国への多くの移民はアジアからきている。]
+  - meaning_ko: 이민
+  - example_ko: 영국으로의 많은 이민자들은 아시아에서 왔다.
+- id: 26157 | level: N1 | [嫌々 / いやいや , 私はそれを嫌々引き受けた。]
+  - meaning_ko: 마지못해
+  - example_ko: 나는 그것을 싫어한다.
+- id: 26162 | level: N1 | [卑しい / いやしい , 彼は卑しい振舞いをした。]
+  - meaning_ko: 탐욕스러운
+  - example_ko: 그는 비겁한 행동을 했다.
+- id: 26166 | level: N1 | [いやに / いやに , 今日はいやに暑い。]
+  - meaning_ko: 몹시
+  - example_ko: 오늘은 그렇게 덥습니다.
+- id: 26172 | level: N1 | [いやらしい / いやらしい , なんていやらしい男でしょう。]
+  - meaning_ko: 불쾌한
+  - example_ko: 얼마나 괴로운 사람이지요.
+- id: 26176 | level: N1 | [意欲 / いよく , トムは意欲的な男だ。]
+  - meaning_ko: ~ 할 것이다
+  - example_ko: 톰은 의욕적인 남자다.
+- id: 26183 | level: N1 | [威力 / いりょく , ]
+  - meaning_ko: 힘
+- id: 26187 | level: N1 | [衣類 / いるい , 男性用の衣類はゆったりしている。]
+  - meaning_ko: 옷
+  - example_ko: 남성용 의류는 느긋하다.
+- id: 26194 | level: N1 | [異論 / いろん , 私はといえば、異論はない。]
+  - meaning_ko: 이의
+  - example_ko: 나는 말하면 이론이 없다.
+- id: 26196 | level: N1 | [印鑑 / いんかん , ここに印鑑を押して下さい。]
+  - meaning_ko: 우표
+  - example_ko: 여기에 스탬프를 찍어주세요.
+- id: 26201 | level: N1 | [陰気 / いんき , 彼女の目つきは陰気になった。]
+  - meaning_ko: 어둠
+  - example_ko: 그녀의 눈빛은 음이 되었다.
+- id: 26205 | level: N1 | [隠居 / いんきょ , 高坂くんの暮らし方は隠居さんみたいだ。]
+  - meaning_ko: 퇴직
+  - example_ko: 타카사카군의 생활방법은 은거씨 같다.
+- id: 26210 | level: N1 | [インターチェンジ / インターチェンジ , ]
+  - meaning_ko: 교환
+- id: 26215 | level: N1 | [インターナショナル / インターナショナル , ]
+  - meaning_ko: 국제적인
+- id: 26222 | level: N1 | [インターフォン / インターフォン , ]
+  - meaning_ko: 출입 전화
+- id: 26230 | level: N1 | [インテリ / インテリ , インテリアの趣味がいいですね。]
+  - meaning_ko: (약어) 지식인
+  - example_ko: 인테리어의 취미가 좋네요.
+- id: 26234 | level: N1 | [インフォメーション / インフォメーション , 空港のインフォメーションカウンターで働いています。]
+  - meaning_ko: 정보
+  - example_ko: 공항 정보 카운터에서 일하고 있습니다.
+- id: 26240 | level: N1 | [インフレ / インフレ , 政府はインフレ抑制に努力すべきだ。]
+  - meaning_ko: (약어) 인플레이션
+  - example_ko: 정부는 인플레이션 억제에 노력해야 한다.
+- id: 26247 | level: N1 | [受かる / うかる , 彼は試験に受かる努力をした。]
+  - meaning_ko: (시험에) 합격하다
+  - example_ko: 그는 시험에 합격하기 위해 노력했다.
+- id: 26252 | level: N1 | [受け入れ / うけいれ , 彼女は彼の申し出を受け入れた。]
+  - meaning_ko: 전수
+  - example_ko: 그녀는 그의 제안을 받아들였다.
+- id: 26257 | level: N1 | [受け入れる / うけいれる , 彼女は運命を受け入れるしかなかった。]
+  - meaning_ko: 받아들이다
+  - example_ko: 그녀는 운명을 받아들일 수밖에 없었다.
+- id: 26262 | level: N1 | [受け継ぐ / うけつぐ , 彼はその財産を受け継ぐ資格はない。]
+  - meaning_ko: 상속하다
+  - example_ko: 그는 그 재산을 계승할 자격은 없다.
+- id: 26267 | level: N1 | [受け付ける / うけつける , ]
+  - meaning_ko: 받아들여질
+- id: 26271 | level: N1 | [受け止める / うけとめる , 何でもかんでもそう深刻に受け止めるな。]
+  - meaning_ko: 잡으려고
+  - example_ko: 무엇이든 간에 그렇게 심각하게 받아들이지 말라.
+- id: 26276 | level: N1 | [受身 / うけみ , ]
+  - meaning_ko: 수동적인
+- id: 26282 | level: N1 | [受持ち / うけもち , ]
+  - meaning_ko: (뭔가의) 혐의
+- id: 26287 | level: N1 | [動き / うごき , 母はいつも忙しく動きまわっている。]
+  - meaning_ko: 움직임
+  - example_ko: 어머니는 항상 바쁘게 움직이고 있다.
+- id: 26292 | level: N1 | [埋める / うずめる , 私はこの国に骨を埋めるつもりです。]
+  - meaning_ko: 묻다
+  - example_ko: 저는 이 나라에 뼈를 채우려고 합니다.
+- id: 26297 | level: N1 | [嘘つき / うそつき , 彼は嘘つきで評判だ。]
+  - meaning_ko: 거짓말쟁이
+  - example_ko: 그는 거짓말쟁이로 평판이다.
+- id: 26298 | level: N1 | [うたた寝 / うたたね , 彼女はうたた寝をする傾向がある。]
+  - meaning_ko: 졸다
+  - example_ko: 그녀는 노래를 자는 경향이 있습니다.
+- id: 26303 | level: N1 | [打ち明ける / うちあける , 君はすべてのことを打ち明けるほうがよい。]
+  - meaning_ko: 고백하다
+  - example_ko: 너는 모든 것을 털어내는 편이 좋다.
+- id: 26308 | level: N1 | [打ち切る / うちきる , ]
+  - meaning_ko: 멈추다
+- id: 26314 | level: N1 | [打ち消し / うちけし , 彼はうわさを打ち消したわよ。]
+  - meaning_ko: (그램) 부정
+  - example_ko: 그는 소문을 상쇄했다.
+- id: 26322 | level: N1 | [打ち込む / うちこむ , ]
+  - meaning_ko: 헌신하다
+- id: 26326 | level: N1 | [団扇 / うちわ , ]
+  - meaning_ko: 팬
+- id: 26332 | level: N1 | [内訳 / うちわけ , その内訳は？]
+  - meaning_ko: 항목
+  - example_ko: 그 내역은?
+- id: 26336 | level: N1 | [写し / うつし , 彼は父親に生き写しだ。]
+  - meaning_ko: 복사
+  - example_ko: 그는 아버지에게 살아있다.
+- id: 26340 | level: N1 | [訴え / うったえ , 暴力に訴えてはいけない。]
+  - meaning_ko: 소송
+  - example_ko: 폭력에 호소하지 말라.
+- id: 26345 | level: N1 | [うっとうしい / うっとうしい , うっとうしい奴だ！]
+  - meaning_ko: 피곤한
+  - example_ko: 음란한 녀석이다!
+- id: 26352 | level: N1 | [うつむく / うつむく , ]
+  - meaning_ko: 아래를 내려다보다
+- id: 26357 | level: N1 | [空ろ / うつろ , ]
+  - meaning_ko: 공백
+- id: 26361 | level: N1 | [器 / うつわ , 研究者は頭脳の新しい受容器の複合体を識別する。]
+  - meaning_ko: 그릇
+  - example_ko: 연구원은 두뇌의 새로운 수용체 복합물을 확인한다.
+- id: 26367 | level: N1 | [腕前 / うでまえ , 彼は自分の腕前を披露した。]
+  - meaning_ko: 능력
+  - example_ko: 그는 자신의 솜씨를 선보였다.
+- id: 26372 | level: N1 | [雨天 / うてん , 試合は雨天決行です。]
+  - meaning_ko: 비오는 날씨
+  - example_ko: 경기는 비가 오든 눈이 오든 진행됩니다.
+- id: 26375 | level: N1 | [促す / うながす , 若者の政治参加を促すための取り組みが必要だ。]
+  - meaning_ko: 촉구하다
+  - example_ko: 젊은이들의 정치참여를 촉구하기 위한 대처가 필요하다.
+- id: 26380 | level: N1 | [うぬぼれ / うぬぼれ , 褒めると彼女はうぬぼれるよ。]
+  - meaning_ko: 요구
+  - example_ko: 칭찬하면 그녀는 우울해진다.
+- id: 26385 | level: N1 | [生まれつき / うまれつき , 彼女は生まれつき弱い。]
+  - meaning_ko: 본질적으로
+  - example_ko: 그녀는 태어나 약하다.
+- id: 26392 | level: N1 | [埋め込む / うめこむ , ]
+  - meaning_ko: 삽입하다
+- id: 26397 | level: N1 | [梅干し / うめぼし , この梅干し、塩辛いね。]
+  - meaning_ko: 말린 매실
+  - example_ko: 이 매실 말린, 짠.
+- id: 26401 | level: N1 | [裏返し / うらがえし , 彼は肌着を裏返しに着た。]
+  - meaning_ko: 뒤집어서
+  - example_ko: 그는 속옷을 뒤집어 입었다.
+- id: 26407 | level: N1 | [売り出し / うりだし , 開店大売り出し。]
+  - meaning_ko: (흥정) 판매
+  - example_ko: 개점 대매출.
+- id: 26412 | level: N1 | [売り出す / うりだす , クリスマスは新しいおもちゃを売り出すいい機会だ。]
+  - meaning_ko: 판매하다
+  - example_ko: 크리스마스는 새로운 장난감을 팔아낼 좋은 기회다.
+- id: 26416 | level: N1 | [潤う / うるおう , このクリーム試してみて、肌がめっちゃ潤うから。]
+  - meaning_ko: 촉촉하다
+  - example_ko: 이 크림을 시험해보고 피부가 굉장히 촉촉하기 때문에.
+- id: 26421 | level: N1 | [浮気 / うわき , 彼は浮気していた。]
+  - meaning_ko: 일
+  - example_ko: 그는 바람을 피웠다.
+- id: 26426 | level: N1 | [上回る / うわまわる , もちろん利潤は生産費を上回るべきです。]
+  - meaning_ko: 초과하다
+  - example_ko: 물론 이윤은 생산비를 초과해야 한다.
+- id: 26432 | level: N1 | [植わる / うわる , ]
+  - meaning_ko: 심을 것
+- id: 26437 | level: N1 | [運営 / うんえい , 彼は病院の管理運営に責任がある。]
+  - meaning_ko: 관리
+  - example_ko: 그는 병원의 관리 운영에 책임이 있다.
+- id: 26441 | level: N1 | [うんざり / うんざり , うんざりするのにももう疲れた。]
+  - meaning_ko: 지루한
+  - example_ko: 지쳐도 이미 지쳤다.
+- id: 26445 | level: N1 | [運送 / うんそう , ]
+  - meaning_ko: 해운
+- id: 26449 | level: N1 | [運賃 / うんちん , 運賃は片道1ドルです。]
+  - meaning_ko: 운임
+  - example_ko: 요금은 편도 1달러입니다.
+- id: 26451 | level: N1 | [云々 / うんぬん , ]
+  - meaning_ko: 등
+- id: 26455 | level: N1 | [運搬 / うんぱん , 男性は一人で運搬トラックに荷物を詰め込んでいる。]
+  - meaning_ko: 수송
+  - example_ko: 남성은 혼자 운반 트럭에 짐을 담고 있다.
+- id: 26458 | level: N1 | [運命 / うんめい , 彼女は息子を運命に任せた。]
+  - meaning_ko: 운명
+  - example_ko: 그녀는 아들을 운명에 맡겼다.
+- id: 26463 | level: N1 | [運輸 / うんゆ , ]
+  - meaning_ko: 운송
+- id: 26474 | level: N1 | [運用 / うんよう , 問題は、お金をどう運用すべきかだ。]
+  - meaning_ko: ~을 활용하다
+  - example_ko: 문제는 돈을 어떻게 운용해야 하는가.
+- id: 26479 | level: N1 | [エアメール / エアメール , 彼女は手紙をエアメールした。]
+  - meaning_ko: 항공 우편
+  - example_ko: 그녀는 편지를 에어메일했다.
+- id: 26486 | level: N1 | [～営 / ～えい , ]
+  - meaning_ko: ~달리다
+- id: 26491 | level: N1 | [英字 / えいじ , 大学時代に私は英字新聞をとっていた。]
+  - meaning_ko: 영문자(문자)
+  - example_ko: 대학 시절에 나는 영자신문을 받았다.
+- id: 26497 | level: N1 | [映写 / えいしゃ , 彼はその劇場で映写係をやっている。]
+  - meaning_ko: 투사
+  - example_ko: 그는 그 극장에서 영사계를 하고 있다.
+- id: 26500 | level: N1 | [映像 / えいぞう , この映像はドラマだ。]
+  - meaning_ko: 반사
+  - example_ko: 이 영상은 드라마다.
+- id: 26503 | level: N1 | [英雄 / えいゆう , 彼らは彼を国民的英雄と考えた。]
+  - meaning_ko: 영웅
+  - example_ko: 그들은 그를 국민 영웅으로 생각했다.
+- id: 26508 | level: N1 | [液 / えき , 氷が溶けると液体になる。]
+  - meaning_ko: 액체
+  - example_ko: 얼음이 녹으면 액체가 된다.
+- id: 26513 | level: N1 | [閲覧 / えつらん , 定期雑誌類は閲覧室より帯出禁止。]
+  - meaning_ko: 점검
+  - example_ko: 정기 잡지류는 열람실에서 대출 금지.
+- id: 26518 | level: N1 | [獲物 / えもの , 彼には獲物が何もなかった。]
+  - meaning_ko: 게임
+  - example_ko: 그에게는 먹이가 없었다.
+- id: 26523 | level: N1 | [襟 / えり , 彼はすりの襟首を掴んだ。]
+  - meaning_ko: 목
+  - example_ko: 그는 스리의 칼라를 잡았다.
+- id: 26526 | level: N1 | [エレガント / エレガント , なんてエレガントなヨットなんでしょう！]
+  - meaning_ko: 우아한
+  - example_ko: 얼마나 우아한 요트입니까?
+- id: 26531 | level: N1 | [円滑 / えんかつ , ビジネススキルは、円滑に仕事を進めるために必要な力です。]
+  - meaning_ko: 조화
+  - example_ko: 비즈니스 기술은 원활하게 작업을 진행하는 데 필요한 힘입니다.
+- id: 26535 | level: N1 | [縁側 / えんがわ , ]
+  - meaning_ko: 베란다
+- id: 26539 | level: N1 | [沿岸 / えんがん , 沿岸を航海する。]
+  - meaning_ko: 해안
+  - example_ko: 해안을 항해한다.
+- id: 26548 | level: N1 | [婉曲 / えんきょく , ]
+  - meaning_ko: 완곡어법적인
+- id: 26557 | level: N1 | [演出 / えんしゅつ , その劇は彼によって演出された。]
+  - meaning_ko: 생산 (에르그. 플레이
+  - example_ko: 그 극은 그에 의해 연출되었다.
+- id: 26561 | level: N1 | [エンジニア / エンジニア , 父は私をエンジニアにするつもりです。]
+  - meaning_ko: 엔지니어
+  - example_ko: 아버지는 나를 엔지니어로 만들 것입니다.
+- id: 26565 | level: N1 | [演じる / えんじる , 重要な役を演じる。]
+  - meaning_ko: 수행하다
+  - example_ko: 중요한 역할을 한다.
+- id: 26569 | level: N1 | [演ずる / えんずる , 世論は政治の領域で重要な役割を演ずる。]
+  - meaning_ko: 수행하다
+  - example_ko: 여론은 정치의 영역에서 중요한 역할을 한다.
+- id: 26575 | level: N1 | [沿線 / えんせん , 入学式も終わりました。同じ沿線の大学です。]
+  - meaning_ko: 철도 노선을 따라
+  - example_ko: 입학식도 끝났습니다. 같은 연선의 대학입니다.
+- id: 26580 | level: N1 | [縁談 / えんだん , やっと、姉の縁談がまとまりました。]
+  - meaning_ko: 결혼 제안
+  - example_ko: 드디어 언니의 인담이 모였습니다.
+- id: 26585 | level: N1 | [遠方 / えんぽう , 私達は遠方に煙をみた。]
+  - meaning_ko: 원로
+  - example_ko: 우리는 먼 곳에 연기를 보았다.
+- id: 26589 | level: N1 | [円満 / えんまん , 家庭は円満だ。]
+  - meaning_ko: 조화
+  - example_ko: 가정은 원만하다.
+- id: 26596 | level: N1 | [追い込む / おいこむ , ]
+  - meaning_ko: 무리를 짓다
+- id: 26600 | level: N1 | [追い出す / おいだす , 黙ってて、じゃなきゃ追い出すわよ。]
+  - meaning_ko: 추방하다
+  - example_ko: 침묵하고, 그럼 쫓아낼게.
+- id: 26605 | level: N1 | [於いて / おいて , タミは文の構造に於いて間違いを発見した。]
+  - meaning_ko: ~에
+  - example_ko: 타미는 문장의 구조에서 실수를 발견했다.
+- id: 26611 | level: N1 | [老いる / おいる , 生きることは老いること。それだけ。]
+  - meaning_ko: 나이가 들다
+  - example_ko: 사는 것은 늙다. 그만큼.
+- id: 26615 | level: N1 | [応急 / おうきゅう , 彼に応急処置をお願いします。]
+  - meaning_ko: 비상
+  - example_ko: 그에게 응급 처치를 부탁합니다.
+- id: 26620 | level: N1 | [黄金 / おうごん , 黄金のベッドで眠る金持ち。]
+  - meaning_ko: 금
+  - example_ko: 황금 침대에서 자는 부자.
+- id: 26627 | level: N1 | [往診 / おうしん , 医者は午後６軒往診した。]
+  - meaning_ko: 의사의 방문
+  - example_ko: 의사는 오후 6채 왕진했다.
+- id: 26632 | level: N1 | [応募 / おうぼ , 夫婦でその仕事に応募できます。]
+  - meaning_ko: 신청
+  - example_ko: 커플이 일자리를 신청할 수 있습니다.
+- id: 26637 | level: N1 | [おおい (かん) / おおい (かん) , ]
+  - meaning_ko: 여기요
+- id: 26642 | level: N1 | [大方 / おおかた , あの仕事は大方終わってますよ。]
+  - meaning_ko: 거의 모든
+  - example_ko: 그 일은 거의 끝났어요.
+- id: 26647 | level: N1 | [大柄 / おおがら , 彼は肥満とはいえないが、大柄の人だった。]
+  - meaning_ko: 대형 빌드
+  - example_ko: 그는 비만이라고는 말할 수 없지만, 대단한 사람이었다.
+- id: 26652 | level: N1 | [おおげさ / おおげさ , その老人はおおげさに言う傾向がある。]
+  - meaning_ko: 거창한
+  - example_ko: 그 노인은 고맙게 말하는 경향이 있다.
+- id: 26655 | level: N1 | [大筋 / おおすじ , ]
+  - meaning_ko: 개요
+- id: 26660 | level: N1 | [大空 / おおぞら , 大空を見上げる。]
+  - meaning_ko: 천국
+  - example_ko: 하늘을 바라본다.
+- id: 26664 | level: N1 | [オートマチック / オートマチック , ]
+  - meaning_ko: 오토매틱
+- id: 26669 | level: N1 | [大幅 / おおはば , 大幅に昇給した。]
+  - meaning_ko: 전폭
+  - example_ko: 크게 승급했다.
+- id: 26675 | level: N1 | [おおまかな / おおまかな , ]
+  - meaning_ko: 거친
+- id: 26679 | level: N1 | [大水 / おおみず , 橋は大水で流された。]
+  - meaning_ko: 홍수
+  - example_ko: 다리는 큰 물로 흘렀다.
+- id: 26684 | level: N1 | [公 / おおやけ , 公園を散歩しています。]
+  - meaning_ko: 공공의
+  - example_ko: 공원을 산책하고 있습니다.
+- id: 26690 | level: N1 | [犯す / おかす , 法律を犯す者は罰せられる。]
+  - meaning_ko: 자행하다
+  - example_ko: 법률을 저지르는 자는 처벌받는다.
+- id: 26697 | level: N1 | [侵す / おかす , 酸は金属を侵す。]
+  - meaning_ko: 침략하다
+  - example_ko: 산은 금속을 침범한다.
+- id: 26699 | level: N1 | [臆病 / おくびょう , 彼らは彼を臆病者と呼んだ。]
+  - meaning_ko: 비겁
+  - example_ko: 그들은 그를 겁쟁이라고 불렀다.
+- id: 26707 | level: N1 | [遅らす / おくらす , ]
+  - meaning_ko: 지연시키다
+- id: 26712 | level: N1 | [厳か / おごそか , 彼は群衆に向かって厳かに語りかけた。]
+  - meaning_ko: 위엄 있는
+  - example_ko: 그는 군중을 향해 엄격히 말했다.
+- id: 26717 | level: N1 | [行い / おこない , よき言葉より、よき行いの方が勝る。]
+  - meaning_ko: 지휘하다
+  - example_ko: 좋은 말보다 좋은 행위가 이긴다.
+- id: 26722 | level: N1 | [おごる (ゆうしょくを～) / おごる (ゆうしょくを～) , ]
+  - meaning_ko: (누군가에게) 대접을 주다
+- id: 26727 | level: N1 | [収まる / おさまる , 収まる気配が一切ない。]
+  - meaning_ko: 정착하다
+  - example_ko: 맞는 기색이 전혀 없다.
+- id: 26732 | level: N1 | [納まる / おさまる , ]
+  - meaning_ko: 정착하다
+- id: 26737 | level: N1 | [治まる / おさまる , 腫れが治まるまで、どれぐらいかかりそうですか？]
+  - meaning_ko: 평화롭게 지내다
+  - example_ko: 붓기가 치유 될 때까지 얼마나 걸릴 것입니까?
+- id: 26739 | level: N1 | [お産 / おさん , ケイちゃんはとても運がいいのよ。お産の時から、そうだったわ。]
+  - meaning_ko: ( 낳다 ) 낳다
+  - example_ko: 케이는 매우 운이 좋다. 출산 때부터 그랬어.
+- id: 26746 | level: N1 | [押し切る / おしきる , ]
+  - meaning_ko: 자신의 길을 가지다
+- id: 26752 | level: N1 | [押し込む / おしこむ , 彼は、まだスイッチを押し込む力を十分持ち合わせていた。]
+  - meaning_ko: 밀어 넣다
+  - example_ko: 그는 여전히 스위치를 밀어주는 힘을 충분히 가지고 있었다.
+- id: 26753 | level: N1 | [惜しむ / おしむ , 鞭を惜しむと子供は駄目になる。]
+  - meaning_ko: 검소하다
+  - example_ko: 채찍을 아끼면 아이는 안된다.
+- id: 26756 | level: N1 | [押し寄せる / おしよせる , 最大１０メートルの津波が押し寄せるとみられます。]
+  - meaning_ko: 옆으로 밀다
+  - example_ko: 최대 10미터의 쓰나미가 밀려날 것으로 보입니다.
+- id: 26762 | level: N1 | [雄 / おす , 雄弁は銀、沈黙は金。]
+  - meaning_ko: 수컷(동물)
+  - example_ko: 웅변은 은, 침묵은 금.
+- id: 26764 | level: N1 | [御世辞 / おせじ , 口先だけの御世辞はやめてくれ。]
+  - meaning_ko: 아첨
+  - example_ko: 입끝만의 아첨은 그만둬.
+- id: 26769 | level: N1 | [襲う / おそう , 毎年今頃、台風がその島を襲う。]
+  - meaning_ko: 공격하다
+  - example_ko: 매년 지금 무렵, 태풍이 그 섬을 덮친다.
+- id: 26773 | level: N1 | [遅くとも / おそくとも , 彼女は遅くとも九時には帰宅せねばならない。]
+  - meaning_ko: 늦어도
+  - example_ko: 그녀는 늦어도 9시에는 귀가해야 한다.
+- id: 26777 | level: N1 | [恐れ / おそれ , 裕福な人も貧乏人も死を恐れる。]
+  - meaning_ko: 두려움
+  - example_ko: 부유한 사람도 가난한 사람도 죽음을 두려워한다.
+- id: 26785 | level: N1 | [恐れ入る / おそれいる , ]
+  - meaning_ko: 경외감으로 가득 차다
+- id: 26796 | level: N1 | [おだてる / おだてる , ]
+  - meaning_ko: 아첨하다
+- id: 26798 | level: N1 | [落ち込む / おちこむ , トムは落ち込むだろうな。]
+  - meaning_ko: 우울해지다
+  - example_ko: 톰은 우울거야.
+- id: 26802 | level: N1 | [落ち着き / おちつき , 落ち着きが肝心です。]
+  - meaning_ko: 침착한
+  - example_ko: 진정이 중요합니다.
+- id: 26804 | level: N1 | [落葉 / おちば , 秋には落葉します。]
+  - meaning_ko: 낙엽
+  - example_ko: 가을에는 낙엽.
+- id: 26812 | level: N1 | [乙 / おつ , 甲の薬は乙の毒。]
+  - meaning_ko: 순위 2위
+  - example_ko: 갑의 약은 을의 독.
+- id: 26817 | level: N1 | [お使い / おつかい , ご遠慮なくお使いください。]
+  - meaning_ko: 심부름
+  - example_ko: 삼가 해주십시오.
+- id: 26819 | level: N1 | [おっかない / おっかない , 妻がおっかないんだ。]
+  - meaning_ko: 놀라운
+  - example_ko: 아내가 모르겠어.
+- id: 26820 | level: N1 | [お手上げ / おてあげ , お手上げだ。]
+  - meaning_ko: 주어진
+  - example_ko: 수상이다.
+- id: 26826 | level: N1 | [おどおど / おどおど , おどおどして首をたれた。]
+  - meaning_ko: 움츠러들게
+  - example_ko: 어리석은 목을 쳤다.
+- id: 26831 | level: N1 | [脅す / おどす , 対戦相手を脅すという彼のやり方を彼らは気に入らなかった。]
+  - meaning_ko: 위협하다
+  - example_ko: 대전 상대를 위협하는 그의 방법을 그들은 마음에 들지 않았다.
+- id: 26836 | level: N1 | [訪れる / おとずれる , 平和はやがて訪れるだろう。]
+  - meaning_ko: 방문하다
+  - example_ko: 평화는 곧 방문할 것이다.
+- id: 26838 | level: N1 | [お供 / おとも , 喜んでお供します。]
+  - meaning_ko: 참석자
+  - example_ko: 기꺼이 제공합니다.
+- id: 26849 | level: N1 | [衰える / おとろえる , 年をとるにつれて記憶力は段々衰える。]
+  - meaning_ko: 약해지다
+  - example_ko: 나이가 들면서 기억력은 점점 쇠퇴한다.
+- id: 26858 | level: N1 | [同い年 / おないどし , 彼らは同い年だ。]
+  - meaning_ko: 같은 나이의
+  - example_ko: 그들은 같은 해이다.
+- id: 26863 | level: N1 | [自ずから / おのずから , ]
+  - meaning_ko: 당연히
+- id: 26867 | level: N1 | [怯える / おびえる , ]
+  - meaning_ko: 겁을 먹다
+- id: 26871 | level: N1 | [おびただしい / おびただしい , おびただしい数の人々が集まってきていた。]
+  - meaning_ko: 풍성하게
+  - example_ko: 엄청난 수의 사람들이 모여왔다.
+- id: 26875 | level: N1 | [脅かす / おびやかす , それは町の繁栄を脅かすだろう。]
+  - meaning_ko: 위협하다
+  - example_ko: 그것은 도시의 번영을 위협할 것이다.
+- id: 26879 | level: N1 | [帯びる / おびる , ]
+  - meaning_ko: 견디다
+- id: 26884 | level: N1 | [お袋 / おふくろ , お袋の前ではそのことに触れるな。]
+  - meaning_ko: 어머니
+  - example_ko: 가방 앞에서는 그걸 만지지 마라.
+- id: 26894 | level: N1 | [覚え / おぼえ , 僕は父の顔を正確には覚えていない。]
+  - meaning_ko: 메모리
+  - example_ko: 나는 아버지의 얼굴을 정확하게 기억하지 못한다.
+- id: 26899 | level: N1 | [おまけ / おまけ , 寒くておまけに風も強かった。]
+  - meaning_ko: 할인
+  - example_ko: 추워서 덤으로 바람도 강했다.
+- id: 26906 | level: N1 | [お宮 / おみや , 以前この辺りに小さなお宮があった。]
+  - meaning_ko: 신사
+  - example_ko: 이전에 이 근처에 작은 궁이 있었다.
+- id: 26911 | level: N1 | [おむつ / おむつ , おむつつけたら？かわいいと思うよ。]
+  - meaning_ko: 기저귀
+  - example_ko: 기저귀를 잡으면? 귀엽다고 생각해.
+- id: 26915 | level: N1 | [思い付き / おもいつき , 何か良い計画を思い付きましたか。]
+  - meaning_ko: 계획
+  - example_ko: 뭔가 좋은 계획을 떠올렸습니까?
+- id: 26918 | level: N1 | [趣 / おもむき , 腕時計の収集が趣味だ。]
+  - meaning_ko: 맛
+  - example_ko: 손목시계 수집이 취미다.
+- id: 26925 | level: N1 | [赴く / おもむく , ]
+  - meaning_ko: 가다
+- id: 26931 | level: N1 | [重んじる / おもんじる , 私は量よりも質を重んじる。]
+  - meaning_ko: 존경하다
+  - example_ko: 나는 양보다 질을 존중한다.
+- id: 26936 | level: N1 | [重んずる / おもんずる , ]
+  - meaning_ko: 명예를 주기 위해
+- id: 26942 | level: N1 | [親父 / おやじ , 彼は親父の後を継いだ。]
+  - meaning_ko: 아버지
+  - example_ko: 그는 아버지의 뒤를 이었다.
+- id: 26946 | level: N1 | [及び / および , 私の収入は彼のには及びもつかない。]
+  - meaning_ko: 그리고
+  - example_ko: 나의 소득은 그에게도 붙지 않는다.
+- id: 26952 | level: N1 | [及ぶ / およぶ , 博識の点で彼に及ぶものはいない。]
+  - meaning_ko: 도달하다
+  - example_ko: 박식의 관점에서 그에게 미치는 것은 없다.
+- id: 26957 | level: N1 | [折 / おり , 腕を骨折しました。]
+  - meaning_ko: 가능성
+  - example_ko: 팔을 부러뜨렸다.
+- id: 26962 | level: N1 | [檻 / おり , 動物を檻にいれてくれ。]
+  - meaning_ko: 새장
+  - example_ko: 동물을 새장에 넣어주세요.
+- id: 26967 | level: N1 | [オリエンテーション / オリエンテーション , 新入生向けのオリエンテーションを行う。]
+  - meaning_ko: 정위
+  - example_ko: 신입생을 위한 오리엔테이션을 실시한다.
+- id: 26972 | level: N1 | [折り返す / おりかえす , ]
+  - meaning_ko: 나타나다
+- id: 26975 | level: N1 | [織物 / おりもの , 私たちは冬に毛織物を着る。]
+  - meaning_ko: 직물
+  - example_ko: 우리는 겨울에 모직물을 입는다.
+- id: 26982 | level: N1 | [俺 / おれ , 俺を哀れに思って助けてくれたのさ。]
+  - meaning_ko: 나(ego)(자랑스러운 1인칭 대명사)
+  - example_ko: 나를 불쌍하게 생각하고 도와줬어.
+- id: 26985 | level: N1 | [愚か / おろか , この世は、愚か者だらけ。]
+  - meaning_ko: 바보 같은
+  - example_ko: 이 세상은 어리석은 사람 투성이.
+- id: 26990 | level: N1 | [おろそか / おろそか , 学業をおろそかにするなんて、君はばかだ。]
+  - meaning_ko: 소홀히 하다
+  - example_ko: 학업을 소홀히 한다니, 넌 바보다.
+- id: 26997 | level: N1 | [おんぶ / おんぶ , 子供たちをおんぶしてました。]
+  - meaning_ko: 등에 업다 (erg. Baby)
+  - example_ko: 아이들을 응시했습니다.
+- id: 26999 | level: N1 | [オンライン / オンライン , 丸一日オンラインで君を見ないなんてびっくりだよ。]
+  - meaning_ko: 온라인
+  - example_ko: 하루 종일 온라인으로 널 보지 않는다니 깜짝 놀랐어.
+- id: 27002 | level: N1 | [温和 / おんわ , 彼女は温和な婦人です。]
+  - meaning_ko: 온화한
+  - example_ko: 그녀는 온화한 여성입니다.
+- id: 27006 | level: N1 | [我 / が～ , 我々を見てにたりと笑った。]
+  - meaning_ko: 자아
+  - example_ko: 우리를 보러 가서 웃었다.
+- id: 27011 | level: N1 | [カーペット / カーペット , 床にカーペットを敷いた。]
+  - meaning_ko: 양탄자
+  - example_ko: 바닥에 카펫을 깔았다.
+- id: 27017 | level: N1 | [～界 / ～かい , ]
+  - meaning_ko: 세계
+- id: 27022 | level: N1 | [～街 / ～がい , ]
+  - meaning_ko: 도시
+- id: 27026 | level: N1 | [改悪 / かいあく , どんどん改悪するなあ。]
+  - meaning_ko: 악화
+  - example_ko: 점점 개악하지 마라.
+- id: 27036 | level: N1 | [海運 / かいうん , 海運会社に勤めています。]
+  - meaning_ko: 해상운송
+  - example_ko: 해운 회사에서 일하고 있습니다.
+- id: 27039 | level: N1 | [外貨 / がいか , 外貨の為替レートは毎日変わる。]
+  - meaning_ko: 외화
+  - example_ko: 외화 환율은 매일 변화한다.
+- id: 27044 | level: N1 | [改革 / かいかく , 彼は教育制度の改革を提案した。]
+  - meaning_ko: 개정
+  - example_ko: 그는 교육 제도의 개혁을 제안했다.
+- id: 27049 | level: N1 | [貝殻 / かいがら , あの子は海辺の貝殻売りだ。]
+  - meaning_ko: 껍데기
+  - example_ko: 그 아이는 해변의 조개판매다.
+- id: 27054 | level: N1 | [外観 / がいかん , 外観はあてにならない。]
+  - meaning_ko: 모습
+  - example_ko: 외관은 맞지 않는다.
+- id: 27058 | level: N1 | [階級 / かいきゅう , 彼は中流階級の出だ。]
+  - meaning_ko: 수업
+  - example_ko: 그는 중류계급의 출발이다.
+- id: 27063 | level: N1 | [海峡 / かいきょう , 私達が渡ってきた時イギリス海峡は荒れていた。]
+  - meaning_ko: 채널
+  - example_ko: 우리가 통과했을 때 영국 해협은 거칠었다.
+- id: 27068 | level: N1 | [会見 / かいけん , 大統領は記者会見を行った。]
+  - meaning_ko: 회견
+  - example_ko: 대통령은 기자회견을 했다.
+- id: 27073 | level: N1 | [介護 / かいご , 来年から日本では介護保険制度が始まるね。]
+  - meaning_ko: 육아
+  - example_ko: 내년부터 일본에서는 개호보험 제도가 시작되네요.
+- id: 27080 | level: N1 | [開催 / かいさい , 文化祭は先月開催された。]
+  - meaning_ko: 회의를 개최
+  - example_ko: 문화제는 지난달 개최되었다.
+- id: 27084 | level: N1 | [回収 / かいしゅう , 私たちのゴミは週３回収集されます。]
+  - meaning_ko: 수집
+  - example_ko: 우리 쓰레기는 일주일에 세 번 수집됩니다.
+- id: 27089 | level: N1 | [改修 / かいしゅう , バグ改修、終わりました。]
+  - meaning_ko: 수리하다
+  - example_ko: 버그 리노베이션, 끝났습니다.
+- id: 27097 | level: N1 | [怪獣 / かいじゅう , 次の瞬間ヘラクレスは怪獣を捕まえた。]
+  - meaning_ko: 괴물
+  - example_ko: 다음 순간 헤라클레스는 괴수를 잡았다.
+- id: 27099 | level: N1 | [解除 / かいじょ , 津波警報は解除された。]
+  - meaning_ko: 해제
+  - example_ko: 쓰나미 경보는 ​​해제되었다.
+- id: 27100 | level: N1 | [外相 / がいしょう , 外相はもう到着されましたか？]
+  - meaning_ko: 외상
+  - example_ko: 외상은 이미 도착했습니까?
+- id: 27112 | level: N1 | [害する / がいする , 彼は他人の私事を妨害する。]
+  - meaning_ko: 해를 끼치다
+  - example_ko: 그는 다른 사람의 사기를 방해한다.
+- id: 27116 | level: N1 | [概説 / がいせつ , まず新しいサイトの概説をしようと思う。]
+  - meaning_ko: 요설
+  - example_ko: 우선 새로운 사이트의 개설을 하려고 한다.
+- id: 27120 | level: N1 | [回送 / かいそう , ]
+  - meaning_ko: 전송
+- id: 27125 | level: N1 | [階層 / かいそう , 階層問題に対する、消費社会論の著である。]
+  - meaning_ko: 수업
+  - example_ko: 계층 문제에 대한 소비 사회론의 저이다.
+- id: 27130 | level: N1 | [開拓 / かいたく , 荒野を開拓する。]
+  - meaning_ko: 경작
+  - example_ko: 광야를 개척한다.
+- id: 27136 | level: N1 | [会談 / かいだん , 平和会談は今週始まる。]
+  - meaning_ko: 대화
+  - example_ko: 평화회담은 이번 주 시작된다.
+- id: 27141 | level: N1 | [改定 / かいてい , ]
+  - meaning_ko: 개정
+- id: 27145 | level: N1 | [改訂 / かいてい , 時刻表が改訂された。]
+  - meaning_ko: 개정
+  - example_ko: 시간표가 개정되었습니다.
+- id: 27150 | level: N1 | [ガイド / ガイド , 日本語のガイドが雇えますか。]
+  - meaning_ko: 가이드
+  - example_ko: 일본어 가이드를 고용할 수 있습니까?
+- id: 27155 | level: N1 | [街道 / かいどう , 街道は次の村で南へ向かう。]
+  - meaning_ko: 고속도로
+  - example_ko: 가도는 다음 마을에서 남쪽으로 향한다.
+- id: 27160 | level: N1 | [該当 / がいとう , この条件に該当する人は誰もいない。]
+  - meaning_ko: 동
+  - example_ko: 이 조건에 해당하는 사람은 아무도 없다.
+- id: 27165 | level: N1 | [街頭 / がいとう , 彼は街頭で買った絵を額縁に入れた。]
+  - meaning_ko: 거리에서
+  - example_ko: 그는 거리에서 산 그림을 액자에 넣었다.
+- id: 27169 | level: N1 | [ガイドブック / ガイドブック , タイのガイドブックは他にないんですか。]
+  - meaning_ko: 안내서
+  - example_ko: 태국 가이드북은 다른 곳입니까?
+- id: 27172 | level: N1 | [介入 / かいにゅう , 警察が騒動に介入した。]
+  - meaning_ko: 간섭
+  - example_ko: 경찰이 소동에 개입했다.
+- id: 27178 | level: N1 | [概念 / がいねん , 既成概念を壊そう！]
+  - meaning_ko: 일반적인 생각
+  - example_ko: 기성 개념을 깨자!
+- id: 27182 | level: N1 | [開発 / かいはつ , 隠れキャラも登場予定？開発元に聞く。]
+  - meaning_ko: 개발
+  - example_ko: 숨겨진 캐릭터도 등장 예정? 개발자에게 물어보십시오.
+- id: 27187 | level: N1 | [海抜 / かいばつ , そのやまは海抜２千メートルだ。]
+  - meaning_ko: 해발 높이
+  - example_ko: 그 야마는 해발 2천미터다.
+- id: 27193 | level: N1 | [介抱 / かいほう , マザー・テレサは老人たちを献身的に介抱しました。]
+  - meaning_ko: 육아
+  - example_ko: 마더 테레사는 노인들을 헌신적으로 개입했습니다.
+- id: 27197 | level: N1 | [解剖 / かいぼう , 死体解剖の結果、絞殺と判明しました。]
+  - meaning_ko: 해부
+  - example_ko: 시체 해부의 결과, 죽음으로 판명되었습니다.
+- id: 27203 | level: N1 | [外来 / がいらい , 漢語はもともと外来語です。]
+  - meaning_ko: (약어) 수입됨
+  - example_ko: 한어는 원래 외래어입니다.
+- id: 27208 | level: N1 | [回覧 / かいらん , ポストに回覧板入れといたよ。]
+  - meaning_ko: 순환
+  - example_ko: 포스트에 회람 판 넣고 있었어.
+- id: 27212 | level: N1 | [概略 / がいりゃく , 彼に計画の概略を述べてもらおう。]
+  - meaning_ko: 개요
+  - example_ko: 그에게 계획의 개략을 언급해 달라고 한다.
+- id: 27216 | level: N1 | [海流 / かいりゅう , 海流に変化が起きたのだろうか。]
+  - meaning_ko: 해류
+  - example_ko: 해류에 변화가 일어났을까.
+- id: 27222 | level: N1 | [改良 / かいりょう , この制度には改良の余地がない。]
+  - meaning_ko: 개선
+  - example_ko: 이 제도에는 개량의 여지가 없다.
+- id: 27231 | level: N1 | [回路 / かいろ , 保護回路を飛ばしてしまおう。]
+  - meaning_ko: 회로 (전기)
+  - example_ko: 보호 회로를 날려 버리자.
+- id: 27236 | level: N1 | [海路 / かいろ , 待てば海路の日和あり。]
+  - meaning_ko: 해상 항로
+  - example_ko: 기다리면 해로의 날씨 있어.
+- id: 27240 | level: N1 | [省みる / かえりみる , ]
+  - meaning_ko: 반영하다
+- id: 27247 | level: N1 | [顧みる / かえりみる , 家族のことを顧みることもなく、猛烈に働いています。]
+  - meaning_ko: 되돌아보기
+  - example_ko: 가족에 대해 생각하지 않고 맹렬하게 일하고 있습니다.
+- id: 27252 | level: N1 | [顔付き / かおつき , 彼は優しい顔付きをしている。]
+  - meaning_ko: 표정
+  - example_ko: 그는 부드러운 얼굴을하고있다.
+- id: 27257 | level: N1 | [課外 / かがい , ]
+  - meaning_ko: 과외 활동
+- id: 27262 | level: N1 | [掲げる / かかげる , 以下に掲げる人が合格です。]
+  - meaning_ko: 게양하다
+  - example_ko: 아래에 내거는 사람이 합격입니다.
+- id: 27267 | level: N1 | [かかと / かかと , 靴のかかとは踏まない！]
+  - meaning_ko: 신발 뒤꿈치
+  - example_ko: 신발의 뒤꿈치는 밟지 않는다!
+- id: 27272 | level: N1 | [書き取る / かきとる , それを書き取るだけでよい。]
+  - meaning_ko: 적어 두다
+  - example_ko: 그것을 쓰는 것만으로 좋다.
+- id: 27277 | level: N1 | [掻き回す / かきまわす , ]
+  - meaning_ko: 휘젓다
+- id: 27280 | level: N1 | [かく (はじを) / かく (はじを) , ]
+  - meaning_ko: 자신을 모욕하다
+- id: 27287 | level: N1 | [～画 / ～かく , ]
+  - meaning_ko: ~ 스트로크
+- id: 27292 | level: N1 | [学芸 / がくげい , 芳田氏は山形県に生まれ、日本大学芸術学部油絵科を卒業する。]
+  - meaning_ko: 예술과 과학
+  - example_ko: 요시다씨는 야마가타현에서 태어나 일본대학 예술학부 유화과를 졸업한다.
+- id: 27297 | level: N1 | [格差 / かくさ , 経済の格差と言語の格差は関連性がありますか？]
+  - meaning_ko: 차이점
+  - example_ko: 경제 격차와 언어 격차는 관련이 있는가?
+- id: 27300 | level: N1 | [拡散 / かくさん , エイズウイルスの拡散は恐るべき速さで進んでいる。]
+  - meaning_ko: 산란
+  - example_ko: 에이즈 바이러스의 확산은 무서운 속도로 진행되고 있습니다.
+- id: 27307 | level: N1 | [学士 / がくし , あなたは学士号を持っています。]
+  - meaning_ko: 대학 졸업
+  - example_ko: 학사 학위가 있습니다.
+- id: 27312 | level: N1 | [各種 / かくしゅ , 海は各種の資源を与えてくれる。]
+  - meaning_ko: 모든 종류
+  - example_ko: 바다는 각종 자원을 준다.
+- id: 27317 | level: N1 | [隔週 / かくしゅう , ミーティングは隔週でやってます。]
+  - meaning_ko: 격주로
+  - example_ko: 회의는 격주로 진행됩니다.
+- id: 27321 | level: N1 | [確信 / かくしん , 僕は君の成功を確信しているよ。]
+  - meaning_ko: 확신
+  - example_ko: 나는 너의 성공을 확신하고 있어.
+- id: 27325 | level: N1 | [革新 / かくしん , 技術革新は情報産業に急速な進歩をもたらした。]
+  - meaning_ko: 개정
+  - example_ko: 기술혁신은 정보산업에 급속한 진보를 가져왔다.
+- id: 27330 | level: N1 | [学説 / がくせつ , 彼の新学説は私には理解できない。]
+  - meaning_ko: 이론
+  - example_ko: 그의 신학설은 나에게는 이해할 수 없다.
+- id: 27335 | level: N1 | [確定 / かくてい , 月曜までに確定見積もりが必要です。]
+  - meaning_ko: 결정된
+  - example_ko: 월요일까지 확정 견적이 필요합니다.
+- id: 27340 | level: N1 | [カクテル / カクテル , あのカクテルは甘くて飲みやすいよ。]
+  - meaning_ko: 칵테일
+  - example_ko: 그 칵테일은 달고 마시기 쉽다.
+- id: 27345 | level: N1 | [獲得 / かくとく , 彼は権力獲得に野心満々だ。]
+  - meaning_ko: 인수
+  - example_ko: 그는 권력 획득에 야심 가득하다.
+- id: 27352 | level: N1 | [楽譜 / がくふ , 彼女は楽譜なしにピアノを弾く。]
+  - meaning_ko: 점수(음악
+  - example_ko: 그녀는 악보 없이 피아노를 연주한다.
+- id: 27357 | level: N1 | [確保 / かくほ , 私はあなたに仕事を確保できる。]
+  - meaning_ko: 보장하다
+  - example_ko: 나는 당신에게 일을 확보할 수 있다.
+- id: 27362 | level: N1 | [革命 / かくめい , 飛行機は旅行に革命をもたらした。]
+  - meaning_ko: 혁명
+  - example_ko: 비행기는 여행에 혁명을 가져왔다.
+- id: 27367 | level: N1 | [確立 / かくりつ , 保安官は、その町の秩序を確立した。]
+  - meaning_ko: 설립
+  - example_ko: 보안관은 그 마을의 질서를 확립했다.
+- id: 27372 | level: N1 | [賭 / かけ , 彼は彼女と賭けをした。]
+  - meaning_ko: 도박
+  - example_ko: 그는 그녀와 베팅을 했다.
+- id: 27377 | level: N1 | [掛～ / かけ～ , ]
+  - meaning_ko: 신용 거래
+- id: 27381 | level: N1 | [～掛け / ～かけ , ]
+  - meaning_ko: 고문
+- id: 27386 | level: N1 | [崖 / がけ , 彼の息子は崖から落ちた。]
+  - meaning_ko: 낭떠러지
+  - example_ko: 그의 아들은 절벽에서 떨어졌다.
+- id: 27392 | level: N1 | [駆け足 / かけあし , トムは駆け足で階段を上っていった。]
+  - meaning_ko: 빨리 달리다
+  - example_ko: 톰은 달리기로 계단을 올라갔다.
+- id: 27397 | level: N1 | [家計 / かけい , 私は家計を妻に任せた。]
+  - meaning_ko: 가계 경제
+  - example_ko: 나는 가계를 아내에게 맡겼다.
+- id: 27402 | level: N1 | [駆けっこ / かけっこ , あいつと駆けっこしたんだ。]
+  - meaning_ko: (발) 경주
+  - example_ko: 그 녀석과 달려왔다.
+- id: 27405 | level: N1 | [加工 / かこう , ミルクはバターに加工される。]
+  - meaning_ko: 조작
+  - example_ko: 우유는 버터로 가공됩니다.
+- id: 27412 | level: N1 | [化合 / かごう , 工場では複雑な化学化合物を製造している。]
+  - meaning_ko: 화학적 결합
+  - example_ko: 공장에서는 복잡한 화학 화합물을 제조하고 있다.
+- id: 27417 | level: N1 | [かさばる / かさばる , このお土産かさばるなぁ。]
+  - meaning_ko: 부피가 크다
+  - example_ko: 이 기념품 부피가 큰구나.
+- id: 27420 | level: N1 | [かさむ / かさむ , 新生活のため出費はかさむが仕方ない。]
+  - meaning_ko: 쌓이다
+  - example_ko: 신생활 때문에 지출은 부피지만 어쩔 수 없다.
+- id: 27426 | level: N1 | [箇条書 / かじょうがき , ]
+  - meaning_ko: 항목별 양식
+- id: 27430 | level: N1 | [頭 / かしら , 頭痛がする。]
+  - meaning_ko: 머리
+  - example_ko: 두통이 난다.
+- id: 27434 | level: N1 | [微か / かすか , 少年は容貌が父親に微かに似ていた。]
+  - meaning_ko: 희미한
+  - example_ko: 소년은 외모가 아버지와 닮았다.
+- id: 27441 | level: N1 | [霞む / かすむ , ]
+  - meaning_ko: 흐릿해지다
+- id: 27445 | level: N1 | [擦る / かする , 隣の病室からキュウリを擦る音が聞こえてきた。]
+  - meaning_ko: 문지르다
+  - example_ko: 옆의 병실에서 오이를 문지르는 소리가 들려왔다.
+- id: 27450 | level: N1 | [火星 / かせい , 人間は火星では生存できない。]
+  - meaning_ko: 화성
+  - example_ko: 인간은 화성에서는 생존할 수 없다.
+- id: 27454 | level: N1 | [化石 / かせき , 化石燃料の値段が急騰した。]
+  - meaning_ko: 화석
+  - example_ko: 화석연료 가격이 급등했다.
+- id: 27460 | level: N1 | [河川 / かせん , 河川は豪雨で氾濫しました。]
+  - meaning_ko: 강하
+  - example_ko: 하천은 호우로 범람했습니다.
+- id: 27466 | level: N1 | [化繊 / かせん , ]
+  - meaning_ko: 합성섬유
+- id: 27472 | level: N1 | [過疎 / かそ , ]
+  - meaning_ko: 인구감소
+- id: 27477 | level: N1 | [片～ / かた～ , ]
+  - meaning_ko: 싱글 ~
+- id: 27482 | level: N1 | [片言 / かたこと , トムは片言のフランス語しか話せない。]
+  - meaning_ko: 깨진 (말하는 스타일과 관련하여
+  - example_ko: 톰은 한마디의 프랑스어밖에 할 수 없다.
+- id: 27486 | level: N1 | [傾ける / かたむける , 店内にかかる懐かしい歌にふと耳を傾ける。]
+  - meaning_ko: 기울이다
+  - example_ko: 가게 안에 걸리는 그리운 노래에 문득 듣는다.
+- id: 27492 | level: N1 | [固める / かためる , 基礎を固めることは大切です。]
+  - meaning_ko: 굳히다
+  - example_ko: 기초를 굳히는 것은 중요합니다.
+- id: 27497 | level: N1 | [傍ら / かたわら , 彼は読書をし、その傍らで妻が手袋を編んでいた。]
+  - meaning_ko: 게다가
+  - example_ko: 그는 독서를 하고 그 옆에 아내가 장갑을 짠다.
+- id: 27501 | level: N1 | [花壇 / かだん , 花壇のバラは良い香りがする。]
+  - meaning_ko: 화단
+  - example_ko: 화단의 장미는 좋은 향기가 난다.
+- id: 27507 | level: N1 | [家畜 / かちく , 家畜を飼育する。]
+  - meaning_ko: 가축
+  - example_ko: 가축을 사육한다.
+- id: 27512 | level: N1 | [且つ / かつ , ]
+  - meaning_ko: 아직
+- id: 27517 | level: N1 | [がっくり / がっくり , がっくりだよ。]
+  - meaning_ko: 상심한
+  - example_ko: 실망이야.
+- id: 27521 | level: N1 | [合唱 / がっしょう , 全員で歌を合唱した。]
+  - meaning_ko: 합창
+  - example_ko: 전원으로 노래를 합창했다.
+- id: 27525 | level: N1 | [がっしり / がっしり , がっしりした体格してるわよ。]
+  - meaning_ko: 단단히
+  - example_ko: 탄탄한 체격이야.
+- id: 27530 | level: N1 | [合致 / がっち , 彼の日々の振る舞いは彼の主義主張と合致していない。]
+  - meaning_ko: 합의
+  - example_ko: 그의 일상적인 행동은 그의 원리 주장과 일치하지 않는다.
+- id: 27536 | level: N1 | [がっちり / がっちり , がっちり組んで助け合わねばならない。]
+  - meaning_ko: 견고하게 지어진
+  - example_ko: 단단히 짜서 도와야 한다.
+- id: 27539 | level: N1 | [かつて / かつて , 母はかつてテニスに夢中だった。]
+  - meaning_ko: 한 번
+  - example_ko: 어머니는 한때 테니스에 열중했다.
+- id: 27544 | level: N1 | [勝手 / かって , 本当に自分勝手だな。]
+  - meaning_ko: 주방
+  - example_ko: 정말 제멋대로다.
+- id: 27549 | level: N1 | [カット / カット , 肩までの長さでカットしてください。]
+  - meaning_ko: 자르다
+  - example_ko: 어깨까지 길이로 잘라.
+- id: 27554 | level: N1 | [活発 / かっぱつ , 彼の頭脳の働きは活発だった。]
+  - meaning_ko: 활기
+  - example_ko: 그의 두뇌의 일은 활발했다.
+- id: 27559 | level: N1 | [合併 / がっぺい , 東京銀行と三菱銀行が合併した。]
+  - meaning_ko: 콤비네이션
+  - example_ko: 도쿄은행과 미쓰비시은행이 합병했다.
+- id: 27564 | level: N1 | [カテゴリー / カテゴリー , ちゃんとカテゴリー分けして整理してる。]
+  - meaning_ko: 범주
+  - example_ko: 제대로 카테고리로 나누어 정리하고 있다.
+- id: 27572 | level: N1 | [叶う / かなう , 夢は叶うこともある。]
+  - meaning_ko: 실현되다
+  - example_ko: 꿈은 이루어질 수도 있다.
+- id: 27576 | level: N1 | [叶える / かなえる , あなたの夢を叶える手助けをしたい。]
+  - meaning_ko: 허가하다(요청하다
+  - example_ko: 당신의 꿈을 이루는 데 도움을 원합니다.
+- id: 27582 | level: N1 | [金槌 / かなづち , 俺、金槌なんだ。]
+  - meaning_ko: (철) 망치
+  - example_ko: 나, 금망이야.
+- id: 27587 | level: N1 | [かなわない / かなわない , 料理では私は彼女にかなわない。]
+  - meaning_ko: 힘이 없다
+  - example_ko: 요리에서 나는 그녀와 관련이 없다.
+- id: 27592 | level: N1 | [加入 / かにゅう , 彼はその会に加入させてもらえなかった。]
+  - meaning_ko: 회원이 되다
+  - example_ko: 그는 그 모임에 가입할 수 없었다.
+- id: 27597 | level: N1 | [予て / かねて , ]
+  - meaning_ko: 이전에
+- id: 27602 | level: N1 | [庇う / かばう , ]
+  - meaning_ko: 누군가를 보호하기 위해
+- id: 27604 | level: N1 | [株式 / かぶしき , 彼は株式市場で大損をした。]
+  - meaning_ko: 재고
+  - example_ko: 그는 주식시장에서 큰 손해를 입었다.
+- id: 27608 | level: N1 | [かぶれる / かぶれる , 触るとかぶれるよ。]
+  - meaning_ko: 반응하다
+  - example_ko: 만지면 쓰러질거야.
+- id: 27614 | level: N1 | [花粉 / かふん , 私、花粉症なんです。]
+  - meaning_ko: 화분
+  - example_ko: 나, 꽃가루 알레르기입니다.
+- id: 27619 | level: N1 | [貨幣 / かへい , 貨幣は銀行制度を通じて流通する。]
+  - meaning_ko: 돈
+  - example_ko: 화폐는 은행제도를 통해 유통한다.
+- id: 27624 | level: N1 | [構える / かまえる , 気長に構える必要があります。]
+  - meaning_ko: 설정하다
+  - example_ko: 기장에 두어야합니다.
+- id: 27628 | level: N1 | [過密 / かみつ , 彼は過密スケジュールを都合して、私の舞台を見に来てくれた。]
+  - meaning_ko: 붐비는
+  - example_ko: 그는 과밀 스케줄을 사정하고 나의 무대를 보러 왔다.
+- id: 27637 | level: N1 | [噛み切る / かみきる , ]
+  - meaning_ko: 물어뜯다
+- id: 27640 | level: N1 | [カムバック / カムバック , ]
+  - meaning_ko: 회복
+- id: 27645 | level: N1 | [カメラマン / カメラマン , 私はカメラマンです。]
+  - meaning_ko: 카메라맨
+  - example_ko: 저는 사진사입니다.
+- id: 27651 | level: N1 | [粥 / かゆ , お粥も作ってきました。チンして温めるだけですから。]
+  - meaning_ko: 죽
+  - example_ko: 죽도 만들었습니다. 칭하고 따뜻하게하기 때문에.
+- id: 27657 | level: N1 | [体付き / からだつき , ]
+  - meaning_ko: 신체 구조
+- id: 27662 | level: N1 | [絡む / からむ , 補償が絡むから誰も言い出せない。]
+  - meaning_ko: 얽히다
+  - example_ko: 보상이 관련되기 때문에 아무도 말할 수 없다.
+- id: 27666 | level: N1 | [かりに / かりに , 六時きっかりにここへ来なさい。]
+  - meaning_ko: 일시적으로
+  - example_ko: 6시 확실히 여기로 오십시오.
+- id: 27671 | level: N1 | [カルテ / カルテ , トムのカルテを見たことある？]
+  - meaning_ko: 임상 기록(GER: Karte)
+  - example_ko: 톰의 차트를 본 적이 있습니까?
+- id: 27677 | level: N1 | [ガレージ / ガレージ , ガレージは錆びている。]
+  - meaning_ko: 차고(집)
+  - example_ko: 차고는 녹슬었다.
+- id: 27682 | level: N1 | [過労 / かろう , 彼は過労のせいで死んだ。]
+  - meaning_ko: 지나치게 일하다
+  - example_ko: 그는 과로 때문에 죽었다.
+- id: 27686 | level: N1 | [かろうじて / かろうじて , 予算はかろうじて議会の承認を得た。]
+  - meaning_ko: 간신히
+  - example_ko: 예산은 간신히 의회 승인을 얻었다.
+- id: 27690 | level: N1 | [交す / かわす , ]
+  - meaning_ko: 교환하다
+- id: 27696 | level: N1 | [代る代る / かわるがわる , ]
+  - meaning_ko: 번갈아
+- id: 27700 | level: N1 | [簡易 / かんい , 簡易ベッドで寝てるんだ。]
+  - meaning_ko: 간단
+  - example_ko: 간이 침대에서 자고 있어.
+- id: 27704 | level: N1 | [灌漑 / かんがい , ]
+  - meaning_ko: 관개
+- id: 27707 | level: N1 | [眼科 / がんか , 眼科医です。]
+  - meaning_ko: 안과학
+  - example_ko: 안과 의사입니다.
+- id: 27712 | level: N1 | [眼球 / がんきゅう , 豚の眼球は食べても大丈夫なんですか？]
+  - meaning_ko: 눈알
+  - example_ko: 돼지 안구는 먹어도 괜찮습니까?
+- id: 27717 | level: N1 | [玩具 / がんぐ , その玩具は木製だ。]
+  - meaning_ko: 장난감
+  - example_ko: 그 장난감은 목제다.
+- id: 27721 | level: N1 | [簡潔 / かんけつ , 彼の演説は簡潔スピーチです。]
+  - meaning_ko: 짧음
+  - example_ko: 그의 연설은 간결한 연설입니다.
+- id: 27726 | level: N1 | [還元 / かんげん , ゲイツ会長、広告収入をユーザーに還元する意向表明。]
+  - meaning_ko: 해결
+  - example_ko: 게이츠 회장, 광고 수입을 사용자에게 환원하는 의향 표명.
+- id: 27731 | level: N1 | [看護 / かんご , 母親が、彼の看護にあたってる。]
+  - meaning_ko: 육아
+  - example_ko: 어머니가 그의 간호에 해당한다.
+- id: 27736 | level: N1 | [漢語 / かんご , 漢語はもともと外来語です。]
+  - meaning_ko: 중국어 단어
+  - example_ko: 한어는 원래 외래어입니다.
+- id: 27741 | level: N1 | [頑固 / がんこ , 彼は性質が頑固だ。]
+  - meaning_ko: 고집
+  - example_ko: 그는 성격이 완고하다.
+- id: 27747 | level: N1 | [勧告 / かんこく , ]
+  - meaning_ko: 조언
+- id: 27750 | level: N1 | [換算 / かんさん , 彼は何でもお金に換算してしまう。]
+  - meaning_ko: 변환
+  - example_ko: 그는 무엇이든 돈으로 변환한다.
+- id: 27755 | level: N1 | [監視 / かんし , 彼は衛生監視員である。]
+  - meaning_ko: 관찰
+  - example_ko: 그는 위생 감시원이다.
+- id: 27764 | level: N1 | [慣習 / かんしゅう , 彼らは何でも古い慣習にしがみつく。]
+  - meaning_ko: 일반적인 (역사적) 관습
+  - example_ko: 그들은 무엇이든 오래된 관습에 달라붙는다.
+- id: 27769 | level: N1 | [観衆 / かんしゅう , 観衆は試合に興奮した。]
+  - meaning_ko: 관중
+  - example_ko: 관중은 경기에 흥분했다.
+- id: 27773 | level: N1 | [願書 / がんしょ , 彼は事務所に願書を提出した。]
+  - meaning_ko: 신청서
+  - example_ko: 그는 사무실에 원서를 제출했다.
+- id: 27776 | level: N1 | [干渉 / かんしょう , 僕のことに干渉しないでくれ。]
+  - meaning_ko: 간섭
+  - example_ko: 내 일에 간섭하지 말아줘.
+- id: 27781 | level: N1 | [頑丈 / がんじょう , このベッドは頑丈そうです。]
+  - meaning_ko: 단단한
+  - example_ko: 이 침대는 견고합니다.
+- id: 27789 | level: N1 | [感触 / かんしょく , テストの感触は？]
+  - meaning_ko: 촉각
+  - example_ko: 테스트의 느낌은?
+- id: 27793 | level: N1 | [肝心 / かんじん , 始めが肝心。]
+  - meaning_ko: 필수적인
+  - example_ko: 처음이 중요.
+- id: 27797 | level: N1 | [肝腎 / かんじん , ]
+  - meaning_ko: 필수적인
+- id: 27800 | level: N1 | [関税 / かんぜい , 宝石の関税を払った。]
+  - meaning_ko: 세관
+  - example_ko: 보석 관세를 지불했다.
+- id: 27804 | level: N1 | [岩石 / がんせき , この板状の固い岩石の層をプレートと呼ぶ。]
+  - meaning_ko: 바위
+  - example_ko: 이 판상의 단단한 암석의 층을 플레이트라고 부른다.
+- id: 27807 | level: N1 | [感染 / かんせん , 耳の感染症によくかかります。]
+  - meaning_ko: 전염병
+  - example_ko: 귀 감염에 잘 걸립니다.
+- id: 27819 | level: N1 | [幹線 / かんせん , 博多発の新幹線が時間通りに到着した。]
+  - meaning_ko: 본선
+  - example_ko: 하카타발 신칸센이 정시에 도착했다.
+- id: 27822 | level: N1 | [簡素 / かんそ , その式典は簡素だった。]
+  - meaning_ko: 간단
+  - example_ko: 그 식전은 간단했다.
+- id: 27825 | level: N1 | [観点 / かんてん , 母は何でもお金の観点から考える。]
+  - meaning_ko: 관점
+  - example_ko: 어머니는 무엇이든 돈의 관점에서 생각한다.
+- id: 27829 | level: N1 | [感度 / かんど , 高感度フィルムは出してもいいですか。]
+  - meaning_ko: 감광도
+  - example_ko: 고감도 필름은 내보낼 수 있습니까?
+- id: 27835 | level: N1 | [カンニング / カンニング , 彼は生物の試験でカンニングした。]
+  - meaning_ko: 교활한
+  - example_ko: 그는 생물의 시험에서 썼다.
+- id: 27841 | level: N1 | [元年 / がんねん , ]
+  - meaning_ko: (특정 통치의) 첫 번째 해
+- id: 27846 | level: N1 | [幹部 / かんぶ , 彼はその問題について幹部の何人かと協議した。]
+  - meaning_ko: 관리
+  - example_ko: 그는 그 문제에 대해 간부 중 일부와 협의했다.
+- id: 27850 | level: N1 | [完ぺき / かんぺき , 練習が完ぺきにする。]
+  - meaning_ko: 완전
+  - example_ko: 연습이 완성된다.
+- id: 27855 | level: N1 | [勘弁 / かんべん , 勘弁してくれ。]
+  - meaning_ko: 뭐라고요
+  - example_ko: 용서해 줘.
+- id: 27861 | level: N1 | [感無量 / かんむりょう , ]
+  - meaning_ko: 깊은 감정
+- id: 27866 | level: N1 | [勧誘 / かんゆう , 部活の勧誘にももう慣れた。]
+  - meaning_ko: 초대
+  - example_ko: 부활의 권유에도 이미 익숙했다.
+- id: 27871 | level: N1 | [関与 / かんよ , ボブはその計画には関与しなかった。]
+  - meaning_ko: 참여
+  - example_ko: 밥은 그 계획에 관여하지 않았다.
+- id: 27875 | level: N1 | [寛容 / かんよう , もっと、寛容になるべきだ。]
+  - meaning_ko: 인내
+  - example_ko: 더, 관용이 되어야 한다.
+- id: 27879 | level: N1 | [元来 / がんらい , ]
+  - meaning_ko: 원래
+- id: 27884 | level: N1 | [観覧 / かんらん , 観覧車が一番好きです。]
+  - meaning_ko: 보기
+  - example_ko: 관람차를 가장 좋아합니다.
+- id: 27893 | level: N1 | [慣例 / かんれい , ]
+  - meaning_ko: 관습
+- id: 27898 | level: N1 | [還暦 / かんれき , 母方の祖父は明日還暦を迎える。]
+  - meaning_ko: 환갑
+  - example_ko: 어머니의 할아버지는 내일 환력을 맞이한다.
+- id: 27899 | level: N1 | [貫禄 / かんろく , 貫禄がついたね。]
+  - meaning_ko: 있음
+  - example_ko: 관록이 붙었다.
+- id: 27902 | level: N1 | [緩和 / かんわ , 需給関係が緩和している。]
+  - meaning_ko: 안도
+  - example_ko: 수급관계가 완화되고 있다.
+- id: 27915 | level: N1 | [議案 / ぎあん , 議案は圧倒的多数で可決された。]
+  - meaning_ko: 입법안
+  - example_ko: 의안은 압도적 다수로 통과되었다.
+- id: 27921 | level: N1 | [危害 / きがい , 犬は主人を危害から守った。]
+  - meaning_ko: 부상
+  - example_ko: 개는 주인을 위험으로부터 지켰다.
+- id: 27925 | level: N1 | [企画 / きかく , 彼は企画課で働いている。]
+  - meaning_ko: 계획
+  - example_ko: 그는 기획과에서 일하고 있다.
+- id: 27931 | level: N1 | [規格 / きかく , ]
+  - meaning_ko: 기준
+- id: 27936 | level: N1 | [着飾る / きかざる , アメリカ人は一般に着飾ることを好まない。]
+  - meaning_ko: 차려 입다
+  - example_ko: 미국인은 일반적으로 옷을 입고 싶지 않다.
+- id: 27941 | level: N1 | [気兼ね / きがね , 思ったことを気兼ねなく言っていいんだよ。]
+  - meaning_ko: 주저
+  - example_ko: 생각한 것을 깨닫지 않고 말해도 돼.
+- id: 27946 | level: N1 | [気軽 / きがる , 気軽にいこう。]
+  - meaning_ko: 쾌활한
+  - example_ko: 부담없이 가자.
+- id: 27951 | level: N1 | [危機 / きき , 両国は危機解決に向けて交渉をするでしょう。]
+  - meaning_ko: 위기
+  - example_ko: 양국은 위기 해결을 위해 협상을 할 것입니다.
+- id: 27956 | level: N1 | [聞き取り / ききとり , 大阪の方言は聞き取り難い。]
+  - meaning_ko: 듣기 이해
+  - example_ko: 오사카의 방언은 듣기 어렵다.
+- id: 27961 | level: N1 | [効き目 / ききめ , 薬の効き目を調べてみます。]
+  - meaning_ko: 효과
+  - example_ko: 약의 효과를 조사해 보겠습니다.
+- id: 27967 | level: N1 | [帰京 / ききょう , ]
+  - meaning_ko: 도쿄로 복귀
+- id: 27972 | level: N1 | [戯曲 / ぎきょく , 彼はいくつかの戯曲を韻文で書いた。]
+  - meaning_ko: 놀다
+  - example_ko: 그는 일부 연극을 운문으로 썼다.
+- id: 27977 | level: N1 | [基金 / ききん , 孤児を助けるために基金が設立された。]
+  - meaning_ko: 축적
+  - example_ko: 고아를 돕기 위해 기금이 설립되었습니다.
+- id: 27982 | level: N1 | [喜劇 / きげき , 我々は皆その喜劇を楽しんだ。]
+  - meaning_ko: 코메디
+  - example_ko: 우리는 모두 그 희극을 즐겼다.
+- id: 27986 | level: N1 | [議決 / ぎけつ , 憲法の規定に従い衆院の議決が参院に優越する。]
+  - meaning_ko: 해결
+  - example_ko: 헌법의 규정에 따라 중원의 의결이 참원으로 우월한다.
+- id: 27992 | level: N1 | [棄権 / きけん , 棄権が二票あった。]
+  - meaning_ko: 투표를 기권하다
+  - example_ko: 기권이 2표 있었다.
+- id: 27997 | level: N1 | [既婚 / きこん , 前は既婚者だった。]
+  - meaning_ko: 기혼
+  - example_ko: 이전은 기혼자였다.
+- id: 28002 | level: N1 | [気障 / きざ , ]
+  - meaning_ko: 허식
+- id: 28007 | level: N1 | [記載 / きさい , 次のように記載します。]
+  - meaning_ko: 언급하다
+  - example_ko: 다음과 같이 설명합니다.
+- id: 28012 | level: N1 | [兆 / きざし , 彼の事業もやっと萌芽の兆しを見せた。]
+  - meaning_ko: 징후
+  - example_ko: 그의 사업도 드디어 모아의 징조를 보였다.
+- id: 28016 | level: N1 | [気質 / きしつ , 彼女はきまじめな気質である。]
+  - meaning_ko: 성격
+  - example_ko: 그녀는 심한 기질이다.
+- id: 28019 | level: N1 | [期日 / きじつ , 試験期日を照会してみる必要がある。]
+  - meaning_ko: 기일
+  - example_ko: 시험 기일을 조회해 볼 필요가 있다.
+- id: 28025 | level: N1 | [きしむ / きしむ , テーブルがきしむほど食物がたくさんあった。]
+  - meaning_ko: 항아리에
+  - example_ko: 테이블이 부드러울 정도로 음식이 많이 있었다.
+- id: 28031 | level: N1 | [議事堂 / ぎじどう , 銀行スキャンダルは国会議事堂をかけぬけました。]
+  - meaning_ko: 다이어트 빌딩
+  - example_ko: 은행스캔들은 국회의사당을 걸었다.
+- id: 28036 | level: N1 | [記述 / きじゅつ , 自然の驚異を記述した本。]
+  - meaning_ko: 묘사하는
+  - example_ko: 자연의 경이를 기술한 책.
+- id: 28041 | level: N1 | [気象 / きしょう , 最近は異常気象がよくある。]
+  - meaning_ko: 날씨
+  - example_ko: 최근에는 이상 기상이 자주 있다.
+- id: 28047 | level: N1 | [傷付く / きずつく , ]
+  - meaning_ko: 상처받다
+- id: 28051 | level: N1 | [傷付ける / きずつける , あなたの言葉は痛く傷付ける。]
+  - meaning_ko: 상처를 입히다
+  - example_ko: 당신의 기간은 아프게 긁는다.
+- id: 28054 | level: N1 | [犠牲 / ぎせい , 良心を犠牲にして富を得るな。]
+  - meaning_ko: 희생
+  - example_ko: 양심을 희생하고 부를 얻지 마라.
+- id: 28059 | level: N1 | [汽船 / きせん , 汽船は見えなくなった。]
+  - meaning_ko: 기선
+  - example_ko: 기선은 보이지 않게 되었다.
+- id: 28063 | level: N1 | [寄贈 / きぞう , 彼女は自分の人形を全て寄贈した。]
+  - meaning_ko: 기부
+  - example_ko: 그녀는 자신의 인형을 모두 기증했다.
+- id: 28068 | level: N1 | [偽造 / ぎぞう , その文書は本物でも偽造されたものでもない。]
+  - meaning_ko: 위조
+  - example_ko: 그 문서는 진짜도 위조된 것도 아니다.
+- id: 28073 | level: N1 | [貴族 / きぞく , 彼は純粋の貴族だ。]
+  - meaning_ko: 고귀한
+  - example_ko: 그는 순수한 귀족이다.
+- id: 28081 | level: N1 | [議題 / ぎだい , 議題を変えてみたらどうだろう。]
+  - meaning_ko: 토론 주제
+  - example_ko: 의제를 바꾸어 보면 어떨까.
+- id: 28087 | level: N1 | [鍛える / きたえる , 運動が筋肉を鍛える。]
+  - meaning_ko: 위조하다
+  - example_ko: 운동이 근육을 단련한다.
+- id: 28092 | level: N1 | [気立て / きだて , 彼女は気立てがいい。]
+  - meaning_ko: 성격이 좋은
+  - example_ko: 그녀는 기분이 좋다.
+- id: 28097 | level: N1 | [来る / きたる , ジュネーブから来る列車が駅に到着します。]
+  - meaning_ko: 올
+  - example_ko: 제네바에서 오는 기차가 역에 도착합니다.
+- id: 28098 | level: N1 | [きちっと / きちっと , 靴を脱いだらきちっと揃えておきなさい。]
+  - meaning_ko: 정확히
+  - example_ko: 신발을 벗으면 제대로 갖추어 두십시오.
+- id: 28102 | level: N1 | [几帳面 / きちょうめん , 私は几帳面なんだ。]
+  - meaning_ko: 질서 있는
+  - example_ko: 나는 꼼꼼한거야.
+- id: 28107 | level: N1 | [きっかり / きっかり , 六時きっかりにここへ来なさい。]
+  - meaning_ko: 정확히
+  - example_ko: 6시 확실히 여기로 오십시오.
+- id: 28112 | level: N1 | [きっちり / きっちり , 私はきっちり３時間待った。]
+  - meaning_ko: 정확하게
+  - example_ko: 제대로 3시간 기다렸다.
+- id: 28117 | level: N1 | [きっぱり / きっぱり , 彼女はきっぱり断った。]
+  - meaning_ko: 분명히
+  - example_ko: 그녀는 확실히 거절했다.
+- id: 28122 | level: N1 | [規定 / きてい , 小麦の輸入禁止が法律で規定された。]
+  - meaning_ko: 규제
+  - example_ko: 밀의 수입금지가 법률로 규정되었다.
+- id: 28128 | level: N1 | [起点 / きてん , ]
+  - meaning_ko: 출발점
+- id: 28133 | level: N1 | [軌道 / きどう , 彼は若い頃は実に無軌道だった。]
+  - meaning_ko: 궤도
+  - example_ko: 그는 어렸을 때 실로 무궤도였다.
+- id: 28142 | level: N1 | [技能 / ぎのう , 学生は読書の技能を磨くべきだ。]
+  - meaning_ko: 기술력
+  - example_ko: 학생은 독서의 기술을 닦아야 한다.
+- id: 28146 | level: N1 | [規範 / きはん , 倫理学というのは、行動の規範を意味する。]
+  - meaning_ko: 모델
+  - example_ko: 윤리학이란 행동의 규범을 의미한다.
+- id: 28151 | level: N1 | [気品 / きひん , 彼女には生まれつきの気品がある。]
+  - meaning_ko: 우아함
+  - example_ko: 그녀는 태어난 기품이 있다.
+- id: 28155 | level: N1 | [気風 / きふう , ]
+  - meaning_ko: 성격
+- id: 28160 | level: N1 | [起伏 / きふく , ]
+  - meaning_ko: 파동
+- id: 28165 | level: N1 | [規模 / きぼ , 僕は事業を大規模に営んでいる。]
+  - meaning_ko: 규모
+  - example_ko: 나는 사업을 대규모로 운영하고 있다.
+- id: 28170 | level: N1 | [気まぐれ / きまぐれ , 気まぐれな天気だな。]
+  - meaning_ko: 변덕
+  - example_ko: 변덕스러운 날씨다.
+- id: 28175 | level: N1 | [生真面目 / きまじめ , 彼女は生真面目な顔で冗談を言いました。]
+  - meaning_ko: 심각한
+  - example_ko: 그녀는 진지한 얼굴로 농담을 했다.
+- id: 28182 | level: N1 | [期末 / きまつ , 彼女は期末レポートを作成していますよ。]
+  - meaning_ko: (시즌이나 학기의 끝)
+  - example_ko: 그녀는 기말 보고서를 작성하고 있습니다.
+- id: 28187 | level: N1 | [きまりわるい / きまりわるい , ]
+  - meaning_ko: 어색한 느낌
+- id: 28192 | level: N1 | [記名 / きめい , 持ち物すべてに記名してください。]
+  - meaning_ko: 서명
+  - example_ko: 모든 소지품을 기입하십시오.
+- id: 28197 | level: N1 | [規約 / きやく , 払い戻しの規約なんてあったか？]
+  - meaning_ko: 합의
+  - example_ko: 환불 약관이 있었습니까?
+- id: 28202 | level: N1 | [脚色 / きゃくしょく , その物語は映画用に脚色された。]
+  - meaning_ko: 각색(예:
+  - example_ko: 그 이야기는 영화를 위해 각색되었다.
+- id: 28207 | level: N1 | [逆転 / ぎゃくてん , 形勢は逆転した。]
+  - meaning_ko: (급전
+  - example_ko: 형세는 역전되었다.
+- id: 28212 | level: N1 | [脚本 / きゃくほん , 彼は脚本を書いている。]
+  - meaning_ko: 대본
+  - example_ko: 그는 각본을 썼다.
+- id: 28217 | level: N1 | [華奢 / きゃしゃ , 彼女は華奢な体格だ。]
+  - meaning_ko: 연약한
+  - example_ko: 그녀는 화려한 체격이다.
+- id: 28221 | level: N1 | [客観 / きゃっかん , 客観的な歴史は存在するだろうか。]
+  - meaning_ko: 목적
+  - example_ko: 객관적인 역사는 존재할까.
+- id: 28226 | level: N1 | [キャッチ / キャッチ , 彼は左手でボールをキャッチした。]
+  - meaning_ko: 잡다
+  - example_ko: 그는 왼손으로 공을 잡았다.
+- id: 28231 | level: N1 | [キャリア / キャリア , 彼の職業上のキャリアは破綻していた。]
+  - meaning_ko: 직업
+  - example_ko: 그의 직업 경력은 파탄했다.
+- id: 28236 | level: N1 | [救援 / きゅうえん , 被災地に救援物資が急送された。]
+  - meaning_ko: 안도
+  - example_ko: 재해지에 구호물자가 급송되었다.
+- id: 28242 | level: N1 | [休学 / きゅうがく , トムは休学にはならなかった。]
+  - meaning_ko: 임시 휴학
+  - example_ko: 톰은 휴학이 되지 않았다.
+- id: 28246 | level: N1 | [究極 / きゅうきょく , 教育の究極の目標とは何だろうか。]
+  - meaning_ko: 궁극적인
+  - example_ko: 교육의 궁극적인 목표란 무엇일까.
+- id: 28251 | level: N1 | [窮屈 / きゅうくつ , 非の打ち所がない計画は、窮屈だなあ。]
+  - meaning_ko: 좁은
+  - example_ko: 비의 곳이 없는 계획은 비좁아.
+- id: 28256 | level: N1 | [球根 / きゅうこん , ]
+  - meaning_ko: (식물) 전구
+- id: 28260 | level: N1 | [救済 / きゅうさい , 彼らは難民救済の資金を集めている。]
+  - meaning_ko: 안도
+  - example_ko: 그들은 난민 구제 자금을 모으고 있다.
+- id: 28264 | level: N1 | [給仕 / きゅうじ , 給仕は新しいお皿を持ってきた。]
+  - meaning_ko: 웨이터
+  - example_ko: 급사는 새로운 접시를 가져왔다.
+- id: 28272 | level: N1 | [給食 / きゅうしょく , 給食はあるの？]
+  - meaning_ko: 학교 점심
+  - example_ko: 급식은 있습니까?
+- id: 28277 | level: N1 | [休戦 / きゅうせん , 彼らは休戦条件で合意した。]
+  - meaning_ko: 휴전
+  - example_ko: 그들은 휴전 조건에서 합의했다.
+- id: 28282 | level: N1 | [宮殿 / きゅうでん , 彼女は宮殿へ案内してくれた。]
+  - meaning_ko: 궁전
+  - example_ko: 그녀는 궁전으로 안내해 주었다.
+- id: 28287 | level: N1 | [旧知 / きゅうち , ]
+  - meaning_ko: 오랜 친구
+- id: 28292 | level: N1 | [窮乏 / きゅうぼう , 飢饉が人々にひどい窮乏をもたらした。]
+  - meaning_ko: 빈곤
+  - example_ko: 기근이 사람들에게 끔찍한 빈곤을 가져왔다.
+- id: 28297 | level: N1 | [寄与 / きよ , 軍縮は必ずや平和に寄与する。]
+  - meaning_ko: 기부금
+  - example_ko: 군축은 반드시 평화에 기여한다.
+- id: 28302 | level: N1 | [強 / きょう , パリで勉強したい。]
+  - meaning_ko: 강한
+  - example_ko: 파리에서 공부하고 싶다.
+- id: 28307 | level: N1 | [～狂 / ～きょう , ]
+  - meaning_ko: 미치광이
+- id: 28312 | level: N1 | [驚異 / きょうい , 自然の驚異を記述した本。]
+  - meaning_ko: 궁금하다
+  - example_ko: 자연의 경이를 기술한 책.
+- id: 28317 | level: N1 | [教科 / きょうか , 彼は教科書型の人間だ。]
+  - meaning_ko: 주제
+  - example_ko: 그는 교과서형의 인간이다.
+- id: 28321 | level: N1 | [協会 / きょうかい , 協会は彼を会長にした。]
+  - meaning_ko: 협회
+  - example_ko: 협회는 그를 회장으로 만들었습니다.
+- id: 28325 | level: N1 | [共学 / きょうがく , ]
+  - meaning_ko: 남녀공학
+- id: 28330 | level: N1 | [共感 / きょうかん , あなたの考え方には共感できます。]
+  - meaning_ko: 동정
+  - example_ko: 당신의 생각에 공감할 수 있습니다.
+- id: 28335 | level: N1 | [境遇 / きょうぐう , 彼は境遇に満足している。]
+  - meaning_ko: 환경
+  - example_ko: 그는 처지에 만족한다.
+- id: 28339 | level: N1 | [教訓 / きょうくん , 実例は教訓にまさる。]
+  - meaning_ko: 수업
+  - example_ko: 삽화는 교훈에 맞는다.
+- id: 28344 | level: N1 | [強行 / きょうこう , ]
+  - meaning_ko: 강제
+- id: 28350 | level: N1 | [強硬 / きょうこう , 大統領は強硬路線をとった。]
+  - meaning_ko: 단단한
+  - example_ko: 대통령은 강경 노선을 취했다.
+- id: 28355 | level: N1 | [教材 / きょうざい , 書籍や教材から学ぶことも有効です。]
+  - meaning_ko: 교재
+  - example_ko: 책이나 교재로부터 배우는 것도 유효합니다.
+- id: 28360 | level: N1 | [凶作 / きょうさく , 米作は今年は凶作だ。]
+  - meaning_ko: 나쁜 수확
+  - example_ko: 쌀작은 올해는 흉작이다.
+- id: 28363 | level: N1 | [業者 / ぎょうしゃ , 不動産業者には独立した仲買人がたくさんいる。]
+  - meaning_ko: 상인
+  - example_ko: 부동산업자에게는 독립된 중매인이 많이 있다.
+- id: 28370 | level: N1 | [教習 / きょうしゅう , 教習所に通ってるんだ。]
+  - meaning_ko: 훈련
+  - example_ko: 교습소에 다니고 있다.
+- id: 28375 | level: N1 | [郷愁 / きょうしゅう , 管弦楽団は郷愁に満ちた音楽を演奏し始めた。]
+  - meaning_ko: 노스탤지어
+  - example_ko: 관현악단은 향수가 가득한 음악을 연주하기 시작했다.
+- id: 28379 | level: N1 | [教職 / きょうしょく , 彼は教職に就いた。]
+  - meaning_ko: 교직
+  - example_ko: 그는 교직을 맡았다.
+- id: 28385 | level: N1 | [興じる / きょうじる , ]
+  - meaning_ko: 즐겁게 지내다
+- id: 28387 | level: N1 | [強制 / きょうせい , 彼女は強制的に私を連れ出した。]
+  - meaning_ko: 의무
+  - example_ko: 그녀는 강제로 나를 데려왔다.
+- id: 28396 | level: N1 | [行政 / ぎょうせい , 首相は行政改革を提案した。]
+  - meaning_ko: 관리
+  - example_ko: 총리는 행정 개혁을 제안했다.
+- id: 28398 | level: N1 | [業績 / ぎょうせき , 不況のため企業業績は悪化した。]
+  - meaning_ko: 성취
+  - example_ko: 불황 때문에 기업 실적은 악화됐다.
+- id: 28402 | level: N1 | [共存 / きょうぞん , ]
+  - meaning_ko: 공존
+- id: 28406 | level: N1 | [協定 / きょうてい , 彼は協定を破ることがよくある。]
+  - meaning_ko: 준비
+  - example_ko: 그는 협정을 깨는 경우가 많다.
+- id: 28410 | level: N1 | [郷土 / きょうど , ]
+  - meaning_ko: 고국
+- id: 28415 | level: N1 | [脅迫 / きょうはく , 私は彼の言葉を脅迫と解した。]
+  - meaning_ko: 위협
+  - example_ko: 나는 그의 말을 협박으로 풀었다.
+- id: 28420 | level: N1 | [業務 / ぎょうむ , 日曜日は郵便業務がありますか。]
+  - meaning_ko: 사업
+  - example_ko: 일요일에는 우편 업무가 있습니까?
+- id: 28425 | level: N1 | [共鳴 / きょうめい , 私は彼女の意見に共鳴した。]
+  - meaning_ko: 공명
+  - example_ko: 나는 그녀의 의견에 공명했다.
+- id: 28429 | level: N1 | [郷里 / きょうり , 僕の郷里の町は海に接している。]
+  - meaning_ko: 출생지
+  - example_ko: 내 고향 마을은 바다에 접하고 있다.
+- id: 28435 | level: N1 | [強烈 / きょうれつ , 強烈な暑さだ。]
+  - meaning_ko: 강한
+  - example_ko: 강렬한 더위다.
+- id: 28439 | level: N1 | [共和 / きょうわ , 民主党は共和党に勝つと思いますか。]
+  - meaning_ko: 공화 주의
+  - example_ko: 민주당이 공화당을 이길 것이라고 생각하십니까?
+- id: 28443 | level: N1 | [局限 / きょくげん , ]
+  - meaning_ko: 한계
+- id: 28449 | level: N1 | [極端 / きょくたん , 両極端は一致する。]
+  - meaning_ko: 극심한
+  - example_ko: 양극단은 일치한다.
+- id: 28453 | level: N1 | [居住 / きょじゅう , 「居住外国人」とは、どういう意味ですか。]
+  - meaning_ko: 거주
+  - example_ko: "거주 외국인"이란 무슨 뜻입니까?
+- id: 28458 | level: N1 | [拒絶 / きょぜつ , 彼女は私の申し出を拒絶した。]
+  - meaning_ko: 거절
+  - example_ko: 그녀는 내 제안을 거절했다.
+- id: 28463 | level: N1 | [漁船 / ぎょせん , たった今漁船が陸を離れた。]
+  - meaning_ko: 낚시 보트
+  - example_ko: 방금 어선이 육지를 떠났다.
+- id: 28473 | level: N1 | [漁村 / ぎょそん , トムは小さな漁村に住んでいた。]
+  - meaning_ko: 어촌 마을
+  - example_ko: 톰은 작은 어촌에 살았습니다.
+- id: 28478 | level: N1 | [拒否 / きょひ , 無回答を拒否する。]
+  - meaning_ko: 부정
+  - example_ko: 무답을 거부한다.
+- id: 28482 | level: N1 | [許容 / きょよう , あなたが許容できる『遠距離恋愛』の距離は？]
+  - meaning_ko: 허가
+  - example_ko: 당신이 허용할 수 있는 『원거리 연애』의 거리는?
+- id: 28486 | level: N1 | [清らか / きよらか , ]
+  - meaning_ko: 깨끗한
+- id: 28493 | level: N1 | [きらびやか / きらびやか , きらびやかでいて重厚な宮殿を前に言葉も出ない。]
+  - meaning_ko: 아주 멋진
+  - example_ko: 빛나고 중후한 궁전을 앞에 말도 나오지 않는다.
+- id: 28497 | level: N1 | [～きり / ～きり , ]
+  - meaning_ko: 오직
+- id: 28503 | level: N1 | [義理 / ぎり , 義理だけの拍手をもらう。]
+  - meaning_ko: 감사의 빚
+  - example_ko: 의리만의 박수를 받는다.
+- id: 28507 | level: N1 | [切替 / きりかえ , ]
+  - meaning_ko: 교환
+- id: 28516 | level: N1 | [気流 / きりゅう , 乱気流のために飛行機が揺れた。]
+  - meaning_ko: 대기 전류
+  - example_ko: 난기류로 인해 비행기가 흔들렸다.
+- id: 28520 | level: N1 | [切れ目 / きれめ , 金の切れ目が縁の切れ目。]
+  - meaning_ko: 부서지다
+  - example_ko: 금 조각이 가장자리 조각.
+- id: 28525 | level: N1 | [疑惑 / ぎわく , 彼は疑惑に悩まされた。]
+  - meaning_ko: 의심
+  - example_ko: 그는 의혹에 시달렸다.
+- id: 28530 | level: N1 | [極めて / きわめて , 彼女が怒るのは極めて当然だ。]
+  - meaning_ko: 대단히
+  - example_ko: 그녀가 화를 내는 것은 매우 당연하다.
+- id: 28535 | level: N1 | [近眼 / きんがん , 近眼なんですか？]
+  - meaning_ko: 근시
+  - example_ko: 근안입니까?
+- id: 28540 | level: N1 | [緊急 / きんきゅう , 優先度と緊急度の劣る計画。]
+  - meaning_ko: 긴급한
+  - example_ko: 우선도와 긴급도가 떨어지는 계획.
+- id: 28545 | level: N1 | [近郊 / きんこう , 彼は東京近郊に住んでいる。]
+  - meaning_ko: 교외
+  - example_ko: 그는 도쿄 근교에 살고 있다.
+- id: 28549 | level: N1 | [均衡 / きんこう , 予算は均衡がとれていなければならない。]
+  - meaning_ko: 평형
+  - example_ko: 예산은 균형을 이루어야 한다.
+- id: 28555 | level: N1 | [禁じる / きんじる , 君の喫煙を禁じる。]
+  - meaning_ko: 금지하다
+  - example_ko: 너의 흡연을 금한다.
+- id: 28558 | level: N1 | [勤勉 / きんべん , 貧困は勤勉の母。]
+  - meaning_ko: 산업
+  - example_ko: 빈곤은 근면한 어머니.
+- id: 28563 | level: N1 | [吟味 / ぎんみ , モノを買う時は、よく吟味してから買いなさい。]
+  - meaning_ko: 시험
+  - example_ko: 물건을 살 때는 잘 음미한 후 사십시오.
+- id: 28568 | level: N1 | [勤務 / きんむ , 僕は今度の日曜日は勤務だ。]
+  - meaning_ko: 서비스
+  - example_ko: 나는 이번 일요일은 근무다.
+- id: 28573 | level: N1 | [禁物 / きんもつ , 甘えは禁物だよ。]
+  - meaning_ko: 금기
+  - example_ko: 응석은 금물이야.
+- id: 28578 | level: N1 | [勤労 / きんろう , 勤労によって日本は今日の日本になった。]
+  - meaning_ko: 노동
+  - example_ko: 근로에 의해 일본은 오늘의 일본이 되었다.
+- id: 28582 | level: N1 | [クイズ / クイズ , このクイズは全然分からない。]
+  - meaning_ko: 놀리다
+  - example_ko: 이 퀴즈는 전혀 모른다.
+- id: 28590 | level: N1 | [食い違う / くいちがう , 私たちの意見が食い違うのはこの点です。]
+  - meaning_ko: 서로 교차하다
+  - example_ko: 우리의 의견이 엇갈리는 것은 이 점입니다.
+- id: 28597 | level: N1 | [空間 / くうかん , 宇宙空間には空気がない。]
+  - meaning_ko: 공간
+  - example_ko: 우주공간에는 공기가 없다.
+- id: 28600 | level: N1 | [空腹 / くうふく , 空腹はメンタル的に良くない。]
+  - meaning_ko: 굶주림
+  - example_ko: 배고프는 정신적으로 좋지 않다.
+- id: 28602 | level: N1 | [区画 / くかく , 彼女はここから数区画離れた所に住んでいる。]
+  - meaning_ko: 분할
+  - example_ko: 그녀는 여기에서 몇 구획 떨어진 곳에 살고 있다.
+- id: 28607 | level: N1 | [区間 / くかん , このバスは一区間９０円です。]
+  - meaning_ko: 부분
+  - example_ko: 이 버스는 1구간 90엔입니다.
+- id: 28611 | level: N1 | [茎 / くき , 歯茎の状態が悪いですね。]
+  - meaning_ko: 줄기
+  - example_ko: 잇몸 상태가 나쁘네요.
+- id: 28616 | level: N1 | [区切り / くぎり , ]
+  - meaning_ko: 끝
+- id: 28623 | level: N1 | [くぐる / くぐる , 彼女は規則をかいくぐるのがうまい。]
+  - meaning_ko: 통과하다
+  - example_ko: 그녀는 규칙을 통과하는 것이 좋다.
+- id: 28626 | level: N1 | [くじ (～をひく) / くじ (～をひく) , ]
+  - meaning_ko: 운
+- id: 28631 | level: N1 | [くじびき / くじびき , ]
+  - meaning_ko: 운
+- id: 28637 | level: N1 | [くすぐったい / くすぐったい , くすぐったいよ。]
+  - meaning_ko: 불안정한
+  - example_ko: 간질이야.
+- id: 28644 | level: N1 | [愚痴 / ぐち , 彼女の愚痴は聞き飽きた。]
+  - meaning_ko: 유휴 불만
+  - example_ko: 그녀의 암캐는 듣고 질렸다.
+- id: 28651 | level: N1 | [口吟む / くちずさむ , ]
+  - meaning_ko: 겸손하다
+- id: 28655 | level: N1 | [嘴 / くちばし , ]
+  - meaning_ko: 부리
+- id: 28658 | level: N1 | [朽ちる / くちる , ]
+  - meaning_ko: 썩다
+- id: 28665 | level: N1 | [覆す / くつがえす , ]
+  - meaning_ko: 뒤집다
+- id: 28669 | level: N1 | [くっきり / くっきり , 青空を背景にその塔がくっきり見えた。]
+  - meaning_ko: 뚜렷하게
+  - example_ko: 푸른 하늘을 배경으로 그 탑이 선명하게 보였다.
+- id: 28674 | level: N1 | [屈折 / くっせつ , ]
+  - meaning_ko: 굽힘
+- id: 28679 | level: N1 | [ぐっと / ぐっと , トムは悲鳴をぐっと堪えた。]
+  - meaning_ko: 단단히
+  - example_ko: 톰은 비명을 극복했다.
+- id: 28684 | level: N1 | [首飾り / くびかざり , 彼女は高価な首飾りをしています。]
+  - meaning_ko: 목걸이
+  - example_ko: 그녀는 비싼 목걸이를하고 있습니다.
+- id: 28690 | level: N1 | [首輪 / くびわ , 犬は首輪をすり抜けた。]
+  - meaning_ko: 목걸이
+  - example_ko: 개는 목걸이를 빠져 나갔다.
+- id: 28697 | level: N1 | [組み込む / くみこむ , ]
+  - meaning_ko: 삽입하다
+- id: 28701 | level: N1 | [組み合わせる / くみあわせる , ]
+  - meaning_ko: 함께 참여하다
+- id: 28706 | level: N1 | [蔵 / くら , 赤い冷蔵庫を見たことがない。]
+  - meaning_ko: 창고
+  - example_ko: 빨간 냉장고를 본 적이 없다.
+- id: 28711 | level: N1 | [グレー / グレー , グレートブリテンは紳士と乗馬の国です。]
+  - meaning_ko: 회색
+  - example_ko: 그레이트 브리튼은 신사와 승마의 나라입니다.
+- id: 28716 | level: N1 | [クレーン / クレーン , クレーンを操縦するのには、勿論、免許が必要です。]
+  - meaning_ko: 기중기
+  - example_ko: 크레인을 조종하기 위해서는 물론 면허가 필요합니다.
+- id: 28720 | level: N1 | [玄人 / くろうと , 彼は玄人にちかい。]
+  - meaning_ko: 전문가
+  - example_ko: 그는 현인에 걸렸다.
+- id: 28726 | level: N1 | [黒字 / くろじ , 今月は黒字である。]
+  - meaning_ko: 검정색의 균형 (그림)
+  - example_ko: 이달은 흑자이다.
+- id: 28731 | level: N1 | [軍艦 / ぐんかん , ロシアの軍艦よ、くたばれ！]
+  - meaning_ko: 군함
+  - example_ko: 러시아의 군함이야, 부탁해!
+- id: 28736 | level: N1 | [軍事 / ぐんじ , 彼らは軍事予算を増大させようとした。]
+  - meaning_ko: 군사
+  - example_ko: 그들은 군사 예산을 늘리려고 했다.
+- id: 28740 | level: N1 | [君主 / くんしゅ , 彼は専制君主である。]
+  - meaning_ko: 자
+  - example_ko: 그는 전제 군주이다.
+- id: 28747 | level: N1 | [群集 / ぐんしゅう , 彼は群集を押し分けて進んだ。]
+  - meaning_ko: (사회적) 그룹
+  - example_ko: 그는 군중을 구분하여 나아갔다.
+- id: 28751 | level: N1 | [群衆 / ぐんしゅう , 彼は群衆の中に姿を消した。]
+  - meaning_ko: (사회적) 그룹
+  - example_ko: 그는 군중 속에 사라졌다.
+- id: 28756 | level: N1 | [軍備 / ぐんび , 君は軍備縮小を支持すべきだ。]
+  - meaning_ko: 군비
+  - example_ko: 너는 군비 축소를 지지해야 한다.
+- id: 28762 | level: N1 | [軍服 / ぐんぷく , ]
+  - meaning_ko: 군복이나 해군복
+- id: 28765 | level: N1 | [芸 / げい , 土曜日、去年から通い始めた陶芸教室。]
+  - meaning_ko: 미술
+  - example_ko: 토요일, 작년부터 다니기 시작한 도예 교실.
+- id: 28770 | level: N1 | [経過 / けいか , 彼は批判に神経過敏だ。]
+  - meaning_ko: 통로
+  - example_ko: 그는 비판에 신경 과민하다.
+- id: 28775 | level: N1 | [軽快 / けいかい , リズムは軽快でテンポは速く、その曲は若者に好まれている。]
+  - meaning_ko: 기운찬
+  - example_ko: 리듬은 경쾌하고 템포는 빠르고, 그 곡은 젊은이에게 선호되고 있다.
+- id: 28780 | level: N1 | [警戒 / けいかい , 警戒するに越したことはない。]
+  - meaning_ko: 경고
+  - example_ko: 경계하기에 넘어선 적은 없다.
+- id: 28786 | level: N1 | [敬具 / けいぐ , ]
+  - meaning_ko: 감사합니다(편지 끝에 사용됨)
+- id: 28790 | level: N1 | [軽減 / けいげん , ヨガはストレス軽減に役立つ。]
+  - meaning_ko: 절감
+  - example_ko: 요가는 스트레스 완화에 도움이됩니다.
+- id: 28797 | level: N1 | [掲載 / けいさい , それは昨日の産経新聞に掲載された。]
+  - meaning_ko: 외관(예:
+  - example_ko: 그것은 어제의 산케이 신문에 게재되었다.
+- id: 28800 | level: N1 | [傾斜 / けいしゃ , 屋根は鋭い角度で傾斜している。]
+  - meaning_ko: 기울기
+  - example_ko: 지붕은 날카로운 각도로 기울어져 있습니다.
+- id: 28804 | level: N1 | [形成 / けいせい , 男は社会を形成する。]
+  - meaning_ko: 형성
+  - example_ko: 남자는 사회를 형성한다.
+- id: 28809 | level: N1 | [形勢 / けいせい , 形勢は逆転した。]
+  - meaning_ko: 상태
+  - example_ko: 형세는 역전되었다.
+- id: 28814 | level: N1 | [軽率 / けいそつ , 軽率に答えるな。]
+  - meaning_ko: 인정 없는
+  - example_ko: 경솔하게 대답하지 마라.
+- id: 28819 | level: N1 | [刑罰 / けいばつ , 無知ゆえに刑罰を免れるということはない。]
+  - meaning_ko: 심판
+  - example_ko: 무지 때문에 형벌을 면할 수 없다는 것은 없다.
+- id: 28824 | level: N1 | [経費 / けいひ , 彼らは経費を節減するだろう。]
+  - meaning_ko: 경비
+  - example_ko: 그들은 경비를 절감할 것이다.
+- id: 28831 | level: N1 | [警部 / けいぶ , ]
+  - meaning_ko: 경찰 조사관
+- id: 28836 | level: N1 | [転換 / てんかん , 気分転換に今朝は外で食事しませんか。]
+  - meaning_ko: 전환하다
+  - example_ko: 기분 전환에 오늘 아침은 밖에서 식사하지 않습니까?
+- id: 28840 | level: N1 | [転居 / てんきょ , ご両親は転居されたんですか？]
+  - meaning_ko: 움직이는
+  - example_ko: 부모님은 이사 되었습니까?
+- id: 28846 | level: N1 | [転勤 / てんきん , 彼は東京本社に転勤になった。]
+  - meaning_ko: (회사의 다른 사무실로) 이전
+  - example_ko: 그는 도쿄 본사로 전근이 되었다.
+- id: 28850 | level: N1 | [点検 / てんけん , 彼は主要点を点検した。]
+  - meaning_ko: 점검
+  - example_ko: 그는 주요 점을 검사했다.
+- id: 28853 | level: N1 | [電源 / でんげん , 一回電源落としてみたら？]
+  - meaning_ko: 전기의 근원
+  - example_ko: 한 번 전원을 꺼 보면?
+- id: 28856 | level: N1 | [天国 / てんごく , 彼の魂は天国にいた。]
+  - meaning_ko: 천국
+  - example_ko: 그의 영혼은 천국에 있었다.
+- id: 28865 | level: N1 | [天才 / てんさい , 彼女はいわゆる天才だ。]
+  - meaning_ko: 천재
+  - example_ko: 그녀는 소위 천재다.
+- id: 28871 | level: N1 | [天災 / てんさい , 地震や洪水は天災です。]
+  - meaning_ko: 자연재해
+  - example_ko: 지진과 홍수는 천재입니다.
+- id: 28876 | level: N1 | [展示 / てんじ , 彼の最新作が一時的に展示されている。]
+  - meaning_ko: 전시회
+  - example_ko: 그의 최신작이 일시적으로 전시되고 있다.
+- id: 28880 | level: N1 | [伝説 / でんせつ , 日本には多くの伝説がある。]
+  - meaning_ko: 전통
+  - example_ko: 일본에는 많은 전설이 있다.
+- id: 28885 | level: N1 | [点線 / てんせん , ]
+  - meaning_ko: 점선
+- id: 28890 | level: N1 | [転じる / てんじる , ]
+  - meaning_ko: 회전하다
+- id: 28896 | level: N1 | [転ずる / てんずる , ]
+  - meaning_ko: 회전하다
+- id: 28901 | level: N1 | [天体 / てんたい , 天文学は天体の科学である。]
+  - meaning_ko: 천체
+  - example_ko: 천문학은 천체의 과학이다.
+- id: 28905 | level: N1 | [伝達 / でんたつ , 言葉は伝達の手段である。]
+  - meaning_ko: 전송(예:
+  - example_ko: 기간은 전송의 수단이다.
+- id: 28910 | level: N1 | [天地 / てんち , 天地神明に誓って嘘ではありません。]
+  - meaning_ko: 하늘과 땅
+  - example_ko: 천지 신명에게 맹세하는 거짓말이 아닙니다.
+- id: 28914 | level: N1 | [てんで / てんで , てんで役にたたない。]
+  - meaning_ko: (별말씀을요
+  - example_ko: 천천히 도움이되지 않는다.
+- id: 28920 | level: N1 | [転任 / てんにん , ]
+  - meaning_ko: 게시물 변경
+- id: 28924 | level: N1 | [展望 / てんぼう , 展望台から遠くの街が霞んで見える。]
+  - meaning_ko: 보다
+  - example_ko: 전망대에서 멀리 떨어진 거리가 희미해 보인다.
+- id: 28929 | level: N1 | [伝来 / でんらい , この先祖伝来の家宝は君の物だ。]
+  - meaning_ko: 조상의
+  - example_ko: 이 조상 전래의 가보는 너의 물건이다.
+- id: 28934 | level: N1 | [転落 / てんらく , 彼は船から転落し溺死した。]
+  - meaning_ko: 떨어지다
+  - example_ko: 그는 배에서 넘어져 익사했다.
+- id: 28939 | level: N1 | [問い合わせる / といあわせる , ]
+  - meaning_ko: 문의하다
+- id: 28946 | level: N1 | [当～ / とう～ , ]
+  - meaning_ko: 우리의 ~ (예:
+- id: 28951 | level: N1 | [胴 / どう , 彼は胴体に負傷した。]
+  - meaning_ko: 트렁크
+  - example_ko: 그는 몸통에 부상을 입었다.
+- id: 28956 | level: N1 | [同意 / どうい , 沈黙は同意を表す。]
+  - meaning_ko: 합의
+  - example_ko: 침묵은 동의를 나타낸다.
+- id: 28961 | level: N1 | [動員 / どういん , ]
+  - meaning_ko: 동원
+- id: 28965 | level: N1 | [同感 / どうかん , 同感です。]
+  - meaning_ko: 합의
+  - example_ko: 동감입니다.
+- id: 28970 | level: N1 | [陶器 / とうき , 陶器は火で焼かれた。]
+  - meaning_ko: 도기류
+  - example_ko: 도기는 불로 구워졌다.
+- id: 28975 | level: N1 | [討議 / とうぎ , 彼がきてから討議を始めよう。]
+  - meaning_ko: 토론
+  - example_ko: 그가 와서 토의를 시작하자.
+- id: 28978 | level: N1 | [動機 / どうき , 彼の殺人の動機は何だ。]
+  - meaning_ko: 동기
+  - example_ko: 그의 살인의 동기는 무엇이다.
+- id: 28983 | level: N1 | [等級 / とうきゅう , ]
+  - meaning_ko: 등급
+- id: 28991 | level: N1 | [同級 / どうきゅう , 私たちは同級生です。]
+  - meaning_ko: 같은 학년
+  - example_ko: 우리는 동급생입니다.
+- id: 28997 | level: N1 | [同居 / どうきょ , 両親と同居しています。]
+  - meaning_ko: 동거하다
+  - example_ko: 부모님과 함께 살고 있습니다.
+- id: 29001 | level: N1 | [登校 / とうこう , 病気のため登校できなかった。]
+  - meaning_ko: 출석 (학교에서)
+  - example_ko: 질병 때문에 등교할 수 없었다.
+- id: 29006 | level: N1 | [統合 / とうごう , 天皇は国民の統合の象徴である。]
+  - meaning_ko: 완성
+  - example_ko: 천황은 국민 통합의 상징이다.
+- id: 29011 | level: N1 | [動向 / どうこう , 新聞は世の動向を左右する。]
+  - meaning_ko: 경향
+  - example_ko: 신문은 세상의 동향을 좌우한다.
+- id: 29016 | level: N1 | [投資 / とうし , 彼は大金を株に投資した。]
+  - meaning_ko: 투자
+  - example_ko: 그는 큰 돈을 주식에 투자했다.
+- id: 29021 | level: N1 | [同情 / どうじょう , 良い医者は患者に同情を示す。]
+  - meaning_ko: 동정
+  - example_ko: 좋은 의사는 환자에게 동정심을 보인다.
+- id: 29027 | level: N1 | [道場 / どうじょう , ]
+  - meaning_ko: (아치) 도장
+- id: 29032 | level: N1 | [統制 / とうせい , 船長は船のすべてを統制する。]
+  - meaning_ko: 규제
+  - example_ko: 선장은 배의 모든 것을 통제한다.
+- id: 29037 | level: N1 | [当選 / とうせん , 彼女の当選は確実だ。]
+  - meaning_ko: 당선됨
+  - example_ko: 그녀의 선택은 확실합니다.
+- id: 29042 | level: N1 | [逃走 / とうそう , 彼は森のほうへ逃走した。]
+  - meaning_ko: 비행
+  - example_ko: 그는 숲쪽으로 도주했다.
+- id: 29047 | level: N1 | [統率 / とうそつ , 船長は船と乗組員を統率する。]
+  - meaning_ko: 명령
+  - example_ko: 선장은 배와 승무원을 통솔한다.
+- id: 29052 | level: N1 | [到達 / とうたつ , 彼女はついに北極に到達した。]
+  - meaning_ko: 도달하다
+  - example_ko: 그녀는 마침내 북극에 도달했습니다.
+- id: 29057 | level: N1 | [統治 / とうち , 国会は日本の主要統治機関である。]
+  - meaning_ko: 규칙
+  - example_ko: 국회는 일본의 주요 통치기관이다.
+- id: 29062 | level: N1 | [仕切る / しきる , ]
+  - meaning_ko: 분할하다
+- id: 29065 | level: N1 | [資金 / しきん , 彼女は資金不足で留学できなかった。]
+  - meaning_ko: 자금
+  - example_ko: 그녀는 자금 부족으로 유학할 수 없었다.
+- id: 29071 | level: N1 | [軸 / じく , 車輪は車軸で回転する。]
+  - meaning_ko: 중심선
+  - example_ko: 바퀴는 차축으로 회전한다.
+- id: 29077 | level: N1 | [しくじる / しくじる , なす価値のあることはしくじる価値がある。]
+  - meaning_ko: 실패하다
+  - example_ko: 하는 가치가 있는 것은 어지럽히는 가치가 있다.
+- id: 29081 | level: N1 | [仕組 / しくみ , 誰か電球の仕組みが言える人。]
+  - meaning_ko: 구조
+  - example_ko: 누군가 전구의 구조를 말할 수 있는 사람.
+- id: 29087 | level: N1 | [死刑 / しけい , 彼は死刑を宣告された。]
+  - meaning_ko: 사형
+  - example_ko: 그는 사형을 선고받았다.
+- id: 29092 | level: N1 | [湿気る / しける , ]
+  - meaning_ko: 축축하다
+- id: 29096 | level: N1 | [施行 / しこう , いつその法律は施行されますか。]
+  - meaning_ko: 시행
+  - example_ko: 언제 그 법은 시행됩니까?
+- id: 29100 | level: N1 | [思考 / しこう , 彼女の思考法は合理的だった。]
+  - meaning_ko: 생각
+  - example_ko: 그녀의 생각은 합리적이었다.
+- id: 29103 | level: N1 | [志向 / しこう , その会社の強さは未来志向の戦略によって生みだされている。]
+  - meaning_ko: 의도
+  - example_ko: 그 회사의 힘은 미래 지향의 전략에 의해 만들어지고 있다.
+- id: 29108 | level: N1 | [嗜好 / しこう , コーヒーは酸味のないものの方が父の嗜好に合うようだ。]
+  - meaning_ko: 맛
+  - example_ko: 커피는 신맛이 없는 것이 아버지의 기호에 맞는 것 같다.
+- id: 29115 | level: N1 | [事項 / じこう , 彼の昨日の提案事項は検討中である。]
+  - meaning_ko: 문제
+  - example_ko: 그의 어제의 제안은 검토 중이다.
+- id: 29119 | level: N1 | [時刻表 / じこくひょう , 時刻表をお持ちですか。]
+  - meaning_ko: 시간표
+  - example_ko: 시간표가 있으십니까?
+- id: 29124 | level: N1 | [地獄 / じごく , 地獄の沙汰も金次第。]
+  - meaning_ko: 지옥
+  - example_ko: 지옥의 사태도 금 나름.
+- id: 29129 | level: N1 | [時差 / じさ , 時差ボケで辛い。]
+  - meaning_ko: 시차
+  - example_ko: 시차 노망으로 힘들다.
+- id: 29133 | level: N1 | [自在 / じざい , 私の秘書は英語が自由自在だ。]
+  - meaning_ko: 자유로이
+  - example_ko: 내 비서는 영어가 자유자재다.
+- id: 29137 | level: N1 | [視察 / しさつ , 私はその視察旅行に加わった。]
+  - meaning_ko: 점검
+  - example_ko: 나는 그 시찰 여행에 참가했다.
+- id: 29140 | level: N1 | [資産 / しさん , 彼は資産家だ。]
+  - meaning_ko: 재산
+  - example_ko: 그는 자산가다.
+- id: 29144 | level: N1 | [支持 / しじ , 僕は彼を支持した。]
+  - meaning_ko: 지원하다
+  - example_ko: 나는 그를 지지했다.
+- id: 29150 | level: N1 | [自主 / じしゅ , 靖国神社参拝に関しては閣僚の自主的な判断に任せられている。]
+  - meaning_ko: 독립
+  - example_ko: 야스쿠니 신사 참배에 관해서는 각료의 자주적인 판단에 맡겨져 있다.
+- id: 29155 | level: N1 | [自首 / じしゅ , その犯人は警察に自首した。]
+  - meaning_ko: 항복
+  - example_ko: 그 범인은 경찰에 자수했다.
+- id: 29160 | level: N1 | [刺繍 / ししゅう , アイルランドは刺繍で有名である。]
+  - meaning_ko: 자수
+  - example_ko: 아일랜드는 자수로 유명하다.
+- id: 29166 | level: N1 | [市場 / しじょう , 贅沢品の市場は急速に成長している。]
+  - meaning_ko: (the) 시장 (개념으로)
+  - example_ko: 사치품 시장은 급속하게 성장하고 있다.
+- id: 29171 | level: N1 | [辞職 / じしょく , 彼女は病気を理由に辞職した。]
+  - meaning_ko: 사직
+  - example_ko: 그녀는 질병을 이유로 사직했다.
+- id: 29178 | level: N1 | [雫 / しずく , 一雫の涙が彼女の頬を伝って落ちた。]
+  - meaning_ko: (물방울)
+  - example_ko: 카즈하의 눈물이 그녀의 뺨을 전해 떨어졌다.
+- id: 29183 | level: N1 | [システム / システム , 自由市場システムが危機にひんしている。]
+  - meaning_ko: 체계
+  - example_ko: 자유시장 시스템이 위기에 처해 있다.
+- id: 29188 | level: N1 | [沈める / しずめる , ]
+  - meaning_ko: 가라앉다
+- id: 29194 | level: N1 | [施設 / しせつ , 彼は自分の金をすべて慈善施設に寄付した。]
+  - meaning_ko: 설립
+  - example_ko: 그는 자신의 돈을 모두 자선 시설에 기부했다.
+- id: 29198 | level: N1 | [事前 / じぜん , 事前に予約を取っておくべきだ。]
+  - meaning_ko: 이전의
+  - example_ko: 사전에 예약을 해 두어야 한다.
+- id: 29203 | level: N1 | [子息 / しそく , ご子息のご結婚を心よりお祝い申し上げます。]
+  - meaning_ko: (아들) 아들
+  - example_ko: 아들 결혼을 진심으로 축하드립니다.
+- id: 29207 | level: N1 | [持続 / じぞく , 彼は持続可能な開発の専門家です。]
+  - meaning_ko: 계속
+  - example_ko: 그는 지속 가능한 개발 전문가입니다.
+- id: 29211 | level: N1 | [自尊心 / じそんしん , 彼女を支えているのは自尊心です。]
+  - meaning_ko: 자존심
+  - example_ko: 그녀를 지원하는 것은 자부심입니다.
+- id: 29218 | level: N1 | [慕う / したう , 僕は彼女を慕う気持ちを拭えなかった。]
+  - meaning_ko: 동경하다
+  - example_ko: 나는 그녀를 당황하는 마음을 닦지 않았다.
+- id: 29225 | level: N1 | [下心 / したごころ , 彼はあの女性に下心を抱いている。]
+  - meaning_ko: 비밀 의도
+  - example_ko: 그는 그 여자에게 하심을 품고 있다.
+- id: 29227 | level: N1 | [下地 / したじ , ]
+  - meaning_ko: 기초
+- id: 29236 | level: N1 | [親しむ / したしむ , ]
+  - meaning_ko: 친해지다
+- id: 29242 | level: N1 | [下調べ / したしらべ , 下調べはしたかい。会議は２日後だよ。]
+  - meaning_ko: 예비 조사
+  - example_ko: 아래 조사는 하고 싶다. 회의는 이틀 후야.
+- id: 29247 | level: N1 | [愛想 / あいそう , 彼は誰にでも愛想がいい。]
+  - meaning_ko: 사교성
+  - example_ko: 그는 누구에게나 사랑이 좋다.
+- id: 29251 | level: N1 | [間柄 / あいだがら , 彼女とはどんな間柄ですか。]
+  - meaning_ko: 관계
+  - example_ko: 그녀와는 무슨 사이인가?
+- id: 29256 | level: N1 | [合間 / あいま , 彼は合間に釣りに行った。]
+  - meaning_ko: 간격
+  - example_ko: 그는 사이에 낚시하러 갔다.
+- id: 29262 | level: N1 | [敢えて / あえて , 敢えてやってみた。]
+  - meaning_ko: 감히 (하다)
+  - example_ko: 굳이 해봤다.
+- id: 29267 | level: N1 | [仰ぐ / あおぐ , 私は何事にも彼の指導を仰ぐ。]
+  - meaning_ko: (을) 찾아보다
+  - example_ko: 나는 아무것도 그의 지도를 믿는다.
+- id: 29271 | level: N1 | [垢 / あか , 耳垢を取って欲しい。]
+  - meaning_ko: 흙
+  - example_ko: 귀구석을 가지고 가고 싶다.
+- id: 29275 | level: N1 | [赤字 / あかじ , 同社は赤字である。]
+  - meaning_ko: 부족
+  - example_ko: 이 회사는 적자이다.
+- id: 29280 | level: N1 | [明かす / あかす , さあ、一晩飲み明かすぞ。]
+  - meaning_ko: 공개하다
+  - example_ko: 자, 하룻밤 술을 마실게.
+- id: 29285 | level: N1 | [赤らむ / あからむ , ]
+  - meaning_ko: 붉어지다
+- id: 29288 | level: N1 | [上がり / あがり , 物価は上がり目だった。]
+  - meaning_ko: 오르막
+  - example_ko: 물가는 올라갔다.
+- id: 29297 | level: N1 | [諦め / あきらめ , 彼は諦めが早い。]
+  - meaning_ko: 사직
+  - example_ko: 그는 포기하기가 빠르다.
+- id: 29300 | level: N1 | [アクセル / アクセル , 私は注意深くアクセルを踏んだ。]
+  - meaning_ko: (약어) 가속기
+  - example_ko: 나는 조심스럽게 가속을 밟았다.
+- id: 29307 | level: N1 | [あくどい / あくどい , あくどい事をするな。]
+  - meaning_ko: 화려한 악순환
+  - example_ko: 어리석은 일을하지 마라.
+- id: 29311 | level: N1 | [顎 / あご , 彼女は顎で人を使う。]
+  - meaning_ko: 턱
+  - example_ko: 그녀는 턱에서 사람을 사용합니다.
+- id: 29316 | level: N1 | [憧れ / あこがれ , 同時通訳が彼女の憧れだ。]
+  - meaning_ko: 그리움
+  - example_ko: 동시 통역이 그녀의 동경이다.
+- id: 29320 | level: N1 | [麻 / あさ , 麻薬中毒は現代社会の癌だ。]
+  - meaning_ko: 마
+  - example_ko: 마약중독은 현대사회의 암이다.
+- id: 29325 | level: N1 | [あざ / あざ , 彼女はあざけられた。]
+  - meaning_ko: 모반
+  - example_ko: 그녀는 조롱당했다.
+- id: 29330 | level: N1 | [浅ましい / あさましい , ]
+  - meaning_ko: 부끄러운
+- id: 29335 | level: N1 | [欺く / あざむく , 自分を欺くのはやめましょう。]
+  - meaning_ko: 속이다
+  - example_ko: 자신을 속이는 것을 멈추자.
+- id: 29340 | level: N1 | [鮮やか / あざやか , 庭は花で色鮮やかである。]
+  - meaning_ko: 생생한
+  - example_ko: 정원은 꽃에 화려하다.
+- id: 29347 | level: N1 | [嘲笑う / あざわらう , 彼女が自分で自分を嘲笑うのがわたしには魅力的だ。]
+  - meaning_ko: 비웃다
+  - example_ko: 그녀가 스스로 자신을 비웃는 것이 나에게는 매력적이다.
+- id: 29352 | level: N1 | [悪しからず / あしからず , ]
+  - meaning_ko: 내 말을 오해하지 마세요
+- id: 29357 | level: N1 | [味わい / あじわい , この酒には独特の味わいがある。]
+  - meaning_ko: 맛
+  - example_ko: 이 술에는 독특한 맛이 있다.
+- id: 29362 | level: N1 | [焦る / あせる , そんなに焦るな。]
+  - meaning_ko: 서두르다
+  - example_ko: 그렇게 초조하지 마라.
+- id: 29367 | level: N1 | [あせる (こえが～) / あせる (こえが～) , ]
+  - meaning_ko: 퇴색하다
+- id: 29368 | level: N1 | [値 / あたい , 値段が高すぎる！]
+  - meaning_ko: 값
+  - example_ko: 가격이 너무 높다!
+- id: 29373 | level: N1 | [値する / あたいする , 勇者のみが尊敬に値する。]
+  - meaning_ko: 가치가 있다
+  - example_ko: 용사만이 존경할 만하다.
+- id: 29378 | level: N1 | [悪化 / あっか , 彼の容体が悪化した。]
+  - meaning_ko: 악화
+  - example_ko: 그의 용체가 악화되었다.
+- id: 29382 | level: N1 | [扱い / あつかい , 僕を子供扱いするなよ。]
+  - meaning_ko: 치료
+  - example_ko: 나를 아이 취급하지 마라.
+- id: 29389 | level: N1 | [呆気ない / あっけない , ]
+  - meaning_ko: 충분하지 않다
+- id: 29397 | level: N1 | [あっさり / あっさり , 彼女はあっさりと答えた。]
+  - meaning_ko: 쉽게
+  - example_ko: 그녀는 시원하게 대답했다.
+- id: 29402 | level: N1 | [斡旋 / あっせん , ]
+  - meaning_ko: 친절한 사무실
+- id: 29403 | level: N1 | [圧倒 / あっとう , 彼は数に圧倒された。]
+  - meaning_ko: 압도하다
+  - example_ko: 그는 숫자로 압도당했다.
+- id: 29404 | level: N1 | [圧迫 / あっぱく , 胃に圧迫感があります。]
+  - meaning_ko: 압력
+  - example_ko: 위장에 압박감이 있습니다.
+- id: 29410 | level: N1 | [あつらえる / あつらえる , 冬にグレーのスーツを１着あつらえる事を考えています。]
+  - meaning_ko: 명령을 내리다
+  - example_ko: 겨울에 회색의 슈트를 1벌 맞추는 일을 생각하고 있습니다.
+- id: 29416 | level: N1 | [圧力 / あつりょく , 彼は圧力に屈した。]
+  - meaning_ko: 스트레스
+  - example_ko: 그는 압력에 굴복했다.
+- id: 29419 | level: N1 | [当て / あて , 友達の援助を当てにするな。]
+  - meaning_ko: 기대
+  - example_ko: 친구의 도움을 받지 마라.
+- id: 29427 | level: N1 | [～宛 / ～あて , ]
+  - meaning_ko: ...(예:
+- id: 29436 | level: N1 | [当て字 / あてじ , ]
+  - meaning_ko: 발음에 해당하는 문자
+- id: 29441 | level: N1 | [跡継ぎ / あとつぎ , ]
+  - meaning_ko: 후계자
+- id: 29446 | level: N1 | [後回し / あとまわし , 食事は後回しにしよう。]
+  - meaning_ko: 연기하다
+  - example_ko: 식사는 후회하자.
+- id: 29451 | level: N1 | [油絵 / あぶらえ , 彼女は油絵を始めた。]
+  - meaning_ko: 유화
+  - example_ko: 그녀는 유화를 시작했다.
+- id: 29457 | level: N1 | [アプローチ / アプローチ , うまいアプローチだね。]
+  - meaning_ko: 접근 (골프에서)
+  - example_ko: 좋은 접근입니다.
+- id: 29462 | level: N1 | [あべこべ / あべこべ , あなたはシャツをあべこべに着ている。]
+  - meaning_ko: 반대되는
+  - example_ko: 당신은 셔츠를 아베코베에 입고 있습니다.
+- id: 29467 | level: N1 | [甘える / あまえる , お言葉に甘えるね。]
+  - meaning_ko: 버릇없는 아이처럼 행동하다
+  - example_ko: 말에 응석하네요.
+- id: 29469 | level: N1 | [雨具 / あまぐ , 彼は雨具を用意して出かけた。]
+  - meaning_ko: 비옷
+  - example_ko: 그는 비를 준비하고 나갔다.
+- id: 29477 | level: N1 | [甘口 / あまくち , 甘口がほしいのです。]
+  - meaning_ko: 달콤한 맛
+  - example_ko: 단맛을 원합니다.
+- id: 29482 | level: N1 | [アマチュア / アマチュア , 彼はアマチュアにすぎない。]
+  - meaning_ko: 아마추어
+  - example_ko: 그는 아마추어에 불과합니다.
+- id: 29487 | level: N1 | [網 / あみ , 彼は網を張った。]
+  - meaning_ko: 그물
+  - example_ko: 그는 그물을 던졌습니다.
+- id: 29491 | level: N1 | [操る / あやつる , 私は、数字を操るのがへたです。]
+  - meaning_ko: 조작하다
+  - example_ko: 나는 숫자를 조종하는 것이 좋았습니다.
+- id: 29497 | level: N1 | [危ぶむ / あやぶむ , 私は彼の成功を危ぶむ。]
+  - meaning_ko: 두려워하다
+  - example_ko: 나는 그의 성공을 위태롭게 한다.
+- id: 29500 | level: N1 | [あやふや / あやふや , あやふやな手つきで一枚の紙を動かした。]
+  - meaning_ko: 불확실한
+  - example_ko: 멍청한 손으로 한 장의 종이를 움직였다.
+- id: 29504 | level: N1 | [過ち / あやまち , 母は彼の過ちを許した。]
+  - meaning_ko: 잘못
+  - example_ko: 어머니는 그의 실수를 용서했다.
+- id: 29509 | level: N1 | [誤る / あやまる , 好奇心は身を誤る。]
+  - meaning_ko: 실수하다
+  - example_ko: 호기심은 몸을 잘못한다.
+- id: 29514 | level: N1 | [歩み / あゆみ , 彼は彼女の方に歩み寄った。]
+  - meaning_ko: 단계
+  - example_ko: 그는 그녀에게 걸어 다녔다.
+- id: 29518 | level: N1 | [歩む / あゆむ , 学び続けるのは成功の道を歩む人だ。]
+  - meaning_ko: 걷기
+  - example_ko: 계속 배우는 것은 성공의 길을 걷는 사람이다.
+- id: 29523 | level: N1 | [予め / あらかじめ , 休暇の計画を予め立てている。]
+  - meaning_ko: 미리
+  - example_ko: 휴가 계획을 미리 세우고 있다.
+- id: 29528 | level: N1 | [荒らす / あらす , 掲示板を荒らす人の精神状態がわかりません。]
+  - meaning_ko: 손상을 입히다
+  - example_ko: 게시판을 망칠 사람의 정신 상태를 모르겠습니다.
+- id: 29533 | level: N1 | [争い / あらそい , 彼らは言い争いをした。]
+  - meaning_ko: 논쟁
+  - example_ko: 그들은 싸움을 했다.
+- id: 29541 | level: N1 | [改まる / あらたまる , ]
+  - meaning_ko: 갱신하다
+- id: 29546 | level: N1 | [荒っぽい / あらっぽい , ボクシングは必ずしも荒っぽいスポーツではない。]
+  - meaning_ko: 거친
+  - example_ko: 권투는 반드시 거친 스포츠가 아닙니다.
+- id: 29551 | level: N1 | [アラブ / アラブ , アラブの方ですか？]
+  - meaning_ko: 아라비아 사람
+  - example_ko: 아랍 사람입니까?
+- id: 29557 | level: N1 | [霰 / あられ , ]
+  - meaning_ko: 우박(예:
+- id: 29561 | level: N1 | [有り様 / ありさま , ]
+  - meaning_ko: 상태
+- id: 29566 | level: N1 | [ありのまま / ありのまま , 物事をありのままに見なさい。]
+  - meaning_ko: 진실
+  - example_ko: 일을 그대로 보라.
+- id: 29571 | level: N1 | [ありふれる / ありふれる , ]
+  - meaning_ko: 흔한
+- id: 29576 | level: N1 | [アルカリ / アルカリ , アルカリは酸を中和する。]
+  - meaning_ko: 알칼리
+  - example_ko: 알칼리는 산을 중화한다.
+- id: 29581 | level: N1 | [アルミ / アルミ , アルミは金属です。]
+  - meaning_ko: 알루미늄(Al
+  - example_ko: 알루미늄은 금속입니다.
+- id: 29585 | level: N1 | [アワー / アワー , ラッシュアワーの交通渋滞にあった。]
+  - meaning_ko: 시간
+  - example_ko: 러시 아워의 교통 정체에 있었다.
+- id: 29588 | level: N1 | [合わす / あわす , 私は収支を合わすのに苦労しました。]
+  - meaning_ko: 함께 참여하다
+  - example_ko: 저는 균형을 맞추기 위해 고생했습니다.
+- id: 29597 | level: N1 | [～合せ / ～あわせ , ]
+  - meaning_ko: 전체적으로
+- id: 29600 | level: N1 | [アンコール / アンコール , 歌手に向かって盛んなアンコールが起こった。]
+  - meaning_ko: 연주
+  - example_ko: 가수를 향해 활발한 앙코르가 일어났다.
+- id: 29605 | level: N1 | [暗殺 / あんさつ , 彼らは大統領の暗殺を企てた。]
+  - meaning_ko: 암살
+  - example_ko: 그들은 대통령의 암살을 시도했다.
+- id: 29610 | level: N1 | [暗算 / あんざん , 彼は暗算をするほど頭が良くない。]
+  - meaning_ko: 암산
+  - example_ko: 그는 암산을 할 만큼 똑똑하지 않습니다.
+- id: 29615 | level: N1 | [暗示 / あんじ , 彼の言葉は何を暗示しているのか。]
+  - meaning_ko: 힌트
+  - example_ko: 그의 말은 무엇을 암시하고 있는가.
+- id: 29620 | level: N1 | [案じる / あんじる , ]
+  - meaning_ko: 불안하다
+- id: 29625 | level: N1 | [安静 / あんせい , 絶対安静が必要です。]
+  - meaning_ko: 나머지
+  - example_ko: 절대 휴식이 필요합니다.
+- id: 29629 | level: N1 | [案の定 / あんのじょう , 案の定、彼は第一位になった。]
+  - meaning_ko: 물론이죠
+  - example_ko: 안의 정, 그는 제1위가 되었다.
+- id: 29633 | level: N1 | [いい加減 / いいかげん , 彼はいい加減な返事で言い逃れた。]
+  - meaning_ko: 무작위의
+  - example_ko: 그는 좋은 가감한 대답으로 말했다.
+- id: 29638 | level: N1 | [言い訳 / いいわけ , 彼女は遅刻の言い訳をした。]
+  - meaning_ko: 변명
+  - example_ko: 그녀는 지각 변명을 했다.
+- id: 29642 | level: N1 | [イェス / イェス , ]
+  - meaning_ko: 예
+- id: 29648 | level: N1 | [家出 / いえで , 彼は家出をした。]
+  - meaning_ko: 집에서 도망치다
+  - example_ko: 그는 가출을 했다.
+- id: 29653 | level: N1 | [生かす / いかす , 君を生かすも殺すも僕次第だ。]
+  - meaning_ko: 뭔가를 살려두기 위해
+  - example_ko: 당신을 살릴 것인지, 죽일 것인지는 나에게 달려 있습니다.
+- id: 29657 | level: N1 | [いかに / いかに , 彼女の口振りはいかにもそらぞらしい。]
+  - meaning_ko: 어떻게
+  - example_ko: 그녀의 입 흔들림은 아무리 부끄럽다.
+- id: 29665 | level: N1 | [いかにも / いかにも , 彼はいかにも「営業」って感じだね。]
+  - meaning_ko: 정말로 (実に (じつに) 와 동일)
+  - example_ko: 그는 아무래도 「영업」이라고 느끼네요.
+- id: 29669 | level: N1 | [異議 / いぎ , 彼の方には異議がなかった。]
+  - meaning_ko: 반대
+  - example_ko: 그의 쪽에는 이의가 없었다.
+- id: 29675 | level: N1 | [生き甲斐 / いきがい , 仕事が生き甲斐です。]
+  - meaning_ko: 무엇인가를 위해 사는 것
+  - example_ko: 일이 살아있는 보람입니다.
+- id: 29678 | level: N1 | [行き違い / いきちがい , 私たちの手紙は行き違いになった。]
+  - meaning_ko: 오해
+  - example_ko: 우리 편지는 엇갈렸다.
+- id: 29683 | level: N1 | [意気込む / いきごむ , ]
+  - meaning_ko: 열중하다
+- id: 29687 | level: N1 | [育成 / いくせい , 育成ゲームなのに育成が運しだいってなんだよ。]
+  - meaning_ko: 양육
+  - example_ko: 육성 게임인데 육성이 운반해 가고 있어.
+- id: 29694 | level: N1 | [幾多 / いくた , 彼は幾多の苦難を乗り越えなければならない。]
+  - meaning_ko: 많은
+  - example_ko: 그는 수많은 고난을 극복해야 한다.
+- id: 29698 | level: N1 | [(花を〜) 生ける, 活ける / (はなを～) いける , ]
+  - meaning_ko: (꽃을) 배열하다
+- id: 29701 | level: N1 | [異見 / いけん , ]
+  - meaning_ko: 이의
+- id: 29706 | level: N1 | [意向 / いこう , 彼は意向を遠回しに言った。]
+  - meaning_ko: 의도
+  - example_ko: 그는 의향을 돌고 말했다.
+- id: 29714 | level: N1 | [移行 / いこう , 農場生活から都市の生活への移行は困難なことが多い。]
+  - meaning_ko: 으로 전환하다
+  - example_ko: 농장 생활에서 도시 생활로의 전환은 어려운 경우가 많다.
+- id: 29719 | level: N1 | [いざ / いざ , 払えるかどうか分からないざます。]
+  - meaning_ko: 지금
+  - example_ko: 지불할 수 있을지 모르겠습니다.
+- id: 29724 | level: N1 | [移住 / いじゅう , 彼らはアメリカに移住するつもりです。]
+  - meaning_ko: 이주
+  - example_ko: 그들은 미국으로 이주할 것입니다.
+- id: 29729 | level: N1 | [衣装 / いしょう , 彼女は花嫁のような衣装を着ている。]
+  - meaning_ko: 의류
+  - example_ko: 그녀는 신부 같은 의상을 입고 있다.
+- id: 29734 | level: N1 | [いじる / いじる , その鍵をいじるな！]
+  - meaning_ko: 만지다
+  - example_ko: 그 열쇠를 괴롭히지 마라!
+- id: 29739 | level: N1 | [異性 / いせい , あいつ、異性の友達多いよな。]
+  - meaning_ko: 이성
+  - example_ko: 저 녀석, 이성의 친구 많아.
+- id: 29745 | level: N1 | [遺跡 / いせき , 石器時代の遺跡が発見された。]
+  - meaning_ko: 역사적인 유적
+  - example_ko: 석기시대 유적이 발견되었습니다.
+- id: 29749 | level: N1 | [依存 / いぞん , 彼女の夫はひどい麻薬依存症だ。]
+  - meaning_ko: 의존
+  - example_ko: 그녀의 남편은 끔찍한 마약 중독이다.
+- id: 29755 | level: N1 | [委託 / いたく , 委託生産で利益率を上げる。]
+  - meaning_ko: (판매용) 상품을 회사에 위탁하다
+  - example_ko: 위탁생산으로 이익률을 올린다.
+- id: 29759 | level: N1 | [いたって / いたって , 君がこの本を書いたって？]
+  - meaning_ko: 흠뻑
+  - example_ko: 네가 이 책을 썼다고?
+- id: 29764 | level: N1 | [出世 / しゅっせ , 彼は立派に出世した。]
+  - meaning_ko: 홍보
+  - example_ko: 그는 훌륭하게 출세했다.
+- id: 29770 | level: N1 | [出題 / しゅつだい , 過去問に挑戦して出題傾向を把握する。]
+  - meaning_ko: 질문을 제안하다
+  - example_ko: 과거문에 도전해 출제 경향을 파악한다.
+- id: 29775 | level: N1 | [出動 / しゅつどう , 通常、私は８時４０分に出動する。]
+  - meaning_ko: 동원
+  - example_ko: 보통 나는 8시 40분에 출동한다.
+- id: 29780 | level: N1 | [出費 / しゅっぴ , 車を持っていることは相当な出費だ。]
+  - meaning_ko: 경비
+  - example_ko: 차를 가지고 있는 것은 상당한 지출이다.
+- id: 29785 | level: N1 | [出品 / しゅっぴん , トムが出品した絵は皆入賞した。]
+  - meaning_ko: 전시하다
+  - example_ko: 톰이 출품한 그림은 모두 입상했다.
+- id: 29792 | level: N1 | [主導 / しゅどう , 彼は党の主導権を握った。]
+  - meaning_ko: 주요 리더십
+  - example_ko: 그는 당의 주도권을 붙잡았다.
+- id: 29797 | level: N1 | [主任 / しゅにん , 彼女は主任に休暇を申し出た。]
+  - meaning_ko: 담당자
+  - example_ko: 그녀는 상사에게 휴가를 요청했습니다.
+- id: 29799 | level: N1 | [首脳 / しゅのう , 首脳会談は世界平和に貢献した。]
+  - meaning_ko: 머리
+  - example_ko: 정상회담은 세계평화에 공헌했다.
+- id: 29803 | level: N1 | [守備 / しゅび , 守備隊は降伏を強いられた。]
+  - meaning_ko: 방어
+  - example_ko: 수비대는 항복을 강요당했다.
+- id: 29808 | level: N1 | [手法 / しゅほう , 彼の手法は全く驚くべきものだった。]
+  - meaning_ko: 기술
+  - example_ko: 그의 기법은 전혀 놀라운 것이었다.
+- id: 29815 | level: N1 | [樹木 / じゅもく , 公園は樹木がよく茂っている。]
+  - meaning_ko: 나무와 관목
+  - example_ko: 공원은 나무가 잘 우거져 있다.
+- id: 29820 | level: N1 | [樹立 / じゅりつ , 彼らは新政府を樹立した。]
+  - meaning_ko: 설립하다
+  - example_ko: 그들은 신정부를 수립했다.
+- id: 29826 | level: N1 | [準急 / じゅんきゅう , 新宿駅まで準急で行ったのよ。]
+  - meaning_ko: 로컬 익스프레스(기차
+  - example_ko: 신주쿠역까지 준급으로 갔어.
+- id: 29830 | level: N1 | [準じる / じゅんじる , ]
+  - meaning_ko: 따르다
+- id: 29836 | level: N1 | [～署 / ～しょ , ]
+  - meaning_ko: 부서
+- id: 29839 | level: N1 | [～症 / ～しょう , ]
+  - meaning_ko: 질병
+- id: 29844 | level: N1 | [～証 / ～しょう , ]
+  - meaning_ko: 증거
+- id: 29848 | level: N1 | [～嬢 / ～じょう , ]
+  - meaning_ko: 젊은 숙녀
+- id: 29853 | level: N1 | [上位 / じょうい , 類人猿は知的には犬より上位である。]
+  - meaning_ko: 우수한
+  - example_ko: 유인원은 지적으로는 개보다 상위이다.
+- id: 29861 | level: N1 | [上演 / じょうえん , 次の上演時間は何時からですか。]
+  - meaning_ko: 예술 공연
+  - example_ko: 다음 상연 시간은 몇시부터입니까?
+- id: 29866 | level: N1 | [城下 / じょうか , ここは企業城下町です。]
+  - meaning_ko: 성 근처 땅
+  - example_ko: 이곳은 기업 성시입니다.
+- id: 29869 | level: N1 | [消去 / しょうきょ , 一番下の背景レイヤーを消去します。]
+  - meaning_ko: 제거
+  - example_ko: 하단 배경 레이어를 지웁니다.
+- id: 29874 | level: N1 | [上空 / じょうくう , 町の上空を飛行機が飛んでいる。]
+  - meaning_ko: 하늘
+  - example_ko: 마을의 상공을 비행기가 날고 있다.
+- id: 29878 | level: N1 | [衝撃 / しょうげき , 全世界の人が衝撃を受けた。]
+  - meaning_ko: 충격
+  - example_ko: 전 세계의 사람이 충격을 받았다.
+- id: 29883 | level: N1 | [証言 / しょうげん , 彼女はその男を見たと証言した。]
+  - meaning_ko: 증거
+  - example_ko: 그녀는 그 남자를 보았다고 증언했다.
+- id: 29887 | level: N1 | [証拠 / しょうこ , 論より証拠。]
+  - meaning_ko: 증거
+  - example_ko: 이론보다 증거.
+- id: 29894 | level: N1 | [照合 / しょうごう , 私たちは学生の成績の照合をした。]
+  - meaning_ko: 확인하다
+  - example_ko: 우리는 학생의 성적을 비교했습니다.
+- id: 29898 | level: N1 | [詳細 / しょうさい , 彼らはその問題を詳細に論じた。]
+  - meaning_ko: 세부 사항
+  - example_ko: 그들은 그 문제를 자세히 논의했다.
+- id: 29903 | level: N1 | [上昇 / じょうしょう , 睡眠不足で、心筋梗塞リスクが上昇。]
+  - meaning_ko: 상승
+  - example_ko: 수면 부족으로 심근 경색 위험이 상승.
+- id: 29909 | level: N1 | [昇進 / しょうしん , 父は社長に昇進した。]
+  - meaning_ko: 홍보
+  - example_ko: 아버지는 사장으로 승진했다.
+- id: 29913 | level: N1 | [称する / しょうする , 私は建築を凍結した音楽と称する。]
+  - meaning_ko: 이름을 따다
+  - example_ko: 나는 건축술을 어는 음악이라고 칭한다.
+- id: 29918 | level: N1 | [情勢 / じょうせい , 僕は最近の情勢に疎い。]
+  - meaning_ko: 사물의 상태
+  - example_ko: 나는 최근의 정세에 희미하다.
+- id: 29923 | level: N1 | [消息 / しょうそく , 彼は３年前に家を出たきり全然消息がない。]
+  - meaning_ko: 소식
+  - example_ko: 그는 3년 전에 집을 나온 듯 전혀 소식이 없다.
+- id: 29928 | level: N1 | [承諾 / しょうだく , 無言は承諾。]
+  - meaning_ko: 동의
+  - example_ko: 무언은 승낙.
+- id: 29933 | level: N1 | [情緒 / じょうちょ , 異国情緒あふれる街並みが続く。]
+  - meaning_ko: 감정
+  - example_ko: 이국 정서 넘치는 거리 풍경이 이어진다.
+- id: 29942 | level: N1 | [象徴 / しょうちょう , 白は純潔の象徴である。]
+  - meaning_ko: 상징
+  - example_ko: 백색은 순결의 상징이다.
+- id: 29947 | level: N1 | [小児科 / しょうにか , トムは小児科の先生じゃないよ。]
+  - meaning_ko: 소아과
+  - example_ko: 톰은 소아과의 선생님이 아니야.
+- id: 29952 | level: N1 | [使用人 / しようにん , 私は使用人の一人をくびにした。]
+  - meaning_ko: 직원
+  - example_ko: 나는 하인 중 한 명을 곰팡이로 만들었습니다.
+- id: 29957 | level: N1 | [情熱 / じょうねつ , 情熱は苦悩を生む。]
+  - meaning_ko: 열정
+  - example_ko: 열정은 고뇌를 낳는다.
+- id: 29961 | level: N1 | [譲歩 / じょうほ , いつか譲歩してくれるよ。]
+  - meaning_ko: 양보
+  - example_ko: 언젠가 양보해 줄게.
+- id: 29966 | level: N1 | [条約 / じょうやく , 両国は条約を取り決めた。]
+  - meaning_ko: 조약
+  - example_ko: 양국은 조약을 마련했다.
+- id: 29971 | level: N1 | [勝利 / しょうり , 彼女はこの闘争で勝利を収めた。]
+  - meaning_ko: 승리
+  - example_ko: 그녀는 이 투쟁에서 승리를 거두었다.
+- id: 29975 | level: N1 | [上陸 / じょうりく , 台風が関東地方に上陸した。]
+  - meaning_ko: 착륙
+  - example_ko: 태풍이 관동지방에 상륙했다.
+- id: 29980 | level: N1 | [蒸溜 / じょうりゅう , ]
+  - meaning_ko: 증류
+- id: 29984 | level: N1 | [奨励 / しょうれい , 政府は国産品の愛用を奨励している。]
+  - meaning_ko: 격려
+  - example_ko: 정부는 국산품의 애용을 장려하고 있다.
+- id: 29992 | level: N1 | [ショー / ショー , 明日はショーがあります。]
+  - meaning_ko: 보여주다
+  - example_ko: 내일에는 쇼가 있습니다.
+- id: 29996 | level: N1 | [除外 / じょがい , 彼は除外された。]
+  - meaning_ko: 예외
+  - example_ko: 그는 제외되었다.
+- id: 30003 | level: N1 | [職員 / しょくいん , 彼らは職員室にいます。]
+  - meaning_ko: 직원
+  - example_ko: 그들은 직원실에 있습니다.
+- id: 30007 | level: N1 | [植民地 / しょくみんち , 英国は多くの植民地を設けた。]
+  - meaning_ko: 식민지
+  - example_ko: 영국은 많은 식민지를 마련했다.
+- id: 30012 | level: N1 | [職務 / しょくむ , 彼は職務怠慢だった。]
+  - meaning_ko: 전문적인 업무
+  - example_ko: 그는 직무 태만이었다.
+- id: 30017 | level: N1 | [諸君 / しょくん , 諸君は英語を学ぶところですか。]
+  - meaning_ko: 신사!
+  - example_ko: 여러분은 영어를 배우는 곳입니까?
+- id: 30022 | level: N1 | [助言 / じょげん , 賢明で良心的な人に助言を求めなさい。]
+  - meaning_ko: 조언
+  - example_ko: 현명하고 양심적인 사람에게 조언을 구하십시오.
+- id: 30029 | level: N1 | [徐行 / じょこう , 車に徐行するようにと合図した。]
+  - meaning_ko: 천천히 가다
+  - example_ko: 차에 서행하라고 신호했다.
+- id: 30034 | level: N1 | [所在 / しょざい , 秋田県の県庁所在地は秋田市です。]
+  - meaning_ko: 소재
+  - example_ko: 아키타현의 현청 소재지는 아키타시입니다.
+- id: 30038 | level: N1 | [所持 / しょじ , 全部所持品です。]
+  - meaning_ko: 소유
+  - example_ko: 모두 소지품입니다.
+- id: 30045 | level: N1 | [所属 / しょぞく , 彼は無所属で立候補した。]
+  - meaning_ko: 에 첨부
+  - example_ko: 그는 무소속으로 입후보했다.
+- id: 30048 | level: N1 | [処置 / しょち , 彼は臨機応変の処置を取った。]
+  - meaning_ko: 치료
+  - example_ko: 그는 임기 응변 처리를 취했다.
+- id: 30053 | level: N1 | [しょっちゅう / しょっちゅう , 彼女はしょっちゅうカッとなった。]
+  - meaning_ko: 언제나
+  - example_ko: 그녀는 굉장히 멋졌다.
+- id: 30057 | level: N1 | [所定 / しょてい , 私たちは所定の場所で会った。]
+  - meaning_ko: 결정된
+  - example_ko: 우리는 제자리에서 만났다.
+- id: 30062 | level: N1 | [所得 / しょとく , 野党は所得税減税法案を提出した。]
+  - meaning_ko: 소득
+  - example_ko: 야당은 소득세 감세법안을 제출했다.
+- id: 30068 | level: N1 | [処罰 / しょばつ , シンガポールでは罪人を鞭打ちで処罰する。]
+  - meaning_ko: 처벌
+  - example_ko: 싱가포르에서는 죄인을 채찍으로 처벌한다.
+- id: 30076 | level: N1 | [初版 / しょはん , 初版は１０年前に出版された。]
+  - meaning_ko: 초판
+  - example_ko: 초판은 10년 전에 출판되었다.
+- id: 30080 | level: N1 | [書評 / しょひょう , 書評みたいな読書感想文を書いた。]
+  - meaning_ko: 서평
+  - example_ko: 서평 같은 독서 감상문을 썼다.
+- id: 30083 | level: N1 | [処分 / しょぶん , 彼は放校処分にされた。]
+  - meaning_ko: 처분
+  - example_ko: 그는 방교 처분되었다.
+- id: 30088 | level: N1 | [庶民 / しょみん , 庶民のなりわいは、米をつくることだった。]
+  - meaning_ko: 대중
+  - example_ko: 서민의 사정은 쌀을 만드는 것이었다.
+- id: 30097 | level: N1 | [庶務 / しょむ , 彼女は庶務課に所属している。]
+  - meaning_ko: 총무
+  - example_ko: 그녀는 서무과에 소속되어 있다.
+- id: 30102 | level: N1 | [所有 / しょゆう , 父親が死んで彼がその店を所有した。]
+  - meaning_ko: 자신의 소유물
+  - example_ko: 아버지가 죽고 그가 그 가게를 소유했다.
+- id: 30104 | level: N1 | [調べ / しらべ , 列車は何時に着くか調べてみよう。]
+  - meaning_ko: 조사
+  - example_ko: 열차는 몇시에 도착할지 알아보자.
+- id: 30109 | level: N1 | [自立 / じりつ , 彼は自立した。]
+  - meaning_ko: 독립
+  - example_ko: 그는 자립했다.
+- id: 30117 | level: N1 | [記す / しるす , 日付を暗記することは容易ではない。]
+  - meaning_ko: 메모하다
+  - example_ko: 날짜를 암기하는 것은 쉽지 않다.
+- id: 30122 | level: N1 | [指令 / しれい , 戦勝国は敗戦国に講和条件を指令した。]
+  - meaning_ko: 명령
+  - example_ko: 전승국은 패전국에 강화 조건을 지령했다.
+- id: 30127 | level: N1 | [～心 / ～しん , いや～心配したな。]
+  - meaning_ko: ~의 마음
+  - example_ko: 아니~ 걱정했구나.
+- id: 30132 | level: N1 | [陣 / じん , しかも初陣があのドラゴン退治！]
+  - meaning_ko: 전투 형성
+  - example_ko: 게다가 초진이 그 드래곤 퇴치!
+- id: 30136 | level: N1 | [進化 / しんか , 彼らはダーウィンの進化論に反対した。]
+  - meaning_ko: 진화
+  - example_ko: 그들은 다윈의 진화론에 반대했다.
+- id: 30141 | level: N1 | [人格 / じんかく , 彼は人格者だ。]
+  - meaning_ko: 성격
+  - example_ko: 그는 인격자다.
+- id: 30146 | level: N1 | [審議 / しんぎ , その問題は審議中です。]
+  - meaning_ko: 숙고
+  - example_ko: 그 문제는 심의 중입니다.
+- id: 30152 | level: N1 | [新婚 / しんこん , 新婚旅行は海外の予定です。]
+  - meaning_ko: 신혼
+  - example_ko: 신혼여행은 해외 예정입니다.
+- id: 30157 | level: N1 | [審査 / しんさ , 審査員は誰ですか？]
+  - meaning_ko: 판단
+  - example_ko: 심사위원은 누구인가?
+- id: 30162 | level: N1 | [人材 / じんざい , 彼は会社にとって重要な人材だ。]
+  - meaning_ko: 재능 있는 사람
+  - example_ko: 그는 회사에게 중요한 인재다.
+- id: 30167 | level: N1 | [紳士 / しんし , 普段あの紳士は帽子をかぶっている。]
+  - meaning_ko: 신사
+  - example_ko: 평소 그 신사는 모자를 쓰고 있다.
+- id: 30172 | level: N1 | [真実 / しんじつ , 真実のみが美しい。]
+  - meaning_ko: 진실
+  - example_ko: 진실만이 아름답다.
+- id: 30177 | level: N1 | [信者 / しんじゃ , キリスト教の信者だったことはない。]
+  - meaning_ko: 신자
+  - example_ko: 기독교 신자였던 적은 없다.
+- id: 30182 | level: N1 | [真珠 / しんじゅ , 母は真珠のネックレスをくれた。]
+  - meaning_ko: 진주
+  - example_ko: 어머니는 진주 목걸이를 주었다.
+- id: 30187 | level: N1 | [進出 / しんしゅつ , 私達は決勝戦に進出した。]
+  - meaning_ko: 진보
+  - example_ko: 우리는 결승전에 진출했다.
+- id: 30192 | level: N1 | [心情 / しんじょう , 彼は隠さずに心情を吐露した。]
+  - meaning_ko: 심리
+  - example_ko: 그는 숨기지 않고 심정을 토로했다.
+- id: 30197 | level: N1 | [新人 / しんじん , 新人は我々の期待に及ばなかった。]
+  - meaning_ko: 새로운 얼굴
+  - example_ko: 신인은 우리의 기대에 미치지 못했다.
+- id: 30199 | level: N1 | [神聖 / しんせい , 荘厳な寺院で神聖な儀式が行われた。]
+  - meaning_ko: 신성한 것
+  - example_ko: 장엄한 사원에서 신성한 의식이 행해졌다.
+- id: 30202 | level: N1 | [親善 / しんぜん , これからも両国の親善を深めましょう。]
+  - meaning_ko: 우정
+  - example_ko: 앞으로도 양국의 친선을 깊게 합시다.
+- id: 30207 | level: N1 | [真相 / しんそう , 僕に真相を話してくれ。]
+  - meaning_ko: 진실
+  - example_ko: 나에게 진상을 말해줘.
+- id: 30212 | level: N1 | [迅速 / じんそく , 彼はその事態に迅速に対応した。]
+  - meaning_ko: 빠른
+  - example_ko: 그는 그 사태에 신속하게 대응했다.
+- id: 30221 | level: N1 | [人体 / じんたい , 人体は無数の細胞からなっている。]
+  - meaning_ko: 인체
+  - example_ko: 인체는 무수한 세포로 구성됩니다.
+- id: 30225 | level: N1 | [新築 / しんちく , 息子に家を新築してあげた。]
+  - meaning_ko: 새 건물
+  - example_ko: 아들에게 집을 신축해 주었다.
+- id: 30231 | level: N1 | [心中 / しんじゅう , 心中お察し致します。]
+  - meaning_ko: 이중 자살
+  - example_ko: 마음 속에 알아 봅니다.
+- id: 30236 | level: N1 | [進呈 / しんてい , ]
+  - meaning_ko: 프레젠테이션
+- id: 30240 | level: N1 | [進展 / しんてん , 交渉はほとんど進展しなかった。]
+  - meaning_ko: 진전
+  - example_ko: 협상은 거의 진행되지 않았다.
+- id: 30245 | level: N1 | [神殿 / しんでん , この神殿を壊してみなさい。]
+  - meaning_ko: 절
+  - example_ko: 이 성전을 부수어보십시오.
+- id: 30250 | level: N1 | [進度 / しんど , ]
+  - meaning_ko: 진전
+- id: 30254 | level: N1 | [振動 / しんどう , 電車内部における騒音と振動を予測する。]
+  - meaning_ko: 진동
+  - example_ko: 기차 내부의 소음과 진동을 예측한다.
+- id: 30262 | level: N1 | [新入生 / しんにゅうせい , 彼らは新入生をからかった。]
+  - meaning_ko: 신입생
+  - example_ko: 그들은 신입생들을 놀렸습니다.
+- id: 30266 | level: N1 | [信任 / しんにん , ]
+  - meaning_ko: 신뢰하다
+- id: 30270 | level: N1 | [神秘 / しんぴ , 彼には神秘的なところがある。]
+  - meaning_ko: 신비
+  - example_ko: 그에게는 신비한 곳이 있다.
+- id: 30276 | level: N1 | [辛抱 / しんぼう , 彼は辛抱強かった。]
+  - meaning_ko: 인내심
+  - example_ko: 그는 참을성이 있었다.
+- id: 30280 | level: N1 | [人民 / じんみん , 彼は人民にとって神様でした。]
+  - meaning_ko: 사람들
+  - example_ko: 그는 인민에게 하나님이었습니다.
+- id: 30286 | level: N1 | [侵略 / しんりゃく , 彼らは侵略者に抵抗した。]
+  - meaning_ko: 침략
+  - example_ko: 그들은 침략자를 저항했다.
+- id: 30292 | level: N1 | [診療 / しんりょう , 診療予約を取ってもらえますか。]
+  - meaning_ko: 건강검진과 치료
+  - example_ko: 진료 예약을 받을 수 있습니까?
+- id: 30297 | level: N1 | [粋 / すい , 本の要点を抜粋した。]
+  - meaning_ko: 본질
+  - example_ko: 책의 요점을 발췌했다.
+- id: 30301 | level: N1 | [水源 / すいげん , どんな川にも水源があります。]
+  - meaning_ko: 강의 근원
+  - example_ko: 어떤 강에도 수원이 있습니다.
+- id: 30305 | level: N1 | [推進 / すいしん , 最先端のイノベーションを推進する。]
+  - meaning_ko: 추진
+  - example_ko: 최첨단 혁신을 추진한다.
+- id: 30312 | level: N1 | [吹奏 / すいそう , 彼は吹奏楽団に所属しています。]
+  - meaning_ko: 관악기 연주
+  - example_ko: 그는 취주악단에 소속되어 있습니다.
+- id: 30317 | level: N1 | [推測 / すいそく , 彼女の推測は当たった。]
+  - meaning_ko: 추측하다
+  - example_ko: 그녀의 추측은 맞았다.
+- id: 30322 | level: N1 | [水田 / すいでん , 津波が水田を押し流し、町は浸水しました。]
+  - meaning_ko: (물이 채워진) 논
+  - example_ko: 쓰나미가 논을 밀어내고, 마을은 침수했습니다.
+- id: 30326 | level: N1 | [推理 / すいり , 彼は推理小説を時々読む。]
+  - meaning_ko: 추리
+  - example_ko: 그는 추리 소설을 때때로 읽는다.
+- id: 30331 | level: N1 | [数詞 / すうし , ]
+  - meaning_ko: 숫자
+- id: 30335 | level: N1 | [崇拝 / すうはい , 彼は崇拝の眼で彼女を眺めた。]
+  - meaning_ko: 예배
+  - example_ko: 그는 숭배의 눈으로 그녀를 바라보았다.
+- id: 30340 | level: N1 | [据え付ける / すえつける , ]
+  - meaning_ko: 설치하다
+- id: 30345 | level: N1 | [据える / すえる , 彼を議長に据えることに誰も異議を唱えなかった。]
+  - meaning_ko: 설정하다
+  - example_ko: 그를 의장에 두는 것에 아무도 이의를 제기하지 않았다.
+- id: 30348 | level: N1 | [すがすがしい / すがすがしい , 今日はすがすがしいお天気ですね。]
+  - meaning_ko: 신선한
+  - example_ko: 오늘은 멋진 날씨입니다.
+- id: 30353 | level: N1 | [救い / すくい , 彼は救い難い。]
+  - meaning_ko: 돕다
+  - example_ko: 그는 구하기 어렵다.
+- id: 30360 | level: N1 | [すくう (みずを～) / すくう (みずを～) , ]
+  - meaning_ko: 퍼내다
+- id: 30363 | level: N1 | [健やか / すこやか , ]
+  - meaning_ko: 원기 왕성한
+- id: 30372 | level: N1 | [濯ぐ / すすぐ , ]
+  - meaning_ko: 헹구다
+- id: 30376 | level: N1 | [進み / すすみ , 彼らは手探りで進み続けた。]
+  - meaning_ko: 진전
+  - example_ko: 그들은 수작업으로 계속 진행했다.
+- id: 30382 | level: N1 | [裾 / すそ , 山裾に古城があります。]
+  - meaning_ko: (바지) 커프스
+  - example_ko: 산자락에 고성이 있습니다.
+- id: 30387 | level: N1 | [スタジオ / スタジオ , スタジオに入れません。]
+  - meaning_ko: 사진관
+  - example_ko: 스튜디오에 넣지 않습니다.
+- id: 30391 | level: N1 | [スチーム / スチーム , 彼は私達のテニスチームに入っている。]
+  - meaning_ko: 증기
+  - example_ko: 그는 우리 테니스 팀에 들어갔다.
+- id: 30397 | level: N1 | [ストライキ / ストライキ , 労働者達はストライキ中です。]
+  - meaning_ko: 스트라이크
+  - example_ko: 노동자들은 파업 중입니다.
+- id: 30402 | level: N1 | [スト / スト , ファストフードはもう飽きた。]
+  - meaning_ko: (약어) 파업
+  - example_ko: 패스트 푸드는 이미 지루했다.
+- id: 30407 | level: N1 | [ストロー / ストロー , ストローに穴は幾つあるでしょう？]
+  - meaning_ko: 빨대
+  - example_ko: 빨대에 구멍이 몇 개 있나요?
+- id: 30412 | level: N1 | [ストロボ / ストロボ , ここでストロボ撮影をしてもいいですか。]
+  - meaning_ko: 스트로보스코프(문자 그대로: 스트로보)
+  - example_ko: 여기서 스트로브 촬영을 해도 되나요?
+- id: 30416 | level: N1 | [すばしこい / すばしこい , 雀は動作が非常にすばしこい。]
+  - meaning_ko: 재빠른
+  - example_ko: 참새는 작동이 매우 훌륭합니다.
+- id: 30421 | level: N1 | [素早い / すばやい , まばたきのように素早い。]
+  - meaning_ko: 빠른
+  - example_ko: 눈꺼풀처럼 빠르다.
+- id: 30426 | level: N1 | [ずばり / ずばり , その問題についての彼の意見はずばり的を射ている。]
+  - meaning_ko: 단호하게
+  - example_ko: 그 문제에 대한 그의 의견은 확실히 쏘고 있다.
+- id: 30431 | level: N1 | [スプリング / スプリング , ホワイト氏はスプリングフィールドのあるホテルの支配人でした。]
+  - meaning_ko: 봄
+  - example_ko: 화이트씨는 스프링필드가 있는 호텔의 지배인이었습니다.
+- id: 30436 | level: N1 | [スペース / スペース , 私の夢はスペースシャトルで旅することです。]
+  - meaning_ko: 공간
+  - example_ko: 내 꿈은 우주 왕복선으로 여행하는 것입니다.
+- id: 30441 | level: N1 | [ずぶぬれ / ずぶぬれ , 彼女はずぶぬれになった。]
+  - meaning_ko: 흠뻑 젖은
+  - example_ko: 그녀는 어지러워졌습니다.
+- id: 30445 | level: N1 | [スポーツカー / スポーツカー , 彼はスポーツカーのマニアだ。]
+  - meaning_ko: 스포츠카
+  - example_ko: 그는 스포츠카의 매니아다.
+- id: 30450 | level: N1 | [澄ます / すます , ]
+  - meaning_ko: 지우다
+- id: 30454 | level: N1 | [清ます / すます , ]
+  - meaning_ko: 지우다
+- id: 30458 | level: N1 | [済ます / すます , 良い辞書無しで済ます事は出来ない。]
+  - meaning_ko: 끝내다
+  - example_ko: 좋은 사전 없이 끝낼 수는 없다.
+- id: 30461 | level: N1 | [すみやか / すみやか , 決定の後すみやかに実行に移して欲しい。]
+  - meaning_ko: 빠른
+  - example_ko: 결정 후 신속하게 실행으로 옮기기를 바랍니다.
+- id: 30466 | level: N1 | [スラックス / スラックス , 彼のスラックスはしわくちゃだ。]
+  - meaning_ko: 느슨한 바지
+  - example_ko: 그의 슬랙스는 구겨진다.
+- id: 30471 | level: N1 | [ずらっと / ずらっと , ]
+  - meaning_ko: 줄을 서서
+- id: 30478 | level: N1 | [ずるずる / ずるずる , 私はぬかるんだ斜面をずるずると滑り下りた。]
+  - meaning_ko: 끌고
+  - example_ko: 나는 따뜻한 슬로프를 미끄러지며 미끄러졌다.
+- id: 30482 | level: N1 | [ずれ / ずれ , どこの関節がはずれたの？]
+  - meaning_ko: 차이점
+  - example_ko: 어디 관절이 벗어났습니까?
+- id: 30487 | level: N1 | [すれちがい / すれちがい , ]
+  - meaning_ko: 우연한 만남
+- id: 30495 | level: N1 | [擦れる / すれる , 上着の擦れる音が聞こえる。]
+  - meaning_ko: 문지르다
+  - example_ko: 겉옷이 긁히는 소리가 들린다.
+- id: 30501 | level: N1 | [すんなり / すんなり , スーザンは賢いから試験にすんなり通ると思うよ。]
+  - meaning_ko: 이의 없이 통과하다
+  - example_ko: 수잔은 똑똑하기 때문에 시험에 순진히 다닌다고 생각해.
+- id: 30505 | level: N1 | [生育 / せいいく , 雨の量が作物の生育に影響するのですか。]
+  - meaning_ko: 성장
+  - example_ko: 비의 양이 작물의 성장에 영향을 미칩니까?
+- id: 30509 | level: N1 | [成育 / せいいく , ]
+  - meaning_ko: 성장
+- id: 30513 | level: N1 | [成果 / せいか , 小さな親切大きな成果。]
+  - meaning_ko: 결과
+  - example_ko: 작은 친절 큰 업적.
+- id: 30517 | level: N1 | [正解 / せいかい , トムが正解。]
+  - meaning_ko: 옳은
+  - example_ko: 톰이 정답.
+- id: 30522 | level: N1 | [正義 / せいぎ , 彼は正義だ。]
+  - meaning_ko: 정당성
+  - example_ko: 그는 정의다.
+- id: 30527 | level: N1 | [生計 / せいけい , 彼女は作家として生計を立てている。]
+  - meaning_ko: 살림
+  - example_ko: 그녀는 작가로 생계를 세우고 있다.
+- id: 30534 | level: N1 | [政権 / せいけん , 彼の政権はきっと崩壊する。]
+  - meaning_ko: (정치) 행정
+  - example_ko: 그의 정권은 분명히 붕괴한다.
+- id: 30539 | level: N1 | [星座 / せいざ , 星座は何ですか？]
+  - meaning_ko: 별자리
+  - example_ko: 별자리는 무엇입니까?
+- id: 30544 | level: N1 | [制裁 / せいさい , 組合に制裁を加えることは妥当ではない。]
+  - meaning_ko: 제지
+  - example_ko: 노조에 제재를 추가하는 것은 타당하지 않다.
+- id: 30550 | level: N1 | [政策 / せいさく , 彼らの政策に賛成か。]
+  - meaning_ko: 정치적 조치
+  - example_ko: 그들의 정책에 찬성?
+- id: 30555 | level: N1 | [生死 / せいし , 彼は生死の境をさ迷った。]
+  - meaning_ko: 삶과 죽음
+  - example_ko: 그는 생사의 경계를 헤매었다.
+- id: 30560 | level: N1 | [静止 / せいし , 浅間山は今静止している。]
+  - meaning_ko: 고요함
+  - example_ko: 아사마산은 지금 정지하고 있다.
+- id: 30565 | level: N1 | [誠実 / せいじつ , 彼女は約束を誠実に守った。]
+  - meaning_ko: 진실된
+  - example_ko: 그녀는 약속을 성실하게 지켰다.
+- id: 30569 | level: N1 | [成熟 / せいじゅく , 人の体は三十前に成熟する。]
+  - meaning_ko: 성숙함
+  - example_ko: 사람의 몸은 30 전에 성숙한다.
+- id: 30574 | level: N1 | [青春 / せいしゅん , 僕らは青春の真っ只中だ。]
+  - meaning_ko: 청년
+  - example_ko: 우리는 청춘의 한가운데다.
+- id: 30579 | level: N1 | [清純 / せいじゅん , 写真が暴露された後で女優の清純なイメージが汚された。]
+  - meaning_ko: 청정
+  - example_ko: 사진이 노출된 뒤 여배우의 청순한 이미지가 더러워졌다.
+- id: 30585 | level: N1 | [聖書 / せいしょ , 彼はよく聖書から引用する。]
+  - meaning_ko: 성경
+  - example_ko: 그는 잘 성경에서 인용한다.
+- id: 30590 | level: N1 | [正常 / せいじょう , 彼の体温は正常だ。]
+  - meaning_ko: 정상
+  - example_ko: 그의 체온은 정상이다.
+- id: 30596 | level: N1 | [制する / せいする , 自制するよう努めなさい。]
+  - meaning_ko: 통제하다
+  - example_ko: 자제하는 것을 노력하십시오.
+- id: 30600 | level: N1 | [整然 / せいぜん , デモ隊は整然と行進した。]
+  - meaning_ko: 질서 있는
+  - example_ko: 시위대는 정연하게 행진했다.
+- id: 30604 | level: N1 | [盛装 / せいそう , 盛装なさる必要はありません。]
+  - meaning_ko: 차려입다
+  - example_ko: 성장할 필요는 없습니다.
+- id: 30607 | level: N1 | [盛大 / せいだい , 彼を空港で盛大に見送った。]
+  - meaning_ko: 멋진
+  - example_ko: 그를 공항에서 성대하게 보냈다.
+- id: 30612 | level: N1 | [清濁 / せいだく , 清濁あわせのむ。]
+  - meaning_ko: 선과 악
+  - example_ko: 깨끗한 어울림.
+- id: 30615 | level: N1 | [制定 / せいてい , その法律は明治時代に制定された。]
+  - meaning_ko: 제정
+  - example_ko: 그 법률은 메이지 시대에 제정되었다.
+- id: 30620 | level: N1 | [静的 / せいてき , ]
+  - meaning_ko: 공전
+- id: 30630 | level: N1 | [製鉄 / せいてつ , その製鉄工場を建てるのは非常に大変な事業だった。]
+  - meaning_ko: 철 제조
+  - example_ko: 그 제철공장을 세우는 것은 매우 힘든 사업이었다.
+- id: 30636 | level: N1 | [晴天 / せいてん , 長い晴天続きでした。]
+  - meaning_ko: 좋은 날씨
+  - example_ko: 긴 맑은 천속이었습니다.
+- id: 30640 | level: N1 | [正当 / せいとう , 目的は手段を正当化する。]
+  - meaning_ko: 단지
+  - example_ko: 목적은 수단을 정당화한다.
+- id: 30646 | level: N1 | [制服 / せいふく , 彼らはみんな制服を着ていた。]
+  - meaning_ko: 제복
+  - example_ko: 그들은 모두 제복을 입고 있었다.
+- id: 30651 | level: N1 | [征服 / せいふく , 彼はエベレストを征服した。]
+  - meaning_ko: 정복
+  - example_ko: 그는 에베레스트를 정복했다.
+- id: 30657 | level: N1 | [製法 / せいほう , チーズの製法を教えてください。]
+  - meaning_ko: 제조방법
+  - example_ko: 치즈 제조법을 알려주세요.
+- id: 30662 | level: N1 | [精密 / せいみつ , 精密検査をしましょう。]
+  - meaning_ko: 정밀한
+  - example_ko: 정밀 검사를합시다.
+- id: 30667 | level: N1 | [税務署 / ぜいむしょ , 税務署は控除を認めた。]
+  - meaning_ko: 세무서
+  - example_ko: 세무서는 공제를 인정했다.
+- id: 30671 | level: N1 | [制約 / せいやく , まず成果を出さんとな。制約の中で。]
+  - meaning_ko: 한정
+  - example_ko: 우선 성과를 나왔다. 제약에서.
+- id: 30676 | level: N1 | [勢力 / せいりょく , 彼の勢力は国中に及んでいる。]
+  - meaning_ko: 영향
+  - example_ko: 그의 세력은 국가 전체에 걸쳐 있다.
+- id: 30682 | level: N1 | [整列 / せいれつ , 軍隊は戦闘の配置で整列していた。]
+  - meaning_ko: 일렬로 서다
+  - example_ko: 군대는 전투의 배치로 정렬하고 있었다.
+- id: 30687 | level: N1 | [セール / セール , 彼女はセールスマンにだまされた。]
+  - meaning_ko: 판매
+  - example_ko: 그녀는 세일즈맨에게 속았다.
+- id: 30692 | level: N1 | [急かす / せかす , そんなに急かすなよ。]
+  - meaning_ko: 서두르다
+  - example_ko: 그렇게 서두르지 마라.
+- id: 30697 | level: N1 | [伜 / せがれ , ]
+  - meaning_ko: 아들
+- id: 30700 | level: N1 | [責務 / せきむ , 彼はついに責務を果たした。]
+  - meaning_ko: 의무
+  - example_ko: 그는 마침내 책임을 다했다.
+- id: 30705 | level: N1 | [セクション / セクション , ]
+  - meaning_ko: 부분
+- id: 30710 | level: N1 | [世辞 / せじ , 彼は私にお世辞を言った。]
+  - meaning_ko: 아첨
+  - example_ko: 그는 나에게 아첨을 말했다.
+- id: 30715 | level: N1 | [世帯 / せたい , 火事で４世帯が焼死した。]
+  - meaning_ko: 가정
+  - example_ko: 화재로 4가구가 소사했다.
+- id: 30720 | level: N1 | [是正 / ぜせい , バス通学と積極的差別是正措置などが論争の多い話題だった。]
+  - meaning_ko: 보정
+  - example_ko: 버스통학과 적극적 차별 시정조치 등이 논쟁이 많은 화제였다.
+- id: 30725 | level: N1 | [世代 / せだい , 彼らの間には世代の断絶がある。]
+  - meaning_ko: 세대
+  - example_ko: 그들 사이에는 세대의 단절이 있다.
+- id: 30730 | level: N1 | [切開 / せっかい , 帝王切開にしてください。]
+  - meaning_ko: 개방
+  - example_ko: 제왕 절개를하십시오.
+- id: 30735 | level: N1 | [セックス / セックス , 愛のないセックスはあり？]
+  - meaning_ko: 섹스
+  - example_ko: 사랑없는 섹스가 있습니까?
+- id: 30740 | level: N1 | [切実 / せつじつ , 切実に実家帰りたくなってきた。]
+  - meaning_ko: 설득력 있는
+  - example_ko: 절실하게 친가 돌아가고 싶어져 왔다.
+- id: 30743 | level: N1 | [接触 / せっしょく , 彼は色々な種類の人と接触する。]
+  - meaning_ko: 만지다
+  - example_ko: 그는 다양한 종류의 사람과 접촉합니다.
+- id: 30750 | level: N1 | [接続詞 / せつぞくし , 関係代名詞は「接続詞+代名詞」のはたらきをしています。]
+  - meaning_ko: 접속사
+  - example_ko: 관계대명사는 「접속사+대명사」의 작용을 하고 있습니다.
+- id: 30754 | level: N1 | [設置 / せっち , 仕事場にコンピューターを設置した。]
+  - meaning_ko: 설립
+  - example_ko: 작업장에 컴퓨터를 설치했다.
+- id: 30758 | level: N1 | [折衷 / せっちゅう , 彼は和洋折衷の家に住んでいる。]
+  - meaning_ko: 타협
+  - example_ko: 그는 일본과 서양 절충의 집에 살고 있습니다.
+- id: 30763 | level: N1 | [設定 / せってい , 初期設定のまま使ってるの？]
+  - meaning_ko: 설립
+  - example_ko: 초기 설정 그대로 사용하고 있습니까?
+- id: 30768 | level: N1 | [説得 / せっとく , 僕は彼女をうまく説得してデートした。]
+  - meaning_ko: 설득
+  - example_ko: 나는 그녀를 잘 설득하고 데이트했다.
+- id: 30772 | level: N1 | [切ない / せつない , 切ない話だった。]
+  - meaning_ko: 아픈
+  - example_ko: 애틋한 이야기였다.
+- id: 30782 | level: N1 | [絶版 / ぜっぱん , 私はその本を１冊買いたいが、その本は絶版になっている。]
+  - meaning_ko: 절판
+  - example_ko: 나는 그 책을 1권 사고 싶지만, 그 책은 절판이 되어 있다.
+- id: 30784 | level: N1 | [設立 / せつりつ , 彼らは学校を設立した。]
+  - meaning_ko: 설립
+  - example_ko: 그들은 학교를 설립했다.
+- id: 30789 | level: N1 | [攻め / せめ , 彼らは町に攻め寄せた。]
+  - meaning_ko: 공격
+  - example_ko: 그들은 마을을 공격했다.
+- id: 30797 | level: N1 | [ゼリー / ゼリー , 彼の好きなのはゼリーです。]
+  - meaning_ko: 젤리
+  - example_ko: 그의 가장 좋아하는 것은 젤리입니다.
+- id: 30799 | level: N1 | [セレモニー / セレモニー , セレモニーには出席できませんでした。]
+  - meaning_ko: 의식
+  - example_ko: 세레모니에 참석할 수 없었습니다.
+- id: 30804 | level: N1 | [世論 / せろん , 世論に聞け。]
+  - meaning_ko: 여론
+  - example_ko: 여론을 들어라.
+- id: 30807 | level: N1 | [先 / せん , 先週中国語を習い始めました。]
+  - meaning_ko: 우선 사항
+  - example_ko: 지난 주 중국어를 배우기 시작했습니다.
+- id: 30815 | level: N1 | [繊維 / せんい , もっと繊維質を取りなさい。]
+  - meaning_ko: 섬유
+  - example_ko: 좀더 섬유질을 가지고 가십시오.
+- id: 30821 | level: N1 | [全快 / ぜんかい , 病気が全快なさるように。]
+  - meaning_ko: 완전한 건강 회복
+  - example_ko: 질병이 전쾌한 것처럼.
+- id: 30827 | level: N1 | [宣教 / せんきょう , 三人の宣教師が人食い部族に殺され、食べられた。]
+  - meaning_ko: 종교적 사명
+  - example_ko: 세 명의 선교사가 인식 부족에게 죽이고 먹혔다.
+- id: 30832 | level: N1 | [宣言 / せんげん , 労働組合はストを宣言した。]
+  - meaning_ko: 선언
+  - example_ko: 노동조합은 파업을 선언했다.
+- id: 30837 | level: N1 | [戦災 / せんさい , 彼は戦災孤児だ。]
+  - meaning_ko: 전쟁 피해
+  - example_ko: 그는 전재 고아다.
+- id: 30841 | level: N1 | [専修 / せんしゅう , ]
+  - meaning_ko: 전문화
+- id: 30844 | level: N1 | [戦術 / せんじゅつ , 戦術を変えてみたら。]
+  - meaning_ko: 전술
+  - example_ko: 전술을 바꾸어 보면.
+- id: 30852 | level: N1 | [センス / センス , 彼女は楽しいユーモアのセンスがある。]
+  - meaning_ko: 감각 (음악에 대한
+  - example_ko: 그녀는 재미있는 유머 감각이 있습니다.
+- id: 30856 | level: N1 | [潜水 / せんすい , 潜水して泳げるかい。]
+  - meaning_ko: 다이빙
+  - example_ko: 다이빙하고 수영할까.
+- id: 30862 | level: N1 | [全盛 / ぜんせい , 当時、芸術は全盛でした。]
+  - meaning_ko: 번영의 높이
+  - example_ko: 당시 예술은 전성이었습니다.
+- id: 30866 | level: N1 | [先代 / せんだい , ]
+  - meaning_ko: 가족의 전임자
+- id: 30870 | level: N1 | [先だって / せんだって , 先だって彼にあったときには、彼はとても元気だった。]
+  - meaning_ko: 최근에
+  - example_ko: 앞서 그에게 있었을 때, 그는 매우 건강했다.
+- id: 30876 | level: N1 | [先着 / せんちゃく , 先着順に並んでください。]
+  - meaning_ko: 첫 도착
+  - example_ko: 선착순으로 나란히 하십시오.
+- id: 30880 | level: N1 | [前提 / ぜんてい , 結婚が出産の前提条件になっている。]
+  - meaning_ko: 전문
+  - example_ko: 결혼이 출산의 전제조건이 되고 있다.
+- id: 30884 | level: N1 | [先天的 / せんてんてき , 彼は先天的な詩人です。]
+  - meaning_ko: 고유의
+  - example_ko: 그는 선천적인 시인입니다.
+- id: 30889 | level: N1 | [前途 / ぜんと , 彼は前途有望です。]
+  - meaning_ko: 미래 전망
+  - example_ko: 그는 앞으로 유망합니다.
+- id: 30892 | level: N1 | [戦闘 / せんとう , 彼は戦闘で負傷した。]
+  - meaning_ko: 전투
+  - example_ko: 그는 전투에서 부상을 입었다.
+- id: 30898 | level: N1 | [潜入 / せんにゅう , 彼は農夫に身をやつして城下町に潜入した。]
+  - meaning_ko: 침투
+  - example_ko: 그는 농부에게 몸을 짓고 성시에 잠입했다.
+- id: 30899 | level: N1 | [船舶 / せんぱく , ]
+  - meaning_ko: 배
+- id: 30902 | level: N1 | [全滅 / ぜんめつ , 部隊は全滅した。]
+  - meaning_ko: 전멸
+  - example_ko: 부대는 전멸했다.
+- id: 30912 | level: N1 | [専用 / せんよう , 彼は自分専用の電話を持っている。]
+  - meaning_ko: 독점 사용
+  - example_ko: 그는 자신 전용 전화를 가지고 있습니다.
+- id: 30917 | level: N1 | [占領 / せんりょう , 敵はその砦を占領した。]
+  - meaning_ko: 직업
+  - example_ko: 적은 그 요새를 점령했다.
+- id: 30921 | level: N1 | [善良 / ぜんりょう , 彼は善良そのものである。]
+  - meaning_ko: 선량
+  - example_ko: 그는 선량 그 자체이다.
+- id: 30927 | level: N1 | [戦力 / せんりょく , リさんが怪我されたため、スターズの戦力がだいぶ低下しました。]
+  - meaning_ko: 전쟁 가능성
+  - example_ko: 리씨가 부상당했기 때문에, 스타즈의 전력이 상당히 저하되었습니다.
+- id: 30932 | level: N1 | [前例 / ぜんれい , このような問題の前例はない。]
+  - meaning_ko: 전례
+  - example_ko: 이러한 문제의 전례는 없다.
+- id: 30937 | level: N1 | [相応 / そうおう , 分相応に暮らせ。]
+  - meaning_ko: 적당
+  - example_ko: 분에 맞게 살아라.
+- id: 30943 | level: N1 | [総会 / そうかい , 株主総会が開かれた。]
+  - meaning_ko: 총회
+  - example_ko: 주주총회가 열렸다.
+- id: 30948 | level: N1 | [創刊 / そうかん , ]
+  - meaning_ko: 실행 중(예:
+- id: 30954 | level: N1 | [雑木 / ぞうき , ]
+  - meaning_ko: 다양한 종류의 작은 나무들
+- id: 30958 | level: N1 | [早急 / そうきゅう , 早急な処置が必要だ。]
+  - meaning_ko: 긴급한
+  - example_ko: 조속한 처치가 필요하다.
+- id: 30967 | level: N1 | [増強 / ぞうきょう , 語彙力を増強したい。]
+  - meaning_ko: 강화하다
+  - example_ko: 어휘력을 증강하고 싶다.
+- id: 30971 | level: N1 | [送金 / そうきん , トムはメアリーに送金しました。]
+  - meaning_ko: 송금
+  - example_ko: 톰은 메리에게 송금했습니다.
+- id: 30977 | level: N1 | [走行 / そうこう , 走行中の箱乗りはご遠慮下さい！]
+  - meaning_ko: 바퀴가 달린 차량을 운행합니다(예:
+  - example_ko: 주행중의 상자 타는 것은 삼가해 주세요!
+- id: 30982 | level: N1 | [総合 / そうごう , このプロダクトはインテリジェント総合情報システムです。]
+  - meaning_ko: 합성
+  - example_ko: 이 제품은 지능형 종합 정보 시스템입니다.
+- id: 30990 | level: N1 | [捜索 / そうさく , 彼は行方不明の母の捜索に着手した。]
+  - meaning_ko: 검색(특히 누락된 사람이나 물건에 대한 검색)
+  - example_ko: 그는 행방불명의 어머니의 수색에 착수했다.
+- id: 30997 | level: N1 | [蔵相 / ぞうしょう , ]
+  - meaning_ko: 재무장관
+- id: 31000 | level: N1 | [装飾 / そうしょく , 彼は室内装飾を学んだ。]
+  - meaning_ko: 장식
+  - example_ko: 그는 실내 장식을 배웠습니다.
+- id: 31003 | level: N1 | [増進 / ぞうしん , 健康は幸福を増進する。]
+  - meaning_ko: 홍보
+  - example_ko: 건강은 행복을 개량한다.
+- id: 31008 | level: N1 | [相対 / そうたい , 相対性理論を理解する科学者は少ない。]
+  - meaning_ko: 상대적인
+  - example_ko: 상대성 이론을 이해하는 과학자는 적다.
+- id: 31013 | level: N1 | [壮大 / そうだい , 壮大な眺めですね。]
+  - meaning_ko: 웅장한
+  - example_ko: 장대한 전망입니다.
+- id: 31017 | level: N1 | [騒動 / そうどう , 警察が騒動に介入した。]
+  - meaning_ko: 싸움
+  - example_ko: 경찰이 소동에 개입했다.
+- id: 31020 | level: N1 | [遭難 / そうなん , 彼らは山で遭難した。]
+  - meaning_ko: 재해
+  - example_ko: 그들은 산에서 조난했다.
+- id: 31025 | level: N1 | [相場 / そうば , 今は下がり相場だ。]
+  - meaning_ko: 시장 가격
+  - example_ko: 지금은 하락 시세다.
+- id: 31030 | level: N1 | [装備 / そうび , 彼はライフルを装備した。]
+  - meaning_ko: 장비
+  - example_ko: 그는 소총을 장비했다.
+- id: 31035 | level: N1 | [創立 / そうりつ , 彼はその学校を創立した。]
+  - meaning_ko: 설립
+  - example_ko: 그는 그 학교를 창립했다.
+- id: 31044 | level: N1 | [添える / そえる , 機知は会話に趣を添える。]
+  - meaning_ko: 추가하다
+  - example_ko: 기치는 대화에 정취를 더한다.
+- id: 31048 | level: N1 | [ソース / ソース , 空腹は最善のソースなり。]
+  - meaning_ko: 원천
+  - example_ko: 배고프는 최선의 소스입니다.
+- id: 31053 | level: N1 | [即座に / そくざに , 彼は即座に承知した。]
+  - meaning_ko: 즉시
+  - example_ko: 그는 즉시 알았다.
+- id: 31058 | level: N1 | [促進 / そくしん , 彼の仕事は販売の促進です。]
+  - meaning_ko: 홍보
+  - example_ko: 그의 일은 판매 촉진입니다.
+- id: 31065 | level: N1 | [即する / そくする , ]
+  - meaning_ko: 준수하다
+- id: 31069 | level: N1 | [束縛 / そくばく , 彼は人々を束縛から解放した。]
+  - meaning_ko: 제지
+  - example_ko: 그는 사람들을 속박에서 풀어 놓았다.
+- id: 31074 | level: N1 | [側面 / そくめん , さらにまた、その話にはもうひとつの側面がある。]
+  - meaning_ko: 옆
+  - example_ko: 게다가 그 이야기에는 또 하나의 측면이 있다.
+- id: 31079 | level: N1 | [損う / そこなう , ]
+  - meaning_ko: 해를 끼치다
+- id: 31084 | level: N1 | [そこら / そこら , 彼女はそこらにいますか。]
+  - meaning_ko: 어디에나
+  - example_ko: 그녀는 그곳에 있습니까?
+- id: 31089 | level: N1 | [素材 / そざい , 素材は何ですか？]
+  - meaning_ko: 원료
+  - example_ko: 소재는 무엇입니까?
+- id: 31097 | level: N1 | [阻止 / そし , 自然環境の悪化を阻止しましょう。]
+  - meaning_ko: 방해
+  - example_ko: 자연 환경의 악화를 저지합시다.
+- id: 31099 | level: N1 | [訴訟 / そしょう , 訴訟は未決である。]
+  - meaning_ko: 소송
+  - example_ko: 소송은 미결이다.
+- id: 31102 | level: N1 | [育ち / そだち , 彼女は育ちがよい。]
+  - meaning_ko: 번식
+  - example_ko: 그녀는 자란다.
+- id: 31106 | level: N1 | [措置 / そち , 適切なときに適切な措置を講ずるべきです。]
+  - meaning_ko: 측정하다
+  - example_ko: 적절한 경우 적절한 조치를 취해야 합니다.
+- id: 31111 | level: N1 | [ソックス / ソックス , ソックスを脱ぎなさい。]
+  - meaning_ko: 양말
+  - example_ko: 양말을 벗으십시오.
+- id: 31117 | level: N1 | [素っ気無い / そっけない , ]
+  - meaning_ko: 추운
+- id: 31127 | level: N1 | [外方 / そっぽ , ]
+  - meaning_ko: 다른 쪽을 보거나 돌아보세요
+- id: 31130 | level: N1 | [備え付ける / そなえつける , 職場に、自動販売機を備え付ける。]
+  - meaning_ko: 제공하다
+  - example_ko: 직장에 자동판매기를 구비한다.
+- id: 31135 | level: N1 | [備わる / そなわる , ]
+  - meaning_ko: 갖추어져 있다
+- id: 31140 | level: N1 | [具わる / そなわる , ]
+  - meaning_ko: 갖추어져 있다
+- id: 31145 | level: N1 | [聳える / そびえる , ]
+  - meaning_ko: 상승하다
+- id: 31150 | level: N1 | [素朴 / そぼく , マリーは素朴な学生だ。]
+  - meaning_ko: 간단
+  - example_ko: 마리는 소박한 학생이다.
+- id: 31156 | level: N1 | [背く / そむく , ]
+  - meaning_ko: 반항하다
+- id: 31161 | level: N1 | [染まる / そまる , 世間の悪風に染まる。]
+  - meaning_ko: 염색하다
+  - example_ko: 세상의 악풍에 물든다.
+- id: 31167 | level: N1 | [染める / そめる , 朝焼けが空を染めると、星々は静かに姿を消した。]
+  - meaning_ko: 염색하다
+  - example_ko: 새벽이 하늘을 물들자 별들은 조용히 모습을 지웠다.
+- id: 31171 | level: N1 | [そらす / そらす , 話をそらすなよ。]
+  - meaning_ko: 구부리다
+  - example_ko: 벗어나지 마십시오.
+- id: 31175 | level: N1 | [そり (～にのる) / そり (～にのる) , ]
+  - meaning_ko: 썰매
+- id: 31179 | level: N1 | [反る / そる , ]
+  - meaning_ko: 휘게하다
+- id: 31184 | level: N1 | [それゆえ / それゆえ , それゆえここにとどまらざるを得ないだろう。]
+  - meaning_ko: 그러므로
+  - example_ko: 그러므로 여기에 머무를 수밖에 없을 것이다.
+- id: 31187 | level: N1 | [ソロ / ソロ , 今どきソロバンを使う人なんてほとんどいやしないよ。]
+  - meaning_ko: 독주
+  - example_ko: 지금 솔로반을 사용하는 사람은 거의 치유하지 않아.
+- id: 31194 | level: N1 | [揃い / そろい , 彼とお揃いのサンダルを買ったの。]
+  - meaning_ko: 세트
+  - example_ko: 그와 함께 샌들을 샀다.
+- id: 31197 | level: N1 | [ぞんざい / ぞんざい , 彼は引き出しに物をぞんざいに押し込んだ。]
+  - meaning_ko: 무례한
+  - example_ko: 그는 서랍에 물건을 조심스럽게 밀어 넣었다.
+- id: 31199 | level: N1 | [損失 / そんしつ , 彼らはその損失の埋め合わせをした。]
+  - meaning_ko: 손실
+  - example_ko: 그들은 그 손실을 가득 채웠다.
+- id: 31203 | level: N1 | [存続 / そんぞく , 善ならざるものは何であれ存続しえない。]
+  - meaning_ko: 지속
+  - example_ko: 선이 아니면 무엇이든 존속할 수 없다.
+- id: 31207 | level: N1 | [ダース / ダース , 彼は卵を１ダース買った。]
+  - meaning_ko: 다스
+  - example_ko: 그는 달걀을 1 다스 샀다.
+- id: 31220 | level: N1 | [対応 / たいおう , お年よりへのその対応はひどい。]
+  - meaning_ko: 다루는
+  - example_ko: 나이에 대한 대응은 끔찍하다.
+- id: 31226 | level: N1 | [大家 / たいか , 友人の家は大家族です。]
+  - meaning_ko: 부유한 가족
+  - example_ko: 친구의 집은 대가족입니다.
+- id: 31230 | level: N1 | [退化 / たいか , 人類は生態系の退化を防ぐことができるだろうか？]
+  - meaning_ko: 퇴화
+  - example_ko: 인류는 생태계의 퇴화를 막을 수 있을까?
+- id: 31235 | level: N1 | [大概 / たいがい , 冗談も大概にしろ！]
+  - meaning_ko: 일반적으로
+  - example_ko: 농담도 대략 해라!
+- id: 31240 | level: N1 | [体格 / たいかく , 彼は体格が良い。]
+  - meaning_ko: 체
+  - example_ko: 그는 체격이 좋다.
+- id: 31246 | level: N1 | [大金 / たいきん , 彼女は大金を銀行に預けた。]
+  - meaning_ko: 많은 돈
+  - example_ko: 그녀는 돈을 은행에 맡겼다.
+- id: 31249 | level: N1 | [待遇 / たいぐう , 彼らは彼女を待遇してきた。]
+  - meaning_ko: 치료
+  - example_ko: 그들은 그녀를 대우했습니다.
+- id: 31252 | level: N1 | [対決 / たいけつ , 経営側と労働者側との対決があるでしょう。]
+  - meaning_ko: 직면
+  - example_ko: 경영측과 노동자측과의 대결이 있을 것입니다.
+- id: 31258 | level: N1 | [体験 / たいけん , 彼は自分の体験を述べた。]
+  - meaning_ko: 개인적인 경험
+  - example_ko: 그는 자신의 경험을 말했다.
+- id: 31262 | level: N1 | [対抗 / たいこう , 私は彼に対抗して入札した。]
+  - meaning_ko: 반대
+  - example_ko: 나는 그에게 맞서 입찰했다.
+- id: 31266 | level: N1 | [退治 / たいじ , しかも初陣があのドラゴン退治！]
+  - meaning_ko: 구제
+  - example_ko: 게다가 초진이 그 드래곤 퇴치!
+- id: 31273 | level: N1 | [大衆 / たいしゅう , 大統領は大衆を前に演説した。]
+  - meaning_ko: 일반 대중
+  - example_ko: 대통령은 대중을 전에 연설했다.
+- id: 31276 | level: N1 | [対処 / たいしょ , 彼はその問題に対処できる。]
+  - meaning_ko: 다루다
+  - example_ko: 그는 그 문제를 다룰 수 있다.
+- id: 31281 | level: N1 | [退職 / たいしょく , 来年の春、退職される。]
+  - meaning_ko: 퇴직(직위에서)
+  - example_ko: 내년 봄, 은퇴된다.
+- id: 31288 | level: N1 | [題する / だいする , 宿題するの大っ嫌い。]
+  - meaning_ko: 제목에
+  - example_ko: 숙제하는 걸 싫어.
+- id: 31295 | level: N1 | [態勢 / たいせい , 大型台風への万全の態勢が整いました。]
+  - meaning_ko: 태도
+  - example_ko: 대형 태풍에 대한 만전의 태세가 갖추어졌습니다.
+- id: 31299 | level: N1 | [対談 / たいだん , 私たちは老人と楽しく対談した。]
+  - meaning_ko: 말하다
+  - example_ko: 우리는 노인과 즐겁게 대담했다.
+- id: 31303 | level: N1 | [大胆 / だいたん , 彼は大胆なことを言う。]
+  - meaning_ko: 용감한
+  - example_ko: 그는 대담한 것을 말한다.
+- id: 31306 | level: N1 | [対等 / たいとう , すべての人は対等の権利を有する。]
+  - meaning_ko: 동등한
+  - example_ko: 모든 사람은 대등한 권리가 있다.
+- id: 31311 | level: N1 | [台無し / だいなし , 風やら雨やらで旅行は台無しだった。]
+  - meaning_ko: 엉망
+  - example_ko: 바람과 비에서 여행은 엉망이었다.
+- id: 31316 | level: N1 | [滞納 / たいのう , 料金滞納で電話を止められた。]
+  - meaning_ko: 미불
+  - example_ko: 요금 체납으로 전화를 멈췄다.
+- id: 31321 | level: N1 | [対比 / たいひ , 空と山の対比が鮮烈だ。]
+  - meaning_ko: 차이
+  - example_ko: 하늘과 산의 대비가 선명하다.
+- id: 31325 | level: N1 | [タイピスト / タイピスト , 彼女はタイピストです。]
+  - meaning_ko: 타이피스트
+  - example_ko: 그녀는 타이피스트입니다.
+- id: 31331 | level: N1 | [大部 / たいぶ , 煉瓦の大部分は粘土からなっている。]
+  - meaning_ko: 대부분(예:
+  - example_ko: 벽돌의 대부분은 점토로 이루어져 있습니다.
+- id: 31336 | level: N1 | [大便 / だいべん , 病院で大便の検査をした。]
+  - meaning_ko: 대변
+  - example_ko: 병원에서 대변 검사를 했다.
+- id: 31343 | level: N1 | [代弁 / だいべん , 誰が代弁者になるか。]
+  - meaning_ko: 다른 사람을 위해 말하다
+  - example_ko: 누가 대변자가 되는가?
+- id: 31350 | level: N1 | [待望 / たいぼう , 残念ながら待望の試合は中止せざるを得なかった。]
+  - meaning_ko: 오랫동안 기다려온
+  - example_ko: 불행히도 대망의 경기는 중지하지 않을 수 없었다.
+- id: 31356 | level: N1 | [台本 / だいほん , 台本に目を通しておいてください。]
+  - meaning_ko: 가사
+  - example_ko: 대본에 눈을 통해 두십시오.
+- id: 31359 | level: N1 | [タイマー / タイマー , タイマー機能は使わない。]
+  - meaning_ko: 시간제 노동자
+  - example_ko: 타이머 기능은 사용하지 않는다.
+- id: 31364 | level: N1 | [怠慢 / たいまん , 彼は職務怠慢だった。]
+  - meaning_ko: 과실
+  - example_ko: 그는 직무 태만이었다.
+- id: 31367 | level: N1 | [タイミング / タイミング , いいタイミングだ。]
+  - meaning_ko: 타이밍
+  - example_ko: 좋은 타이밍이다.
+- id: 31371 | level: N1 | [タイム / タイム , 彼はタイム誌の記者です。]
+  - meaning_ko: 시간
+  - example_ko: 그는 타임지의 기자입니다.
+- id: 31376 | level: N1 | [タイムリー / タイムリー , ]
+  - meaning_ko: 때마침
+- id: 31381 | level: N1 | [対面 / たいめん , 彼とは初対面です。]
+  - meaning_ko: 회견
+  - example_ko: 그와는 첫 대면입니다.
+- id: 31385 | level: N1 | [代用 / だいよう , この箱はテーブルの代用となる。]
+  - meaning_ko: 치환
+  - example_ko: 이 상자는 테이블의 대용이 된다.
+- id: 31396 | level: N1 | [体力 / たいりょく , 彼の体力は衰えてきた。]
+  - meaning_ko: 체력
+  - example_ko: 그의 체력은 쇠퇴했다.
+- id: 31397 | level: N1 | [タイル / タイル , 彼女はスタイルが悪い。]
+  - meaning_ko: 타일
+  - example_ko: 그녀는 스타일이 좋지 않아요.
+- id: 31400 | level: N1 | [対話 / たいわ , 思考とは、自らの心と対話することである。]
+  - meaning_ko: 대화
+  - example_ko: 사고란, 자신의 마음과 대화하는 것이다.
+- id: 31403 | level: N1 | [耐える / たえる , 過酷な現実の前では耐えるのみ。]
+  - meaning_ko: 견디다
+  - example_ko: 가혹한 현실 앞에서는 견딜 만.
+- id: 31413 | level: N1 | [堪える / たえる , 彼は十分その職に堪える。]
+  - meaning_ko: 견디다
+  - example_ko: 그는 충분히 그 직업에 참는다.
+- id: 31419 | level: N1 | [絶える / たえる , 鯨が今世紀の終わりに死に絶える可能性は五分五分である。]
+  - meaning_ko: 죽다
+  - example_ko: 고래가 금세기 말에 죽을 가능성은 5분5분이다.
+- id: 31423 | level: N1 | [断える / たえる , ]
+  - meaning_ko: 멈추다
+- id: 31428 | level: N1 | [打開 / だかい , 打開策を見つけるのが先決だ。]
+  - meaning_ko: 해결책
+  - example_ko: 타개책을 찾는 것이 선결이다.
+- id: 31434 | level: N1 | [焚火 / たきび , 海辺の小屋から、かすかに焚火の煙が上がっていた。]
+  - meaning_ko: (열린) 불
+  - example_ko: 해변 오두막에서 희미하게 모닥불 연기가 올랐다.
+- id: 31437 | level: N1 | [妥協 / だきょう , 彼と妥協しなければならなかった。]
+  - meaning_ko: 타협
+  - example_ko: 그와 타협해야 했다.
+- id: 31445 | level: N1 | [たくましい / たくましい , 彼はたくましい。]
+  - meaning_ko: 억센
+  - example_ko: 그는 힘들다.
+- id: 31450 | level: N1 | [巧み / たくみ , 彼は、話術が巧みだ。]
+  - meaning_ko: 기능
+  - example_ko: 그는 화술이 능숙하다.
+- id: 31454 | level: N1 | [丈 / たけ , このパンって賞味期限大丈夫か？]
+  - meaning_ko: 길이
+  - example_ko: 이 빵은 유통 기한 괜찮습니까?
+- id: 31459 | level: N1 | [打撃 / だげき , 彼女の死は彼には大打撃だった。]
+  - meaning_ko: 불다
+  - example_ko: 그녀의 죽음은 그에게 큰 타격이었다.
+- id: 31463 | level: N1 | [妥結 / だけつ , 新条約が今後２〜３週間以内に妥結する可能性がある。]
+  - meaning_ko: 합의
+  - example_ko: 신조약이 향후 2~3주 이내에 타결될 가능성이 있다.
+- id: 31471 | level: N1 | [駄作 / ださく , 『トムとメアリー』は本当に救いようのない駄作だった。]
+  - meaning_ko: 가난한 일
+  - example_ko: '톰과 메리'는 정말 구원할 수 없는 낭작이었다.
+- id: 31475 | level: N1 | [足し算 / たしざん , 彼は、足し算が速い。]
+  - meaning_ko: 덧셈
+  - example_ko: 그는 더하기가 빠릅니다.
+- id: 31480 | level: N1 | [多数決 / たすうけつ , 多数決原理が民主主義の根本原則だ。]
+  - meaning_ko: 다수결의 법칙
+  - example_ko: 다수결 원리가 민주주의의 근본 원칙이다.
+- id: 31485 | level: N1 | [助け / たすけ , 君の助けが必要なんだ。]
+  - meaning_ko: 보조
+  - example_ko: 너의 도움이 필요해.
+- id: 31490 | level: N1 | [携わる / たずさわる , ]
+  - meaning_ko: 참여하다
+- id: 31496 | level: N1 | [漂う / ただよう , 多くの人が目的なく人生を漂う。]
+  - meaning_ko: 표류하다
+  - example_ko: 많은 사람들이 목적 없이 삶을 감돌게 된다.
+- id: 31501 | level: N1 | [立ち去る / たちさる , 彼らは立ち去る以外どうしようもなかった。]
+  - meaning_ko: 떠나다
+  - example_ko: 그들은 떠나는 것 외에는 어쩔 수 없었다.
+- id: 31505 | level: N1 | [立ち寄る / たちよる , 来週彼女のところに立ち寄るつもりだ。]
+  - meaning_ko: 들르다
+  - example_ko: 다음주 그녀에게 들러갈 생각이다.
+- id: 31507 | level: N1 | [抱っこ / だっこ , 怖いから、抱っこ。]
+  - meaning_ko: (아이의) 포옹
+  - example_ko: 무서워서 안아.
+- id: 31511 | level: N1 | [達者 / たっしゃ , 存外、口は達者なようね。]
+  - meaning_ko: 잘 만들어진
+  - example_ko: 존외, 입은 달자인 것 같네.
+- id: 31516 | level: N1 | [脱出 / だっしゅつ , 総員、脱出せよ！]
+  - meaning_ko: 탈출하다
+  - example_ko: 총원, 탈출하라!
+- id: 31526 | level: N1 | [脱する / だっする , 人間となっても、我々は動物性を脱するのではない。]
+  - meaning_ko: 탈출하다
+  - example_ko: 인간이 되더라도 우리는 동물성을 벗어나지 않습니다.
+- id: 31531 | level: N1 | [達成 / たっせい , 彼女は目標を達成した。]
+  - meaning_ko: 성취
+  - example_ko: 그녀는 목표를 달성했다.
+- id: 31535 | level: N1 | [脱退 / だったい , 君は直ちにクラブを脱退したほうがよい。]
+  - meaning_ko: 탈퇴
+  - example_ko: 너는 즉시 클럽을 탈퇴하는 것이 좋다.
+- id: 31542 | level: N1 | [だったら / だったら , 暇だったら、手伝ってください。]
+  - meaning_ko: 그렇다면
+  - example_ko: 여가 시간이라면 도와주세요.
+- id: 31546 | level: N1 | [立て替える / たてかえる , ]
+  - meaning_ko: 미리 지불하다
+- id: 31552 | level: N1 | [建前 / たてまえ , アメリカも本音と建前を使い分ける国だ。]
+  - meaning_ko: 위치
+  - example_ko: 미국도 본심과 건전을 구분하는 나라다.
+- id: 31557 | level: N1 | [奉る / たてまつる , ]
+  - meaning_ko: 제안하다
+- id: 31561 | level: N1 | [だと / だと , 私のことを凡人だと思うのはやめて！]
+  - meaning_ko: 그렇다면
+  - example_ko: 나를 범인이라고 생각하는 것은 그만!
+- id: 31566 | level: N1 | [他動詞 / たどうし , それは、他動詞です。]
+  - meaning_ko: 타동사(직접목적어)
+  - example_ko: 그것은 다른 동사입니다.
+- id: 31568 | level: N1 | [辿り着く / たどりつく , 険しいその道を行く以外に、国境へ辿り着く方法はない。]
+  - meaning_ko: 도달하다
+  - example_ko: 험한 그 길을 가는 것 외에, 국경에 도착하는 방법은 없다.
+- id: 31576 | level: N1 | [辿る / たどる , その電話は南デトロイトからであると辿ることができた。]
+  - meaning_ko: 따라가다(길
+  - example_ko: 그것의 전화는 남쪽 디트로이트에서 이기 위하여 추적될 수 있었다.
+- id: 31581 | level: N1 | [束ねる / たばねる , 髪を後ろで束ねる。]
+  - meaning_ko: 묶음으로 묶다
+  - example_ko: 머리를 뒤로 묶는다.
+- id: 31585 | level: N1 | [だぶだぶ / だぶだぶ , この上着は私にはだぶだぶだ。]
+  - meaning_ko: 헐렁한
+  - example_ko: 이 겉옷은 나에게 엉망이다.
+- id: 31589 | level: N1 | [他方 / たほう , 片方の本は薄く、他方は厚い。]
+  - meaning_ko: 다른 쪽
+  - example_ko: 한쪽 책은 얇고 다른 쪽은 두껍다.
+- id: 31596 | level: N1 | [多忙 / たぼう , 多忙な生活を送る。]
+  - meaning_ko: 바쁘다
+  - example_ko: 바쁜 생활을 보낸다.
+- id: 31598 | level: N1 | [給う / たまう , 神は我々に愛する力を与え給うた。]
+  - meaning_ko: 받다
+  - example_ko: 하나님은 우리에게 사랑하는 힘을 주셨다.
+- id: 31603 | level: N1 | [魂 / たましい , 彼の魂は天国にいた。]
+  - meaning_ko: 영혼
+  - example_ko: 그의 영혼은 천국에 있었다.
+- id: 31608 | level: N1 | [溜まり / たまり , 雨のあと、道路に水溜まりができた。]
+  - meaning_ko: 수집한 물건
+  - example_ko: 비 후, 도로에 물이 쌓여 있었다.
+- id: 31611 | level: N1 | [賜る / たまわる , ]
+  - meaning_ko: 부여하다
+- id: 31617 | level: N1 | [保つ / たもつ , 名声を保つことは難しい。]
+  - meaning_ko: 유지하다
+  - example_ko: 명성을 지키는 것은 어렵다.
+- id: 31624 | level: N1 | [たやすい / たやすい , 彼に面会するのはたやすい。]
+  - meaning_ko: 쉬운
+  - example_ko: 그를 만나기 쉽습니다.
+- id: 31629 | level: N1 | [多様 / たよう , 話題は多様多種だった。]
+  - meaning_ko: 다양성
+  - example_ko: 화제는 다양하고 다종이었다.
+- id: 31634 | level: N1 | [だるい / だるい , 足がだるいです。]
+  - meaning_ko: 부진한
+  - example_ko: 다리가 까다 롭습니다.
+- id: 31638 | level: N1 | [弛み / たるみ , 加齢によって体の皮膚が弛みはじめます。]
+  - meaning_ko: 느슨하게
+  - example_ko: 연령에 따라 몸의 피부가 느슨해지기 시작합니다.
+- id: 31646 | level: N1 | [弛む / たるむ , ]
+  - meaning_ko: 느슨하게하다
+- id: 31651 | level: N1 | [垂れる / たれる , 実るほど頭を垂れる稲穂かな。]
+  - meaning_ko: 매달다
+  - example_ko: 과연 머리를 늘어뜨리는 이나호일까.
+- id: 31656 | level: N1 | [タレント / タレント , 彼の妹は人気のテレビタレントだよ。]
+  - meaning_ko: 재능
+  - example_ko: 그의 여동생은 인기 TV 탤런트입니다.
+- id: 31661 | level: N1 | [タワー / タワー , 遠くに東京タワーが見えた。]
+  - meaning_ko: 탑
+  - example_ko: 멀리 도쿄 타워가 보였다.
+- id: 31665 | level: N1 | [単一 / たんいつ , 単一の文章が複数の情報を含むことは可能だ。]
+  - meaning_ko: 하나의
+  - example_ko: 단일 문장이 복수의 정보를 포함하는 것은 가능하다.
+- id: 31671 | level: N1 | [短歌 / たんか , 詩歌とは、詩や短歌のことです。]
+  - meaning_ko: 31음절의 일본시
+  - example_ko: 시가는 시나 단가를 말합니다.
+- id: 31676 | level: N1 | [担架 / たんか , ]
+  - meaning_ko: 들것
+- id: 31681 | level: N1 | [短気 / たんき , 彼は短気だ。]
+  - meaning_ko: 성격이 급하다
+  - example_ko: 그는 단기이다.
+- id: 31683 | level: N1 | [団結 / だんけつ , 団結は力なり。]
+  - meaning_ko: 단일성
+  - example_ko: 단결은 힘이 된다.
+- id: 31688 | level: N1 | [探検 / たんけん , 彼らは北極探検に出た。]
+  - meaning_ko: 탐구
+  - example_ko: 그들은 북극 탐험에 나섰다.
+- id: 31696 | level: N1 | [断言 / だんげん , 彼らは無実だと断言した。]
+  - meaning_ko: 역설
+  - example_ko: 그들은 무고하다고 단언했다.
+- id: 31698 | level: N1 | [短縮 / たんしゅく , 日曜日は日曜と短縮する。]
+  - meaning_ko: 단축
+  - example_ko: 일요일은 일요일로 단축한다.
+- id: 31701 | level: N1 | [断然 / だんぜん , 生活費が断然上がった。]
+  - meaning_ko: 단단히
+  - example_ko: 생활비가 단연 올랐다.
+- id: 31705 | level: N1 | [炭素 / たんそ , 二酸化炭素はそれ自体は毒ではない。]
+  - meaning_ko: 탄소(C)
+  - example_ko: 이산화탄소는 그 자체는 독이 아니다.
+- id: 31709 | level: N1 | [短大 / たんだい , ]
+  - meaning_ko: 단기 대학
+- id: 31713 | level: N1 | [単調 / たんちょう , 彼女は生活が単調だという。]
+  - meaning_ko: 단음
+  - example_ko: 그녀는 생활이 단조롭다고 한다.
+- id: 31719 | level: N1 | [単独 / たんどく , 不幸は単独でやってこない。]
+  - meaning_ko: 밑창
+  - example_ko: 불행은 혼자 오지 않는다.
+- id: 31723 | level: N1 | [旦那 / だんな , 彼女の旦那さんは私の友達です。]
+  - meaning_ko: 주인(집의)
+  - example_ko: 그녀의 남편은 내 친구입니다.
+- id: 31732 | level: N1 | [短波 / たんぱ , ]
+  - meaning_ko: 단파
+- id: 31735 | level: N1 | [蛋白質 / たんぱくしつ , ]
+  - meaning_ko: 단백질
+- id: 31739 | level: N1 | [ダンプ / ダンプ , ダンプカーと正面衝突したタクシーはぐしゃぐしゃになった。]
+  - meaning_ko: 덤프트럭
+  - example_ko: 덤프카와 정면 충돌한 택시는 엉망이 됐다.
+- id: 31743 | level: N1 | [断面 / だんめん , ]
+  - meaning_ko: 단면
+- id: 31746 | level: N1 | [弾力 / だんりょく , この材質は弾力性に欠ける。]
+  - meaning_ko: 탄력
+  - example_ko: 이 재질은 탄력성이 부족하다.
+- id: 31750 | level: N1 | [治安 / ちあん , それは治安の問題です。]
+  - meaning_ko: 공공질서
+  - example_ko: 그것은 보안 문제입니다.
+- id: 31755 | level: N1 | [チームワーク / チームワーク , それぞれの筋肉が完璧なチームワークを示す。]
+  - meaning_ko: 팀워크
+  - example_ko: 각 근육은 완벽한 팀워크를 보여줍니다.
+- id: 31758 | level: N1 | [チェンジ / チェンジ , イメージチェンジをしたい。]
+  - meaning_ko: 변화
+  - example_ko: 이미지 체인지를 하고 싶다.
+- id: 31763 | level: N1 | [違える / ちがえる , 彼は英語を書くと必ず間違える。]
+  - meaning_ko: 변화하다
+  - example_ko: 그는 영어를 쓰면 반드시 실수한다.
+- id: 31770 | level: N1 | [畜産 / ちくさん , ]
+  - meaning_ko: 축산업
+- id: 31773 | level: N1 | [畜生 / ちくしょう , こん畜生め！]
+  - meaning_ko: 짐승
+  - example_ko: 곤축생!
+- id: 31779 | level: N1 | [蓄積 / ちくせき , 彼は富を蓄積しようとした。]
+  - meaning_ko: 축적
+  - example_ko: 그는 부를 축적하려고 했다.
+- id: 31786 | level: N1 | [地形 / ちけい , ]
+  - meaning_ko: 지형
+- id: 31792 | level: N1 | [知性 / ちせい , 彼には知性がある。]
+  - meaning_ko: 지능
+  - example_ko: 그에게는 지성이 있다.
+- id: 31798 | level: N1 | [乳 / ちち , あたし、低脂肪乳ね。]
+  - meaning_ko: 우유
+  - example_ko: 나, 저지방 우유.
+- id: 31801 | level: N1 | [縮まる / ちぢまる , ]
+  - meaning_ko: 단축되다
+- id: 31804 | level: N1 | [秩序 / ちつじょ , 警察は秩序を保ちます。]
+  - meaning_ko: 주문하다
+  - example_ko: 경찰은 질서를 유지합니다.
+- id: 31809 | level: N1 | [窒息 / ちっそく , 彼は煙に巻かれて窒息した。]
+  - meaning_ko: 질식
+  - example_ko: 그는 연기에 감겨 질식했다.
+- id: 31813 | level: N1 | [知的 / ちてき , 彼は知的な人です。]
+  - meaning_ko: 지적인
+  - example_ko: 그는 지적인 사람입니다.
+- id: 31819 | level: N1 | [着手 / ちゃくしゅ , 政府は税制改革に着手した。]
+  - meaning_ko: 승선
+  - example_ko: 정부는 세제 개혁에 착수했다.
+- id: 31824 | level: N1 | [着色 / ちゃくしょく , ]
+  - meaning_ko: 착색
+- id: 31829 | level: N1 | [着席 / ちゃくせき , どうぞご着席ください、みなさん。]
+  - meaning_ko: 앉다
+  - example_ko: 제발 앉으세요, 여러분.
+- id: 31834 | level: N1 | [着目 / ちゃくもく , ]
+  - meaning_ko: 주목
+- id: 31840 | level: N1 | [着陸 / ちゃくりく , 飛行機は無事着陸した。]
+  - meaning_ko: 착륙
+  - example_ko: 비행기는 무사히 착륙했다.
+- id: 31845 | level: N1 | [着工 / ちゃっこう , そのビルの建設は来年着工されます。]
+  - meaning_ko: (건축)작업의 시작
+  - example_ko: 그 건물의 건설은 내년에 착공됩니다.
+- id: 31850 | level: N1 | [茶の間 / ちゃのま , 山羽さんが茶の間の大きい盆に胡桃を盛った。]
+  - meaning_ko: 거실(일본식)
+  - example_ko: 야마바 씨가 차 사이의 큰 봉에 후 복숭아를 담았다.
+- id: 31857 | level: N1 | [茶の湯 / ちゃのゆ , ]
+  - meaning_ko: 다도
+- id: 31861 | level: N1 | [ちやほや / ちやほや , ]
+  - meaning_ko: 하고 싶은 대로 하게 하다
+- id: 31867 | level: N1 | [チャンネル / チャンネル , チャンネル変えてもいい？]
+  - meaning_ko: 채널
+  - example_ko: 채널을 바꿀 수 있습니까?
+- id: 31871 | level: N1 | [宙返り / ちゅうがえり , 彼は宙返りをした。]
+  - meaning_ko: 재주 넘기
+  - example_ko: 그는 공중을 돌렸다.
+- id: 31876 | level: N1 | [中継 / ちゅうけい , これは生中継です。]
+  - meaning_ko: 계전기
+  - example_ko: 이것은 생중계입니다.
+- id: 31881 | level: N1 | [忠告 / ちゅうこく , 父は私に怠けるなと忠告した。]
+  - meaning_ko: 조언
+  - example_ko: 아버지는 나에게 게으르지 말라고 충고했다.
+- id: 31887 | level: N1 | [中傷 / ちゅうしょう , デメトリウスは私を中傷しているよ！]
+  - meaning_ko: 중상
+  - example_ko: 데메트리우스는 나를 비방한다!
+- id: 31891 | level: N1 | [中枢 / ちゅうすう , 東京は今や世界経済の中枢だ。]
+  - meaning_ko: 센터
+  - example_ko: 도쿄는 이제 세계경제의 중추다.
+- id: 31895 | level: N1 | [抽選 / ちゅうせん , だんだん抽選のハードルが高くなっていった。]
+  - meaning_ko: 운
+  - example_ko: 점점 추첨의 장애물이 높아졌다.
+- id: 31900 | level: N1 | [中断 / ちゅうだん , 病気のため休暇が中断した。]
+  - meaning_ko: 중단
+  - example_ko: 질병으로 인해 휴가가 중단되었습니다.
+- id: 31903 | level: N1 | [中毒 / ちゅうどく , 彼女はアルコール中毒だ。]
+  - meaning_ko: 중독
+  - example_ko: 그녀는 알코올 중독이다.
+- id: 31908 | level: N1 | [中腹 / ちゅうふく , 年中腹減ってんだ、オレ。]
+  - meaning_ko: 산 쪽
+  - example_ko: 연중 배 줄어들었어, 나.
+- id: 31912 | level: N1 | [中立 / ちゅうりつ , 彼は話し合いでは中立の立場をとった。]
+  - meaning_ko: 중립
+  - example_ko: 그는 토론에서 중립의 입장을 취했다.
+- id: 31927 | level: N1 | [中和 / ちゅうわ , 酸性土を灰で中和する。]
+  - meaning_ko: 무력화하다
+  - example_ko: 산성 토양을 재로 중화한다.
+- id: 31935 | level: N1 | [～著 / ～ちょ , ]
+  - meaning_ko: ~에 의해 작성됨
+- id: 31940 | level: N1 | [腸 / ちょう , 浣腸をしました。]
+  - meaning_ko: 창자
+  - example_ko: 관장을 했습니다.
+- id: 31945 | level: N1 | [蝶 / ちょう , あ！蝶々がいる！]
+  - meaning_ko: 나비
+  - example_ko: 에이! 나비가 있어요!
+- id: 31949 | level: N1 | [超 / ちょう , 天文学者が局部超銀河団の存在を推定しました。]
+  - meaning_ko: 감독자-
+  - example_ko: 천문학자가 국부 초은하단의 존재를 추정했다.
+- id: 31953 | level: N1 | [調印 / ちょういん , その条約は調印された。]
+  - meaning_ko: 서명
+  - example_ko: 그 협약은 서명되었다.
+- id: 31959 | level: N1 | [聴覚 / ちょうかく , その子の聴覚は鋭い。]
+  - meaning_ko: 청각
+  - example_ko: 그 아이의 청각은 날카롭다.
+- id: 31964 | level: N1 | [長官 / ちょうかん , 長官は彼に全権を委任した。]
+  - meaning_ko: 셰프
+  - example_ko: 장관은 그에게 전권을 위임했다.
+- id: 31971 | level: N1 | [聴講 / ちょうこう , 聴講切符を前もって入手しておかなければならない。]
+  - meaning_ko: 강의 출석
+  - example_ko: 청강표를 미리 입수해 두어야 한다.
+- id: 31975 | level: N1 | [徴収 / ちょうしゅう , 国は国民から税を徴収する。]
+  - meaning_ko: 수집
+  - example_ko: 국가는 국민으로부터 세금을 징수한다.
+- id: 31980 | level: N1 | [聴診器 / ちょうしんき , 医者は患者の胸に聴診器を当てた。]
+  - meaning_ko: 청진기
+  - example_ko: 의사는 환자의 가슴에 청진기를 맞았다.
+- id: 31984 | level: N1 | [調停 / ちょうてい , 彼は両当事者の間を調停した。]
+  - meaning_ko: 중재
+  - example_ko: 그는 양 당사자 사이를 중재했다.
+- id: 31988 | level: N1 | [重複 / ちょうふく , 投稿内容が重複しているようです。]
+  - meaning_ko: 복사
+  - example_ko: 게시물 내용이 중복되는 것 같습니다.
+- id: 31996 | level: N1 | [長編 / ちょうへん , トムは長編を読んでいる。]
+  - meaning_ko: 길다(예:
+  - example_ko: 톰은 장편을 읽고 있다.
+- id: 31998 | level: N1 | [重宝 / ちょうほう , それ、本当に重宝するよ。]
+  - meaning_ko: 편리한
+  - example_ko: 그게 정말 편리해.
+- id: 31999 | level: N1 | [調理 / ちょうり , 生卵はだめ。調理しないと。]
+  - meaning_ko: 요리
+  - example_ko: 생란은 안된다. 요리하지 않으면.
+- id: 32004 | level: N1 | [調和 / ちょうわ , 日本人は自然と調和して暮らす。]
+  - meaning_ko: 조화
+  - example_ko: 일본인은 자연과 조화롭게 사는다.
+- id: 32008 | level: N1 | [ちょくちょく / ちょくちょく , トムはちょくちょく授業をサボる。]
+  - meaning_ko: 자주
+  - example_ko: 톰은 잠깐 수업을 사보한다.
+- id: 32013 | level: N1 | [直面 / ちょくめん , 彼女はかってその問題に直面した。]
+  - meaning_ko: 직면
+  - example_ko: 그녀는 그 문제에 직면했다.
+- id: 32018 | level: N1 | [著書 / ちょしょ , 彼は私の著書に言及した。]
+  - meaning_ko: 저작물
+  - example_ko: 그는 나의 저서를 언급했다.
+- id: 32024 | level: N1 | [貯蓄 / ちょちく , 将来に備えて貯蓄しておきなさい。]
+  - meaning_ko: 저금
+  - example_ko: 미래를 대비하여 저축하십시오.
+- id: 32029 | level: N1 | [直感 / ちょっかん , 警官は彼が犯人だと直感した。]
+  - meaning_ko: 직관
+  - example_ko: 경찰은 그가 범인이라고 직감했다.
+- id: 32034 | level: N1 | [著名 / ちょめい , 彼女は著名な詩人です。]
+  - meaning_ko: 잘 알려진
+  - example_ko: 그녀는 유명한 시인입니다.
+- id: 32043 | level: N1 | [ちらっと / ちらっと , 彼女は母親をちらっと見た。]
+  - meaning_ko: 한눈에
+  - example_ko: 그녀는 어머니를 살짝 보았다.
+- id: 32048 | level: N1 | [塵 / ちり , 塵も積もれば山となる。]
+  - meaning_ko: 먼지
+  - example_ko: 먼지도 쌓이면 산이 된다.
+- id: 32056 | level: N1 | [塵取り / ちりとり , ]
+  - meaning_ko: 쓰레받기
+- id: 32060 | level: N1 | [賃金 / ちんぎん , 彼らは低賃金に不満を言った。]
+  - meaning_ko: 임금
+  - example_ko: 그들은 저임금에 불만을 말했다.
+- id: 32067 | level: N1 | [沈殿 / ちんでん , ]
+  - meaning_ko: 강수량
+- id: 32072 | level: N1 | [沈没 / ちんぼつ , 彼らは沈没する船を見捨てた。]
+  - meaning_ko: 가라앉는
+  - example_ko: 그들은 침몰하는 배를 버렸다.
+- id: 32077 | level: N1 | [沈黙 / ちんもく , 沈黙は同意を表す。]
+  - meaning_ko: 고요
+  - example_ko: 침묵은 동의를 나타낸다.
+- id: 32082 | level: N1 | [陳列 / ちんれつ , 陳列品に手を出すな。]
+  - meaning_ko: 전시회
+  - example_ko: 진열품에 손을 대지 마라.
+- id: 32087 | level: N1 | [追及 / ついきゅう , 誰も追及しないから改善しない。]
+  - meaning_ko: 조사
+  - example_ko: 아무도 추궁하지 않기 때문에 개선하지 않는다.
+- id: 32092 | level: N1 | [追跡 / ついせき , 泥棒の追跡が始まった。]
+  - meaning_ko: 추구
+  - example_ko: 도둑의 추적이 시작되었습니다.
+- id: 32097 | level: N1 | [追放 / ついほう , 彼は母国を追放された。]
+  - meaning_ko: 망명
+  - example_ko: 그는 모국을 추방했다.
+- id: 32101 | level: N1 | [費やす / ついやす , 彼女は本に収入の大部分を費やす。]
+  - meaning_ko: 지출하다
+  - example_ko: 그녀는 책에 소득의 대부분을 보낸다.
+- id: 32105 | level: N1 | [墜落 / ついらく , 飛行機は墜落寸前に右に旋回した。]
+  - meaning_ko: 떨어지는
+  - example_ko: 비행기는 추락 직전에 오른쪽으로 선회했다.
+- id: 32109 | level: N1 | [痛感 / つうかん , 私はその事実を痛感した。]
+  - meaning_ko: 예리한 느낌
+  - example_ko: 나는 그 사실을 통감했다.
+- id: 32113 | level: N1 | [通常 / つうじょう , 彼は通常の料金の２倍払った。]
+  - meaning_ko: 흔한
+  - example_ko: 그는 일반 요금의 두 배를 지불했다.
+- id: 32118 | level: N1 | [痛切 / つうせつ , 算数教育が非常に大事だと痛切に感じていた。]
+  - meaning_ko: 날카로운
+  - example_ko: 산수교육이 매우 중요하다고 통절하게 느끼고 있었다.
+- id: 32123 | level: N1 | [杖 / つえ , 転ばぬ先の杖。]
+  - meaning_ko: 지팡이
+  - example_ko: 구르지 않는 끝의 지팡이.
+- id: 32128 | level: N1 | [使い道 / つかいみち , 鉄は使い道の多い金ぞくだ。]
+  - meaning_ko: 사용
+  - example_ko: 철은 사용도가 많은 돈다쿠다.
+- id: 32133 | level: N1 | [仕える / つかえる , 彼には彼に仕える召し使いが３人いた。]
+  - meaning_ko: 봉사하다
+  - example_ko: 그에게는 그를 섬기는 부르심이 세 명 있었다.
+- id: 32138 | level: N1 | [司る / つかさどる , 市長は市政を司る。]
+  - meaning_ko: 통치하다
+  - example_ko: 시장은 시정을 맡는다.
+- id: 32143 | level: N1 | [つかの間 / つかのま , この文にはいくつかの間違いがあります。]
+  - meaning_ko: 순간
+  - example_ko: 이 문장에는 몇 가지 실수가 있습니다.
+- id: 32147 | level: N1 | [月並 / つきなみ , 彼らの判断は月並みだ。]
+  - meaning_ko: 전통적인
+  - example_ko: 그들의 판단은 월급이다.
+- id: 32152 | level: N1 | [継目 / つぎめ , ]
+  - meaning_ko: 관절
+- id: 32161 | level: N1 | [尽きる / つきる , 早晩彼の運は尽きるだろう。]
+  - meaning_ko: 소모된다
+  - example_ko: 이른 밤 그의 운은 다할 것입니다.
+- id: 32167 | level: N1 | [尽くす / つくす , 彼は最善を尽くすだろう。]
+  - meaning_ko: 소진하다
+  - example_ko: 그는 최선을 다할 것입니다.
+- id: 32171 | level: N1 | [つくづく / つくづく , 私はつくづくイヤになった。]
+  - meaning_ko: 완전히
+  - example_ko: 나는 붙어 있는 귀가 되었다.
+- id: 32175 | level: N1 | [作り / つくり , 作り事はすべて、真実だ。]
+  - meaning_ko: 조립
+  - example_ko: 제작은 모두 진실이다.
+- id: 32180 | level: N1 | [造り / つくり , 男は家を造り女は家庭を作る。]
+  - meaning_ko: 조립
+  - example_ko: 남자는 집을 만들고 여자는 가정을 만든다.
+- id: 32186 | level: N1 | [繕う / つくろう , 取り繕うように、笑ってみせる。]
+  - meaning_ko: 고치다
+  - example_ko: 꺼내듯이, 웃어 보인다.
+- id: 32192 | level: N1 | [付け加える / つけくわえる , ]
+  - meaning_ko: 한 가지를 다른 것에 추가하다
+- id: 32197 | level: N1 | [告げる / つげる , 熱狂の宴が始まりを告げる。]
+  - meaning_ko: 알리다
+  - example_ko: 열광의 연회가 시작을 알린다.
+- id: 32198 | level: N1 | [つじつま (はなしの～) / つじつま (はなしの～) , ]
+  - meaning_ko: 통일
+- id: 32202 | level: N1 | [筒 / つつ , 封筒をください。]
+  - meaning_ko: 파이프
+  - example_ko: 봉투를주세요.
+- id: 32207 | level: N1 | [突く / つつく , もうすぐ、トムの貯金が底を突く。]
+  - meaning_ko: 밀어붙이다
+  - example_ko: 곧 톰의 저금이 바닥을 찌른다.
+- id: 32216 | level: N1 | [突っ突く / つっつく , ]
+  - meaning_ko: 누군가에게 메시지를 보내려고
+- id: 32220 | level: N1 | [謹む / つつしむ , ]
+  - meaning_ko: 조심하다
+- id: 32226 | level: N1 | [突っ張る / つっぱる , ]
+  - meaning_ko: 지원하다
+- id: 32231 | level: N1 | [務まる / つとまる , ]
+  - meaning_ko: 평등하다
+- id: 32237 | level: N1 | [勤め先 / つとめさき , 彼の勤め先はどこですか。]
+  - meaning_ko: 일하는 장소
+  - example_ko: 그의 근무처는 어디입니까?
+- id: 32242 | level: N1 | [努めて / つとめて , 彼は民衆の支持を得ようと努めていた。]
+  - meaning_ko: 노력해라!
+  - example_ko: 그는 민중의 지지를 얻으려고 노력했다.
+- id: 32246 | level: N1 | [津波 / つなみ , 津波警報は解除された。]
+  - meaning_ko: 쓰나미
+  - example_ko: 쓰나미 경보는 ​​해제되었다.
+- id: 32251 | level: N1 | [つねる / つねる , ]
+  - meaning_ko: 꼬집다
+- id: 32256 | level: N1 | [角 / つの , アリさん、今日もご苦労さんだよ。はい、角砂糖あげるよ。]
+  - meaning_ko: 뿔
+  - example_ko: 개미씨, 오늘도 고생씨야. 네, 각설탕을 줄게요.
+- id: 32261 | level: N1 | [募る / つのる , 寒さは募る一方です。]
+  - meaning_ko: 초대하다
+  - example_ko: 추위는 모으는 한편입니다.
+- id: 32266 | level: N1 | [唾 / つば , 吐いた唾は飲めぬ。]
+  - meaning_ko: 타액
+  - example_ko: 뱉은 침은 마실 수 없다.
+- id: 32271 | level: N1 | [呟く / つぶやく , 由美って、時々変なこと呟くのよ。]
+  - meaning_ko: 중얼거리다
+  - example_ko: 유미는, 가끔 이상한 것 중얼거린다.
+- id: 32275 | level: N1 | [つぶら / つぶら , つぶらな瞳だこと。]
+  - meaning_ko: 둥근
+  - example_ko: 쓸데없는 눈동자인 것.
+- id: 32282 | level: N1 | [つぶる (めを～) / つぶる (めを～) , ]
+  - meaning_ko: 눈을 감다
+- id: 32285 | level: N1 | [壷 / つぼ , 壷には砂糖が残っていない。]
+  - meaning_ko: 항아리
+  - example_ko: 글꼴에는 설탕이 남아 있지 않다.
+- id: 32290 | level: N1 | [蕾 / つぼみ , 蕾が開いた。]
+  - meaning_ko: 싹
+  - example_ko: 싹이 열렸다.
+- id: 32297 | level: N1 | [連なる / つらなる , ]
+  - meaning_ko: 연장하다
+- id: 32302 | level: N1 | [貫く / つらぬく , 光は闇を貫く。]
+  - meaning_ko: 통과하다
+  - example_ko: 빛은 어둠을 관통한다.
+- id: 32307 | level: N1 | [連ねる / つらねる , ]
+  - meaning_ko: 링크하다
+- id: 32312 | level: N1 | [釣り鐘 / つりがね , ]
+  - meaning_ko: 사원의 종(타치기용)
+- id: 32315 | level: N1 | [吊り革 / つりかわ , ]
+  - meaning_ko: 견장
+- id: 32320 | level: N1 | [手当 / てあて , 彼女は彼の傷を手当した。]
+  - meaning_ko: 용돈
+  - example_ko: 그녀는 그의 상처를 받았다.
+- id: 32325 | level: N1 | [定義 / ていぎ , 定義するのが難しい語もある。]
+  - meaning_ko: 정의
+  - example_ko: 정의하기 어려운 단어도 있다.
+- id: 32329 | level: N1 | [提供 / ていきょう , 安価な簡易住宅を提供します。]
+  - meaning_ko: 권하다
+  - example_ko: 저렴한 간이 주택을 제공합니다.
+- id: 32334 | level: N1 | [提携 / ていけい , 提携しましょう。]
+  - meaning_ko: 협력
+  - example_ko: 제휴합시다.
+- id: 32339 | level: N1 | [体裁 / ていさい , 彼女はなんとか体裁を繕った。]
+  - meaning_ko: 예절 바름
+  - example_ko: 그녀는 어떻게든 체재를 찔렀다.
+- id: 32344 | level: N1 | [提示 / ていじ , 支払条件もご提示下さい。]
+  - meaning_ko: 프레젠테이션
+  - example_ko: 지불 조건도 제시해 주십시오.
+- id: 32349 | level: N1 | [ティシュペーパー / ティシュペーパー , ]
+  - meaning_ko: 조직
+- id: 32355 | level: N1 | [定食 / ていしょく , 日替わり定食にしませんか。]
+  - meaning_ko: 정가 점심
+  - example_ko: 매일 정식으로 하지 않겠습니까?
+- id: 32359 | level: N1 | [訂正 / ていせい , 訂正しろ、今すぐ。]
+  - meaning_ko: 보정
+  - example_ko: 정정하자, 지금.
+- id: 32365 | level: N1 | [停滞 / ていたい , 雇用が停滞し続けた。]
+  - meaning_ko: 침체
+  - example_ko: 고용이 계속 정체되었다.
+- id: 32370 | level: N1 | [邸宅 / ていたく , 彼らは大邸宅に住んでいる。]
+  - meaning_ko: 맨션
+  - example_ko: 그들은 저택에 살고 있습니다.
+- id: 32375 | level: N1 | [定年 / ていねん , 私は定年まで３年残っている。]
+  - meaning_ko: 퇴직 연령
+  - example_ko: 나는 정년까지 3년 남아 있다.
+- id: 32380 | level: N1 | [堤防 / ていぼう , 水は堤防を越えた。]
+  - meaning_ko: 은행
+  - example_ko: 물은 제방을 넘었다.
+- id: 32387 | level: N1 | [手遅れ / ておくれ , 手遅れだ。]
+  - meaning_ko: (너무) 존재
+  - example_ko: 너무 늦다.
+- id: 32390 | level: N1 | [でかい / でかい , でかい顔してるじゃないか。]
+  - meaning_ko: 거대한
+  - example_ko: 큰 얼굴을 하고 있지 않나.
+- id: 32397 | level: N1 | [手掛かり / てがかり , ここの下りも手掛かりがないので危険だ。]
+  - meaning_ko: 힌트
+  - example_ko: 여기 내리기도 단서가 없기 때문에 위험하다.
+- id: 32399 | level: N1 | [手掛ける / てがける , ]
+  - meaning_ko: 처리하다
+- id: 32402 | level: N1 | [手数 / てかず , 手数料はかかりますか。]
+  - meaning_ko: 문제
+  - example_ko: 수수료가 부과됩니까?
+- id: 32410 | level: N1 | [手軽 / てがる , カップラーメンの売りは手軽さです。]
+  - meaning_ko: 쉬운
+  - example_ko: 컵라면의 판매는 간단합니다.
+- id: 32415 | level: N1 | [適応 / てきおう , 遅かれ早かれ皆生活に適応する。]
+  - meaning_ko: 적응
+  - example_ko: 조만간 모두 생활에 적응한다.
+- id: 32420 | level: N1 | [適宜 / てきぎ , ]
+  - meaning_ko: 적당
+- id: 32425 | level: N1 | [適性 / てきせい , 最も重要なのが住環境の快適性である。]
+  - meaning_ko: 적성
+  - example_ko: 가장 중요한 것은 주거 환경의 편안함이다.
+- id: 32430 | level: N1 | [できもの / できもの , ]
+  - meaning_ko: 종기
+- id: 32435 | level: N1 | [手際 / てぎわ , 手際が良くて、あっという間に終わった。]
+  - meaning_ko: 성능
+  - example_ko: 수제가 좋고, 순식간에 끝났다.
+- id: 32442 | level: N1 | [出くわす / でくわす , 明日我々は敵軍に出くわすだろう。]
+  - meaning_ko: 우연히 만나다
+  - example_ko: 내일 우리는 적군을 만날 것이다.
+- id: 32447 | level: N1 | [手順 / てじゅん , 弁護士は行動の手順を決定した。]
+  - meaning_ko: 프로세스
+  - example_ko: 변호사는 행동 절차를 결정했다.
+- id: 32452 | level: N1 | [手錠 / てじょう , 私は彼に手錠をかけた。]
+  - meaning_ko: 수갑
+  - example_ko: 나는 그에게 수갑을 걸었다.
+- id: 32462 | level: N1 | [デコレーション / デコレーション , ]
+  - meaning_ko: 장식
+- id: 32467 | level: N1 | [手近 / てぢか , 私はいつも手近に辞書を置いている。]
+  - meaning_ko: 가까운
+  - example_ko: 난 항상 가까이에 사전을 넣어.
+- id: 32471 | level: N1 | [てっきり / てっきり , 彼女のことは遊びなんだと、てっきり。]
+  - meaning_ko: 확실히
+  - example_ko: 그녀는 놀이라고, 확실히.
+- id: 32477 | level: N1 | [鉄鋼 / てっこう , 鉄鋼は基幹産業である。]
+  - meaning_ko: 철과 강철
+  - example_ko: 철강은 기간산업이다.
+- id: 32482 | level: N1 | [デッサン / デッサン , 私たちはその少年のデッサンのすばらしさに驚嘆した。]
+  - meaning_ko: 러프 스케치 (FRE: dessin)
+  - example_ko: 우리는 그 소년의 그림의 훌륭함에 경탄했다.
+- id: 32487 | level: N1 | [徹する / てっする , 夜を徹するか否か。]
+  - meaning_ko: 헌신하다
+  - example_ko: 밤을 철저하게 할 것인가.
+- id: 32492 | level: N1 | [てっぺん / てっぺん , 彼らは、崖のてっぺんまで登った。]
+  - meaning_ko: 맨 위
+  - example_ko: 그들은 절벽의 꼭대기에 올랐다.
+- id: 32497 | level: N1 | [鉄棒 / てつぼう , 体操競技の中では、鉄棒の大車輪が好きです。]
+  - meaning_ko: 쇠막대
+  - example_ko: 체조 경기 중에는 철봉의 큰 바퀴를 좋아합니다.
+- id: 32498 | level: N1 | [出直し / でなおし , 出直しましょう。]
+  - meaning_ko: 조정
+  - example_ko: 다시 시작합시다.
+- id: 32503 | level: N1 | [掌 / てのひら , トムは直ちに事態を掌握した。]
+  - meaning_ko: 손바닥
+  - example_ko: 톰은 즉시 사태를 장악했다.
+- id: 32508 | level: N1 | [手配 / てはい , 夜の観光バスを手配してくださいますか。]
+  - meaning_ko: 준비
+  - example_ko: 야간 관광 버스를 준비하시겠습니까?
+- id: 32513 | level: N1 | [手筈 / てはず , ]
+  - meaning_ko: 준비
+- id: 32517 | level: N1 | [手引 / てびき , 彼女は園芸の手引書を読んでいた。]
+  - meaning_ko: 안내
+  - example_ko: 그녀는 원예의 수첩을 읽고 있었다.
+- id: 32522 | level: N1 | [手本 / てほん , 彼を手本にしなさい。]
+  - meaning_ko: 모델
+  - example_ko: 그를 모방하십시오.
+- id: 32528 | level: N1 | [手回し / てまわし , ]
+  - meaning_ko: 준비
+- id: 32533 | level: N1 | [手元 / てもと , 手元に気をつけて！]
+  - meaning_ko: (돈) 손에 또는 집에
+  - example_ko: 수중에 조심해!
+- id: 32536 | level: N1 | [デモンストレーション / デモンストレーション , ７地区で新製品のデモンストレーションを行い、成功しました。]
+  - meaning_ko: 데모
+  - example_ko: 7 지구에서 신제품의 데모를 실시해 성공했습니다.
+- id: 32541 | level: N1 | [照り返す / てりかえす , ]
+  - meaning_ko: 반영하다
+- id: 32546 | level: N1 | [テレックス / テレックス , テレックスでご返事ください。]
+  - meaning_ko: 텔렉스
+  - example_ko: 텔렉스로 회신 해주십시오.
+- id: 32554 | level: N1 | [手分け / てわけ , 医学生が手分けして勉強することはまれである。]
+  - meaning_ko: 노동 분업
+  - example_ko: 의학생이 나누어 공부하는 것은 드뭅니다.
+- id: 32559 | level: N1 | [天 / てん , 君は天使のような人だ！]
+  - meaning_ko: 천국
+  - example_ko: 너는 천사 같은 사람이다!
+- id: 32563 | level: N1 | [田園 / でんえん , 彼の本は田園生活の話から始まる。]
+  - meaning_ko: 국가
+  - example_ko: 그의 책은 시골 생활 이야기로 시작됩니다.
+- id: 32568 | level: N1 | [天下 / てんか , これは天下一品だ。]
+  - meaning_ko: 세계
+  - example_ko: 이것은 천하 일품이다.
+- id: 32573 | level: N1 | [転回 / てんかい , ]
+  - meaning_ko: 혁명
+- id: 32577 | level: N1 | [連休 / れんきゅう , 今週末は３連休だ。]
+  - meaning_ko: 연휴
+  - example_ko: 이번 주말은 3연휴다.
+- id: 32582 | level: N1 | [レンジ / レンジ , レンジャーが道を拓く。]
+  - meaning_ko: 범위
+  - example_ko: 레인저가 길을 개척한다.
+- id: 32585 | level: N1 | [連日 / れんじつ , 連日交通事故が起きる。]
+  - meaning_ko: 매일
+  - example_ko: 연일교통사고가 일어난다.
+- id: 32592 | level: N1 | [連帯 / れんたい , 連帯責任は無責任。]
+  - meaning_ko: 연대
+  - example_ko: 연대 책임은 무책임.
+- id: 32599 | level: N1 | [レンタカー / レンタカー , レンタカーを借りたいのですが。]
+  - meaning_ko: 렌트카
+  - example_ko: 렌트카를 빌리고 싶습니다.
+- id: 32604 | level: N1 | [連中 / れんちゅう , 彼らは皆同じような連中だ。]
+  - meaning_ko: 동료
+  - example_ko: 그들은 모두 비슷한 무리다.
+- id: 32608 | level: N1 | [レントゲン / レントゲン , 歯のレントゲンを撮りますね。]
+  - meaning_ko: X선(점등: Roentgen)
+  - example_ko: 치아의 엑스레이를 찍는군요.
+- id: 32612 | level: N1 | [連邦 / れんぽう , 連邦予算はかろうじて議会の承認を得た。]
+  - meaning_ko: 연방
+  - example_ko: 연방 예산은 간신히 의회 승인을 얻었다.
+- id: 32617 | level: N1 | [連盟 / れんめい , 国際連盟は平和に寄与しなかった。]
+  - meaning_ko: 리그
+  - example_ko: 국제연맹은 평화에 기여하지 않았다.
+- id: 32622 | level: N1 | [老衰 / ろうすい , 老衰するな！老成せよ！]
+  - meaning_ko: 노쇠
+  - example_ko: 늙지 마세요! 늙어라!
+- id: 32629 | level: N1 | [朗読 / ろうどく , 彼はその詩を一本調子で朗読した。]
+  - meaning_ko: 큰 소리로 읽기
+  - example_ko: 그는 그 시를 한 음모로 낭독했다.
+- id: 32634 | level: N1 | [浪費 / ろうひ , 浪費は欠乏のもと。]
+  - meaning_ko: 쓰레기
+  - example_ko: 낭비는 부족하에.
+- id: 32638 | level: N1 | [労力 / ろうりょく , この仕事は大変な労力を必要とする。]
+  - meaning_ko: 노동
+  - example_ko: 이 일은 힘든 노력을 필요로 한다.
+- id: 32642 | level: N1 | [ロープウエイ / ロープウエイ , ]
+  - meaning_ko: 삭도
+- id: 32647 | level: N1 | [ロープ / ロープ , 彼女はロープをしっかりと握った。]
+  - meaning_ko: 로프
+  - example_ko: 그녀는 밧줄을 단단히 붙들었다.
+- id: 32652 | level: N1 | [ろくな / ろくな , 試合はとてもおもしろくなかった。]
+  - meaning_ko: 만족스러운
+  - example_ko: 경기는 매우 흥미롭지 않았다.
+- id: 32656 | level: N1 | [露骨 / ろこつ , ちょっと露骨すぎでしょ。]
+  - meaning_ko: 무딘
+  - example_ko: 조금 너무 노골적입니다.
+- id: 32661 | level: N1 | [ロマンチック / ロマンチック , とってもロマンチックだな～！]
+  - meaning_ko: 낭만적인
+  - example_ko: 매우 로맨틱구나~!
+- id: 32665 | level: N1 | [論議 / ろんぎ , 論議を終えましょう。]
+  - meaning_ko: 논의
+  - example_ko: 토론을 마치자.
+- id: 32670 | level: N1 | [論理 / ろんり , 彼の論理にはついていけない。]
+  - meaning_ko: 논리
+  - example_ko: 그의 논리에는 따라갈 수 없다.
+- id: 32675 | level: N1 | [惑星 / わくせい , 惑星は恒星の周りを回る。]
+  - meaning_ko: 행성
+  - example_ko: 행성은 항성 주위를 돌립니다.
+- id: 32682 | level: N1 | [技 / わざ , 技術が追いつくまでに5年はかかるだろう。]
+  - meaning_ko: 미술
+  - example_ko: 기술이 따라잡기까지 5년은 걸릴 것이다.
+- id: 32691 | level: N1 | [わざわざ / わざわざ , 彼女はわざわざそんなおろかなことはしない。]
+  - meaning_ko: 수고를 감수하다 (할 일을)
+  - example_ko: 그녀는 일부러 그런 어리석은 일은 하지 않는다.
+- id: 32697 | level: N1 | [煩わしい / わずらわしい , ]
+  - meaning_ko: 부담스러운
+- id: 32702 | level: N1 | [渡り鳥 / わたりどり , この池には、毎年冬になるとたくさんの渡り鳥がやってきます。]
+  - meaning_ko: 철새
+  - example_ko: 이 연못에는 매년 겨울이 되면 많은 철새가 옵니다.
+- id: 32706 | level: N1 | [ワット / ワット , 1日300回のスクワット？そんなの絶対無理！]
+  - meaning_ko: 와트
+  - example_ko: 하루 300회 스쿼트? 그런 것의 절대 무리!
+- id: 32711 | level: N1 | [詫び / わび , 彼は無礼を詫びた。]
+  - meaning_ko: 사과
+  - example_ko: 그는 무례를 사과했다.
+- id: 32716 | level: N1 | [和文 / わぶん , この和文をフランス語に訳してください。]
+  - meaning_ko: 일본어 텍스트
+  - example_ko: 이 일본어를 프랑스어로 번역하십시오.
+- id: 32719 | level: N1 | [藁 / わら , 藁なしで煉瓦はできない。]
+  - meaning_ko: 빨대
+  - example_ko: 짚 없이 벽돌은 할 수 없다.
+- id: 32725 | level: N1 | [～割 / ～わり , ]
+  - meaning_ko: ~ 퍼센트
+- id: 32727 | level: N1 | [割当 / わりあて , ]
+  - meaning_ko: 할당
+- id: 32736 | level: N1 | [割込む / わりこむ , ]
+  - meaning_ko: 잘라내다
+- id: 32741 | level: N1 | [悪者 / わるもの , いない者がいつも悪者になる。]
+  - meaning_ko: 나쁜 친구
+  - example_ko: 없는 자가 항상 악자가 된다.
+- id: 32752 | level: N1 | [捗る / はかどる , これは妄想が捗るなぁ。]
+  - meaning_ko: 진전을 이루기 위해
+  - example_ko: 이것은 망상이 끝나지 마라.
+- id: 32757 | level: N1 | [はかない / はかない , 夢はかないます。]
+  - meaning_ko: 수명이 짧은
+  - example_ko: 꿈이 없다.
+- id: 32762 | level: N1 | [ばかばかしい / ばかばかしい , ばかばかしい。]
+  - meaning_ko: 멍청한
+  - example_ko: 어리석은.
+- id: 32767 | level: N1 | [破棄 / はき , 彼らは婚約を破棄した。]
+  - meaning_ko: 폐지
+  - example_ko: 그들은 약혼을 버렸다.
+- id: 32772 | level: N1 | [剥ぐ / はぐ , 私はその日、彼らが人間の生皮を剥ぐのを見た。]
+  - meaning_ko: 찢어지다
+  - example_ko: 나는 그날 그들이 인간의 껍질을 벗기는 것을 보았다.
+- id: 32777 | level: N1 | [迫害 / はくがい , 彼は人々を宗教的に迫害した。]
+  - meaning_ko: 박해
+  - example_ko: 그는 사람들을 종교적으로 박해했다.
+- id: 32782 | level: N1 | [薄弱 / はくじゃく , こいつは意志薄弱な男です。]
+  - meaning_ko: 나약
+  - example_ko: 이 녀석은 의지 약한 남자입니다.
+- id: 32787 | level: N1 | [白状 / はくじょう , 彼は罪を白状した。]
+  - meaning_ko: 고백
+  - example_ko: 그는 죄를 휩쓸었다.
+- id: 32792 | level: N1 | [漠然 / ばくぜん , ]
+  - meaning_ko: 애매하게 하다
+- id: 32797 | level: N1 | [爆弾 / ばくだん , 飛行機はその町に爆弾を落とした。]
+  - meaning_ko: 폭탄
+  - example_ko: 비행기는 그 마을에 폭탄을 떨어뜨렸다.
+- id: 32801 | level: N1 | [爆破 / ばくは , 敵は橋を爆破した。]
+  - meaning_ko: 폭발
+  - example_ko: 적은 다리를 폭파했다.
+- id: 32806 | level: N1 | [暴露 / ばくろ , 彼らの秘密が暴露された。]
+  - meaning_ko: 폭로
+  - example_ko: 그들의 비밀이 노출되었다.
+- id: 32811 | level: N1 | [励ます / はげます , ]
+  - meaning_ko: 격려하다
+- id: 32815 | level: N1 | [励む / はげむ , 上よ下よと絡まりながら今宵も励むルービック。]
+  - meaning_ko: 열성적이다
+  - example_ko: 위아래로 얽히면서 지금 연도 격려하는 루빅.
+- id: 32818 | level: N1 | [剥げる / はげる , ]
+  - meaning_ko: 벗어나다
+- id: 32826 | level: N1 | [化ける / ばける , 猫は化けると言われる。]
+  - meaning_ko: 변장하다
+  - example_ko: 고양이는 변한다고 한다.
+- id: 32831 | level: N1 | [派遣 / はけん , 彼女は派遣社員です。]
+  - meaning_ko: 보내다
+  - example_ko: 그녀는 파견 직원입니다.
+- id: 32836 | level: N1 | [恥 / はじ , 彼女は無邪気なのか羞恥心がないのか。]
+  - meaning_ko: 창피
+  - example_ko: 그녀는 순진한 것인지 수치심이 없는가.
+- id: 32841 | level: N1 | [弾く / はじく , 彼はピアノを上手に弾く。]
+  - meaning_ko: 연주하다 (피아노
+  - example_ko: 그는 피아노를 잘 연주한다.
+- id: 32845 | level: N1 | [パジャマ / パジャマ , 彼はパジャマ姿だ。]
+  - meaning_ko: 파자마
+  - example_ko: 그는 잠옷 모습이다.
+- id: 32852 | level: N1 | [恥じらう / はじらう , 花も恥じらう乙女たちに囲まれ、トムは緊張を隠せなかった。]
+  - meaning_ko: 부끄러움을 느끼다
+  - example_ko: 꽃도 부끄러워하는 처녀들로 둘러싸여 톰은 긴장을 감추지 못했다.
+- id: 32856 | level: N1 | [恥じる / はじる , 貧乏であることを恥じるな。]
+  - meaning_ko: 부끄러움을 느끼다
+  - example_ko: 가난하다는 것을 부끄러워하지 마라.
+- id: 32862 | level: N1 | [橋渡し / はしわたし , ]
+  - meaning_ko: 다리 건설'
+- id: 32867 | level: N1 | [弾む / はずむ , ゴムのボールは弾力性があるから弾む。]
+  - meaning_ko: 튀다
+  - example_ko: 고무의 공은 탄력성이 있기 때문에 연주한다.
+- id: 32872 | level: N1 | [破損 / はそん , 窓の破損料を請求された。]
+  - meaning_ko: 손상
+  - example_ko: 창문 파손료가 청구되었습니다.
+- id: 32877 | level: N1 | [叩く / はたく , 戸を叩く音がした。]
+  - meaning_ko: 파업하다
+  - example_ko: 문을 두드리는 소리가 났다.
+- id: 32881 | level: N1 | [裸足 / はだし , どうして裸足なの？]
+  - meaning_ko: 맨발
+  - example_ko: 왜 맨발인가?
+- id: 32885 | level: N1 | [果たす / はたす , 彼は約束を果たす。]
+  - meaning_ko: 성취하다
+  - example_ko: 그는 약속을 다한다.
+- id: 32890 | level: N1 | [蜂蜜 / はちみつ , ミツバチは蜂蜜をつくる。]
+  - meaning_ko: 꿀
+  - example_ko: 꿀벌은 꿀을 만든다.
+- id: 32897 | level: N1 | [パチンコ / パチンコ , 彼がパチンコするなんて絶対にないよ。]
+  - meaning_ko: 파칭코(일본 핀볼)
+  - example_ko: 그가 파칭코 한다니 절대로 없어.
+- id: 32899 | level: N1 | [罰 / ばつ , 法律を犯す者は罰せられる。]
+  - meaning_ko: 처벌
+  - example_ko: 법률을 저지르는 자는 처벌받는다.
+- id: 32904 | level: N1 | [発育 / はついく , 花はつぼみから発育する。]
+  - meaning_ko: (육체적) 성장
+  - example_ko: 꽃은 봉오리에서 자랍니다.
+- id: 32907 | level: N1 | [発芽 / はつが , ]
+  - meaning_ko: 발아
+- id: 32910 | level: N1 | [発掘 / はっくつ , 新しい遺跡で未発掘はいくつだったのですか。]
+  - meaning_ko: 발굴
+  - example_ko: 아직도 발굴되지 않은 새로운 유적지는 얼마나 됩니까?
+- id: 32915 | level: N1 | [発言 / はつげん , 彼は潮時を見て発言した。]
+  - meaning_ko: 말
+  - example_ko: 그는 조수를 보고 발언했다.
+- id: 32920 | level: N1 | [バッジ / バッジ , 誰か僕のバッジ見なかった？]
+  - meaning_ko: 배지
+  - example_ko: 누군가 내 배지를 보지 않았다?
+- id: 32925 | level: N1 | [発生 / はっせい , 個体発生は系統発生を繰り返す。]
+  - meaning_ko: 발생
+  - example_ko: 개체 발생은 계통 발생을 반복한다.
+- id: 32933 | level: N1 | [仕立てる / したてる , スーツを仕立てるときは、正確な採寸が必要となります。]
+  - meaning_ko: 재단하다
+  - example_ko: 정장을 만들 때는 정확한 측정이 필요합니다.
+- id: 32941 | level: N1 | [下取り / したどり , 車を下取りに出して新車を買った。]
+  - meaning_ko: 거래하다
+  - example_ko: 차를 내보내기 위해 꺼내 신차를 샀다.
+- id: 32946 | level: N1 | [下火 / したび , 化学業界はすべてが下火になるまで再投資を控えています。]
+  - meaning_ko: 불타오르다
+  - example_ko: 화학 산업은 모든 것이 화재가 될 때까지 재투자를 앞두고 있습니다.
+- id: 32950 | level: N1 | [実 / じつ , 真実のみが美しい。]
+  - meaning_ko: 과일
+  - example_ko: 진실만이 아름답다.
+- id: 32955 | level: N1 | [実家 / じっか , トムはいまだに実家に住んでいる。]
+  - meaning_ko: (부모님의) 집
+  - example_ko: 톰은 아직도 친가에 살고 있다.
+- id: 32959 | level: N1 | [失格 / しっかく , 彼女は２度のフライングで失格した。]
+  - meaning_ko: 자격 박탈
+  - example_ko: 그녀는 두 번 비행으로 실격했다.
+- id: 32963 | level: N1 | [質疑 / しつぎ , ]
+  - meaning_ko: 질문
+- id: 32971 | level: N1 | [失脚 / しっきゃく , その政治家は結局失脚した。]
+  - meaning_ko: 지위를 잃다
+  - example_ko: 그 정치인은 결국 실각했다.
+- id: 32973 | level: N1 | [実業家 / じつぎょうか , 彼は実業家としてはやり手だ。]
+  - meaning_ko: 산업 자본가
+  - example_ko: 그는 사업가로서는 주인이다.
+- id: 32978 | level: N1 | [シック / シック , 彼女はクラシック音楽を聴くのがすきだ。]
+  - meaning_ko: 우아한
+  - example_ko: 그녀는 클래식 음악을 듣는 것이 좋다.
+- id: 32982 | level: N1 | [じっくり / じっくり , 物事をじっくり考える慎重派です。]
+  - meaning_ko: 고의로
+  - example_ko: 사물을 차분히 생각하는 신중파입니다.
+- id: 32987 | level: N1 | [躾 / しつけ , 彼は躾がなってない。]
+  - meaning_ko: 규율
+  - example_ko: 그는 망설이지 않는다.
+- id: 32997 | level: N1 | [躾ける / しつける , ]
+  - meaning_ko: 징계하다
+- id: 32999 | level: N1 | [実践 / じっせん , 理論と実践が伴うとは限らない。]
+  - meaning_ko: 관행
+  - example_ko: 이론과 실천이 수반되는 것은 아니다.
+- id: 33003 | level: N1 | [質素 / しっそ , 彼は質素に暮らした。]
+  - meaning_ko: 간단
+  - example_ko: 그는 질소에 살았다.
+- id: 33008 | level: N1 | [実態 / じったい , 放射能漏れの実態や安全確認することは難しいのです。]
+  - meaning_ko: 진실
+  - example_ko: 방사능 누출의 실태나 안전 확인하는 것은 어렵습니다.
+- id: 33016 | level: N1 | [失調 / しっちょう , ]
+  - meaning_ko: 조화의 부족
+- id: 33020 | level: N1 | [嫉妬 / しっと , 嫉妬が彼にそれをさせた。]
+  - meaning_ko: 질투
+  - example_ko: 질투가 그에게 그것을 시켰다.
+- id: 33027 | level: N1 | [実費 / じっぴ , ]
+  - meaning_ko: 실제 비용
+- id: 33032 | level: N1 | [指摘 / してき , ※誤字直しました。ご指摘サンクスです。]
+  - meaning_ko: 지적하다
+  - example_ko: ※오자 고쳤습니다. 지적 선크스입니다.
+- id: 33037 | level: N1 | [自転 / じてん , 木の下にある自転車は私のです。]
+  - meaning_ko: 회전
+  - example_ko: 나무 밑에 있는 자전거는 나입니다.
+- id: 33042 | level: N1 | [助動詞 / じょどうし , canは助動詞ですので、疑問文では文頭に持ってきます。]
+  - meaning_ko: 조동사
+  - example_ko: can은 조동사이므로, 의문문에서는 문두에 가져옵니다.
+- id: 33047 | level: N1 | [淑やか / しとやか , ]
+  - meaning_ko: 우아한
+- id: 33051 | level: N1 | [萎びる / しなびる , ]
+  - meaning_ko: 오그라들다
+- id: 33054 | level: N1 | [シナリオ / シナリオ , 最悪のシナリオは何ですか？]
+  - meaning_ko: 대본
+  - example_ko: 최악의 시나리오는 무엇입니까?
+- id: 33059 | level: N1 | [しなやか / しなやか , ]
+  - meaning_ko: 유연한
+- id: 33064 | level: N1 | [屎尿 / しにょう , ]
+  - meaning_ko: 인간 쓰레기
+- id: 33069 | level: N1 | [地主 / じぬし , その地主は以前かなり裕福な暮らしをしていた。]
+  - meaning_ko: 주인
+  - example_ko: 그 지주는 이전에 상당히 부유한 생활을 하고 있었다.
+- id: 33074 | level: N1 | [凌ぐ / しのぐ , ]
+  - meaning_ko: 능가하다
+- id: 33080 | level: N1 | [芝 / しば , 隣の芝生はうちのより青い。]
+  - meaning_ko: 잔디
+  - example_ko: 옆 잔디밭은 우리보다 더 파랗다.
+- id: 33087 | level: N1 | [始発 / しはつ , 彼は始発列車に乗って、やっとそこに間に合った。]
+  - meaning_ko: 첫 번째 열차
+  - example_ko: 그는 시발 열차를 타고 마침내 거기에 머물렀다.
+- id: 33091 | level: N1 | [耳鼻科 / じびか , 今、耳鼻科にかかっています。]
+  - meaning_ko: 이비인후과
+  - example_ko: 지금 이비과에 달려 있습니다.
+- id: 33097 | level: N1 | [私物 / しぶつ , 誰かに私物を盗まれた。]
+  - meaning_ko: 사유 재산
+  - example_ko: 누군가에게 사물을 훔쳤다.
+- id: 33098 | level: N1 | [しぶとい / しぶとい , 先日しぶとい風邪を引き、 一週間以上悩まされました。]
+  - meaning_ko: 끈기 있는
+  - example_ko: 요전날 시부토 감기를 당겨, 일주일 이상 고민되었습니다.
+- id: 33105 | level: N1 | [司法 / しほう , 司法書士を訪ねてみてください。]
+  - meaning_ko: 정의의 행정
+  - example_ko: 사법 서사를 방문해보십시오.
+- id: 33110 | level: N1 | [始末 / しまつ , 彼は部下の不始末を見つけた。]
+  - meaning_ko: 처분
+  - example_ko: 그는 부하의 불시말을 발견했다.
+- id: 33115 | level: N1 | [染みる / しみる , ]
+  - meaning_ko: 담그다
+- id: 33121 | level: N1 | [使命 / しめい , 彼らは使命を果たした。]
+  - meaning_ko: 사명
+  - example_ko: 그들은 사명을 완수했다.
+- id: 33126 | level: N1 | [地元 / じもと , 地元のチームは勝った。]
+  - meaning_ko: 현지의
+  - example_ko: 현지 팀은 이겼다.
+- id: 33132 | level: N1 | [視野 / しや , 旅行は人の視野を広める。]
+  - meaning_ko: 시야
+  - example_ko: 여행은 사람의 시각을 전파한다.
+- id: 33137 | level: N1 | [弱 / じゃく , 脆弱で力の無い、ただの人間なんだ。]
+  - meaning_ko: 연약한
+  - example_ko: 취약하고 힘이 없는 단순한 인간이야.
+- id: 33142 | level: N1 | [社交 / しゃこう , 彼は社交的な性格だ。]
+  - meaning_ko: 사회생활
+  - example_ko: 그는 사교적인 성격이다.
+- id: 33147 | level: N1 | [ジャズ / ジャズ , 僕はジャズが好きだ。]
+  - meaning_ko: 재즈
+  - example_ko: 나는 재즈를 좋아한다.
+- id: 33151 | level: N1 | [謝絶 / しゃぜつ , 彼は面会謝絶だ。]
+  - meaning_ko: 거절
+  - example_ko: 그는 면회 사절이다.
+- id: 33157 | level: N1 | [社宅 / しゃたく , 鳩山さんは社宅に住んでいるらしい。]
+  - meaning_ko: 회사 소유의 집
+  - example_ko: 하토야마씨는 사택에 살고 있는 것 같다.
+- id: 33162 | level: N1 | [若干 / じゃっかん , 公園のつつじの世話をする庭師が若干名いる。]
+  - meaning_ko: 일부
+  - example_ko: 공원의 진달래를 돌보는 정원사가 약간 이름있다.
+- id: 33167 | level: N1 | [三味線 / しゃみせん , 彼女は三味線による新しいジャズの演奏法を始めた。]
+  - meaning_ko: 3현 일본 기타
+  - example_ko: 그녀는 샤미센에 의한 새로운 재즈의 연주법을 시작했다.
+- id: 33169 | level: N1 | [斜面 / しゃめん , 彼は険しい斜面をじっと見た。]
+  - meaning_ko: 경사
+  - example_ko: 그는 어려운 사면을 가만히 보았다.
+- id: 33174 | level: N1 | [砂利 / じゃり , 砂利をセメントで固める必要がある。]
+  - meaning_ko: 자갈
+  - example_ko: 자갈을 시멘트로 굳힐 필요가 있다.
+- id: 33182 | level: N1 | [洒落る / しゃれる , ]
+  - meaning_ko: 농담하다
+- id: 33184 | level: N1 | [ジャンパー / ジャンパー , ]
+  - meaning_ko: 재킷
+- id: 33187 | level: N1 | [ジャンプ / ジャンプ , 彼はジャンプして溝を越えた。]
+  - meaning_ko: 도약
+  - example_ko: 그는 점프하고 그루브를 넘었다.
+- id: 33196 | level: N1 | [ジャンボ / ジャンボ , 私はジャンボ機が離陸するのを見た。]
+  - meaning_ko: 거대한 것
+  - example_ko: 나는 점보 기계가 이륙하는 것을 보았다.
+- id: 33199 | level: N1 | [ジャンル / ジャンル , このジャンルの曲が好きです。]
+  - meaning_ko: 장르
+  - example_ko: 이 장르의 노래를 좋아합니다.
+- id: 33207 | level: N1 | [種 / しゅ , 社長さんの車種と色は？]
+  - meaning_ko: 씨앗
+  - example_ko: 사장씨의 차종과 색은?
+- id: 33214 | level: N1 | [私有 / しゆう , 彼はわれわれの私有地に不法侵入している、無断で通っている。]
+  - meaning_ko: 개인 소유권
+  - example_ko: 그는 우리의 사유지에 불법 침입하고 있다, 무단으로 다니고 있다.
+- id: 33218 | level: N1 | [～宗 / ～しゅう , ]
+  - meaning_ko: 분파
+- id: 33223 | level: N1 | [収益 / しゅうえき , 投資の収益は高いだろう。]
+  - meaning_ko: 수입
+  - example_ko: 투자 수익은 높을 것이다.
+- id: 33228 | level: N1 | [修学 / しゅうがく , 修学旅行では、よく枕投げをした。]
+  - meaning_ko: 학습
+  - example_ko: 수학여행에서는 잘 베개를 던졌다.
+- id: 33233 | level: N1 | [周期 / しゅうき , 月経周期は約４週間です。]
+  - meaning_ko: 주기
+  - example_ko: 월경주기는 약 4주입니다.
+- id: 33242 | level: N1 | [衆議院 / しゅうぎいん , 衆議院の少数派の議席は、急速にむしばまれてきています。]
+  - meaning_ko: 하원
+  - example_ko: 중의원 소수주의 의석은 급속히 흔히 드러나고 있습니다.
+- id: 33246 | level: N1 | [就業 / しゅうぎょう , 僕も学生の時はよく就業をサボったよ。]
+  - meaning_ko: 고용
+  - example_ko: 나도 학생 때는 자주 취업을 사보했어.
+- id: 33249 | level: N1 | [従業員 / じゅうぎょういん , 彼は従業員と打ち解けない。]
+  - meaning_ko: 직원
+  - example_ko: 그는 직원과 풀 수 없다.
+- id: 33255 | level: N1 | [集計 / しゅうけい , 国際監視団は投票の集計をしました。]
+  - meaning_ko: 합산
+  - example_ko: 국제 감시단은 투표를 집계했습니다.
+- id: 33260 | level: N1 | [襲撃 / しゅうげき , 彼はそこで反徒の襲撃を受けた。]
+  - meaning_ko: 공격
+  - example_ko: 그는 거기서 반도의 습격을 받았다.
+- id: 33265 | level: N1 | [収支 / しゅうし , 何とか収支が合えばいいんだが。]
+  - meaning_ko: 수입과 지출
+  - example_ko: 어떻게든 수지가 맞으면 좋지만.
+- id: 33270 | level: N1 | [終始 / しゅうし , 彼女は落ち着いた態度に終始した。]
+  - meaning_ko: 처음부터 끝까지
+  - example_ko: 그녀는 차분한 태도로 시종했다.
+- id: 33276 | level: N1 | [修士 / しゅうし , 彼は法学修士の学位を得た。]
+  - meaning_ko: 석사 학위 프로그램
+  - example_ko: 그는 법학 석사 학위를 받았다.
+- id: 33278 | level: N1 | [従事 / じゅうじ , 彼は農業に従事していた。]
+  - meaning_ko: 매력적인
+  - example_ko: 그는 농업에 종사하고 있었다.
+- id: 33282 | level: N1 | [終日 / しゅうじつ , 私は昨日は終日家にいた。]
+  - meaning_ko: 하루 종일
+  - example_ko: 어제는 종일 집에 있었다.
+- id: 33287 | level: N1 | [充実 / じゅうじつ , 大いに充実した学生生活を送りたい。]
+  - meaning_ko: 비만
+  - example_ko: 매우 충실한 학생 생활을 보내고 싶다.
+- id: 33297 | level: N1 | [収集 / しゅうしゅう , 旅は情報収集が重要。]
+  - meaning_ko: 모으다
+  - example_ko: 여행은 정보 수집이 중요.
+- id: 33299 | level: N1 | [十字路 / じゅうじろ , その事故はある十字路で起こった。]
+  - meaning_ko: 교차로
+  - example_ko: 그 사고는 어느 십자로에서 일어났다.
+- id: 33302 | level: N1 | [執着 / しゅうじゃく , 彼女のお金への執着心には際限がない。]
+  - meaning_ko: 부착
+  - example_ko: 그녀의 돈에 대한 집착심에는 끝이 없다.
+- id: 33312 | level: N1 | [柔軟 / じゅうなん , 彼女は柔軟な頭をしている。]
+  - meaning_ko: 유연한
+  - example_ko: 그녀는 유연한 머리를하고 있습니다.
+- id: 33320 | level: N1 | [収容 / しゅうよう , 部屋の収容人員は２００人だ。]
+  - meaning_ko: 숙소
+  - example_ko: 방 수용 인원은 200명이다.
+- id: 33327 | level: N1 | [従来 / じゅうらい , 彼は従来の習慣と違ったことをした。]
+  - meaning_ko: 지금까지
+  - example_ko: 그는 전통적인 관례와 다른 것을 했다.
+- id: 33332 | level: N1 | [守衛 / しゅえい , 守衛にとがめられた。]
+  - meaning_ko: 경비원
+  - example_ko: 수위에 걸렸다.
+- id: 33337 | level: N1 | [主演 / しゅえん , 主演は誰ですか。]
+  - meaning_ko: 주연
+  - example_ko: 주연은 누구입니까?
+- id: 33342 | level: N1 | [主観 / しゅかん , 彼の文章はとても主観的だ。]
+  - meaning_ko: 주관
+  - example_ko: 그의 문장은 매우 주관적이다.
+- id: 33347 | level: N1 | [修行 / しゅぎょう , その画家はパリへ修行に行った。]
+  - meaning_ko: 지식 추구
+  - example_ko: 그 화가는 파리에 수행하러 갔다.
+- id: 33353 | level: N1 | [塾 / じゅく , 彼は塾で勉強している。]
+  - meaning_ko: 방과후 (학원) 학교
+  - example_ko: 그는 학원에서 공부하고 있습니다.
+- id: 33358 | level: N1 | [祝賀 / しゅくが , 戦勝を祝う祝賀会が開かれた。]
+  - meaning_ko: 축하
+  - example_ko: 전승을 축하하는 축하회가 열렸다.
+- id: 33363 | level: N1 | [宿命 / しゅくめい , 仲間外れになるのが私の宿命みたいだ。]
+  - meaning_ko: 운명
+  - example_ko: 동료 벗어나는 것이 내 숙명인 것 같다.
+- id: 33368 | level: N1 | [手芸 / しゅげい , 去年手芸コースを取っていたのです。]
+  - meaning_ko: 수공예품
+  - example_ko: 작년에 수예 코스를 취하고 있었던 것입니다.
+- id: 33372 | level: N1 | [主権 / しゅけん , 主権は人民にある。]
+  - meaning_ko: 주권
+  - example_ko: 주권은 인민에게 있다.
+- id: 33377 | level: N1 | [主催 / しゅさい , パーティーの主催者は誰なの？]
+  - meaning_ko: 조직
+  - example_ko: 파티 주최자는 누구입니까?
+- id: 33381 | level: N1 | [取材 / しゅざい , 記者は事件の取材をしました。]
+  - meaning_ko: 적용 범위
+  - example_ko: 기자는 사건의 취재를 했습니다.
+- id: 33386 | level: N1 | [趣旨 / しゅし , 彼が言った事はそれと反対の趣旨だった。]
+  - meaning_ko: 물체
+  - example_ko: 그가 말한 것은 그것과 반대의 취지였다.
+- id: 33395 | level: N1 | [種々 / しゅじゅ , 彼は種々の方法を試みた。]
+  - meaning_ko: 다양성
+  - example_ko: 그는 다양한 방법을 시도했다.
+- id: 33400 | level: N1 | [主食 / しゅしょく , 日本では米が主食です。]
+  - meaning_ko: 상식
+  - example_ko: 일본에서는 쌀이 주식입니다.
+- id: 33403 | level: N1 | [主人公 / しゅじんこう , 主人公は、本の最後で死んだ。]
+  - meaning_ko: 주역
+  - example_ko: 주인공은 책의 끝에서 죽었다.
+- id: 33406 | level: N1 | [主体 / しゅたい , 社長が社員の主体的な取り組みを促した。]
+  - meaning_ko: 주제
+  - example_ko: 사장이 사원의 주체적인 대처를 촉구했다.
+- id: 33410 | level: N1 | [主題 / しゅだい , 主題を見失ってはいけない。]
+  - meaning_ko: 주제
+  - example_ko: 주제를 잃지 말라.
+- id: 33418 | level: N1 | [出演 / しゅつえん , 誰が出演していますか。]
+  - meaning_ko: 주요 수행자
+  - example_ko: 누가 출연하고 있습니까?
+- id: 33422 | level: N1 | [出血 / しゅっけつ , 排便の際出血します。]
+  - meaning_ko: 출혈
+  - example_ko: 배변시 출혈합니다.
+- id: 33425 | level: N1 | [出現 / しゅつげん , 私は彼の突然の出現に我を忘れた。]
+  - meaning_ko: 모습
+  - example_ko: 나는 그의 갑작스러운 출현에 나를 잊었다.
+- id: 33433 | level: N1 | [出産 / しゅっさん , 彼女の出産予定は７月だ。]
+  - meaning_ko: 출산
+  - example_ko: 그녀의 출산 예정은 7월이다.
+- id: 33438 | level: N1 | [出社 / しゅっしゃ , 彼は５週間ぶりに出社した。]
+  - meaning_ko: 일하러 오다
+  - example_ko: 그는 5주 만에 출사했다.
+- id: 33443 | level: N1 | [出生 / しゅっしょう , 彼はいわゆる自力で出生した人だ。]
+  - meaning_ko: 출생
+  - example_ko: 그는 이른바 자력으로 출생한 사람이다.
+- id: 33456 | level: N1 | [微量 / びりょう , ]
+  - meaning_ko: 극소량
+- id: 33461 | level: N1 | [昼飯 / ひるめし , あいつなら昼飯食ってるよ。]
+  - meaning_ko: 점심 (정오 식사)
+  - example_ko: 저 녀석이라면 점심 먹고 있어.
+- id: 33463 | level: N1 | [比例 / ひれい , 供給は需要に比例する。]
+  - meaning_ko: 비율
+  - example_ko: 공급은 수요에 비례한다.
+- id: 33467 | level: N1 | [疲労 / ひろう , 疲労やら飢えやらで彼は目眩を感じた。]
+  - meaning_ko: 피로
+  - example_ko: 피로나 굶주림으로 그는 눈썹을 느꼈다.
+- id: 33471 | level: N1 | [敏感 / びんかん , 目は光に敏感である。]
+  - meaning_ko: 감수성
+  - example_ko: 눈은 빛에 민감하다.
+- id: 33475 | level: N1 | [貧困 / ひんこん , 貧困は勤勉の母。]
+  - meaning_ko: 빈곤
+  - example_ko: 빈곤은 근면한 어머니.
+- id: 33479 | level: N1 | [品質 / ひんしつ , 品質証明書を添付してください。]
+  - meaning_ko: 품질
+  - example_ko: 품질 인증서를 첨부합니다.
+- id: 33484 | level: N1 | [貧弱 / ひんじゃく , 彼の美術の知識は貧弱だ。]
+  - meaning_ko: 가난한
+  - example_ko: 그의 미술 지식은 가난하다.
+- id: 33492 | level: N1 | [品種 / ひんしゅ , 除草剤耐性品種でなぜ収量が増えるのか？]
+  - meaning_ko: 새끼를 낳다
+  - example_ko: 제초제 내성 품종으로 왜 수율이 증가하는가?
+- id: 33497 | level: N1 | [ヒント / ヒント , 彼は私にヒントをくれた。]
+  - meaning_ko: 힌트
+  - example_ko: 그는 나에게 힌트를 주었다.
+- id: 33500 | level: N1 | [頻繁 / ひんぱん , 日本は頻繁に地震に襲われる。]
+  - meaning_ko: 빈도
+  - example_ko: 일본은 자주 지진에 습격당한다.
+- id: 33505 | level: N1 | [貧乏 / びんぼう , 貧乏暇なしですよ。]
+  - meaning_ko: 빈곤
+  - example_ko: 빈곤가 없어요.
+- id: 33509 | level: N1 | [ファイト / ファイト , ファイト！]
+  - meaning_ko: 싸움
+  - example_ko: 싸움!
+- id: 33515 | level: N1 | [ファイル / ファイル , どのフォルダにファイルを保存しましたか。]
+  - meaning_ko: 파일
+  - example_ko: 어떤 폴더에 파일을 저장했습니까?
+- id: 33520 | level: N1 | [ファン / ファン , 彼はファンの邪魔をした。]
+  - meaning_ko: 팬
+  - example_ko: 그는 팬들의 방해를 받았다.
+- id: 33525 | level: N1 | [不意 / ふい , 不意打ちを食らった。]
+  - meaning_ko: 갑자기
+  - example_ko: 갑작스럽게 먹었다.
+- id: 33530 | level: N1 | [フィルタ / フィルタ , 洗濯機のフィルターは定期的に掃除しよう。]
+  - meaning_ko: 필터
+  - example_ko: 세탁기 필터를 정기적으로 청소해 주세요.
+- id: 33536 | level: N1 | [封 / ふう , 兵隊が町への道を封鎖した。]
+  - meaning_ko: 밀봉하다
+  - example_ko: 군대가 마을로가는 길을 봉쇄했다.
+- id: 33540 | level: N1 | [封鎖 / ふうさ , この港は封鎖されうる。]
+  - meaning_ko: 봉쇄
+  - example_ko: 이 항구는 봉쇄될 수 있다.
+- id: 33546 | level: N1 | [風車 / ふうしゃ , オランダでは、どこへ行っても風車が見られる。]
+  - meaning_ko: 풍차 비슷한 것
+  - example_ko: 네덜란드에서는 어디로 가도 풍차를 볼 수 있습니다.
+- id: 33551 | level: N1 | [風習 / ふうしゅう , その風習はすたれつつある。]
+  - meaning_ko: 관습
+  - example_ko: 그 풍습은 황홀해지고 있다.
+- id: 33556 | level: N1 | [風俗 / ふうぞく , 風俗習慣は国によって大きな違いがある。]
+  - meaning_ko: 예의
+  - example_ko: 풍속습관은 나라에 따라 큰 차이가 있다.
+- id: 33561 | level: N1 | [ブーツ / ブーツ , 彼女はブーツを一足買った。]
+  - meaning_ko: 부츠
+  - example_ko: 그녀는 부츠를 한 발 샀다.
+- id: 33570 | level: N1 | [風土 / ふうど , 日本人の精神はその独特の風土に根ざしている。]
+  - meaning_ko: 자연적인 특징
+  - example_ko: 일본인의 정신은 그 독특한 풍토에 뿌리를 두고 있다.
+- id: 33574 | level: N1 | [ブーム / ブーム , ブームは峠を越した。]
+  - meaning_ko: 팔
+  - example_ko: 붐은 고개를 넘었다.
+- id: 33580 | level: N1 | [フォーム / フォーム , 警官は青いユニフォームを着ている。]
+  - meaning_ko: 거품
+  - example_ko: 경찰은 파란 유니폼을 입고 있다.
+- id: 33587 | level: N1 | [部下 / ぶか , 部下は彼のあとに続いた。]
+  - meaning_ko: 부하
+  - example_ko: 부하는 그의 뒤를 이었다.
+- id: 33591 | level: N1 | [不可欠 / ふかけつ , 毎日の運動が健康には不可欠である。]
+  - meaning_ko: 없어서는 안될
+  - example_ko: 매일 운동이 건강에 필수적입니다.
+- id: 33597 | level: N1 | [ぶかぶか / ぶかぶか , このズボン、ぶかぶかだよ。]
+  - meaning_ko: 너무 크다
+  - example_ko: 이 바지, 어쩐지.
+- id: 33601 | level: N1 | [不吉 / ふきつ , ４は日本では不吉な数字だ。]
+  - meaning_ko: 불길한
+  - example_ko: 4는 일본에서는 불길한 숫자다.
+- id: 33607 | level: N1 | [不況 / ふきょう , 日本経済は不況である。]
+  - meaning_ko: 경기 후퇴
+  - example_ko: 일본 경제는 불황이다.
+- id: 33612 | level: N1 | [布巾 / ふきん , ]
+  - meaning_ko: 접시 천
+- id: 33615 | level: N1 | [複合 / ふくごう , トムは新しい複合機を買った。]
+  - meaning_ko: 합성물
+  - example_ko: 톰은 새로운 복합기를 샀다.
+- id: 33620 | level: N1 | [福祉 / ふくし , 彼女は社会福祉に携わっている。]
+  - meaning_ko: 복지
+  - example_ko: 그녀는 사회복지에 종사하고 있다.
+- id: 33625 | level: N1 | [覆面 / ふくめん , 覆面をした男達が旅客を襲って金を奪った。]
+  - meaning_ko: 마스크
+  - example_ko: 복면을 한 남자들이 여객을 덮쳐 돈을 빼앗았다.
+- id: 33630 | level: N1 | [膨れる / ふくれる , トムってすぐ膨れるよね。]
+  - meaning_ko: (부풀어 오르다)
+  - example_ko: 톰이 바로 부풀어 오르네요.
+- id: 33635 | level: N1 | [不景気 / ふけいき , 不景気なのに依然物価は高い。]
+  - meaning_ko: 경기 침체
+  - example_ko: 불경기인데 여전히 물가는 높다.
+- id: 33641 | level: N1 | [耽る / ふける , ]
+  - meaning_ko: 탐닉하다
+- id: 33644 | level: N1 | [老ける / ふける , ]
+  - meaning_ko: 나이가 들다
+- id: 33652 | level: N1 | [富豪 / ふごう , 彼は大富豪だ。]
+  - meaning_ko: 부자
+  - example_ko: 그는 백만장자다.
+- id: 33656 | level: N1 | [布告 / ふこく , 宣戦布告の理由は判明していない。]
+  - meaning_ko: 명령
+  - example_ko: 선전포고의 이유는 밝혀지지 않았다.
+- id: 33661 | level: N1 | [ブザー / ブザー , ブザーがなった。]
+  - meaning_ko: 부저
+  - example_ko: 부저가 되었다.
+- id: 33666 | level: N1 | [負債 / ふさい , 負債は帳消しにするしかなかった。]
+  - meaning_ko: 빚
+  - example_ko: 부채는 지울 수밖에 없었다.
+- id: 33671 | level: N1 | [不在 / ふざい , 父は不在です。]
+  - meaning_ko: 결석
+  - example_ko: 아버지는 부재합니다.
+- id: 33676 | level: N1 | [ふさわしい / ふさわしい , 彼女はレディーと呼ぶにふさわしい人だ。]
+  - meaning_ko: 적절한
+  - example_ko: 그녀는 레이디라고 부를 만한 사람이다.
+- id: 33681 | level: N1 | [不順 / ふじゅん , 今年は天候不順だった。]
+  - meaning_ko: 불규칙
+  - example_ko: 올해는 날씨 불순이었다.
+- id: 33685 | level: N1 | [負傷 / ふしょう , 負傷者を病院に運びなさい。]
+  - meaning_ko: 부상
+  - example_ko: 부상자를 병원으로 옮기십시오.
+- id: 33688 | level: N1 | [侮辱 / ぶじょく , 彼女は侮辱されて憤慨した。]
+  - meaning_ko: 모욕
+  - example_ko: 그녀는 모욕받고 분개했다.
+- id: 33697 | level: N1 | [不審 / ふしん , 挙動不審の男を見つけた。]
+  - meaning_ko: 의심스러운
+  - example_ko: 거동 수상한 남자를 발견했다.
+- id: 33700 | level: N1 | [不振 / ふしん , 高い税金と売上不振が同社を破産させた。]
+  - meaning_ko: 둔함
+  - example_ko: 높은 세금과 매출 부진이 이 회사를 파산시켰다.
+- id: 33702 | level: N1 | [武装 / ぶそう , 兵士は武装する。]
+  - meaning_ko: 무기
+  - example_ko: 군인은 무장한다.
+- id: 33706 | level: N1 | [札 / ふだ , 母を見送りに札幌駅に行ってきたところです。]
+  - meaning_ko: 토큰
+  - example_ko: 어머니를 배송에 삿포로 역에 다녀 왔습니다.
+- id: 33711 | level: N1 | [負担 / ふたん , 費用は彼の負担になるだろう。]
+  - meaning_ko: 부담
+  - example_ko: 비용은 그의 부담이 될 것이다.
+- id: 33720 | level: N1 | [不調 / ふちょう , 商売は先月ちょっと不調だった。]
+  - meaning_ko: 나쁜 상태
+  - example_ko: 지난 달에는 사업이 조금 부진했습니다.
+- id: 33726 | level: N1 | [復活 / ふっかつ , 復活祭はもうすぐだ。]
+  - meaning_ko: 부흥(예를 들어
+  - example_ko: 부활제는 곧이다.
+- id: 33731 | level: N1 | [物議 / ぶつぎ , その作品が画壇に大いに物議をかもした。]
+  - meaning_ko: 공개 토론 (비판)
+  - example_ko: 그 작품이 화단에 크게 논란을 일으켰다.
+- id: 33736 | level: N1 | [復旧 / ふっきゅう , 現在、通常のサービスの早急な復旧に努めています。]
+  - meaning_ko: 복구
+  - example_ko: 현재 정상적인 서비스를 신속하게 복구하기 위해 노력하고 있습니다.
+- id: 33740 | level: N1 | [復興 / ふっこう , 日本の戦後の復興は有名な話である。]
+  - meaning_ko: 회복
+  - example_ko: 일본 전후의 부흥은 유명한 이야기이다.
+- id: 33744 | level: N1 | [物資 / ぶっし , 被災地に救援物資が急送された。]
+  - meaning_ko: 상품
+  - example_ko: 재해지에 구호물자가 급송되었다.
+- id: 33749 | level: N1 | [仏像 / ぶつぞう , 彼は木から仏像を彫った。]
+  - meaning_ko: 불상(동상)
+  - example_ko: 그는 나무에서 불상을 조각했다.
+- id: 33755 | level: N1 | [物体 / ぶったい , 私は空に不思議な動く物体を見た。]
+  - meaning_ko: 물체
+  - example_ko: 나는 하늘에 이상한 움직이는 물체를 보았다.
+- id: 33759 | level: N1 | [沸騰 / ふっとう , 薬缶は沸騰しているに違いない。]
+  - meaning_ko: 비등
+  - example_ko: 약 캔은 끓는 것임에 틀림없다.
+- id: 33764 | level: N1 | [不当 / ふとう , 彼らは私を不当に扱った。]
+  - meaning_ko: 부당
+  - example_ko: 그들은 나를 부당하게 대우했다.
+- id: 33769 | level: N1 | [不動産 / ふどうさん , 彼女は不動産業者です。]
+  - meaning_ko: 부동산
+  - example_ko: 그녀는 부동산업자입니다.
+- id: 33774 | level: N1 | [無難 / ぶなん , 機能もデザインも無難。]
+  - meaning_ko: 안전
+  - example_ko: 기능도 디자인도 무난.
+- id: 33779 | level: N1 | [赴任 / ふにん , ]
+  - meaning_ko: (계속해서) 새로운 약속
+- id: 33783 | level: N1 | [腐敗 / ふはい , 包装は腐敗を減らす。]
+  - meaning_ko: 부식
+  - example_ko: 포장은 썩음을 감소시킨다.
+- id: 33788 | level: N1 | [不評 / ふひょう , この商品、不評なんだ。]
+  - meaning_ko: 악평
+  - example_ko: 이 상품, 불평이야.
+- id: 33796 | level: N1 | [不服 / ふふく , 不服従でとがめられた。]
+  - meaning_ko: 불만
+  - example_ko: 불복종으로 벗겨졌다.
+- id: 33799 | level: N1 | [普遍 / ふへん , それには絶対的で普遍的な意味はない。]
+  - meaning_ko: 보편성
+  - example_ko: 그것에는 절대적이고 보편적인 의미는 없다.
+- id: 33805 | level: N1 | [踏まえる / ふまえる , ]
+  - meaning_ko: 기반으로하다
+- id: 33810 | level: N1 | [踏み込む / ふみこむ , ]
+  - meaning_ko: (다른 사람의 영역에 들어가다)
+- id: 33813 | level: N1 | [不明 / ふめい , 彼女は事故の後丸一日意識不明だった。]
+  - meaning_ko: 알려지지 않은
+  - example_ko: 그녀는 사고 후 하루 종일 의식 불명이었다.
+- id: 33817 | level: N1 | [部門 / ぶもん , 代数は数学の１部門です。]
+  - meaning_ko: 수업
+  - example_ko: 대수는 수학의 한 부문입니다.
+- id: 33822 | level: N1 | [扶養 / ふよう , 彼は扶養家族が多い。]
+  - meaning_ko: 지원하다
+  - example_ko: 그는 부양가족이 많다.
+- id: 33831 | level: N1 | [ふらふら / ふらふら , 今日はちょっとふらふらする。]
+  - meaning_ko: 발이 불안정하다
+  - example_ko: 오늘은 조금 흔들린다.
+- id: 33837 | level: N1 | [ぶらぶら / ぶらぶら , 彼らは海岸をぶらぶらと歩いた。]
+  - meaning_ko: 무겁게 매달려 있다
+  - example_ko: 그들은 해안을 걸어 다녔다.
+- id: 33842 | level: N1 | [振り返る / ふりかえる , 後ろを振り返るな。]
+  - meaning_ko: 고개를 돌리다
+  - example_ko: 뒤를 돌아보지 마.
+- id: 33847 | level: N1 | [振り出し / ふりだし , 振り出しに戻ってしまった。]
+  - meaning_ko: 시초
+  - example_ko: 뿌려 돌아왔다.
+- id: 33851 | level: N1 | [不良 / ふりょう , 不良品ではないかと思います。]
+  - meaning_ko: 나쁜 상태
+  - example_ko: 불량품이 아닐까 생각합니다.
+- id: 33856 | level: N1 | [浮力 / ふりょく , 塩水の方が淡水よりも浮力が大きい。]
+  - meaning_ko: 부력
+  - example_ko: 소금물이 담수보다 부력이 크다.
+- id: 33862 | level: N1 | [武力 / ぶりょく , 彼には武力と財力がある。]
+  - meaning_ko: 무장한 힘
+  - example_ko: 그에게는 무력과 재력이 있다.
+- id: 33866 | level: N1 | [ブル / ブル , トランプを樫のテーブルに置いて。]
+  - meaning_ko: 황소
+  - example_ko: 카드 놀이를 오크 테이블에 놓습니다.
+- id: 33872 | level: N1 | [震わせる / ふるわせる , ]
+  - meaning_ko: 흔들리다
+- id: 33876 | level: N1 | [無礼 / ぶれい , 彼は無礼を詫びた。]
+  - meaning_ko: 무례한
+  - example_ko: 그는 무례를 사과했다.
+- id: 33880 | level: N1 | [付録 / ふろく , 詳しくは別冊付録をご覧ください。]
+  - meaning_ko: 충수
+  - example_ko: 자세한 내용은 별책 부록을 참조하십시오.
+- id: 33884 | level: N1 | [フロント / フロント , フロントの番号は一番です。]
+  - meaning_ko: 앞쪽
+  - example_ko: 프런트의 번호는 제일입니다.
+- id: 33888 | level: N1 | [憤慨 / ふんがい , 彼女は侮辱されて憤慨した。]
+  - meaning_ko: 분개
+  - example_ko: 그녀는 모욕받고 분개했다.
+- id: 33892 | level: N1 | [文化財 / ぶんかざい , この建物は国の文化財です。]
+  - meaning_ko: 문화재
+  - example_ko: 이 건물은 나라의 문화재입니다.
+- id: 33896 | level: N1 | [分業 / ぶんぎょう , 分業による効率化は近代文明の基礎である。]
+  - meaning_ko: 노동 분업
+  - example_ko: 분업에 의한 효율화는 근대 문명의 기초이다.
+- id: 33899 | level: N1 | [文語 / ぶんご , 文語と口語の違いを理解すると、表現の幅が広がる。]
+  - meaning_ko: 서면 언어
+  - example_ko: 문어와 구어의 차이를 이해하면 표현의 폭이 넓어진다.
+- id: 33904 | level: N1 | [分散 / ぶんさん , 私は毎朝３０分散歩をすることにしている。]
+  - meaning_ko: 분산
+  - example_ko: 매일 아침 30분 산책을 하기로 하고 있다.
+- id: 33908 | level: N1 | [分子 / ぶんし , 有機物というのは大きな分子から形成されている。]
+  - meaning_ko: 분자
+  - example_ko: 유기물은 큰 분자로 형성됩니다.
+- id: 33912 | level: N1 | [紛失 / ふんしつ , 多額の金が紛失した。]
+  - meaning_ko: 뭔가를 잃고
+  - example_ko: 많은 돈이 분실되었다.
+- id: 33916 | level: N1 | [噴出 / ふんしゅつ , 間欠泉は２時間毎に湯を噴出する。]
+  - meaning_ko: 분출
+  - example_ko: 간헐천은 2시간마다 물을 분출한다.
+- id: 33919 | level: N1 | [文書 / ぶんしょ , 別紙の注文書の通り注文いたします。]
+  - meaning_ko: 문서
+  - example_ko: 별지 주문서대로 주문하겠습니다.
+- id: 33924 | level: N1 | [紛争 / ふんそう , 彼らはその紛争を終わらせた。]
+  - meaning_ko: 논쟁
+  - example_ko: 그들은 그 분쟁을 끝냈다.
+- id: 33927 | level: N1 | [ふんだん / ふんだん , ]
+  - meaning_ko: 풍부한
+- id: 33931 | level: N1 | [分担 / ぶんたん , タクシー代は君と分担しよう。]
+  - meaning_ko: 할당
+  - example_ko: 택시 요금은 너와 분담하자.
+- id: 33936 | level: N1 | [奮闘 / ふんとう , 暮らしのために奮闘している。]
+  - meaning_ko: 힘든 투쟁
+  - example_ko: 생활을 위해 분투하고 있다.
+- id: 33940 | level: N1 | [分配 / ぶんぱい , 彼らは利益を公平に分配した。]
+  - meaning_ko: 분할
+  - example_ko: 그들은 이익을 공정하게 분배했다.
+- id: 33944 | level: N1 | [分母 / ぶんぼ , 充分母乳を飲んでくれません。]
+  - meaning_ko: 분모
+  - example_ko: 충분히 모유를 마시지 않습니다.
+- id: 33948 | level: N1 | [粉末 / ふんまつ , アルミニウム、マグネシウム、シリコンなどの粉末が爆発する。]
+  - meaning_ko: 미세 분말
+  - example_ko: 알루미늄, 마그네슘, 실리콘 등의 분말이 폭발한다.
+- id: 33952 | level: N1 | [分離 / ぶんり , 最高裁が人種分離教育を攻撃。]
+  - meaning_ko: 분리
+  - example_ko: 대법원이 인종 분리 교육을 공격.
+- id: 33956 | level: N1 | [分裂 / ぶんれつ , 党派は二つに分裂した。]
+  - meaning_ko: 나뉘다
+  - example_ko: 당파는 두 가지로 분열했다.
+- id: 33960 | level: N1 | [ペア / ペア , 私はテニスで彼とペアを組んだ。]
+  - meaning_ko: 쌍
+  - example_ko: 나는 그와 테니스를 쳤다.
+- id: 33964 | level: N1 | [兵器 / へいき , 彼が核兵器は平和への脅威であると論じた。]
+  - meaning_ko: 무기
+  - example_ko: 그가 핵무기는 평화에 대한 위협이라고 논했다.
+- id: 33968 | level: N1 | [閉口 / へいこう , 君のわがままには閉口する。]
+  - meaning_ko: 입 다물다
+  - example_ko: 너의 제대로는 폐구한다.
+- id: 33972 | level: N1 | [閉鎖 / へいさ , 彼らはその学校の閉鎖について討論した。]
+  - meaning_ko: 폐쇄
+  - example_ko: 그들은 그 학교의 폐쇄에 대해 토론했다.
+- id: 33973 | level: N1 | [兵士 / へいし , 僕らは兵士のふりをしようよ。]
+  - meaning_ko: 군인
+  - example_ko: 우리는 병사의 척하자.
+- id: 33980 | level: N1 | [平常 / へいじょう , 平常通り営業いたします。]
+  - meaning_ko: 정상
+  - example_ko: 평상시대로 영업합니다.
+- id: 33984 | level: N1 | [平方 / へいほう , 工場の面積は１０００平方メートルだ。]
+  - meaning_ko: 정사각형(예:
+  - example_ko: 공장 면적은 1000㎡이다.
+- id: 33987 | level: N1 | [並列 / へいれつ , ]
+  - meaning_ko: 준비
+- id: 33991 | level: N1 | [ベース / ベース , 彼女は、あのベースが好き。]
+  - meaning_ko: 베이스
+  - example_ko: 그녀는 그베이스를 좋아합니다.
+- id: 33996 | level: N1 | [辟易 / へきえき , 彼は人付き合いに辟易している。]
+  - meaning_ko: 질겁
+  - example_ko: 그는 사람 사귀기에 견딜 수 있다.
+- id: 34000 | level: N1 | [ぺこぺこ / ぺこぺこ , お腹がぺこぺこです。]
+  - meaning_ko: 엷은 황갈색
+  - example_ko: 배고프다.
+- id: 34004 | level: N1 | [ベスト / ベスト , 有名作家はまたベストセラー書を著した。]
+  - meaning_ko: 최상의
+  - example_ko: 유명 작가는 또한 베스트셀러 책을 저술했다.
+- id: 34007 | level: N1 | [ベストセラー / ベストセラー , 有名作家はまたベストセラー書を著した。]
+  - meaning_ko: 베스트셀러
+  - example_ko: 유명 작가는 또한 베스트셀러 책을 저술했다.
+- id: 34010 | level: N1 | [隔たる / へだたる , ]
+  - meaning_ko: 멀어지다
+- id: 34015 | level: N1 | [縁 / へり , 腐れ縁と思ってあきらめる。]
+  - meaning_ko: 가장자리
+  - example_ko: 썩은 인연이라고 생각하고 포기한다.
+- id: 34021 | level: N1 | [へりくだる / へりくだる , ]
+  - meaning_ko: 자신을 비하하고 듣는 사람을 칭찬하는 것
+- id: 34026 | level: N1 | [弁解 / べんかい , 弁解しても無駄だ。]
+  - meaning_ko: 설명
+  - example_ko: 변명해도 낭비다.
+- id: 34031 | level: N1 | [変革 / へんかく , 政府は根本的な変革をしなければならない。]
+  - meaning_ko: 변화
+  - example_ko: 정부는 근본적인 변혁을 해야 한다.
+- id: 34035 | level: N1 | [返還 / へんかん , ]
+  - meaning_ko: 반품
+- id: 34038 | level: N1 | [便宜 / べんぎ , 公衆の便宜は尊重されねばならない。]
+  - meaning_ko: 편의
+  - example_ko: 공중의 편의는 존중되어야 한다.
+- id: 34042 | level: N1 | [偏見 / へんけん , 彼らは偏見と戦った。]
+  - meaning_ko: 편견
+  - example_ko: 그들은 편견과 싸웠다.
+- id: 34047 | level: N1 | [弁護 / べんご , 僕が過失を犯した時、彼は弁護してくれた。]
+  - meaning_ko: 방어
+  - example_ko: 내가 과실을 저질렀을 때 그는 변호해 주었다.
+- id: 34052 | level: N1 | [返済 / へんさい , 彼は返済能力がないと宣告された。]
+  - meaning_ko: 반환
+  - example_ko: 그는 상환 능력이 없다고 선고되었다.
+- id: 34060 | level: N1 | [弁償 / べんしょう , 弁償させてくれよ。]
+  - meaning_ko: 보상
+  - example_ko: 변상시켜줘.
+- id: 34063 | level: N1 | [変遷 / へんせん , 表面上、本書の大部分は一連の事例の変遷を記録したものである。]
+  - meaning_ko: 변화
+  - example_ko: 표면상, 이 책의 대부분은 일련의 사례의 변천을 기록한 것이다.
+- id: 34067 | level: N1 | [返答 / へんとう , 彼女は返答しなかった。]
+  - meaning_ko: 회신하다
+  - example_ko: 그녀는 대답하지 않았다.
+- id: 34071 | level: N1 | [変動 / へんどう , 人口は変動しないでいる。]
+  - meaning_ko: 변화
+  - example_ko: 인구는 변동하지 않는다.
+- id: 34075 | level: N1 | [弁論 / べんろん , 勿論彼女は弁論大会に参加すると思った。]
+  - meaning_ko: 논의
+  - example_ko: 물론 그녀는 변론 대회에 참가할 것이라고 생각했다.
+- id: 34083 | level: N1 | [穂 / ほ , 話の接ぎ穂がなくて困った。]
+  - meaning_ko: 귀 (식물의)
+  - example_ko: 이야기의 이삭이 없어서 곤란했다.
+- id: 34088 | level: N1 | [保育 / ほいく , しげみちゃんを保育園に迎えに行ってもらえる？]
+  - meaning_ko: 육아
+  - example_ko: 시게미를 보육원에 맞이하러 갈 수 있습니까?
+- id: 34093 | level: N1 | [ボイコット / ボイコット , 彼はバスのボイコット運動を組織したのである。]
+  - meaning_ko: 보이콧
+  - example_ko: 그는 버스의 보이콧 운동을 조직한 것이다.
+- id: 34098 | level: N1 | [ポイント / ポイント , チェックポイントを教えてください。]
+  - meaning_ko: 가리키다
+  - example_ko: 체크포인트를 알려주세요.
+- id: 34108 | level: N1 | [法案 / ほうあん , 野党は所得税減税法案を提出した。]
+  - meaning_ko: 법안(법률)
+  - example_ko: 야당은 소득세 감세법안을 제출했다.
+- id: 34113 | level: N1 | [防衛 / ぼうえい , 防衛者達は強い抵抗を見せた。]
+  - meaning_ko: 방어
+  - example_ko: 방어자들은 강한 저항을 보였다.
+- id: 34117 | level: N1 | [防火 / ぼうか , 私たちは昨日防火訓練をした。]
+  - meaning_ko: 화재 예방
+  - example_ko: 우리는 어제 방화 훈련을 했다.
+- id: 34122 | level: N1 | [崩壊 / ほうかい , 床が崩壊した。]
+  - meaning_ko: 무너지다
+  - example_ko: 바닥이 붕괴되었다.
+- id: 34127 | level: N1 | [妨害 / ぼうがい , 彼は他人の私事を妨害する。]
+  - meaning_ko: 방해
+  - example_ko: 그는 다른 사람의 사기를 방해한다.
+- id: 34131 | level: N1 | [法学 / ほうがく , 彼は法学修士の学位を得た。]
+  - meaning_ko: 법
+  - example_ko: 그는 법학 석사 학위를 받았다.
+- id: 34137 | level: N1 | [封建 / ほうけん , 彼を「サー」と呼ぶのは少し封建的に思える。]
+  - meaning_ko: 봉건주의적인
+  - example_ko: 그를 '사'라고 부르는 것은 조금 봉건적으로 보인다.
+- id: 34144 | level: N1 | [豊作 / ほうさく , 毎年小麦は豊作だ。]
+  - meaning_ko: 풍성한 수확
+  - example_ko: 매년 밀의 수확이 좋습니다.
+- id: 34146 | level: N1 | [方策 / ほうさく , 正直は最良の方策。]
+  - meaning_ko: 계획
+  - example_ko: 정직은 최선의 방책.
+- id: 34150 | level: N1 | [奉仕 / ほうし , 彼は数週間共同募金運動に奉仕した。]
+  - meaning_ko: 출석
+  - example_ko: 그는 몇 주 동안 공동 모금 운동에 봉사했다.
+- id: 34157 | level: N1 | [方式 / ほうしき , 彼は新しい方式を編み出した。]
+  - meaning_ko: 형태
+  - example_ko: 그는 새로운 공식을 짜냈다.
+- id: 34167 | level: N1 | [放射 / ほうしゃ , 今回の雨には放射能はない。]
+  - meaning_ko: 방사
+  - example_ko: 이번 비에는 방사능은 없다.
+- id: 34169 | level: N1 | [放射能 / ほうしゃのう , 今回の雨には放射能はない。]
+  - meaning_ko: 방사능
+  - example_ko: 이번 비에는 방사능은 없다.
+- id: 34173 | level: N1 | [報酬 / ほうしゅう , 報酬を刈り取る。]
+  - meaning_ko: 보수
+  - example_ko: 보상을 받으세요.
+- id: 34177 | level: N1 | [放出 / ほうしゅつ , ダムが決壊し大量の水が下流域に放出された。]
+  - meaning_ko: 풀어 주다
+  - example_ko: 댐이 파괴되었고 대량의 물이 하류 지역으로 방출되었다.
+- id: 34181 | level: N1 | [報じる / ほうじる , ]
+  - meaning_ko: 알리다
+- id: 34185 | level: N1 | [報ずる / ほうずる , ]
+  - meaning_ko: 알리다
+- id: 34189 | level: N1 | [紡績 / ぼうせき , ]
+  - meaning_ko: 제사
+- id: 34194 | level: N1 | [呆然 / ぼうぜん , 周りの人は呆然としていた。]
+  - meaning_ko: 어안이 벙벙한
+  - example_ko: 주위의 사람은 어리석었다.
+- id: 34202 | level: N1 | [放置 / ほうち , とんでもない欠陥が放置されてた。]
+  - meaning_ko: 그대로 떠나다
+  - example_ko: 터무니없는 결함이 방치되었습니다.
+- id: 34205 | level: N1 | [膨張 / ぼうちょう , 水は熱で膨張する。]
+  - meaning_ko: 확장
+  - example_ko: 물은 열로 팽창한다.
+- id: 34209 | level: N1 | [法廷 / ほうてい , 法廷は来週開廷される。]
+  - meaning_ko: 법정
+  - example_ko: 법정은 다음 주 개정된다.
+- id: 34211 | level: N1 | [報道 / ほうどう , 報道の自由は阻害されてはならない。]
+  - meaning_ko: 적용 범위
+  - example_ko: 보도의 자유는 저해되어서는 안된다.
+- id: 34214 | level: N1 | [冒頭 / ぼうとう , 彼はほんの冒頭部分を書き終えた。]
+  - meaning_ko: 시작
+  - example_ko: 그는 단지 처음 부분을 쓰고 끝났다.
+- id: 34218 | level: N1 | [暴動 / ぼうどう , 暴動はすぐに鎮められた。]
+  - meaning_ko: 반란
+  - example_ko: 폭동은 곧바로 진정되었다.
+- id: 34224 | level: N1 | [褒美 / ほうび , 褒美をやろう。]
+  - meaning_ko: 보상
+  - example_ko: 포상을 하자.
+- id: 34234 | level: N1 | [暴風 / ぼうふう , 暴風雨には雷が伴った。]
+  - meaning_ko: 폭풍
+  - example_ko: 폭풍우에는 번개가 동반되었다.
+- id: 34238 | level: N1 | [葬る / ほうむる , ]
+  - meaning_ko: 묻다
+- id: 34249 | level: N1 | [放り込む / ほうりこむ , ]
+  - meaning_ko: 에 던져
+- id: 34256 | level: N1 | [放り出す / ほうりだす , 静かにしていろ。さもないとここから放り出すぞ。]
+  - meaning_ko: 버리다
+  - example_ko: 조용히 해라. 그렇지 않으면 여기에서 내보낼거야.
+- id: 34261 | level: N1 | [暴力 / ぼうりょく , 暴力犯罪は郊外にも広がった。]
+  - meaning_ko: 폭행
+  - example_ko: 폭력범죄는 교외에도 퍼졌다.
+- id: 34270 | level: N1 | [飽和 / ほうわ , ゲーム機の国内市場は飽和状態で、大きなヒットは期待できない。]
+  - meaning_ko: 포화
+  - example_ko: 게임기 국내 시장은 포화 상태로 큰 히트는 기대할 수 없다.
+- id: 34274 | level: N1 | [ホース / ホース , 彼はホースを使って庭に水を撒いていました。]
+  - meaning_ko: 호스
+  - example_ko: 그는 호스를 사용하여 정원에 물을 뿌렸다.
+- id: 34278 | level: N1 | [ポーズ / ポーズ , 彼女は彼のプロポーズを断ったそうだ。]
+  - meaning_ko: 정지시키다
+  - example_ko: 그녀는 그의 프로포즈를 거절했다고 한다.
+- id: 34283 | level: N1 | [ホール / ホール , 群衆がホールをうめつくした。]
+  - meaning_ko: 홀
+  - example_ko: 군중이 홀을 설레게 했다.
+- id: 34290 | level: N1 | [保温 / ほおん , ]
+  - meaning_ko: 따뜻함을 유지하다
+- id: 34295 | level: N1 | [捕獲 / ほかく , まれに、大きな有蹄動物を捕獲する。]
+  - meaning_ko: 포착
+  - example_ko: 드물게 큰 유제 동물을 잡는다.
+- id: 34298 | level: N1 | [保管 / ほかん , 貴重品は銀行に保管してある。]
+  - meaning_ko: 보관
+  - example_ko: 귀중품은 은행에 보관되어 있다.
+- id: 34303 | level: N1 | [補給 / ほきゅう , 補給が尽きはじめている。]
+  - meaning_ko: 공급
+  - example_ko: 보급이 다하기 시작했다.
+- id: 34308 | level: N1 | [補強 / ほきょう , 彼らは村を洪水から守るために堤防を補強した。]
+  - meaning_ko: 보강
+  - example_ko: 그들은 마을을 홍수로부터 보호하기 위해 제방을 강화했습니다.
+- id: 34313 | level: N1 | [募金 / ぼきん , 彼らは慈善募金を始めた。]
+  - meaning_ko: 모금 활동
+  - example_ko: 그들은 자선 모금을 시작했다.
+- id: 34321 | level: N1 | [牧師 / ぼくし , 牧師は十字架を作った。]
+  - meaning_ko: 목사
+  - example_ko: 목사는 십자가를 만들었다.
+- id: 34326 | level: N1 | [捕鯨 / ほげい , 国際的批判に直面して捕鯨をやめた国がいくつかある。]
+  - meaning_ko: 구타
+  - example_ko: 국제적 비판에 직면해 포경을 그만둔 나라가 몇 개 있다.
+- id: 34332 | level: N1 | [惚ける / ぼける , ]
+  - meaning_ko: 노쇠하다
+- id: 34335 | level: N1 | [保険 / ほけん , 保険料は幾らですか。]
+  - meaning_ko: 보험
+  - example_ko: 보험료는 얼마입니까?
+- id: 34343 | level: N1 | [母校 / ぼこう , 私たちは母校を訪れた。]
+  - meaning_ko: 모교
+  - example_ko: 우리는 모교를 방문했다.
+- id: 34348 | level: N1 | [母国 / ぼこく , 彼は母国を追放された。]
+  - meaning_ko: 자신의 고국
+  - example_ko: 그는 모국을 추방했다.
+- id: 34353 | level: N1 | [誇る / ほこる , 私には誇るべきものが何もない。]
+  - meaning_ko: 자랑하다
+  - example_ko: 나에게는 자랑해야 할 것이 없다.
+- id: 34357 | level: N1 | [綻びる / ほころびる , ]
+  - meaning_ko: 솔기 부분에서 분리되다
+- id: 34365 | level: N1 | [干し～ / ほし～ , ]
+  - meaning_ko: 건조 ~
+- id: 34369 | level: N1 | [ポジション / ポジション , 高い生産性は、市場でのポジションを強固にします。]
+  - meaning_ko: 위치
+  - example_ko: 높은 생산성은 시장에서의 위치를 ​​견고하게 만듭니다.
+- id: 34376 | level: N1 | [干し物 / ほしもの , ]
+  - meaning_ko: 건조세탁(옷
+- id: 34380 | level: N1 | [保守 / ほしゅ , 彼は保守寄りだ。]
+  - meaning_ko: 보수적인
+  - example_ko: 그는 유지 보수입니다.
+- id: 34384 | level: N1 | [補充 / ほじゅう , 空所を補充せよ。]
+  - meaning_ko: 완보
+  - example_ko: 공소를 보충하라.
+- id: 34389 | level: N1 | [補助 / ほじょ , 何か補助はありませんか？]
+  - meaning_ko: 보조
+  - example_ko: 어떤 도움이 없습니까?
+- id: 34394 | level: N1 | [舗装 / ほそう , この道路は未舗装で凸凹している。]
+  - meaning_ko: 포장
+  - example_ko: 이 도로는 비포장으로 요철하고 있다.
+- id: 34399 | level: N1 | [補足 / ほそく , 彼の説明に何か補足することがありますか。]
+  - meaning_ko: 보충
+  - example_ko: 그의 설명에 뭔가 보충할 수 있습니까?
+- id: 34404 | level: N1 | [墓地 / ぼち , 彼はこの墓地に埋葬されている。]
+  - meaning_ko: 묘지
+  - example_ko: 그는 이 묘지에 묻혀 있다.
+- id: 34408 | level: N1 | [発作 / ほっさ , 彼は心臓発作で死んだ。]
+  - meaning_ko: 맞다
+  - example_ko: 그는 심장마비로 죽었다.
+- id: 34412 | level: N1 | [没収 / ぼっしゅう , 私の免許は没収になった。]
+  - meaning_ko: 몰수
+  - example_ko: 나의 면허는 몰수가 되었다.
+- id: 34416 | level: N1 | [発足 / ほっそく , ]
+  - meaning_ko: 시작
+- id: 34420 | level: N1 | [ポット / ポット , 砂糖はポットにありますか。]
+  - meaning_ko: 냄비
+  - example_ko: 설탕은 냄비에 있습니까?
+- id: 34425 | level: N1 | [ほっぺた / ほっぺた , 彼のほっぺたは真っ赤だった。]
+  - meaning_ko: 볼
+  - example_ko: 그의 뺨은 새빨갛다.
+- id: 34430 | level: N1 | [ぼつぼつ / ぼつぼつ , ]
+  - meaning_ko: 서서히
+- id: 34435 | level: N1 | [没落 / ぼつらく , 欲の深さが彼を没落させた。]
+  - meaning_ko: 망치다
+  - example_ko: 욕심이 그를 몰락시켰다.
+- id: 34440 | level: N1 | [解ける / ほどける , 氷は解けると水に戻る。]
+  - meaning_ko: 풀리다
+  - example_ko: 얼음은 풀리면 물로 돌아온다.
+- id: 34444 | level: N1 | [施す / ほどこす , 人々に善行を施すのに積極的であれ。]
+  - meaning_ko: 주다
+  - example_ko: 사람들에게 선행을 베풀기 위해 적극적이든.
+- id: 34453 | level: N1 | [ほとり / ほとり , 湖のほとりの家は私の家です。]
+  - meaning_ko: 호수 부근
+  - example_ko: 호수 기슭의 집은 내 집입니다.
+- id: 34457 | level: N1 | [ぼやく / ぼやく , ]
+  - meaning_ko: 투덜거리다
+- id: 34463 | level: N1 | [ぼやける / ぼやける , ]
+  - meaning_ko: 희미해지다
+- id: 34466 | level: N1 | [保養 / ほよう , 彼らは去年の夏は山地の保養地へ行った。]
+  - meaning_ko: 건강 보존
+  - example_ko: 그들은 작년의 여름은 산지의 보양지에 갔다.
+- id: 34473 | level: N1 | [捕虜 / ほりょ , 捕虜は釈放された。]
+  - meaning_ko: 전쟁 포로
+  - example_ko: 포로는 석방되었다.
+- id: 34478 | level: N1 | [ボルト / ボルト , ボルトがバカになってる。]
+  - meaning_ko: 볼트
+  - example_ko: 볼트가 바보가 되어 있다.
+- id: 34482 | level: N1 | [滅びる / ほろびる , 剣を取る者は皆剣で滅びる。]
+  - meaning_ko: 망가지다
+  - example_ko: 검을 잡는 사람은 모두 검으로 멸한다.
+- id: 34486 | level: N1 | [滅ぼす / ほろぼす , 好奇心は身を滅ぼす。]
+  - meaning_ko: 파괴하다
+  - example_ko: 호기심은 몸을 멸한다.
+- id: 34489 | level: N1 | [本格 / ほんかく , 本格的に雨が降り出した。]
+  - meaning_ko: 예의
+  - example_ko: 본격적으로 비가 내렸다.
+- id: 34497 | level: N1 | [本館 / ほんかん , 別館は本館の北側にある。]
+  - meaning_ko: 본관
+  - example_ko: 별관은 본관의 북쪽에 있다.
+- id: 34502 | level: N1 | [本気 / ほんき , 本気ですか。]
+  - meaning_ko: 진지함
+  - example_ko: 진심인가요?
+- id: 34511 | level: N1 | [本国 / ほんごく , 日本国民は戦争を放棄している。]
+  - meaning_ko: 자기 나라
+  - example_ko: 일본 국민은 전쟁을 포기하고 있다.
+- id: 34516 | level: N1 | [本質 / ほんしつ , 親切心は礼儀の本質である。]
+  - meaning_ko: 본질
+  - example_ko: 친절은 예의의 본질이다.
+- id: 34520 | level: N1 | [本体 / ほんたい , なんであれ物事の本体を捕らえる事が肝心だ。]
+  - meaning_ko: 물질
+  - example_ko: 어쨌든 사물의 본체를 잡는 것이 중요하다.
+- id: 34527 | level: N1 | [本音 / ほんね , 彼は本音を出した。]
+  - meaning_ko: (그의) 진짜 의도
+  - example_ko: 그는 본심을 냈다.
+- id: 34532 | level: N1 | [本能 / ほんのう , 彼は闘争本能が強い。]
+  - meaning_ko: 본능
+  - example_ko: 그는 투쟁 본능이 강하다.
+- id: 34537 | level: N1 | [本場 / ほんば , 本場のプレッツェルが食べてみたくなった！]
+  - meaning_ko: 집
+  - example_ko: 본고장의 프레첼이 먹고 싶어졌다!
+- id: 34542 | level: N1 | [ポンプ / ポンプ , 心臓とポンプは似かよっている。]
+  - meaning_ko: 펌프
+  - example_ko: 심장과 펌프는 비슷합니다.
+- id: 34548 | level: N1 | [本文 / ほんぶん , ＥＲＲＯＲ：本文がありません！]
+  - meaning_ko: (문서의) 텍스트
+  - example_ko: ERROR: 본문이 없습니다!
+- id: 34552 | level: N1 | [本名 / ほんみょう , トムの本名知ってる？]
+  - meaning_ko: 실명
+  - example_ko: 톰의 실명을 아십니까?
+- id: 34557 | level: N1 | [マーク / マーク , あなたの引いたカードは赤のマークですね。]
+  - meaning_ko: 표시
+  - example_ko: 당신이 당긴 카드는 빨간색 표시입니다.
+- id: 34563 | level: N1 | [マイ～ / マイ～ , ]
+  - meaning_ko: 내 ~
+- id: 34567 | level: N1 | [マイクロフォン / マイクロフォン , ]
+  - meaning_ko: 마이크로폰
+- id: 34573 | level: N1 | [埋蔵 / まいぞう , 彼らの埋蔵された宝物を求めて砂漠を探索した。]
+  - meaning_ko: 매장된 재산
+  - example_ko: 그들의 매장된 보물을 찾아 사막을 탐험했다.
+- id: 34579 | level: N1 | [舞う / まう , 評判どおりに振る舞う。]
+  - meaning_ko: 춤을 추다
+  - example_ko: 평판대로 행동한다.
+- id: 34585 | level: N1 | [真上 / まうえ , 私の寝室はちょうどこの真上にある。]
+  - meaning_ko: 바로 위에
+  - example_ko: 나의 침실은 다만 바로 위에 있다.
+- id: 34590 | level: N1 | [前売 / まえうり , 予約は全て前売りである。]
+  - meaning_ko: 예매
+  - example_ko: 예약은 전부 예매이다.
+- id: 34595 | level: N1 | [前置き / まえおき , 彼は前置きとして、すこし話した。]
+  - meaning_ko: 머리말
+  - example_ko: 그는 전치로, 조금 말했다.
+- id: 34600 | level: N1 | [任す / まかす , 彼は近く辞任するといううわさだ。]
+  - meaning_ko: 맡기다
+  - example_ko: 그는 가까이 사임한다는 소문이다.
+- id: 34606 | level: N1 | [負かす / まかす , 彼を打ち負かすのは不可能だ。]
+  - meaning_ko: 패배하다
+  - example_ko: 그를 물리치는 것은 불가능하다.
+- id: 34612 | level: N1 | [賄う / まかなう , ]
+  - meaning_ko: 보드를 주다
+- id: 34617 | level: N1 | [紛らわしい / まぎらわしい , これはちょっと紛らわしいな。]
+  - meaning_ko: 혼란스러운
+  - example_ko: 이것은 조금 혼란 스럽다.
+- id: 34624 | level: N1 | [紛れる / まぎれる , ]
+  - meaning_ko: 우회하다
+- id: 34628 | level: N1 | [真心 / まごころ , 彼女は彼に真心こめて感謝しました。]
+  - meaning_ko: 성실
+  - example_ko: 그녀는 그에게 진심으로 감사했습니다.
+- id: 34633 | level: N1 | [まごつく / まごつく , ]
+  - meaning_ko: 혼란스러워하다
+- id: 34638 | level: N1 | [誠 / まこと , 彼女は約束を誠実に守った。]
+  - meaning_ko: 진실
+  - example_ko: 그녀는 약속을 성실하게 지켰다.
+- id: 34642 | level: N1 | [誠に / まことに , 誠に、誠に、あなたに告げます。]
+  - meaning_ko: 물론
+  - example_ko: 진심으로, 진심으로, 당신에게 말합니다.
+- id: 34647 | level: N1 | [まさしく / まさしく , 彼はまさしく王様だった。]
+  - meaning_ko: 확실히
+  - example_ko: 그는 바로 왕이었다.
+- id: 34652 | level: N1 | [勝る / まさる , 文は武に勝る。]
+  - meaning_ko: 탁월하다
+  - example_ko: 문장은 타케를 이긴다.
+- id: 34657 | level: N1 | [～増し / ～まし , ]
+  - meaning_ko: ~ 증가
+- id: 34662 | level: N1 | [交える / まじえる , ]
+  - meaning_ko: 섞다
+- id: 34667 | level: N1 | [真下 / ました , 私の部屋はこの真下です。]
+  - meaning_ko: 바로 아래
+  - example_ko: 내 방은 이 바로 아래입니다.
+- id: 34670 | level: N1 | [まして / まして , 「ありがとう」「どういたしまして」]
+  - meaning_ko: 한층
+  - example_ko: "감사합니다" "무슨 일이야"
+- id: 34673 | level: N1 | [交わる / まじわる , 彼らと交わるな。]
+  - meaning_ko: 건너다
+  - example_ko: 그들과 어울리지 마라.
+- id: 34684 | level: N1 | [麻酔 / ますい , 麻酔の注射をします。]
+  - meaning_ko: 마취
+  - example_ko: 마취 주사를 합니다.
+- id: 34686 | level: N1 | [またがる (うまを～) / またがる (うまを～) , ]
+  - meaning_ko: 걸터앉다
+- id: 34689 | level: N1 | [待ち合わせ / まちあわせ , どこで待ち合わせしようか。]
+  - meaning_ko: 약속
+  - example_ko: 어디에서 만날 것인가?
+- id: 34696 | level: N1 | [待ち遠しい / まちどおしい , 彼は彼女の到着が待ち遠しい。]
+  - meaning_ko: 기대하고있다
+  - example_ko: 그는 그녀의 도착이 기다리고 있습니다.
+- id: 34703 | level: N1 | [待ち望む / まちのぞむ , ]
+  - meaning_ko: 애타게 찾다
+- id: 34707 | level: N1 | [まちまち / まちまち , ポテトの塩加減がまちまちだな。]
+  - meaning_ko: 다양한
+  - example_ko: 감자의 소금 가감이 마을 거리다.
+- id: 34714 | level: N1 | [末期 / まっき , 今年、祖父を末期癌で亡くしました。]
+  - meaning_ko: 임종
+  - example_ko: 올해 할아버지를 말기암으로 사망했습니다.
+- id: 34721 | level: N1 | [真っ二つ / まっぷたつ , トムはリンゴを真っ二つに切った。]
+  - meaning_ko: 두 개의 동일한 부분으로
+  - example_ko: 톰은 사과를 둘로 자른다.
+- id: 34725 | level: N1 | [まと / まと , 本はひとまとめに束ねてあった。]
+  - meaning_ko: 표시
+  - example_ko: 책은 한꺼번에 묶여 있었다.
+- id: 34730 | level: N1 | [纏まり / まとまり , ]
+  - meaning_ko: 결론
+- id: 34735 | level: N1 | [纏め / まとめ , 彼は日本の民話を教科書用に纏めた。]
+  - meaning_ko: 합의
+  - example_ko: 그는 일본의 민화를 교과서용으로 모았다.
+- id: 34739 | level: N1 | [免れる / まぬがれる , 又しても死を免れることができた。]
+  - meaning_ko: 탈출하다
+  - example_ko: 다시 죽음을 면할 수 있었다.
+- id: 34744 | level: N1 | [招き / まねき , 彼女は私を部屋に招き入れた。]
+  - meaning_ko: 초대
+  - example_ko: 그녀는 나를 방에 초대했다.
+- id: 34747 | level: N1 | [瞬き / まばたき , 夜空に星が瞬き、静寂が広がる。]
+  - meaning_ko: 눈짓
+  - example_ko: 밤하늘에 별이 깜박이고 정적이 퍼진다.
+- id: 34751 | level: N1 | [麻痺 / まひ , 彼女は両足が麻痺している。]
+  - meaning_ko: 마비
+  - example_ko: 그녀는 양 다리가 마비되어 있다.
+- id: 34760 | level: N1 | [～まみれ / ～まみれ , ]
+  - meaning_ko: (에 의해
+- id: 34765 | level: N1 | [眉 / まゆ , 出てきた男は眉をひそめていた。]
+  - meaning_ko: 눈썹
+  - example_ko: 나온 남자는 눈썹을 찌푸렸다.
+- id: 34770 | level: N1 | [鞠 / まり , ]
+  - meaning_ko: 공
+- id: 34775 | level: N1 | [丸ごと / まるごと , 彼女は１課を丸ごと暗記することで満点を取った。]
+  - meaning_ko: 전체적으로
+  - example_ko: 그녀는 1과를 통째로 암기함으로써 만점을 취했다.
+- id: 34779 | level: N1 | [まるっきり / まるっきり , 彼についてはまるっきり分からない。]
+  - meaning_ko: 완전히
+  - example_ko: 그에 대해서는 확실히 모른다.
+- id: 34787 | level: N1 | [丸々 / まるまる , 明日で丸々１週間雨が降り続く事になっているでしょう。]
+  - meaning_ko: 완전히
+  - example_ko: 내일에 통째로 1주일 비가 계속 내려가고 있을 것입니다.
+- id: 34792 | level: N1 | [丸める / まるめる , 猫は背中を丸める。]
+  - meaning_ko: 둥글게 만들다
+  - example_ko: 고양이는 등을 둥글게 한다.
+- id: 34797 | level: N1 | [満月 / まんげつ , 満月が空にさえている。]
+  - meaning_ko: 만월
+  - example_ko: 보름달이 비어 있다.
+- id: 34802 | level: N1 | [満場 / まんじょう , 彼のばかげた提案が満場一致で承認された。]
+  - meaning_ko: 만장일치로
+  - example_ko: 그의 어리석은 제안이 만장일치로 승인되었습니다.
+- id: 34808 | level: N1 | [真ん前 / まんまえ , 彼は私の真ん前にすわった。]
+  - meaning_ko: 바로 앞에
+  - example_ko: 그는 나의 앞에 탔다.
+- id: 34813 | level: N1 | [真ん丸い / まんまるい , ]
+  - meaning_ko: 완벽하게 원형
+- id: 34820 | level: N1 | [真ん円い / まんまるい , ]
+  - meaning_ko: 완벽하게 둥글다
+- id: 34825 | level: N1 | [～味 / ～み , ]
+  - meaning_ko: ~캐스트(미각)
+- id: 34830 | level: N1 | [見合い / みあい , 私の両親はお見合い結婚でした。]
+  - meaning_ko: 정식 결혼 인터뷰
+  - example_ko: 부모님은 맞는 결혼이었습니다.
+- id: 34836 | level: N1 | [見合わせる / みあわせる , 東北・秋田新幹線が運転を見合わせるなど交通も混乱した。]
+  - meaning_ko: 눈빛 교환하기
+  - example_ko: 도호쿠·아키타 신칸센이 운전을 맞추는 등 교통도 혼란했다.
+- id: 34841 | level: N1 | [見落とす / みおとす , その家は教会の向かいだから見落とすはずはない。]
+  - meaning_ko: 간과하다
+  - example_ko: 그 집은 교회 맞은편이기 때문에 간과하지 않을 것입니다.
+- id: 34845 | level: N1 | [未開 / みかい , その島には未開種族がいる。]
+  - meaning_ko: 야만인의 땅
+  - example_ko: 그 섬에는 미개종족이 있다.
+- id: 34849 | level: N1 | [味覚 / みかく , 君はとてもいい味覚をしてるよ。]
+  - meaning_ko: 맛
+  - example_ko: 너는 아주 좋은 미각을 하고 있어.
+- id: 34856 | level: N1 | [幹 / みき , 博多発の新幹線が時間通りに到着した。]
+  - meaning_ko: (나무) 줄기
+  - example_ko: 하카타발 신칸센이 정시에 도착했다.
+- id: 34860 | level: N1 | [見苦しい / みぐるしい , 見苦しい言い訳はよせよ。]
+  - meaning_ko: 보기 흉한
+  - example_ko: 보기 흉한 변명은 좋지 않아.
+- id: 34865 | level: N1 | [見込み / みこみ , 僕らが勝利する見込みは十分ある。]
+  - meaning_ko: 잠재 고객
+  - example_ko: 우리가 승리할 전망은 충분하다.
+- id: 34872 | level: N1 | [未婚 / みこん , トムは未婚だった。]
+  - meaning_ko: 미혼
+  - example_ko: 톰은 미혼이었다.
+- id: 34876 | level: N1 | [未熟 / みじゅく , 娘は未熟児でした。]
+  - meaning_ko: 무경험
+  - example_ko: 딸은 미숙아였다.
+- id: 34881 | level: N1 | [微塵 / みじん , ]
+  - meaning_ko: 입자
+- id: 34886 | level: N1 | [水気 / みずけ , ]
+  - meaning_ko: 수분
+- id: 34893 | level: N1 | [ミスプリント / ミスプリント , ミスプリントのないような本はほとんどない。]
+  - meaning_ko: 오식
+  - example_ko: 미스프린트가 없는 책은 거의 없다.
+- id: 34898 | level: N1 | [みすぼらしい / みすぼらしい , 彼らはみすぼらしい小さな家に住んでいる。]
+  - meaning_ko: 초라한
+  - example_ko: 그들은 초라한 작은 집에 살고 있습니다.
+- id: 34902 | level: N1 | [ミセス / ミセス , ]
+  - meaning_ko: 부인
+- id: 34908 | level: N1 | [見せびらかす / みせびらかす , 見せびらかすなよ。]
+  - meaning_ko: 과시하다
+  - example_ko: 보여주지 마라.
+- id: 34910 | level: N1 | [見せ物 / みせもの , ]
+  - meaning_ko: 보여주다
+- id: 34920 | level: N1 | [満たす / みたす , 彼らはその条件を満たすことが出来なかった。]
+  - meaning_ko: 만족시키다
+  - example_ko: 그들은 그 조건을 충족시킬 수 없었다.
+- id: 34930 | level: N1 | [乱す / みだす , コンピューターは難しくて混乱する。]
+  - meaning_ko: 엉망으로 만들다
+  - example_ko: 컴퓨터는 어렵고 혼란 스럽습니다.
+- id: 34935 | level: N1 | [乱れる / みだれる , 列は乱れることなく整然と進んでいった。]
+  - meaning_ko: 혼란스러워지다
+  - example_ko: 줄은 흐트러지지 않고 정연하게 진행되어 갔다.
+- id: 34941 | level: N1 | [未知 / みち , Ｘ記号は数学ではたいてい未知数を表す。]
+  - meaning_ko: 아직 알려지지 않음
+  - example_ko: X 기호는 수학에서 대부분 미지수를 나타낸다.
+- id: 34947 | level: N1 | [身近 / みぢか , 身近にいないと忘れ去られる。]
+  - meaning_ko: 자신 근처에
+  - example_ko: 가까이 있지 않으면 잊혀진다.
+- id: 34952 | level: N1 | [導く / みちびく , 教育は人間を人間として平和と幸福へ導く唯一の道であります。]
+  - meaning_ko: 안내를 받다
+  - example_ko: 교육은 인간을 인간으로서 평화와 행복으로 인도하는 유일한 길입니다.
+- id: 34956 | level: N1 | [密集 / みっしゅう , そこは新しい家が密集する地域だ。]
+  - meaning_ko: 군중
+  - example_ko: 거기는 새로운 집이 밀집하는 지역이다.
+- id: 34962 | level: N1 | [密接 / みっせつ , 両国はお互いに密接な関係がある。]
+  - meaning_ko: 연결됨
+  - example_ko: 양국은 서로 밀접한 관계가 있다.
+- id: 34965 | level: N1 | [密度 / みつど , 日本は人口密度が高い国である。]
+  - meaning_ko: 밀도
+  - example_ko: 일본은 인구밀도가 높은 나라다.
+- id: 34968 | level: N1 | [見積もり / みつもり , 実際にかかった費用は見積もりより高かった。]
+  - meaning_ko: 견적
+  - example_ko: 실제로 걸린 비용은 견적보다 높았다.
+- id: 34975 | level: N1 | [未定 / みてい , 彼の計画はまだ未定だ。]
+  - meaning_ko: 아직 고쳐지지 않았어
+  - example_ko: 그의 계획은 아직 미정이다.
+- id: 34980 | level: N1 | [見通し / みとおし , 成功は明るい見通しがある。]
+  - meaning_ko: 관점
+  - example_ko: 성공은 밝은 장래성이 있다.
+- id: 34986 | level: N1 | [見なす / みなす , 私達は、その計画を価値あるものと見なす。]
+  - meaning_ko: 으로 고려하다
+  - example_ko: 우리는 그 계획을 가치있는 것으로 간주합니다.
+- id: 34990 | level: N1 | [源 / みなもと , 米国は天然資源に富んでいる。]
+  - meaning_ko: 원천
+  - example_ko: 미국은 천연 자원이 풍부하다.
+- id: 34997 | level: N1 | [見習う / みならう , 彼女はお姉さんのお行儀を見習うとよい。]
+  - meaning_ko: 다른 사람의 모범을 따르다
+  - example_ko: 그녀는 언니의 행의를 견습하는 것이 좋다.
+- id: 35002 | level: N1 | [身なり / みなり , 身なりを整えなさい。]
+  - meaning_ko: 개인적인 외모
+  - example_ko: 옷차림을 정돈하십시오.
+- id: 35007 | level: N1 | [峰 / みね , その峰は雲の上にそびえている。]
+  - meaning_ko: 정점
+  - example_ko: 그 봉우리는 구름 위에 우뚝 솟습니다.
+- id: 35012 | level: N1 | [身の上 / みのうえ , 私の身の上話をしましょう。]
+  - meaning_ko: 자신의 미래
+  - example_ko: 내 몸의 상화를 하자.
+- id: 35017 | level: N1 | [見逃す / みのがす , 全力で奴らを見逃すんだ！]
+  - meaning_ko: 그리워하다
+  - example_ko: 전력으로 놈들을 놓치는 거야!
+- id: 35022 | level: N1 | [身の回り / みのまわり , これはみんな身の回り品ですか。]
+  - meaning_ko: 개인적인 외모
+  - example_ko: 이건 모두 몸을 돌고 있는 물건인가?
+- id: 35027 | level: N1 | [見計らう / みはからう , ]
+  - meaning_ko: 자기 마음대로 선택하다
+- id: 35030 | level: N1 | [見晴らし / みはらし , 霧が立ちこめて見晴らしがきかなかった。]
+  - meaning_ko: 보다
+  - example_ko: 안개가 일어나서 보기 좋지 않았다.
+- id: 35035 | level: N1 | [身振り / みぶり , 彼女は身振りを交えて話をした。]
+  - meaning_ko: 몸짓
+  - example_ko: 그녀는 몸짓을 섞어 이야기를 했다.
+- id: 35040 | level: N1 | [脈 / みゃく , 脈が遅いです。]
+  - meaning_ko: 맥박
+  - example_ko: 맥이 느립니다.
+- id: 35045 | level: N1 | [ミュージック / ミュージック , 私の大好きな音楽はポップミュージックだ。]
+  - meaning_ko: 음악
+  - example_ko: 내가 좋아하는 음악은 팝 음악이다.
+- id: 35051 | level: N1 | [未練 / みれん , 彼女にはまだ未練がある。]
+  - meaning_ko: 여전한 애정
+  - example_ko: 그녀는 아직 미련이 있다.
+- id: 35056 | level: N1 | [見渡す / みわたす , 町は見渡す限りの焼け野原であった。]
+  - meaning_ko: 밖을 내다보다
+  - example_ko: 마을은 내려다보는 한 불타는 들판이었다.
+- id: 35061 | level: N1 | [民宿 / みんしゅく , あの民宿なら、素泊まり５千円だよ。]
+  - meaning_ko: 관광객에게 숙박과 식사를 제공하는 개인 주택
+  - example_ko: 그 민박이라면, 숙박 5천엔이야.
+- id: 35065 | level: N1 | [民族 / みんぞく , 米国では多くの民族が生活している。]
+  - meaning_ko: 사람들
+  - example_ko: 미국에서는 많은 민족이 생활하고 있다.
+- id: 35072 | level: N1 | [民俗 / みんぞく , ]
+  - meaning_ko: 민속 풍습
+- id: 35077 | level: N1 | [無意味 / むいみ , 愛のない人生など全く無意味だ。]
+  - meaning_ko: 무의미한 말
+  - example_ko: 사랑이 없는 인생 등 완전히 무의미하다.
+- id: 35082 | level: N1 | [ムード / ムード , トムはムードメーカーだった。]
+  - meaning_ko: 분위기
+  - example_ko: 톰은 분위기 메이커였다.
+- id: 35087 | level: N1 | [無口 / むくち , 彼女は先天的な無口です。]
+  - meaning_ko: 말이 없음
+  - example_ko: 그녀는 선천적인 무구입니다.
+- id: 35092 | level: N1 | [婿 / むこ , 花婿は30歳です。]
+  - meaning_ko: 사위
+  - example_ko: 신랑은 30세입니다.
+- id: 35097 | level: N1 | [無効 / むこう , この証書は完全に無効である。]
+  - meaning_ko: 유효하지 않은
+  - example_ko: 이 증서는 완전히 무효이다.
+- id: 35102 | level: N1 | [無言 / むごん , 無言は承諾。]
+  - meaning_ko: 고요
+  - example_ko: 무언은 승낙.
+- id: 35107 | level: N1 | [無邪気 / むじゃき , 彼女は無邪気を装った。]
+  - meaning_ko: 무죄
+  - example_ko: 그녀는 순진한 옷을 입었다.
+- id: 35112 | level: N1 | [むしる / むしる , ぐはっ！？俺の貴重な頭髪を、むしるな！]
+  - meaning_ko: 뽑다
+  - example_ko: 구하! ? 나의 귀중한 머리카락을, 오히려 하지마!
+- id: 35117 | level: N1 | [結び / むすび , 友情が彼らを結びつけた。]
+  - meaning_ko: 종결
+  - example_ko: 우정이 그들을 연결했다.
+- id: 35122 | level: N1 | [結び付き / むすびつき , ]
+  - meaning_ko: 연결
+- id: 35126 | level: N1 | [結び付く / むすびつく , ]
+  - meaning_ko: 연결되거나 연관되다
+- id: 35128 | level: N1 | [結び付ける / むすびつける , 理論と実際を結び付けるべきだ。]
+  - meaning_ko: 결합하다
+  - example_ko: 이론과 실제를 연결해야 한다.
+- id: 35133 | level: N1 | [無線 / むせん , マルコーニは無線を発明した。]
+  - meaning_ko: 무선 전화
+  - example_ko: 마르코니는 무선을 발명했다.
+- id: 35142 | level: N1 | [無駄遣い / むだづかい , 無駄遣いをするな。]
+  - meaning_ko: 돈을 낭비하다
+  - example_ko: 낭비하지 마라.
+- id: 35146 | level: N1 | [無断 / むだん , 無断で欠席すべきではない。]
+  - meaning_ko: 허락 없이
+  - example_ko: 무단으로 결석해서는 안된다.
+- id: 35151 | level: N1 | [無知 / むち , 無知は幸福。]
+  - meaning_ko: 무지
+  - example_ko: 무지는 행복.
+- id: 35156 | level: N1 | [無茶 / むちゃ , それは、無茶だ。]
+  - meaning_ko: 터무니없는
+  - example_ko: 그것은 무차다.
+- id: 35160 | level: N1 | [無茶苦茶 / むちゃくちゃ , そんなの無茶苦茶だよ。]
+  - meaning_ko: 혼란스러운
+  - example_ko: 그런 것의 엉망이야.
+- id: 35166 | level: N1 | [空しい / むなしい , ]
+  - meaning_ko: 빈
+- id: 35170 | level: N1 | [無念 / むねん , 交通事故で息子を失ったことが無念でなりません。]
+  - meaning_ko: 억울함
+  - example_ko: 교통사고로 아들을 잃어버린 건 무념이 아니다.
+- id: 35176 | level: N1 | [無能 / むのう , 彼は医者として無能だ。]
+  - meaning_ko: 비효율성
+  - example_ko: 그는 의사로서 무능하다.
+- id: 35181 | level: N1 | [無闇に / むやみに , 無闇に語学の教科書を買い漁っても、勉強しなければ意味がない。]
+  - meaning_ko: 부당하게
+  - example_ko: 어둠 속에 어학 교과서를 사고 잡아도 공부하지 않으면 의미가 없다.
+- id: 35186 | level: N1 | [無用 / むよう , 無用の立ち入り禁止。]
+  - meaning_ko: 쓸모 없는
+  - example_ko: 무용의 출입 금지.
+- id: 35191 | level: N1 | [斑 / むら , 豹はその斑点を変えることはできない。]
+  - meaning_ko: 흘수
+  - example_ko: 표범은 그 반점을 바꿀 수 없다.
+- id: 35197 | level: N1 | [群がる / むらがる , その歌手はファンの群がる中を苦心して進んだ。]
+  - meaning_ko: 떼를 짓다
+  - example_ko: 그 가수는 팬들이 몰려오는 가운데 고생하고 진행됐다.
+- id: 35202 | level: N1 | [無論 / むろん , 無論科学は単なる実験ではない。]
+  - meaning_ko: 물론
+  - example_ko: 물론 과학은 단순한 실험이 아니다.
+- id: 35207 | level: N1 | [名産 / めいさん , ]
+  - meaning_ko: 주목 제품
+- id: 35211 | level: N1 | [名称 / めいしょう , ここの正式名称は何ですか？]
+  - meaning_ko: 이름
+  - example_ko: 여기의 공식 이름은 무엇입니까?
+- id: 35216 | level: N1 | [命中 / めいちゅう , 昨日は４発命中しただけでした。]
+  - meaning_ko: 히트
+  - example_ko: 어제는 4발 명중했을 뿐이었습니다.
+- id: 35221 | level: N1 | [明白 / めいはく , 明白な言葉で説明しなさい。]
+  - meaning_ko: 분명한
+  - example_ko: 급행 기간으로 설명하십시오.
+- id: 35227 | level: N1 | [名簿 / めいぼ , 彼女名簿に載っていますよ。]
+  - meaning_ko: 이름 등록
+  - example_ko: 그녀 명부에 실려 있어요.
+- id: 35230 | level: N1 | [名誉 / めいよ , 名誉にかかわる問題なので、彼は怒った。]
+  - meaning_ko: 명예
+  - example_ko: 명예와 관련된 문제이기 때문에 그는 화났다.
+- id: 35235 | level: N1 | [明瞭 / めいりょう , この文の意味は不明瞭だ。]
+  - meaning_ko: 명쾌함
+  - example_ko: 이 문장의 의미는 불분명하다.
+- id: 35240 | level: N1 | [明朗 / めいろう , 彼は明朗快活な青年だ。]
+  - meaning_ko: 밝은
+  - example_ko: 그는 명랑쾌활한 청년이다.
+- id: 35245 | level: N1 | [メーカー / メーカー , 彼女はドレスメーカーに洋服代を支払った。]
+  - meaning_ko: 제조업체
+  - example_ko: 그녀는 드레스 메이커에게 옷을 지불했다.
+- id: 35249 | level: N1 | [目方 / めかた , 塩は目方で売られる。]
+  - meaning_ko: 무게
+  - example_ko: 소금은 눈으로 팔린다.
+- id: 35253 | level: N1 | [恵み / めぐみ , 神の恵みのあらんことを！]
+  - meaning_ko: 축복
+  - example_ko: 하나님의 은혜의 모습을!
+- id: 35262 | level: N1 | [恵む / めぐむ , ]
+  - meaning_ko: 축복하다
+- id: 35265 | level: N1 | [目覚しい / めざましい , 彼が１９歳で優勝したのは目覚しい。]
+  - meaning_ko: 멋진
+  - example_ko: 그가 19세에 우승한 것은 눈부시다.
+- id: 35272 | level: N1 | [目覚める / めざめる , 目覚めるまで長かった。]
+  - meaning_ko: 일어나다
+  - example_ko: 일어날 때까지 길었다.
+- id: 35275 | level: N1 | [召す / めす , ワインがお気に召すといいのですが。]
+  - meaning_ko: 전화하다
+  - example_ko: 와인이 마음에 드시면 좋겠습니다.
+- id: 35281 | level: N1 | [雌 / めす , 雌牛は牛乳を供給する。]
+  - meaning_ko: 암컷(동물)
+  - example_ko: 암소는 우유를 공급한다.
+- id: 35285 | level: N1 | [目付き / めつき , ]
+  - meaning_ko: 바라보다
+- id: 35289 | level: N1 | [滅亡 / めつぼう , 人類は滅亡するだろう。]
+  - meaning_ko: 몰락
+  - example_ko: 인류는 멸망할 것이다.
+- id: 35297 | level: N1 | [メディア / メディア , メディアが憎悪の痕跡を安売りする。]
+  - meaning_ko: 메디아
+  - example_ko: 미디어가 증오의 흔적을 안매한다.
+- id: 35301 | level: N1 | [目途 / めど , 消費者金融から金を借りたものの、返済の目途が立たない。]
+  - meaning_ko: 목표
+  - example_ko: 소비자금융에서 돈을 빌렸지만 상환의 눈길이 서지 않는다.
+- id: 35306 | level: N1 | [目盛 / めもり , 日本では摂氏の目盛りが使われている。]
+  - meaning_ko: 규모
+  - example_ko: 일본에서는 섭씨의 눈금이 사용되고 있다.
+- id: 35311 | level: N1 | [メロディー / メロディー , 彼はメロディーを口笛で吹き始めた。]
+  - meaning_ko: 멜로디
+  - example_ko: 그는 멜로디를 휘파람으로 불기 시작했다.
+- id: 35315 | level: N1 | [面会 / めんかい , 彼は面会謝絶だ。]
+  - meaning_ko: 회견
+  - example_ko: 그는 면회 사절이다.
+- id: 35319 | level: N1 | [免除 / めんじょ , 彼は兵役を免除されている。]
+  - meaning_ko: 면제
+  - example_ko: 그는 병역을 면제받고 있다.
+- id: 35325 | level: N1 | [面する / めんする , 君の行いには赤面する。]
+  - meaning_ko: 직면하다
+  - example_ko: 너의 행위에는 적면한다.
+- id: 35330 | level: N1 | [面目 / めんぼく , 面目丸つぶれだ。]
+  - meaning_ko: 얼굴
+  - example_ko: 면목 둥근 붕괴다.
+- id: 35339 | level: N1 | [～網 / ～もう , ]
+  - meaning_ko: ~ 네트워크
+- id: 35344 | level: N1 | [設ける / もうける , ホールは仕切りを設ける前は千人収容できた。]
+  - meaning_ko: 창조하다
+  - example_ko: 홀은 칸막이를 마련하기 전에는 천명 수용할 수 있었다.
+- id: 35350 | level: N1 | [申し入れる / もうしいれる , ]
+  - meaning_ko: 제안하다
+- id: 35355 | level: N1 | [申込 / もうしこみ , 多数の申込者の中から彼が選ばれた。]
+  - meaning_ko: 애플리케이션
+  - example_ko: 다수의 신청자 중에서 그가 선택되었다.
+- id: 35360 | level: N1 | [申出 / もうしで , ]
+  - meaning_ko: 요구
+- id: 35365 | level: N1 | [申し出る / もうしでる , ]
+  - meaning_ko: 보고하다
+- id: 35369 | level: N1 | [申し分 / もうしぶん , 妹の視力は申し分ない。]
+  - meaning_ko: 반대
+  - example_ko: 여동생의 시력은 틀림없다.
+- id: 35374 | level: N1 | [盲点 / もうてん , なるほど、それは盲点だった。]
+  - meaning_ko: 맹점
+  - example_ko: 과연, 그것은 맹점이었다.
+- id: 35378 | level: N1 | [猛烈 / もうれつ , 猛烈な暑さだ。]
+  - meaning_ko: 폭력적인
+  - example_ko: 맹렬한 더위다.
+- id: 35382 | level: N1 | [モーテル / モーテル , モーテルに関する情報をください。]
+  - meaning_ko: 모텔
+  - example_ko: 모텔에 대한 정보를 제공합니다.
+- id: 35387 | level: N1 | [もがく / もがく , ]
+  - meaning_ko: 투쟁하다
+- id: 35397 | level: N1 | [目録 / もくろく , 新刊書の目録を作って欲しいと思います。]
+  - meaning_ko: 목록
+  - example_ko: 신간서의 목록을 만들고 싶다고 생각합니다.
+- id: 35398 | level: N1 | [目論見 / もくろみ , その目論見は失敗に終わった。]
+  - meaning_ko: 계획
+  - example_ko: 그 목표는 실패로 끝났다.
+- id: 35402 | level: N1 | [模型 / もけい , 模型飛行機を作るのは楽しい。]
+  - meaning_ko: 모델
+  - example_ko: 모형 비행기를 만드는 것은 재미 있습니다.
+- id: 35412 | level: N1 | [模索 / もさく , 現状の打開策を暗中模索している。]
+  - meaning_ko: 더듬기(를 위해)
+  - example_ko: 현재의 타개책을 암중 모색하고 있다.
+- id: 35414 | level: N1 | [もしかして / もしかして , もしかして今日もお仕事ですか？]
+  - meaning_ko: 아마도
+  - example_ko: 혹시 오늘도 일하니?
+- id: 35420 | level: N1 | [もしくは / もしくは , キャサリン、もしくは略してキャス。]
+  - meaning_ko: 또는
+  - example_ko: 캐서린, 또는 약어 캐스.
+- id: 35425 | level: N1 | [もたらす / もたらす , 彼は平和をもたらす努力をした。]
+  - meaning_ko: 가져오다
+  - example_ko: 그는 평화를 가져오는 노력을 했다.
+- id: 35432 | level: N1 | [持ち切り / もちきり , ]
+  - meaning_ko: 화제
+- id: 35437 | level: N1 | [目下 / もっか , 目下彼はカナダにいる。]
+  - meaning_ko: 현재
+  - example_ko: 현재 그는 캐나다에 있습니다.
+- id: 35441 | level: N1 | [専ら / もっぱら , 政治に対する私の関心は専ら学問上のものです。]
+  - meaning_ko: 전적으로
+  - example_ko: 정치에 대한 나의 관심은 전적으로 학문상의 것입니다.
+- id: 35446 | level: N1 | [もてなす / もてなす , 客人をもてなすのは当然です。]
+  - meaning_ko: 즐겁게 하다
+  - example_ko: 손님을 대접하는 것은 당연합니다.
+- id: 35452 | level: N1 | [もてる / もてる , 彼はもてる物すべてを失った。]
+  - meaning_ko: 마음에 들다
+  - example_ko: 그는 갖고 있는 모든 것을 잃었다.
+- id: 35456 | level: N1 | [モニター / モニター , 私はモニターの文字を読む事が困難です。]
+  - meaning_ko: (컴퓨터) 모니터
+  - example_ko: 나는 모니터의 문자를 읽는 것이 어렵습니다.
+- id: 35460 | level: N1 | [物好き / ものずき , 甘い物好きですか。]
+  - meaning_ko: (유휴) 호기심
+  - example_ko: 달콤한 것을 좋아하니?
+- id: 35466 | level: N1 | [物足りない / ものたりない , 型落ち品はやっぱり機能面で物足りない。]
+  - meaning_ko: 만족스럽지 못한
+  - example_ko: 형낙품은 역시 기능면에서 부족하다.
+- id: 35470 | level: N1 | [もはや / もはや , 彼はもはや病気ではない。]
+  - meaning_ko: 이미
+  - example_ko: 그는 더 이상 아프지 않습니다.
+- id: 35474 | level: N1 | [模範 / もはん , 彼は正直の模範だ。]
+  - meaning_ko: 모델
+  - example_ko: 그는 정직한 모범이다.
+- id: 35479 | level: N1 | [模倣 / もほう , 全ての子供には、尊敬し模倣する人が必要だ。]
+  - meaning_ko: 모방
+  - example_ko: 모든 아이에게는 존경하고 모방하는 사람이 필요하다.
+- id: 35486 | level: N1 | [もめる / もめる , その子供たちはいつも親ともめる。]
+  - meaning_ko: 동의하지 않는다
+  - example_ko: 그 아이들은 언제나 부모로 모인다.
+- id: 35490 | level: N1 | [股 / もも , 彼女は内股だ。]
+  - meaning_ko: 대퇴골
+  - example_ko: 그녀는 가랑이다.
+- id: 35497 | level: N1 | [腿 / もも , スケートをするには強い腿の筋肉が必要である。]
+  - meaning_ko: 대퇴골
+  - example_ko: 스케이트를 하기 위해서는 강한 허벅지 근육이 필요하다.
+- id: 35502 | level: N1 | [催す / もよおす , 彼女は来週パーティーを催す。]
+  - meaning_ko: (회의를) 열다
+  - example_ko: 그녀는 다음 주 파티를 접대한다.
+- id: 35507 | level: N1 | [漏らす / もらす , 医師が患者の秘密を漏らすのは道義にもとる。]
+  - meaning_ko: 누출되도록
+  - example_ko: 의사가 환자의 비밀을 누설하는 것은 도의에 달려 있습니다.
+- id: 35512 | level: N1 | [盛り上がる / もりあがる , 地震のおかげで地面が盛り上がる。]
+  - meaning_ko: 깨우다
+  - example_ko: 지진 덕분에 지면이 고조된다.
+- id: 35516 | level: N1 | [漏る / もる , 雨が降ると必ず屋根から雨水が漏る。]
+  - meaning_ko: 누출하다
+  - example_ko: 비가 오면 반드시 지붕에서 빗물이 새는다.
+- id: 35522 | level: N1 | [漏れる / もれる , カーテンから光が漏れる。]
+  - meaning_ko: 누출하다
+  - example_ko: 커튼에서 빛이 새는다.
+- id: 35523 | level: N1 | [脆い / もろい , ]
+  - meaning_ko: 다루기 힘든
+- id: 35527 | level: N1 | [もろに / もろに , 彼はもろに壁にぶつかった。]
+  - meaning_ko: 완전히
+  - example_ko: 그는 당분간 벽에 부딪쳤다.
+- id: 35532 | level: N1 | [矢 / や , 矢は木をかすめた。]
+  - meaning_ko: 화살
+  - example_ko: 화살은 나무를 희미했다.
+- id: 35537 | level: N1 | [野外 / やがい , 私達は野外でパーティーをした。]
+  - meaning_ko: 전지
+  - example_ko: 우리는 야외에서 파티를 했다.
+- id: 35541 | level: N1 | [～薬 / ～やく , ]
+  - meaning_ko: 약
+- id: 35547 | level: N1 | [夜具 / やぐ , 母はひろしの夜具をぐいと引き剥がした。]
+  - meaning_ko: 침구
+  - example_ko: 어머니는 히로시의 야구를 긁어 벗겼다.
+- id: 35552 | level: N1 | [役職 / やくしょく , 彼は役職から退いた。]
+  - meaning_ko: 우편
+  - example_ko: 그는 직책에서 물러났다.
+- id: 35558 | level: N1 | [役場 / やくば , ここが役場です。]
+  - meaning_ko: 시청
+  - example_ko: 여기가 동사무소입니다.
+- id: 35563 | level: N1 | [やけに / やけに , 今日は彼はやけに親切だ。]
+  - meaning_ko: 확신하는
+  - example_ko: 오늘은 그는 화상에 친절하다.
+- id: 35568 | level: N1 | [屋敷 / やしき , 私は、幽霊屋敷に行った。]
+  - meaning_ko: 맨션
+  - example_ko: 나는 유령 저택에 갔다.
+- id: 35576 | level: N1 | [養う / やしなう , 彼を養うのは君の責任だ。]
+  - meaning_ko: 후방
+  - example_ko: 그를 기르는 것은 너의 책임이다.
+- id: 35581 | level: N1 | [野心 / やしん , 野心は彼の特性の１つだ。]
+  - meaning_ko: 큰 뜻
+  - example_ko: 야망은 그의 특성 중 하나다.
+- id: 35587 | level: N1 | [安っぽい / やすっぽい , 何でそんな安っぽいペテンにひっかかるんだ。]
+  - meaning_ko: 저렴해 보이는
+  - example_ko: 어째서 그런 싼 페틴에 걸린다.
+- id: 35589 | level: N1 | [休める / やすめる , 明日って、仕事休める？]
+  - meaning_ko: 쉬다
+  - example_ko: 내일은 일을 쉬겠습니까?
+- id: 35597 | level: N1 | [野生 / やせい , 野生の花の研究が好きだ。]
+  - meaning_ko: 야생의
+  - example_ko: 야생화의 연구를 좋아한다.
+- id: 35602 | level: N1 | [奴 / やつ , のいて・・・奴らは逃げちゃうよ。]
+  - meaning_ko: (저속한) 동료
+  - example_ko: 그래서 ... 놈들은 도망 버릴거야.
+- id: 35607 | level: N1 | [闇 / やみ , 夕闇が砂漠をつつんだ。]
+  - meaning_ko: 어둠
+  - example_ko: 황혼이 사막을 쫓았다.
+- id: 35612 | level: N1 | [病む / やむ , 皆さんが気に病む必要はありません。]
+  - meaning_ko: 병에 걸리다
+  - example_ko: 여러분이 걱정할 필요는 없습니다.
+- id: 35616 | level: N1 | [ややこしい / ややこしい , もうややこしい！]
+  - meaning_ko: 수수께끼
+  - example_ko: 좀 더 까다로운!
+- id: 35621 | level: N1 | [やりとおす / やりとおす , ]
+  - meaning_ko: 수행하다
+- id: 35624 | level: N1 | [やりとげる / やりとげる , 彼は若いけれども、その仕事をやりとげる力がある。]
+  - meaning_ko: 성취하다
+  - example_ko: 그는 젊지만, 그 일을 하는 힘이 있다.
+- id: 35629 | level: N1 | [和らげる / やわらげる , 誠実さの痛みを和らげる。]
+  - meaning_ko: 부드럽게하다
+  - example_ko: 정직의 고통을 완화.
+- id: 35634 | level: N1 | [ヤング / ヤング , ヤング先生はとても優しい。]
+  - meaning_ko: 어린
+  - example_ko: 영 선생님은 매우 친절합니다.
+- id: 35638 | level: N1 | [～油 / ～ゆ , ]
+  - meaning_ko: ~ 기름
+- id: 35643 | level: N1 | [優位 / ゆうい , 広告に関してはコークの方が優位にたっている。]
+  - meaning_ko: 우위
+  - example_ko: 광고에 관해서는 코크가 우위를 차지하고 있다.
+- id: 35648 | level: N1 | [憂鬱 / ゆううつ , 彼女は憂鬱だった。]
+  - meaning_ko: 우울증
+  - example_ko: 그녀는 우울했다.
+- id: 35652 | level: N1 | [有益 / ゆうえき , 馬は有益な動物である。]
+  - meaning_ko: 유익한
+  - example_ko: 말은 유익한 동물이다.
+- id: 35657 | level: N1 | [優越 / ゆうえつ , 彼は優越感を持っている。]
+  - meaning_ko: 최고
+  - example_ko: 그는 우월감을 가지고 있습니다.
+- id: 35662 | level: N1 | [勇敢 / ゆうかん , 兵士は皆勇敢だった。]
+  - meaning_ko: 용감
+  - example_ko: 군인은 모두 용감했다.
+- id: 35666 | level: N1 | [夕暮れ / ゆうぐれ , 夕暮れが谷間に迫っていた。]
+  - meaning_ko: 저녁
+  - example_ko: 황혼이 골짜기에 다가갔다.
+- id: 35673 | level: N1 | [融資 / ゆうし , 銀行はその会社に融資をした。]
+  - meaning_ko: 자금 조달
+  - example_ko: 은행은 그 회사에 대출을 했다.
+- id: 35680 | level: N1 | [有する / ゆうする , 偉大な天才は最短の伝記を有する。]
+  - meaning_ko: 소유하다
+  - example_ko: 위대한 천재에는 가장 짧은 전기가 있습니다.
+- id: 35684 | level: N1 | [優勢 / ゆうせい , 彼は相手より少し優勢だった。]
+  - meaning_ko: 우월
+  - example_ko: 그는 상대보다 조금 우세했다.
+- id: 35689 | level: N1 | [優先 / ゆうせん , 優先度と緊急度の劣る計画。]
+  - meaning_ko: 선호
+  - example_ko: 우선도와 긴급도가 떨어지는 계획.
+- id: 35696 | level: N1 | [誘導 / ゆうどう , 検事は誘導尋問をした。]
+  - meaning_ko: 안내
+  - example_ko: 검사는 유도 심문을 했다.
+- id: 35699 | level: N1 | [融通 / ゆうずう , 私は友達にお金を融通した。]
+  - meaning_ko: 적응성
+  - example_ko: 나는 친구에게 돈을 융통했다.
+- id: 35701 | level: N1 | [優美 / ゆうび , 彼女の動作はすべて優美だった。]
+  - meaning_ko: 우아함
+  - example_ko: 그녀의 행동은 모두 우아했다.
+- id: 35712 | level: N1 | [有望 / ゆうぼう , 彼は有望な青年です。]
+  - meaning_ko: 좋은 전망
+  - example_ko: 그는 유망한 청소년입니다.
+- id: 35716 | level: N1 | [遊牧 / ゆうぼく , ]
+  - meaning_ko: 유목 생활
+- id: 35720 | level: N1 | [夕焼け / ゆうやけ , 夕焼けで西の空は真っ赤に輝く。]
+  - meaning_ko: 일몰
+  - example_ko: 일몰에서 서쪽 하늘은 새빨갛게 빛난다.
+- id: 35725 | level: N1 | [有力 / ゆうりょく , 彼は政界の有力者だ。]
+  - meaning_ko: 영향
+  - example_ko: 그는 정치권의 유력자다.
+- id: 35730 | level: N1 | [幽霊 / ゆうれい , 幽霊を信じますか。]
+  - meaning_ko: 귀신
+  - example_ko: 유령을 믿습니까?
+- id: 35735 | level: N1 | [誘惑 / ゆうわく , 誘惑に負けてはいけない。]
+  - meaning_ko: 유혹
+  - example_ko: 유혹을 잃지 말라.
+- id: 35739 | level: N1 | [故 / ゆえ , 警察が医療事故の立件に消極的だ。]
+  - meaning_ko: 이유
+  - example_ko: 경찰이 의료사고 입건에 소극적이다.
+- id: 35744 | level: N1 | [歪む / ゆがむ , 色覚障害は眼球の中が歪むことだから、治せないと思います。]
+  - meaning_ko: 휘게 하다
+  - example_ko: 색각장애는 안구 안이 왜곡되기 때문에 치료할 수 없다고 생각합니다.
+- id: 35749 | level: N1 | [揺さぶる / ゆさぶる , ラブソングは私の心を揺さぶる。]
+  - meaning_ko: 흔들다
+  - example_ko: 사랑 노래는 내 마음을 흔들어.
+- id: 35759 | level: N1 | [ゆとり / ゆとり , 彼には結婚するゆとりはない。]
+  - meaning_ko: 예약하다
+  - example_ko: 그에게는 결혼할 여유가 없다.
+- id: 35763 | level: N1 | [ユニーク / ユニーク , 発想はユニークでもやってみたらいまいちだったりする。]
+  - meaning_ko: 고유한
+  - example_ko: 발상은 독특해도 해 보면 지금 이치기도 한다.
+- id: 35770 | level: N1 | [ユニフォーム / ユニフォーム , 警官は青いユニフォームを着ている。]
+  - meaning_ko: 제복
+  - example_ko: 경찰은 파란 유니폼을 입고 있다.
+- id: 35775 | level: N1 | [指差す / ゆびさす , 人を指差すのは無作法だ。]
+  - meaning_ko: 가리키다
+  - example_ko: 사람을 가리키는 것은 무작법이다.
+- id: 35780 | level: N1 | [弓 / ゆみ , この弓は張りが強いです。]
+  - meaning_ko: 절하다
+  - example_ko: 이 활은 장력이 강합니다.
+- id: 35786 | level: N1 | [揺らぐ / ゆらぐ , ]
+  - meaning_ko: 스윙하다
+- id: 35791 | level: N1 | [緩む / ゆるむ , ]
+  - meaning_ko: 느슨해지다
+- id: 35797 | level: N1 | [緩める / ゆるめる , ]
+  - meaning_ko: 느슨하게하다
+- id: 35799 | level: N1 | [緩やか / ゆるやか , この学校は規律がやや緩やかだ。]
+  - meaning_ko: 허술한
+  - example_ko: 이 학교는 규율이 약간 완만하다.
+- id: 35803 | level: N1 | [要因 / よういん , 富は幸福の一要因ではあろう。]
+  - meaning_ko: 요인
+  - example_ko: 부는 행복의 한 요인이 될 것이다.
+- id: 35808 | level: N1 | [溶液 / ようえき , ]
+  - meaning_ko: 해결책
+- id: 35815 | level: N1 | [用件 / ようけん , その用件は明日まで待てますか。]
+  - meaning_ko: 사업
+  - example_ko: 그 용건은 내일까지 기다리겠습니까?
+- id: 35820 | level: N1 | [養護 / ようご , 祖父は去年から養護施設にいる。]
+  - meaning_ko: 보호
+  - example_ko: 할아버지는 작년부터 양호시설에 있다.
+- id: 35826 | level: N1 | [用紙 / ようし , 用紙の一番下に名前を書け。]
+  - meaning_ko: 양식
+  - example_ko: 용지의 맨 아래에 이름을 적는다.
+- id: 35829 | level: N1 | [様式 / ようしき , 彼は新しい生活様式に慣れた。]
+  - meaning_ko: 스타일
+  - example_ko: 그는 새로운 생활양식에 익숙해졌다.
+- id: 35833 | level: N1 | [要する / ようする , 要するに彼らは腹が減っているのだ。]
+  - meaning_ko: 요구하다
+  - example_ko: 요컨대 그들은 배가 줄어들고 있는 것이다.
+- id: 35837 | level: N1 | [要請 / ようせい , 彼は総理のたっての要請を固辞した。]
+  - meaning_ko: 주장하다
+  - example_ko: 그는 총리의 단지 요청을 고사했다.
+- id: 35841 | level: N1 | [様相 / ようそう , コンピューターが産業の様相を大きく変えた。]
+  - meaning_ko: 측면
+  - example_ko: 컴퓨터가 산업의 양상을 크게 바꿨다.
+- id: 35846 | level: N1 | [用品 / ようひん , 日用品の値段が上がった。]
+  - meaning_ko: 조항
+  - example_ko: 일용품 가격이 올랐다.
+- id: 35851 | level: N1 | [洋風 / ようふう , 私は洋風の家に住んでいます。]
+  - meaning_ko: 서양식
+  - example_ko: 나는 서양식 집에 살고 있습니다.
+- id: 35856 | level: N1 | [用法 / ようほう , その２語の用法の区別は明瞭である。]
+  - meaning_ko: 지도
+  - example_ko: 그 두 단어의 용법의 구별은 명료하다.
+- id: 35862 | level: N1 | [要望 / ようぼう , ご要望の通りにいたします。]
+  - meaning_ko: 수요
+  - example_ko: 요청대로 드리겠습니다.
+- id: 35866 | level: N1 | [余暇 / よか , 余暇をできるだけ利用しなさい。]
+  - meaning_ko: 여가
+  - example_ko: 여가를 가능한 한 많이 이용하십시오.
+- id: 35872 | level: N1 | [予感 / よかん , 彼の予感があたった。]
+  - meaning_ko: 예감
+  - example_ko: 그의 예감이 맞았다.
+- id: 35881 | level: N1 | [余興 / よきょう , 忘年会の余興で大喜利をやることになった。]
+  - meaning_ko: 사이드 쇼
+  - example_ko: 송년회의 여흥으로 대희리를 하게 되었다.
+- id: 35886 | level: N1 | [預金 / よきん , 預金口座を開く。]
+  - meaning_ko: 보증금
+  - example_ko: 예금 계좌를 엽니다.
+- id: 35891 | level: N1 | [欲 / よく , あんたのせいで食欲をなくしたよ。]
+  - meaning_ko: 탐욕
+  - example_ko: 너 때문에 식욕을 잃었어.
+- id: 35897 | level: N1 | [抑圧 / よくあつ , 王は人民を抑圧した。]
+  - meaning_ko: 제지
+  - example_ko: 왕은 인민을 억압했다.
+- id: 35899 | level: N1 | [浴室 / よくしつ , 浴室はきれいですか。]
+  - meaning_ko: 화장실
+  - example_ko: 욕실은 깨끗합니까?
+- id: 35904 | level: N1 | [抑制 / よくせい , 政府はインフレ抑制に努力すべきだ。]
+  - meaning_ko: 제어
+  - example_ko: 정부는 인플레이션 억제에 노력해야 한다.
+- id: 35909 | level: N1 | [欲深い / よくふかい , さて人間とは欲深いものです。]
+  - meaning_ko: 탐욕스러운
+  - example_ko: 그런데 인간이란 욕심입니다.
+- id: 35914 | level: N1 | [欲望 / よくぼう , 欲望を愛と混同するな。]
+  - meaning_ko: 욕구
+  - example_ko: 욕망을 사랑과 혼동하지 마라.
+- id: 35922 | level: N1 | [避ける / よける , 問題は、いかに核戦争を避けるかである。]
+  - meaning_ko: 피하기 위해 (신체적 접촉을
+  - example_ko: 문제는, 어떻게 핵전쟁을 피하는가 이다.
+- id: 35927 | level: N1 | [予言 / よげん , 彼は予言の才を持っていた。]
+  - meaning_ko: 예측
+  - example_ko: 그는 예언의 재능을 가지고 있었다.
+- id: 35932 | level: N1 | [横綱 / よこづな , ]
+  - meaning_ko: 스모 그랜드 챔피언
+- id: 35935 | level: N1 | [汚れ / よごれ , お父さんの破産は家名の汚れでした。]
+  - meaning_ko: 흙
+  - example_ko: 아빠의 파산은 집 이름의 얼룩이었습니다.
+- id: 35940 | level: N1 | [よし (かん) / よし (かん) , ]
+  - meaning_ko: 괜찮은!
+- id: 35945 | level: N1 | [良し / よし , 良し、その意気で。]
+  - meaning_ko: 괜찮은!
+  - example_ko: 좋아, 그 의기로.
+- id: 35952 | level: N1 | [善し悪し / よしあし , 彼女には事の善し悪しがわからない。]
+  - meaning_ko: 좋은지 나쁜지
+  - example_ko: 그녀에게는 일의 선하고 나쁜 모르겠다.
+- id: 35956 | level: N1 | [余所見 / よそみ , ]
+  - meaning_ko: 멀리보고
+- id: 35961 | level: N1 | [余地 / よち , 彼の有罪は疑いの余地はない。]
+  - meaning_ko: 장소
+  - example_ko: 그의 유죄는 의심의 여지가 없다.
+- id: 35966 | level: N1 | [よって (よりどころ) / よって (よりどころ) , ]
+  - meaning_ko: 그러므로
+- id: 35971 | level: N1 | [与党 / よとう , 与党は前の選挙で過半数を占めた。]
+  - meaning_ko: 정부 정당
+  - example_ko: 여당은 이전 선거에서 과반수를 차지했다.
+- id: 35976 | level: N1 | [呼び止める / よびとめる , タクシーを呼び止めるために手をあげた。]
+  - meaning_ko: 깃발을 내리다
+  - example_ko: 택시를 부르기 위해 손을 들었다.
+- id: 35982 | level: N1 | [夜更し / よふかし , 昼夜逆転しちゃったけど、やっぱ夜更しは止められない。]
+  - meaning_ko: 늦게까지 깨어있다
+  - example_ko: 밤낮으로 역전했지만, 역시 밤새는 멈출 수 없다.
+- id: 35986 | level: N1 | [夜更け / よふけ , 我々は夜更けまで語り合った。]
+  - meaning_ko: 늦은 밤
+  - example_ko: 우리는 밤새도록 이야기했다.
+- id: 35990 | level: N1 | [余程 / よほど , ]
+  - meaning_ko: 매우
+- id: 35997 | level: N1 | [読み上げる / よみあげる , 私がこの本を読み上げるのに約１時間かかった。]
+  - meaning_ko: 큰 소리로 (그리고 명확하게) 읽으다
+  - example_ko: 내가 이 책을 읽는 데 약 1시간이 걸렸다.
+- id: 36002 | level: N1 | [～寄り / ～より , ]
+  - meaning_ko: ~에 가까운 (예:
+- id: 36007 | level: N1 | [寄り掛かる / よりかかる , ]
+  - meaning_ko: 기대다
+- id: 36016 | level: N1 | [弱る / よわる , 良さそうにみえる馬でも時には弱ることもある。]
+  - meaning_ko: 약화시키다
+  - example_ko: 좋은 것처럼 보이는 말도 때로는 약해질 수도 있다.
+- id: 36020 | level: N1 | [来場 / らいじょう , 皆様のご来場を心よりお待ちしております。]
+  - meaning_ko: 출석
+  - example_ko: 여러분의 방문을 진심으로 기다리고 있습니다.
+- id: 36026 | level: N1 | [ライス / ライス , 私はカレーライスが好きだ。]
+  - meaning_ko: 쌀
+  - example_ko: 나는 카레라이스를 좋아한다.
+- id: 36030 | level: N1 | [酪農 / らくのう , ]
+  - meaning_ko: 낙농업
+- id: 36033 | level: N1 | [落下 / らっか , 落下物に注意！]
+  - meaning_ko: 떨어지다
+  - example_ko: 낙하물에 주의!
+- id: 36038 | level: N1 | [楽観 / らっかん , 父は私の楽観を乱さないことにした。]
+  - meaning_ko: 낙천주의
+  - example_ko: 아버지는 내 낙관을 방해하지 않기로 결정했다.
+- id: 36043 | level: N1 | [ランプ / ランプ , 「トランプしたいなあ」「私も」]
+  - meaning_ko: 램프
+  - example_ko: "트럼프하고 싶다" "나도"
+- id: 36048 | level: N1 | [濫用 / らんよう , ]
+  - meaning_ko: 남용
+- id: 36052 | level: N1 | [リード / リード , 彼女が２ｍリードしている。]
+  - meaning_ko: 선두
+  - example_ko: 그녀가 2m 리드하고 있다.
+- id: 36057 | level: N1 | [理屈 / りくつ , 彼女の理屈には全く面食らった。]
+  - meaning_ko: 이론
+  - example_ko: 그녀의 지굴에는 전혀 면식했다.
+- id: 36066 | level: N1 | [利子 / りし , その老婆は三分の利子で金を貸す。]
+  - meaning_ko: 이자(은행)
+  - example_ko: 그 노파는 삼분의 이자로 돈을 빌려준다.
+- id: 36071 | level: N1 | [利潤 / りじゅん , もちろん利潤は生産費を上回るべきです。]
+  - meaning_ko: 이익
+  - example_ko: 물론 이윤은 생산비를 초과해야 한다.
+- id: 36075 | level: N1 | [理性 / りせい , 恋愛は理性では抑えられない。]
+  - meaning_ko: 이유
+  - example_ko: 연애는 이성에서는 억제할 수 없다.
+- id: 36078 | level: N1 | [利息 / りそく , 彼は利息を付けて借金払いをした。]
+  - meaning_ko: 이자(은행)
+  - example_ko: 그는 이자로 빚을 냈다.
+- id: 36083 | level: N1 | [立体 / りったい , 我々はその問題を立体的に調査した。]
+  - meaning_ko: 입체
+  - example_ko: 우리는 그 문제를 입체적으로 조사했다.
+- id: 36088 | level: N1 | [立方 / りっぽう , その少年は連立方程式を楽に解いた。]
+  - meaning_ko: 입방체
+  - example_ko: 그 소년은 연립 방정식을 편하게 풀었다.
+- id: 36096 | level: N1 | [立法 / りっぽう , 政府は立法権を持っている。]
+  - meaning_ko: 법률 제정
+  - example_ko: 정부는 입법권을 가지고 있다.
+- id: 36100 | level: N1 | [利点 / りてん , 若さにはそれなりの利点がある。]
+  - meaning_ko: 이점
+  - example_ko: 젊음에는 나름의 이점이 있다.
+- id: 36104 | level: N1 | [略奪 / りゃくだつ , 政府役人の豪邸が略奪された。]
+  - meaning_ko: 약탈
+  - example_ko: 정부 관리인의 저택이 약탈됐다.
+- id: 36109 | level: N1 | [略語 / りゃくご , PKOが何の略語だか知ってる？]
+  - meaning_ko: 약어
+  - example_ko: PKO가 무엇의 약어인지 아십니까?
+- id: 36116 | level: N1 | [流通 / りゅうつう , 貨幣は銀行制度を通じて流通する。]
+  - meaning_ko: 돈이나 물건의 유통
+  - example_ko: 화폐는 은행제도를 통해 유통한다.
+- id: 36120 | level: N1 | [領域 / りょういき , 自分の領域外にある。]
+  - meaning_ko: 영역
+  - example_ko: 자신의 영역 밖에 있다.
+- id: 36126 | level: N1 | [了解 / りょうかい , 了解しました。]
+  - meaning_ko: 이해력
+  - example_ko: 이해했습니다.
+- id: 36131 | level: N1 | [領海 / りょうかい , ]
+  - meaning_ko: 영해
+- id: 36136 | level: N1 | [両極 / りょうきょく , 両極端は一致する。]
+  - meaning_ko: 양극
+  - example_ko: 양극단은 일치한다.
+- id: 36141 | level: N1 | [良好 / りょうこう , 品物は良好な状態で到着した。]
+  - meaning_ko: 유리한
+  - example_ko: 물품은 양호한 상태로 도착했다.
+- id: 36146 | level: N1 | [良識 / りょうしき , 彼は良識ある人です。]
+  - meaning_ko: 양식
+  - example_ko: 그는 친절한 사람입니다.
+- id: 36150 | level: N1 | [良質 / りょうしつ , 良質の建材が不足している。]
+  - meaning_ko: 양질
+  - example_ko: 양질의 건축 자재가 부족하다.
+- id: 36154 | level: N1 | [了承 / りょうしょう , 明日会合があるということは了承済みだ。]
+  - meaning_ko: 승인
+  - example_ko: 내일 회의가 있다는 것은 승낙 끝났다.
+- id: 36159 | level: N1 | [良心 / りょうしん , 良心が彼を苦しめた。]
+  - meaning_ko: 양심
+  - example_ko: 양심이 그를 괴롭혔다.
+- id: 36164 | level: N1 | [領地 / りょうち , ]
+  - meaning_ko: 지역
+- id: 36168 | level: N1 | [領土 / りょうど , 軍部は全領土を占領した。]
+  - meaning_ko: 지역
+  - example_ko: 군부는 전체 영토를 점령했다.
+- id: 36173 | level: N1 | [両立 / りょうりつ , 健康は節制と両立する。]
+  - meaning_ko: 호환성
+  - example_ko: 건강은 절제와 양립한다.
+- id: 36178 | level: N1 | [旅客 / りょかく , 彼らは定期旅客船に乗り込んだ。]
+  - meaning_ko: 승객
+  - example_ko: 그들은 정기 여객선에 탑승했다.
+- id: 36183 | level: N1 | [旅券 / りょけん , 彼は、旅券を余そうとした。]
+  - meaning_ko: 여권
+  - example_ko: 그는 여권을 남기려고 했다.
+- id: 36189 | level: N1 | [履歴 / りれき , 警察はその男の履歴を調べた。]
+  - meaning_ko: 경력
+  - example_ko: 경찰은 그 남자의 역사를 조사했다.
+- id: 36195 | level: N1 | [理論 / りろん , 理論的には、私は数学をしている。]
+  - meaning_ko: 이론
+  - example_ko: 이론적으로, 나는 수학을하고 있습니다.
+- id: 36198 | level: N1 | [林業 / りんぎょう , ]
+  - meaning_ko: 임학
+- id: 36201 | level: N1 | [類 / るい , 似てくると言うよりは類友みたいな感じですね。]
+  - meaning_ko: 친절한
+  - example_ko: 비슷하다고 말하는 것보다는 동료 같은 느낌이군요.
+- id: 36205 | level: N1 | [類推 / るいすい , ]
+  - meaning_ko: 유추
+- id: 36209 | level: N1 | [類似 / るいじ , その二つの実験は類似の結果を出した。]
+  - meaning_ko: 유사한
+  - example_ko: 이 두 실험은 유사한 결과를 보였다.
+- id: 36214 | level: N1 | [ルーズ / ルーズ , 彼女はいつも時間にルーズだ。]
+  - meaning_ko: 헐렁한
+  - example_ko: 그녀는 항상 시간에 느슨하다.
+- id: 36219 | level: N1 | [冷酷 / れいこく , 犬を叩くなんて彼は冷酷だ。]
+  - meaning_ko: 잔학
+  - example_ko: 개를 두드리다니 그는 냉혹하다.
+- id: 36227 | level: N1 | [冷蔵 / れいぞう , 冷蔵庫は食品の腐敗を防ぐ。]
+  - meaning_ko: 냉각
+  - example_ko: 냉장고는 식품의 부패를 방지한다.
+- id: 36232 | level: N1 | [冷淡 / れいたん , 彼女は私に冷淡だ。]
+  - meaning_ko: 시원함
+  - example_ko: 그녀는 나에게 냉담하다.
+- id: 36237 | level: N1 | [レース / レース , 彼は両方のレースに勝てるだろうか。]
+  - meaning_ko: 경주
+  - example_ko: 그는 두 경주를 이길 것인가?
+- id: 36242 | level: N1 | [レギュラー / レギュラー , レギュラー満タンでお願いします。]
+  - meaning_ko: 정기적인
+  - example_ko: 레귤러 만탄으로 부탁합니다.
+- id: 36247 | level: N1 | [レッスン / レッスン , 私の妹は週に二回ピアノのレッスンを受ける。]
+  - meaning_ko: 수업
+  - example_ko: 나의 여동생은 일주일에 두 번 피아노 수업을 받는다.
+- id: 36251 | level: N1 | [レディー / レディー , 彼女は、オフィスレディーです。]
+  - meaning_ko: 숙녀
+  - example_ko: 그녀는 사무실 레이디입니다.
+- id: 36257 | level: N1 | [レバー / レバー , レバーを押しあげて下さい。]
+  - meaning_ko: 지렛대
+  - example_ko: 레버를 누르십시오.
+- id: 36261 | level: N1 | [恋愛 / れんあい , 恋愛と結婚は別だ。]
+  - meaning_ko: 사랑
+  - example_ko: 연애와 결혼은 다르다.
+- id: 36266 | level: N1 | [バッテリー / バッテリー , 車のバッテリーが上がってるよ。]
+  - meaning_ko: 배터리
+  - example_ko: 자동차 배터리가 올라가고 있습니다.
+- id: 36271 | level: N1 | [バット / バット , 彼は速球をバットで打った。]
+  - meaning_ko: 박쥐
+  - example_ko: 그는 속구를 박쥐로 쳤다.
+- id: 36275 | level: N1 | [発病 / はつびょう , ]
+  - meaning_ko: 공격
+- id: 36283 | level: N1 | [初耳 / はつみみ , 初耳ですね。]
+  - meaning_ko: 뭔가 처음 듣는다
+  - example_ko: 첫 귀입니다.
+- id: 36287 | level: N1 | [果て / はて , 彼は疲れ果ててしまった。]
+  - meaning_ko: 끝
+  - example_ko: 그는 피곤해졌다.
+- id: 36294 | level: N1 | [果てる / はてる , 私達は疲れ果てるまで何時間も、その音楽に合わせて踊った。]
+  - meaning_ko: 끝내다
+  - example_ko: 우리는 피곤할 때까지 몇 시간 동안 그 음악에 맞춰 춤을 추었다.
+- id: 36300 | level: N1 | [ばてる / ばてる , ]
+  - meaning_ko: 지치다
+- id: 36305 | level: N1 | [パトカー / パトカー , パトカーが必要です。]
+  - meaning_ko: 순찰차
+  - example_ko: 경찰차가 필요합니다.
+- id: 36310 | level: N1 | [甚だ / はなはだ , フランス料理は私の甚だ好む所だ。]
+  - meaning_ko: 매우
+  - example_ko: 프랑스 요리는 내 심하다 좋아하는 곳이다.
+- id: 36315 | level: N1 | [華々しい / はなばなしい , ]
+  - meaning_ko: 멋진
+- id: 36321 | level: N1 | [花びら / はなびら , 花びらが水面に浮かんでいる。]
+  - meaning_ko: (꽃) 꽃잎
+  - example_ko: 꽃잎이 수면에 떠있다.
+- id: 36325 | level: N1 | [華やか / はなやか , 華やかだこと。]
+  - meaning_ko: 멋진
+  - example_ko: 화려한 것.
+- id: 36330 | level: N1 | [阻む / はばむ , ]
+  - meaning_ko: 누군가가 하는 일을 못하게 하다
+- id: 36334 | level: N1 | [浜 / はま , 浜辺の砂は白かった。]
+  - meaning_ko: 해변
+  - example_ko: 해변의 모래는 흰색이었다.
+- id: 36339 | level: N1 | [浜辺 / はまべ , 浜辺の砂は白かった。]
+  - meaning_ko: 해변
+  - example_ko: 해변의 모래는 흰색이었다.
+- id: 36344 | level: N1 | [はまる / はまる , 民衆はまるで羊のように独裁者の後に従った。]
+  - meaning_ko: 들어가다
+  - example_ko: 민중은 마치 양처럼 독재자 뒤를 따랐다.
+- id: 36352 | level: N1 | [早める / はやめる , この新薬は君の回復を早めるかも知れない。]
+  - meaning_ko: 서두르다
+  - example_ko: 이 신약은 당신의 회복을 앞당길지도 모른다.
+- id: 36356 | level: N1 | [腹立ち / はらだち , 彼女は腹立ちまぎれに婚約を破棄した。]
+  - meaning_ko: 화
+  - example_ko: 그녀는 화가 나서 약혼을 버렸다.
+- id: 36362 | level: N1 | [原っぱ / はらっぱ , ]
+  - meaning_ko: 열린 들판
+- id: 36367 | level: N1 | [はらはら / はらはら , 彼ははらはらして息子を待った。]
+  - meaning_ko: 긴장하다
+  - example_ko: 그는 하라하라 아들을 기다렸다.
+- id: 36372 | level: N1 | [ばらまく / ばらまく , 彼女は金をばらまくのが好きだった。]
+  - meaning_ko: 전파하다
+  - example_ko: 그녀는 금을 털어내는 것을 좋아했다.
+- id: 36377 | level: N1 | [張り紙 / はりがみ , 張り紙お断り。]
+  - meaning_ko: 알아채다
+  - example_ko: 종이 접기 거절.
+- id: 36382 | level: N1 | [遥か / はるか , 彼は遥かに時代を先んじていた。]
+  - meaning_ko: 멀리
+  - example_ko: 그는 훨씬 더 시대를 앞서고 있었다.
+- id: 36387 | level: N1 | [破裂 / はれつ , 水道管が破裂した。]
+  - meaning_ko: 폭발
+  - example_ko: 수도관이 파열되었다.
+- id: 36392 | level: N1 | [腫れる / はれる , 泣くと、目が腫れるのが嫌なのよ。]
+  - meaning_ko: 붓다 (염증으로 인해)
+  - example_ko: 울면 눈이 붓는 게 싫어.
+- id: 36397 | level: N1 | [繁栄 / はんえい , 繁栄は勤勉にかかっている。]
+  - meaning_ko: 번영하는
+  - example_ko: 번영은 근면에 달려 있다.
+- id: 36401 | level: N1 | [版画 / はんが , ]
+  - meaning_ko: 아트 프린트
+- id: 36406 | level: N1 | [ハンガー / ハンガー , ハンガーをください。]
+  - meaning_ko: (코트) 행거
+  - example_ko: 옷걸이를주세요.
+- id: 36411 | level: N1 | [反感 / はんかん , 私は話し手に対して反感を持った。]
+  - meaning_ko: 반감
+  - example_ko: 나는 화자에 대해 반감을 가졌다.
+- id: 36416 | level: N1 | [反響 / はんきょう , 谷は滝の音を反響する。]
+  - meaning_ko: 에코
+  - example_ko: 계곡은 폭포의 소리를 반향한다.
+- id: 36421 | level: N1 | [パンク / パンク , 畜生、パンクだ。]
+  - meaning_ko: 찌름
+  - example_ko: 축생, 펑크다.
+- id: 36426 | level: N1 | [反撃 / はんげき , 私たち反撃すべきだわ。]
+  - meaning_ko: 역습
+  - example_ko: 우리 반격해야 돼.
+- id: 36432 | level: N1 | [判決 / はんけつ , 法廷では彼を有罪と判決した。]
+  - meaning_ko: 사법적 결정
+  - example_ko: 법정에서는 그를 유죄로 판결했다.
+- id: 36436 | level: N1 | [反射 / はんしゃ , 水は光を反射する。]
+  - meaning_ko: 반사
+  - example_ko: 물은 빛을 반사합니다.
+- id: 36441 | level: N1 | [繁盛 / はんじょう , 私の商売は繁盛している。]
+  - meaning_ko: 번영
+  - example_ko: 나의 장사는 번성하고 있다.
+- id: 36446 | level: N1 | [繁殖 / はんしょく , うさぎは繁殖が早い。]
+  - meaning_ko: 새끼를 낳다
+  - example_ko: 토끼는 번식이 빠르다.
+- id: 36451 | level: N1 | [反する / はんする , 彼の話は事実に反する。]
+  - meaning_ko: 불일치하다
+  - example_ko: 그의 이야기는 사실에 반한다.
+- id: 36455 | level: N1 | [判定 / はんてい , 審判の判定は絶対だ。]
+  - meaning_ko: 심판
+  - example_ko: 심판의 판정은 절대다.
+- id: 36459 | level: N1 | [万人 / ばんにん , 万人の友は誰の友でもない。]
+  - meaning_ko: 제인
+  - example_ko: 만명의 친구는 누구의 친구도 아니다.
+- id: 36466 | level: N1 | [晩年 / ばんねん , 彼女は悲しみを隠して晩年を送った。]
+  - meaning_ko: (그의) 말년
+  - example_ko: 그녀는 슬픔을 숨기고 만년을 ​​보냈다.
+- id: 36470 | level: N1 | [反応 / はんのう , 彼は私が送った合図に反応した。]
+  - meaning_ko: 반응
+  - example_ko: 그는 내가 보낸 신호에 반응했다.
+- id: 36477 | level: N1 | [万能 / ばんのう , 彼はスポーツ万能だね。]
+  - meaning_ko: 다목적
+  - example_ko: 그는 스포츠 만능이다.
+- id: 36480 | level: N1 | [半端 / はんぱ , 物事は中途半端にするな。]
+  - meaning_ko: 파편
+  - example_ko: 사물은 어리석게하지 마라.
+- id: 36487 | level: N1 | [反発 / はんぱつ , そういう言葉は反発を呼ぶだろう。]
+  - meaning_ko: 격퇴
+  - example_ko: 그러한 말은 반발을 부를 것이다.
+- id: 36492 | level: N1 | [反乱 / はんらん , 反乱が勃発した。]
+  - meaning_ko: 반항
+  - example_ko: 반란이 발발했다.
+- id: 36497 | level: N1 | [氾濫 / はんらん , 台風で川が氾濫した。]
+  - meaning_ko: 범람
+  - example_ko: 태풍으로 강이 범람했다.
+- id: 36501 | level: N1 | [美 / び , 人生は美しい。]
+  - meaning_ko: 아름다움
+  - example_ko: 인생은 아름답습니다.
+- id: 36507 | level: N1 | [ひいては / ひいては , テストでは辞書をひいてはいけません。]
+  - meaning_ko: 뿐만 아니라…
+  - example_ko: 테스트에서는 사전을 끌어서는 안됩니다.
+- id: 36512 | level: N1 | [ビールス / ビールス , ]
+  - meaning_ko: 바이러스
+- id: 36517 | level: N1 | [控室 / ひかえしつ , ]
+  - meaning_ko: 대기실
+- id: 36522 | level: N1 | [控える / ひかえる , 痩せたいなら間食は控えるべきだ。]
+  - meaning_ko: 억제하다
+  - example_ko: 마른다면 간식은 삼가야 한다.
+- id: 36527 | level: N1 | [悲観 / ひかん , 病人は悲観的になりがちだ。]
+  - meaning_ko: 염세주의
+  - example_ko: 아픈 사람은 비관적이 되기 쉽다.
+- id: 36532 | level: N1 | [引き上げる / ひきあげる , 政府は近々、消費税を引き上げるつもりなのかしら。]
+  - meaning_ko: 철수하다
+  - example_ko: 정부는 가까이 소비세를 인상할 생각인가.
+- id: 36537 | level: N1 | [率いる / ひきいる , ]
+  - meaning_ko: 이끌다
+- id: 36542 | level: N1 | [引き起こす / ひきおこす , 戦争は恐ろしい不幸を引き起こす。]
+  - meaning_ko: 야기하다
+  - example_ko: 전쟁은 무서운 불행을 일으킨다.
+- id: 36547 | level: N1 | [引下げる / ひきさげる , ]
+  - meaning_ko: 아래로 당기다
+- id: 36550 | level: N1 | [引きずる / ひきずる , ポールはよく重いツールをずるずる引きずる。]
+  - meaning_ko: 끌고 가다
+  - example_ko: 극은 잘 무거운 공구를 끄는 끄는다.
+- id: 36557 | level: N1 | [引取る / ひきとる , ]
+  - meaning_ko: 되찾다
+- id: 36562 | level: N1 | [否決 / ひけつ , 議案はたぶん否決されるだろう。]
+  - meaning_ko: 배제
+  - example_ko: 의안은 아마 부결될 것이다.
+- id: 36567 | level: N1 | [日頃 / ひごろ , 日頃からの準備がかかせない。]
+  - meaning_ko: 보통
+  - example_ko: 평소부터 준비가 되지 않는다.
+- id: 36572 | level: N1 | [久しい / ひさしい , この習慣は絶えて久しい。]
+  - meaning_ko: 긴
+  - example_ko: 이 습관은 끊임없이 오랫동안.
+- id: 36577 | level: N1 | [悲惨 / ひさん , 彼女は悲惨な死に方をした。]
+  - meaning_ko: 비극
+  - example_ko: 그녀는 비참한 죽음으로 향했다.
+- id: 36580 | level: N1 | [ビジネス / ビジネス , 父はビジネスマンです。]
+  - meaning_ko: 사업
+  - example_ko: 아버지는 사업가입니다.
+- id: 36584 | level: N1 | [比重 / ひじゅう , ]
+  - meaning_ko: 비중
+- id: 36588 | level: N1 | [美術 / びじゅつ , 美術展覧会に行きましたか。]
+  - meaning_ko: 미술
+  - example_ko: 미술 전시회에 갔습니까?
+- id: 36596 | level: N1 | [秘書 / ひしょ , 秘書は解雇された。]
+  - meaning_ko: (시사
+  - example_ko: 비서는 해고되었다.
+- id: 36600 | level: N1 | [微笑 / びしょう , 母は微笑みながら言いました。]
+  - meaning_ko: 웃다
+  - example_ko: 어머니는 미소 지으며 말했습니다.
+- id: 36609 | level: N1 | [密か / ひそか , 彼は密かに庭に入り込んだ。]
+  - meaning_ko: 비밀
+  - example_ko: 그는 비밀리에 정원에 들어갔다.
+- id: 36614 | level: N1 | [浸す / ひたす , ]
+  - meaning_ko: 담그다
+- id: 36621 | level: N1 | [ひたすら / ひたすら , 彼はひたすら成功を望んで懸命に働く。]
+  - meaning_ko: 아무것도 아니지만
+  - example_ko: 그는 오직 성공을 원하고 열심히 일한다.
+- id: 36627 | level: N1 | [左利き / ひだりきき , 僕は左利きです。]
+  - meaning_ko: 왼손잡이
+  - example_ko: 나는 왼손잡이입니다.
+- id: 36631 | level: N1 | [引っ掻く / ひっかく , ]
+  - meaning_ko: 긁다
+- id: 36637 | level: N1 | [必修 / ひっしゅう , 英語は必修科目です。]
+  - meaning_ko: 필수 (주제)
+  - example_ko: 영어는 필수 과목입니다.
+- id: 36642 | level: N1 | [びっしょり / びっしょり , 彼は汗びっしょりだった。]
+  - meaning_ko: 젖어
+  - example_ko: 그는 땀을 흘렸다.
+- id: 36647 | level: N1 | [必然 / ひつぜん , 彼らの出会いは必然だった。]
+  - meaning_ko: 불가피한
+  - example_ko: 그들의 만남은 필연이었다.
+- id: 36652 | level: N1 | [匹敵 / ひってき , 力で彼に匹敵するものはいない。]
+  - meaning_ko: 비교하다
+  - example_ko: 힘으로 그에 필적하는 것은 없다.
+- id: 36656 | level: N1 | [一息 / ひといき , 一息いれようよ。]
+  - meaning_ko: 숨
+  - example_ko: 한숨을 쉬자.
+- id: 36661 | level: N1 | [人影 / ひとかげ , 暗闇の中に人影が見えた。]
+  - meaning_ko: 사람의 그림자
+  - example_ko: 어둠 속에 인영이 보였다.
+- id: 36665 | level: N1 | [人柄 / ひとがら , 彼女は魅力的な人柄である。]
+  - meaning_ko: 성격
+  - example_ko: 그녀는 매력적인 인물이다.
+- id: 36672 | level: N1 | [人気 / ひとけ , ほんのちょいやくで人気があるのはすごい！]
+  - meaning_ko: 생명의 표시
+  - example_ko: 아주 조금 인기가 있는 것은 대단하다!
+- id: 36675 | level: N1 | [一頃 / ひところ , ]
+  - meaning_ko: 한 번
+- id: 36678 | level: N1 | [人質 / ひとじち , 人質は解放されるだろう。]
+  - meaning_ko: 인질
+  - example_ko: 인질은 해방될 것이다.
+- id: 36685 | level: N1 | [一筋 / ひとすじ , 私は妻一筋です。]
+  - meaning_ko: 한 줄
+  - example_ko: 난 아내 한 줄이다.
+- id: 36688 | level: N1 | [人目 / ひとめ , 意外に人目を気にするタイプだ。]
+  - meaning_ko: 일견
+  - example_ko: 의외로 눈길을 신경쓰는 타입이다.
+- id: 36697 | level: N1 | [日取り / ひどり , 彼等は旅行の日取りを決めた。]
+  - meaning_ko: 기일
+  - example_ko: 그들은 여행의 일취를 결정했다.
+- id: 36700 | level: N1 | [雛 / ひな , 母鳥が雛に虫を持ってきた。]
+  - meaning_ko: 어린 새
+  - example_ko: 어머니 새가 병아리에 벌레를 가져왔다.
+- id: 36707 | level: N1 | [雛祭 / ひなまつり , ]
+  - meaning_ko: 소녀(인형) 축제
+- id: 36712 | level: N1 | [日向 / ひなた , 日向にあまり長くいてはいけません。]
+  - meaning_ko: 햇볕이 잘 드는 곳
+  - example_ko: 히나타에 너무 길어서는 안됩니다.
+- id: 36717 | level: N1 | [非難 / ひなん , 旅行を延ばしたことであなたを非難しない。]
+  - meaning_ko: 탓하다
+  - example_ko: 여행을 연장함으로써 당신을 비난하지 않습니다.
+- id: 36722 | level: N1 | [避難 / ひなん , 兵士は穴の中に避難した。]
+  - meaning_ko: 피난처
+  - example_ko: 군인은 구멍에 대피했다.
+- id: 36727 | level: N1 | [日の丸 / ひのまる , 日の丸がはためいていた。]
+  - meaning_ko: 일본 국기
+  - example_ko: 히노마루가 박혀 있었다.
+- id: 36732 | level: N1 | [火花 / ひばな , 小さな火花はしばしば大きな炎を起こす。]
+  - meaning_ko: 불꽃
+  - example_ko: 작은 불꽃은 종종 큰 불꽃을 일으 킵니다.
+- id: 36737 | level: N1 | [ひび (かべの～) / ひび (かべの～) , ]
+  - meaning_ko: 금이 가다
+- id: 36741 | level: N1 | [悲鳴 / ひめい , 悲鳴で静寂がやぶられた。]
+  - meaning_ko: 비명
+  - example_ko: 비명으로 고요함이 쏟아졌다.
+- id: 36747 | level: N1 | [冷やかす / ひやかす , 人前で彼を冷やかすなんて君は意地悪だ。]
+  - meaning_ko: 농담을 하다
+  - example_ko: 사람 앞에서 그를 식히다니 너는 의지악이다.
+- id: 36751 | level: N1 | [日焼け / ひやけ , 日焼けして痛い。]
+  - meaning_ko: 햇볕에 탐
+  - example_ko: 무두질하고 아프다.
+- id: 36756 | level: N1 | [標語 / ひょうご , 「注意周到」を僕は標語としている。]
+  - meaning_ko: 금언
+  - example_ko: 「주의 주도」를 나는 표어로 하고 있다.
+- id: 36761 | level: N1 | [描写 / びょうしゃ , その美しさを言葉では描写できない。]
+  - meaning_ko: 묘사
+  - example_ko: 그 아름다움을 말로는 묘사할 수 없다.
+- id: 36766 | level: N1 | [ひょっと / ひょっと , ひょっとすると明日は雨かもしれない。]
+  - meaning_ko: 혹시
+  - example_ko: 어쩌면 내일은 비일지도 모른다.
+- id: 36771 | level: N1 | [びら / びら , 彼女は宝石を得意げに見せびらかした。]
+  - meaning_ko: 핸드 아웃
+  - example_ko: 그녀는 보석을 자랑스럽게 보여주었다.
+- id: 36776 | level: N1 | [平たい / ひらたい , 古代人たちは地球は平たいと信じていた。]
+  - meaning_ko: 평평한
+  - example_ko: 고대인들은 지구가 평평하다고 믿었다.
+- id: 36782 | level: N1 | [びり / びり , 彼はクラスでびりだった。]
+  - meaning_ko: 목록의 마지막
+  - example_ko: 그는 수업에서 놀랐다.
+- id: 36785 | level: N1 | [比率 / ひりつ , ]
+  - meaning_ko: 비율
+- id: 13770 | level: N2 | [〜 (まる) ごと / 〜 (まる) ごと , ]
+  - meaning_ko: 전체 ~
+- id: 13773 | level: N2 | [(かさを～) さす / (かさを～) さす , ]
+  - meaning_ko: 열다
+- id: 13778 | level: N2 | [〜(日本) 式 / ～(にほん) しき , ]
+  - meaning_ko: 관습
+- id: 13783 | level: N2 | [～位 / ～い , ]
+  - meaning_ko: ~번째 장소
+- id: 13788 | level: N2 | [～いち (にほんいち) / ～いち (にほんいち) , ]
+  - meaning_ko: 1호 ~ (인)
+- id: 13792 | level: N2 | [～園 / ～えん , ]
+  - meaning_ko: ~ 정원 (특히 사람이 만든)
+- id: 13797 | level: N2 | [～おしまい (おわり) / ～おしまい (おわり) , ]
+  - meaning_ko: 결국 ~
+- id: 13801 | level: N2 | [～日 / ～か , ]
+  - meaning_ko: 며칠 동안 카운터
+- id: 13806 | level: N2 | [～下 / ～か , ]
+  - meaning_ko: ~ 아래
+- id: 13811 | level: N2 | [～化 / ～か , ]
+  - meaning_ko: 무언가를 만드는 행위
+- id: 13814 | level: N2 | [～科 / ～か , ]
+  - meaning_ko: 가족
+- id: 13820 | level: N2 | [～歌 / ～か , ]
+  - meaning_ko: ~의 노래
+- id: 13824 | level: N2 | [～画 / ～が , ]
+  - meaning_ko: 그림
+- id: 13830 | level: N2 | [～外 / ～がい , ]
+  - meaning_ko: ~에서
+- id: 13837 | level: N2 | [～難い / ～がたい , ]
+  - meaning_ko: ~하기 어렵다(어렵다)
+- id: 13842 | level: N2 | [～がち / ～がち , ]
+  - meaning_ko: ~하는 경향이 있다
+- id: 13846 | level: N2 | [～刊 / ～かん , ]
+  - meaning_ko: ~ 발행 (잡지
+- id: 13850 | level: N2 | [～間 / ～かん , ]
+  - meaning_ko: ~ 사이
+- id: 13856 | level: N2 | [～巻 / ～かん , ]
+  - meaning_ko: 용량
+- id: 13861 | level: N2 | [～館 / ～かん , ]
+  - meaning_ko: ~ 홀
+- id: 13865 | level: N2 | [～感 / ～かん , ]
+  - meaning_ko: 감정
+- id: 13871 | level: N2 | [～期 / ～き , ]
+  - meaning_ko: ~나이
+- id: 13876 | level: N2 | [～器 / ～き , ]
+  - meaning_ko: 장치
+- id: 13880 | level: N2 | [～機 / ～き , ]
+  - meaning_ko: 기계
+- id: 13886 | level: N2 | [～気味 / ～ぎみ , ]
+  - meaning_ko: 약간 ~
+- id: 13888 | level: N2 | [～教 / ～きょう , ]
+  - meaning_ko: 종교
+- id: 13892 | level: N2 | [～行 / ～ぎょう , ]
+  - meaning_ko: 선
+- id: 13897 | level: N2 | [～業 / ～ぎょう , ]
+  - meaning_ko: 사업 유형
+- id: 13902 | level: N2 | [～きる / ～きる , ]
+  - meaning_ko: 그럼에도 불구하고
+- id: 13907 | level: N2 | [～切れ / ～きれ , ]
+  - meaning_ko: ~에서
+- id: 13913 | level: N2 | [～口 / ～くち , ]
+  - meaning_ko: ~ 오프닝
+- id: 13919 | level: N2 | [～家 / ～け , ]
+  - meaning_ko: ~의 가족
+- id: 13926 | level: N2 | [～形 / ～けい , ]
+  - meaning_ko: ~의 모양
+- id: 13931 | level: N2 | [～系 / ～けい , ]
+  - meaning_ko: ~ 시스템
+- id: 13936 | level: N2 | [～圏 / ～けん , ]
+  - meaning_ko: 블록
+- id: 13942 | level: N2 | [～校 / ～こう , ]
+  - meaning_ko: 학교 카운터
+- id: 13947 | level: N2 | [～港 / ～こう , ]
+  - meaning_ko: ~ 항구
+- id: 13952 | level: N2 | [～号 / ～ごう , ]
+  - meaning_ko: 잡지 카운터
+- id: 13957 | level: N2 | [～国 / ～こく , ]
+  - meaning_ko: ~의 나라
+- id: 13961 | level: N2 | [～毎 / ～ごと , ]
+  - meaning_ko: ~마다
+- id: 13967 | level: N2 | [～山 / ～さん , ]
+  - meaning_ko: 산의 이름
+- id: 13971 | level: N2 | [～産 / ～さん , ]
+  - meaning_ko: ~에서 만든
+- id: 13976 | level: N2 | [～史 / ～し , ]
+  - meaning_ko: ~의 역사
+- id: 13979 | level: N2 | [～紙 / ～し , ]
+  - meaning_ko: 신문
+- id: 13986 | level: N2 | [～寺 / ～じ , ]
+  - meaning_ko: 사원의 이름
+- id: 13992 | level: N2 | [～時間目 / ～じかんめ , ]
+  - meaning_ko: ~번째 시간
+- id: 13997 | level: N2 | [～室 / ～しつ , ]
+  - meaning_ko: 방 카운터
+- id: 14007 | level: N2 | [～車 / ～しゃ , ]
+  - meaning_ko: ~ 자동차
+- id: 14010 | level: N2 | [～者 / ～しゃ , ]
+  - meaning_ko: 사람
+- id: 14017 | level: N2 | [～社 / ～しゃ , ]
+  - meaning_ko: 회사 카운터
+- id: 14022 | level: N2 | [～手 / ～しゅ , ]
+  - meaning_ko: ~ 플레이어
+- id: 14026 | level: N2 | [～酒 / ～しゅ , ]
+  - meaning_ko: 알코올의 종류
+- id: 14031 | level: N2 | [～集 / ～しゅう , ]
+  - meaning_ko: ~의 수집
+- id: 14035 | level: N2 | [～所 / ～しょ , ]
+  - meaning_ko: 장소
+- id: 14046 | level: N2 | [～女 / ～じょ , ]
+  - meaning_ko: 자매로 계산
+- id: 14050 | level: N2 | [～省 / ～しょう , ]
+  - meaning_ko: 일종의 사역
+- id: 14054 | level: N2 | [～商 / ～しょう , ]
+  - meaning_ko: 상인
+- id: 14062 | level: N2 | [～勝 / ～しょう , ]
+  - meaning_ko: 승리를 계산하다
+- id: 14066 | level: N2 | [～条 / ～じょう , ]
+  - meaning_ko: 기사 카운터
+- id: 14070 | level: N2 | [～場 / ～じょう , ]
+  - meaning_ko: 일종의 분야
+- id: 14074 | level: N2 | [～畳 / ～じょう , ]
+  - meaning_ko: 다다미 계산
+- id: 14081 | level: N2 | [～色 / ～しょく , ]
+  - meaning_ko: 색깔의 종류
+- id: 14085 | level: N2 | [～過ぎる / ～すぎる , ]
+  - meaning_ko: 너무 많아 ~
+- id: 14088 | level: N2 | [～済 / ～ずみ , ]
+  - meaning_ko: 완성된
+- id: 14095 | level: N2 | [～席 / ～せき , ]
+  - meaning_ko: 좌석 카운터
+- id: 14100 | level: N2 | [～船 / ～せん , ]
+  - meaning_ko: 선박용 카운터
+- id: 14106 | level: N2 | [～戦 / ～せん , ]
+  - meaning_ko: 게임 카운터
+- id: 14112 | level: N2 | [～前 / ～ぜん , ]
+  - meaning_ko: ~전에
+- id: 14115 | level: N2 | [～沿い / ～そい , ]
+  - meaning_ko: ~을 따라
+- id: 14120 | level: N2 | [～艘 / ～そう , ]
+  - meaning_ko: 선박용 카운터
+- id: 14126 | level: N2 | [～足 / ～そく , ]
+  - meaning_ko: 신발 카운터
+- id: 14132 | level: N2 | [～だらけ / ～だらけ , ]
+  - meaning_ko: ~으로 가득 차 있다
+- id: 14136 | level: N2 | [～団 / ～だん , ]
+  - meaning_ko: 그룹
+- id: 14142 | level: N2 | [～着 / ～ちゃく , ]
+  - meaning_ko: 옷 카운터
+- id: 14145 | level: N2 | [～庁 / ～ちょう , ]
+  - meaning_ko: 사무실
+- id: 14150 | level: N2 | [～兆 / ～ちょう , ]
+  - meaning_ko: 일조
+- id: 14155 | level: N2 | [～長 / ～ちょう , ]
+  - meaning_ko: 지도자
+- id: 14161 | level: N2 | [～帳 / ～ちょう , ]
+  - meaning_ko: ~ 책
+- id: 14167 | level: N2 | [～丁目 / ～ちょうめ , ]
+  - meaning_ko: ~ 지구 (마을의
+- id: 14172 | level: N2 | [～通 / ～つう , ]
+  - meaning_ko: 편지 카운터
+- id: 14176 | level: N2 | [～遣い / ～づかい , ]
+  - meaning_ko: ~의 사용
+- id: 14180 | level: N2 | [～付 / ～つき , ]
+  - meaning_ko: ~와 함께
+- id: 14184 | level: N2 | [～続く / ～つづく , ]
+  - meaning_ko: 따르다
+- id: 14188 | level: N2 | [～辛い / ～づらい , ]
+  - meaning_ko: ~하기 어렵다
+- id: 14192 | level: N2 | [～滴 / ～てき , ]
+  - meaning_ko: 떨어지다
+- id: 14198 | level: N2 | [～点 / ～てん , ]
+  - meaning_ko: 점수 카운터
+- id: 14204 | level: N2 | [～頭 / ～とう , ]
+  - meaning_ko: 동물용 카운터
+- id: 14208 | level: N2 | [～等 / ～とう , ]
+  - meaning_ko: 수준
+- id: 14213 | level: N2 | [～島 / ～とう , ]
+  - meaning_ko: 섬의 종류
+- id: 14220 | level: N2 | [～道 / ～どう , ]
+  - meaning_ko: 일종의 길
+- id: 14225 | level: N2 | [～通り / ～とおり , ]
+  - meaning_ko: ~에 따라
+- id: 14229 | level: N2 | [～ところ / ～ところ , ]
+  - meaning_ko: ~할 예정이다
+- id: 14236 | level: N2 | [～内 / ～ない , ]
+  - meaning_ko: 내부 ~
+- id: 14241 | level: N2 | [～年生 / ～ねんせい , ]
+  - meaning_ko: 학년 카운터
+- id: 14247 | level: N2 | [～泊 / ～はく , ]
+  - meaning_ko: 숙박 카운터(예:
+- id: 14252 | level: N2 | [～発 / ～はつ , ]
+  - meaning_ko: 총알 카운터
+- id: 14255 | level: N2 | [～番目 / ～ばんめ , ]
+  - meaning_ko: ~일
+- id: 14262 | level: N2 | [～費 / ～ひ , ]
+  - meaning_ko: ~의 비용
+- id: 14267 | level: N2 | [～病 / ～びょう , ]
+  - meaning_ko: 질병의 종류
+- id: 14272 | level: N2 | [～部 / ～ぶ , ]
+  - meaning_ko: ~ 부분
+- id: 14277 | level: N2 | [～風 / ～ふう , ]
+  - meaning_ko: ~ 스타일
+- id: 14281 | level: N2 | [～振り / ～ぶり , ]
+  - meaning_ko: ~의 간격을 두고
+- id: 14284 | level: N2 | [～遍 / ～へん , ]
+  - meaning_ko: 시간
+- id: 14289 | level: N2 | [～弁 / ～べん , ]
+  - meaning_ko: 연설
+- id: 14293 | level: N2 | [～歩 / ～ほ , ]
+  - meaning_ko: 단계
+- id: 14300 | level: N2 | [～ぽい / ～ぽい , ]
+  - meaning_ko: ~같은
+- id: 14304 | level: N2 | [～ほう (ひかく) / ～ほう (ひかく) , ]
+  - meaning_ko: (비교)
+- id: 14308 | level: N2 | [～みたい / ～みたい , ]
+  - meaning_ko: ~처럼 보인다
+- id: 14313 | level: N2 | [～向け / ～むけ , ]
+  - meaning_ko: ~을 위해
+- id: 14320 | level: N2 | [～名 / ～めい , ]
+  - meaning_ko: 사람들을 위한 카운터
+- id: 14327 | level: N2 | [～もち / ～もち , ]
+  - meaning_ko: ~을 갖고 있는 사람
+- id: 14332 | level: N2 | [～問 / ～もん , ]
+  - meaning_ko: 질문 카운터
+- id: 14337 | level: N2 | [～夜 / ～や , ]
+  - meaning_ko: 밤에는 카운터
+- id: 14345 | level: N2 | [～流 / ～りゅう , ]
+  - meaning_ko: 패션
+- id: 14348 | level: N2 | [～料 / ～りょう , ]
+  - meaning_ko: 요금
+- id: 14353 | level: N2 | [～領 / ～りょう , ]
+  - meaning_ko: 지역
+- id: 14359 | level: N2 | [～力 / ～りょく , ]
+  - meaning_ko: ~의 힘
+- id: 14362 | level: N2 | [～論 / ～ろん , ]
+  - meaning_ko: 이론
+- id: 14368 | level: N2 | [～羽 / ～わ , ]
+  - meaning_ko: 토끼 카운터
+- id: 14370 | level: N2 | [相変わらず / あいかわらず , 父は相変わらず元気です。]
+  - meaning_ko: 평소처럼
+  - example_ko: 아버지는 여전히 괜찮습니다.
+- id: 14378 | level: N2 | [アイデア; アイディア / アイデア; アイディア , ]
+  - meaning_ko: 아이디어
+- id: 14382 | level: N2 | [あいまい / あいまい , 彼女はあいまいな返事をした。]
+  - meaning_ko: 희미한
+  - example_ko: 그녀는 모호한 대답을 했다.
+- id: 14390 | level: N2 | [扇ぐ / あおぐ , ]
+  - meaning_ko: 부채질하다
+- id: 14394 | level: N2 | [青白い / あおじろい , 病気ですか。顔が青白いよ。]
+  - meaning_ko: 창백한
+  - example_ko: 아프니? 얼굴이 푸른 흰색이야.
+- id: 14402 | level: N2 | [呆れる / あきれる , 正直が聞いて呆れるよ。]
+  - meaning_ko: 충격을 받다
+  - example_ko: 솔직히 듣고 어리석어.
+- id: 14405 | level: N2 | [アクセント / アクセント , この語のアクセントはどこにあるか。]
+  - meaning_ko: 악센트
+  - example_ko: 이 단어의 악센트는 어디에 있는가?
+- id: 14410 | level: N2 | [あくび / あくび , 彼は大あくびをした。]
+  - meaning_ko: 따분한 사람
+  - example_ko: 그는 큰 하품을 했다.
+- id: 14415 | level: N2 | [飽くまで / あくまで , わが党はこれに飽くまで反対します。]
+  - meaning_ko: 끝까지
+  - example_ko: 우리 당은 이것에 지루할 때까지 반대합니다.
+- id: 14420 | level: N2 | [明くる～ / あくる～ , ]
+  - meaning_ko: 다음
+- id: 14423 | level: N2 | [明け方 / あけがた , 明け方近くは、ぐっと冷え込む。]
+  - meaning_ko: 새벽
+  - example_ko: 새벽 가까이는, 차갑게 차갑다.
+- id: 14431 | level: N2 | [憧れる / あこがれる , すべての芸術はたえず音楽の状態に憧れる。]
+  - meaning_ko: 갈망하다
+  - example_ko: 모든 예술은 끊임없이 음악의 상태에 동경한다.
+- id: 14436 | level: N2 | [朝寝坊 / あさねぼう , 彼女は朝寝坊だ。]
+  - meaning_ko: 늦잠
+  - example_ko: 그녀는 아침 침상이다.
+- id: 14441 | level: N2 | [足跡 / あしあと , 犯人は足跡を残していた。]
+  - meaning_ko: 발자국
+  - example_ko: 범인은 발자국을 남겼다.
+- id: 14446 | level: N2 | [足元 / あしもと , 彼は彼女の足元に崩れるように倒れた。]
+  - meaning_ko: 발 밑에
+  - example_ko: 그는 그녀의 발밑에 무너지는 것처럼 쓰러졌다.
+- id: 14451 | level: N2 | [味わう / あじわう , 鳥の囀りが聞こえる中、淹れたてのコーヒーを味わう。]
+  - meaning_ko: 맛보기
+  - example_ko: 새의 소리가 들리는 가운데, 갓 구운 커피를 맛본다.
+- id: 14456 | level: N2 | [預かる / あずかる , 銀行は人の金を預かる。]
+  - meaning_ko: 구금하다
+  - example_ko: 은행은 사람의 돈을 맡는다.
+- id: 14460 | level: N2 | [温まる / あたたまる , スープが温まるまで待ちなさい。]
+  - meaning_ko: 몸을 따뜻하게 하다
+  - example_ko: 수프가 따뜻해질 때까지 기다리십시오.
+- id: 14465 | level: N2 | [当たり前 / あたりまえ , 腹を立てるのも当たり前だな。]
+  - meaning_ko: 자연스러운
+  - example_ko: 화를 내는 것도 당연하다.
+- id: 14470 | level: N2 | [あちらこちら / あちらこちら , 彼の目はあちらこちらに動いた。]
+  - meaning_ko: 이리저리
+  - example_ko: 그의 눈은 여기저기로 움직였다.
+- id: 14475 | level: N2 | [厚かましい / あつかましい , 厚かましいなぁ。]
+  - meaning_ko: 뻔뻔스러운
+  - example_ko: 두껍다.
+- id: 14482 | level: N2 | [圧縮 / あっしゅく , 圧縮したファイルを添付で送ってください。]
+  - meaning_ko: 압축
+  - example_ko: 압축된 파일을 첨부로 보내주십시오.
+- id: 14486 | level: N2 | [宛名 / あてな , 郵便の宛名ははっきり正確に。]
+  - meaning_ko: 주소
+  - example_ko: 우편 주소는 명확하게 정확하게.
+- id: 14492 | level: N2 | [当てはまる / あてはまる , 彼が言ったことは彼らに当てはまる。]
+  - meaning_ko: 적용 가능하다
+  - example_ko: 그가 말한 것은 그들에게 적용됩니다.
+- id: 14496 | level: N2 | [当てはめる / あてはめる , この規則は貴方には当てはめることはできない。]
+  - meaning_ko: 신청하다
+  - example_ko: 이 규칙은 당신에게 적용될 수 없다.
+- id: 14500 | level: N2 | [暴れる / あばれる , お酒を飲んで暴れる人とは一緒に飲みに行きたくない。]
+  - meaning_ko: 난폭하게 행동하다
+  - example_ko: 술을 마시고 날뛰는 사람과는 함께 마시러 가고 싶지 않다.
+- id: 14504 | level: N2 | [脂 / あぶら , あたし、低脂肪乳ね。]
+  - meaning_ko: 지방
+  - example_ko: 나, 저지방 우유.
+- id: 14509 | level: N2 | [あぶる / あぶる , 濡れたタオルを火であぶる。]
+  - meaning_ko: 태우다
+  - example_ko: 젖은 수건을 불로 붓는다.
+- id: 14516 | level: N2 | [あふれる / あふれる , 春になると川がここであふれる。]
+  - meaning_ko: 홍수를 일으키다
+  - example_ko: 봄이 되면 강이 여기서 넘친다.
+- id: 14518 | level: N2 | [雨戸 / あまど , 嵐が雨戸をがたがたとならした。]
+  - meaning_ko: 슬라이딩 폭풍 문
+  - example_ko: 아라시가 우도를 벗어났다고 했다.
+- id: 14525 | level: N2 | [甘やかす / あまやかす , 子供を甘やかすな。]
+  - meaning_ko: 애지중지하다
+  - example_ko: 아이를 애지하지 마라.
+- id: 14531 | level: N2 | [余る / あまる , 彼はお金を有り余るほど持っている。]
+  - meaning_ko: 남겨지다
+  - example_ko: 그는 돈을 너무 많이 가지고 있다.
+- id: 14536 | level: N2 | [編み物 / あみもの , 彼女は余暇に編み物を始めた。]
+  - meaning_ko: 편물
+  - example_ko: 그녀는 여가 시간에 뜨개질을 시작했다.
+- id: 14540 | level: N2 | [あみもの / あみもの , ]
+  - meaning_ko: 편물
+- id: 14546 | level: N2 | [編む / あむ , 彼女は祖母からバスケットを編む技術を学んだ。]
+  - meaning_ko: 뜨개질하다
+  - example_ko: 그녀는 할머니로부터 바구니를 짠 기술을 배웠다.
+- id: 14551 | level: N2 | [危うい / あやうい , 危うい所を助かった。]
+  - meaning_ko: 위험한
+  - example_ko: 위험한 곳을 살았다.
+- id: 14555 | level: N2 | [怪しい / あやしい , 彼が怪しいと思う。]
+  - meaning_ko: 의심스러운
+  - example_ko: 그가 수상하다고 생각합니다.
+- id: 14560 | level: N2 | [荒い / あらい , 彼は運転が荒い。]
+  - meaning_ko: 거친
+  - example_ko: 그는 운전이 거칠다.
+- id: 14566 | level: N2 | [粗い / あらい , その物体の表面はかなり粗い。]
+  - meaning_ko: 조잡한
+  - example_ko: 물체의 표면은 매우 거칠다.
+- id: 14569 | level: N2 | [粗筋 / あらすじ , 物語の粗筋を説明してもらえますか？]
+  - meaning_ko: 개요
+  - example_ko: 이야기의 조근을 설명해 주시겠습니까?
+- id: 14577 | level: N2 | [争う / あらそう , わずかな額のことで言い争うのはよせ。]
+  - meaning_ko: 경쟁하다
+  - example_ko: 약간의 이마로 싸우는 것은 좋다.
+- id: 14582 | level: N2 | [改めて / あらためて , 改めて言う事はない。]
+  - meaning_ko: 다른 시간에
+  - example_ko: 다시 말할 일은 없다.
+- id: 14583 | level: N2 | [改める / あらためる , 悪い習慣を改めるのは難しいです。]
+  - meaning_ko: 변화하다
+  - example_ko: 나쁜 습관을 수정하는 것은 어렵습니다.
+- id: 14585 | level: N2 | [あらわす / あらわす , 言葉は思想をあらわす。]
+  - meaning_ko: 쓰다
+  - example_ko: 기간은 사상을 나타낸다.
+- id: 14588 | level: N2 | [有難い / ありがたい , それは有難い。]
+  - meaning_ko: 고마워하는
+  - example_ko: 그것은 고맙습니다.
+- id: 14596 | level: N2 | [あれこれ / あれこれ , 彼らはあれこれと話をしています。]
+  - meaning_ko: 이것저것
+  - example_ko: 그들은 이것과 이야기하고 있습니다.
+- id: 14602 | level: N2 | [荒れる / あれる , 彼はよく荒れる。]
+  - meaning_ko: 폭풍우가 치다
+  - example_ko: 그는 잘 거칠어진다.
+- id: 14605 | level: N2 | [慌ただしい / あわただしい , 今日は慌ただしいな。]
+  - meaning_ko: 바쁘다
+  - example_ko: 오늘은 당황하네.
+- id: 14614 | level: N2 | [慌てる / あわてる , 慌てることは無駄を作る。]
+  - meaning_ko: 혼란스러워지다 (당황하다
+  - example_ko: 당황하는 것은 낭비를 만든다.
+- id: 14622 | level: N2 | [安易 / あんい , 彼は彼女を安易な餌で誘き寄せた。]
+  - meaning_ko: 여유로운
+  - example_ko: 그는 그녀를 안이한 미끼로 초대했다.
+- id: 14626 | level: N2 | [案外 / あんがい , 案外、この本は読みやすいね。]
+  - meaning_ko: 뜻밖에
+  - example_ko: 의외로, 이 책은 읽기 쉽다.
+- id: 14631 | level: N2 | [アンテナ / アンテナ , アンテナの調子でも悪いのかな。]
+  - meaning_ko: 안테나
+  - example_ko: 안테나의 상태에서도 나쁜 것일까.
+- id: 14637 | level: N2 | [言い出す / いいだす , 何を言い出すかな？]
+  - meaning_ko: 이야기를 시작하다
+  - example_ko: 무엇을 말할까?
+- id: 14641 | level: N2 | [言い付ける / いいつける , ]
+  - meaning_ko: 말하다
+- id: 14645 | level: N2 | [意義 / いぎ , 大学での生活は有意義である。]
+  - meaning_ko: 의미
+  - example_ko: 대학에서의 생활은 의미가 있다.
+- id: 14649 | level: N2 | [生き生き / いきいき , 夢が生き生きと記憶に残ることもある。]
+  - meaning_ko: 생생하게
+  - example_ko: 꿈이 생생하고 기억에 남을 수도 있다.
+- id: 14653 | level: N2 | [いきなり / いきなり , いきなり解雇を言い渡された。]
+  - meaning_ko: 갑자기
+  - example_ko: 갑자기 해고를 전해졌다.
+- id: 14659 | level: N2 | [幾～ / いく～ , ]
+  - meaning_ko: 여러 ~
+- id: 14667 | level: N2 | [育児 / いくじ , 育児ノイローゼになっちゃいそう。]
+  - meaning_ko: 육아
+  - example_ko: 육아 노이로제가 되어버릴 것 같다.
+- id: 14670 | level: N2 | [幾分 / いくぶん , 彼は幾分酔っている。]
+  - meaning_ko: 약간
+  - example_ko: 그는 약간 취해 있다.
+- id: 14676 | level: N2 | [生け花 / いけばな , 母は生け花を教えている。]
+  - meaning_ko: 꽃꽂이
+  - example_ko: 어머니는 꽃꽂이를 가르치고 있습니다.
+- id: 14680 | level: N2 | [以後 / いご , あれ以後は災難続きです。]
+  - meaning_ko: 이 후에
+  - example_ko: 그 이후는 재난 계속입니다.
+- id: 14683 | level: N2 | [イコール / イコール , 彼らは宗教イコール教会に行くことだと考えている。]
+  - meaning_ko: 동일한
+  - example_ko: 그들은 종교 이콜 교회에 가는 것이라고 생각합니다.
+- id: 14688 | level: N2 | [以降 / いこう , 梅雨入りは来週以降になりそうだ。]
+  - meaning_ko: 이후에도
+  - example_ko: 장마철은 다음주 이후가 될 것 같다.
+- id: 14692 | level: N2 | [勇ましい / いさましい , 一人で原始林へ乗り込もうとは君はなんて勇ましいんだ。]
+  - meaning_ko: 용감한
+  - example_ko: 혼자서 원시림에 탑승하자는 너는 얼마나 용감해.
+- id: 14695 | level: N2 | [衣食住 / いしょくじゅう , 衣食住は生活の基本です。]
+  - meaning_ko: 음식
+  - example_ko: 의식주는 생활의 기본입니다.
+- id: 14698 | level: N2 | [いちいち / いちいち , 彼の言うことはいちいち頭に来る。]
+  - meaning_ko: 하나씩
+  - example_ko: 그의 말은 일일이 머리에 온다.
+- id: 14707 | level: N2 | [一応 / いちおう , ええ、先方から一応返事はありました。]
+  - meaning_ko: 잠정적으로
+  - example_ko: 그래, 선방으로부터 일단 대답은 있었습니다.
+- id: 14716 | level: N2 | [一段と / いちだんと , ゲームで一段と盛り上がった。]
+  - meaning_ko: 지금까지
+  - example_ko: 게임에서 한층 더 고조되었다.
+- id: 14719 | level: N2 | [一流 / いちりゅう , 彼は結局は一流の小説家であった。]
+  - meaning_ko: 일등
+  - example_ko: 그는 결국 일류 소설가였다.
+- id: 14725 | level: N2 | [一昨日 / いっさくじつ , 一昨日成田に着きました。]
+  - meaning_ko: 그저께
+  - example_ko: 어제 나리타에 도착했습니다.
+- id: 14729 | level: N2 | [一昨年 / いっさくねん , 私は一昨年この山に登りました。]
+  - meaning_ko: 지난 해
+  - example_ko: 나는 작년에 이 산에 올랐다.
+- id: 14733 | level: N2 | [一斉 / いっせい , 人々が一斉に走り出した。]
+  - meaning_ko: 동시
+  - example_ko: 사람들이 일제히 달리기 시작했다.
+- id: 14739 | level: N2 | [一旦 / いったん , 列車は一旦停車した。]
+  - meaning_ko: 한 번
+  - example_ko: 열차는 일단 정차했다.
+- id: 14745 | level: N2 | [一定 / いってい , 彼は自転車を一定の速度で走らせた。]
+  - meaning_ko: 결정된
+  - example_ko: 그는 자전거를 일정한 속도로 달렸다.
+- id: 14748 | level: N2 | [行っていらっしゃい / いっていらっしゃい , ]
+  - meaning_ko: 좋은 하루 되세요
+- id: 14756 | level: N2 | [いってきます / いってきます , 「いってらっしゃい」「いってきます」]
+  - meaning_ko: (Lit.) 갔다가 돌아올게요
+  - example_ko: 「어서 오세요」 「가오겠습니다」
+- id: 14760 | level: N2 | [いってまいります / いってまいります , ]
+  - meaning_ko: (Lit.) 갔다가 돌아올게요
+- id: 14766 | level: N2 | [行ってらっしゃい / いってらっしゃい , 行ってらっしゃい！]
+  - meaning_ko: 좋은 하루 되세요
+  - example_ko: 가자!
+- id: 14770 | level: N2 | [移転 / いてん , 工場は北海道へ移転した。]
+  - meaning_ko: 움직이는
+  - example_ko: 공장은 홋카이도로 이전했다.
+- id: 14774 | level: N2 | [井戸 / いど , 彼は井戸へ行って水をくんできた。]
+  - meaning_ko: 우물
+  - example_ko: 그는 우물로 가서 물을 쿤했다.
+- id: 14781 | level: N2 | [緯度 / いど , ]
+  - meaning_ko: 위도(탐색)
+- id: 14785 | level: N2 | [威張る / いばる , そこ威張るところじゃないよね？]
+  - meaning_ko: 자랑스러워하다
+  - example_ko: 거기 위장하는 곳이 아니지?
+- id: 14789 | level: N2 | [嫌がる / いやがる , 猫は濡れるのを嫌がる。]
+  - meaning_ko: 주저하는
+  - example_ko: 고양이는 젖는 것을 싫어한다.
+- id: 14791 | level: N2 | [いよいよ / いよいよ , いよいよ彼女の番になった。]
+  - meaning_ko: 점점 더
+  - example_ko: 드디어 그녀의 차례가 되었다.
+- id: 14797 | level: N2 | [煎る / いる , ]
+  - meaning_ko: 굽다
+- id: 14801 | level: N2 | [炒る / いる , ]
+  - meaning_ko: 말리다
+- id: 14806 | level: N2 | [入れ物 / いれもの , そこのガラスの入れ物、取ってくれる？]
+  - meaning_ko: 컨테이너
+  - example_ko: 거기 유리 넣어, 걸릴?
+- id: 14808 | level: N2 | [インキ / インキ , 印刷インキが不足している。]
+  - meaning_ko: 잉크
+  - example_ko: 인쇄 잉크가 부족합니다.
+- id: 14809 | level: N2 | [引力 / いんりょく , 引力は宇宙のあらゆる物に影響を与える。]
+  - meaning_ko: 중력
+  - example_ko: 인력은 우주의 모든 것에 영향을 미칩니다.
+- id: 14814 | level: N2 | [ウーマン / ウーマン , 彼女はウーマンリブ運動の指導者だと言われている。]
+  - meaning_ko: 여성
+  - example_ko: 그녀는 우먼 리브 운동의 지도자라고 한다.
+- id: 14819 | level: N2 | [ウール / ウール , 彼女はウールの服を着ていた。]
+  - meaning_ko: 양모
+  - example_ko: 그녀는 모직 옷을 입고 있었다.
+- id: 14824 | level: N2 | [ウエートレス / ウエートレス , ウエートレスはテーブルの上に白いテーブルクロスをかけた。]
+  - meaning_ko: 웨이트리스
+  - example_ko: 웨이트리스는 테이블 위에 흰색 식탁보를 걸었다.
+- id: 14834 | level: N2 | [植木 / うえき , 私は植木が好きだ。]
+  - meaning_ko: 정원 관목
+  - example_ko: 나는 식물을 좋아한다.
+- id: 14838 | level: N2 | [飢える / うえる , 飢えるより盗みをした方がましだ。]
+  - meaning_ko: 굶어 죽다
+  - example_ko: 굶주림보다 훔치는 것이 낫다.
+- id: 14846 | level: N2 | [浮ぶ / うかぶ , ]
+  - meaning_ko: 떠다니다
+- id: 14851 | level: N2 | [浮かべる / うかべる , 応援団の何人かは泣きそうな表情を浮かべる。]
+  - meaning_ko: 떠다니다
+  - example_ko: 응원단 중 일부는 울 것 같은 표정을 띄운다.
+- id: 14855 | level: N2 | [浮く / うく , 木は水に浮く。]
+  - meaning_ko: 떠다니다
+  - example_ko: 나무는 물에 떠있다.
+- id: 14862 | level: N2 | [承る / うけたまわる , ]
+  - meaning_ko: (겸손하게) 듣다
+- id: 14865 | level: N2 | [受取 / うけとり , 手荷物受取所で待っています。]
+  - meaning_ko: 영수증
+  - example_ko: 수하물 수취소에서 기다리고 있습니다.
+- id: 14871 | level: N2 | [受け持つ / うけもつ , 費用を受け持つ者に決定権がある。]
+  - meaning_ko: ~을 맡다(맡다)
+  - example_ko: 비용을 받는 자에게 결정권이 있다.
+- id: 14877 | level: N2 | [薄暗い / うすぐらい , 薄暗い光の中で彼の顔を見た。]
+  - meaning_ko: 어둑한
+  - example_ko: 희미한 빛에서 그의 얼굴을 보았다.
+- id: 14884 | level: N2 | [薄める / うすめる , ]
+  - meaning_ko: 희석하다
+- id: 14890 | level: N2 | [打合せ / うちあわせ , ]
+  - meaning_ko: 비즈니스 미팅
+- id: 14896 | level: N2 | [打ち消す / うちけす , ]
+  - meaning_ko: 부정하다
+- id: 14899 | level: N2 | [写る / うつる , ]
+  - meaning_ko: 사진을 찍다
+- id: 14905 | level: N2 | [うどん / うどん , うどんでも食べませんか？]
+  - meaning_ko: 우동(일본 전통 국수)
+  - example_ko: 우동도 먹지 않겠습니까?
+- id: 14910 | level: N2 | [うなずく / うなずく , うなずくことは承知の合図だ。]
+  - meaning_ko: 고개를 끄덕이다
+  - example_ko: 끄덕이는 것은 인지의 신호이다.
+- id: 14916 | level: N2 | [有無 / うむ , 排卵の有無を調べる方法はありますか？]
+  - meaning_ko: 존재 또는 존재하지 않음
+  - example_ko: 배란의 유무를 조사하는 방법이 있습니까?
+- id: 14920 | level: N2 | [埋める / うめる , 私はこの国に骨を埋めるつもりです。]
+  - meaning_ko: 묻다
+  - example_ko: 저는 이 나라에 뼈를 채우려고 합니다.
+- id: 14924 | level: N2 | [敬う / うやまう , 私は年輩の人を敬う。]
+  - meaning_ko: 존경심을 표하기 위해
+  - example_ko: 나이가 많은 사람을 존경한다.
+- id: 14929 | level: N2 | [裏返す / うらがえす , ]
+  - meaning_ko: 안팎으로 뒤집다
+- id: 14934 | level: N2 | [裏口 / うらぐち , 彼は裏口入学した。]
+  - meaning_ko: 백도어
+  - example_ko: 그는 뒷문 입학했다.
+- id: 14938 | level: N2 | [占う / うらなう , ]
+  - meaning_ko: 예측하다
+- id: 14943 | level: N2 | [恨み / うらみ , 恨みは深いですよ。]
+  - meaning_ko: 원한
+  - example_ko: 원한은 깊습니다.
+- id: 14947 | level: N2 | [恨む / うらむ , セーラは恨むような女の子ではないだろうが。]
+  - meaning_ko: 저주하다
+  - example_ko: 세일러는 원한 여자가 아니겠지만.
+- id: 14953 | level: N2 | [羨む / うらやむ , ]
+  - meaning_ko: 부러워하다
+- id: 14958 | level: N2 | [売上 / うりあげ , 今月は売上が落ちた。]
+  - meaning_ko: 판매된 금액
+  - example_ko: 이달은 매출이 떨어졌다.
+- id: 14964 | level: N2 | [売り上げ / うりあげ , 売り上げが急に落ちている。]
+  - meaning_ko: 판매된 금액
+  - example_ko: 매출이 갑자기 떨어지고 있다.
+- id: 14970 | level: N2 | [売り切れ / うりきれ , みんな売り切れです。]
+  - meaning_ko: 매진
+  - example_ko: 모두 품절입니다.
+- id: 14974 | level: N2 | [売り切れる / うりきれる , 特売日は早く行かないと売り切れる。]
+  - meaning_ko: 매진되다
+  - example_ko: 특매일은 빨리 가지 않으면 매진된다.
+- id: 14979 | level: N2 | [売行き / うれゆき , 彼女の本はかなりの売行きだ。]
+  - meaning_ko: 매상
+  - example_ko: 그녀의 책은 상당한 판매입니다.
+- id: 14982 | level: N2 | [売れ行き / うれゆき , 売れ行きはものすごく活発だ。]
+  - meaning_ko: 매상
+  - example_ko: 판매는 굉장히 활발하다.
+- id: 14987 | level: N2 | [うろうろ / うろうろ , 今日一日当ても無くうろうろした。]
+  - meaning_ko: 배회
+  - example_ko: 오늘 하루 맞아도 없어서 비뚤어졌다.
+- id: 14992 | level: N2 | [上～ / うわ～ , ]
+  - meaning_ko: 위 ~
+- id: 14996 | level: N2 | [運河 / うんが , 船はパナマ運河を通り抜けた。]
+  - meaning_ko: 운하
+  - example_ko: 배는 파나마 운하를 통과했다.
+- id: 14999 | level: N2 | [うんと / うんと , 彼は今日はうんと顔色がよい。]
+  - meaning_ko: 아주 더
+  - example_ko: 그는 오늘은 너무 안색이 좋다.
+- id: 15006 | level: N2 | [英文 / えいぶん , 彼女は英文学を学ぶためにアメリカへ行った。]
+  - meaning_ko: 영어로 된 문장
+  - example_ko: 그녀는 영문학을 배우기 위해 미국에 갔다.
+- id: 15013 | level: N2 | [英和 / えいわ , 本棚に英和辞典がありますか。]
+  - meaning_ko: 영어-일본어(예:
+  - example_ko: 책장에 영어와 사전이 있습니까?
+- id: 15016 | level: N2 | [ええと / ええと , ええと、２泊です。]
+  - meaning_ko: 좀 보자
+  - example_ko: 음, 2박입니다.
+- id: 15021 | level: N2 | [液体 / えきたい , 水は液体である。]
+  - meaning_ko: 액체
+  - example_ko: 물은 액체이다.
+- id: 15024 | level: N2 | [エチケット / エチケット , それはエチケットの問題だ。]
+  - meaning_ko: 에티켓
+  - example_ko: 그것은 에티켓 문제입니다.
+- id: 15028 | level: N2 | [絵の具 / えのぐ , 赤い絵の具に青い絵の具を混ぜなさい。]
+  - meaning_ko: 그림 물감
+  - example_ko: 빨간 물감에 파란 물감을 혼합하십시오.
+- id: 15034 | level: N2 | [エプロン / エプロン , エプロン買うほど料理しない。]
+  - meaning_ko: 앞치마
+  - example_ko: 앞치마 사는 만큼 요리하지 않는다.
+- id: 15039 | level: N2 | [偉い / えらい , 自分を偉い者だと思っている。]
+  - meaning_ko: 엄청난
+  - example_ko: 자신을 위대한 사람이라고 생각한다.
+- id: 15045 | level: N2 | [宴会 / えんかい , 宴会はたけなわだった。]
+  - meaning_ko: 파티
+  - example_ko: 연회는 타케나와였다.
+- id: 15051 | level: N2 | [園芸 / えんげい , 父は園芸の基本を教えてくれた。]
+  - meaning_ko: 원예
+  - example_ko: 아버지는 원예의 기본을 가르쳐 주었다.
+- id: 15058 | level: N2 | [演劇 / えんげき , 彼は大学で演劇を専攻した。]
+  - meaning_ko: 연극(연극)
+  - example_ko: 그는 대학에서 놀이를 전공했다.
+- id: 15063 | level: N2 | [円周 / えんしゅう , 3月14日は円周率の日です。]
+  - meaning_ko: 둘레
+  - example_ko: 3월 14일은 원주율의 날입니다.
+- id: 15067 | level: N2 | [遠足 / えんそく , 全体として、遠足は楽しかった。]
+  - meaning_ko: 여행
+  - example_ko: 전반적으로 소풍은 재미있었습니다.
+- id: 15071 | level: N2 | [延長 / えんちょう , 宿泊をもう一晩延長できますか。]
+  - meaning_ko: 확대
+  - example_ko: 숙박을 밤새 연장할 수 있습니까?
+- id: 15076 | level: N2 | [煙突 / えんとつ , 煙突は煙を出し始めた。]
+  - meaning_ko: 굴뚝
+  - example_ko: 굴뚝은 연기를 내기 시작했다.
+- id: 15081 | level: N2 | [オーケストラ / オーケストラ , 指揮者はオーケストラの指揮をする。]
+  - meaning_ko: 오케스트라
+  - example_ko: 지휘자는 오케스트라의 지휘를 한다.
+- id: 15085 | level: N2 | [オートメーション / オートメーション , 生産性はオートメーションの徹底によって向上する。]
+  - meaning_ko: 오토메이션
+  - example_ko: 생산성은 자동화의 철저함에 의해 향상된다.
+- id: 15089 | level: N2 | [追いかける / おいかける , 犬はなぜリスを追いかけるの？]
+  - meaning_ko: 누군가를 쫓거나 뒤쫓다
+  - example_ko: 개는 왜 다람쥐를 쫓는가?
+- id: 15095 | level: N2 | [追い越す / おいこす , ]
+  - meaning_ko: 통과하다 (예를 들어
+- id: 15099 | level: N2 | [オイル / オイル , 私はサラダオイルを１びん買った。]
+  - meaning_ko: 기름
+  - example_ko: 나는 샐러드 오일을 한 병 샀다.
+- id: 15102 | level: N2 | [応援 / おうえん , 彼らは皆その候補者を応援した。]
+  - meaning_ko: 지원
+  - example_ko: 그들은 모두 그 후보자를 응원했다.
+- id: 15105 | level: N2 | [王女 / おうじょ , 王女があくどい化粧をしていた。]
+  - meaning_ko: 공주
+  - example_ko: 공주가 어색한 화장을 하고 있었다.
+- id: 15109 | level: N2 | [応ずる / おうずる , ]
+  - meaning_ko: 응답하다
+- id: 15114 | level: N2 | [応接 / おうせつ , 私は応接間に案内された。]
+  - meaning_ko: 리셉션
+  - example_ko: 나는 응접 사이에 안내되었다.
+- id: 15122 | level: N2 | [応対 / おうたい , 誰も玄関へ応対に出なかった。]
+  - meaning_ko: 전수
+  - example_ko: 아무도 현관에 응대에 나오지 않았다.
+- id: 15131 | level: N2 | [往復 / おうふく , 往復旅行？片道だけです。]
+  - meaning_ko: (col) 왕복
+  - example_ko: 왕복 여행? 편도뿐입니다.
+- id: 15135 | level: N2 | [欧米 / おうべい , 欧米では犬を家族の一員とみなす。]
+  - meaning_ko: 유럽과 미국
+  - example_ko: 서양에서는 개를 가족의 일원으로 본다.
+- id: 15138 | level: N2 | [応用 / おうよう , 今日の純粋数学は明日の応用数学。]
+  - meaning_ko: 애플리케이션
+  - example_ko: 오늘의 순수 수학은 내일의 응용 수학.
+- id: 15148 | level: N2 | [おおざっぱ / おおざっぱ , おおざっぱに言うと、英国の季節も日本のものとほとんど同じだ。]
+  - meaning_ko: 거친 (정확하지 않음)
+  - example_ko: 대략 말하면 영국의 계절도 일본의 것과 거의 같다.
+- id: 15152 | level: N2 | [大通り / おおどおり , 彼は大通りに店を構えている。]
+  - meaning_ko: 큰길
+  - example_ko: 그는 대로에 가게를 짓고 있다.
+- id: 15158 | level: N2 | [大凡 / おおよそ , ]
+  - meaning_ko: ~에 대한
+- id: 15164 | level: N2 | [お帰り / おかえり , お帰りなさい。]
+  - meaning_ko: 반품
+  - example_ko: 돌아가십시오.
+- id: 15172 | level: N2 | [おかけください / おかけください , どうぞおかけください。]
+  - meaning_ko: 앉으세요
+  - example_ko: 제발 보내주세요.
+- id: 15177 | level: N2 | [おかげさまで / おかげさまで , おかげさまで元気です。]
+  - meaning_ko: 신 덕분에
+  - example_ko: 덕분에 괜찮습니다.
+- id: 15181 | level: N2 | [おかず / おかず , 今晩のおかずは魚だ。]
+  - meaning_ko: 반찬
+  - example_ko: 오늘 저녁 반찬은 생선이다.
+- id: 15186 | level: N2 | [おかまいなく / おかまいなく , どうぞおかまいなく。]
+  - meaning_ko: 제발 나 때문에 소란을 피우지 마세요
+  - example_ko: 아무쪼록 괜찮아.
+- id: 15191 | level: N2 | [拝む / おがむ , どうして、初日の出を拝むの？]
+  - meaning_ko: 예배하다
+  - example_ko: 어째서 첫 일출을 숭배합니까?
+- id: 15193 | level: N2 | [お代わり / おかわり , 水のお代わりを下さい。]
+  - meaning_ko: 두 번째 도움
+  - example_ko: 물 대신하십시오.
+- id: 15198 | level: N2 | [補う / おぎなう , 彼女の非凡な才能が経験不足を補う。]
+  - meaning_ko: 보상하다
+  - example_ko: 그녀의 비범한 재능이 경험 부족을 보충한다.
+- id: 15203 | level: N2 | [お気の毒に / おきのどくに , まあ、お気の毒に。]
+  - meaning_ko: 그 말을 들으니 안타깝습니다…
+  - example_ko: 글쎄, 내 독에.
+- id: 15210 | level: N2 | [屋外 / おくがい , ラグビーは屋外競技である。]
+  - meaning_ko: 옥외
+  - example_ko: 럭비는 옥외 경기이다.
+- id: 15216 | level: N2 | [送り仮名 / おくりがな , この漢字、送り仮名が間違ってるよ。]
+  - meaning_ko: 가나로 쓰여진 단어의 일부
+  - example_ko: 이 한자, 보내 가명이 잘못되어 있어.
+- id: 15221 | level: N2 | [お元気で / おげんきで , 奥様はお元気ですか。]
+  - meaning_ko: 잘 지내세요'
+  - example_ko: 부인은 어떻습니까?
+- id: 15226 | level: N2 | [怠る / おこたる , 連絡を怠るな。]
+  - meaning_ko: 무시하다
+  - example_ko: 연락을 게을리하지 마라.
+- id: 15230 | level: N2 | [押さえる / おさえる , ここを押さえると痛いのよ。どうしたのかしら？]
+  - meaning_ko: 고정하다
+  - example_ko: 여기를 누르면 아파요. 무슨 일이야?
+- id: 15233 | level: N2 | [お先に / おさきに , どうぞ、お先に！]
+  - meaning_ko: ~ 전에
+  - example_ko: 제발, 앞으로!
+- id: 15238 | level: N2 | [伯父 / おじ , 伯父は癌で亡くなりました。]
+  - meaning_ko: (겸손한) 삼촌 (부모님보다 나이가 많은)
+  - example_ko: 백부는 암으로 사망했습니다.
+- id: 15244 | level: N2 | [叔父 / おじ , 来週私は叔父を訪問します。]
+  - meaning_ko: 삼촌(부모보다 어린)
+  - example_ko: 다음주에 삼촌을 방문합니다.
+- id: 15252 | level: N2 | [惜しい / おしい , 命は誰でも惜しい。]
+  - meaning_ko: 유감스럽다
+  - example_ko: 생명은 누구나 아쉽다.
+- id: 15257 | level: N2 | [伯父さん / おじさん , 伯父さんが僕を雇ってくれたんだ。]
+  - meaning_ko: (아님.) 중년 신사
+  - example_ko: 백부씨가 나를 고용해 주었어.
+- id: 15260 | level: N2 | [小父さん / おじさん , ]
+  - meaning_ko: (아님.) 중년 신사
+- id: 15266 | level: N2 | [叔父さん / おじさん , 叔父さんは明日青森に出張です。]
+  - meaning_ko: (아님.) 중년 신사
+  - example_ko: 삼촌은 내일 아오모리에 출장입니다.
+- id: 15271 | level: N2 | [お邪魔します / おじゃまします , お邪魔します。]
+  - meaning_ko: 방해해서 미안해요
+  - example_ko: 실례합니다.
+- id: 15276 | level: N2 | [お世話になりました / おせわになりました , 大変お世話になりました。]
+  - meaning_ko: 나는 당신의 보살핌을 받았습니다
+  - example_ko: 매우 빚을졌습니다.
+- id: 15280 | level: N2 | [お大事に / おだいじに , お大事に。]
+  - meaning_ko: 몸 조심하세요
+  - example_ko: 소중히.
+- id: 15284 | level: N2 | [落着く / おちつく , ]
+  - meaning_ko: 진정하다
+- id: 15288 | level: N2 | [お出掛け / おでかけ , ]
+  - meaning_ko: 나들이
+- id: 15292 | level: N2 | [お手伝いさん / おてつだいさん , お手伝いさんはすぐに食卓から食器をかたづけた。]
+  - meaning_ko: 하녀
+  - example_ko: 도우미는 곧 식탁에서 식기를 달았다.
+- id: 15301 | level: N2 | [脅かす / おどかす , それは町の繁栄を脅かすだろう。]
+  - meaning_ko: 위협하다
+  - example_ko: 그것은 도시의 번영을 위협할 것이다.
+- id: 15303 | level: N2 | [落し物 / おとしもの , ]
+  - meaning_ko: 분실물
+- id: 15309 | level: N2 | [驚かす / おどろかす , 亨を驚かす方法、ちょっと一緒に考えてよ。]
+  - meaning_ko: 놀라게 하다
+  - example_ko: 亨을 놀라게 하는 방법, 조금 함께 생각해.
+- id: 15317 | level: N2 | [お願いします / おねがいします , 勘定お願いします。]
+  - meaning_ko: 제발 (lit.
+  - example_ko: 계정 부탁드립니다.
+- id: 15320 | level: N2 | [各々 / おのおの , 各々の乗客には荷物二つの制限がある。]
+  - meaning_ko: 각
+  - example_ko: 각 승객에게는 짐 2개의 제한이 있다.
+- id: 15325 | level: N2 | [伯母 / おば , 彼女は君の伯母だよね？]
+  - meaning_ko: (겸손한) 이모 (부모님보다 나이가 많은)
+  - example_ko: 그녀는 너의 어머니야?
+- id: 15330 | level: N2 | [叔母 / おば , 両親の死後、彼は叔母に育てられた。]
+  - meaning_ko: 이모(부모님보다 어린)
+  - example_ko: 부모가 죽은 후 그는 이모에게 자랐다.
+- id: 15334 | level: N2 | [小母さん / おばさん , ]
+  - meaning_ko: 숙녀
+- id: 15339 | level: N2 | [おはよう / おはよう , 彼女は私に『おはよう』と挨拶をした。]
+  - meaning_ko: (축약) 좋은 아침
+  - example_ko: 그녀는 나에게 '안녕하세요'라고 인사를 했다.
+- id: 15343 | level: N2 | [お参り / おまいり , 元旦には近所の神社にお参りする人が多い。]
+  - meaning_ko: 예배
+  - example_ko: 설날에는 이웃 신사에 참석하는 사람이 많다.
+- id: 15351 | level: N2 | [お待たせしました / おまたせしました , お待たせしました。]
+  - meaning_ko: 기다리게 해서 미안해요
+  - example_ko: 기다리게했습니다.
+- id: 15354 | level: N2 | [お待ちください / おまちください , 並んでお待ちください。]
+  - meaning_ko: 잠시만 기다려주세요
+  - example_ko: 나란히 기다려주세요.
+- id: 15359 | level: N2 | [おまちどおさま / おまちどおさま , ]
+  - meaning_ko: 기다리게 해서 미안해요
+- id: 15364 | level: N2 | [おめでたい / おめでたい , あいつは本当におめでたい人間だ。]
+  - meaning_ko: 경사
+  - example_ko: 그 녀석은 정말로 축하하고 싶은 인간이다.
+- id: 15369 | level: N2 | [思い掛けない / おもいがけない , ]
+  - meaning_ko: 예기치 않은
+- id: 15376 | level: N2 | [思い切り / おもいきり , 思い切り泣いてよ。]
+  - meaning_ko: 온 힘을 다해 (마음)
+  - example_ko: 마음껏 울어요.
+- id: 15381 | level: N2 | [思い込む / おもいこむ , 一番いけないのは、自分なんかだめだと思い込むことだよ。]
+  - meaning_ko: 그런 인상을 받다
+  - example_ko: 제일 안 되는 것은, 자신 왠지 안된다고 생각하는 것이다.
+- id: 15384 | level: N2 | [思いっ切り / おもいっきり , ]
+  - meaning_ko: 매우
+- id: 15392 | level: N2 | [思いっきり / おもいっきり , 思いっきりやりましょう。]
+  - meaning_ko: 최선을 다해
+  - example_ko: 마음껏 해보자.
+- id: 15397 | level: N2 | [重たい / おもたい , 重たい料理は苦手だ。]
+  - meaning_ko: 무거운
+  - example_ko: 무거운 요리는 약하다.
+- id: 15401 | level: N2 | [お休み / おやすみ , 明日はお休みです。]
+  - meaning_ko: 휴일
+  - example_ko: 내일은 휴일입니다.
+- id: 15407 | level: N2 | [おやつ / おやつ , おやつにプリンを食べた。]
+  - meaning_ko: 식사 간식 사이
+  - example_ko: 간식에 푸딩을 먹었다.
+- id: 15411 | level: N2 | [親指 / おやゆび , 針で親指を突いてしまった。]
+  - meaning_ko: 무지
+  - example_ko: 바늘로 엄지손가락을 찔렀다.
+- id: 15415 | level: N2 | [オルガン / オルガン , オルガンは弾けますか？]
+  - meaning_ko: 오르간
+  - example_ko: 오르간을 연주할 수 있습니까?
+- id: 15421 | level: N2 | [御～ / おん～ , ]
+  - meaning_ko: 존댓말 ~
+- id: 15425 | level: N2 | [恩恵 / おんけい , 熱帯雨林は地球に多くの恩恵を与える。]
+  - meaning_ko: 축복
+  - example_ko: 열대우림은 지구에 많은 혜택을 준다.
+- id: 15430 | level: N2 | [温室 / おんしつ , メロンは温室で栽培する。]
+  - meaning_ko: 온실
+  - example_ko: 멜론은 온실에서 재배한다.
+- id: 15435 | level: N2 | [温泉 / おんせん , 僕は偶然温泉を見つけた。]
+  - meaning_ko: 온천
+  - example_ko: 나는 우연히 온천을 발견했다.
+- id: 15442 | level: N2 | [温帯 / おんたい , 我々のところの気候は温帯性です。]
+  - meaning_ko: 온대 지역
+  - example_ko: 우리의 기후는 온대성입니다.
+- id: 15447 | level: N2 | [御中 / おんちゅう , 御中元や御歳暮の習慣はなかなかすたれない。]
+  - meaning_ko: 선생님.
+  - example_ko: 미나카모토나 미나토생의 습관은 좀처럼 견딜 수 없다.
+- id: 15451 | level: N2 | [女の人 / おんなのひと , 彼女の人形が車に轢かれた。]
+  - meaning_ko: 여성
+  - example_ko: 그녀의 인형이 차에 쏟아졌다.
+- id: 15456 | level: N2 | [蚊 / か , 私は昨晩蚊になやまされた。]
+  - meaning_ko: 모기
+  - example_ko: 나는 어젯밤 모기로 떠났다.
+- id: 15461 | level: N2 | [カーブ / カーブ , 彼は右に急カーブした。]
+  - meaning_ko: 곡선
+  - example_ko: 그는 오른쪽으로 갑자기 커브했다.
+- id: 15466 | level: N2 | [貝 / かい , 火力とお鍋と貝の種類によるわ。]
+  - meaning_ko: 껍데기
+  - example_ko: 화력과 냄비와 조개의 종류에 따라.
+- id: 15471 | level: N2 | [外～ / がい～ , ]
+  - meaning_ko: 외국 ~
+- id: 15474 | level: N2 | [開会 / かいかい , 展覧された絵のかなり多くが開会初日に売れた。]
+  - meaning_ko: 회의의 시작
+  - example_ko: 전람된 그림의 상당히 많은 것이 개회 첫날에 팔렸다.
+- id: 15479 | level: N2 | [会館 / かいかん , 学生会館は学生のためにある。]
+  - meaning_ko: 회의실
+  - example_ko: 학생 회관은 학생을 위해 있다.
+- id: 15486 | level: N2 | [改札 / かいさつ , 改札口で切符をお見せください。]
+  - meaning_ko: 티켓 검사
+  - example_ko: 개찰구에서 표를 보여주세요.
+- id: 15490 | level: N2 | [解散 / かいさん , 集会は７時に解散した。]
+  - meaning_ko: 붕괴
+  - example_ko: 집회는 7시에 해산했다.
+- id: 15495 | level: N2 | [海水浴 / かいすいよく , 海水浴中に彼は友達に会った。]
+  - meaning_ko: 해수욕
+  - example_ko: 해수욕 중에 그는 친구를 만났다.
+- id: 15501 | level: N2 | [回数 / かいすう , 回数券を下さい。]
+  - meaning_ko: 횟수
+  - example_ko: 회수권을 주세요.
+- id: 15506 | level: N2 | [回数券 / かいすうけん , 回数券を下さい。]
+  - meaning_ko: 티켓북
+  - example_ko: 회수권을 주세요.
+- id: 15511 | level: N2 | [改正 / かいせい , 法律が改正された。]
+  - meaning_ko: 개정
+  - example_ko: 법률이 개정되었다.
+- id: 15515 | level: N2 | [快晴 / かいせい , 今日は快晴だ。]
+  - meaning_ko: 좋은 날씨
+  - example_ko: 오늘은 쾌청하다.
+- id: 15518 | level: N2 | [解説 / かいせつ , あなたの解説、好きだよ。]
+  - meaning_ko: 설명
+  - example_ko: 당신의 해설, 좋아해.
+- id: 15523 | level: N2 | [改造 / かいぞう , 父は車庫を書斎に改造した。]
+  - meaning_ko: 중수
+  - example_ko: 아버지는 차고를 서재로 개조했다.
+- id: 15528 | level: N2 | [開通 / かいつう , 橋は開通している。]
+  - meaning_ko: 열기
+  - example_ko: 다리는 개통하고 있다.
+- id: 15533 | level: N2 | [回転 / かいてん , 姉は頭の回転がいい。]
+  - meaning_ko: 회전
+  - example_ko: 누나는 머리 회전이 좋다.
+- id: 15539 | level: N2 | [解答 / かいとう , 彼は解答する前に２日間熟考した。]
+  - meaning_ko: 답변
+  - example_ko: 그는 해답하기 전에 이틀 동안 숙고했다.
+- id: 15543 | level: N2 | [回答 / かいとう , 無回答を拒否する。]
+  - meaning_ko: 회신하다
+  - example_ko: 무답을 거부한다.
+- id: 15550 | level: N2 | [外部 / がいぶ , 秘密が外部に漏れた。]
+  - meaning_ko: 외부
+  - example_ko: 비밀이 외부로 누설됐다.
+- id: 15554 | level: N2 | [解放 / かいほう , 彼女は不眠症から解放された。]
+  - meaning_ko: 풀어 주다
+  - example_ko: 그녀는 불면증에서 해방되었다.
+- id: 15559 | level: N2 | [開放 / かいほう , 婦人に開放されている職業は多い。]
+  - meaning_ko: 열려 있는
+  - example_ko: 부인에게 개방된 직업은 많다.
+- id: 15564 | level: N2 | [海洋 / かいよう , 世界には四つの海洋がある。]
+  - meaning_ko: 대양
+  - example_ko: 세계에는 4개의 해양이 있다.
+- id: 15568 | level: N2 | [概論 / がいろん , ]
+  - meaning_ko: 소개
+- id: 15571 | level: N2 | [却って / かえって , ]
+  - meaning_ko: 반대로
+- id: 15580 | level: N2 | [家屋 / かおく , 木造家屋は燃えやすい。]
+  - meaning_ko: 집
+  - example_ko: 목조 주택은 불타기 쉽다.
+- id: 15586 | level: N2 | [係わる / かかわる , 係わることを真剣に考えていますか？]
+  - meaning_ko: 걱정하다
+  - example_ko: 관련을 진지하게 생각하고 있습니까?
+- id: 15589 | level: N2 | [書留 / かきとめ , この手紙を書留にしたい。]
+  - meaning_ko: 등기우편
+  - example_ko: 이 편지를 적고 싶다.
+- id: 15593 | level: N2 | [書取 / かきとり , ]
+  - meaning_ko: 받아쓰기
+- id: 15595 | level: N2 | [垣根 / かきね , 彼は垣根を飛び越えた。]
+  - meaning_ko: 방지책
+  - example_ko: 그는 울타리를 뛰어넘었다.
+- id: 15599 | level: N2 | [限り / かぎり , こんな時は、迎え酒に限ります。]
+  - meaning_ko: 제한)
+  - example_ko: 이런 때는, 맞이 술에 한정합니다.
+- id: 15605 | level: N2 | [各～ / かく～ , ]
+  - meaning_ko: ~마다
+- id: 15610 | level: N2 | [架空 / かくう , 竜は架空の動物だ。]
+  - meaning_ko: 상상의
+  - example_ko: 용은 가상의 동물이다.
+- id: 15615 | level: N2 | [各自 / かくじ , 各自の部署に就け。]
+  - meaning_ko: 개인
+  - example_ko: 각자의 부서에 가라.
+- id: 15620 | level: N2 | [拡充 / かくじゅう , 教育施設を拡充する金をもっと多くと望んでいる。]
+  - meaning_ko: 확장
+  - example_ko: 교육시설을 확충하는 돈을 더 많이 하고 싶다.
+- id: 15624 | level: N2 | [学術 / がくじゅつ , 彼は学術会議に出席した。]
+  - meaning_ko: 과학
+  - example_ko: 그는 학술회의에 참석했다.
+- id: 15630 | level: N2 | [各地 / かくち , 彼は各地を転々と移動した。]
+  - meaning_ko: 나라의 여러 지역
+  - example_ko: 그는 각지를 전전 이동했다.
+- id: 15633 | level: N2 | [拡張 / かくちょう , 市は遊歩道を拡張する計画だ。]
+  - meaning_ko: 확장
+  - example_ko: 시는 산책길을 확장할 계획이다.
+- id: 15637 | level: N2 | [角度 / かくど , 別の角度から問題を検討する。]
+  - meaning_ko: 각도
+  - example_ko: 다른 각도에서 문제를 고려하십시오.
+- id: 15650 | level: N2 | [学年 / がくねん , 日本では新学年は４月に始まる。]
+  - meaning_ko: 학교에서의 해
+  - example_ko: 일본에서는 신학년은 4월에 시작된다.
+- id: 15655 | level: N2 | [学部 / がくぶ , 彼は医学部の教授だ。]
+  - meaning_ko: 대학 학부 (과정)
+  - example_ko: 그는 의학부의 교수다.
+- id: 15658 | level: N2 | [格別 / かくべつ , 夜食に食べるカップ麺は格別だ。]
+  - meaning_ko: 특별한
+  - example_ko: 야식에 먹는 컵라면은 각별하다.
+- id: 15663 | level: N2 | [確率 / かくりつ , 勝ち負けの確率は五分五分だ。]
+  - meaning_ko: 개연성
+  - example_ko: 승패의 확률은 5분5분이다.
+- id: 15667 | level: N2 | [学力 / がくりょく , 彼女は語学力を活かせる仕事を探している。]
+  - meaning_ko: 장학금
+  - example_ko: 그녀는 어학력을 살릴 수 있는 일을 찾고 있다.
+- id: 15672 | level: N2 | [掛け算 / かけざん , 子供たちは掛け算を暗記している。]
+  - meaning_ko: 곱셈
+  - example_ko: 아이들은 곱셈을 암기하고 있다.
+- id: 15681 | level: N2 | [かけざん / かけざん , ]
+  - meaning_ko: 곱셈
+- id: 15685 | level: N2 | [可決 / かけつ , 動議は発声投票で可決した。]
+  - meaning_ko: 승인
+  - example_ko: 동의는 발성투표로 통과됐다.
+- id: 15691 | level: N2 | [火口 / かこう , ]
+  - meaning_ko: 분화구 (화산의)
+- id: 15695 | level: N2 | [下降 / かこう , 彼の人気は下降線をたどっている。]
+  - meaning_ko: 감소
+  - example_ko: 그의 인기는 하강선을 따라가고 있다.
+- id: 15699 | level: N2 | [重ねる / かさねる , その野球の試合は回を重ねるごとに面白くなった。]
+  - meaning_ko: 쌓이다
+  - example_ko: 그 야구의 경기는 회를 거듭할 때마다 재미있게 되었다.
+- id: 15704 | level: N2 | [飾り / かざり , 彼女は宝石で飾りたてた。]
+  - meaning_ko: 장식
+  - example_ko: 그녀는 보석으로 장식했다.
+- id: 15709 | level: N2 | [火山 / かざん , 日本は火山列島だ。]
+  - meaning_ko: 화산
+  - example_ko: 일본은 화산열도다.
+- id: 15713 | level: N2 | [かしこまりました / かしこまりました , かしこまりました。]
+  - meaning_ko: 틀림없이
+  - example_ko: 굳어졌습니다.
+- id: 15719 | level: N2 | [貸し出し / かしだし , 貸し出しは何冊までですか？]
+  - meaning_ko: 대출
+  - example_ko: 대출은 몇 권까지입니까?
+- id: 15723 | level: N2 | [過失 / かしつ , 彼は私の過失を責めた。]
+  - meaning_ko: 오류
+  - example_ko: 그는 나의 과실을 비난했다.
+- id: 15728 | level: N2 | [果実 / かじつ , 木は果実を見ればわかる。]
+  - meaning_ko: 과일
+  - example_ko: 나무는 열매를 보면 알 수 있다.
+- id: 15735 | level: N2 | [貸間 / かしま , この部屋は貸間です。]
+  - meaning_ko: 허락할 수 있는 방
+  - example_ko: 이 방은 임대입니다.
+- id: 15742 | level: N2 | [貸家 / かしや , その家は貸家です。]
+  - meaning_ko: 임대용 주택
+  - example_ko: 그 집은 대가입니다.
+- id: 15746 | level: N2 | [箇所 / かしょ , 私はスキー中に２箇所も骨折した。]
+  - meaning_ko: 장소
+  - example_ko: 나는 스키에 두 곳을 골절했다.
+- id: 15751 | level: N2 | [かしょ / かしょ , 「お前に付き合うほど暇じゃない」「なんかしょぼんだよぉ」]
+  - meaning_ko: 통로
+  - example_ko: 「너에게 사귀는 만큼 틈이 아니다」
+- id: 15756 | level: N2 | [過剰 / かじょう , その中毒者は麻薬の過剰摂取で死んだ。]
+  - meaning_ko: 과잉
+  - example_ko: 그 중독자는 마약의 과다 복용으로 죽었다.
+- id: 15762 | level: N2 | [かじる / かじる , いつの頃からか、父は囲碁をかじるようになった。]
+  - meaning_ko: 씹다
+  - example_ko: 언제부터, 아버지는 바둑을 갇히게 되었다.
+- id: 15767 | level: N2 | [課税 / かぜい , 課税品をお持ちですか。]
+  - meaning_ko: 과세
+  - example_ko: 과세품이 있으십니까?
+- id: 15771 | level: N2 | [カセット / カセット , カセットテープを買うつもりです。]
+  - meaning_ko: 카세트(테이프)
+  - example_ko: 카세트 테이프를 사려고합니다.
+- id: 15776 | level: N2 | [下線 / かせん , 下線部を訳せ。]
+  - meaning_ko: 밑줄
+  - example_ko: 밑줄 부분을 번역.
+- id: 15780 | level: N2 | [加速 / かそく , 列車は加速した。]
+  - meaning_ko: 가속
+  - example_ko: 기차는 가속했다.
+- id: 15782 | level: N2 | [加速度 / かそくど , ]
+  - meaning_ko: 가속
+- id: 15792 | level: N2 | [かたかな / かたかな , ]
+  - meaning_ko: 가타카나
+- id: 15796 | level: N2 | [かたづく / かたづく , ]
+  - meaning_ko: 정리하다
+- id: 15801 | level: N2 | [塊 / かたまり , また蝋の塊だ。]
+  - meaning_ko: 덩어리
+  - example_ko: 또 왁스 덩어리다.
+- id: 15805 | level: N2 | [固まる / かたまる , 雨降って地固まる。]
+  - meaning_ko: 굳히다
+  - example_ko: 비가 내리고 땅 굳어진다.
+- id: 15811 | level: N2 | [片道 / かたみち , 運賃は片道1ドルです。]
+  - meaning_ko: 편도(여행)
+  - example_ko: 요금은 편도 1달러입니다.
+- id: 15815 | level: N2 | [傾く / かたむく , ]
+  - meaning_ko: 쪽으로 기울다
+- id: 15822 | level: N2 | [片寄る / かたよる , ]
+  - meaning_ko: 일방적이다
+- id: 15827 | level: N2 | [学科 / がっか , 代数は僕の得意な学科だ。]
+  - meaning_ko: 연구 주제
+  - example_ko: 대수는 나의 ​​특기인 학과다.
+- id: 15832 | level: N2 | [学会 / がっかい , その医学会議は京都で開催された。]
+  - meaning_ko: 학술회의
+  - example_ko: 그 의학회의는 교토에서 개최되었다.
+- id: 15835 | level: N2 | [楽器 / がっき , 楽器をなにか演奏しますか。]
+  - meaning_ko: 악기
+  - example_ko: 악기를 뭔가 연주합니까?
+- id: 15839 | level: N2 | [学級 / がっきゅう , 彼がその学級の担任だ。]
+  - meaning_ko: 수업
+  - example_ko: 그가 그 학급의 담임이다.
+- id: 15845 | level: N2 | [担ぐ / かつぐ , 俺は家族全員に見送られながら、旅支度を整えたザックを担ぐ。]
+  - meaning_ko: 어깨에
+  - example_ko: 나는 가족 전원에게 배웅받으면서, 여지도를 정돈한 자크를 담당한다.
+- id: 15848 | level: N2 | [括弧 / かっこ , 括弧に当てはまる単語を答えなさい。]
+  - meaning_ko: 괄호
+  - example_ko: 괄호에 적용되는 단어를 대답하십시오.
+- id: 15854 | level: N2 | [活字 / かつじ , この大きな活字は眼に楽だ。]
+  - meaning_ko: 인쇄 유형
+  - example_ko: 이 큰 활자는 눈에 편하다.
+- id: 15857 | level: N2 | [勝手に / かってに , 自分勝手にするつもりはない。]
+  - meaning_ko: 임의로
+  - example_ko: 자신 마음대로 할 생각은 없다.
+- id: 15859 | level: N2 | [活躍 / かつやく , 彼女は婦人解放運動で積極的に活躍した。]
+  - meaning_ko: 활동(특히 활력이 넘치거나 성공적인)
+  - example_ko: 그녀는 여성 해방 운동에서 적극적으로 활약했다.
+- id: 15864 | level: N2 | [活力 / かつりょく , 彼はいつも活力旺盛だ。]
+  - meaning_ko: 활력
+  - example_ko: 그는 항상 활력 왕성하다.
+- id: 15868 | level: N2 | [課程 / かてい , 私は高校の全課程を修了した。]
+  - meaning_ko: 강의
+  - example_ko: 고등학교 전 과정을 마쳤습니다.
+- id: 15874 | level: N2 | [仮名 / かな , 振り仮名はどうやって付けますか？]
+  - meaning_ko: 가나
+  - example_ko: 흔히 가나는 어떻게 붙일까요?
+- id: 15884 | level: N2 | [仮名遣い / かなづかい , 祖父は古い仮名遣いで書くことがあるの。]
+  - meaning_ko: 가나 철자법
+  - example_ko: 할아버지는 오래된 가명으로 쓸 수 있는 거야.
+- id: 15891 | level: N2 | [鐘 / かね , 彼女の心臓は恐怖で早鐘を打った。]
+  - meaning_ko: 종(종종 커다란 매달린 종)
+  - example_ko: 그녀의 심장은 공포로 조종을 쳤다.
+- id: 15895 | level: N2 | [加熱 / かねつ , 水は充分に加熱すると沸騰する。]
+  - meaning_ko: 난방
+  - example_ko: 물은 충분히 가열하면 끓는다.
+- id: 15900 | level: N2 | [兼ねる / かねる , ]
+  - meaning_ko: 두 가지 이상의 기능을 동시에 수행하다
+- id: 15905 | level: N2 | [カバー / カバー , 彼は車にカバーを被せた。]
+  - meaning_ko: 표지(예:
+  - example_ko: 그는 차에 덮개를 씌웠다.
+- id: 15909 | level: N2 | [過半数 / かはんすう , 彼らは国会で過半数を制した。]
+  - meaning_ko: 다수
+  - example_ko: 그들은 국회에서 과반수를 제한했다.
+- id: 15914 | level: N2 | [かび (～がはえる) / かび (～がはえる) , ]
+  - meaning_ko: 곰팡이
+- id: 15920 | level: N2 | [被せる / かぶせる , ]
+  - meaning_ko: (무언가로) 덮다
+- id: 15926 | level: N2 | [釜 / かま , あの店の釜めしは絶品だよ。]
+  - meaning_ko: 철 냄비
+  - example_ko: 그 가게의 솥밥은 일품이야.
+- id: 15931 | level: N2 | [構いません / かまいません , 庭を通っても構いませんか。]
+  - meaning_ko: 괜찮아
+  - example_ko: 정원을 지나도 괜찮습니까?
+- id: 15935 | level: N2 | [紙屑 / かみくず , ]
+  - meaning_ko: 휴지
+- id: 15940 | level: N2 | [神様 / かみさま , 私達は神様を信じます。]
+  - meaning_ko: 하나님
+  - example_ko: 우리는 하나님을 믿습니다.
+- id: 15945 | level: N2 | [剃刀 / かみそり , ]
+  - meaning_ko: 면도칼
+- id: 15948 | level: N2 | [ガム / ガム , 靴の底にガムが付いてしまった。]
+  - meaning_ko: 껌
+  - example_ko: 신발의 바닥에 껌이 붙어 버렸다.
+- id: 15954 | level: N2 | [貨物 / かもつ , その航空会社は貨物のみを扱っている。]
+  - meaning_ko: 뱃짐
+  - example_ko: 그 항공사는 화물만을 취급하고 있다.
+- id: 15959 | level: N2 | [歌謡 / かよう , 最近は皆が歌えるような歌謡曲を聞くこともなくなった。]
+  - meaning_ko: 노래
+  - example_ko: 최근에는 모두가 노래할 수 있는 가요곡을 듣는 일도 없어졌다.
+- id: 15963 | level: N2 | [殻 / から , 卵の殻は壊れやすい。]
+  - meaning_ko: 껍데기
+  - example_ko: 계란 껍질은 깨지기 쉽다.
+- id: 15968 | level: N2 | [カラー / カラー , カラーフィルムを一本ください。]
+  - meaning_ko: 칼라
+  - example_ko: 컬러 필름을 한 개 주세요.
+- id: 15975 | level: N2 | [からかう / からかう , 彼らをからかうな。]
+  - meaning_ko: 조롱하다
+  - example_ko: 그들을 놀리지 마라.
+- id: 15979 | level: N2 | [空っぽ / からっぽ , 町のどの家も空っぽだった。]
+  - meaning_ko: 비어 있는
+  - example_ko: 마을의 어느 집도 비어있었습니다.
+- id: 15984 | level: N2 | [かるた / かるた , 私は試験に受かるために熱心に勉強した。]
+  - meaning_ko: 카드 놀이 (POR: 카르타)
+  - example_ko: 나는 시험에 응하기 위해 열심히 공부했다.
+- id: 15987 | level: N2 | [枯れる / かれる , 冬には枯れる植物もある。]
+  - meaning_ko: 시들다
+  - example_ko: 겨울에는 시들어지는 식물도 있다.
+- id: 15991 | level: N2 | [カロリー / カロリー , 肉体は余分なカロリーを脂肪に変える。]
+  - meaning_ko: 칼로리
+  - example_ko: 육체는 여분의 칼로리를 지방으로 바꾼다.
+- id: 15996 | level: N2 | [可愛がる / かわいがる , 親というものは、どんなに腕白でも、子供を可愛がるものです。]
+  - meaning_ko: 사랑하다
+  - example_ko: 부모라는 것은 아무리 팔백이라도 아이를 귀여워하는 것입니다.
+- id: 16001 | level: N2 | [乾かす / かわかす , 洗濯物を乾かす時間だ。]
+  - meaning_ko: 말리다(옷을 말리다
+  - example_ko: 세탁물을 말리는 시간이다.
+- id: 16005 | level: N2 | [為替 / かわせ , 今日の為替相場はいくらですか。]
+  - meaning_ko: 송금환
+  - example_ko: 오늘의 환율은 얼마입니까?
+- id: 16010 | level: N2 | [瓦 / かわら , 藁なしで煉瓦はできない。]
+  - meaning_ko: 지붕 타일
+  - example_ko: 짚 없이 벽돌은 할 수 없다.
+- id: 16014 | level: N2 | [間隔 / かんかく , 彼が答える前に長い時間の間隔があった。]
+  - meaning_ko: 공간
+  - example_ko: 그가 응답하기 전에 장시간 거리가 있었다.
+- id: 16018 | level: N2 | [換気 / かんき , 換気しろよ。]
+  - meaning_ko: 통풍
+  - example_ko: 환기하라.
+- id: 16026 | level: N2 | [感激 / かんげき , トムは感激するだろう。]
+  - meaning_ko: 깊은 감정
+  - example_ko: 톰은 감격할 것이다.
+- id: 16036 | level: N2 | [関西 / かんさい , 彼は６月に東京を離れて関西に来る。]
+  - meaning_ko: 일본의 남서부 절반
+  - example_ko: 그는 6월에 도쿄를 떠나 간사이에 온다.
+- id: 16041 | level: N2 | [元日 / がんじつ , 元日は何するの？]
+  - meaning_ko: 설날
+  - example_ko: 설날은 무엇입니까?
+- id: 16045 | level: N2 | [鑑賞 / かんしょう , 音楽鑑賞が趣味だ。]
+  - meaning_ko: 감사
+  - example_ko: 음악 감상이 취미다.
+- id: 16050 | level: N2 | [感ずる / かんずる , 人生から非常な喜びを感ずる。]
+  - meaning_ko: 느끼다
+  - example_ko: 인생에서 매우 기쁨을 느낀다.
+- id: 16053 | level: N2 | [間接 / かんせつ , 税は直接税と間接税からなっている。]
+  - meaning_ko: 간접적인
+  - example_ko: 세금은 직접 세금과 간접세로 구성됩니다.
+- id: 16057 | level: N2 | [乾燥 / かんそう , 肌が乾燥しています。]
+  - meaning_ko: 마른
+  - example_ko: 피부가 건조합니다.
+- id: 16063 | level: N2 | [感想 / かんそう , それの感想は？]
+  - meaning_ko: 노출수
+  - example_ko: 그것의 감상은?
+- id: 16069 | level: N2 | [観測 / かんそく , 記録的積雪を観測している。]
+  - meaning_ko: 관찰
+  - example_ko: 기록적 적설을 관측하고 있다.
+- id: 16073 | level: N2 | [寒帯 / かんたい , ]
+  - meaning_ko: 추운 지역
+- id: 16077 | level: N2 | [勘違い / かんちがい , う〜ん、どっか勘違いしてるかな？]
+  - meaning_ko: 오해
+  - example_ko: 으~응, 어쩐지 착각하고 있을까?
+- id: 16079 | level: N2 | [官庁 / かんちょう , 彼は官庁で相当な職についている。]
+  - meaning_ko: 관공서
+  - example_ko: 그는 관청에서 상당한 직업에 대해 있다.
+- id: 16085 | level: N2 | [缶詰 / かんづめ , 缶詰の食料は彼女のお気に召さない。]
+  - meaning_ko: 제관
+  - example_ko: 통조림 식량은 그녀의 마음에 들지 않는다.
+- id: 16093 | level: N2 | [乾電池 / かんでんち , 乾電池を探しているのですが。]
+  - meaning_ko: 건전지
+  - example_ko: 건전지를 찾고 있습니다.
+- id: 16095 | level: N2 | [関東 / かんとう , 台風が関東地方に上陸した。]
+  - meaning_ko: 일본 동부
+  - example_ko: 태풍이 관동지방에 상륙했다.
+- id: 16098 | level: N2 | [観念 / かんねん , 彼女には義務の観念が無い。]
+  - meaning_ko: 아이디어
+  - example_ko: 그녀에게는 의무의 관념이 없다.
+- id: 16106 | level: N2 | [乾杯 / かんぱい , 僕達の栄光の日々に乾杯！]
+  - meaning_ko: 건배! (건배)
+  - example_ko: 우리의 영광의 날마다 건배!
+- id: 16111 | level: N2 | [看板 / かんばん , 良酒は看板を要せず。]
+  - meaning_ko: 징후
+  - example_ko: 양주는 간판을 필요로 하지 않고.
+- id: 16116 | level: N2 | [看病 / かんびょう , 彼は病人を寝ずに看病した。]
+  - meaning_ko: 간호 (환자)
+  - example_ko: 그는 아픈 사람을 자지 않고 간병했다.
+- id: 16121 | level: N2 | [冠 / かんむり , 彼は不滅の栄冠を得た。]
+  - meaning_ko: 왕관
+  - example_ko: 그는 불멸의 왕관을 얻었다.
+- id: 16125 | level: N2 | [漢和 / かんわ , 漢和辞典で漢字の意味を調べたの。]
+  - meaning_ko: 한자-일본어(예:
+  - example_ko: 한화사전에서 한자의 의미를 조사한 것이다.
+- id: 16132 | level: N2 | [気圧 / きあつ , タイヤの空気圧を調べてもらえますか。]
+  - meaning_ko: 기압
+  - example_ko: 타이어의 공기압을 조사할 수 있습니까?
+- id: 16137 | level: N2 | [着替え / きがえ , 着替えてきます。]
+  - meaning_ko: 옷을 갈아입다
+  - example_ko: 갈아입고 있습니다.
+- id: 16145 | level: N2 | [着替える / きがえる , 私は着替える為に家に帰った。]
+  - meaning_ko: (사람의) 옷을 갈아입다
+  - example_ko: 나는 갈아입기 위해 집으로 돌아갔다.
+- id: 16148 | level: N2 | [機関車 / きかんしゃ , 蒸気機関車は電車に取って代わられた。]
+  - meaning_ko: 기관차
+  - example_ko: 증기 기관차는 기차를 대체했다.
+- id: 16153 | level: N2 | [飢饉 / ききん , 飢饉に病気はつきものだ。]
+  - meaning_ko: 기근
+  - example_ko: 기근에 병은 붙는 것이다.
+- id: 16157 | level: N2 | [器具 / きぐ , 実験用器具が故障している。]
+  - meaning_ko: 기구
+  - example_ko: 실험 장비가 고장났습니다.
+- id: 16160 | level: N2 | [期限 / きげん , このパンって賞味期限大丈夫か？]
+  - meaning_ko: 용어
+  - example_ko: 이 빵은 유통 기한 괜찮습니까?
+- id: 16165 | level: N2 | [記号 / きごう , 発音記号が読めますか？]
+  - meaning_ko: 상징
+  - example_ko: 발음 기호를 읽을 수 있습니까?
+- id: 16174 | level: N2 | [刻む / きざむ , 二度と見れないこの風景を心に刻む。]
+  - meaning_ko: 다지다
+  - example_ko: 다시 볼 수 없는 이 풍경을 마음에 새긴다.
+- id: 16179 | level: N2 | [儀式 / ぎしき , 結婚式は、意義深い儀式である。]
+  - meaning_ko: 의식
+  - example_ko: 결혼식은 의미있는 의식이다.
+- id: 16183 | level: N2 | [基準 / きじゅん , 彼は基準を持たない男だよ。]
+  - meaning_ko: 기준
+  - example_ko: 그는 기준이 없는 남자야.
+- id: 16188 | level: N2 | [規準 / きじゅん , ]
+  - meaning_ko: 기준
+- id: 16192 | level: N2 | [起床 / きしょう , ６時起床、７時家を出る。]
+  - meaning_ko: 상승
+  - example_ko: 6시 기상, 7시 집을 나온다.
+- id: 16200 | level: N2 | [着せる / きせる , 子供が自分のペットに服を着せるように、子猫に服を着せました。]
+  - meaning_ko: 옷을 입다
+  - example_ko: 아이가 자신의 애완 동물에 옷을 입을 수 있도록 고양이에게 옷을 입었습니다.
+- id: 16205 | level: N2 | [基礎 / きそ , 物理学は基礎的な自然科学である。]
+  - meaning_ko: 기반
+  - example_ko: 물리학은 기초적인 자연 과학이다.
+- id: 16210 | level: N2 | [基地 / きち , この近くに軍の基地がある。]
+  - meaning_ko: 베이스
+  - example_ko: 이 가까이에 군 기지가 있다.
+- id: 16215 | level: N2 | [きっかけ / きっかけ , ここへ来たきっかけは何ですか？]
+  - meaning_ko: 즉각적인
+  - example_ko: 여기에 온 계기는 무엇입니까?
+- id: 16220 | level: N2 | [切っ掛け / きっかけ , ]
+  - meaning_ko: 가능성
+- id: 16225 | level: N2 | [ぎっしり / ぎっしり , 彼は棚に本をぎっしり詰め込んだ。]
+  - meaning_ko: 단단히
+  - example_ko: 그는 선반에 책을 가득 채웠다.
+- id: 16228 | level: N2 | [基盤 / きばん , 自由諸国の基盤は民主主義である。]
+  - meaning_ko: 기반
+  - example_ko: 자유국가의 기반은 민주주의이다.
+- id: 16237 | level: N2 | [客席 / きゃくせき , サミとレイラは観客席に座った。]
+  - meaning_ko: 손님 좌석
+  - example_ko: 사미와 레일라는 관객석에 앉았다.
+- id: 16241 | level: N2 | [客間 / きゃくま , 客間に通された。]
+  - meaning_ko: 객실
+  - example_ko: 손님 사이에 통했다.
+- id: 16246 | level: N2 | [ギャング / ギャング , ギャングの一団が金を盗んだ。]
+  - meaning_ko: 가다
+  - example_ko: 갱단은 돈을 훔쳤다.
+- id: 16251 | level: N2 | [キャンパス / キャンパス , キャンパスを案内してもらえますか。]
+  - meaning_ko: 교정
+  - example_ko: 캠퍼스를 안내해 주시겠습니까?
+- id: 16256 | level: N2 | [休業 / きゅうぎょう , 多くの会社が休業した。]
+  - meaning_ko: 폐쇄
+  - example_ko: 많은 회사가 휴업했다.
+- id: 16262 | level: N2 | [休講 / きゅうこう , この授業は明日休講です。]
+  - meaning_ko: 강의가 취소되었습니다
+  - example_ko: 이 수업은 내일 휴강입니다.
+- id: 16266 | level: N2 | [休息 / きゅうそく , 彼らは今休息している。]
+  - meaning_ko: 나머지
+  - example_ko: 그들은 지금 휴식하고 있다.
+- id: 16270 | level: N2 | [給与 / きゅうよ , 私は給与の５分の１を税金で取られてしまう。]
+  - meaning_ko: 샐러리
+  - example_ko: 나는 급여의 5분의 1을 세금으로 받아 버린다.
+- id: 16274 | level: N2 | [休養 / きゅうよう , 休養が必要なんですよ。]
+  - meaning_ko: 나머지
+  - example_ko: 휴양이 필요해요.
+- id: 16281 | level: N2 | [清い / きよい , 心の清い人たちは幸いである。]
+  - meaning_ko: 분명한
+  - example_ko: 마음이 맑은 사람들은 다행이다.
+- id: 16286 | level: N2 | [強化 / きょうか , 輸出市場での競争力強化が緊急の課題である。]
+  - meaning_ko: 강하게 하다
+  - example_ko: 수출시장에서의 경쟁력 강화가 긴급한 과제이다.
+- id: 16291 | level: N2 | [境界 / きょうかい , 空は地球と境界を接していますか。]
+  - meaning_ko: 경계
+  - example_ko: 하늘이 지구와 경계를 접하고 있는가?
+- id: 16297 | level: N2 | [共産～ / きょうさん～ , ]
+  - meaning_ko: 공산주의자 ~
+- id: 16299 | level: N2 | [行事 / ぎょうじ , 今回は特別な行事なんです。]
+  - meaning_ko: 이벤트
+  - example_ko: 이번에는 특별한 행사입니다.
+- id: 16307 | level: N2 | [恐縮 / きょうしゅく , 恐縮ですがお手伝い願えませんか。]
+  - meaning_ko: 불편을 끼쳐드려 죄송합니다
+  - example_ko: 불행히도 도움이 되시겠습니까?
+- id: 16312 | level: N2 | [教養 / きょうよう , 彼はいわゆる教養人だ。]
+  - meaning_ko: 문화
+  - example_ko: 그는 소위 교양인이다.
+- id: 16315 | level: N2 | [行列 / ぎょうれつ , 彼は行列を見ようと首を伸ばした。]
+  - meaning_ko: 선
+  - example_ko: 그는 행렬을 보려고 목을 뻗었다.
+- id: 16322 | level: N2 | [漁業 / ぎょぎょう , その島の経済は漁業に依存している。]
+  - meaning_ko: 낚시(산업)
+  - example_ko: 그 섬의 경제는 어업에 의존하고 있다.
+- id: 16327 | level: N2 | [曲線 / きょくせん , 直線は曲線の特殊な例だ。]
+  - meaning_ko: 곡선
+  - example_ko: 직선은 곡선의 특수한 예다.
+- id: 16331 | level: N2 | [規律 / きりつ , 学校の規律が乱れている。]
+  - meaning_ko: 주문하다
+  - example_ko: 학교의 규율이 흐트러져 있다.
+- id: 16337 | level: N2 | [斬る / きる , ]
+  - meaning_ko: 참수하다
+- id: 16341 | level: N2 | [気を付ける / きをつける , もっと気を付けるようにするよ。]
+  - meaning_ko: 조심하다
+  - example_ko: 좀 더 조심하게 해줄게.
+- id: 16347 | level: N2 | [琴 / きん , これは竪琴だ。]
+  - meaning_ko: 13현 일본 치터
+  - example_ko: 이것은 금고이다.
+- id: 16351 | level: N2 | [金魚 / きんぎょ , 金魚に餌をやってるの。]
+  - meaning_ko: 금붕어
+  - example_ko: 금붕어에 먹이를 하고 있는 거야.
+- id: 16355 | level: N2 | [クーラー / クーラー , クーラーが故障してしまった。]
+  - meaning_ko: 에어컨
+  - example_ko: 쿨러가 고장났다.
+- id: 16358 | level: N2 | [区域 / くいき , 彼の店は町の賑やかな区域にある。]
+  - meaning_ko: 존
+  - example_ko: 그의 상점은 도시의 활기찬 지역에 있다.
+- id: 16367 | level: N2 | [空～ / くう～ , ]
+  - meaning_ko: 비어있다 ~
+- id: 16372 | level: N2 | [偶数 / ぐうすう , 十二は偶数だ。]
+  - meaning_ko: 우수
+  - example_ko: 십이는 짝수다.
+- id: 16374 | level: N2 | [空想 / くうそう , 龍は空想の動物だ。]
+  - meaning_ko: 백일몽
+  - example_ko: 용은 공상의 동물이다.
+- id: 16382 | level: N2 | [空中 / くうちゅう , 煙は空中へと舞い上がった。]
+  - meaning_ko: 하늘
+  - example_ko: 연기는 공중으로 날아갔다.
+- id: 16386 | level: N2 | [釘 / くぎ , 出る釘は打たれる。]
+  - meaning_ko: 못
+  - example_ko: 나오는 못은 친다.
+- id: 16392 | level: N2 | [区切る / くぎる , ]
+  - meaning_ko: 구두점을 찍다
+- id: 16395 | level: N2 | [櫛 / くし , 外出する前に髪を櫛でときなさい。]
+  - meaning_ko: 빗
+  - example_ko: 외출하기 전에 머리카락을 빗으로 때라.
+- id: 16400 | level: N2 | [くしゃみ / くしゃみ , 彼のくしゃみで私たちの会話が中断した。]
+  - meaning_ko: 재채기
+  - example_ko: 그의 재채기로 우리 대화가 중단되었습니다.
+- id: 16405 | level: N2 | [苦情 / くじょう , 生業の苦情を言うな。]
+  - meaning_ko: 불평
+  - example_ko: 생업 불만을 말하지 마라.
+- id: 16410 | level: N2 | [苦心 / くしん , 苦心の甲斐があった。]
+  - meaning_ko: 통증
+  - example_ko: 고심의 보람이 있었다.
+- id: 16415 | level: N2 | [屑 / くず , ラップは屑だ。]
+  - meaning_ko: 쓰레기
+  - example_ko: 랩은 쓰레기다.
+- id: 16419 | level: N2 | [崩す / くずす , そんなに頑張ったら、体調崩すよ。]
+  - meaning_ko: 파괴하다
+  - example_ko: 그렇게 열심히 하면, 컨디션 무너질거야.
+- id: 16426 | level: N2 | [薬指 / くすりゆび , 薬指を曲げずに、小指だけを曲げれる？]
+  - meaning_ko: 약지
+  - example_ko: 약지를 구부리지 않고 새끼손가락만 구부릴 수 있나요?
+- id: 16431 | level: N2 | [崩れる / くずれる , 彼女は床に崩れるようにして倒れた。]
+  - meaning_ko: 무너지다
+  - example_ko: 그녀는 바닥에 무너져서 쓰러졌다.
+- id: 16435 | level: N2 | [砕く / くだく , 愛は人の心を砕くこともできるのさ。]
+  - meaning_ko: 깨다
+  - example_ko: 사랑은 사람의 마음을 부수는 것도 가능하다.
+- id: 16441 | level: N2 | [砕ける / くだける , 遠くで波が砕ける音が、規則正しいリズムで聞こえてくる。]
+  - meaning_ko: 깨다
+  - example_ko: 멀리서 파도가 부서지는 소리가 규칙적인 리듬으로 들려온다.
+- id: 16445 | level: N2 | [くたびれる / くたびれる , ]
+  - meaning_ko: 피곤하다
+- id: 16452 | level: N2 | [くだらない / くだらない , 彼の意見はくだらない。]
+  - meaning_ko: 쓸모없는
+  - example_ko: 그의 의견은 어색하다.
+- id: 16456 | level: N2 | [下る / くだる , 坂を下ると海が見えてきました。]
+  - meaning_ko: 하강하다
+  - example_ko: 비탈을 내리면 바다가 보였습니다.
+- id: 16461 | level: N2 | [唇 / くちびる , 彼らの唇は触れ合った。]
+  - meaning_ko: 말뿐인
+  - example_ko: 그들의 입술은 만났다.
+- id: 16465 | level: N2 | [口紅 / くちべに , 口紅付けてるの？]
+  - meaning_ko: 입술 연지
+  - example_ko: 립스틱을 붙이고 있습니까?
+- id: 16470 | level: N2 | [くっつく / くっつく , 泥が私の靴にくっつく。]
+  - meaning_ko: 준수하다
+  - example_ko: 진흙이 내 신발에 달라 붙는다.
+- id: 16473 | level: N2 | [くっつける / くっつける , ]
+  - meaning_ko: 부착하다
+- id: 16475 | level: N2 | [くどい / くどい , 回りくどい言い方はしないで。]
+  - meaning_ko: 말 수가 많은
+  - example_ko: 돌아다니는 말은 하지마.
+- id: 16482 | level: N2 | [句読点 / くとうてん , 感嘆符は句読点です。]
+  - meaning_ko: 구두점
+  - example_ko: 느낌표는 구두점입니다.
+- id: 16487 | level: N2 | [配る / くばる , 郵便配達人は一軒づつ郵便を配る。]
+  - meaning_ko: 배포하다
+  - example_ko: 우편 배달인은 한 채씩 우편을 배부한다.
+- id: 16492 | level: N2 | [工夫 / くふう , 食べる前にひと工夫！]
+  - meaning_ko: 장치
+  - example_ko: 먹기 전에 사람 궁리!
+- id: 16494 | level: N2 | [区分 / くぶん , 土地は８つに区分された。]
+  - meaning_ko: 분할
+  - example_ko: 토지는 8개로 구분되었다.
+- id: 16495 | level: N2 | [組合せ / くみあわせ , ]
+  - meaning_ko: 콤비네이션
+- id: 16500 | level: N2 | [組み立てる / くみたてる , 僕は機械を組み立てるのが好きだ。]
+  - meaning_ko: 조립하다
+  - example_ko: 나는 기계를 조립하는 것을 좋아한다.
+- id: 16509 | level: N2 | [悔やむ / くやむ , よーし！覚えてろ。後で悔やむなよ。]
+  - meaning_ko: 후회하다
+  - example_ko: 좋아! 기억하십시오. 나중에 회개하지 마라.
+- id: 16514 | level: N2 | [クリーニング / クリーニング , 歯のクリーニングの予約をお願いします。]
+  - meaning_ko: 청소
+  - example_ko: 치아 청소 예약을 부탁드립니다.
+- id: 16518 | level: N2 | [くるむ / くるむ , ]
+  - meaning_ko: 에 둘러싸여 있다
+- id: 16521 | level: N2 | [くれぐれも / くれぐれも , くれぐれもお体をお大事に。]
+  - meaning_ko: 자꾸
+  - example_ko: 아무쪼록 몸을 소중히.
+- id: 16525 | level: N2 | [郡 / ぐん , これは豊能郡の地図です。]
+  - meaning_ko: 구역
+  - example_ko: 이것은 도요 노군의지도입니다.
+- id: 16529 | level: N2 | [稽古 / けいこ , 彼女は稽古を休んだ。]
+  - meaning_ko: 관행
+  - example_ko: 그녀는 연습을 쉬었다.
+- id: 16541 | level: N2 | [敬語 / けいご , 日本語には敬語があります。]
+  - meaning_ko: 경어(lit.
+  - example_ko: 일본어에는 경어가 있습니다.
+- id: 16546 | level: N2 | [蛍光灯 / けいこうとう , ハリーは本当に蛍光灯だね。]
+  - meaning_ko: 형광등
+  - example_ko: 해리는 정말 형광등이군요.
+- id: 16551 | level: N2 | [形式 / けいしき , 朝食はバイキング形式だって。]
+  - meaning_ko: 형태
+  - example_ko: 아침 식사는 바이킹 형식이라고.
+- id: 16556 | level: N2 | [継続 / けいぞく , 討論を継続する。]
+  - meaning_ko: 계속
+  - example_ko: 토론을 계속한다.
+- id: 16566 | level: N2 | [毛糸 / けいと , 毛糸がこんがらがってしまった。]
+  - meaning_ko: 뜨개질 양모
+  - example_ko: 털실이 곤란해져 버렸다.
+- id: 16570 | level: N2 | [経度 / けいど , この線は経度を表している。]
+  - meaning_ko: 경도
+  - example_ko: 이 선은 경도를 나타냅니다.
+- id: 16574 | level: N2 | [系統 / けいとう , 電気系統に欠点があります。]
+  - meaning_ko: 체계
+  - example_ko: 전기 시스템에 단점이 있습니다.
+- id: 16580 | level: N2 | [芸能 / げいのう , 彼は芸能界に精通している。]
+  - meaning_ko: 대중 오락
+  - example_ko: 그는 연예계에 익숙하다.
+- id: 16582 | level: N2 | [競馬 / けいば , 彼は双眼鏡で競馬を見た。]
+  - meaning_ko: 경마
+  - example_ko: 그는 쌍안경으로 경마를 보았다.
+- id: 16587 | level: N2 | [警備 / けいび , 彼は大統領警備隊の一員だ。]
+  - meaning_ko: 방어
+  - example_ko: 그는 대통령 경비대의 일원이다.
+- id: 16592 | level: N2 | [形容詞 / けいようし , これらの形容詞は全部が積極的です。]
+  - meaning_ko: 형용사
+  - example_ko: 이 형용사는 모두 적극적입니다.
+- id: 16597 | level: N2 | [形容動詞 / けいようどうし , ]
+  - meaning_ko: 형용사
+- id: 16603 | level: N2 | [外科 / げか , 彼は優秀な脳外科医だ。]
+  - meaning_ko: 외과
+  - example_ko: 그는 우수한 뇌외과의사다.
+- id: 16608 | level: N2 | [毛皮 / けがわ , 毛皮の服を着ている。]
+  - meaning_ko: 털
+  - example_ko: 모피 옷을 입고 있다.
+- id: 16613 | level: N2 | [激増 / げきぞう , ]
+  - meaning_ko: 격증
+- id: 16618 | level: N2 | [下車 / げしゃ , 次の駅で下車します。]
+  - meaning_ko: 빛나는 것
+  - example_ko: 다음 역에서 하차합니다.
+- id: 16627 | level: N2 | [下旬 / げじゅん , 下旬はいつも閉店セールやってる。]
+  - meaning_ko: 월(마지막 1/3)
+  - example_ko: 하순은 언제나 폐점 세일 하고 있다.
+- id: 16629 | level: N2 | [下水 / げすい , 下水管がつまっている。]
+  - meaning_ko: 배수
+  - example_ko: 하수관이 막혔다.
+- id: 16636 | level: N2 | [削る / けずる , 君の鉛筆は削る必要がある。]
+  - meaning_ko: 조금씩 줄여나가려고
+  - example_ko: 너의 연필은 깎을 필요가 있다.
+- id: 16641 | level: N2 | [桁 / けた , 100万は7桁です。]
+  - meaning_ko: 열
+  - example_ko: 100만은 7자리입니다.
+- id: 16647 | level: N2 | [下駄 / げた , 下駄持ってくるの忘れた。]
+  - meaning_ko: (일본 신발)
+  - example_ko: 나막신 가져오는 것을 잊었다.
+- id: 16652 | level: N2 | [血圧 / けつあつ , 彼女は、低血圧だ。]
+  - meaning_ko: 혈압
+  - example_ko: 그녀는 저혈압이다.
+- id: 16657 | level: N2 | [月給 / げっきゅう , 彼は月給泥棒だ。]
+  - meaning_ko: 월급
+  - example_ko: 그는 월급 도둑이다.
+- id: 16661 | level: N2 | [傑作 / けっさく , わははは！そりゃ傑作だ！]
+  - meaning_ko: 걸작
+  - example_ko: 와하하하! 그건 걸작이다!
+- id: 16666 | level: N2 | [月末 / げつまつ , 彼らの契約は今月末で終わることになっている。]
+  - meaning_ko: 월말
+  - example_ko: 그들의 계약은 이달 말에 끝나게 된다.
+- id: 16671 | level: N2 | [気配 / けはい , 秋の気配が感じられた。]
+  - meaning_ko: 표시
+  - example_ko: 가을의 기색이 느껴졌다.
+- id: 16675 | level: N2 | [下品 / げひん , 下品極まる盛り場に通いつける。]
+  - meaning_ko: 저속한
+  - example_ko: 품위있는 극장에 다다른다.
+- id: 16679 | level: N2 | [下品(な) / げひん(な) , ]
+  - meaning_ko: 저속한
+- id: 16682 | level: N2 | [煙い / けむい , タバコが煙い！]
+  - meaning_ko: 침침한
+  - example_ko: 담배가 연기!
+- id: 16690 | level: N2 | [険しい / けわしい , 彼らは険しい北面を登った。]
+  - meaning_ko: 험한
+  - example_ko: 그들은 어려운 북면을 올랐다.
+- id: 16696 | level: N2 | [現～ / げん～ , ]
+  - meaning_ko: 현재의
+- id: 16701 | level: N2 | [見学 / けんがく , 今日の午後この町を見学した。]
+  - meaning_ko: 관광
+  - example_ko: 오늘 오후 이 마을을 견학했다.
+- id: 16706 | level: N2 | [謙虚 / けんきょ , 謙虚さを身につけて。]
+  - meaning_ko: 겸손
+  - example_ko: 겸손을 익혀.
+- id: 16710 | level: N2 | [原稿 / げんこう , 編集者は原稿にさっと目を通した。]
+  - meaning_ko: 원고
+  - example_ko: 편집자는 원고에 살짝 눈을 통과했다.
+- id: 16715 | level: N2 | [原産 / げんさん , サツマイモは、南アメリカが原産です。]
+  - meaning_ko: 원산지
+  - example_ko: 고구마는 남미가 원산지입니다.
+- id: 16720 | level: N2 | [原始 / げんし , 原始人はその猛獣を見ておびえた。]
+  - meaning_ko: 기원
+  - example_ko: 원시인은 그 맹수를 보고 무서웠다.
+- id: 16726 | level: N2 | [研修 / けんしゅう , 研修会は午後4時開始予定です。]
+  - meaning_ko: 훈련
+  - example_ko: 작업장은 오후 4시에 시작될 예정입니다.
+- id: 16731 | level: N2 | [厳重 / げんじゅう , 道路法規は厳重に守らなければならない。]
+  - meaning_ko: 엄격한
+  - example_ko: 도로법규는 엄중히 지켜야 한다.
+- id: 16736 | level: N2 | [謙遜 / けんそん , 彼の謙遜さは賞賛に値する。]
+  - meaning_ko: 겸손한
+  - example_ko: 그의 겸손은 칭찬할 만하다.
+- id: 16741 | level: N2 | [県庁 / けんちょう , 秋田県の県庁所在地は秋田市です。]
+  - meaning_ko: 현청
+  - example_ko: 아키타현의 현청 소재지는 아키타시입니다.
+- id: 16746 | level: N2 | [限度 / げんど , 物事には限度がある。]
+  - meaning_ko: 한계
+  - example_ko: 사물에는 한도가 있다.
+- id: 16751 | level: N2 | [現に / げんに , 私は彼の突然の出現に我を忘れた。]
+  - meaning_ko: 실제로
+  - example_ko: 나는 그의 갑작스러운 출현에 나를 잊었다.
+- id: 16756 | level: N2 | [顕微鏡 / けんびきょう , 彼は顕微鏡をのぞいていた。]
+  - meaning_ko: 현미경
+  - example_ko: 그는 현미경을 들여다보고 있었다.
+- id: 16760 | level: N2 | [懸命 / けんめい , 落第しないように一生懸命勉強しなさい。]
+  - meaning_ko: 열의
+  - example_ko: 낙제하지 않도록 열심히 공부하십시오.
+- id: 16765 | level: N2 | [原理 / げんり , 彼はひとつの原理を考えだした。]
+  - meaning_ko: 원칙
+  - example_ko: 그는 하나의 원리를 생각했다.
+- id: 16771 | level: N2 | [原料 / げんりょう , 日本はいろんな原料に乏しい。]
+  - meaning_ko: 원료
+  - example_ko: 일본은 여러 원료가 부족하다.
+- id: 16777 | level: N2 | [碁 / ご , 父は碁をやります。]
+  - meaning_ko: 가다(보드게임)
+  - example_ko: 아버지는 바둑을 한다.
+- id: 16781 | level: N2 | [小～ / こ～ , ]
+  - meaning_ko: 작은 ~
+- id: 16783 | level: N2 | [コース / コース , 車はコースをはずれた。]
+  - meaning_ko: 강의
+  - example_ko: 차는 과정을 벗어났다.
+- id: 16788 | level: N2 | [コーラス / コーラス , 誰がコーラスを指揮しますか。]
+  - meaning_ko: 합창
+  - example_ko: 누가 코러스를 지휘합니까?
+- id: 16793 | level: N2 | [恋しい / こいしい , 彼女は彼が恋しい。]
+  - meaning_ko: ~에게
+  - example_ko: 그녀는 그가 그리워.
+- id: 16798 | level: N2 | [高～ / こう～ , ]
+  - meaning_ko: 높음 (수준) ~
+- id: 16803 | level: N2 | [工員 / こういん , 彼は新しい工員を採用した。]
+  - meaning_ko: 공장 노동자
+  - example_ko: 그는 새로운 직원을 채택했다.
+- id: 16807 | level: N2 | [強引 / ごういん , 与党は強引に税制法案を通過させた。]
+  - meaning_ko: 강력한
+  - example_ko: 여당은 억지로 세제법안을 통과시켰다.
+- id: 16815 | level: N2 | [公害 / こうがい , 年々公害が悪化する。]
+  - meaning_ko: 대중에게 폐를 끼치는 행위
+  - example_ko: 해마다 공해가 악화된다.
+- id: 16820 | level: N2 | [高級 / こうきゅう , 彼女は高級車好みだ。]
+  - meaning_ko: 고급
+  - example_ko: 그녀는 고급차 취향이다.
+- id: 16823 | level: N2 | [公共 / こうきょう , 公共の福祉のために働く。]
+  - meaning_ko: 공공의
+  - example_ko: 공공 복지를 위해 일한다.
+- id: 16830 | level: N2 | [工芸 / こうげい , 彼は美術工芸を学校で教えている。]
+  - meaning_ko: 공예
+  - example_ko: 그는 미술 공예를 학교에서 가르치고 있다.
+- id: 16832 | level: N2 | [孝行 / こうこう , 孝行したいときに親はなし。]
+  - meaning_ko: 효행
+  - example_ko: 효행하고 싶을 때 부모는 없음.
+- id: 16836 | level: N2 | [交差 / こうさ , きのう交差点でお釜を掘られちゃったよ。]
+  - meaning_ko: 십자가
+  - example_ko: 어제 교차로에서 솥을 파고 버렸어.
+- id: 16841 | level: N2 | [講師 / こうし , 正確に言うと私は大学講師です。]
+  - meaning_ko: 강사
+  - example_ko: 정확히 말하면 저는 대학 강사입니다.
+- id: 16846 | level: N2 | [工事 / こうじ , 大規模な道路工事が始まった。]
+  - meaning_ko: 건설 작업
+  - example_ko: 대규모 도로 공사가 시작되었다.
+- id: 16852 | level: N2 | [公式 / こうしき , 彼は立候補することを公式に発表した。]
+  - meaning_ko: 공식
+  - example_ko: 그는 입후보할 것을 ​​공식적으로 발표했다.
+- id: 16857 | level: N2 | [口実 / こうじつ , 彼は口実をでっち上げた。]
+  - meaning_ko: 변명
+  - example_ko: 그는 구실을 제기했다.
+- id: 16862 | level: N2 | [こうして / こうして , こうして彼は成功した。]
+  - meaning_ko: 이와 같이
+  - example_ko: 이렇게 그는 성공했다.
+- id: 16868 | level: N2 | [校舎 / こうしゃ , 彼は校舎に放火した。]
+  - meaning_ko: 학교 건물
+  - example_ko: 그는 학교 건물에 방화했다.
+- id: 16874 | level: N2 | [公衆 / こうしゅう , 公衆電話はどこですか。]
+  - meaning_ko: 대중
+  - example_ko: 공중전화는 어디입니까?
+- id: 16880 | level: N2 | [香水 / こうすい , 彼女は香水の香りがきつすぎだ。]
+  - meaning_ko: 향수
+  - example_ko: 그녀는 향수의 향기가 너무 힘들다.
+- id: 16883 | level: N2 | [公正 / こうせい , 彼は人に公正に振る舞う。]
+  - meaning_ko: 정당성
+  - example_ko: 그는 사람에게 공정하게 행동한다.
+- id: 16888 | level: N2 | [功績 / こうせき , 彼の功績は認められた。]
+  - meaning_ko: 업적
+  - example_ko: 그의 업적은 인정되었다.
+- id: 16892 | level: N2 | [光線 / こうせん , 夜空に光線が見えた。]
+  - meaning_ko: 빔
+  - example_ko: 밤하늘에 광선이 보였다.
+- id: 16895 | level: N2 | [高層 / こうそう , 強風が吹けば高層ビルは揺れるだろう。]
+  - meaning_ko: 키가 큰
+  - example_ko: 강풍이 불면 고층 빌딩은 흔들릴 것이다.
+- id: 16900 | level: N2 | [構造 / こうぞう , 脳の構造は複雑だ。]
+  - meaning_ko: 구조
+  - example_ko: 뇌의 구조는 복잡하다.
+- id: 16905 | level: N2 | [交替 / こうたい , 私達は交替で運転した。]
+  - meaning_ko: 변화
+  - example_ko: 우리는 교체에서 몰았다.
+- id: 16909 | level: N2 | [交代 / こうたい , 彼らは交代で運転した。]
+  - meaning_ko: 교대
+  - example_ko: 그들은 교대로 운전했다.
+- id: 16915 | level: N2 | [耕地 / こうち , ]
+  - meaning_ko: 경지
+- id: 16921 | level: N2 | [交通機関 / こうつうきかん , 交通機関は何を使うんですか。]
+  - meaning_ko: 교통시설
+  - example_ko: 교통은 무엇을 사용합니까?
+- id: 16929 | level: N2 | [校庭 / こうてい , 彼らは校庭でしゃべっていた。]
+  - meaning_ko: 학교 운동장
+  - example_ko: 그들은 학교 정원에서 말하고 있었다.
+- id: 16934 | level: N2 | [肯定 / こうてい , 返答は肯定的なものだった。]
+  - meaning_ko: 긍정적인
+  - example_ko: 대답은 긍정적인 것이었다.
+- id: 16938 | level: N2 | [高度 / こうど , 太陽の高度は２０度である。]
+  - meaning_ko: 고도
+  - example_ko: 태양의 고도는 20도이다.
+- id: 16942 | level: N2 | [高等 / こうとう , 人類は高等哺乳動物である。]
+  - meaning_ko: 고급
+  - example_ko: 인류는 고등 포유동물이다.
+- id: 16948 | level: N2 | [合同 / ごうどう , 次の図形と合同な図形をかきましょう。]
+  - meaning_ko: 콤비네이션
+  - example_ko: 다음의 도형과 합동한 도형을 쓰자.
+- id: 16956 | level: N2 | [高等学校 / こうとうがっこう , 彼は高等学校の生徒ではありません。]
+  - meaning_ko: 고등학교
+  - example_ko: 그는 고등학교 학생이 아닙니다.
+- id: 16961 | level: N2 | [公表 / こうひょう , 彼の死が公表された。]
+  - meaning_ko: 공식 발표
+  - example_ko: 그의 죽음이 발표되었다.
+- id: 16967 | level: N2 | [鉱物 / こうぶつ , その国は鉱物資源に富んでいる。]
+  - meaning_ko: 광물
+  - example_ko: 그 나라는 광물 자원이 풍부하다.
+- id: 16971 | level: N2 | [公務 / こうむ , 私は公務員です。]
+  - meaning_ko: 관용
+  - example_ko: 나는 공무원입니다.
+- id: 16975 | level: N2 | [項目 / こうもく , これは何の項目に入るか。]
+  - meaning_ko: 목
+  - example_ko: 이것은 무엇의 품목으로 들어가는가?
+- id: 16981 | level: N2 | [紅葉 / こうよう , 木の葉は秋に紅葉する。]
+  - meaning_ko: 가을 색깔 (잎의)
+  - example_ko: 나뭇잎은 가을에 단풍한다.
+- id: 16987 | level: N2 | [こうよう もみじ / こうよう もみじ , ]
+  - meaning_ko: (일본어) 단풍나무
+- id: 16991 | level: N2 | [合理 / ごうり , 彼の議論は合理的だ。]
+  - meaning_ko: 합리적인
+  - example_ko: 그의 논쟁은 합리적이다.
+- id: 16995 | level: N2 | [交流 / こうりゅう , トムは社会的交流が苦手だ。]
+  - meaning_ko: 교환
+  - example_ko: 톰은 사회적 교류에 약하다.
+- id: 16999 | level: N2 | [合流 / ごうりゅう , 私は後で君たちに合流する。]
+  - meaning_ko: 합류
+  - example_ko: 나중에 너희들에게 합류한다.
+- id: 17004 | level: N2 | [効力 / こうりょく , その法律にはもはや効力はない。]
+  - meaning_ko: 효과
+  - example_ko: 그 법에는 더 이상 효력이 없다.
+- id: 17010 | level: N2 | [焦がす / こがす , ]
+  - meaning_ko: 태우다
+- id: 17014 | level: N2 | [国王 / こくおう , 今の国王が会合に出席されている。]
+  - meaning_ko: 왕
+  - example_ko: 지금의 국왕이 회의에 참석하고 있다.
+- id: 17019 | level: N2 | [こくせき / こくせき , ]
+  - meaning_ko: 국적
+- id: 17024 | level: N2 | [国立 / こくりつ , 国立公園内での狩猟は禁止されている。]
+  - meaning_ko: 국가의
+  - example_ko: 국립공원 내에서의 사냥은 금지되어 있다.
+- id: 17029 | level: N2 | [ご苦労様 / ごくろうさま , ご苦労様でした。]
+  - meaning_ko: 당신의 노고에 감사드립니다
+  - example_ko: 고생이었습니다.
+- id: 17034 | level: N2 | [焦げる / こげる , 灼熱の太陽で体が焦げるほどだった。]
+  - meaning_ko: 태우다
+  - example_ko: 작열의 태양으로 몸이 타는 정도였다.
+- id: 17039 | level: N2 | [凍える / こごえる , 凍えるようだわ。]
+  - meaning_ko: 얼다
+  - example_ko: 얼어 보인다.
+- id: 17046 | level: N2 | [心当たり / こころあたり , 心当たりはないよ。]
+  - meaning_ko: 어느 정도 지식을 가지고
+  - example_ko: 마음이 맞지 않아.
+- id: 17048 | level: N2 | [心得る / こころえる , ]
+  - meaning_ko: 이해하다
+- id: 17053 | level: N2 | [腰掛け / こしかけ , 彼はベッドに腰掛けた。]
+  - meaning_ko: 좌석
+  - example_ko: 그는 침대에 앉아 있었다.
+- id: 17058 | level: N2 | [腰掛 / こしかけ , 彼はベッドに腰掛けた。]
+  - meaning_ko: 좌석
+  - example_ko: 그는 침대에 앉아 있었다.
+- id: 17065 | level: N2 | [腰掛ける / こしかける , ]
+  - meaning_ko: (앉다) 앉다
+- id: 17069 | level: N2 | [五十音 / ごじゅうおん , 氏名は五十音順です。]
+  - meaning_ko: 일본의 음절
+  - example_ko: 성명은 오십음순입니다.
+- id: 17071 | level: N2 | [こしらえる / こしらえる , ]
+  - meaning_ko: 만들다
+- id: 17080 | level: N2 | [擦る / こする , 隣の病室からキュウリを擦る音が聞こえてきた。]
+  - meaning_ko: 문지르다
+  - example_ko: 옆의 병실에서 오이를 문지르는 소리가 들려왔다.
+- id: 17085 | level: N2 | [個体 / こたい , 個体発生は系統発生を繰り返す。]
+  - meaning_ko: 개인
+  - example_ko: 개체 발생은 계통 발생을 반복한다.
+- id: 17092 | level: N2 | [ごちそうさま / ごちそうさま , ごちそうさま。]
+  - meaning_ko: 식사해주셔서 감사합니다
+  - example_ko: 잔치.
+- id: 17097 | level: N2 | [こちらこそ / こちらこそ , こちらこそ。]
+  - meaning_ko: 그렇게 말해야 할 사람은 나야
+  - example_ko: 이쪽이야말로.
+- id: 17101 | level: N2 | [小遣い / こづかい , 私は小遣いが不足している。]
+  - meaning_ko: 용돈
+  - example_ko: 나는 용돈이 부족하다.
+- id: 17105 | level: N2 | [コック / コック , 私はコックです。]
+  - meaning_ko: 요리하다
+  - example_ko: 나는 수탉입니다.
+- id: 17110 | level: N2 | [こっそり / こっそり , 彼は誰にも見られずにこっそり家を出た。]
+  - meaning_ko: 몰래
+  - example_ko: 그는 누구에게도 보이지 않고 몰래 집을 나왔다.
+- id: 17115 | level: N2 | [古典 / こてん , 彼は立派な古典学者です。]
+  - meaning_ko: 고전
+  - example_ko: 그는 훌륭한 고전학자입니다.
+- id: 17121 | level: N2 | [言付ける / ことづける , ]
+  - meaning_ko: 메시지를 남기려고
+- id: 17124 | level: N2 | [言葉遣い / ことばづかい , 彼女の言葉遣いには誤りが多い。]
+  - meaning_ko: 연설
+  - example_ko: 그녀의 말씀에는 실수가 많다.
+- id: 17131 | level: N2 | [こないだ / こないだ , 誰も乗ってこないだろう。]
+  - meaning_ko: 다른 날
+  - example_ko: 아무도 타지 않을 것이다.
+- id: 17137 | level: N2 | [御無沙汰 / ごぶさた , 長いこと御無沙汰いたしました。]
+  - meaning_ko: 한동안 편지도 연락도 하지 않고
+  - example_ko: 오랫동안 미안해했습니다.
+- id: 17141 | level: N2 | [ゴム / ゴム , 消しゴムを借りてもいい？]
+  - meaning_ko: 잇몸
+  - example_ko: 지우개를 빌릴 수 있습니까?
+- id: 17147 | level: N2 | [御免 / ごめん , 御免なさい。]
+  - meaning_ko: (뭔가) 감소
+  - example_ko: 면제하십시오.
+- id: 17151 | level: N2 | [ごめんください / ごめんください , ごめんください。どなたかいらっしゃいませんか？]
+  - meaning_ko: 내가 들어가도 될까요?
+  - example_ko: 죄송합니다. 어떤 사람이 계십니까?
+- id: 17155 | level: N2 | [小指 / こゆび , 小指がはれました。]
+  - meaning_ko: 새끼 손가락
+  - example_ko: 새끼 손가락이 벗겨졌습니다.
+- id: 17159 | level: N2 | [堪える / こらえる , 彼は十分その職に堪える。]
+  - meaning_ko: 견디다
+  - example_ko: 그는 충분히 그 직업에 참는다.
+- id: 17164 | level: N2 | [娯楽 / ごらく , 村には娯楽がない。]
+  - meaning_ko: 기쁨
+  - example_ko: 마을에는 오락이 없다.
+- id: 17170 | level: N2 | [御覧 / ごらん , その眠っている赤ちゃんを御覧なさい。]
+  - meaning_ko: (여보.) 보세요
+  - example_ko: 그 자고 있는 아기를 보라.
+- id: 17173 | level: N2 | [コレクション / コレクション , 彼は私に切手のコレクションを見せてくれた。]
+  - meaning_ko: 수집
+  - example_ko: 그는 나에게 우표 모음을 보여주었다.
+- id: 17180 | level: N2 | [転がす / ころがす , 飴玉を口の中で転がす。]
+  - meaning_ko: 굴리다
+  - example_ko: 사탕 구슬을 입안에서 굴린다.
+- id: 17184 | level: N2 | [転がる / ころがる , 転がる石に苔むさず。]
+  - meaning_ko: 굴리다
+  - example_ko: 구르는 돌에 이끼 없이.
+- id: 17191 | level: N2 | [紺 / こん , 紺屋の白袴。]
+  - meaning_ko: 네이비 블루
+  - example_ko: 감옥의 백조.
+- id: 17195 | level: N2 | [今～ / こん～ , ]
+  - meaning_ko: 이것
+- id: 17202 | level: N2 | [コンクール / コンクール , 私はそのコンクールに参加した。]
+  - meaning_ko: 콘테스트 (FRE: 콩쿠르)
+  - example_ko: 나는 그 콩쿨에 참가했다.
+- id: 17207 | level: N2 | [コンクリート / コンクリート , 土台はコンクリートで固められている。]
+  - meaning_ko: 콘크리트
+  - example_ko: 기초는 콘크리트로 굳어져 있다.
+- id: 17212 | level: N2 | [混合 / こんごう , 三原色を混合すると黒色ができる。]
+  - meaning_ko: 혼입
+  - example_ko: 삼원색을 혼합하면 흑색이 생긴다.
+- id: 17217 | level: N2 | [コンセント / コンセント , コンセントが抜けてる。]
+  - meaning_ko: 동의
+  - example_ko: 콘센트가 빠져 있다.
+- id: 17222 | level: N2 | [献立 / こんだて , 毎日の献立を考えるのも大変なんだよ。]
+  - meaning_ko: 메뉴
+  - example_ko: 매일의 식단을 생각하는 것도 힘들어.
+- id: 17227 | level: N2 | [こんばんは / こんばんは , こんばんは。]
+  - meaning_ko: 좋은 저녁이에요
+  - example_ko: 안녕하세요.
+- id: 17232 | level: N2 | [サークル / サークル , ミステリーサークルって、どうやってできるんだろう？]
+  - meaning_ko: 원
+  - example_ko: 미스터리 서클은 어떻게 할 수 있을까?
+- id: 17237 | level: N2 | [再～ / さい～ , ]
+  - meaning_ko: 다시 ~
+- id: 17242 | level: N2 | [最～ / さい～ , ]
+  - meaning_ko: 가장 ~
+- id: 17246 | level: N2 | [在学 / ざいがく , 彼は１０年級に在学中だ。]
+  - meaning_ko: (등록) 학교에
+  - example_ko: 그는 10년급 재학 중이다.
+- id: 17249 | level: N2 | [再三 / さいさん , 彼は再三再四それをやってみた。]
+  - meaning_ko: 계속해서
+  - example_ko: 그는 다시 세 번 다시 그것을 해 보았다.
+- id: 17254 | level: N2 | [祭日 / さいじつ , 今度の祭日は日曜日と重なります。]
+  - meaning_ko: 공휴일
+  - example_ko: 이번 축제는 일요일과 겹칩니다.
+- id: 17259 | level: N2 | [催促 / さいそく , まさかリアルに借金の催促だったの？]
+  - meaning_ko: 수요
+  - example_ko: 설마 리얼하게 빚의 촉촉이었어?
+- id: 17265 | level: N2 | [採点 / さいてん , 先生は答案の採点に忙しい。]
+  - meaning_ko: 마킹
+  - example_ko: 선생님은 답안 채점에 바쁘다.
+- id: 17270 | level: N2 | [災難 / さいなん , 人生に災難は付き物。]
+  - meaning_ko: 재난
+  - example_ko: 인생에 재난은 붙임.
+- id: 17275 | level: N2 | [裁縫 / さいほう , 彼女は裁縫が上手です。]
+  - meaning_ko: 재봉
+  - example_ko: 그녀는 재봉이 능숙합니다.
+- id: 17282 | level: N2 | [材木 / ざいもく , 大量の材木が紙の製造に使われている。]
+  - meaning_ko: 재목
+  - example_ko: 대량의 재목이 종이의 제조에 사용되고 있다.
+- id: 17286 | level: N2 | [サイレン / サイレン , サイレンが鳴った。]
+  - meaning_ko: 사이렌
+  - example_ko: 사이렌이 울렸다.
+- id: 17291 | level: N2 | [逆さ / さかさ , 彼はボールペンを逆さに持った。]
+  - meaning_ko: 뒤집다
+  - example_ko: 그는 볼펜을 거꾸로 잡았다.
+- id: 17295 | level: N2 | [逆様 / さかさま , 彼は真っ逆様にプールに落ちた。]
+  - meaning_ko: 뒤집다
+  - example_ko: 그는 거꾸로 수영장에 빠졌다.
+- id: 17298 | level: N2 | [捜す / さがす , 鍵を捜すのを手伝ってくれませんか。]
+  - meaning_ko: 검색하다
+  - example_ko: 열쇠를 찾는 데 도움을 주지 않겠습니까?
+- id: 17303 | level: N2 | [遡る / さかのぼる , 映画は第二次世界大戦に遡る。]
+  - meaning_ko: 돌아가다
+  - example_ko: 영화는 제2차 세계대전으로 거슬러 올라간다.
+- id: 17309 | level: N2 | [酒場 / さかば , 彼はその酒場で歯医者に成りすましていた。]
+  - meaning_ko: 술집
+  - example_ko: 그는 그 술집에서 치과 의사로 이끌었다.
+- id: 17316 | level: N2 | [一昨昨日 / さきおととい , ]
+  - meaning_ko: 어제 이틀 전
+- id: 17321 | level: N2 | [先程 / さきほど , 彼は先程家に帰ってきた。]
+  - meaning_ko: 조금 전에
+  - example_ko: 그는 조금 전 집으로 돌아왔다.
+- id: 17326 | level: N2 | [索引 / さくいん , その本には索引がついていますか。]
+  - meaning_ko: 색인
+  - example_ko: 그 책에는 색인이 붙어 있습니까?
+- id: 17331 | level: N2 | [作者 / さくしゃ , この小説の作者は誰ですか。]
+  - meaning_ko: 작가
+  - example_ko: 이 소설의 저자는 누구입니까?
+- id: 17336 | level: N2 | [削除 / さくじょ , 応募者名簿から彼の名前を削除しなさい。]
+  - meaning_ko: 제거
+  - example_ko: 신청자 명부에서 그의 이름을 삭제하십시오.
+- id: 17341 | level: N2 | [作成 / さくせい , 報告書は委員会によって作成されている。]
+  - meaning_ko: 창조
+  - example_ko: 보고서는 위원회에 의해 작성되었다.
+- id: 17346 | level: N2 | [作製 / さくせい , 合鍵の作製には2日ほどかかります。]
+  - meaning_ko: 제조
+  - example_ko: 합키의 제작에는 2일 정도 걸립니다.
+- id: 17351 | level: N2 | [探る / さぐる , ]
+  - meaning_ko: 검색하다
+- id: 17354 | level: N2 | [囁く / ささやく , ]
+  - meaning_ko: 속삭이다
+- id: 17359 | level: N2 | [刺さる / ささる , ]
+  - meaning_ko: 붙이다
+- id: 17363 | level: N2 | [匙 / さじ , 彼には先生も匙を投げている。]
+  - meaning_ko: 숟가락
+  - example_ko: 그에게는 선생님도 삼을 던지고 있다.
+- id: 17368 | level: N2 | [座敷 / ざしき , ]
+  - meaning_ko: 다다미방
+- id: 17372 | level: N2 | [差し支え / さしつかえ , 差し支えなければ同行したいのですが。]
+  - meaning_ko: 방해
+  - example_ko: 지장이 없으면 동행하고 싶습니다만.
+- id: 17377 | level: N2 | [差し引き / さしひき , ]
+  - meaning_ko: 공제
+- id: 17382 | level: N2 | [刺身 / さしみ , 私は刺身が大嫌いです。]
+  - meaning_ko: 회
+  - example_ko: 나는 사시미가 싫어.
+- id: 17390 | level: N2 | [刺す / さす , 敵の体に剣を突き刺す。]
+  - meaning_ko: 뚫다
+  - example_ko: 적의 몸에 검을 찌르다.
+- id: 17395 | level: N2 | [流石 / さすが , ]
+  - meaning_ko: 물론
+- id: 17400 | level: N2 | [撮影 / さつえい , 彼等は実際の砂漠で映画を撮影した。]
+  - meaning_ko: 촬영
+  - example_ko: 그들은 실제 사막에서 영화를 촬영했다.
+- id: 17407 | level: N2 | [雑音 / ざつおん , ラジオに雑音が入る。]
+  - meaning_ko: 소음(거슬리는 소리
+  - example_ko: 라디오에 잡음이 들어간다.
+- id: 17410 | level: N2 | [さっさと / さっさと , 私の兄は宿題をさっさと済ませた。]
+  - meaning_ko: 빠르게
+  - example_ko: 내 동생은 숙제를 빨리 끝냈다.
+- id: 17415 | level: N2 | [早速 / さっそく , 早速には返事をしかねます。]
+  - meaning_ko: 즉시
+  - example_ko: 조속히는 대답을 하지 않습니다.
+- id: 17419 | level: N2 | [錆 / さび , 君の身から出た錆だ。]
+  - meaning_ko: 녹(색깔)
+  - example_ko: 너의 몸에서 나온 녹이다.
+- id: 17426 | level: N2 | [錆びる / さびる , 休みすぎは錆びる。]
+  - meaning_ko: 녹슬다
+  - example_ko: 너무 쉬는 것은 녹슬어진다.
+- id: 17431 | level: N2 | [座布団 / ざぶとん , この座布団を干して下さい。]
+  - meaning_ko: 쿠션(일본어)
+  - example_ko: 이 방석을 말려주세요.
+- id: 17437 | level: N2 | [妨げる / さまたげる , 試験は教育の本当の目的を妨げる。]
+  - meaning_ko: 방해하다
+  - example_ko: 시험은 교육의 진실한 목표를 방해한다.
+- id: 17439 | level: N2 | [さようなら / さようなら , 彼女はさようならと言った。]
+  - meaning_ko: 안녕히 가세요
+  - example_ko: 그녀는 안녕이라고 말했다.
+- id: 17447 | level: N2 | [サラリーマン / サラリーマン , 彼は普通のサラリーマンだ。]
+  - meaning_ko: 샐러리맨
+  - example_ko: 그는 평범한 직장인입니다.
+- id: 17448 | level: N2 | [騒がしい / さわがしい , 彼は何と騒がしいのだろう。]
+  - meaning_ko: 시끄러운
+  - example_ko: 그는 무슨 소란스러울까.
+- id: 17450 | level: N2 | [さわやか / さわやか , 気分がさわやかだ。]
+  - meaning_ko: 신선한
+  - example_ko: 기분이 상쾌하다.
+- id: 17455 | level: N2 | [三角 / さんかく , 三角形の面積を求めてくれ。]
+  - meaning_ko: 삼각형
+  - example_ko: 삼각형의 면적을 찾아주세요.
+- id: 17463 | level: N2 | [算数 / さんすう , 算数は数を取り扱う。]
+  - meaning_ko: 산수
+  - example_ko: 산수는 수를 취급한다.
+- id: 17470 | level: N2 | [酸性 / さんせい , 酸性土を灰で中和する。]
+  - meaning_ko: 산성도 산성
+  - example_ko: 산성 토양을 재로 중화한다.
+- id: 17475 | level: N2 | [産地 / さんち , その地方はお茶の産地です。]
+  - meaning_ko: 생산지
+  - example_ko: 그 지방은 차의 산지입니다.
+- id: 17479 | level: N2 | [サンプル / サンプル , サンプルが必要でしたらご連絡下さい。]
+  - meaning_ko: 견본
+  - example_ko: 샘플이 필요하면 연락주십시오.
+- id: 17481 | level: N2 | [山林 / さんりん , ]
+  - meaning_ko: 산림
+- id: 17487 | level: N2 | [シーズン / シーズン , 野球シーズンが始まった。]
+  - meaning_ko: 시즌 (스포츠)
+  - example_ko: 야구 시즌이 시작됐다.
+- id: 17490 | level: N2 | [シーツ / シーツ , ベッドの上にシーツが２枚あった。]
+  - meaning_ko: 시트
+  - example_ko: 침대 위에 시트가 2장 있었다.
+- id: 17498 | level: N2 | [仕上がる / しあがる , それは１日か２日で仕上がる。]
+  - meaning_ko: 끝나다
+  - example_ko: 그것은 하루나 이틀만에 완성된다.
+- id: 17503 | level: N2 | [明明後日 / しあさって , 明明後日にまた上げる。]
+  - meaning_ko: 내일 이틀 뒤
+  - example_ko: 명명 후 날 다시 올린다.
+- id: 17508 | level: N2 | [寺院 / じいん , 京都は古い寺院で有名である。]
+  - meaning_ko: 절
+  - example_ko: 교토는 오래된 사원으로 유명합니다.
+- id: 17514 | level: N2 | [しいんと (する) / しいんと (する) , ]
+  - meaning_ko: 침묵하다 (무덤처럼)
+- id: 17517 | level: N2 | [自衛 / じえい , 自衛隊がイラクに派遣されたわ。]
+  - meaning_ko: 자기 방어
+  - example_ko: 자위대가 이라크에 파견됐어.
+- id: 17524 | level: N2 | [塩辛 / しおから , この水は少し塩辛い。]
+  - meaning_ko: 짠맛 (맛)
+  - example_ko: 이 물은 조금 짠.
+- id: 17528 | level: N2 | [塩辛い / しおからい , この水は少し塩辛い。]
+  - meaning_ko: 짠맛 (맛)
+  - example_ko: 이 물은 조금 짠.
+- id: 17533 | level: N2 | [司会 / しかい , その会議は森首相が司会をした。]
+  - meaning_ko: 주인
+  - example_ko: 그 회의는 모리 총리가 사회를 했다.
+- id: 17536 | level: N2 | [しかく しかくい / しかく しかくい , ]
+  - meaning_ko: 정사각형
+- id: 17541 | level: N2 | [四角い / しかくい , 必要なのは四角いテーブルで、円卓ではない。]
+  - meaning_ko: 정사각형
+  - example_ko: 필요한 것은 사각형 테이블로, 원탁이 아니다.
+- id: 17549 | level: N2 | [仕方がない / しかたがない , 彼を待つより仕方がない。]
+  - meaning_ko: 그건 어쩔 수 없지
+  - example_ko: 그를 기다리는 것보다 어쩔 수 없다.
+- id: 17555 | level: N2 | [時間割 / じかんわり , 時間割をもらえますか。]
+  - meaning_ko: 시간표
+  - example_ko: 시간표를 받을 수 있습니까?
+- id: 17559 | level: N2 | [四季 / しき , 日本には四季があります。]
+  - meaning_ko: 사계절
+  - example_ko: 일본에는 사계절이 있습니다.
+- id: 17564 | level: N2 | [敷地 / しきち , 学校の敷地はこの垣根まで続いている。]
+  - meaning_ko: 대지
+  - example_ko: 학교 부지는 이 울타리까지 이어지고 있다.
+- id: 17570 | level: N2 | [敷く / しく , 私は、ポーチに敷く木製のデッキパネルを購入したいと思います。]
+  - meaning_ko: 퍼지다
+  - example_ko: 나는 현관에 깔린 나무 갑판을 사고 싶다.
+- id: 17576 | level: N2 | [茂る / しげる , 若葉が茂る。]
+  - meaning_ko: 두꺼워지다
+  - example_ko: 와카바가 우거진다.
+- id: 17582 | level: N2 | [持参 / じさん , 今週は弁当を持参する。]
+  - meaning_ko: 가져오는
+  - example_ko: 이번 주는 도시락을 지참한다.
+- id: 17586 | level: N2 | [磁石 / じしゃく , 磁石の針は北を指す。]
+  - meaning_ko: 자석
+  - example_ko: 자석 바늘은 북쪽을 가리킨다.
+- id: 17592 | level: N2 | [四捨五入 / ししゃごにゅう , 一円以下は四捨五入してよろしい。]
+  - meaning_ko: 반올림 (분수)
+  - example_ko: 1엔 이하는 반올림해 주세요.
+- id: 17595 | level: N2 | [始終 / しじゅう , 植物の種子は始終呼吸している。]
+  - meaning_ko: 계속해서
+  - example_ko: 식물의 씨앗은 시종 호흡하고 있습니다.
+- id: 17599 | level: N2 | [自習 / じしゅう , 自習室はM2Fにあります。]
+  - meaning_ko: 자율 학습
+  - example_ko: 자습실은 M2F에 있습니다.
+- id: 17604 | level: N2 | [静まる / しずまる , 海をじっと眺めていると私は気が静まる感じがする。]
+  - meaning_ko: 진정시키다
+  - example_ko: 바다를 가만히 바라보고 있으면 나는 마음이 조용해지는 느낌이 든다.
+- id: 17609 | level: N2 | [姿勢 / しせい , 彼は楽な姿勢で横になった。]
+  - meaning_ko: 태도
+  - example_ko: 그는 편안한 자세로 누워 있었다.
+- id: 17614 | level: N2 | [自然科学 / しぜんかがく , 自然科学に興味はありません。]
+  - meaning_ko: 자연과학
+  - example_ko: 자연과학에 관심이 없다.
+- id: 17621 | level: N2 | [時速 / じそく , 車は時速４０マイルで走った。]
+  - meaning_ko: 속도(시간당)
+  - example_ko: 차는 시속 40마일로 달렸다.
+- id: 17626 | level: N2 | [子孫 / しそん , 子孫にきれいな、緑の地球を残したい。]
+  - meaning_ko: 자손
+  - example_ko: 자손에게 깨끗한, 녹색의 지구를 남기고 싶다.
+- id: 17631 | level: N2 | [死体 / したい , 死体はまだ上がらない。]
+  - meaning_ko: 시체
+  - example_ko: 시체는 아직 오르지 않는다.
+- id: 17636 | level: N2 | [下書き / したがき , 私は論文の１回目の下書きをした。]
+  - meaning_ko: 초고
+  - example_ko: 나는 논문의 첫 번째 초안을 했다.
+- id: 17641 | level: N2 | [自宅 / じたく , 彼等は自宅を明るい黄色に塗った。]
+  - meaning_ko: 자기 집(自分の家(じぶんのいえ)과 동일)
+  - example_ko: 그들은 집을 밝은 노란색으로 칠했다.
+- id: 17646 | level: N2 | [下町 / したまち , 彼女は下町で生まれ育った。]
+  - meaning_ko: 도시의 오래된 부분
+  - example_ko: 그녀는 시내에서 태어나 자랐다.
+- id: 17651 | level: N2 | [自治 / じち , 自治体はゴミ処理問題に頭を抱えている。]
+  - meaning_ko: 자치
+  - example_ko: 지자체는 쓰레기 처리 문제에 머리를 안고 있다.
+- id: 17654 | level: N2 | [室～ / しつ～ , ]
+  - meaning_ko: 방
+- id: 17661 | level: N2 | [実感 / じっかん , 生きていることを実感する。]
+  - meaning_ko: 감정
+  - example_ko: 살아있는 것을 실감한다.
+- id: 17665 | level: N2 | [湿気 / しっき , 当地の夏はひどく湿気が多い。]
+  - meaning_ko: 수분
+  - example_ko: 당지의 여름은 심하게 습기가 많다.
+- id: 17670 | level: N2 | [しつこい / しつこい , 私はしつこい風邪が抜けない。]
+  - meaning_ko: 두드러진
+  - example_ko: 나는 끈질긴 감기에 빠지지 않는다.
+- id: 17674 | level: N2 | [実習 / じっしゅう , 私は実習をします。]
+  - meaning_ko: 관행
+  - example_ko: 실습을 합니다.
+- id: 17681 | level: N2 | [実績 / じっせき , 彼はその実績で金メダルを与えられた。]
+  - meaning_ko: 업적
+  - example_ko: 그는 그 업적에서 금메달을 받았다.
+- id: 17685 | level: N2 | [湿度 / しつど , 暑かった。その上湿度が高かった。]
+  - meaning_ko: 습도 수준
+  - example_ko: 더웠다. 게다가 습도가 높았다.
+- id: 17689 | level: N2 | [執筆 / しっぴつ , 彼は小説の姉妹編を執筆中だ。]
+  - meaning_ko: 글쓰기
+  - example_ko: 그는 소설의 자매편을 집필 중이다.
+- id: 17697 | level: N2 | [実物 / じつぶつ , その絵は実物そっくりだ。]
+  - meaning_ko: 실제적인 것
+  - example_ko: 그 그림은 실물 같다.
+- id: 17701 | level: N2 | [しっぽ / しっぽ , 私の犬はしっぽが長い。]
+  - meaning_ko: 꼬리 (동물)
+  - example_ko: 내 개는 꼬리가 길다.
+- id: 17705 | level: N2 | [実用 / じつよう , 彼の考えはいつも実用的だ。]
+  - meaning_ko: 실제 사용
+  - example_ko: 그의 생각은 항상 실용적이다.
+- id: 17710 | level: N2 | [実力 / じつりょく , 彼はどう見ても実力者だった。]
+  - meaning_ko: (실제) 능력
+  - example_ko: 그는 어떻게 봐도 실력자였다.
+- id: 17715 | level: N2 | [実例 / じつれい , 実例は教訓にまさる。]
+  - meaning_ko: 예
+  - example_ko: 삽화는 교훈에 맞는다.
+- id: 17721 | level: N2 | [しつれいしました (かん) / しつれいしました (かん) , ]
+  - meaning_ko: 실례합니다.
+- id: 17726 | level: N2 | [失恋 / しつれん , 青年は失恋した。]
+  - meaning_ko: 상한 마음
+  - example_ko: 청년은 실연했다.
+- id: 17731 | level: N2 | [指定 / してい , 別の日をご指定いただけませんか。]
+  - meaning_ko: 지정
+  - example_ko: 다른 날을 지정할 수 없습니까?
+- id: 17737 | level: N2 | [私鉄 / してつ , ]
+  - meaning_ko: 민간 철도
+- id: 17740 | level: N2 | [児童 / じどう , 彼女は児童心理学専攻だ。]
+  - meaning_ko: 어린이들
+  - example_ko: 그녀는 아동 심리학 전공이다.
+- id: 17744 | level: N2 | [縛る / しばる , 布でギュギュっとヌンチャクを縛る。]
+  - meaning_ko: 묶다
+  - example_ko: 헝겊으로 규규와 은척을 묶는다.
+- id: 17751 | level: N2 | [地盤 / じばん , 地震で地盤が隆起してきた。]
+  - meaning_ko: (그) 땅
+  - example_ko: 지진으로 지반이 융기해 왔다.
+- id: 17755 | level: N2 | [しびれる / しびれる , 左手がしびれるんです。]
+  - meaning_ko: 마비되다
+  - example_ko: 왼손이 마비됩니다.
+- id: 17759 | level: N2 | [紙幣 / しへい , 紙幣が合計５０枚になる。]
+  - meaning_ko: 지폐
+  - example_ko: 지폐가 합계 50장이 된다.
+- id: 17763 | level: N2 | [しぼむ / しぼむ , 花は切られるとすぐにしぼむ。]
+  - meaning_ko: 시들다
+  - example_ko: 꽃은 자르자마자 엎드린다.
+- id: 17766 | level: N2 | [萎む / しぼむ , ]
+  - meaning_ko: (꽃의) 시들다
+- id: 17773 | level: N2 | [絞る / しぼる , 私は５ポンド絞る必要がある。]
+  - meaning_ko: 누르다
+  - example_ko: 나는 5 파운드 짜낼 필요가 있다.
+- id: 17782 | level: N2 | [縞 / しま , シマウマは縞模様をしてます。]
+  - meaning_ko: 줄무늬
+  - example_ko: 얼룩말은 줄무늬가 있습니다.
+- id: 17786 | level: N2 | [地味 / じみ , 彼女は地味な色を好む。]
+  - meaning_ko: 솔직한
+  - example_ko: 그녀는 수수한 색깔을 좋아한다.
+- id: 17791 | level: N2 | [しみじみ / しみじみ , 彼女の愛情がしみじみ胸にこたえた。]
+  - meaning_ko: 날카롭게
+  - example_ko: 그녀의 애정이 진지한 가슴에 대답했다.
+- id: 17795 | level: N2 | [氏名 / しめい , 住所氏名を言ってください。]
+  - meaning_ko: 성명
+  - example_ko: 주소 이름을 말해주세요.
+- id: 17801 | level: N2 | [締切 / しめきり , 締切りは月曜日です。]
+  - meaning_ko: 사선
+  - example_ko: 마감일은 월요일입니다.
+- id: 17805 | level: N2 | [締め切り / しめきり , 締め切りまでにあまり時間が無くてすいません。]
+  - meaning_ko: 사선
+  - example_ko: 마감까지 시간이 너무 많아서 죄송합니다.
+- id: 17810 | level: N2 | [締め切る / しめきる , ]
+  - meaning_ko: 닫다
+- id: 17813 | level: N2 | [しめた (かん) / しめた (かん) , ]
+  - meaning_ko: 나는 그것을 가지고있다
+- id: 17821 | level: N2 | [しめる / しめる , 窓をしめるようおねがいできますか。]
+  - meaning_ko: 젖다
+  - example_ko: 창문을 닫도록 부탁 할 수 있습니까?
+- id: 17826 | level: N2 | [地面 / じめん , 木の葉が次々と地面に落ちた。]
+  - meaning_ko: 지면
+  - example_ko: 나뭇잎이 잇달아 땅에 떨어졌다.
+- id: 17831 | level: N2 | [ジャーナリスト / ジャーナリスト , 私の彼は、ジャーナリストです。]
+  - meaning_ko: 기자
+  - example_ko: 나의 그는 저널리스트입니다.
+- id: 17835 | level: N2 | [社会科学 / しゃかいかがく , また、アストゥリアス皇太子賞社会科学部門を受賞した。]
+  - meaning_ko: 사회 과학
+  - example_ko: 또한 아스투리아스 황태자상 사회과학부문을 수상했다.
+- id: 17842 | level: N2 | [しゃがむ / しゃがむ , しゃがむと後ろに倒れそうになるのは、足首が硬いんだと思うよ。]
+  - meaning_ko: 쪼그리고 앉다
+  - example_ko: 쪼그리고 뒤로 쓰러질 것 같아지는 것은 발목이 단단하다고 생각해.
+- id: 17847 | level: N2 | [蛇口 / じゃぐち , 蛇口から水が漏れていますよ。]
+  - meaning_ko: 수도꼭지
+  - example_ko: 수도꼭지에서 물이 새고 있습니다.
+- id: 17852 | level: N2 | [弱点 / じゃくてん , 僕の弱点を見つけさせないぞ。]
+  - meaning_ko: 약점
+  - example_ko: 내 약점을 찾지 못한다.
+- id: 17857 | level: N2 | [車庫 / しゃこ , 彼女は車を車庫にいれた。]
+  - meaning_ko: 차고
+  - example_ko: 그녀는 차를 차고에 넣었다.
+- id: 17862 | level: N2 | [車掌 / しゃしょう , 車掌さん。次の町ってどこですか？]
+  - meaning_ko: (열차) 차장
+  - example_ko: 차장씨. 다음 마을은 어디 있습니까?
+- id: 17867 | level: N2 | [写生 / しゃせい , 彼はりんごを写生した。]
+  - meaning_ko: 스케치
+  - example_ko: 그는 사과를 사생했다.
+- id: 17871 | level: N2 | [社説 / しゃせつ , 今日の社説でそれを読んだ。]
+  - meaning_ko: 사설
+  - example_ko: 오늘의 사설에서 그것을 읽었다.
+- id: 17876 | level: N2 | [しゃっくり / しゃっくり , よくしゃっくりが出る。]
+  - meaning_ko: 딸꾹질
+  - example_ko: 잘 딸꾹질이 나온다.
+- id: 17881 | level: N2 | [シャッター / シャッター , シャッター開けるの忘れてた。]
+  - meaning_ko: 셔터
+  - example_ko: 셔터를 여는 것을 잊었다.
+- id: 17884 | level: N2 | [しゃぶる / しゃぶる , 私は夏は凍った棒アイスクリームをしゃぶるのが好きです。]
+  - meaning_ko: 빨다
+  - example_ko: 나는 여름에 얼어붙은 막대기 아이스크림을 빠는 것을 좋아한다.
+- id: 17891 | level: N2 | [車輪 / しゃりん , 車輪が回りだした。]
+  - meaning_ko: (자동차) 바퀴
+  - example_ko: 바퀴가 돌아왔다.
+- id: 17896 | level: N2 | [洒落 / しゃれ , これは駄洒落です。]
+  - meaning_ko: 농담
+  - example_ko: 이것은 낭비입니다.
+- id: 17902 | level: N2 | [じゃんけん / じゃんけん , じゃんけんぽん。]
+  - meaning_ko: 가위바위보 종이 게임
+  - example_ko: 짬뽕.
+- id: 17907 | level: N2 | [重～ / じゅう～ , ]
+  - meaning_ko: 무겁다 ~
+- id: 17911 | level: N2 | [集会 / しゅうかい , 集会は９時に散会した。]
+  - meaning_ko: 회의
+  - example_ko: 집회는 9시에 산회했다.
+- id: 17916 | level: N2 | [住居 / じゅうきょ , 彼はジャマイカに住居を構えた。]
+  - meaning_ko: 주거
+  - example_ko: 그는 자메이카에 거주했습니다.
+- id: 17922 | level: N2 | [集金 / しゅうきん , ]
+  - meaning_ko: 돈 수집
+- id: 17927 | level: N2 | [集合 / しゅうごう , 日曜日に集合しよう。]
+  - meaning_ko: 모임
+  - example_ko: 일요일에 집합하자.
+- id: 17932 | level: N2 | [習字 / しゅうじ , 手本を見ながら習字をしました。]
+  - meaning_ko: 서법
+  - example_ko: 표본을 보면서 습자를 했습니다.
+- id: 17936 | level: N2 | [修繕 / しゅうぜん , 彼らに私の車を修繕してもらおう。]
+  - meaning_ko: 수리하다
+  - example_ko: 그들에게 나의 차를 수선해 달라고 한다.
+- id: 17941 | level: N2 | [重体 / じゅうたい , 重体の赤ちゃんは医者の注意深い監視下に置かれていた。]
+  - meaning_ko: 심각한 상태
+  - example_ko: 무거운 아기는 의사의 주의깊은 감시하에 놓여 있었다.
+- id: 17947 | level: N2 | [じゅうたん (カーペット) / じゅうたん (カーペット) , ]
+  - meaning_ko: 양탄자
+- id: 17951 | level: N2 | [終点 / しゅうてん , 東海道線は東京が終点だ。]
+  - meaning_ko: 말단
+  - example_ko: 도카이도선은 도쿄가 종점이다.
+- id: 17957 | level: N2 | [重点 / じゅうてん , 討論での重点は失業問題であった。]
+  - meaning_ko: 중요한 점
+  - example_ko: 토론의 중점은 실업 문제였다.
+- id: 17961 | level: N2 | [就任 / しゅうにん , 彼は二年前に就任した。]
+  - meaning_ko: 취임
+  - example_ko: 그는 2년 전에 취임했다.
+- id: 17966 | level: N2 | [周辺 / しゅうへん , 彼は南極周辺の地域を探検した。]
+  - meaning_ko: 둘레
+  - example_ko: 그는 남극 주변 지역을 탐험했다.
+- id: 17970 | level: N2 | [重役 / じゅうやく , 重役会は彼を社長にした。]
+  - meaning_ko: 감독
+  - example_ko: 중역회는 그를 사장으로 만들었다.
+- id: 17974 | level: N2 | [終了 / しゅうりょう , 番組は国歌で終了する。]
+  - meaning_ko: 끝
+  - example_ko: 프로그램은 국가로 종료한다.
+- id: 17979 | level: N2 | [重量 / じゅうりょう , 重い金庫の重量で床がぬけ落ちた。]
+  - meaning_ko: 헤비급 선수
+  - example_ko: 무거운 금고의 무게로 바닥이 빠졌습니다.
+- id: 17982 | level: N2 | [重力 / じゅうりょく , 月の重力は地球の６分の１である。]
+  - meaning_ko: 중력
+  - example_ko: 달의 중력은 지구의 1/6이다.
+- id: 17991 | level: N2 | [熟語 / じゅくご , 日本語は四字熟語って結構あるね。]
+  - meaning_ko: 관용구
+  - example_ko: 일본어는 4자 숙어라고 상당히 있네.
+- id: 17996 | level: N2 | [祝日 / しゅくじつ , 今日は祝日です。]
+  - meaning_ko: 공휴일
+  - example_ko: 오늘은 공휴일입니다.
+- id: 17999 | level: N2 | [縮小 / しゅくしょう , 縮小コピーを撮ってくるよ。]
+  - meaning_ko: 절감
+  - example_ko: 축소 사본을 찍을거야.
+- id: 18007 | level: N2 | [受験 / じゅけん , 来週受験できますか。]
+  - meaning_ko: 시험을 치르다
+  - example_ko: 다음 주에 응시할 수 있습니까?
+- id: 18011 | level: N2 | [主語 / しゅご , 文には普通、主語と動詞がある。]
+  - meaning_ko: (그램) 주제
+  - example_ko: 글에는 보통 주어와 동사가 있다.
+- id: 18017 | level: N2 | [主人 / しゅじん , 彼女は病気の主人に付き添った。]
+  - meaning_ko: (자신의) 남편
+  - example_ko: 그녀는 아픈 주인에게 붙어 있었다.
+- id: 18020 | level: N2 | [出勤 / しゅっきん , 今日の出勤は早出なんだよ。]
+  - meaning_ko: 출근하다
+  - example_ko: 오늘의 출근은 일찍이야.
+- id: 18023 | level: N2 | [述語 / じゅつご , ]
+  - meaning_ko: 술부
+- id: 18032 | level: N2 | [出張 / しゅっちょう , 父はよく出張でパリへ行きます。]
+  - meaning_ko: 공식 투어
+  - example_ko: 아버지는 자주 출장으로 파리에 간다.
+- id: 18036 | level: N2 | [寿命 / じゅみょう , 彼の政治寿命はもうない。]
+  - meaning_ko: 수명
+  - example_ko: 그의 정치 수명은 더 이상 없다.
+- id: 18042 | level: N2 | [主役 / しゅやく , 私の妹が主役を演じた。]
+  - meaning_ko: 주요 부분
+  - example_ko: 내 여동생이 주역을 맡았다.
+- id: 18046 | level: N2 | [受話器 / じゅわき , 彼は受話器を取り上げた。]
+  - meaning_ko: (전화) 수화기
+  - example_ko: 그는 수화기를 들었다.
+- id: 18052 | level: N2 | [循環 / じゅんかん , 血液の循環。]
+  - meaning_ko: 순환
+  - example_ko: 혈액 순환.
+- id: 18057 | level: N2 | [巡査 / じゅんさ , 彼は巡査部長の地位に昇った。]
+  - meaning_ko: 경관
+  - example_ko: 그는 순찰 부장의 지위로 떠올랐다.
+- id: 18061 | level: N2 | [順々 / じゅんじゅん , 少年たちは皆順々に話した。]
+  - meaning_ko: 순서대로
+  - example_ko: 소년들은 모두 차례로 말했다.
+- id: 18065 | level: N2 | [順序 / じゅんじょ , 何をするにも順序を踏んでやりなさい。]
+  - meaning_ko: 주문하다
+  - example_ko: 무엇을 하기 위하여 순서를 밟아 하십시오.
+- id: 18069 | level: N2 | [純情 / じゅんじょう , 君って、意外に純情だね。]
+  - meaning_ko: 순수한 마음
+  - example_ko: 너는 의외로 순정이네.
+- id: 18072 | level: N2 | [純粋 / じゅんすい , 彼は純粋の貴族だ。]
+  - meaning_ko: 순수한
+  - example_ko: 그는 순수한 귀족이다.
+- id: 18081 | level: N2 | [初～ / しょ～ , ]
+  - meaning_ko: 먼저 ~
+- id: 18085 | level: N2 | [諸～ / しょ～ , ]
+  - meaning_ko: 다양한 ~
+- id: 18092 | level: N2 | [女～ / じょ～ , ]
+  - meaning_ko: 여자가 하는 일
+- id: 18094 | level: N2 | [省～ / しょう～ , ]
+  - meaning_ko: ~을 절약하다
+- id: 18099 | level: N2 | [消化 / しょうか , 消化不良です。]
+  - meaning_ko: 소화
+  - example_ko: 소화 불량입니다.
+- id: 18107 | level: N2 | [小学生 / しょうがくせい , 小学生は６年間学校に通う。]
+  - meaning_ko: 초등학생
+  - example_ko: 초등학생은 6년간 학교에 다녔다.
+- id: 18110 | level: N2 | [しょうがない / しょうがない , 今日は寒くてしょうがない。]
+  - meaning_ko: 가치가 없어 ~
+  - example_ko: 오늘은 춥고 어쩔 수 없다.
+- id: 18115 | level: N2 | [将棋 / しょうぎ , 私は将棋を少々やります。]
+  - meaning_ko: 일본 체스
+  - example_ko: 나는 장기를 조금 할 것이다.
+- id: 18118 | level: N2 | [蒸気 / じょうき , 熱は水を蒸気に変える。]
+  - meaning_ko: 증기
+  - example_ko: 열은 물을 증기로 바꾼다.
+- id: 18123 | level: N2 | [定規 / じょうぎ , 定規で線を書いて。]
+  - meaning_ko: (측정) 자
+  - example_ko: 눈금자로 선을 씁니다.
+- id: 18128 | level: N2 | [上級 / じょうきゅう , 被告は上級裁判所に控訴するだろう。]
+  - meaning_ko: 고급 수준
+  - example_ko: 피고는 상급법원에 항소할 것이다.
+- id: 18131 | level: N2 | [商業 / しょうぎょう , 彼は商業に従事している。]
+  - meaning_ko: 상업
+  - example_ko: 그는 상업에 종사하고 있다.
+- id: 18134 | level: N2 | [消極的 / しょうきょくてき , 彼は消極的な性格だ。]
+  - meaning_ko: 수동적인
+  - example_ko: 그는 소극적인 성격이다.
+- id: 18137 | level: N2 | [賞金 / しょうきん , 彼は賞金を銀行に預金した。]
+  - meaning_ko: 상
+  - example_ko: 그는 상금을 은행에 예금했다.
+- id: 18142 | level: N2 | [上下 / じょうげ , 彼は首を上下に振った。]
+  - meaning_ko: 높고 낮음
+  - example_ko: 그는 목을 위아래로 흔들었다.
+- id: 18153 | level: N2 | [障子 / しょうじ , 壁に耳あり障子に目あり。]
+  - meaning_ko: 종이 미닫이 문
+  - example_ko: 벽에 귀 있어 장자에 눈 있어.
+- id: 18159 | level: N2 | [商社 / しょうしゃ , 私は商社で働いています。]
+  - meaning_ko: 무역 회사
+  - example_ko: 저는 무역 회사에서 일하고 있습니다.
+- id: 18163 | level: N2 | [乗車 / じょうしゃ , 乗車券が見つからない。]
+  - meaning_ko: 기차를 타고
+  - example_ko: 승차권을 찾을 수 없습니다.
+- id: 18169 | level: N2 | [上旬 / じょうじゅん , トムは１０月上旬からここにいます。]
+  - meaning_ko: 매월 첫 10일
+  - example_ko: 톰은 10월 초순부터 여기에 있습니다.
+- id: 18174 | level: N2 | [小数 / しょうすう , 次の分数を小数に直しなさい。]
+  - meaning_ko: 분수 (일부)
+  - example_ko: 다음 분수를 분수로 고치십시오.
+- id: 18178 | level: N2 | [生ずる / しょうずる , 再開発によって地域に便益が生ずる。]
+  - meaning_ko: 야기하다
+  - example_ko: 재개발에 의해 지역에 편익이 생긴다.
+- id: 18182 | level: N2 | [商店 / しょうてん , 商店街は平日ひっそりしている。]
+  - meaning_ko: 가게
+  - example_ko: 상점가는 평일 몰래 있다.
+- id: 18184 | level: N2 | [焦点 / しょうてん , 彼女の顔に焦点があっている。]
+  - meaning_ko: 집중하다
+  - example_ko: 그녀의 얼굴에 초점이 있습니다.
+- id: 18188 | level: N2 | [消毒 / しょうどく , ほ乳瓶を煮沸消毒しなさい。]
+  - meaning_ko: 소독
+  - example_ko: 포유병을 끓여 소독하십시오.
+- id: 18197 | level: N2 | [勝敗 / しょうはい , 勝敗は問題ではない。]
+  - meaning_ko: 승리 또는 패배
+  - example_ko: 승패는 문제가 아니다.
+- id: 18203 | level: N2 | [蒸発 / じょうはつ , お湯が沸騰して蒸発した。]
+  - meaning_ko: 증발
+  - example_ko: 뜨거운 물이 끓어서 증발했다.
+- id: 18207 | level: N2 | [賞品 / しょうひん , 先生はジョンに賞品を与えた。]
+  - meaning_ko: 상
+  - example_ko: 선생님은 존에게 상품을 주었다.
+- id: 18212 | level: N2 | [上品 / じょうひん , 彼女は上品ぶっている。]
+  - meaning_ko: 세련된
+  - example_ko: 그녀는 품위있다.
+- id: 18218 | level: N2 | [勝負 / しょうぶ , 勝負は預かりとなった。]
+  - meaning_ko: 승리 또는 패배
+  - example_ko: 승부는 맡겨졌다.
+- id: 18225 | level: N2 | [小便 / しょうべん , 「小便が琥珀色だと言われたら、脱水症状だ」]
+  - meaning_ko: (col) 소변
+  - example_ko: 「소변이 호박색이라고 하면, 탈수 증상이다」
+- id: 18229 | level: N2 | [消防署 / しょうぼうしょ , 消防署に連絡してください。]
+  - meaning_ko: 소방서
+  - example_ko: 소방서에 문의하십시오.
+- id: 18235 | level: N2 | [正味 / しょうみ , このジャムの正味重量は２００グラムです。]
+  - meaning_ko: 순(중량)
+  - example_ko: 이 잼의 순중량은 200g입니다.
+- id: 18238 | level: N2 | [正面 / しょうめん , 船が正面衝突をした。]
+  - meaning_ko: 앞쪽
+  - example_ko: 배가 정면 충돌을 했다.
+- id: 18243 | level: N2 | [消耗 / しょうもう , プリンターは、消耗品ですか？]
+  - meaning_ko: 피로
+  - example_ko: 프린터가 소모품입니까?
+- id: 18247 | level: N2 | [省略 / しょうりゃく , その本の最終章は省略してよい。]
+  - meaning_ko: 생략
+  - example_ko: 책의 마지막 장은 생략 할 수 있습니다.
+- id: 18253 | level: N2 | [初級 / しょきゅう , これは初級の教科書です。]
+  - meaning_ko: 초등 수준
+  - example_ko: 이것은 초급 교과서입니다.
+- id: 18260 | level: N2 | [助教授 / じょきょうじゅ , 私は教授です、いやもっと正確に言えば、助教授です。]
+  - meaning_ko: 조교수
+  - example_ko: 저는 교수입니다, 아니 더 정확하게 말하면 조교수입니다.
+- id: 18264 | level: N2 | [食塩 / しょくえん , めんどうですが食塩をとっていただけませんか。]
+  - meaning_ko: 식탁용 소금
+  - example_ko: 미안하지만 식염을 먹을 수 없습니까?
+- id: 18267 | level: N2 | [職人 / しょくにん , 私は彼がよい職人だと分かった。]
+  - meaning_ko: 장인
+  - example_ko: 나는 그가 좋은 장인이라고 알았다.
+- id: 18271 | level: N2 | [職場 / しょくば , 彼は職場でまだ仕事中だ。]
+  - meaning_ko: 직장
+  - example_ko: 그는 직장에서 아직 일중이다.
+- id: 18281 | level: N2 | [初旬 / しょじゅん , 私は６月初旬にトロントに来たものです。]
+  - meaning_ko: 매월 첫 10일
+  - example_ko: 나는 6월 초순에 토론토에 온 것입니다.
+- id: 18285 | level: N2 | [書籍 / しょせき , 私は書籍売り場を担当している。]
+  - meaning_ko: 책
+  - example_ko: 나는 책 매장을 담당하고 있다.
+- id: 18289 | level: N2 | [食器 / しょっき , 弟は銀の食器類を磨いた。]
+  - meaning_ko: 식기
+  - example_ko: 동생은은 식기류를 연마했다.
+- id: 18297 | level: N2 | [ショップ / ショップ , ビデオショップは３時まで営業しています。]
+  - meaning_ko: 가게
+  - example_ko: 비디오 숍은 3시까지 영업하고 있습니다.
+- id: 18300 | level: N2 | [書店 / しょてん , 書店で手に入ります。]
+  - meaning_ko: 서점
+  - example_ko: 서점에서 얻을 수 있습니다.
+- id: 18305 | level: N2 | [書道 / しょどう , 書道を習うのは楽しい。]
+  - meaning_ko: 달필
+  - example_ko: 서예를 배우는 것은 재미 있습니다.
+- id: 18310 | level: N2 | [初歩 / しょほ , ]
+  - meaning_ko: 강요
+- id: 18316 | level: N2 | [白髪 / しらが , 父の頭は白髪になった。]
+  - meaning_ko: 흰색 또는 회색 머리
+  - example_ko: 아버지의 머리는 백발이 되었다.
+- id: 18320 | level: N2 | [シリーズ / シリーズ , この本はシリーズで４８巻ある。]
+  - meaning_ko: 시리즈
+  - example_ko: 이 책은 시리즈로 48권 있다.
+- id: 18323 | level: N2 | [知り合い / しりあい , 彼女と知り合いになった。]
+  - meaning_ko: 아는 사람
+  - example_ko: 그녀와 알게 되었다.
+- id: 18327 | level: N2 | [私立 / しりつ , 私立大学の数が増えた。]
+  - meaning_ko: 사설)
+  - example_ko: 사립대학 수가 늘었다.
+- id: 18332 | level: N2 | [資料 / しりょう , 新しい資料をお送りください。]
+  - meaning_ko: 재료
+  - example_ko: 새로운 자료를 보내주십시오.
+- id: 18336 | level: N2 | [汁 / しる , 味噌汁が温まった。]
+  - meaning_ko: 주스
+  - example_ko: 된장국이 따뜻해졌다.
+- id: 18341 | level: N2 | [素人 / しろうと , 僕も素人です。]
+  - meaning_ko: 평신도
+  - example_ko: 나도 아마추어입니다.
+- id: 18347 | level: N2 | [しわ (かおの～) / しわ (かおの～) , ]
+  - meaning_ko: 주름
+- id: 18351 | level: N2 | [芯 / しん , この替え芯は半年持つ。]
+  - meaning_ko: 핵심
+  - example_ko: 이 대체심은 반년이 있다.
+- id: 18359 | level: N2 | [新幹線 / しんかんせん , 博多発の新幹線が時間通りに到着した。]
+  - meaning_ko: 신칸센
+  - example_ko: 하카타발 신칸센이 정시에 도착했다.
+- id: 18362 | level: N2 | [真空 / しんくう , 自然は真空を嫌う。]
+  - meaning_ko: 진공
+  - example_ko: 자연은 진공을 싫어한다.
+- id: 18367 | level: N2 | [人事 / じんじ , 彼は殺人事件の真相を明らかにした。]
+  - meaning_ko: 인적 자원
+  - example_ko: 그는 살인 사건의 진상을 밝혔다.
+- id: 18370 | level: N2 | [心身 / しんしん , 彼は心身ともに健康だ。]
+  - meaning_ko: 마음과 몸
+  - example_ko: 그는 심신 모두 건강하다.
+- id: 18374 | level: N2 | [信ずる / しんずる , 見ることは信ずることなり。]
+  - meaning_ko: 믿다
+  - example_ko: 보는 것은 믿을 것입니다.
+- id: 18379 | level: N2 | [申請 / しんせい , 彼女はビザを申請した。]
+  - meaning_ko: 애플리케이션
+  - example_ko: 그녀는 비자를 신청했다.
+- id: 18384 | level: N2 | [人造 / じんぞう , 人造皮革は本物の皮にかなわない。]
+  - meaning_ko: 인공의
+  - example_ko: 인조 가죽은 진짜 피부와 관련이 없습니다.
+- id: 18388 | level: N2 | [寝台 / しんだい , あそこに寝台車が見える。]
+  - meaning_ko: 침대
+  - example_ko: 저기에 침대차가 보인다.
+- id: 18393 | level: N2 | [診断 / しんだん , 彼らは健康診断をうけた。]
+  - meaning_ko: 진단
+  - example_ko: 그들은 건강 진단을 받았다.
+- id: 18396 | level: N2 | [侵入 / しんにゅう , 彼らは台所の窓から侵入した。]
+  - meaning_ko: 침입
+  - example_ko: 그들은 부엌 창문에서 침입했다.
+- id: 18404 | level: N2 | [人文科学 / じんぶんかがく , 哲学研究は人文科学の１つだ。]
+  - meaning_ko: 사회과학
+  - example_ko: 철학연구는 인문과학 중 하나다.
+- id: 18413 | level: N2 | [人命 / じんめい , 彼は人命救助で賞賛された。]
+  - meaning_ko: (인간) 생명
+  - example_ko: 그는 인명 구조로 칭찬받았다.
+- id: 18417 | level: N2 | [深夜 / しんや , 私はよく深夜にラジオを聞いたものだ。]
+  - meaning_ko: 늦은 밤
+  - example_ko: 나는 자정에 라디오를 들었습니다.
+- id: 18422 | level: N2 | [森林 / しんりん , 森林の空気はおいしい。]
+  - meaning_ko: 숲
+  - example_ko: 숲의 공기는 맛있다.
+- id: 18427 | level: N2 | [親類 / しんるい , 彼は全ての親類と絶交した。]
+  - meaning_ko: 친척(親戚(しんせki)와 동일)
+  - example_ko: 그는 모든 친척과 절교했다.
+- id: 18433 | level: N2 | [針路 / しんろ , ]
+  - meaning_ko: 강의
+- id: 18436 | level: N2 | [神話 / しんわ , 彼は古代神話に基づく小説を書いた。]
+  - meaning_ko: 신화
+  - example_ko: 그는 고대 신화에 근거한 소설을 썼다.
+- id: 18441 | level: N2 | [酢 / す , 酢は嫌いです。]
+  - meaning_ko: 식초
+  - example_ko: 식초는 싫어.
+- id: 18446 | level: N2 | [水産 / すいさん , ]
+  - meaning_ko: 해산
+- id: 18451 | level: N2 | [炊事 / すいじ , 私は炊事が全然できない。]
+  - meaning_ko: 요리
+  - example_ko: 나는 취사를 전혀 할 수 없다.
+- id: 18455 | level: N2 | [水蒸気 / すいじょうき , 熱は水を水蒸気に変える。]
+  - meaning_ko: 수증기
+  - example_ko: 열은 물을 수증기로 바꾼다.
+- id: 18459 | level: N2 | [水素 / すいそ , 水は水素と酸素を含む。]
+  - meaning_ko: 수소
+  - example_ko: 물은 수소와 산소를 포함한다.
+- id: 18464 | level: N2 | [垂直 / すいちょく , その崖はほとんど垂直です。]
+  - meaning_ko: 수직의
+  - example_ko: 그 절벽은 거의 수직입니다.
+- id: 18469 | level: N2 | [推定 / すいてい , 彼女は３０歳過ぎだと推定する。]
+  - meaning_ko: 가정
+  - example_ko: 그녀는 30세가 지난 것으로 추정한다.
+- id: 18477 | level: N2 | [水滴 / すいてき , 植物の葉に水滴がついていてきれいだった]
+  - meaning_ko: 물방울
+  - example_ko: 식물의 잎에 물방울이 붙어 깨끗했다.
+- id: 18483 | level: N2 | [水筒 / すいとう , 僕の水筒、どこかな？]
+  - meaning_ko: 반합
+  - example_ko: 내 물통, 어딘가?
+- id: 18489 | level: N2 | [随筆 / ずいひつ , 彼女は随筆を書き始めた。]
+  - meaning_ko: 에세이
+  - example_ko: 그녀는 수필을 쓰기 시작했다.
+- id: 18493 | level: N2 | [水分 / すいぶん , 水分を控えてください。]
+  - meaning_ko: 수분
+  - example_ko: 수분을 삼가해 주십시오.
+- id: 18496 | level: N2 | [水平 / すいへい , 大きな船が水平線に現れた。]
+  - meaning_ko: 수준
+  - example_ko: 큰 배가 수평선에 나타났다.
+- id: 18501 | level: N2 | [水平線 / すいへいせん , 大きな船が水平線に現れた。]
+  - meaning_ko: 수평선
+  - example_ko: 큰 배가 수평선에 나타났다.
+- id: 18507 | level: N2 | [水面 / すいめん , 彼女は水面下にもぐった。]
+  - meaning_ko: 물의 표면
+  - example_ko: 그녀는 수면 아래로 돌아갔다.
+- id: 18511 | level: N2 | [水曜 / すいよう , 彼女は先週の水曜日から病気です。]
+  - meaning_ko: 수요일
+  - example_ko: 그녀는 지난 주 수요일부터 아프다.
+- id: 18518 | level: N2 | [図々しい / ずうずうしい , 図々しいな！]
+  - meaning_ko: 뻔뻔스러운
+  - example_ko: 멋지다!
+- id: 18522 | level: N2 | [ずうっと / ずうっと , ]
+  - meaning_ko: 항상
+- id: 18529 | level: N2 | [末っ子 / すえっこ , 彼は末っ子だ。]
+  - meaning_ko: 막내
+  - example_ko: 그는 막내다.
+- id: 18534 | level: N2 | [スカーフ / スカーフ , 頭をスカーフで包みなさい。]
+  - meaning_ko: 스카프
+  - example_ko: 머리를 스카프로 감싸십시오.
+- id: 18539 | level: N2 | [図鑑 / ずかん , 植物図鑑を見ながら庭の花の名前を調べている。]
+  - meaning_ko: 그림책
+  - example_ko: 식물도감을 보면서 정원꽃의 이름을 조사하고 있다.
+- id: 18547 | level: N2 | [隙 / すき , 油断も隙もない奴だ。]
+  - meaning_ko: 무방비한 순간
+  - example_ko: 방심도 틈도 없는 녀석이다.
+- id: 18550 | level: N2 | [杉 / すぎ , 私は、上杉憲信が好き。]
+  - meaning_ko: 삼나무
+  - example_ko: 나는 우에스기 헌신을 좋아한다.
+- id: 18555 | level: N2 | [好き嫌い / すききらい , 食べ物に好き嫌いがない。]
+  - meaning_ko: 호부
+  - example_ko: 음식에 싫어하지 않는다.
+- id: 18562 | level: N2 | [好き好き / すきずき , 蓼食う虫も好き好き。]
+  - meaning_ko: 취향의 문제
+  - example_ko: 芼食う虫도 좋아 좋아.
+- id: 18566 | level: N2 | [透き通る / すきとおる , 青く透き通る海に、魚の影が揺れていた。]
+  - meaning_ko: 투명해지다
+  - example_ko: 푸르게 맑은 바다에 물고기의 그림자가 흔들리고 있었다.
+- id: 18571 | level: N2 | [隙間 / すきま , 男は壁の隙間からのぞいた。]
+  - meaning_ko: 금이 가다
+  - example_ko: 남자는 벽의 틈에서 들었다.
+- id: 18575 | level: N2 | [スクール / スクール , ビジネススクールに行きたいのです。]
+  - meaning_ko: 학교
+  - example_ko: 비즈니스 스쿨에 가고 싶습니다.
+- id: 18579 | level: N2 | [少なくとも / すくなくとも , 彼女は少なくとも週一回美容院へ行く。]
+  - meaning_ko: 적어도
+  - example_ko: 그녀는 적어도 일주일에 한 번 미용실에 간다.
+- id: 18582 | level: N2 | [図形 / ずけい , 次の図形と合同な図形をかきましょう。]
+  - meaning_ko: 수치
+  - example_ko: 다음의 도형과 합동한 도형을 쓰자.
+- id: 18587 | level: N2 | [鈴 / すず , 鈴木先生は歴史の専門家です。]
+  - meaning_ko: 벨
+  - example_ko: 스즈키 선생님은 역사의 전문가입니다.
+- id: 18595 | level: N2 | [涼む / すずむ , ここは風通しが良くて、涼むにはもってこいの場所なんだ。]
+  - meaning_ko: 몸을 식히다
+  - example_ko: 여기는 통풍이 좋고, 시원하기에는 안성맞춤인 장소다.
+- id: 18599 | level: N2 | [スタート / スタート , 僕はスタートで一番遅れた。]
+  - meaning_ko: 시작
+  - example_ko: 나는 시작에서 가장 늦었다.
+- id: 18604 | level: N2 | [スチュワーデス / スチュワーデス , 彼はスチュワーデスと結婚した。]
+  - meaning_ko: 스튜어디스
+  - example_ko: 그는 스튜어디스와 결혼했다.
+- id: 18609 | level: N2 | [すっきり / すっきり , 今はすっきりした気分です。]
+  - meaning_ko: 매끈한
+  - example_ko: 지금은 깔끔한 기분입니다.
+- id: 18611 | level: N2 | [ステージ / ステージ , 彼女はステージで歌っています。]
+  - meaning_ko: 단계
+  - example_ko: 그녀는 무대에서 노래하고 있습니다.
+- id: 18615 | level: N2 | [ストッキング / ストッキング , やだストッキング伝線しちゃってる。]
+  - meaning_ko: 스타킹
+  - example_ko: 야다 스타킹 전선 해 버리고 있다.
+- id: 18619 | level: N2 | [ストップ / ストップ , 戦争で彼らの研究はストップした。]
+  - meaning_ko: 멈추다
+  - example_ko: 전쟁에서 그들의 연구는 정지했다.
+- id: 18622 | level: N2 | [素直 / すなお , 彼は実に素直な人だ。]
+  - meaning_ko: 순종적인
+  - example_ko: 그는 실로 솔직한 사람이다.
+- id: 18627 | level: N2 | [頭脳 / ずのう , 彼の頭脳の働きは活発だった。]
+  - meaning_ko: 머리
+  - example_ko: 그의 두뇌의 일은 활발했다.
+- id: 18631 | level: N2 | [スピーカー / スピーカー , 彼女はいわば歩くスピーカーだ。]
+  - meaning_ko: 스피커
+  - example_ko: 그녀는 말하자면 걷는 스피커다.
+- id: 18636 | level: N2 | [図表 / ずひょう , スライドや動画、図表などを効果的に使うと理解が深まりやすい。]
+  - meaning_ko: 차트
+  - example_ko: 슬라이드나 동영상, 도표 등을 효과적으로 사용하면 이해가 깊어지기 쉽다.
+- id: 18641 | level: N2 | [スマート / スマート , トムって、スマートウォッチ持ってるのよ。]
+  - meaning_ko: 똑똑한
+  - example_ko: 톰은, 스마트 워치 가지고 있는 거야.
+- id: 18645 | level: N2 | [住まい / すまい , 東京にお住まいですか。]
+  - meaning_ko: 주거
+  - example_ko: 도쿄에 살고 계십니까?
+- id: 18654 | level: N2 | [すまない / すまない , 本当は気がすすまないんだ。]
+  - meaning_ko: 죄송합니다 (문구)
+  - example_ko: 사실은 기분이 죄송합니다.
+- id: 18662 | level: N2 | [相撲 / すもう , 彼は大の相撲狂だ。]
+  - meaning_ko: 스모 레슬링
+  - example_ko: 그는 큰 스모입니다.
+- id: 18667 | level: N2 | [スライド / スライド , 次のスライドをお願いします。]
+  - meaning_ko: 슬라이드
+  - example_ko: 다음 슬라이드를 부탁드립니다.
+- id: 18673 | level: N2 | [ずらす / ずらす , 子供は皆ときにいたずらするものだ。]
+  - meaning_ko: 연기하다
+  - example_ko: 아이는 모두 때에 장난하는 것이다.
+- id: 18677 | level: N2 | [ずらり / ずらり , 玄関に靴がずらりと並んでいたな。]
+  - meaning_ko: 줄을 서서
+  - example_ko: 현관에 신발이 즐비하게 늘어서 있었구나.
+- id: 18680 | level: N2 | [スリッパ / スリッパ , スリッパをはいてください。]
+  - meaning_ko: 슬리퍼
+  - example_ko: 슬리퍼를 착용하십시오.
+- id: 18682 | level: N2 | [する / する , 自分勝手にするつもりはない。]
+  - meaning_ko: 인쇄하다
+  - example_ko: 자신 마음대로 할 생각은 없다.
+- id: 18686 | level: N2 | [狡い / ずるい , ]
+  - meaning_ko: 교활한
+- id: 18692 | level: N2 | [寸法 / すんぽう , 棚の寸法はいくらあるか。]
+  - meaning_ko: 측정
+  - example_ko: 선반의 치수는 얼마인가?
+- id: 18696 | level: N2 | [姓 / せい , 彼の両親はお百姓でした。]
+  - meaning_ko: 성
+  - example_ko: 그의 부모는 백성이었습니다.
+- id: 18699 | level: N2 | [税関 / ぜいかん , 税関はどこですか。]
+  - meaning_ko: 세관
+  - example_ko: 세관은 어디입니까?
+- id: 18704 | level: N2 | [製作 / せいさく , 新しいポスターを製作した。]
+  - meaning_ko: 제조
+  - example_ko: 새로운 포스터를 제작했다.
+- id: 18710 | level: N2 | [制作 / せいさく , どなたが人形を制作したのですか？]
+  - meaning_ko: 일(예:
+  - example_ko: 누가 인형을 만들었습니까?
+- id: 18715 | level: N2 | [性質 / せいしつ , 油は水に浮く性質がある。]
+  - meaning_ko: 자연
+  - example_ko: 기름은 물에 뜨는 성격이 있다.
+- id: 18720 | level: N2 | [清書 / せいしょ , マユコは原稿の清書をした。]
+  - meaning_ko: 깨끗한 사본
+  - example_ko: 마유코는 원고의 청서를 했다.
+- id: 18725 | level: N2 | [青少年 / せいしょうねん , 私には青少年の心理がわからない。]
+  - meaning_ko: 청년
+  - example_ko: 나에게는 청소년의 심리를 모른다.
+- id: 18729 | level: N2 | [整数 / せいすう , 2つの整数の商として表される数を有理数という。]
+  - meaning_ko: 정수
+  - example_ko: 2개의 정수의 몫으로 표현되는 수를 유리수라고 한다.
+- id: 18733 | level: N2 | [清掃 / せいそう , 洗面所をつかった後には、清掃すること。]
+  - meaning_ko: 청소
+  - example_ko: 화장실을 사용한 후에는 청소할 것.
+- id: 18737 | level: N2 | [生存 / せいぞん , 動物は、空気と水がなくては生存できない。]
+  - meaning_ko: 존재
+  - example_ko: 동물은 공기와 물이 없으면 생존 할 수 없습니다.
+- id: 18747 | level: N2 | [生長 / せいちょう , ]
+  - meaning_ko: (식물의) 성장
+- id: 18758 | level: N2 | [政党 / せいとう , 彼らは政党を組織した。]
+  - meaning_ko: (당원) 정당
+  - example_ko: 그들은 정당을 조직했다.
+- id: 18763 | level: N2 | [生年月日 / せいねんがっぴ , あなたの生年月日を書きなさい。]
+  - meaning_ko: 생일
+  - example_ko: 당신의 생년월일을 적으십시오.
+- id: 18768 | level: N2 | [性能 / せいのう , この車はあの車より性能がよい。]
+  - meaning_ko: 능력
+  - example_ko: 이 차는 그 차보다 성능이 좋다.
+- id: 18772 | level: N2 | [整備 / せいび , その車は整備が済んでいる。]
+  - meaning_ko: 유지
+  - example_ko: 그 차는 정비가 끝났다.
+- id: 18776 | level: N2 | [成分 / せいぶん , 子宮内の羊水は、海水とほぼ同じ成分だそうです。]
+  - meaning_ko: 재료
+  - example_ko: 자궁내의 양수는, 해수와 거의 같은 성분이라고 합니다.
+- id: 18779 | level: N2 | [性別 / せいべつ , 性別で人を分け隔てすべきでない。]
+  - meaning_ko: 섹스
+  - example_ko: 성별로 사람을 나누어서는 안된다.
+- id: 18784 | level: N2 | [正方形 / せいほうけい , 正方形を２等分せよ。]
+  - meaning_ko: 정사각형
+  - example_ko: 정사각형을 2등분하라.
+- id: 18792 | level: N2 | [正門 / せいもん , それは正門です。]
+  - meaning_ko: 정문
+  - example_ko: 그것은 정문입니다.
+- id: 18796 | level: N2 | [成立 / せいりつ , 新しい法が成立した。]
+  - meaning_ko: 형성
+  - example_ko: 새로운 법이 성립했다.
+- id: 18798 | level: N2 | [西暦 / せいれき , 昭和１０年は西暦１９３５年です。]
+  - meaning_ko: 서력
+  - example_ko: 쇼와 10년은 기원 1935년입니다.
+- id: 18803 | level: N2 | [背負う / せおう , ]
+  - meaning_ko: 부담을 받다
+- id: 18807 | level: N2 | [赤道 / せきどう , 船は今夜赤道を越すだろう。]
+  - meaning_ko: 적도
+  - example_ko: 배는 오늘 밤 적도를 넘을 것이다.
+- id: 18816 | level: N2 | [折角 / せっかく , 折角来てくれたのに留守をしていてごめんね。]
+  - meaning_ko: 문제가 있는
+  - example_ko: 꺾어 와 주었는데 유수를 하고 있어 미안해.
+- id: 18821 | level: N2 | [接近 / せっきん , 嵐が接近していると発表された。]
+  - meaning_ko: 점점 가까워지다
+  - example_ko: 폭풍이 접근하고 있다고 발표되었다.
+- id: 18829 | level: N2 | [接する / せっする , フランスはスペインに隣接する。]
+  - meaning_ko: (누군가)에게 참석하다
+  - example_ko: 프랑스는 스페인에 인접한다.
+- id: 18832 | level: N2 | [せっせと / せっせと , 彼女は家事をせっせとした。]
+  - meaning_ko: 바쁘게
+  - example_ko: 그녀는 가사를 초조했다.
+- id: 18835 | level: N2 | [接続 / せつぞく , インターネットの接続が遮断された。]
+  - meaning_ko: 연결
+  - example_ko: 인터넷 연결이 차단되었습니다.
+- id: 18843 | level: N2 | [瀬戸物 / せともの , その店は瀬戸物を使っている。]
+  - meaning_ko: 질그릇
+  - example_ko: 그 가게는 세토물을 사용하고 있다.
+- id: 18850 | level: N2 | [ぜひとも / ぜひとも , ぜひともそれを見てみたい。]
+  - meaning_ko: 꼭 (답을 '아니오'로 받아들이지 않는다는 의미에서)
+  - example_ko: 꼭 그것을 보고 싶다.
+- id: 18855 | level: N2 | [迫る / せまる , 私か仕事かって迫るのはやめてくれよ。]
+  - meaning_ko: 가까이 다가가다
+  - example_ko: 내가 일하고 다가오는 건 그만해줘.
+- id: 18860 | level: N2 | [ゼミ / ゼミ , 明日はゼミの発表。ぼろくそ言われそうで怖いな。]
+  - meaning_ko: 세미나
+  - example_ko: 내일은 세미나의 발표. 어쩌면 말할 것 같고 무서워.
+- id: 18865 | level: N2 | [せめて / せめて , せめて謝ってくれてもいいのに。]
+  - meaning_ko: 적어도
+  - example_ko: 적어도 사과해도 좋지만.
+- id: 18870 | level: N2 | [攻める / せめる , 彼は私にその問題をいかに攻めるべきかについて教えてくれた。]
+  - meaning_ko: 공격하다
+  - example_ko: 그는 나에게 그 문제를 어떻게 공격해야 하는지에 대해 가르쳐 주었다.
+- id: 18874 | level: N2 | [セメント / セメント , 石の塊はセメントで接合された。]
+  - meaning_ko: 시멘트
+  - example_ko: 돌 덩어리는 시멘트로 접합되었다.
+- id: 18878 | level: N2 | [台詞 / せりふ , それは私の台詞だよ！]
+  - meaning_ko: 연설
+  - example_ko: 그것은 내 대사입니다!
+- id: 18881 | level: N2 | [栓 / せん , 元栓、しまってる。]
+  - meaning_ko: 스토퍼
+  - example_ko: 원전, 버리고 있다.
+- id: 18886 | level: N2 | [前～ / ぜん～ , ]
+  - meaning_ko: 이전의
+- id: 18892 | level: N2 | [前後 / ぜんご , 腕を前後に振りなさい。]
+  - meaning_ko: 앞과 뒤
+  - example_ko: 팔을 앞뒤로 흔들어라.
+- id: 18897 | level: N2 | [洗剤 / せんざい , 食器用洗剤で手がかぶれました。]
+  - meaning_ko: 세정제
+  - example_ko: 식기용 세제로 손이 닿았습니다.
+- id: 18904 | level: N2 | [全集 / ぜんしゅう , この全集は最終巻が欠けている。]
+  - meaning_ko: 완전한 작품
+  - example_ko: 이 전집은 최종권이 부족하다.
+- id: 18906 | level: N2 | [全身 / ぜんしん , 彼は日光を全身に浴びた。]
+  - meaning_ko: 전신)
+  - example_ko: 그는 햇빛을 전신에 받았다.
+- id: 18912 | level: N2 | [扇子 / せんす , 犬が腕時計と扇子を食った。]
+  - meaning_ko: 부채
+  - example_ko: 개가 시계와 부채를 먹었다.
+- id: 18917 | level: N2 | [専制 / せんせい , 彼は専制君主である。]
+  - meaning_ko: 전제국
+  - example_ko: 그는 전제 군주이다.
+- id: 18925 | level: N2 | [先々月 / せんせんげつ , ]
+  - meaning_ko: 지난 한 달 전
+- id: 18930 | level: N2 | [先々週 / せんせんしゅう , ]
+  - meaning_ko: 2주 전
+- id: 18935 | level: N2 | [先祖 / せんぞ , この先祖伝来の家宝は君の物だ。]
+  - meaning_ko: 선조
+  - example_ko: 이 조상 전래의 가보는 너의 물건이다.
+- id: 18940 | level: N2 | [先端 / せんたん , 彼女は先端を行っています。]
+  - meaning_ko: 끝이 뾰족하다
+  - example_ko: 그녀는 끝을 가고 있습니다.
+- id: 18945 | level: N2 | [センチ / センチ , 彼は今年３センチ背が伸びた。]
+  - meaning_ko: 센티미터
+  - example_ko: 그는 올해 3㎝ 키가 늘었다.
+- id: 18950 | level: N2 | [宣伝 / せんでん , 彼は自己宣伝に熱心だ。]
+  - meaning_ko: 널리 알려짐
+  - example_ko: 그는 자기 선전에 열심이다.
+- id: 18955 | level: N2 | [先頭 / せんとう , 彼女が列の先頭です。]
+  - meaning_ko: 머리
+  - example_ko: 그녀는 열의 시작입니다.
+- id: 18962 | level: N2 | [全般 / ぜんぱん , そのことは人間全般に言える。]
+  - meaning_ko: (그) 전체
+  - example_ko: 그것은 인간 전반에 말할 수 있다.
+- id: 18967 | level: N2 | [扇風機 / せんぷうき , 扇風機がほしいな。]
+  - meaning_ko: 선풍기
+  - example_ko: 선풍기를 원해.
+- id: 18972 | level: N2 | [洗面 / せんめん , 彼女は洗面器に水を注いだ。]
+  - meaning_ko: (얼굴을) 씻다
+  - example_ko: 그녀는 세면기에 물을 부었다.
+- id: 18977 | level: N2 | [全力 / ぜんりょく , 彼は全力を尽くして彼女を救った。]
+  - meaning_ko: 온 힘을 다해
+  - example_ko: 그는 최선을 다해 그녀를 구했다.
+- id: 18981 | level: N2 | [線路 / せんろ , 毎朝線路を横切る。]
+  - meaning_ko: 선
+  - example_ko: 매일 아침 선로를 건너십시오.
+- id: 18984 | level: N2 | [総～ / そう～ , ]
+  - meaning_ko: 역겨운
+- id: 18990 | level: N2 | [相違 / そうい , 我々にはわずかな意見の相違があった。]
+  - meaning_ko: 차이점
+  - example_ko: 우리는 약간의 의견 차이가 있었다.
+- id: 18997 | level: N2 | [そういえば / そういえば , そういえば、確かに太郎を見かけました。]
+  - meaning_ko: 나에게 생각나는 ..
+  - example_ko: 그러고 보니 확실히 타로를 보았습니다.
+- id: 19002 | level: N2 | [雑巾 / ぞうきん , 朝の清掃で、雑巾がけをがんばった。]
+  - meaning_ko: 집 옷감
+  - example_ko: 아침 청소로 걸레를 힘들었다.
+- id: 19007 | level: N2 | [増減 / ぞうげん , この数年、体重は増減していません。]
+  - meaning_ko: 증가 및 감소
+  - example_ko: 지난 몇 년 동안 체중이 증가하거나 감소하지 않았습니다.
+- id: 19012 | level: N2 | [倉庫 / そうこ , ボールなら学校の倉庫にありますよ。]
+  - meaning_ko: 창고
+  - example_ko: 공이라면 학교 창고에 있습니다.
+- id: 19017 | level: N2 | [相互 / そうご , 友情は相互理解にある。]
+  - meaning_ko: 상호간의
+  - example_ko: 우정은 상호 이해에 있다.
+- id: 19022 | level: N2 | [創作 / そうさく , それは彼女の創作だろう。]
+  - meaning_ko: 생산
+  - example_ko: 그것은 그녀의 창작일 것이다.
+- id: 19027 | level: N2 | [葬式 / そうしき , 彼の葬式には出なかった。]
+  - meaning_ko: 장례식
+  - example_ko: 그의 장례식에는 나오지 않았다.
+- id: 19032 | level: N2 | [造船 / ぞうせん , ]
+  - meaning_ko: 조선
+- id: 19037 | level: N2 | [騒々しい / そうぞうしい , その通りは騒々しい。]
+  - meaning_ko: 시끄러운
+  - example_ko: 그 거리는 시끄럽다.
+- id: 19042 | level: N2 | [増大 / ぞうだい , 貿易が国富を増大させた。]
+  - meaning_ko: 증가하다
+  - example_ko: 무역이 국부를 증대시켰다.
+- id: 19046 | level: N2 | [そうっと / そうっと , 僕はそうっと自分の寝室に行った。]
+  - meaning_ko: 부드럽게
+  - example_ko: 나는 그렇게 내 침실에 갔다.
+- id: 19048 | level: N2 | [送別 / そうべつ , 送別会は来週行われるでしょう。]
+  - meaning_ko: 작별
+  - example_ko: 송별회는 다음 주에 진행될 것입니다.
+- id: 19056 | level: N2 | [草履 / ぞうり , 草履、忘れた。]
+  - meaning_ko: 일본식 샌들(신발)
+  - example_ko: 쿠사이, 잊었다.
+- id: 19060 | level: N2 | [総理大臣 / そうりだいじん , 彼らは、橋本を総理大臣に選んだ。]
+  - meaning_ko: 총리
+  - example_ko: 그들은 하시모토를 총리대신으로 선택했다.
+- id: 19063 | level: N2 | [送料 / そうりょう , 価格には郵送料が含まれている。]
+  - meaning_ko: 우편 요금
+  - example_ko: 가격에는 우편 요금이 포함되어 있습니다.
+- id: 19067 | level: N2 | [属する / ぞくする , 彼は上流階級に属する。]
+  - meaning_ko: 속하다
+  - example_ko: 그는 상류 계급에 속한다.
+- id: 19073 | level: N2 | [続々 / ぞくぞく , 劇場から続々と人が出てきた。]
+  - meaning_ko: 연속해서
+  - example_ko: 극장에서 잇달아 사람이 나왔다.
+- id: 19079 | level: N2 | [速達 / そくたつ , 速達便でお願いします。]
+  - meaning_ko: 표현하다
+  - example_ko: 속달편으로 부탁합니다.
+- id: 19084 | level: N2 | [測定 / そくてい , 速度を測定する方法はいくつかある。]
+  - meaning_ko: 측정
+  - example_ko: 속도를 측정하는 방법에는 여러 가지가 있습니다.
+- id: 19089 | level: N2 | [測量 / そくりょう , 英国の測量法では４クオートは１ガロンだ。]
+  - meaning_ko: 측정
+  - example_ko: 영국 측량법에서는 4쿼트는 1갤런이다.
+- id: 19093 | level: N2 | [速力 / そくりょく , 彼は全速力で走った。]
+  - meaning_ko: 속도
+  - example_ko: 그는 전속력으로 달렸다.
+- id: 19098 | level: N2 | [素質 / そしつ , 彼には音楽家の素質がある。]
+  - meaning_ko: 재능
+  - example_ko: 그에게는 음악가의 소질이 있다.
+- id: 19102 | level: N2 | [祖先 / そせん , 私たちは祖先をうやまうべきだ。]
+  - meaning_ko: 부조)
+  - example_ko: 우리는 조상을 방황해야 한다.
+- id: 19106 | level: N2 | [そそっかしい / そそっかしい , 君はそそっかしい。]
+  - meaning_ko: 경솔한
+  - example_ko: 너는 그렇게 괴롭다.
+- id: 19111 | level: N2 | [卒直 / そっちょく , それでは卒直に話し合おうか。]
+  - meaning_ko: 솔직한
+  - example_ko: 그럼 졸직하게 토론할까.
+- id: 19116 | level: N2 | [率直 / そっちょく , 率直に話してください。]
+  - meaning_ko: 솔직한
+  - example_ko: 솔직하게 말해주세요.
+- id: 19123 | level: N2 | [そのころ / そのころ , 彼らはそのころ小学生でした。]
+  - meaning_ko: 그 당시에는
+  - example_ko: 그들은 그 당시 초등학생이었습니다.
+- id: 19129 | level: N2 | [そのため / そのため , 彼はそのために仕事を失った。]
+  - meaning_ko: 따라서
+  - example_ko: 그는 그 때문에 일을 잃었다.
+- id: 19134 | level: N2 | [その他 / そのほか , 彼らは果物、パン、ケーキやその他多くのものを売る。]
+  - meaning_ko: 게다가
+  - example_ko: 그들은 과일, 빵, 케이크 및 기타 많은 것을 판매합니다.
+- id: 19139 | level: N2 | [そば / そば , 愛ちゃんは私のそばに座った。]
+  - meaning_ko: 소바(메밀국수)
+  - example_ko: 아이는 내 옆에 앉았다.
+- id: 19145 | level: N2 | [剃る / そる , 私は毎朝髭を剃る。]
+  - meaning_ko: 면도하다
+  - example_ko: 매일 아침 수염을 면도한다.
+- id: 19150 | level: N2 | [それなのに / それなのに , 彼は若い、それなのに分別がある。]
+  - meaning_ko: 그렇지만
+  - example_ko: 그는 젊고, 그것에 분별이 있다.
+- id: 19153 | level: N2 | [それなら / それなら , それなら話は別だよ。]
+  - meaning_ko: 그렇다면...
+  - example_ko: 그렇다면 이야기는 다르다.
+- id: 19161 | level: N2 | [それはいけませんね (かん) / それはいけませんね (かん) , ]
+  - meaning_ko: 그건 좋지 않아
+- id: 19167 | level: N2 | [逸れる / それる , ]
+  - meaning_ko: 주제에서 벗어나다(돌아서다)
+- id: 19170 | level: N2 | [揃える / そろえる , 基本的な道具を揃えるだけで十万超える。]
+  - meaning_ko: 수집하다
+  - example_ko: 기본적인 도구를 갖추는 것만으로 10만을 넘는다.
+- id: 19174 | level: N2 | [算盤 / そろばん , 算盤とは日本のアバカスのことだ。]
+  - meaning_ko: 주판
+  - example_ko: 산반이란 일본의 아바카스를 말한다.
+- id: 19182 | level: N2 | [存じる / ぞんじる , ]
+  - meaning_ko: (겸손하게) 알고 있다
+- id: 19187 | level: N2 | [存ずる / ぞんずる , ]
+  - meaning_ko: (겸손하게) 알고 있다
+- id: 19192 | level: N2 | [損得 / そんとく , 損得なしにしよう。]
+  - meaning_ko: 손실과 이득
+  - example_ko: 손익 없이 하자.
+- id: 19196 | level: N2 | [第～ / だい～ , ]
+  - meaning_ko: ~일
+- id: 19201 | level: N2 | [タイア / タイア , ]
+  - meaning_ko: 타이어
+- id: 19205 | level: N2 | [だいいち (とりわけ) / だいいち (とりわけ) , ]
+  - meaning_ko: 첫 번째
+- id: 19211 | level: N2 | [大学院 / だいがくいん , 彼は大学院で勉強を続けた。]
+  - meaning_ko: 대학원
+  - example_ko: 그는 대학원에서 공부를 계속했다.
+- id: 19215 | level: N2 | [大工 / だいく , 彼の職業は大工です。]
+  - meaning_ko: 목수
+  - example_ko: 그의 직업은 목수입니다.
+- id: 19221 | level: N2 | [体系 / たいけい , 日本語の表記体系は不満かい？]
+  - meaning_ko: 체계
+  - example_ko: 일본어 표기 체계는 불만?
+- id: 19226 | level: N2 | [太鼓 / たいこ , 太鼓の音が聞こえる。]
+  - meaning_ko: 북
+  - example_ko: 북의 소리가 들린다.
+- id: 19232 | level: N2 | [対策 / たいさく , 徹底的な安全対策が実施された。]
+  - meaning_ko: 반대 계획
+  - example_ko: 철저한 안전 대책이 실시되었다.
+- id: 19237 | level: N2 | [大して / たいして , 彼らの事業は拡大している。]
+  - meaning_ko: (별로) 별로
+  - example_ko: 그들의 사업은 확대되고 있다.
+- id: 19239 | level: N2 | [対照 / たいしょう , 彼女の新しい小説は前作とは対照的にとても面白い。]
+  - meaning_ko: 차이
+  - example_ko: 그녀의 새로운 소설은 전작과는 대조적으로 매우 흥미 롭습니다.
+- id: 19244 | level: N2 | [大小 / だいしょう , 道路上の大小の石に気をつけなさい。]
+  - meaning_ko: 크기
+  - example_ko: 도로에 크고 작은 돌을 조심하십시오.
+- id: 19249 | level: N2 | [体制 / たいせい , 兵士達は厳戒体制にあった。]
+  - meaning_ko: 주문하다
+  - example_ko: 군인들은 엄계 체제에 있었다.
+- id: 19254 | level: N2 | [体積 / たいせき , 体積を計算するなら、縦と横と深さを掛ければよい。]
+  - meaning_ko: 용량
+  - example_ko: 체적을 계산한다면, 세로와 가로와 깊이를 곱하면 된다.
+- id: 19257 | level: N2 | [大層 / たいそう , ロシア語は大層学びにくい。]
+  - meaning_ko: 흠뻑
+  - example_ko: 러시아어는 대층 배우기 어렵다.
+- id: 19262 | level: N2 | [体操 / たいそう , 彼は体操が得意だ。]
+  - meaning_ko: 체조
+  - example_ko: 그는 체조가 잘된다.
+- id: 19267 | level: N2 | [大分 / だいぶん , 彼女は大分に行く予定です。]
+  - meaning_ko: 상당히
+  - example_ko: 그녀는 오이타에 갈 예정입니다.
+- id: 19273 | level: N2 | [大木 / たいぼく , 大木は風に折らる。]
+  - meaning_ko: 큰 나무
+  - example_ko: 큰 나무는 바람에 부러진다.
+- id: 19276 | level: N2 | [題名 / だいめい , 彼女は私が題名を知らない歌を歌った。]
+  - meaning_ko: 제목
+  - example_ko: 그녀는 내가 제목을 모르는 노래를 불렀다.
+- id: 19280 | level: N2 | [代名詞 / だいめいし , 「クレオパトラ」は美人の代名詞になっている。]
+  - meaning_ko: 대명사
+  - example_ko: 「클레오파트라」는 미인의 대명사가 되고 있다.
+- id: 19286 | level: N2 | [ダイヤグラム / ダイヤグラム , ]
+  - meaning_ko: 도표
+- id: 19291 | level: N2 | [ダイヤモンド / ダイヤモンド , ダイヤモンドは本来堅いものだ。]
+  - meaning_ko: 다이아몬드
+  - example_ko: 다이아몬드는 본래 단단한 것이다.
+- id: 19296 | level: N2 | [ダイヤル / ダイヤル , 直接ダイヤルできますか。]
+  - meaning_ko: 다이얼
+  - example_ko: 직접 전화를 걸 수 있습니까?
+- id: 19301 | level: N2 | [対立 / たいりつ , 彼は上司と対立を避けようとした。]
+  - meaning_ko: 직면
+  - example_ko: 그는 상사와 갈등을 피하려고 했다.
+- id: 19308 | level: N2 | [田植え / たうえ , 私たちは田植えをしました。]
+  - meaning_ko: 모내기
+  - example_ko: 우리는 모내기를 했다.
+- id: 19313 | level: N2 | [絶えず / たえず , 妹は絶えず漫画を読んでいます。]
+  - meaning_ko: 끊임없이
+  - example_ko: 여동생은 끊임없이 만화를 읽고 있습니다.
+- id: 19316 | level: N2 | [楕円 / だえん , 卵は、真ん丸ではなく楕円です。]
+  - meaning_ko: 타원
+  - example_ko: 계란은 둥근이 아니라 타원입니다.
+- id: 19321 | level: N2 | [高める / たかめる , 社長は従業員に生産性を高めるように命じた。]
+  - meaning_ko: 키우다
+  - example_ko: 사장은 직원들에게 생산성을 높이라고 명령했다.
+- id: 19329 | level: N2 | [耕す / たがやす , 土地を耕す。]
+  - meaning_ko: 경작하다
+  - example_ko: 토지를 경작한다.
+- id: 19332 | level: N2 | [滝 / たき , 谷は滝の音を反響する。]
+  - meaning_ko: 폭포
+  - example_ko: 계곡은 폭포의 소리를 반향한다.
+- id: 19337 | level: N2 | [蓄える / たくわえる , 農夫たちは冬に備えて野菜を蓄える。]
+  - meaning_ko: 저장하다
+  - example_ko: 농부들은 겨울에 대비해 야채를 축적한다.
+- id: 19343 | level: N2 | [竹 / たけ , 林に竹が目立つ。]
+  - meaning_ko: 대나무
+  - example_ko: 숲에 대나무가 눈에 띈다.
+- id: 19347 | level: N2 | [ただいま / ただいま , 「ただいまー」「お帰りなさい」]
+  - meaning_ko: 여기 있어요
+  - example_ko: 「지금 지금」 「돌아가세요」
+- id: 19351 | level: N2 | [但し / ただし , ]
+  - meaning_ko: 하지만
+- id: 19359 | level: N2 | [畳む / たたむ , そこの角にある駄菓子屋さん、店を畳むそうよ。]
+  - meaning_ko: 접다(예:
+  - example_ko: 거기 모퉁이에 있는 과자 가게, 가게를 접을 것 같아.
+- id: 19364 | level: N2 | [立ち止まる / たちどまる , 立ち止まるな。]
+  - meaning_ko: 멈추다
+  - example_ko: 멈추지 마.
+- id: 19369 | level: N2 | [たちまち / たちまち , 切符はたちまち売り切れた。]
+  - meaning_ko: 곧
+  - example_ko: 표는 금방 품절되었다.
+- id: 19375 | level: N2 | [建つ / たつ , 口では大阪の城も建つ。]
+  - meaning_ko: 건립될
+  - example_ko: 입에서는 오사카의 성도 세워진다.
+- id: 19382 | level: N2 | [脱線 / だっせん , 列車は脱線した。]
+  - meaning_ko: 탈선
+  - example_ko: 기차는 탈선했다.
+- id: 19385 | level: N2 | [妥当 / だとう , 彼女の選曲が妥当だったとは思わない。]
+  - meaning_ko: 적절한
+  - example_ko: 그녀의 선곡이 타당했다고는 생각하지 않는다.
+- id: 19389 | level: N2 | [例える / たとえる , 読書は旅に例えることができる。]
+  - meaning_ko: 비교하다
+  - example_ko: 독서는 여행에 비유될 수 있다.
+- id: 19393 | level: N2 | [頼もしい / たのもしい , 彼は頼もしい男だ。]
+  - meaning_ko: 믿을 수 있는
+  - example_ko: 그는 믿음직한 남자다.
+- id: 19398 | level: N2 | [足袋 / たび , 着物に足袋は欠かせません。]
+  - meaning_ko: 버선
+  - example_ko: 기모노에 버선은 빠뜨릴 수 없습니다.
+- id: 19404 | level: N2 | [ダブル / ダブル , ダブルルームを予約しています。]
+  - meaning_ko: 더블
+  - example_ko: 더블룸을 예약합니다.
+- id: 19409 | level: N2 | [ダム / ダム , 大きなダムができるそうだ。]
+  - meaning_ko: 댐
+  - example_ko: 큰 댐이 생긴다고 한다.
+- id: 19415 | level: N2 | [溜息 / ためいき , 「ああ！」と彼女は溜息をつきました。]
+  - meaning_ko: 한숨
+  - example_ko: "아!"라고 그녀는 한숨을 쉬었다.
+- id: 19420 | level: N2 | [ためらう / ためらう , 彼女は答える前に時としてためらう。]
+  - meaning_ko: 주저하다
+  - example_ko: 그녀는 대답하기 전에 때때로 주저한다.
+- id: 19425 | level: N2 | [だらしない / だらしない , 彼は服装がだらしない。]
+  - meaning_ko: 지저분하게
+  - example_ko: 그는 복장이 망설이지 않는다.
+- id: 19430 | level: N2 | [足る / たる , 皆に食物は足るかい。]
+  - meaning_ko: 충분하다
+  - example_ko: 모두에게 음식은 부족하다.
+- id: 19437 | level: N2 | [短～ / たん～ , ]
+  - meaning_ko: 짧다 ~
+- id: 19441 | level: N2 | [段階 / だんかい , 病気はまだ初期の段階です。]
+  - meaning_ko: 점층법
+  - example_ko: 질병은 여전히 ​​초기 단계입니다.
+- id: 19446 | level: N2 | [短期 / たんき , 短期契約社員達は予告なしに解雇された。]
+  - meaning_ko: 단기
+  - example_ko: 단기계약사원들은 예고 없이 해고됐다.
+- id: 19451 | level: N2 | [炭鉱 / たんこう , あの支部は炭鉱労働組合に属している。]
+  - meaning_ko: 탄광
+  - example_ko: 그 지부는 탄광노동조합에 속한다.
+- id: 19455 | level: N2 | [短所 / たんしょ , 誰にでも長所と短所がある。]
+  - meaning_ko: 결함
+  - example_ko: 누구에게나 장점과 단점이 있다.
+- id: 19462 | level: N2 | [たんす / たんす , 昨日、たんすを買いました。]
+  - meaning_ko: 서랍장
+  - example_ko: 어제, 탄수를 샀다.
+- id: 19467 | level: N2 | [淡水 / たんすい , サケは淡水で産卵する。]
+  - meaning_ko: 민물
+  - example_ko: 연어는 담수로 산란한다.
+- id: 19471 | level: N2 | [断水 / だんすい , 断水になった。]
+  - meaning_ko: 단수
+  - example_ko: 단수가 되었다.
+- id: 19477 | level: N2 | [単数 / たんすう , everyは単数扱いになります。]
+  - meaning_ko: 단수(숫자)
+  - example_ko: every는 단수 취급이 됩니다.
+- id: 19482 | level: N2 | [団地 / だんち , 夜の闇の中に団地が並んでいた。]
+  - meaning_ko: 주택단지
+  - example_ko: 밤의 어둠 속에 단지가 줄지어 있었다.
+- id: 19485 | level: N2 | [断定 / だんてい , 昨晩の火事は放火と断定された。]
+  - meaning_ko: 결론
+  - example_ko: 어젯밤의 화재는 방화로 단정되었다.
+- id: 19491 | level: N2 | [短編 / たんぺん , 彼女は短編小説作家です。]
+  - meaning_ko: 짧다(예:
+  - example_ko: 그녀는 단편 소설 작가입니다.
+- id: 19497 | level: N2 | [田ぼ / たんぼ , ]
+  - meaning_ko: 논
+- id: 19502 | level: N2 | [誓う / ちかう , 誓うよ、ジョン。]
+  - meaning_ko: 맹세하다
+  - example_ko: 맹세, 존.
+- id: 19505 | level: N2 | [地下水 / ちかすい , ]
+  - meaning_ko: 지하수
+- id: 19510 | level: N2 | [近々 / ちかぢか , 彼の秘密は近々ばれるだろう。]
+  - meaning_ko: 곧
+  - example_ko: 그의 비밀은 가까워질 것입니다.
+- id: 19517 | level: N2 | [近付ける / ちかづける , 子供たちを薬に近付けるな。]
+  - meaning_ko: 가까이 다가가다
+  - example_ko: 아이들을 약에 가까이하지 마라.
+- id: 19522 | level: N2 | [近寄る / ちかよる , 犬に近寄るな。]
+  - meaning_ko: 접근하다
+  - example_ko: 개에 접근하지 마라.
+- id: 19527 | level: N2 | [力強い / ちからづよい , なるほどこの車は小さいが力強い。]
+  - meaning_ko: 강한
+  - example_ko: 과연 이 차는 작지만 강력하다.
+- id: 19531 | level: N2 | [ちぎる / ちぎる , ]
+  - meaning_ko: 잘게 자르다
+- id: 19535 | level: N2 | [地質 / ちしつ , トムは地質学を専攻してた。]
+  - meaning_ko: 지질학적 특징
+  - example_ko: 톰은 지질학을 전공하고 있었다.
+- id: 19542 | level: N2 | [知人 / ちじん , 彼の知人ですか。]
+  - meaning_ko: 친구
+  - example_ko: 그의 지인인가?
+- id: 19547 | level: N2 | [地帯 / ちたい , 沿岸地帯には津波警報が出た。]
+  - meaning_ko: 영역
+  - example_ko: 해안지대에는 쓰나미 경보가 나왔다.
+- id: 19552 | level: N2 | [縮む / ちぢむ , 命が縮む思いをした。]
+  - meaning_ko: 축소하다
+  - example_ko: 생명이 줄어드는 생각을 했다.
+- id: 19557 | level: N2 | [縮める / ちぢめる , すさんだ生活を送るのは、命を縮めるようなものだ。]
+  - meaning_ko: 단축하다
+  - example_ko: 굉장한 생활을 보내는 것은 생명을 줄이는 것과 같다.
+- id: 19560 | level: N2 | [縮れる / ちぢれる , ]
+  - meaning_ko: 물결 모양이다
+- id: 19563 | level: N2 | [チップ / チップ , チップを置きましたか。]
+  - meaning_ko: 사례금
+  - example_ko: 칩을 넣었나요?
+- id: 19564 | level: N2 | [地点 / ちてん , 道路はこの地点で右にカーブしている。]
+  - meaning_ko: 대지
+  - example_ko: 도로는 이 지점에서 오른쪽으로 커브하고 있다.
+- id: 19568 | level: N2 | [地名 / ちめい , その地名は伝説に由来する。]
+  - meaning_ko: 지명
+  - example_ko: 그 지명은 전설에서 유래한다.
+- id: 19576 | level: N2 | [茶色い / ちゃいろい , あの茶色いのも私のです。]
+  - meaning_ko: 갈색
+  - example_ko: 그 갈색도 나입니다.
+- id: 19579 | level: N2 | [着々 / ちゃくちゃく , 仕事は着々と進んでいる。]
+  - meaning_ko: 꾸준히
+  - example_ko: 일은 순조롭게 진행되고 있다.
+- id: 19583 | level: N2 | [中間 / ちゅうかん , 中間試験がもうすぐ始まる。]
+  - meaning_ko: 가운데
+  - example_ko: 중간 시험이 곧 시작됩니다.
+- id: 19589 | level: N2 | [中旬 / ちゅうじゅん , 予定日は１月の中旬頃です。]
+  - meaning_ko: 매월 둘째/삼분의 일
+  - example_ko: 예정일은 1월 중순경입니다.
+- id: 19593 | level: N2 | [抽象 / ちゅうしょう , 彼らは抽象的な推論に興味を持っている。]
+  - meaning_ko: 추상적인
+  - example_ko: 그들은 추상 추론에 관심이 있습니다.
+- id: 19597 | level: N2 | [中世 / ちゅうせい , 私は中世史を専攻している。]
+  - meaning_ko: 중세
+  - example_ko: 나는 중세사를 전공하고 있다.
+- id: 19600 | level: N2 | [中性 / ちゅうせい , アレックスは、中性的な名前です。]
+  - meaning_ko: 중성 성별
+  - example_ko: 알렉스는 중성적인 이름입니다.
+- id: 19605 | level: N2 | [中途 / ちゅうと , 彼は中途で引き返した。]
+  - meaning_ko: 중간에
+  - example_ko: 그는 중간에 돌아왔다.
+- id: 19610 | level: N2 | [中年 / ちゅうねん , 彼女は中年デブだ。]
+  - meaning_ko: 중년의
+  - example_ko: 그녀는 중년 뚱뚱하다.
+- id: 19615 | level: N2 | [チョーク / チョーク , チョークを一本下さい。]
+  - meaning_ko: 분필
+  - example_ko: 분필을 한 개 주세요.
+- id: 19620 | level: N2 | [長～ / ちょう～ , ]
+  - meaning_ko: 길다 ~
+- id: 19624 | level: N2 | [超過 / ちょうか , 収入を超過して支出をするな。]
+  - meaning_ko: 과잉
+  - example_ko: 수입을 초과하여 지출하지 마라.
+- id: 19631 | level: N2 | [彫刻 / ちょうこく , それらは彫刻の形を取ってきた。]
+  - meaning_ko: 조각
+  - example_ko: 그들은 조각의 형태를 취했습니다.
+- id: 19636 | level: N2 | [長所 / ちょうしょ , 誰にでも長所と短所がある。]
+  - meaning_ko: 장점
+  - example_ko: 누구에게나 장점과 단점이 있다.
+- id: 19640 | level: N2 | [長女 / ちょうじょ , ルミは長女です。]
+  - meaning_ko: 큰 딸
+  - example_ko: 루미는 장녀입니다.
+- id: 19645 | level: N2 | [調整 / ちょうせい , 彼はクラリネットを調整してもらった。]
+  - meaning_ko: 규제
+  - example_ko: 그는 클라리넷을 조정했다.
+- id: 19650 | level: N2 | [調節 / ちょうせつ , 彼女はテレビの調節を彼に頼んだ。]
+  - meaning_ko: 규제
+  - example_ko: 그녀는 텔레비전 조정을 그에게 물었다.
+- id: 19655 | level: N2 | [長短 / ちょうたん , ]
+  - meaning_ko: 길이
+- id: 19658 | level: N2 | [頂点 / ちょうてん , 自動車生産は頂点を超えた。]
+  - meaning_ko: 맨 위
+  - example_ko: 자동차 생산은 정점을 넘어섰다.
+- id: 19663 | level: N2 | [長男 / ちょうなん , 彼は長男です。]
+  - meaning_ko: 장남
+  - example_ko: 그는 장남입니다.
+- id: 19671 | level: N2 | [長方形 / ちょうほうけい , 長方形の対辺は平行である。]
+  - meaning_ko: 구형
+  - example_ko: 직사각형의 대변은 평행하다.
+- id: 19675 | level: N2 | [調味料 / ちょうみりょう , 調味料の配分が絶妙にうまくいった。]
+  - meaning_ko: 조미료
+  - example_ko: 조미료의 배분이 절묘하게 잘 되었다.
+- id: 19682 | level: N2 | [直後 / ちょくご , 彼は終戦直後に出獄した。]
+  - meaning_ko: 바로 다음
+  - example_ko: 그는 종전 직후 출옥했다.
+- id: 19687 | level: N2 | [直線 / ちょくせん , 直線を引きなさい。]
+  - meaning_ko: 일직선
+  - example_ko: 직선을 당기십시오.
+- id: 19693 | level: N2 | [直前 / ちょくぜん , 試合の直前にはいつもあがっています。]
+  - meaning_ko: 직전에
+  - example_ko: 경기 직전에는 항상 오르고 있습니다.
+- id: 19700 | level: N2 | [直通 / ちょくつう , ダイヤル直通ですか。]
+  - meaning_ko: 직접 연결
+  - example_ko: 다이얼 직통입니까?
+- id: 19704 | level: N2 | [直流 / ちょくりゅう , ]
+  - meaning_ko: 직류
+- id: 19708 | level: N2 | [貯蔵 / ちょぞう , 貯蔵庫のドアのそばの刈り残した伸びた芝はどうなんだい。]
+  - meaning_ko: 저장
+  - example_ko: 저장고 문 옆에 깎아 남긴 뻗은 잔디는 어떻습니까.
+- id: 19711 | level: N2 | [直角 / ちょっかく , 直角は９０度である。]
+  - meaning_ko: 직각
+  - example_ko: 직각은 90도이다.
+- id: 19716 | level: N2 | [直径 / ちょっけい , 湖は直径３マイルある。]
+  - meaning_ko: 지름
+  - example_ko: 호수는 직경 3 마일 있다.
+- id: 19724 | level: N2 | [散らかす / ちらかす , お前の物をその辺りに散らかすな。]
+  - meaning_ko: 흩어지다
+  - example_ko: 너의 물건을 그 근처에 흩뜨리지 마라.
+- id: 19732 | level: N2 | [散らかる / ちらかる , ]
+  - meaning_ko: 무질서하다
+- id: 19735 | level: N2 | [塵紙 / ちりがみ , ]
+  - meaning_ko: 티슈 페이퍼
+- id: 19737 | level: N2 | [追加 / ついか , 名簿に私の名前も追加してください。]
+  - meaning_ko: 덧셈
+  - example_ko: 명부에 내 이름을 추가하십시오.
+- id: 19743 | level: N2 | [ついで / ついで , 買い物ついでにでもお寄りください。]
+  - meaning_ko: 기회
+  - example_ko: 쇼핑 한 후에도 들러주세요.
+- id: 19746 | level: N2 | [つうか / つうか , ]
+  - meaning_ko: 통화
+- id: 19751 | level: N2 | [通勤 / つうきん , 父はいつも歩いて通勤するわけではない。]
+  - meaning_ko: 직장으로 통근
+  - example_ko: 아버지는 항상 걷고 통근하는 것은 아니다.
+- id: 19755 | level: N2 | [通ずる / つうずる , これは古今東西に通ずる真理である。]
+  - meaning_ko: 이끌다
+  - example_ko: 이것은 고금 동서에 다니는 진리이다.
+- id: 19759 | level: N2 | [通知 / つうち , 非通知は恐いから出ない方がいいよ。]
+  - meaning_ko: 알아채다
+  - example_ko: 비통지는 무서워서 나오지 않는 것이 좋다.
+- id: 19763 | level: N2 | [通帳 / つうちょう , 貯金通帳に残っていた金で利子がついた。]
+  - meaning_ko: 은행 통장
+  - example_ko: 저금통장에 남아 있던 돈으로 이자가 붙었다.
+- id: 19778 | level: N2 | [通訳 / つうやく , 彼女は通訳として雇われた。]
+  - meaning_ko: 해석(예:
+  - example_ko: 그녀는 통역으로 고용되었다.
+- id: 19785 | level: N2 | [通用 / つうよう , 大学生として通用します。]
+  - meaning_ko: 대중적인 사용
+  - example_ko: 대학생으로 통용합니다.
+- id: 19787 | level: N2 | [通路 / つうろ , 通路側には座れる。]
+  - meaning_ko: 통로
+  - example_ko: 통로측에는 앉을 수 있다.
+- id: 19789 | level: N2 | [突き当たり / つきあたり , 突き当たりに郵便局があります。]
+  - meaning_ko: 끝(예:
+  - example_ko: 맞대기에 우체국이 있습니다.
+- id: 19797 | level: N2 | [突き当たる / つきあたる , ]
+  - meaning_ko: 뛰어들다
+- id: 19800 | level: N2 | [月日 / つきひ , 私たちは来月日本を離れます。]
+  - meaning_ko: 시간
+  - example_ko: 우리는 다음 달 일본을 떠날 것입니다.
+- id: 19804 | level: N2 | [次ぐ / つぐ , きれい好きは敬神に次ぐ美徳。]
+  - meaning_ko: 따르다
+  - example_ko: 예쁜 좋아는 경신에 이은 미덕.
+- id: 19810 | level: N2 | [伝わる / つたわる , 光や音は波の形で伝わる。]
+  - meaning_ko: (소문을 퍼뜨리다
+  - example_ko: 빛과 소리는 파도의 형태로 전달됩니다.
+- id: 19819 | level: N2 | [突っ込む / つっこむ , 他人のことに首を突っ込むな。]
+  - meaning_ko: 뛰어들다
+  - example_ko: 다른 사람에게 목을 찌르지 마라.
+- id: 19823 | level: N2 | [務める / つとめる , 日本には猫が駅長を務める駅がある。]
+  - meaning_ko: 봉사하다
+  - example_ko: 일본에는 고양이가 역장을 맡는 역이 있다.
+- id: 19828 | level: N2 | [努める / つとめる , 火災の予防に努める。]
+  - meaning_ko: 시도하다
+  - example_ko: 화재 예방에 노력한다.
+- id: 19832 | level: N2 | [綱 / つな , 彼は綱をつかんで助かった。]
+  - meaning_ko: 로프
+  - example_ko: 그는 줄을 잡고 살아났다.
+- id: 19837 | level: N2 | [繋がり / つながり , インターネットを繋ごうとしても、繋がりません。]
+  - meaning_ko: 연결
+  - example_ko: 인터넷을 연결하려고해도 연결되지 않습니다.
+- id: 19844 | level: N2 | [繋がる / つながる , 自慰は狂気に繋がる。]
+  - meaning_ko: 함께 묶이다
+  - example_ko: 자위는 광기에 연결된다.
+- id: 19849 | level: N2 | [粒 / つぶ , 彼らは粒よりの兵士だ。]
+  - meaning_ko: 곡물
+  - example_ko: 그들은 곡물보다 군인이다.
+- id: 19855 | level: N2 | [潰す / つぶす , このバナナケースを使うと、バナナを潰すことなく持ち運べます。]
+  - meaning_ko: 부수다
+  - example_ko: 이 바나나 케이스를 사용하면 바나나를 부수지 않고 휴대 할 수 있습니다.
+- id: 19861 | level: N2 | [潰れる / つぶれる , ]
+  - meaning_ko: 박살나다
+- id: 19865 | level: N2 | [つまずく / つまずく , 足元に気をつけなさい。さもないと手荷物につまずくよ。]
+  - meaning_ko: 비틀거리다
+  - example_ko: 발밑에 조심하십시오. 그렇지 않으면 수하물에 넘어져.
+- id: 19870 | level: N2 | [躓く / つまずく , 走れば躓く。]
+  - meaning_ko: (끝까지) 넘어지다
+  - example_ko: 달리면 망설인다.
+- id: 19875 | level: N2 | [詰まる / つまる , 放してくれ、息が詰まる。]
+  - meaning_ko: 차단하다
+  - example_ko: 놓아주고 숨이 막힌다.
+- id: 19880 | level: N2 | [積む / つむ , 一隻の船に全部を積む冒険をするな。]
+  - meaning_ko: 쌓이다
+  - example_ko: 한척의 배에 전부를 쌓는 모험을 하지 말라.
+- id: 19887 | level: N2 | [爪 / つめ , 彼女は爪を噛む癖がある。]
+  - meaning_ko: 손톱이나 발톱
+  - example_ko: 그녀는 손톱을 씹는 버릇이 있다.
+- id: 19889 | level: N2 | [艶 / つや , メアリーは艶やかな黒髪をしている。]
+  - meaning_ko: 광택
+  - example_ko: 메리는 요염한 흑발을 하고 있다.
+- id: 19893 | level: N2 | [強気 / つよき , 彼は強気だ。]
+  - meaning_ko: 단단한
+  - example_ko: 그는 강렬하다.
+- id: 19898 | level: N2 | [釣り合う / つりあう , ]
+  - meaning_ko: 균형을 맞추다
+- id: 19901 | level: N2 | [吊る / つる , 私はシャツを吊るしている。]
+  - meaning_ko: 매달다
+  - example_ko: 나는 셔츠를 매달았다.
+- id: 19906 | level: N2 | [吊す / つるす , ]
+  - meaning_ko: 매달다
+- id: 19911 | level: N2 | [テーマ / テーマ , 卒論のテーマは決めましたか。]
+  - meaning_ko: 주제
+  - example_ko: 졸론의 주제가 결정되었습니까?
+- id: 19915 | level: N2 | [手洗い / てあらい , お手洗いはどこですか。]
+  - meaning_ko: 화장실
+  - example_ko: 화장실은 어디입니까?
+- id: 19920 | level: N2 | [低～ / てい～ , ]
+  - meaning_ko: 낮음 ~
+- id: 19929 | level: N2 | [定員 / ていいん , このエレベーターの定員は１０人だ。]
+  - meaning_ko: 고정된 정규 인원
+  - example_ko: 이 엘리베이터 정원은 10명이다.
+- id: 19934 | level: N2 | [定価 / ていか , 定価から５％値引きいたします。]
+  - meaning_ko: 확립된 가격
+  - example_ko: 정가로부터 5%값 빼겠습니다.
+- id: 19938 | level: N2 | [低下 / ていか , 最近、出生率は低下し続けている。]
+  - meaning_ko: 떨어지다
+  - example_ko: 최근 출생률은 계속 하락하고 있다.
+- id: 19945 | level: N2 | [定期券 / ていきけん , バスの定期券はお持ちですか？]
+  - meaning_ko: 정기권
+  - example_ko: 버스 정기권은 있나요?
+- id: 19952 | level: N2 | [定休日 / ていきゅうび , 本日定休日。]
+  - meaning_ko: 정기휴일
+  - example_ko: 오늘 정기 휴일.
+- id: 19954 | level: N2 | [停止 / ていし , 列車は滑らかに停止した。]
+  - meaning_ko: 보류
+  - example_ko: 기차는 부드럽게 멈췄다.
+- id: 19962 | level: N2 | [停車 / ていしゃ , 次の停車駅はどこですか。]
+  - meaning_ko: 중지(예:
+  - example_ko: 다음 정차역은 어디입니까?
+- id: 19966 | level: N2 | [停電 / ていでん , 嵐で停電した。]
+  - meaning_ko: 정전
+  - example_ko: 폭풍으로 정전했다.
+- id: 19969 | level: N2 | [出入り / でいり , 彼はよく私の所に出入りした。]
+  - meaning_ko: 안팎으로
+  - example_ko: 그는 잘 내 곳으로 왔다갔다.
+- id: 19976 | level: N2 | [出入口 / でいりぐち , ]
+  - meaning_ko: 출구와 입구
+- id: 19982 | level: N2 | [出入り口 / でいりぐち , 出入り口は開けたままになっていた。]
+  - meaning_ko: 출구와 입구
+  - example_ko: 출입구는 열린 채로 있었다.
+- id: 19985 | level: N2 | [手入れ / ていれ , 庭の手入れでもしようかな。]
+  - meaning_ko: 수리
+  - example_ko: 정원의 손질도 할까.
+- id: 19992 | level: N2 | [出来上がり / できあがり , 図面が出来上がりました。]
+  - meaning_ko: 끝나다
+  - example_ko: 도면이 완성되었습니다.
+- id: 19997 | level: N2 | [出来上がる / できあがる , 近日中に台所が出来上がる。]
+  - meaning_ko: 끝나다
+  - example_ko: 근일중에 부엌이 완성된다.
+- id: 20000 | level: N2 | [的確 / てきかく , 彼の答えは的確だ。]
+  - meaning_ko: 정밀한
+  - example_ko: 그의 대답은 정확하다.
+- id: 20005 | level: N2 | [適確 / てきかく , ]
+  - meaning_ko: 정밀한
+- id: 20010 | level: N2 | [手首 / てくび , 彼は私の手首を掴んだ。]
+  - meaning_ko: 손목
+  - example_ko: 그는 내 손목을 잡았다.
+- id: 20015 | level: N2 | [凸凹 / でこぼこ , この道路は未舗装で凸凹している。]
+  - meaning_ko: 흘수
+  - example_ko: 이 도로는 비포장으로 요철하고 있다.
+- id: 20019 | level: N2 | [手頃 / てごろ , もう少しお手頃な値段のものはありませんか？]
+  - meaning_ko: 보통의
+  - example_ko: 좀 더 저렴한 가격은 없습니까?
+- id: 20023 | level: N2 | [手ごろ / てごろ , まあ手ごろな値段だな。]
+  - meaning_ko: 능숙한
+  - example_ko: 뭐 합리적인 가격이구나.
+- id: 20028 | level: N2 | [弟子 / でし , 弟子達はイエスを信じた。]
+  - meaning_ko: 학생
+  - example_ko: 제자들은 예수를 믿었다.
+- id: 20035 | level: N2 | [でたらめ / でたらめ , 彼はでたらめに発砲した。]
+  - meaning_ko: 무책임한 발언
+  - example_ko: 그는 엉망으로 발사했다.
+- id: 20038 | level: N2 | [手帳 / てちょう , 腰を下ろし、手帳を開きました。]
+  - meaning_ko: 공책
+  - example_ko: 허리를 내리고 수첩을 열었습니다.
+- id: 20044 | level: N2 | [鉄橋 / てっきょう , 鉄橋が川にかけられた。]
+  - meaning_ko: 철교
+  - example_ko: 철교가 강에 걸렸다.
+- id: 20048 | level: N2 | [手続き / てつづき , 入国手続きって緊張しちゃう。]
+  - meaning_ko: 절차
+  - example_ko: 입국 수속은 긴장한다.
+- id: 20051 | level: N2 | [鉄砲 / てっぽう , 矢でも鉄砲でも持ってこい。]
+  - meaning_ko: 총
+  - example_ko: 화살이나 철포라도 가져가라.
+- id: 20056 | level: N2 | [テニスコート / テニスコート , テニスコートの脇に水飲み場がある。]
+  - meaning_ko: 테니스 코트
+  - example_ko: 테니스 코트 옆에는 물 마시는 곳이 있다.
+- id: 20060 | level: N2 | [手拭い / てぬぐい , ]
+  - meaning_ko: (손) 수건
+- id: 20069 | level: N2 | [手前 / てまえ , 手前にひいて開けてください。]
+  - meaning_ko: ~ 전에
+  - example_ko: 앞에 두고 열어주세요.
+- id: 20074 | level: N2 | [出迎え / でむかえ , 明日、駅でお出迎えしましょう。]
+  - meaning_ko: 회의
+  - example_ko: 내일 역에서 마중합시다.
+- id: 20080 | level: N2 | [出迎える / でむかえる , ジェーンを出迎える事はわくわくします。]
+  - meaning_ko: 만나다
+  - example_ko: 제인을 맞이하는 것은 흥미 롭습니다.
+- id: 20085 | level: N2 | [照らす / てらす , 薄月の光が庭を照らす。]
+  - meaning_ko: 빛나다
+  - example_ko: 얇은 빛이 정원을 비춘다.
+- id: 20088 | level: N2 | [照る / てる , 日の照るうちに草を干せ。]
+  - meaning_ko: 빛나다
+  - example_ko: 햇빛이 비치는 동안 잔디를 말린다.
+- id: 20093 | level: N2 | [展開 / てんかい , 戦況は我々に有利に展開している。]
+  - meaning_ko: 개발하다
+  - example_ko: 전황은 우리에게 유리하게 전개하고 있다.
+- id: 20100 | level: N2 | [伝記 / でんき , 彼はある有名な詩人の伝記を書いた。]
+  - meaning_ko: 전기
+  - example_ko: 그는 몇몇 고명한 시인의 전기를 썼다.
+- id: 20105 | level: N2 | [電球 / でんきゅう , 電球が切れた。]
+  - meaning_ko: 전구
+  - example_ko: 전구가 끊어졌다.
+- id: 20110 | level: N2 | [点数 / てんすう , 彼女は英語の点数がよい。]
+  - meaning_ko: 점수
+  - example_ko: 그녀는 영어 점수가 좋다.
+- id: 20115 | level: N2 | [伝染 / でんせん , 風邪は伝染する。]
+  - meaning_ko: 전염병
+  - example_ko: 감기는 전염된다.
+- id: 20120 | level: N2 | [電池 / でんち , 電池を入れ替えないと。]
+  - meaning_ko: 배터리
+  - example_ko: 배터리를 교체하지 않으면.
+- id: 20127 | level: N2 | [電柱 / でんちゅう , 技師が電柱を上った。]
+  - meaning_ko: 전신주
+  - example_ko: 기술자가 전주를 올랐다.
+- id: 20131 | level: N2 | [点々 / てんてん , 池に落ち葉が点々と浮かんでいた。]
+  - meaning_ko: 이리저리
+  - example_ko: 연못에 낙엽이 점점 떠 있었다.
+- id: 20137 | level: N2 | [転々 / てんてん , 彼らは会社を転々とした。]
+  - meaning_ko: 하나에서 다른 것으로
+  - example_ko: 그들은 회사를 전전했다.
+- id: 20142 | level: N2 | [天皇 / てんのう , 天皇は国家の象徴である。]
+  - meaning_ko: 일본의 천황
+  - example_ko: 천황은 국가의 상징이다.
+- id: 20147 | level: N2 | [電波 / でんぱ , この部屋は電波が届いてないみたい。]
+  - meaning_ko: 전자기파
+  - example_ko: 이 방은 전파가 도착하지 않은 것 같습니다.
+- id: 20151 | level: N2 | [テンポ / テンポ , テンポのいい映画が好きです。]
+  - meaning_ko: 속도
+  - example_ko: 템포가 좋은 영화를 좋아합니다.
+- id: 20155 | level: N2 | [電流 / でんりゅう , 電流は磁力を発生することができる。]
+  - meaning_ko: 전류
+  - example_ko: 전류는 자력을 발생시킬 수 있다.
+- id: 20159 | level: N2 | [電力 / でんりょく , 父は電力会社に勤めています。]
+  - meaning_ko: 전력
+  - example_ko: 아버지는 전력 회사에 근무합니다.
+- id: 20164 | level: N2 | [問い合わせ / といあわせ , 彼の経歴を会社に問い合わせた。]
+  - meaning_ko: 문의
+  - example_ko: 그의 경력을 회사에 문의했다.
+- id: 20168 | level: N2 | [銅 / どう , 銅像が粉々になった。]
+  - meaning_ko: 구리
+  - example_ko: 동상이 부서졌습니다.
+- id: 20175 | level: N2 | [同～ / どう～ , ]
+  - meaning_ko: 같은 ~
+- id: 20179 | level: N2 | [どういたしまして (かん) / どういたしまして (かん) , ]
+  - meaning_ko: 물론이죠
+- id: 20182 | level: N2 | [統一 / とういつ , 彼はレースにのぞんで精神統一した。]
+  - meaning_ko: 단일성
+  - example_ko: 그는 레이스에 들러 정신통일했다.
+- id: 20190 | level: N2 | [同格 / どうかく , ]
+  - meaning_ko: 같은 순위
+- id: 20195 | level: N2 | [峠 / とうげ , ブームは峠を越した。]
+  - meaning_ko: 산등성이
+  - example_ko: 붐은 고개를 넘었다.
+- id: 20200 | level: N2 | [統計 / とうけい , 中国のＧＤＰ統計はオオカミ少年か。]
+  - meaning_ko: 통계
+  - example_ko: 중국의 GDP 통계는 늑대 소년?
+- id: 20205 | level: N2 | [動作 / どうさ , 彼は動作が鈍い。]
+  - meaning_ko: 행동
+  - example_ko: 그는 행동이 둔하다.
+- id: 20210 | level: N2 | [東西 / とうざい , これは古今東西に通ずる真理である。]
+  - meaning_ko: 동쪽과 서쪽
+  - example_ko: 이것은 고금 동서에 다니는 진리이다.
+- id: 20215 | level: N2 | [当日 / とうじつ , 当日券はありますか。]
+  - meaning_ko: 지정된 날
+  - example_ko: 당일권은 있나요?
+- id: 20222 | level: N2 | [投書 / とうしょ , 新聞や雑誌の投書欄を読みます。]
+  - meaning_ko: 편집자에게 보내는 편지
+  - example_ko: 신문이나 잡지의 투서란을 읽습니다.
+- id: 20227 | level: N2 | [登場 / とうじょう , そこでベス下手より登場！]
+  - meaning_ko: 입장 (무대 위)
+  - example_ko: 거기서 베스 서투른보다 등장!
+- id: 20230 | level: N2 | [どうせ / どうせ , どうせ行くんでしょ。]
+  - meaning_ko: 아무리 해도
+  - example_ko: 어차피 가겠지요.
+- id: 20235 | level: N2 | [灯台 / とうだい , 灯台下暗し。]
+  - meaning_ko: 등대
+  - example_ko: 등대 아래 어두운.
+- id: 20240 | level: N2 | [盗難 / とうなん , 盗難車は駐車場で発見された。]
+  - meaning_ko: 훔침
+  - example_ko: 도난차는 주차장에서 발견되었다.
+- id: 20247 | level: N2 | [当番 / とうばん , 誰が当番ですか。]
+  - meaning_ko: 근무 중
+  - example_ko: 누가 당번인가?
+- id: 20252 | level: N2 | [等分 / とうぶん , 正方形を２等分せよ。]
+  - meaning_ko: 동등한 부분으로 나누기
+  - example_ko: 정사각형을 2등분하라.
+- id: 20256 | level: N2 | [透明 / とうめい , 透明人間が見えますか？]
+  - meaning_ko: 투명도
+  - example_ko: 투명한 사람이 보이는가?
+- id: 20262 | level: N2 | [灯油 / とうゆ , このストーブは灯油を使用します。]
+  - meaning_ko: 등유
+  - example_ko: 이 스토브는 등유를 사용합니다.
+- id: 20267 | level: N2 | [東洋 / とうよう , 彼は東洋芸術のかなりの専門家だ。]
+  - meaning_ko: 동쪽
+  - example_ko: 그는 동양 예술의 상당한 전문가다.
+- id: 20271 | level: N2 | [童話 / どうわ , 彼はこの童話をひとりで書いた。]
+  - meaning_ko: 동화
+  - example_ko: 그는 이 동화를 혼자 썼다.
+- id: 20277 | level: N2 | [通り掛かる / とおりかかる , ]
+  - meaning_ko: 우연히 지나가다
+- id: 20281 | level: N2 | [溶かす / とかす , ４．中華鍋にごま油を熱してバターを溶かす。]
+  - meaning_ko: 녹다
+  - example_ko: 4. 중국 냄비에 참기름을 가열하여 버터를 녹인다.
+- id: 20286 | level: N2 | [尖る / とがる , ]
+  - meaning_ko: 점으로 가늘어지다
+- id: 20287 | level: N2 | [どきどき / どきどき , 怖くてどきどきしたよ。]
+  - meaning_ko: 진동
+  - example_ko: 무서워서 두근거렸어.
+- id: 20292 | level: N2 | [特殊 / とくしゅ , 私は特殊部隊に勤務する。]
+  - meaning_ko: 특별한
+  - example_ko: 나는 특수부대에서 근무한다.
+- id: 20296 | level: N2 | [特色 / とくしょく , 湿気の多い気候はその半島の特色です。]
+  - meaning_ko: 특성
+  - example_ko: 습기가 많은 기후는 그 반도의 특징입니다.
+- id: 20301 | level: N2 | [特定 / とくてい , 警察はいまだ犯人を特定できないでいる。]
+  - meaning_ko: 특정한
+  - example_ko: 경찰은 아직 범인을 확인할 수 없다.
+- id: 20310 | level: N2 | [特売 / とくばい , 毛皮のコートが特売中です。]
+  - meaning_ko: 특별 판매
+  - example_ko: 모피 코트가 특매 중입니다.
+- id: 20316 | level: N2 | [溶け込む / とけこむ , 空が海と一つに溶け込むように見えた。]
+  - meaning_ko: 녹아들다
+  - example_ko: 하늘이 바다와 하나에 녹아들어 보였다.
+- id: 20322 | level: N2 | [溶ける / とける , 氷が溶けると水になる。]
+  - meaning_ko: (자동사) 녹이다
+  - example_ko: 얼음이 녹으면 물이 된다.
+- id: 20327 | level: N2 | [退ける / どける , ]
+  - meaning_ko: 쫓아내다
+- id: 20328 | level: N2 | [床の間 / とこのま , ]
+  - meaning_ko: 반침
+- id: 20333 | level: N2 | [所々 / ところどころ , その本は所々非常にすばらしい。]
+  - meaning_ko: 이리저리
+  - example_ko: 그 책은 곳곳에서 매우 훌륭합니다.
+- id: 20342 | level: N2 | [都心 / としん , 彼はその商売を都心に集中した。]
+  - meaning_ko: (도시의) 마음
+  - example_ko: 그는 그 장사를 도심에 집중했다.
+- id: 20344 | level: N2 | [戸棚 / とだな , 私は戸棚を覗いた。]
+  - meaning_ko: 찬장
+  - example_ko: 나는 옷장을 들여다 보았다.
+- id: 20349 | level: N2 | [とっくに / とっくに , もうとっくに寝る時間だ。]
+  - meaning_ko: 옛날
+  - example_ko: 이제 벌써 자는 시간이다.
+- id: 20354 | level: N2 | [どっと / どっと , 彼らはみなどっと笑った。]
+  - meaning_ko: 갑자기
+  - example_ko: 그들은 미등 웃었다.
+- id: 20362 | level: N2 | [整う / ととのう , 久しぶりの全力疾走。息が整うのに三分かかる。]
+  - meaning_ko: 준비하다
+  - example_ko: 오랜만의 전력 질주. 숨이 쉬는데 3분이 걸린다.
+- id: 20367 | level: N2 | [留まる / とどまる , 行くも留まるも自由にしなさい。]
+  - meaning_ko: 고쳐질
+  - example_ko: 가거나 머물러도 자유롭게 하십시오.
+- id: 20370 | level: N2 | [怒鳴る / どなる , 怒鳴るなよ。]
+  - meaning_ko: 소리치다
+  - example_ko: 울지 마라.
+- id: 20377 | level: N2 | [殿 / どの , 彼女は宮殿へ案内してくれた。]
+  - meaning_ko: 아저씨 (주로 봉투에 적힌 사람에게 말을 할 때)
+  - example_ko: 그녀는 궁전으로 안내해 주었다.
+- id: 20382 | level: N2 | [飛び込む / とびこむ , 水の中に飛び込むぞ。]
+  - meaning_ko: 뛰어들다
+  - example_ko: 물속으로 뛰어들어.
+- id: 20391 | level: N2 | [泊める / とめる , 一晩彼を泊めることができる。]
+  - meaning_ko: 에게 피난처를 제공하다
+  - example_ko: 하룻밤 그를 묵을 수 있다.
+- id: 20394 | level: N2 | [ともかく / ともかく , ともかく来てください。]
+  - meaning_ko: 아무리 해도
+  - example_ko: 어쨌든 와주세요.
+- id: 20397 | level: N2 | [捕える / とらえる , 早起きの鳥は虫を捕える。]
+  - meaning_ko: 붙잡다
+  - example_ko: 일찍 일어나는 새는 벌레를 잡는다.
+- id: 20404 | level: N2 | [取り入れる / とりいれる , 日本人は新しい思想を非常に良く取り入れる。]
+  - meaning_ko: 수확하다
+  - example_ko: 일본인은 새로운 사상을 아주 잘 받아들인다.
+- id: 20411 | level: N2 | [取り消す / とりけす , ごめん、取り消すよ。]
+  - meaning_ko: 취소하다
+  - example_ko: 미안 해요.
+- id: 20417 | level: N2 | [取り出す / とりだす , 石から血を取り出すことはできない。]
+  - meaning_ko: 꺼내다
+  - example_ko: 돌에서 피를 꺼낼 수 없다.
+- id: 20422 | level: N2 | [採る / とる , ]
+  - meaning_ko: 채택하다 (측정하다
+- id: 20424 | level: N2 | [捕る / とる , トムは弓矢で魚を捕るのが好きだ。]
+  - meaning_ko: 가져가다
+  - example_ko: 톰은 활화살로 물고기를 잡는 것을 좋아한다.
+- id: 20431 | level: N2 | [丼 / どんぶり , 彼はご飯を丼で食べたよ。]
+  - meaning_ko: 도자기 그릇
+  - example_ko: 그는 밥을 덮밥으로 먹었다.
+- id: 20434 | level: N2 | [内科 / ないか , 内科はどこですか。]
+  - meaning_ko: 내과 진료소
+  - example_ko: 내과는 어디입니까?
+- id: 20440 | level: N2 | [内線 / ないせん , 内線４５番をお願いします。]
+  - meaning_ko: 내선 번호
+  - example_ko: 내선 45 번을 부탁드립니다.
+- id: 20444 | level: N2 | [ナイロン / ナイロン , ナイロンストッキングはすぐ伝線する。]
+  - meaning_ko: 나일론
+  - example_ko: 나일론 스타킹은 즉시 전선한다.
+- id: 20454 | level: N2 | [仲直り / なかなおり , 彼女と仲直りした。]
+  - meaning_ko: 화해
+  - example_ko: 그녀와 화해했다.
+- id: 20458 | level: N2 | [長引く / ながびく , その経済学者は長引く不況を予期していた。]
+  - meaning_ko: 연장하다
+  - example_ko: 그 경제학자는 장기간의 불황을 예상하고 있었다.
+- id: 20465 | level: N2 | [中身 / なかみ , 容器を見ずに中身を見よ。]
+  - meaning_ko: 내용물
+  - example_ko: 용기를 보지 않고 내용을 보라.
+- id: 20469 | level: N2 | [中指 / なかゆび , 中指が一番長いです。]
+  - meaning_ko: 가운데 손가락
+  - example_ko: 가운데 손가락이 가장 깁니다.
+- id: 20477 | level: N2 | [仲良し / なかよし , 彼の娘と僕の息子は仲良しだ。]
+  - meaning_ko: 친밀한 친구
+  - example_ko: 그의 딸과 나의 아들은 사이가 좋다.
+- id: 20481 | level: N2 | [慰める / なぐさめる , 私は彼女を慰めることができる。]
+  - meaning_ko: 위로하다
+  - example_ko: 나는 그녀를 위로할 수 있다.
+- id: 20483 | level: N2 | [殴る / なぐる , 痛い！由紀子！痛いよ。グーで殴るのはよせよ！]
+  - meaning_ko: 파업하다
+  - example_ko: 아프다! 유키코! 아파요. 구로 때리는 것은 좋지 않아!
+- id: 20489 | level: N2 | [為す / なす , 事ここにいたっては為すすべがない。]
+  - meaning_ko: 성취하다
+  - example_ko: 일 여기에 있어서는 할 수 없다.
+- id: 20492 | level: N2 | [謎謎 / なぞなぞ , ]
+  - meaning_ko: 수수께끼
+- id: 20495 | level: N2 | [傾らか / なだらか , ]
+  - meaning_ko: 점진적인
+- id: 20500 | level: N2 | [懐かしい / なつかしい , 彼女は懐かしい思い出にふけった。]
+  - meaning_ko: ~에게
+  - example_ko: 그녀는 그리운 추억에 빠졌다.
+- id: 20505 | level: N2 | [撫でる / なでる , うちの犬、頭を撫でるとすんごい嬉しそうな顔するんだ。]
+  - meaning_ko: 부드럽게 빗질하기
+  - example_ko: 우리 개, 머리를 쓰다듬으면 굉장히 기쁜 것 같은 얼굴 하는 거야.
+- id: 20512 | level: N2 | [斜め / ななめ , 彼女はご機嫌斜めだ。]
+  - meaning_ko: 대각선
+  - example_ko: 그녀는 기분 비스듬하다.
+- id: 20517 | level: N2 | [なにしろ / なにしろ , なにしろ、独り者で。]
+  - meaning_ko: 어쨌든
+  - example_ko: 어쨌든, 혼자.
+- id: 20522 | level: N2 | [何しろ / なにしろ , 何しろとか、どうしろとか言ってもいいけど、両方はできないよ。]
+  - meaning_ko: 어쨌든
+  - example_ko: 어쨌든, 어떻게든 말해도 좋지만, 둘 다 할 수 없어.
+- id: 20529 | level: N2 | [何々 / なになに , ]
+  - meaning_ko: 이러저러한
+- id: 20532 | level: N2 | [何分 / なにぶん , 何分かかりますか？]
+  - meaning_ko: 꼭
+  - example_ko: 얼마나 걸리나요?
+- id: 20539 | level: N2 | [生意気 / なまいき , 全く生意気だ。]
+  - meaning_ko: 무례한
+  - example_ko: 전혀 건방진다.
+- id: 20542 | level: N2 | [生意気な / なまいきな , 生意気な小僧がよ。]
+  - meaning_ko: 무례한
+  - example_ko: 건방진 소승이야.
+- id: 20552 | level: N2 | [並木 / なみき , 桜並木があるわ。]
+  - meaning_ko: 가로수
+  - example_ko: 벚꽃길이 있습니다.
+- id: 20556 | level: N2 | [倣う / ならう , ]
+  - meaning_ko: 모방하다
+- id: 20561 | level: N2 | [生る / なる , ]
+  - meaning_ko: 열매를 맺다
+- id: 20567 | level: N2 | [南極 / なんきょく , 彼らは南極を探索した。]
+  - meaning_ko: 남극
+  - example_ko: 그들은 남극을 탐험했다.
+- id: 20572 | level: N2 | [なんとなく / なんとなく , なんとなく変な気分。]
+  - meaning_ko: 어떻게든 아니면 다른
+  - example_ko: 어쩐지 이상한 기분.
+- id: 20576 | level: N2 | [なんとも / なんとも , 選挙の結果はなんとも言えない。]
+  - meaning_ko: 아무것도 (부정 동사 포함)
+  - example_ko: 선거의 결과는 정말 말할 수 없다.
+- id: 20582 | level: N2 | [何とも / なんとも , 彼らは雨を何とも思わない。]
+  - meaning_ko: 정말
+  - example_ko: 그들은 비를 아무 생각도 하지 않는다.
+- id: 20587 | level: N2 | [ナンバー / ナンバー , 車のナンバーを書き留められなかった。]
+  - meaning_ko: 숫자
+  - example_ko: 자동차 번호를 적어두지 못했습니다.
+- id: 20591 | level: N2 | [南米 / なんべい , 私達は南米を旅行した。]
+  - meaning_ko: 남아메리카
+  - example_ko: 우리는 남미를 여행했다.
+- id: 20595 | level: N2 | [南北 / なんぼく , 日本は南北に長い国です。]
+  - meaning_ko: 남쪽과 북쪽
+  - example_ko: 일본은 남북에 긴 나라입니다.
+- id: 20597 | level: N2 | [匂う / におう , 春になれば花が甘く咲き匂う。]
+  - meaning_ko: 향기롭다
+  - example_ko: 봄이 되면 꽃이 달콤하게 핀다.
+- id: 20604 | level: N2 | [逃がす / にがす , 好機を逃がすな。]
+  - meaning_ko: 풀어 놓다
+  - example_ko: 호기를 놓치지 마라.
+- id: 20611 | level: N2 | [憎い / にくい , フランス語が憎い。]
+  - meaning_ko: 증오스러운
+  - example_ko: 프랑스어가 미워.
+- id: 20615 | level: N2 | [憎む / にくむ , 私たちは暴力を憎む。]
+  - meaning_ko: 미워하다
+  - example_ko: 우리는 폭력을 미워한다.
+- id: 20618 | level: N2 | [憎らしい / にくらしい , あの男性は憎らしい人だよ！]
+  - meaning_ko: 추악한
+  - example_ko: 그 남자는 미워하는 사람이야!
+- id: 20622 | level: N2 | [にこにこ / にこにこ , 彼女はいつもにこにこしている。]
+  - meaning_ko: 상냥하게 웃다
+  - example_ko: 그녀는 항상 긁고있다.
+- id: 20631 | level: N2 | [濁る / にごる , ]
+  - meaning_ko: 진흙탕이 되다
+- id: 20633 | level: N2 | [虹 / にじ , 虹は７色だ。]
+  - meaning_ko: 무지개
+  - example_ko: 무지개는 7색이다.
+- id: 20639 | level: N2 | [日時 / にちじ , 私達は試合の日時を決めた。]
+  - meaning_ko: 날짜와 시간
+  - example_ko: 우리는 경기의 날짜와 시간을 결정했습니다.
+- id: 20646 | level: N2 | [日用品 / にちようひん , 日用品の値段が上がった。]
+  - meaning_ko: 일용품
+  - example_ko: 일용품 가격이 올랐다.
+- id: 20652 | level: N2 | [日課 / にっか , 月曜日の日課なんだよね？]
+  - meaning_ko: 일상 업무
+  - example_ko: 월요일의 일과인가요?
+- id: 20656 | level: N2 | [日程 / にってい , 彼は１日ごとに日程を変える。]
+  - meaning_ko: 일정
+  - example_ko: 그는 하루마다 일정을 바꾼다.
+- id: 20662 | level: N2 | [鈍い / にぶい , 彼は動作が鈍い。]
+  - meaning_ko: 지루하다 (예를 들어
+  - example_ko: 그는 행동이 둔하다.
+- id: 20667 | level: N2 | [入社 / にゅうしゃ , 彼は高校卒業直後に入社した。]
+  - meaning_ko: 회사에 입사하다
+  - example_ko: 그는 고등학교 졸업 직후에 입사했다.
+- id: 20671 | level: N2 | [女房 / にょうぼう , 女房の悪さは六十年の不作。]
+  - meaning_ko: 부인
+  - example_ko: 여방의 나쁨은 60년의 부작.
+- id: 20677 | level: N2 | [睨む / にらむ , 吸血鬼は睨むだけで人を金縛りにする。]
+  - meaning_ko: 눈부시게 하다
+  - example_ko: 뱀파이어는 노려보는 것만으로 사람을 금박으로 한다.
+- id: 20680 | level: N2 | [煮る / にる , くたくたに煮る。]
+  - meaning_ko: 끓이다
+  - example_ko: 쿠타쿠타에 끓인다.
+- id: 20683 | level: N2 | [俄 / にわか , ウオーッ、みんなの励ましをもらって俄然やる気が出てきたぞ！]
+  - meaning_ko: 갑자기
+  - example_ko: 와우, 모두의 격려를 받아 갑자기 할 생각이 나왔다!
+- id: 20689 | level: N2 | [縫う / ぬう , 船は島の間を縫うように進んだ。]
+  - meaning_ko: 바느질하다
+  - example_ko: 배는 섬 사이를 꿰매기 시작했다.
+- id: 20695 | level: N2 | [ねじ / ねじ , 彼は手紙をポケットにねじ込んだ。]
+  - meaning_ko: (a) 나사
+  - example_ko: 그는 편지를 주머니에 넣었다.
+- id: 20700 | level: N2 | [捩る / ねじる , ]
+  - meaning_ko: 비틀다
+- id: 20706 | level: N2 | [ネックレス / ネックレス , 母は真珠のネックレスをくれた。]
+  - meaning_ko: 목걸이
+  - example_ko: 어머니는 진주 목걸이를 주었다.
+- id: 20711 | level: N2 | [熱する / ねっする , 水は充分に加熱すると沸騰する。]
+  - meaning_ko: 가열하다
+  - example_ko: 물은 충분히 가열하면 끓는다.
+- id: 20716 | level: N2 | [寝間着 / ねまき , 何人か寝間着で寝ている。]
+  - meaning_ko: 잠옷
+  - example_ko: 몇몇은 잠옷에서 자고 있다.
+- id: 20721 | level: N2 | [寝巻 / ねまき , 寝巻きは着ないんだ。]
+  - meaning_ko: 잠옷
+  - example_ko: 뱃살은 입지 않는다.
+- id: 20726 | level: N2 | [狙い / ねらい , 君の狙いは何なんだ？]
+  - meaning_ko: 목표
+  - example_ko: 너의 목적은 뭐야?
+- id: 20732 | level: N2 | [狙う / ねらう , どうせ、狙うなら東大よ。]
+  - meaning_ko: 목표로하다
+  - example_ko: 어차피, 노린다면 동대야.
+- id: 20736 | level: N2 | [年度 / ねんど , 自動車の売れ行きは年度末に後退しました。]
+  - meaning_ko: 년도
+  - example_ko: 자동차 판매는 연도 말에 후퇴했습니다.
+- id: 20742 | level: N2 | [農産物 / のうさんぶつ , わが国の主な農産物は米である。]
+  - meaning_ko: 농산물
+  - example_ko: 우리나라의 주요 농산물은 쌀이다.
+- id: 20746 | level: N2 | [農村 / のうそん , トムはインドの農村事情に詳しい。]
+  - meaning_ko: 농업 공동체
+  - example_ko: 톰은 인도의 농촌 사정에 익숙하다.
+- id: 20751 | level: N2 | [濃度 / のうど , 濃度10%の食塩水の作り方を教えてください。]
+  - meaning_ko: 집중
+  - example_ko: 농도 10%의 염수를 만드는 방법을 알려주세요.
+- id: 20757 | level: N2 | [農薬 / のうやく , 彼らは果樹に農薬を散布している。]
+  - meaning_ko: 농약
+  - example_ko: 그들은 과일 나무에 살충제를 살포합니다.
+- id: 20761 | level: N2 | [能率 / のうりつ , そうすれば能率が上がりますよ。]
+  - meaning_ko: 능률
+  - example_ko: 그러면 능률이 오릅니다.
+- id: 20766 | level: N2 | [のこぎり / のこぎり , 父はのこぎりで木を切った。]
+  - meaning_ko: 봤다
+  - example_ko: 아버지는 톱으로 나무를 자른다.
+- id: 20770 | level: N2 | [残らず / のこらず , 秘密を残らず打ち明けなさい。]
+  - meaning_ko: 완전히
+  - example_ko: 비밀을 남기지 않고 털어 놓으십시오.
+- id: 20777 | level: N2 | [上り / のぼり , 彼らは丘を上りはじめた。]
+  - meaning_ko: 상행 열차(도쿄행)
+  - example_ko: 그들은 언덕을 오르기 시작했다.
+- id: 20779 | level: N2 | [糊 / のり , 彼はメモをドアに糊で貼った。]
+  - meaning_ko: 아교
+  - example_ko: 그는 메모를 문에 접착제로 붙였다.
+- id: 20784 | level: N2 | [乗換 / のりかえ , ]
+  - meaning_ko: 전송(예:
+- id: 20792 | level: N2 | [乗り換え / のりかえ , 途中で乗り換えが必要ですか。]
+  - meaning_ko: (n) 환승(열차
+  - example_ko: 도중에 환승이 필요하십니까?
+- id: 20797 | level: N2 | [乗り越し / のりこし , 考え事をしてたら、乗り越してしまった。]
+  - meaning_ko: (자신의 역)을 타고 지나가다
+  - example_ko: 생각을 했더니 극복해 버렸다.
+- id: 20804 | level: N2 | [のろのろ / のろのろ , 前の車がのろのろでいらいらする。]
+  - meaning_ko: 느리게
+  - example_ko: 이전 차가 느슨하게 짜증나는.
+- id: 20810 | level: N2 | [呑気 / のんき , トムは呑気でマイペースな性格だ。]
+  - meaning_ko: 평온한
+  - example_ko: 톰은 삼키고 내 페이스인 성격이다.
+- id: 20815 | level: N2 | [はい (かん) / はい (かん) , ]
+  - meaning_ko: 예
+- id: 20818 | level: N2 | [灰色 / はいいろ , 彼は名前のように灰色でした。]
+  - meaning_ko: 회색
+  - example_ko: 그는 이름처럼 회색이었다.
+- id: 20826 | level: N2 | [俳句 / はいく , 俳句は季節と関連が深い。]
+  - meaning_ko: 하이쿠 시
+  - example_ko: 하이쿠는 계절과 관련이 깊다.
+- id: 20830 | level: N2 | [売店 / ばいてん , 病院売店はどこにありますか。]
+  - meaning_ko: 가게
+  - example_ko: 병원 매점은 어디에 있습니까?
+- id: 20834 | level: N2 | [バイバイ / バイバイ , バイバイ！]
+  - meaning_ko: 안녕
+  - example_ko: 바이바이!
+- id: 20838 | level: N2 | [売買 / ばいばい , トムは麻薬を売買している。]
+  - meaning_ko: 거래
+  - example_ko: 톰은 마약을 매매하고 있다.
+- id: 20843 | level: N2 | [這う / はう , 我々は山道をまるでアリが這うように進んだ。]
+  - meaning_ko: 기어가다
+  - example_ko: 우리는 산길을 마치 개미가 기어 다니게 되었다.
+- id: 20849 | level: N2 | [剥す / はがす , ]
+  - meaning_ko: 찢어지다
+- id: 20856 | level: N2 | [剥がす / はがす , ]
+  - meaning_ko: 찢어지다
+- id: 20860 | level: N2 | [ばからしい / ばからしい , ]
+  - meaning_ko: 터무니없는
+- id: 20864 | level: N2 | [秤 / はかり , 浴室の秤で体重を計った。]
+  - meaning_ko: 저울
+  - example_ko: 욕실의 무게로 체중을 잰다.
+- id: 20868 | level: N2 | [吐き気 / はきけ , 吐き気がします。]
+  - meaning_ko: 메스꺼움
+  - example_ko: 메스꺼움.
+- id: 20871 | level: N2 | [はきはき / はきはき , はきはきと意見を言ってください。]
+  - meaning_ko: 분명히
+  - example_ko: 엽서와 의견을 말하십시오.
+- id: 20878 | level: N2 | [掃く / はく , 台所をきれいに掃くのを忘れないように。]
+  - meaning_ko: 쓸어버리다
+  - example_ko: 부엌을 깨끗하게 닦는 것을 잊지 않도록.
+- id: 20882 | level: N2 | [歯車 / はぐるま , 歯車がかみ合っている。]
+  - meaning_ko: 기어
+  - example_ko: 기어가 맞물려 있다.
+- id: 20888 | level: N2 | [バケツ / バケツ , 私はバケツに水を入れた。]
+  - meaning_ko: 버킷
+  - example_ko: 나는 물통에 물을 넣었다.
+- id: 20893 | level: N2 | [挟まる / はさまる , ]
+  - meaning_ko: 사이에 들어가다
+- id: 20900 | level: N2 | [挟む / はさむ , 彼は会話の最中に口を挟むことがよくある。]
+  - meaning_ko: 꼬집다
+  - example_ko: 그는 대화의 중간에 입을 끼는 경우가 많다.
+- id: 20904 | level: N2 | [梯子 / はしご , 彼は梯子を登ります。]
+  - meaning_ko: 사다리
+  - example_ko: 그는 사다리를 올라갑니다.
+- id: 20911 | level: N2 | [始めに / はじめに , 私の始めに終わりがある。]
+  - meaning_ko: 처음부터
+  - example_ko: 나의 시작에는 끝이 있다.
+- id: 20915 | level: N2 | [初めに / はじめに , 彼女は来月の初めに東京に着く。]
+  - meaning_ko: 처음부터
+  - example_ko: 그녀는 다음달 초 도쿄에 도착한다.
+- id: 20921 | level: N2 | [はじめまして / はじめまして , はじめまして。]
+  - meaning_ko: 어떻게 지내세요?
+  - example_ko: 만나서 반갑습니다.
+- id: 20924 | level: N2 | [斜 / はす , 布を斜めに裁ちなさい。]
+  - meaning_ko: 대각선
+  - example_ko: 피복을 대각선으로 심판하십시오.
+- id: 20932 | level: N2 | [外れる / はずれる , 私、時々顎が外れるのよ。]
+  - meaning_ko: 연결이 끊어지다
+  - example_ko: 나, 가끔 턱이 벗겨져.
+- id: 20937 | level: N2 | [パターン / パターン , パターンがあるはずだ。]
+  - meaning_ko: 무늬
+  - example_ko: 패턴이 있을 것이다.
+- id: 20942 | level: N2 | [肌着 / はだぎ , 彼は肌着を裏返しに着た。]
+  - meaning_ko: 속옷
+  - example_ko: 그는 속옷을 뒤집어 입었다.
+- id: 20947 | level: N2 | [果して / はたして , ]
+  - meaning_ko: 예상했던 대로
+- id: 20952 | level: N2 | [果たして / はたして , 彼はハワイでお金を使い果たしてしまった。]
+  - meaning_ko: 예상했던 대로
+  - example_ko: 그는 하와이에서 돈을 다 써버렸다.
+- id: 20957 | level: N2 | [鉢 / はち , 彼は粘土で鉢をつくった。]
+  - meaning_ko: 그릇
+  - example_ko: 그는 점토로 화분을 만들었다.
+- id: 20959 | level: N2 | [発 / はつ , あなたは私が出発してから到着した。]
+  - meaning_ko: 출발하다 (예를 들어
+  - example_ko: 너는 내가 떠나고 나서 도착했다.
+- id: 20966 | level: N2 | [× / ばつ , ３×５＝１５。]
+  - meaning_ko: 십자가
+  - example_ko: 3×5=15.
+- id: 20970 | level: N2 | [発揮 / はっき , 彼女は才能を発揮した。]
+  - meaning_ko: 전시회
+  - example_ko: 그녀는 재능을 발휘했다.
+- id: 20976 | level: N2 | [バック / バック , 海をバックに記念写真撮ろうよ。]
+  - meaning_ko: 뒤쪽에
+  - example_ko: 바다를 배경으로 기념 사진 찍자.
+- id: 20981 | level: N2 | [発想 / はっそう , これまた、大胆な発想ですね。]
+  - meaning_ko: 아이디어
+  - example_ko: 이것 또한 대담한 발상이군요.
+- id: 20985 | level: N2 | [発電 / はつでん , 放射能が原子力発電所から漏れた。]
+  - meaning_ko: 세대(예:
+  - example_ko: 방사능이 원자력발전소에서 누출되었다.
+- id: 20987 | level: N2 | [発売 / はつばい , その新製品は発売中だ。]
+  - meaning_ko: 판매
+  - example_ko: 그 신제품은 발매 중이다.
+- id: 20991 | level: N2 | [派手 / はで , 君はいつも派手なネクタイをしている。]
+  - meaning_ko: 화려한
+  - example_ko: 넌 항상 화려한 넥타이를 하고 있다.
+- id: 20996 | level: N2 | [話合い / はなしあい , ]
+  - meaning_ko: 논의
+- id: 21000 | level: N2 | [話し合い / はなしあい , 話し合いはちょっと中断した。]
+  - meaning_ko: 논의
+  - example_ko: 토론은 조금 중단했다.
+- id: 21009 | level: N2 | [話し掛ける / はなしかける , 彼女に話し掛けるのはよそう。]
+  - meaning_ko: 사람에게 말을 걸다
+  - example_ko: 그녀에게 말을 걸면 좋다.
+- id: 21013 | level: N2 | [話中 / はなしちゅう , 電話中です。]
+  - meaning_ko: 얘기하는 동안
+  - example_ko: 전화 중입니다.
+- id: 21019 | level: N2 | [甚だしい / はなはだしい , あんなことを彼女に言うなんて非常識も甚だしい。]
+  - meaning_ko: 극심한
+  - example_ko: 그런 것을 그녀에게 말한다니 비상식도 심하다.
+- id: 21023 | level: N2 | [花火 / はなび , 彼らは花火を打ち上げた。]
+  - meaning_ko: 불꽃
+  - example_ko: 그들은 불꽃놀이를 발사했다.
+- id: 21028 | level: N2 | [花嫁 / はなよめ , 彼が花嫁の父親です。]
+  - meaning_ko: 신부
+  - example_ko: 그가 신부의 아버지입니다.
+- id: 21037 | level: N2 | [ばね / ばね , 雪さえ降らなければね！]
+  - meaning_ko: 봄(예:
+  - example_ko: 눈이 내리지 않으면 안돼!
+- id: 21042 | level: N2 | [跳ねる / はねる , 犬が跳ねるのをごらん。]
+  - meaning_ko: 점프하다
+  - example_ko: 개가 튀는 것을 봐.
+- id: 21044 | level: N2 | [破片 / はへん , 彼女は割れた皿の破片を集めた。]
+  - meaning_ko: 파편
+  - example_ko: 그녀는 깨진 접시의 파편을 모았다.
+- id: 21050 | level: N2 | [歯磨き / はみがき , 歯磨きはどこ？]
+  - meaning_ko: 칫솔질
+  - example_ko: 치약은 어디?
+- id: 21057 | level: N2 | [はめる / はめる , トムは結婚指輪をはめるの？]
+  - meaning_ko: (col) 들어가다
+  - example_ko: 톰은 결혼 반지를 끼는거야?
+- id: 21062 | level: N2 | [早口 / はやくち , 彼は早口だ。]
+  - meaning_ko: 말이 빠른
+  - example_ko: 그는 빠르다.
+- id: 21067 | level: N2 | [払い込む / はらいこむ , ]
+  - meaning_ko: 입금하다
+- id: 21070 | level: N2 | [払い戻す / はらいもどす , ]
+  - meaning_ko: 상환하다
+- id: 21075 | level: N2 | [針金 / はりがね , 針金は電気を伝える。]
+  - meaning_ko: 철사
+  - example_ko: 철사는 전기를 전한다.
+- id: 21080 | level: N2 | [張り切る / はりきる , ]
+  - meaning_ko: 기분이 좋다
+- id: 21086 | level: N2 | [反～ / はん～ , ]
+  - meaning_ko: 안티 ~
+- id: 21090 | level: N2 | [反映 / はんえい , 新聞は世論を反映する。]
+  - meaning_ko: 반사
+  - example_ko: 신문은 여론을 반영한다.
+- id: 21094 | level: N2 | [半径 / はんけい , 地球の半径は、約6,000キロです。]
+  - meaning_ko: 반지름
+  - example_ko: 지구의 반경은 약 6,000km입니다.
+- id: 21101 | level: N2 | [判子 / はんこ , 私たちの生活には判子が必需品です。]
+  - meaning_ko: 인감(서명에 사용됨)
+  - example_ko: 우리의 삶에는 판자가 필수품입니다.
+- id: 21106 | level: N2 | [万歳 / ばんざい , 女王万歳。]
+  - meaning_ko: 반자이
+  - example_ko: 여왕 만세.
+- id: 21111 | level: N2 | [判事 / はんじ , 彼は判事のようにとても厳めしい。]
+  - meaning_ko: 판사
+  - example_ko: 그는 판사처럼 매우 힘들다.
+- id: 21116 | level: N2 | [反省 / はんせい , 彼は自分自身の考えを反省した。]
+  - meaning_ko: 반사
+  - example_ko: 그는 자신의 생각을 반성했다.
+- id: 21121 | level: N2 | [番地 / ばんち , アウグスタ通りの３３７番地に住んでいます。]
+  - meaning_ko: 집 번호
+  - example_ko: 아우구스타 거리의 337번지에 살고 있습니다.
+- id: 21126 | level: N2 | [パンツ / パンツ , パンツが大嫌いです。]
+  - meaning_ko: 팬티
+  - example_ko: 바지가 너무 싫어.
+- id: 21130 | level: N2 | [バンド / バンド , 彼は手にバンドエイドを貼った。]
+  - meaning_ko: 밴드
+  - example_ko: 그는 손에 밴드 에이드를 붙였다.
+- id: 21135 | level: N2 | [半島 / はんとう , イタリアは半島である。]
+  - meaning_ko: 반도
+  - example_ko: 이탈리아는 반도이다.
+- id: 21140 | level: N2 | [ハンドル / ハンドル , 日本車は右ハンドルです。]
+  - meaning_ko: 핸들
+  - example_ko: 일본차는 오른쪽 핸들입니다.
+- id: 21146 | level: N2 | [非～ / ひ～ , ]
+  - meaning_ko: 안티~
+- id: 21152 | level: N2 | [日当たり / ひあたり , 家の居間は日当たりが良いよ。]
+  - meaning_ko: 태양에 노출
+  - example_ko: 집의 거실은 햇볕이 좋다.
+- id: 21157 | level: N2 | [日帰り / ひがえり , 父は明日帰ります。]
+  - meaning_ko: 당일치기 여행
+  - example_ko: 아버지는 내일 돌아갑니다.
+- id: 21161 | level: N2 | [比較的 / ひかくてき , 彼女は比較的早口だ。]
+  - meaning_ko: 비교적
+  - example_ko: 그녀는 비교적 빠르다.
+- id: 21166 | level: N2 | [日陰 / ひかげ , 日陰にいなさい。]
+  - meaning_ko: 그림자
+  - example_ko: 그늘에 있으십시오.
+- id: 21169 | level: N2 | [ぴかぴか / ぴかぴか , タイルはぴかぴか。]
+  - meaning_ko: 반짝임
+  - example_ko: 타일은 피카피카.
+- id: 21175 | level: N2 | [引受る / ひきうける , ]
+  - meaning_ko: 착수하다
+- id: 21181 | level: N2 | [引き返す / ひきかえす , 今は引き返すには遅すぎる。]
+  - meaning_ko: 돌아서다
+  - example_ko: 지금은 되돌리기에는 너무 느립니다.
+- id: 21184 | level: N2 | [引算 / ひきざん , ]
+  - meaning_ko: 빼기
+- id: 21191 | level: N2 | [引き出す / ひきだす , 我々は勉強からさらに楽しみを引き出す。]
+  - meaning_ko: 꺼내다
+  - example_ko: 우리는 공부에서 더 많은 즐거움을 이끌어냅니다.
+- id: 21196 | level: N2 | [引き止める / ひきとめる , 彼女は男の子を引き止める。]
+  - meaning_ko: 뒤로 물러서다
+  - example_ko: 그녀는 소년을 끈다.
+- id: 21201 | level: N2 | [卑怯 / ひきょう , 卑怯者が大嫌いです。]
+  - meaning_ko: 비겁
+  - example_ko: 비겁한 사람이 싫어.
+- id: 21207 | level: N2 | [引分け / ひきわけ , ]
+  - meaning_ko: 무승부 (대회에서)
+- id: 21212 | level: N2 | [引き分け / ひきわけ , 試合は引き分けになった。]
+  - meaning_ko: 무승부 (대회에서)
+  - example_ko: 경기는 무승부가 되었다.
+- id: 21217 | level: N2 | [陽射 / ひざし , 陽射しが強いので帽子をかぶろう。]
+  - meaning_ko: 햇빛
+  - example_ko: 햇빛이 강하기 때문에 모자를 쓰자.
+- id: 21222 | level: N2 | [日差し / ひざし , 彼女は手で目から日差しを遮った。]
+  - meaning_ko: 햇빛
+  - example_ko: 그녀는 손으로 눈으로부터 햇빛을 막았다.
+- id: 21227 | level: N2 | [肘 / ひじ , 彼女は両膝に肘をのせた。]
+  - meaning_ko: 팔꿈치
+  - example_ko: 그녀는 두 무릎에 팔꿈치를 얹었다.
+- id: 21232 | level: N2 | [ピストル / ピストル , 暴漢のピストルが発射された。]
+  - meaning_ko: 권총
+  - example_ko: 폭한의 권총이 발사되었다.
+- id: 21237 | level: N2 | [ビタミン / ビタミン , ビタミン剤売り場はどこですか。]
+  - meaning_ko: 비타민
+  - example_ko: 비타민제 매장은 어디입니까?
+- id: 21242 | level: N2 | [ぴたり / ぴたり , 男はぴたりと止まった。]
+  - meaning_ko: 정확히
+  - example_ko: 남자는 딱 멈췄다.
+- id: 21247 | level: N2 | [引っ掛かる / ひっかかる , ]
+  - meaning_ko: 잡히다
+- id: 21249 | level: N2 | [筆記 / ひっき , ペンや鉛筆は筆記用具である。]
+  - meaning_ko: 메모 작성
+  - example_ko: 펜과 연필은 필기 도구이다.
+- id: 21253 | level: N2 | [引っ繰り返す / ひっくりかえす , ]
+  - meaning_ko: 뒤집다
+- id: 21259 | level: N2 | [引っ繰り返る / ひっくりかえる , ]
+  - meaning_ko: 뒤집히다
+- id: 21267 | level: N2 | [引っ越し / ひっこし , 来月引っ越しするんです。]
+  - meaning_ko: 이사(거주
+  - example_ko: 다음 달 이사하겠습니다.
+- id: 21272 | level: N2 | [引っ込む / ひっこむ , 無理が通れば道理が引っ込む。]
+  - meaning_ko: 뒤로 물러나다
+  - example_ko: 무리가 지나면 도리가 끌어들인다.
+- id: 21276 | level: N2 | [筆者 / ひっしゃ , 筆者はそうした風潮を好まない。]
+  - meaning_ko: 작가
+  - example_ko: 필자는 그러한 풍조를 좋아하지 않는다.
+- id: 21281 | level: N2 | [必需品 / ひつじゅひん , 芸術は贅沢品ではない、必需品だ。]
+  - meaning_ko: 필수품
+  - example_ko: 예술은 사치품이 아닌 필수품이다.
+- id: 21285 | level: N2 | [一～ / ひと～ , ]
+  - meaning_ko: 하나 ~
+- id: 21287 | level: N2 | [人差指 / ひとさしゆび , ]
+  - meaning_ko: 집게손가락
+- id: 21291 | level: N2 | [一通り / ひととおり , 私は生け花を一通りは習いました。]
+  - meaning_ko: 일반적인
+  - example_ko: 나는 꽃꽂이를 한 번에 배웠습니다.
+- id: 21293 | level: N2 | [人通り / ひとどおり , 夜は人通りが無くなった。]
+  - meaning_ko: 보행자 교통
+  - example_ko: 밤에는 거리가 사라졌다.
+- id: 21299 | level: N2 | [ひとまず / ひとまず , ひとまず、連絡します。]
+  - meaning_ko: 현재를 위해
+  - example_ko: 일단 연락 드리겠습니다.
+- id: 21306 | level: N2 | [瞳 / ひとみ , 私は瞳が好きだ。]
+  - meaning_ko: 눈동자(눈의)
+  - example_ko: 나는 눈동자를 좋아한다.
+- id: 21313 | level: N2 | [一休み / ひとやすみ , 日陰で一休みしよう。]
+  - meaning_ko: 휴식
+  - example_ko: 그늘에서 쉬자.
+- id: 21320 | level: N2 | [独り言 / ひとりごと , 独り言をいいます。]
+  - meaning_ko: 독백
+  - example_ko: 혼자서 말합니다.
+- id: 21325 | level: N2 | [ひとりでに / ひとりでに , 明かりはひとりでに消えた。]
+  - meaning_ko: 그 자체로
+  - example_ko: 불빛은 혼자 사라졌다.
+- id: 21330 | level: N2 | [ビニール / ビニール , ビニール袋に入れてください。]
+  - meaning_ko: 비닐
+  - example_ko: 비닐 봉지에 넣으십시오.
+- id: 21334 | level: N2 | [皮肉 / ひにく , 彼女は少し皮肉っぽく話した。]
+  - meaning_ko: 냉소
+  - example_ko: 그녀는 조금 아이러니하게 말했다.
+- id: 21339 | level: N2 | [日日 / ひにち , 毎日日記をつけている。]
+  - meaning_ko: 날짜
+  - example_ko: 매일 일기를 붙이고 있다.
+- id: 21347 | level: N2 | [日にち / ひにち , 日にち次第よ。]
+  - meaning_ko: 날짜(계획된 행사의
+  - example_ko: 하루에 따라.
+- id: 21352 | level: N2 | [捻る / ひねる , 彼をやり込めるくらい、赤子の手を捻るより簡単だよ。]
+  - meaning_ko: 비틀다
+  - example_ko: 그를 넣을 정도로 아카코의 손을 비틀기보다 간단해.
+- id: 21355 | level: N2 | [日の入り / ひのいり , 今日の日の入りって、いつ？]
+  - meaning_ko: 일몰
+  - example_ko: 오늘의 일몰은 언제?
+- id: 21360 | level: N2 | [日の出 / ひので , 日の出はまだです。]
+  - meaning_ko: 해돋이
+  - example_ko: 일출은 아직입니다.
+- id: 21365 | level: N2 | [響き / ひびき , 彼の声に多少怒りの響きがあった。]
+  - meaning_ko: 에코
+  - example_ko: 그의 목소리에 약간 분노의 울림이 있었다.
+- id: 21372 | level: N2 | [響く / ひびく , あんまり単位落とすと就活に響くよ。]
+  - meaning_ko: 울리다
+  - example_ko: 너무 단위 떨어뜨리면 취활에 영향을 미칠거야.
+- id: 21376 | level: N2 | [皮膚 / ひふ , 日光は皮膚に作用する。]
+  - meaning_ko: 피부
+  - example_ko: 햇빛은 피부에 작용합니다.
+- id: 21381 | level: N2 | [冷やす / ひやす , リンゴは冷やすと甘みが増します。]
+  - meaning_ko: (상온에서) 식히다
+  - example_ko: 사과는 식히면 단맛이 증가합니다.
+- id: 21384 | level: N2 | [ひゃっかじてん / ひゃっかじてん , ]
+  - meaning_ko: 백과 사전
+- id: 21389 | level: N2 | [百科事典 / ひゃっかじてん , 百科事典は知識の宝庫だ。]
+  - meaning_ko: 백과 사전
+  - example_ko: 백과사전은 지식의 보고다.
+- id: 21396 | level: N2 | [美容 / びよう , 彼女は美容室に行った。]
+  - meaning_ko: 모습이나 형태의 아름다움
+  - example_ko: 그녀는 미용실에 갔다.
+- id: 21400 | level: N2 | [表紙 / ひょうし , 本を表紙で判断するな。]
+  - meaning_ko: 앞표지
+  - example_ko: 책을 표지로 판단하지 마라.
+- id: 21405 | level: N2 | [標識 / ひょうしき , 彼らはその標識を壁に取り付けた。]
+  - meaning_ko: 징후
+  - example_ko: 그들은 그 표지를 벽에 부착했다.
+- id: 21409 | level: N2 | [標準 / ひょうじゅん , 彼の仕事は標準以下だ。]
+  - meaning_ko: 기준
+  - example_ko: 그의 일은 표준 이하이다.
+- id: 21413 | level: N2 | [標本 / ひょうほん , 標本はいくつですか。]
+  - meaning_ko: 예
+  - example_ko: 표본은 얼마입니까?
+- id: 21418 | level: N2 | [評論 / ひょうろん , 彼は文学評論の本を読んでいる。]
+  - meaning_ko: 비판
+  - example_ko: 그는 문학 평론의 책을 읽고 있다.
+- id: 21423 | level: N2 | [ビルディング / ビルディング , ]
+  - meaning_ko: 건물
+- id: 21430 | level: N2 | [昼寝 / ひるね , 毎日何時間昼寝しますか。]
+  - meaning_ko: (집에서) 낮잠
+  - example_ko: 매일 몇 시간 낮잠을 자고 있습니까?
+- id: 21435 | level: N2 | [広げる / ひろげる , よい映画は人の視野を広げる。]
+  - meaning_ko: 퍼지다
+  - example_ko: 좋은 영화는 남자의 시각을 넓힌다.
+- id: 21439 | level: N2 | [広さ / ひろさ , 中国は日本の約２５倍の広さだ。]
+  - meaning_ko: 정도
+  - example_ko: 중국은 일본의 약 25배의 넓이다.
+- id: 21444 | level: N2 | [広場 / ひろば , 広場は興奮でわきたった。]
+  - meaning_ko: 큰 광장
+  - example_ko: 광장은 흥분으로 흥분했다.
+- id: 21449 | level: N2 | [広々 / ひろびろ , 人々は広々とした庭園を歩きまわった。]
+  - meaning_ko: 광범위한
+  - example_ko: 사람들은 넓은 정원을 걸어 다녔다.
+- id: 21454 | level: N2 | [ピンク / ピンク , 彼女は壁をピンクに塗った。]
+  - meaning_ko: 분홍색
+  - example_ko: 그녀는 벽을 분홍색으로 칠했다.
+- id: 21459 | level: N2 | [便箋 / びんせん , 便箋をください。]
+  - meaning_ko: 필기 용지
+  - example_ko: 편지를 주세요.
+- id: 21466 | level: N2 | [瓶詰 / びんづめ , 精液は瓶詰めにする価値はあるよ。]
+  - meaning_ko: 병입
+  - example_ko: 정액은 병에 담을 가치가 있습니다.
+- id: 21468 | level: N2 | [ファスナー / ファスナー , 彼は鞄のファスナーを開けた。]
+  - meaning_ko: 잠그는 물건
+  - example_ko: 그는 가방 지퍼를 열었다.
+- id: 21473 | level: N2 | [風船 / ふうせん , 彼女は風船に穴を空けた。]
+  - meaning_ko: 풍선
+  - example_ko: 그녀는 풍선에 구멍을 뚫었다.
+- id: 21478 | level: N2 | [不運 / ふうん , 不運にも案内者が道をまちがえた。]
+  - meaning_ko: 불길한
+  - example_ko: 불운하게도 안내자가 길을 틀렸다.
+- id: 21483 | level: N2 | [深まる / ふかまる , 謎は深まる一方だわ。]
+  - meaning_ko: 심화하다
+  - example_ko: 수수께끼는 깊어지는 한편이다.
+- id: 21490 | level: N2 | [不規則 / ふきそく , 生理が不規則です。]
+  - meaning_ko: 불규칙
+  - example_ko: 생리가 불규칙합니다.
+- id: 21494 | level: N2 | [普及 / ふきゅう , 電子商取引が急速に普及し始めた。]
+  - meaning_ko: 확산
+  - example_ko: 전자상거래가 급속히 보급되기 시작했다.
+- id: 21499 | level: N2 | [付近 / ふきん , 人々が浜辺付近で遊んでいる。]
+  - meaning_ko: 이웃
+  - example_ko: 사람들이 해변 근처에서 놀고 있다.
+- id: 21506 | level: N2 | [副～ / ふく～ , ]
+  - meaning_ko: 바이스 ~
+- id: 21509 | level: N2 | [副詞 / ふくし , 副詞は何を修飾するでしょう？]
+  - meaning_ko: 부사
+  - example_ko: 부사는 무엇을 한정할 것인가?
+- id: 21514 | level: N2 | [複写 / ふくしゃ , 複写機の紙を切らしたよ。]
+  - meaning_ko: 복사
+  - example_ko: 복사기의 종이를 잘랐어.
+- id: 21519 | level: N2 | [複数 / ふくすう , 複数のスリップ事故が発生している。]
+  - meaning_ko: 복수
+  - example_ko: 여러 슬립 사고가 발생했습니다.
+- id: 21523 | level: N2 | [ふくめる / ふくめる , ]
+  - meaning_ko: 포함하다
+- id: 21531 | level: N2 | [膨らます / ふくらます , イースト菌がパン生地を膨らます。]
+  - meaning_ko: 부풀다
+  - example_ko: 효모가 빵 반죽을 부풀립니다.
+- id: 21533 | level: N2 | [膨らむ / ふくらむ , タイヤに空気を入れれば膨らむ。]
+  - meaning_ko: 확장하다
+  - example_ko: 타이어에 공기를 넣으면 부풀린다.
+- id: 21535 | level: N2 | [不潔 / ふけつ , トムって、不潔ね。]
+  - meaning_ko: 더러운
+  - example_ko: 톰, 불결.
+- id: 21545 | level: N2 | [更ける / ふける , 夜が更けるにつれて寒くなった。]
+  - meaning_ko: 늦다
+  - example_ko: 밤이 갈수록 추워졌다.
+- id: 21549 | level: N2 | [符号 / ふごう , ]
+  - meaning_ko: 징후
+- id: 21557 | level: N2 | [夫妻 / ふさい , 夫妻は家を売りに出した。]
+  - meaning_ko: 남자와 아내
+  - example_ko: 부부는 집을 팔았다.
+- id: 21561 | level: N2 | [塞がる / ふさがる , ]
+  - meaning_ko: 꽂히다
+- id: 21567 | level: N2 | [塞ぐ / ふさぐ , ]
+  - meaning_ko: 물건을
+- id: 21572 | level: N2 | [ふざける / ふざける , ふざけるな！]
+  - meaning_ko: 뛰어다니다
+  - example_ko: 장난치지 마!
+- id: 21577 | level: N2 | [無沙汰 / ぶさた , ご無沙汰しました。]
+  - meaning_ko: 연락을 소홀히 하는 것
+  - example_ko: 죄송합니다.
+- id: 21582 | level: N2 | [武士 / ぶし , 武士は食わねど高楊枝。]
+  - meaning_ko: 전사
+  - example_ko: 사무라이는 먹지만 다양 양지.
+- id: 21587 | level: N2 | [部首 / ぶしゅ , ]
+  - meaning_ko: 급진적(한자 문자의)
+- id: 21592 | level: N2 | [蒸す / ふす , ]
+  - meaning_ko: 찌다 (음식
+- id: 21597 | level: N2 | [襖 / ふすま , ]
+  - meaning_ko: 슬라이딩 스크린
+- id: 21602 | level: N2 | [附属 / ふぞく , ]
+  - meaning_ko: 첨부된
+- id: 21607 | level: N2 | [付属 / ふぞく , カメラを付属品付きで買った。]
+  - meaning_ko: (에) 붙어 있다
+  - example_ko: 카메라를 액세서리와 함께 샀다.
+- id: 21612 | level: N2 | [蓋 / ふた , 彼の発言が舌戦の火蓋を切った。]
+  - meaning_ko: 씌우다
+  - example_ko: 그의 발언이 혀전의 불을 끊었다.
+- id: 21617 | level: N2 | [不通 / ふつう , 不通区間の開通の見込みはまだない。]
+  - meaning_ko: 보류
+  - example_ko: 불통구간의 개통 전망은 아직 없다.
+- id: 21622 | level: N2 | [物騒 / ぶっそう , デトロイトは物騒だ。]
+  - meaning_ko: 위험한
+  - example_ko: 디트로이트는 시끄럽다.
+- id: 21626 | level: N2 | [ぶつぶつ / ぶつぶつ , 彼は何かぶつぶつ言っている。]
+  - meaning_ko: 투정
+  - example_ko: 그는 무언가 부딪히고 있다.
+- id: 21632 | level: N2 | [船便 / ふなびん , 船便で出してください。]
+  - meaning_ko: 선편(선박)
+  - example_ko: 배편으로 내주세요.
+- id: 21636 | level: N2 | [部品 / ぶひん , 古い部品を新しいのと交換しなさい。]
+  - meaning_ko: 부분품
+  - example_ko: 오래된 부속을 새로운 것으로 교환하십시오.
+- id: 21641 | level: N2 | [吹雪 / ふぶき , 吹雪でえらい目に遭った。]
+  - meaning_ko: 눈보라
+  - example_ko: 눈보라로 힘들었다.
+- id: 21645 | level: N2 | [父母 / ふぼ , 私は週に２回、祖父母に会いに行く。]
+  - meaning_ko: 아버지와 어머니
+  - example_ko: 일주일에 두 번 조부모를 만나러 간다.
+- id: 21648 | level: N2 | [踏切 / ふみきり , 踏切でトラックが立ち往生してしまった。]
+  - meaning_ko: 철도 건널목
+  - example_ko: 건널목으로 트럭이 붙어 버렸다.
+- id: 21656 | level: N2 | [麓 / ふもと , 彼の家は富士山の麓にある。]
+  - meaning_ko: 발
+  - example_ko: 그의 집은 후지산 기슭에 있다.
+- id: 21660 | level: N2 | [フライパン / フライパン , 私はフライパンで野菜を炒めた。]
+  - meaning_ko: 프라이팬
+  - example_ko: 프라이팬에 야채를 볶았다.
+- id: 21664 | level: N2 | [ブラウス / ブラウス , 彼女は赤いブラウスを着た。]
+  - meaning_ko: 블라우스
+  - example_ko: 그녀는 빨간 블라우스를 입었다.
+- id: 21668 | level: N2 | [ぶらさげる / ぶらさげる , ]
+  - meaning_ko: 매달다
+- id: 21672 | level: N2 | [ブラシ / ブラシ , 彼女は髪にブラシをかけている。]
+  - meaning_ko: 브러시
+  - example_ko: 그녀는 머리카락에 브러시를 걸고 있다.
+- id: 21676 | level: N2 | [プラットホーム / プラットホーム , 私はプラットホームの端で彼にあった。]
+  - meaning_ko: 플랫폼
+  - example_ko: 나는 플래트홈의 끝에 그에게 있었다.
+- id: 21680 | level: N2 | [フリー / フリー , このページはリンクフリーです。]
+  - meaning_ko: 무료
+  - example_ko: 이 페이지는 링크 무료입니다.
+- id: 21691 | level: N2 | [振り仮名 / ふりがな , 振り仮名はどうやって付けますか？]
+  - meaning_ko: 발음 키
+  - example_ko: 흔히 가나는 어떻게 붙일까요?
+- id: 21697 | level: N2 | [振り向く / ふりむく , 彼は僕の方を振り向くとニヤリと笑った。]
+  - meaning_ko: 얼굴을 돌리다
+  - example_ko: 그는 내 쪽을 돌아보니 웃고 웃었다.
+- id: 21699 | level: N2 | [プリント / プリント , 先生は生徒たちにプリントを配布した。]
+  - meaning_ko: 인쇄
+  - example_ko: 교사는 학생들에게 인쇄물을 배포했습니다.
+- id: 21707 | level: N2 | [古～ / ふる～ , ]
+  - meaning_ko: 낡은 ~
+- id: 21712 | level: N2 | [故郷 / ふるさと , 彼女は生まれ故郷に埋葬された。]
+  - meaning_ko: 고향
+  - example_ko: 그녀는 태어난 고향에 묻혔다.
+- id: 21716 | level: N2 | [古里 / ふるさと , ]
+  - meaning_ko: 고향
+- id: 21722 | level: N2 | [振舞う / ふるまう , 彼はとても奇妙に振舞う。]
+  - meaning_ko: 행동하다
+  - example_ko: 그는 아주 이상하게 행동한다.
+- id: 21725 | level: N2 | [ブローチ / ブローチ , 彼女はブローチをつけている。]
+  - meaning_ko: 브로치
+  - example_ko: 그녀는 브로치를 붙이고 있다.
+- id: 21731 | level: N2 | [プログラム / プログラム , プログラムをいただけますか。]
+  - meaning_ko: 프로그램
+  - example_ko: 프로그램을 받을 수 있습니까?
+- id: 21737 | level: N2 | [風呂敷 / ふろしき , 彼は風呂敷を十分に活用した。]
+  - meaning_ko: 보자기
+  - example_ko: 그는 보자기를 충분히 활용했다.
+- id: 21740 | level: N2 | [ふわふわ / ふわふわ , 雲がふわふわ浮かんでいる。]
+  - meaning_ko: 빛
+  - example_ko: 구름이 푹신푹신하다.
+- id: 21745 | level: N2 | [噴火 / ふんか , 人々は噴火で大損害を受けた。]
+  - meaning_ko: 분화
+  - example_ko: 사람들은 분화로 큰 손해를 받았다.
+- id: 21748 | level: N2 | [分解 / ぶんかい , 彼は時計を分解した。]
+  - meaning_ko: 분석
+  - example_ko: 그는 시계를 분해했다.
+- id: 21753 | level: N2 | [文芸 / ぶんげい , 文芸誌に初めてエッセイが掲載されて感動した。]
+  - meaning_ko: 문학
+  - example_ko: 문예지에 처음으로 에세이가 게재돼 감동했다.
+- id: 21758 | level: N2 | [文献 / ぶんけん , 星印は重要な参照文献を示す。]
+  - meaning_ko: 문학
+  - example_ko: 별표는 중요한 참고 문헌을 나타낸다.
+- id: 21766 | level: N2 | [噴水 / ふんすい , 駅の前に噴水があります。]
+  - meaning_ko: 분수
+  - example_ko: 역 앞에 분수가 있습니다.
+- id: 21771 | level: N2 | [分数 / ぶんすう , 次の分数を小数に直しなさい。]
+  - meaning_ko: 분수 (수학)
+  - example_ko: 다음 분수를 분수로 고치십시오.
+- id: 21773 | level: N2 | [文体 / ぶんたい , その作家の文体は挿入語句が多い。]
+  - meaning_ko: 문체
+  - example_ko: 그 작가의 문체는 삽입 어구가 많다.
+- id: 21778 | level: N2 | [分布 / ぶんぷ , この種の昆虫は日本に広く分布している。]
+  - meaning_ko: 분포
+  - example_ko: 이런 종류의 곤충은 일본에 널리 분포되어 있습니다.
+- id: 21782 | level: N2 | [文房具 / ぶんぼうぐ , 私たちは文房具類を大量に買う。]
+  - meaning_ko: 문방구
+  - example_ko: 우리는 문구류를 대량으로 구입합니다.
+- id: 21790 | level: N2 | [文脈 / ぶんみゃく , それは文脈による。]
+  - meaning_ko: 문맥
+  - example_ko: 그것은 문맥에 의한다.
+- id: 21794 | level: N2 | [分量 / ぶんりょう , その作り方の分量は六人分です。]
+  - meaning_ko: 양
+  - example_ko: 그 만드는 방법의 분량은 6인분입니다.
+- id: 21798 | level: N2 | [分類 / ぶんるい , 彼は書類の分類を終えた。]
+  - meaning_ko: 분류
+  - example_ko: 그는 서류 분류를 마쳤다.
+- id: 21804 | level: N2 | [閉会 / へいかい , 閉会した。]
+  - meaning_ko: 폐쇄
+  - example_ko: 폐회했다.
+- id: 21808 | level: N2 | [平気 / へいき , 平気だよ。]
+  - meaning_ko: 시원함
+  - example_ko: 괜찮아.
+- id: 21816 | level: N2 | [並行 / へいこう , 船は岸と並行に進んだ。]
+  - meaning_ko: (가는) 나란히
+  - example_ko: 배는 해안과 병행으로 진행되었다.
+- id: 21821 | level: N2 | [平日 / へいじつ , 彼女の平日はいつも忙しい。]
+  - meaning_ko: 주일
+  - example_ko: 그녀의 평일은 항상 바쁘다.
+- id: 21826 | level: N2 | [兵隊 / へいたい , 兵隊が橋を見張っていた。]
+  - meaning_ko: 군인
+  - example_ko: 군대가 다리를 바라보고 있었다.
+- id: 21831 | level: N2 | [平凡 / へいぼん , 彼はまったく平凡な男だ。]
+  - meaning_ko: 흔한
+  - example_ko: 그는 전혀 평범한 남자다.
+- id: 21834 | level: N2 | [平野 / へいや , 私たちは山の上から平野を見下ろした。]
+  - meaning_ko: 솔직한
+  - example_ko: 우리는 산 위에서 평야를 내려다보았다.
+- id: 21841 | level: N2 | [凹む / へこむ , ]
+  - meaning_ko: 찌그러지다
+- id: 21844 | level: N2 | [へそ / へそ , コアラにはどうしておへそがないの？]
+  - meaning_ko: 배꼽
+  - example_ko: 코알라에는 왜 배꼽이 없어?
+- id: 21850 | level: N2 | [隔てる / へだてる , 海とこれを隔てるのは何ですか？]
+  - meaning_ko: 폐쇄되다
+  - example_ko: 바다와 이것을 분리하는 것은 무엇입니까?
+- id: 21855 | level: N2 | [別荘 / べっそう , 別荘は海岸にある。]
+  - meaning_ko: 별장
+  - example_ko: 별장은 해안에 있다.
+- id: 21859 | level: N2 | [別々 / べつべつ , 別々に払います。]
+  - meaning_ko: 갈라져
+  - example_ko: 별도로 지불합니다.
+- id: 21864 | level: N2 | [ベテラン / ベテラン , ベテランさんに聞いてみて。]
+  - meaning_ko: 재향 군인
+  - example_ko: 베테랑 씨에게 물어보십시오.
+- id: 21868 | level: N2 | [ヘリコプター / ヘリコプター , 彼らはヘリコプターで救出された。]
+  - meaning_ko: 헬리콥터
+  - example_ko: 그들은 헬리콥터에서 구출되었습니다.
+- id: 21872 | level: N2 | [編集 / へんしゅう , 彼女は編集の仕事にむいている。]
+  - meaning_ko: 편집
+  - example_ko: 그녀는 편집 업무에 빠져 있다.
+- id: 21878 | level: N2 | [便所 / べんじょ , 生徒はこの便所を使ってはならない。]
+  - meaning_ko: 화장실
+  - example_ko: 학생은 이 변소를 사용해서는 안 된다.
+- id: 21885 | level: N2 | [ペンチ / ペンチ , 車にペンチがあるよ。]
+  - meaning_ko: 펜치 (점등 : 핀처)
+  - example_ko: 차에 펜치가 있어.
+- id: 21888 | level: N2 | [ボーナス / ボーナス , ボーナスをもらった。]
+  - meaning_ko: 보너스
+  - example_ko: 보너스를 받았다.
+- id: 21895 | level: N2 | [防～ / ぼう～ , ]
+  - meaning_ko: ~ 예방
+- id: 21898 | level: N2 | [望遠鏡 / ぼうえんきょう , 望遠鏡のピントをあわせた。]
+  - meaning_ko: 망원경
+  - example_ko: 망원경의 초점을 맞췄다.
+- id: 21903 | level: N2 | [方角 / ほうがく , セントラルパークはどの方角でしょうか？]
+  - meaning_ko: 방향
+  - example_ko: 센트럴 파크는 어떤 방각입니까?
+- id: 21908 | level: N2 | [箒 / ほうき , 掃除の時間はいつも新品の箒の取り合いになる。]
+  - meaning_ko: 비
+  - example_ko: 청소 시간은 언제나 신품의 빗자루의 대처가 된다.
+- id: 21909 | level: N2 | [方言 / ほうげん , 大阪の方言は聞き取り難い。]
+  - meaning_ko: 방언
+  - example_ko: 오사카의 방언은 듣기 어렵다.
+- id: 21917 | level: N2 | [坊さん / ぼうさん , あの偉い坊さんを見ろよ。]
+  - meaning_ko: 불교 승려
+  - example_ko: 그 위대한 보를 보라.
+- id: 21922 | level: N2 | [防止 / ぼうし , 彼は、動物虐待防止会に入っています。]
+  - meaning_ko: 방지
+  - example_ko: 그는 동물 학대 방지회에 참석합니다.
+- id: 21927 | level: N2 | [方針 / ほうしん , 彼らは新方針を採用した。]
+  - meaning_ko: 목적
+  - example_ko: 그들은 새로운 정책을 채택했다.
+- id: 21932 | level: N2 | [包装 / ほうそう , 包装は腐敗を減らす。]
+  - meaning_ko: 포장
+  - example_ko: 포장은 썩음을 감소시킨다.
+- id: 21937 | level: N2 | [法則 / ほうそく , 自然の法則には逆らえない。]
+  - meaning_ko: 법
+  - example_ko: 자연의 법칙에는 반대할 수 없다.
+- id: 21942 | level: N2 | [包帯 / ほうたい , 包帯をしなさい。]
+  - meaning_ko: 붕대
+  - example_ko: 붕대를 만드십시오.
+- id: 21947 | level: N2 | [膨大 / ぼうだい , 叔父は膨大な財産を所持している。]
+  - meaning_ko: 막대한
+  - example_ko: 삼촌은 방대한 재산을 소지하고 있다.
+- id: 21952 | level: N2 | [包丁 / ほうちょう , 包丁で指を切りました。]
+  - meaning_ko: 부엌칼
+  - example_ko: 부엌칼로 손가락을 자른다.
+- id: 21957 | level: N2 | [方程式 / ほうていしき , 以下の方程式の解を求めよ。]
+  - meaning_ko: 방정식
+  - example_ko: 다음 방정식의 해를 구하라.
+- id: 21966 | level: N2 | [防犯 / ぼうはん , 防犯カメラの映像をよく見たら人がいた。]
+  - meaning_ko: 범죄 예방
+  - example_ko: 방범 카메라의 영상을 잘 보면 사람이 있었다.
+- id: 21969 | level: N2 | [方面 / ほうめん , ２５号線北方面の入り口付近にいます。]
+  - meaning_ko: 방향
+  - example_ko: 25호선 북방면의 입구 부근에 있습니다.
+- id: 21974 | level: N2 | [坊や / ぼうや , 坊や、おかあさんは何処だい？]
+  - meaning_ko: 소년
+  - example_ko: Boya, 할머니는 어디입니까?
+- id: 21980 | level: N2 | [放る / ほうる , いい球を放るようになったな、恵一君。]
+  - meaning_ko: 놓아주다
+  - example_ko: 좋은 공을 떠나게 되었구나, 에이치군.
+- id: 21982 | level: N2 | [朗らか / ほがらか , 彼はいつも朗らかだ。]
+  - meaning_ko: 밝은
+  - example_ko: 그는 언제나 희미하다.
+- id: 21990 | level: N2 | [朗らか(な) / ほがらか(な) , ]
+  - meaning_ko: 쾌활한
+- id: 21997 | level: N2 | [牧場 / ぼくじょう , 牧場には羊がたくさんいる。]
+  - meaning_ko: 농장 (가축)
+  - example_ko: 목장에는 양이 많이 있다.
+- id: 21999 | level: N2 | [牧畜 / ぼくちく , ]
+  - meaning_ko: 목축업
+- id: 22007 | level: N2 | [保健 / ほけん , 保健室のドアを開けた。]
+  - meaning_ko: 건강 보존
+  - example_ko: 보건실 문을 열었다.
+- id: 22009 | level: N2 | [募集 / ぼしゅう , その会の会員募集に応募した。]
+  - meaning_ko: 신병 모집
+  - example_ko: 그 모임의 회원 모집에 응모했다.
+- id: 22015 | level: N2 | [干す / ほす , コップ一杯の水を飲み干す。]
+  - meaning_ko: 방송하다
+  - example_ko: 컵 한 잔의 물을 마신다.
+- id: 22019 | level: N2 | [ポスター / ポスター , ポスターは即刻壁から撤去された。]
+  - meaning_ko: 포스터
+  - example_ko: 포스터는 즉시 벽에서 철거되었습니다.
+- id: 22024 | level: N2 | [北極 / ほっきょく , 北極圏とは北極周辺の地域の事である。]
+  - meaning_ko: 북극
+  - example_ko: 북극권이란 북극 주변 지역의 일이다.
+- id: 22032 | level: N2 | [坊っちゃん / ぼっちゃん , ]
+  - meaning_ko: (다른 사람의) 아들
+- id: 22036 | level: N2 | [解く / ほどく , 彼女は容易に問題を解くことができた。]
+  - meaning_ko: 풀다
+  - example_ko: 그녀는 쉽게 문제를 풀 수 있었다.
+- id: 22041 | level: N2 | [掘る / ほる , アナグマは深い穴を掘る。]
+  - meaning_ko: 파다
+  - example_ko: 오소리는 깊은 구멍을 파다.
+- id: 22046 | level: N2 | [彫る / ほる , 「これ何？」「これは木を彫る道具で『彫刻刀』っていうんだよ」]
+  - meaning_ko: 조각하다
+  - example_ko: 「이게 뭐야?」 「이것은 나무를 조각하는 도구로 『조각도』라고 말해」
+- id: 22051 | level: N2 | [ぼろ / ぼろ , 上着を着古してぼろぼろにする。]
+  - meaning_ko: 조각
+  - example_ko: 겉옷을 착용하고 초라하게 만든다.
+- id: 22057 | level: N2 | [盆 / ぼん , 諺に、覆水盆に返らずと言う。]
+  - meaning_ko: 망자의 축제
+  - example_ko: 속담에, 복수분에 돌아오지 말라고 한다.
+- id: 22062 | level: N2 | [盆地 / ぼんち , この地方は盆地になっている。]
+  - meaning_ko: 분지(예:
+  - example_ko: 이 지방은 분지가 되어 있다.
+- id: 22066 | level: N2 | [ほんの～ / ほんの～ , ]
+  - meaning_ko: 호수
+- id: 22070 | level: N2 | [本部 / ほんぶ , このプレハブ小屋が本部なの？]
+  - meaning_ko: 본부
+  - example_ko: 이 조립식 오두막이 본부인가?
+- id: 22074 | level: N2 | [本来 / ほんらい , 恋は本来盲目である。]
+  - meaning_ko: 본질적으로
+  - example_ko: 사랑은 본래 맹목이다.
+- id: 22080 | level: N2 | [まあまあ / まあまあ , カレーはまあまあでした。]
+  - meaning_ko: 좋아요
+  - example_ko: 카레는 글쎄요.
+- id: 22083 | level: N2 | [毎～ / まい～ , ]
+  - meaning_ko: ~마다
+- id: 22092 | level: N2 | [枚数 / まいすう , コピーの枚数を数えてください。]
+  - meaning_ko: 평평한 것의 수
+  - example_ko: 복사 매수를 세십시오.
+- id: 22097 | level: N2 | [毎度 / まいど , 毎度、またいらっしゃい。]
+  - meaning_ko: 매번
+  - example_ko: 매번 다시 오세요.
+- id: 22102 | level: N2 | [まく / まく , 病は気からとはうまく言ったものですね。]
+  - meaning_ko: 바람을 피우다
+  - example_ko: 병은 신경 쓰지 않는다고 말했다.
+- id: 22105 | level: N2 | [枕 / まくら , 枕を下さい。]
+  - meaning_ko: 베개
+  - example_ko: 베개를 주십시오.
+- id: 22111 | level: N2 | [曲げる / まげる , 突き指しちゃったみたい。指を曲げると痛いもの。]
+  - meaning_ko: 구부리다
+  - example_ko: 찌르기 버린 것 같다. 손가락을 구부리면 아픈 것.
+- id: 22114 | level: N2 | [まごまご / まごまご , ]
+  - meaning_ko: 혼란스러운
+- id: 22118 | level: N2 | [摩擦 / まさつ , 摩擦でマッチに火がつくようになる。]
+  - meaning_ko: 마찰
+  - example_ko: 마찰로 매치에 불이 붙게 된다.
+- id: 22122 | level: N2 | [まざる / まざる , 大雨のため、私たちはそこにとどまざるを得なかった。]
+  - meaning_ko: 섞이다
+  - example_ko: 폭우 때문에 우리는 거기에 머무를 수 없었다.
+- id: 22130 | level: N2 | [まじる / まじる , ]
+  - meaning_ko: 섞이다
+- id: 22135 | level: N2 | [マスク / マスク , マスクをつけると眼鏡が曇る。]
+  - meaning_ko: 마스크
+  - example_ko: 마스크를 붙이면 안경이 흐린다.
+- id: 22139 | level: N2 | [まぜる / まぜる , ]
+  - meaning_ko: 섞다
+- id: 22147 | level: N2 | [またぐ / またぐ , ]
+  - meaning_ko: 걸터앉다
+- id: 22152 | level: N2 | [跨ぐ / またぐ , ]
+  - meaning_ko: 건너다/건너가다
+- id: 22155 | level: N2 | [待合室 / まちあいしつ , 彼は待合室を見回した。]
+  - meaning_ko: 대기실
+  - example_ko: 그는 대기실을 둘러봤다.
+- id: 22162 | level: N2 | [待ち合わせる / まちあわせる , ]
+  - meaning_ko: 집결하다
+- id: 22167 | level: N2 | [街角 / まちかど , 街角のパン屋にアップルタルトはありますか？]
+  - meaning_ko: 길모퉁이
+  - example_ko: 거리의 빵집에 사과 타르트가 있습니까?
+- id: 22172 | level: N2 | [真っ暗 / まっくら , 外は真っ暗だ。]
+  - meaning_ko: 완전한 어둠
+  - example_ko: 밖은 어둡다.
+- id: 22177 | level: N2 | [真っ黒 / まっくろ , 魚が真っ黒に焦げた。]
+  - meaning_ko: 칠흑같이 어두운
+  - example_ko: 물고기가 새까맣게 태웠다.
+- id: 22181 | level: N2 | [真っ青 / まっさお , 彼の顔は真っ青になった。]
+  - meaning_ko: 진한 파란색
+  - example_ko: 그의 얼굴은 푸른색이 되었다.
+- id: 22185 | level: N2 | [真っ先 / まっさき , 私は真っ先に母にそれを告げた。]
+  - meaning_ko: 맨 먼저
+  - example_ko: 나는 맨처음에 어머니에게 말했다.
+- id: 22187 | level: N2 | [真っ白 / まっしろ , 真っ白です。]
+  - meaning_ko: 순백의
+  - example_ko: 새하얗다.
+- id: 22196 | level: N2 | [祭る / まつる , 九頭竜明神を祭るために灯篭をながす。]
+  - meaning_ko: 신격화하다
+  - example_ko: 구두 용명신을 축제하기 위해 등편을 이룬다.
+- id: 22200 | level: N2 | [窓口 / まどぐち , 初診の受付は一番窓口です。]
+  - meaning_ko: (티켓) 창구
+  - example_ko: 초진의 접수는 제일 창구입니다.
+- id: 22205 | level: N2 | [真似る / まねる , 子どもは両親の習慣を真似るものだ。]
+  - meaning_ko: 흉내내다
+  - example_ko: 아이는 부모의 습관을 모방하는 것이다.
+- id: 22210 | level: N2 | [まぶた / まぶた , まぶたが熱を持っています。]
+  - meaning_ko: 눈꺼풀
+  - example_ko: 눈꺼풀에는 열이 있습니다.
+- id: 22217 | level: N2 | [マフラー / マフラー , 五次元のマフラーはよい音がする。]
+  - meaning_ko: 겨울 스카프
+  - example_ko: 5차원 머플러는 좋은 소리가 난다.
+- id: 22220 | level: N2 | [間も無く / まもなく , ]
+  - meaning_ko: 곧
+- id: 22223 | level: N2 | [間もなく / まもなく , 彼は間もなくよくなった。]
+  - meaning_ko: 곧
+  - example_ko: 그는 곧 나아졌습니다.
+- id: 22226 | level: N2 | [マラソン / マラソン , 日曜日に福岡マラソンが行われた。]
+  - meaning_ko: 마라톤
+  - example_ko: 일요일에 후쿠오카 마라톤이 열렸다.
+- id: 22231 | level: N2 | [稀 / まれ , それはとても稀少ね。]
+  - meaning_ko: 희귀한
+  - example_ko: 아주 드물다.
+- id: 22236 | level: N2 | [回り道 / まわりみち , 彼らはぐるっと回り道をしてやってきた。]
+  - meaning_ko: 우회
+  - example_ko: 그들은 빙글빙글 돌아다니며 길을 왔다.
+- id: 22244 | level: N2 | [満員 / まんいん , バスは満員だった。]
+  - meaning_ko: 풀 하우스
+  - example_ko: 버스는 만원이었다.
+- id: 22248 | level: N2 | [マンション / マンション , 本当のマンションではありません。]
+  - meaning_ko: 다층 아파트
+  - example_ko: 진짜 아파트가 아닙니다.
+- id: 22254 | level: N2 | [満点 / まんてん , 彼は満点を取った。]
+  - meaning_ko: 만점
+  - example_ko: 그는 만점을 취했다.
+- id: 22259 | level: N2 | [未～ / み～ , ]
+  - meaning_ko: 아직은 아니야~
+- id: 22266 | level: N2 | [見上げる / みあげる , 大空を見上げる。]
+  - meaning_ko: 올려다보다
+  - example_ko: 하늘을 바라본다.
+- id: 22268 | level: N2 | [見送る / みおくる , 彼らを見送る必要は無い。]
+  - meaning_ko: 배웅하다
+  - example_ko: 그들을 보낼 필요는 없다.
+- id: 22271 | level: N2 | [見下ろす / みおろす , 港を見下ろす墓に墓碑を立てた。]
+  - meaning_ko: 간과하다
+  - example_ko: 항구를 내려다보는 무덤에 묘비를 세웠다.
+- id: 22276 | level: N2 | [見掛け / みかけ , 人は見掛けによらぬもの。]
+  - meaning_ko: 외관
+  - example_ko: 사람은 외관에 의지하지 않는 것.
+- id: 22279 | level: N2 | [三日月 / みかづき , 足で三日月を踏んでいる。]
+  - meaning_ko: 초승달
+  - example_ko: 발로 초승달을 밟고 있다.
+- id: 22285 | level: N2 | [岬 / みさき , その船は岬を回った。]
+  - meaning_ko: 곶(해안)
+  - example_ko: 그 배는 곶을 돌았다.
+- id: 22290 | level: N2 | [みじめ / みじめ , 私はみじめで不幸だった。]
+  - meaning_ko: 슬픈
+  - example_ko: 나는 낯설고 불행했다.
+- id: 22293 | level: N2 | [惨めな / みじめな , 彼らは惨めな犯人に同情した。]
+  - meaning_ko: 비참한
+  - example_ko: 그들은 비참한 범인에 동정했다.
+- id: 22298 | level: N2 | [ミシン / ミシン , 母がミシンをくれた。]
+  - meaning_ko: 미싱
+  - example_ko: 어머니가 재봉틀을 주었다.
+- id: 22309 | level: N2 | [自ら / みずから , 神は自らにかたどって人を創造された。]
+  - meaning_ko: 자기 자신을 위해서
+  - example_ko: 하나님은 스스로를 따라 사람을 창조하셨다.
+- id: 22315 | level: N2 | [水着 / みずぎ , 彼女の水着は目に付く。]
+  - meaning_ko: 수영복 (여성용)
+  - example_ko: 그녀의 수영복은 눈에 띈다.
+- id: 22317 | level: N2 | [店屋 / みせや , ]
+  - meaning_ko: 가게
+- id: 22321 | level: N2 | [見出し / みだし , 世界はまだ平和を見出していない。]
+  - meaning_ko: 표제
+  - example_ko: 세계는 아직 평화를 찾지 못했다.
+- id: 22324 | level: N2 | [道順 / みちじゅん , 道順はご存知ですか。]
+  - meaning_ko: 여정
+  - example_ko: 길은 알고 계십니까?
+- id: 22328 | level: N2 | [みっともない / みっともない , 恥を知れ、みっともない。]
+  - meaning_ko: 부끄러운
+  - example_ko: 부끄러움을 알고, 확실히 없다.
+- id: 22337 | level: N2 | [見詰める / みつめる , ]
+  - meaning_ko: 응시하다
+- id: 22344 | level: N2 | [見直す / みなおす , レポートを見直す時間がなかった。]
+  - meaning_ko: 다시 살펴보려고
+  - example_ko: 보고서를 검토할 시간이 없었습니다.
+- id: 22351 | level: N2 | [見慣れる / みなれる , ]
+  - meaning_ko: 보는 것에 익숙해지기 위해
+- id: 22356 | level: N2 | [醜い / みにくい , 彼女は醜いドレスを着ていました。]
+  - meaning_ko: 못생긴
+  - example_ko: 그녀는 추악한 드레스를 입고 있었다.
+- id: 22360 | level: N2 | [実る / みのる , 実るほど頭の下がる稲穂かな。]
+  - meaning_ko: 열매를 맺다
+  - example_ko: 과연 머리가 내리는 벼 이구나.
+- id: 22363 | level: N2 | [身分 / みぶん , 身分相応に暮らせ。]
+  - meaning_ko: 위치
+  - example_ko: 신분에 어울리세요.
+- id: 22368 | level: N2 | [見本 / みほん , 彼は登山家の良い見本だ。]
+  - meaning_ko: 견본
+  - example_ko: 그는 등산가의 좋은 견본이다.
+- id: 22375 | level: N2 | [見舞う / みまう , 彼らは私を見舞うためにその病院に来てくれた。]
+  - meaning_ko: (건강을) 묻다
+  - example_ko: 그들은 나를 응시하기 위해 그 병원에 왔다.
+- id: 22378 | level: N2 | [未満 / みまん , 三歳未満の子供は入場無料です。]
+  - meaning_ko: 미만
+  - example_ko: 3세 미만의 어린이는 무료 입장이 가능합니다.
+- id: 22382 | level: N2 | [名字 / みょうじ , 渡辺が名字です。]
+  - meaning_ko: 성
+  - example_ko: 와타나베가 이름입니다.
+- id: 22389 | level: N2 | [ミリ (メートル) / ミリ (メートル) , ]
+  - meaning_ko: 밀리
+- id: 22395 | level: N2 | [診る / みる , ]
+  - meaning_ko: (의학적으로) 검사하다
+- id: 22399 | level: N2 | [民間 / みんかん , 今度の税金は全ての民間企業に適用される。]
+  - meaning_ko: 사적인
+  - example_ko: 이번 세금은 모든 민간기업에 적용된다.
+- id: 22404 | level: N2 | [民主～ / みんしゅ～ , ]
+  - meaning_ko: 민주적인
+- id: 22409 | level: N2 | [民謡 / みんよう , 兄が民謡に興味を抱き始めたのは十二歳ごろだった。]
+  - meaning_ko: 민요
+  - example_ko: 형이 민요에 흥미를 안기 시작한 것은 12세쯤이었다.
+- id: 22413 | level: N2 | [無限 / むげん , だが宇宙は無限だ。]
+  - meaning_ko: 무한
+  - example_ko: 하지만 우주는 무한하다.
+- id: 22418 | level: N2 | [無地 / むじ , 無地の白い紙で十分です。]
+  - meaning_ko: 솔직한
+  - example_ko: 평범한 흰 종이로 충분합니다.
+- id: 22423 | level: N2 | [蒸し暑い / むしあつい , 日本の夏は蒸し暑い。]
+  - meaning_ko: 습한
+  - example_ko: 일본의 여름은 덥다.
+- id: 22429 | level: N2 | [矛盾 / むじゅん , 彼は矛盾している。]
+  - meaning_ko: 모순
+  - example_ko: 그는 모순된다.
+- id: 22436 | level: N2 | [無数 / むすう , 目に見える星の数は無数です。]
+  - meaning_ko: 셀 수 없이 많은
+  - example_ko: 눈에 보이는 별의 수는 무수합니다.
+- id: 22440 | level: N2 | [紫 / むらさき , 赤と青を混ぜると紫になる。]
+  - meaning_ko: 자줏빛
+  - example_ko: 빨강과 파랑을 섞으면 보라색이 된다.
+- id: 22444 | level: N2 | [群れ / むれ , 森で羊の群れを見ました。]
+  - meaning_ko: 군중
+  - example_ko: 숲에서 양의 무리를 보았습니다.
+- id: 22449 | level: N2 | [姪 / めい , 姪とは兄弟の娘を言う。]
+  - meaning_ko: 조카
+  - example_ko: 조카는 형제의 딸을 말한다.
+- id: 22456 | level: N2 | [名～ / めい～ , ]
+  - meaning_ko: 유명한 ~
+- id: 22461 | level: N2 | [名作 / めいさく , 名作はいつ観ても味わいがある。]
+  - meaning_ko: 걸작
+  - example_ko: 명작은 언제 봐도 맛이 있다.
+- id: 22466 | level: N2 | [名詞 / めいし , 「クレオパトラ」は美人の代名詞になっている。]
+  - meaning_ko: 명사
+  - example_ko: 「클레오파트라」는 미인의 대명사가 되고 있다.
+- id: 22469 | level: N2 | [名刺 / めいし , 彼は名刺を出した。]
+  - meaning_ko: 명함
+  - example_ko: 그는 명함을 냈다.
+- id: 22475 | level: N2 | [名所 / めいしょ , 名所見物をしている。]
+  - meaning_ko: 유명한 곳
+  - example_ko: 명소 구경을 하고 있다.
+- id: 22478 | level: N2 | [迷信 / めいしん , 私は愚かな迷信など信じない。]
+  - meaning_ko: 미신
+  - example_ko: 나는 어리석은 미신 등 믿지 않는다.
+- id: 22483 | level: N2 | [命ずる / めいずる , ]
+  - meaning_ko: 명령하다
+- id: 22490 | level: N2 | [名物 / めいぶつ , この店の名物料理はありますか。]
+  - meaning_ko: 유명한 제품
+  - example_ko: 이 가게의 명물 요리가 있습니까?
+- id: 22494 | level: N2 | [銘々 / めいめい , ]
+  - meaning_ko: 각
+- id: 22500 | level: N2 | [恵まれる / めぐまれる , ]
+  - meaning_ko: 축복을 받다
+- id: 22506 | level: N2 | [巡る / めぐる , お城を巡るのが趣味です。]
+  - meaning_ko: 돌아다니다
+  - example_ko: 성을 둘러싼 것이 취미입니다.
+- id: 22511 | level: N2 | [目指す / めざす , ネットで懸案の解決を目指す。]
+  - meaning_ko: 목표로하다
+  - example_ko: 인터넷으로 현안의 해결을 목표로 한다.
+- id: 22517 | level: N2 | [目覚し / めざまし , 目覚しは５時３０分に鳴った。]
+  - meaning_ko: 알람시계
+  - example_ko: 알람은 5시 30분에 울렸다.
+- id: 22521 | level: N2 | [目下 / めした , 目下彼はカナダにいる。]
+  - meaning_ko: 현재
+  - example_ko: 현재 그는 캐나다에 있습니다.
+- id: 22526 | level: N2 | [目印 / めじるし , 何か目印がありますか。]
+  - meaning_ko: 표시
+  - example_ko: 뭔가 표시가 있습니까?
+- id: 22531 | level: N2 | [目立つ / めだつ , 林に竹が目立つ。]
+  - meaning_ko: 눈에 띄다
+  - example_ko: 숲에 대나무가 눈에 띈다.
+- id: 22534 | level: N2 | [めちゃくちゃ / めちゃくちゃ , 髪がめちゃくちゃ！！]
+  - meaning_ko: 터무니없는
+  - example_ko: 머리카락이 엉망! !
+- id: 22539 | level: N2 | [めっきり / めっきり , めっきり寒くなった。]
+  - meaning_ko: 놀랍게도
+  - example_ko: 도금 추워졌다.
+- id: 22544 | level: N2 | [めでたい / めでたい , めでたい事じゃ。]
+  - meaning_ko: 행복하다
+  - example_ko: 눈에 띄는 일이야.
+- id: 22548 | level: N2 | [メニュー / メニュー , メニューを見せて下さい。]
+  - meaning_ko: 메뉴
+  - example_ko: 메뉴를 보여주세요.
+- id: 22553 | level: N2 | [めまい / めまい , 私は空腹でめまいがした。]
+  - meaning_ko: 현기증
+  - example_ko: 배고프고 어지러웠다.
+- id: 22557 | level: N2 | [目安 / めやす , ]
+  - meaning_ko: 표준
+- id: 22562 | level: N2 | [免税 / めんぜい , これらの品物は免税品だ。]
+  - meaning_ko: 면세
+  - example_ko: 이들 물건은 면세품이다.
+- id: 22566 | level: N2 | [面積 / めんせき , 三角形の面積を求めてくれ。]
+  - meaning_ko: 영역
+  - example_ko: 삼각형의 면적을 찾아주세요.
+- id: 22570 | level: N2 | [面接 / めんせつ , 来週面接においでいただけますか。]
+  - meaning_ko: 회견
+  - example_ko: 다음 주 인터뷰에 드세요?
+- id: 22575 | level: N2 | [面倒臭い / めんどうくさい , 面倒臭いよ。]
+  - meaning_ko: 귀찮게 하다
+  - example_ko: 귀찮아.
+- id: 22580 | level: N2 | [モーター / モーター , モーターは動き出した。]
+  - meaning_ko: 모터
+  - example_ko: 모터는 움직였다.
+- id: 22588 | level: N2 | [儲かる / もうかる , 弁護士は儲かる。]
+  - meaning_ko: 수익성이 있다
+  - example_ko: 변호사는 벌어진다.
+- id: 22594 | level: N2 | [儲ける / もうける , たんまり千ドル儲ける。]
+  - meaning_ko: 벌다
+  - example_ko: 단지 천 달러를 벌 수 있다.
+- id: 22597 | level: N2 | [申し訳ない / もうしわけない , 遅れて申し訳ない。]
+  - meaning_ko: 변명할 수 없는
+  - example_ko: 늦어서 죄송합니다.
+- id: 22603 | level: N2 | [木材 / もくざい , 紙は木材からできている。]
+  - meaning_ko: 재목
+  - example_ko: 종이는 목재로 만든다.
+- id: 22607 | level: N2 | [目次 / もくじ , 皆さんは目次を見てください。]
+  - meaning_ko: 목차
+  - example_ko: 여러분은 목차를 보십시오.
+- id: 22615 | level: N2 | [潜る / もぐる , 深く潜れば潜るほど、水は冷たくなる。]
+  - meaning_ko: 다이빙하다
+  - example_ko: 깊게 잠수할수록 물은 차갑게 된다.
+- id: 22619 | level: N2 | [もしかしたら / もしかしたら , もしかしたら彼は気が変わるかもしれない。]
+  - meaning_ko: 아마도
+  - example_ko: 어쩌면 그는 마음이 바뀔지도 모른다.
+- id: 22626 | level: N2 | [もたれる / もたれる , 壁にもたれるな。]
+  - meaning_ko: 기대다
+  - example_ko: 벽에 기대지 마.
+- id: 22630 | level: N2 | [凭れる / もたれる , ]
+  - meaning_ko: 기대다
+- id: 22635 | level: N2 | [モダン / モダン , 私はモダンな家具が好きだ。]
+  - meaning_ko: 현대의
+  - example_ko: 나는 현대적인 가구를 좋아한다.
+- id: 22641 | level: N2 | [餅 / もち , 餅は餅屋。]
+  - meaning_ko: 찹쌀떡
+  - example_ko: 떡은 떡집.
+- id: 22647 | level: N2 | [モデル / モデル , 彼女はモデルだったそうだ。]
+  - meaning_ko: 패션 모델
+  - example_ko: 그녀는 모델이었다고 한다.
+- id: 22651 | level: N2 | [元々 / もともと , 駄目で元々だよ。]
+  - meaning_ko: 원래
+  - example_ko: 안돼 원래야.
+- id: 22656 | level: N2 | [物置 / ものおき , この部屋は物置として使っている。]
+  - meaning_ko: 저장실
+  - example_ko: 이 방은 방치로 사용하고 있다.
+- id: 22659 | level: N2 | [物語る / ものがたる , 統計はすべてを物語るとは限らない。]
+  - meaning_ko: 말하다
+  - example_ko: 통계는 모든 것을 이야기하는 것은 아니다.
+- id: 22667 | level: N2 | [物差し / ものさし , 物差しを使って線を引きなさい。]
+  - meaning_ko: 자
+  - example_ko: 주전자로 선을 그립니다.
+- id: 22672 | level: N2 | [物凄い / ものすごい , ]
+  - meaning_ko: 지독한
+- id: 22675 | level: N2 | [モノレール / モノレール , ]
+  - meaning_ko: 모노레일
+- id: 22683 | level: N2 | [揉む / もむ , お父さん、肩揉むよ。]
+  - meaning_ko: 문지르다
+  - example_ko: 아빠, 어깨 비비.
+- id: 22691 | level: N2 | [もやす / もやす , どの仕事もやすやすとはできない。]
+  - meaning_ko: 태우다
+  - example_ko: 어떤 직업도 쉽게 할 수 없다.
+- id: 22696 | level: N2 | [催し / もよおし , 悲しい物語に涙を催した。]
+  - meaning_ko: 이벤트
+  - example_ko: 슬픈 이야기에 눈물을 주었다.
+- id: 22702 | level: N2 | [盛る / もる , あいつ、すぐ話を盛るからな。]
+  - meaning_ko: (음식을) 서빙하다
+  - example_ko: 그 녀석, 곧 이야기를 담기 때문에.
+- id: 22706 | level: N2 | [問答 / もんどう , 何問答えた？]
+  - meaning_ko: 질문과 답변
+  - example_ko: 무엇 질문 대답?
+- id: 22712 | level: N2 | [やかましい / やかましい , 彼は食べ物にとてもやかましい。]
+  - meaning_ko: 까다롭다
+  - example_ko: 그는 음식에 매우 번거롭다.
+- id: 22715 | level: N2 | [喧しい / やかましい , ]
+  - meaning_ko: 시끄러운
+- id: 22720 | level: N2 | [夜間 / やかん , 夜間の割引はありますか。]
+  - meaning_ko: 밤에
+  - example_ko: 야간 할인이 있나요?
+- id: 22726 | level: N2 | [やかん / やかん , 彼女はガスにやかんをかけた。]
+  - meaning_ko: 주전자
+  - example_ko: 그녀는 가스에 주전자를 뿌렸다.
+- id: 22733 | level: N2 | [役者 / やくしゃ , 彼は役者中の役者だ。]
+  - meaning_ko: 배우
+  - example_ko: 그는 배우 중 배우이다.
+- id: 22737 | level: N2 | [役所 / やくしょ , 市役所は市の中心にある。]
+  - meaning_ko: 관공서
+  - example_ko: 시청은 시의 중심에 있다.
+- id: 22746 | level: N2 | [役人 / やくにん , 役人への袖の下だよ。]
+  - meaning_ko: 정부 관계자
+  - example_ko: 공무원에게는 비밀입니다.
+- id: 22750 | level: N2 | [薬品 / やくひん , この化学薬品は細菌の繁殖を防ぐだろう。]
+  - meaning_ko: 약)
+  - example_ko: 이 화학제품은 박테리아의 번식을 막을 것이다.
+- id: 22755 | level: N2 | [役目 / やくめ , 彼はその役目を引き受けましたか。]
+  - meaning_ko: 의무
+  - example_ko: 그는 그 역할을 맡았는가?
+- id: 22760 | level: N2 | [火傷 / やけど , 私は指先を火傷した。]
+  - meaning_ko: 불타다
+  - example_ko: 나는 손가락 끝을 화상했다.
+- id: 22767 | level: N2 | [夜行 / やこう , 猫は夜行性の動物だ。]
+  - meaning_ko: 야간 열차
+  - example_ko: 고양이는 야행성 동물이다.
+- id: 22772 | level: N2 | [矢印 / やじるし , 矢印は東京へ行く道を示す。]
+  - meaning_ko: 지시 화살
+  - example_ko: 화살표는 도쿄로 가는 길을 나타낸다.
+- id: 22777 | level: N2 | [やたらに / やたらに , 上役にやたらにぺこぺこするな。]
+  - meaning_ko: 무작위로
+  - example_ko: 상역에 어쩔 수 없어.
+- id: 22782 | level: N2 | [薬局 / やっきょく , 薬局は何時まで開いていますか。]
+  - meaning_ko: 약국
+  - example_ko: 약국은 몇시까지 열려 있습니까?
+- id: 22787 | level: N2 | [やっつける / やっつける , 今日こそ、溜まった家事をやっつけるぞ。]
+  - meaning_ko: (적을) 공격하다
+  - example_ko: 오늘이야말로 모인 가사를 붙잡을거야.
+- id: 22790 | level: N2 | [やっぱり / やっぱり , 冬はやっぱり雪がないとね。]
+  - meaning_ko: 결국
+  - example_ko: 겨울은 역시 눈이 없으면.
+- id: 22794 | level: N2 | [家主 / やぬし , 家主は肩と腕に銃撃を受けた。]
+  - meaning_ko: 주인
+  - example_ko: 집주인은 어깨와 팔에 총격을 받았다.
+- id: 22802 | level: N2 | [破く / やぶく , ]
+  - meaning_ko: 찢다
+- id: 22807 | level: N2 | [やむをえない / やむをえない , ]
+  - meaning_ko: 어쩔 수 없다
+- id: 22812 | level: N2 | [軟らかい / やわらかい , ]
+  - meaning_ko: 부드러운
+- id: 22816 | level: N2 | [遊園地 / ゆうえんち , 昨日遊園地でばったり先生に会ったよ。]
+  - meaning_ko: 유원지
+  - example_ko: 어제 놀이 공원에서 바르고 선생님을 만났어.
+- id: 22822 | level: N2 | [夕刊 / ゆうかん , 父は夕刊を読んで座っていた。]
+  - meaning_ko: 저녁 신문
+  - example_ko: 아버지는 석간을 읽고 앉아 있었다.
+- id: 22825 | level: N2 | [友好 / ゆうこう , 両国は友好関係を打ち切った。]
+  - meaning_ko: 우정
+  - example_ko: 양국은 우호관계를 끊었다.
+- id: 22830 | level: N2 | [郵送 / ゆうそう , 私はその本を郵送します。]
+  - meaning_ko: 우편물
+  - example_ko: 나는 그 책을 우송한다.
+- id: 22837 | level: N2 | [夕立 / ゆうだち , 夕立に遭いました。]
+  - meaning_ko: (갑자기) 저녁 소나기 (비)
+  - example_ko: 황혼을 당했습니다.
+- id: 22842 | level: N2 | [夕日 / ゆうひ , きれいな夕日だね。]
+  - meaning_ko: (에) 저녁 태양
+  - example_ko: 깨끗한 일몰입니다.
+- id: 22845 | level: N2 | [悠々 / ゆうゆう , 俺の師匠は悠々自適の生活をしている。]
+  - meaning_ko: 조용한
+  - example_ko: 나의 스승은 유유히 적당한 생활을 하고 있다.
+- id: 22852 | level: N2 | [有料 / ゆうりょう , 配達は有料ですか。]
+  - meaning_ko: 입장료 지불
+  - example_ko: 배송은 유료입니까?
+- id: 22857 | level: N2 | [浴衣 / ゆかた , この浴衣欲しいな。]
+  - meaning_ko: 목욕 가운
+  - example_ko: 이 유카타를 원해.
+- id: 22862 | level: N2 | [行方 / ゆくえ , 杳として行方が知れない。]
+  - meaning_ko: 자신의 행방
+  - example_ko: 杳로서 행방이 모른다.
+- id: 22867 | level: N2 | [湯気 / ゆげ , 薬缶から湯気が立っている。]
+  - meaning_ko: 증기
+  - example_ko: 약 캔에서 김이 서 있다.
+- id: 22871 | level: N2 | [輸血 / ゆけつ , 輸血が必要です。]
+  - meaning_ko: 수혈
+  - example_ko: 수혈이 필요합니다.
+- id: 22874 | level: N2 | [輸送 / ゆそう , 商品は船で輸送された。]
+  - meaning_ko: 수송
+  - example_ko: 상품은 배로 수송되었다.
+- id: 22882 | level: N2 | [油断 / ゆだん , 油断大敵。]
+  - meaning_ko: 과실
+  - example_ko: 방심 대적.
+- id: 22887 | level: N2 | [湯飲み / ゆのみ , 壊れた湯飲みの補充をした。]
+  - meaning_ko: 찻잔
+  - example_ko: 깨진 물 마시는 보충을 했다.
+- id: 22892 | level: N2 | [湯飲 / ゆのみ , 壊れた湯飲みの補充をした。]
+  - meaning_ko: 찻잔
+  - example_ko: 깨진 물 마시는 보충을 했다.
+- id: 22896 | level: N2 | [緩い / ゆるい , この靴は少し緩い。]
+  - meaning_ko: 헐렁한
+  - example_ko: 이 신발은 조금 느슨합니다.
+- id: 22901 | level: N2 | [溶岩 / ようがん , 火山は炎と溶岩を吹き出す。]
+  - meaning_ko: 용암
+  - example_ko: 화산은 불꽃과 용암을 불어낸다.
+- id: 22906 | level: N2 | [容器 / ようき , 容器を見ずに中身を見よ。]
+  - meaning_ko: 컨테이너
+  - example_ko: 용기를 보지 않고 내용을 보라.
+- id: 22911 | level: N2 | [用語 / ようご , 独特の専門用語を持っている。]
+  - meaning_ko: 용어
+  - example_ko: 독특한 전문 용어가 있습니다.
+- id: 22916 | level: N2 | [要旨 / ようし , 以下は大統領の演説の要旨だ。]
+  - meaning_ko: 요점
+  - example_ko: 다음은 대통령 연설의 요지다.
+- id: 22921 | level: N2 | [幼児 / ようじ , 幼児は病気にかかりやすい。]
+  - meaning_ko: 유아
+  - example_ko: 유아는 병에 걸리기 쉽다.
+- id: 22926 | level: N2 | [容積 / ようせき , 容積を計算するためには縦と横と深さをかければよい。]
+  - meaning_ko: 용량
+  - example_ko: 체적을 계산하기 위해서는 세로와 가로와 깊이를 곱하면 된다.
+- id: 22930 | level: N2 | [幼稚 / ようち , 幼稚な説得とは、人をしつこく唆すことだ。]
+  - meaning_ko: 초기
+  - example_ko: 유치한 설득이란 사람을 끈질기게 시사하는 것이다.
+- id: 22934 | level: N2 | [幼稚園 / ようちえん , 僕の妹は幼稚園に通っている。]
+  - meaning_ko: 유치원
+  - example_ko: 나의 여동생은 유치원에 다니고 있다.
+- id: 22939 | level: N2 | [用途 / ようと , 何の用途で使うのかわからん。]
+  - meaning_ko: 사용
+  - example_ko: 어떤 용도로 사용할지 모르겠습니다.
+- id: 22947 | level: N2 | [洋品店 / ようひんてん , ]
+  - meaning_ko: 옷가게
+- id: 22952 | level: N2 | [養分 / ようぶん , このビタミン剤は栄養分を豊富に含んでいる。]
+  - meaning_ko: 자양물
+  - example_ko: 이 비타민제는 영양분을 풍부하게 함유하고 있다.
+- id: 22957 | level: N2 | [羊毛 / ようもう , 羊は羊毛を与えてくれる。]
+  - meaning_ko: 양모
+  - example_ko: 양은 양털을 준다.
+- id: 22961 | level: N2 | [漸く / ようやく , 漸く目が覚めました。]
+  - meaning_ko: 마침내
+  - example_ko: 점차 깨어났습니다.
+- id: 22967 | level: N2 | [要領 / ようりょう , 彼は要領を得た話をした。]
+  - meaning_ko: 요점
+  - example_ko: 그는 요령을 얻은 이야기를 했다.
+- id: 22971 | level: N2 | [翌～ / よく～ , ]
+  - meaning_ko: 다음 ~
+- id: 22975 | level: N2 | [欲張り / よくばり , 持てば持つほど、欲張りになる。]
+  - meaning_ko: 탐욕스러운
+  - example_ko: 가질수록 욕심이 된다.
+- id: 22979 | level: N2 | [余計 / よけい , 余計なお節介だ。]
+  - meaning_ko: 너무 많이
+  - example_ko: 불필요한 절개다.
+- id: 22984 | level: N2 | [よこす / よこす , ]
+  - meaning_ko: 보내다
+- id: 22992 | level: N2 | [よごす / よごす , 自分の巣をよごすのは悪い鳥。]
+  - meaning_ko: (1) 불명예를 주다
+  - example_ko: 자신의 둥지를 버리는 것은 나쁜 새.
+- id: 22997 | level: N2 | [寄せる / よせる , インターネットで願書を取り寄せるといいよ。]
+  - meaning_ko: 가까이 오다
+  - example_ko: 인터넷에서 원서를 주문하면 좋다.
+- id: 23001 | level: N2 | [余所 / よそ , ]
+  - meaning_ko: 다른 장소
+- id: 23004 | level: N2 | [四つ角 / よつかど , 四つ角は二つの道が十字に交わった所である。]
+  - meaning_ko: 네거리
+  - example_ko: 네 모퉁이는 두 길이 십자가에 어우러진 곳이다.
+- id: 23009 | level: N2 | [酔っ払い / よっぱらい , 酔っ払い運転でつかまった。]
+  - meaning_ko: 술고래
+  - example_ko: 술취한 운전으로 잡혔다.
+- id: 23014 | level: N2 | [予備 / よび , 予備の枕をください。]
+  - meaning_ko: 준비
+  - example_ko: 예비 베개를주세요.
+- id: 23020 | level: N2 | [呼び掛ける / よびかける , ]
+  - meaning_ko: ~에게 전화하다
+- id: 23023 | level: N2 | [呼び出す / よびだす , ことあるごとに呼び出すのはやめてちょうだい。]
+  - meaning_ko: 소환하다
+  - example_ko: 일이 있을 때마다 호출하는 것은 그만두면 된다.
+- id: 23030 | level: N2 | [蘇る / よみがえる , ]
+  - meaning_ko: 부활하다
+- id: 23036 | level: N2 | [慶ぶ / よろこぶ , ]
+  - meaning_ko: 기뻐하다
+- id: 23042 | level: N2 | [来日 / らいにち , 米国大統領は今来日中です。]
+  - meaning_ko: 일본에 오다
+  - example_ko: 미국 대통령은 오늘 낮 동안입니다.
+- id: 23047 | level: N2 | [落第 / らくだい , 落第しちゃう！]
+  - meaning_ko: 실패
+  - example_ko: 낙제하자!
+- id: 23052 | level: N2 | [ラッシュアワー / ラッシュアワー , ラッシュアワーの交通渋滞にあった。]
+  - meaning_ko: 러시아워
+  - example_ko: 러시 아워의 교통 정체에 있었다.
+- id: 23057 | level: N2 | [欄 / らん , 脚注はページの下欄にある。]
+  - meaning_ko: 텍스트 열(예:
+  - example_ko: 각주는 페이지 하단에 있습니다.
+- id: 23062 | level: N2 | [ランチ / ランチ , 本日のランチの内容はなんですか。]
+  - meaning_ko: 점심
+  - example_ko: 오늘 점심의 내용은 무엇입니까?
+- id: 23067 | level: N2 | [ランニング / ランニング , ランニングしている彼を見た。]
+  - meaning_ko: 달리기
+  - example_ko: 달리는 그를 보았다.
+- id: 23071 | level: N2 | [乱暴 / らんぼう , 彼は乱暴な扱いを受けた。]
+  - meaning_ko: 무례한
+  - example_ko: 그는 난폭한 대우를 받았다.
+- id: 23076 | level: N2 | [理科 / りか , 彼は理科で後れをとっている。]
+  - meaning_ko: 과학
+  - example_ko: 그는 이과에서 뒤떨어져 있다.
+- id: 23081 | level: N2 | [利害 / りがい , 彼の利害は私と一致しない。]
+  - meaning_ko: 장점과 단점
+  - example_ko: 그의 이해는 나와 일치하지 않는다.
+- id: 23084 | level: N2 | [リズム / リズム , サンバはブラジルのリズムですね。]
+  - meaning_ko: 율
+  - example_ko: 삼바는 브라질의 리듬입니다.
+- id: 23091 | level: N2 | [リットル / リットル , この瓶には２リットルのお湯が入る。]
+  - meaning_ko: 리터
+  - example_ko: 이 병에는 2리터의 물이 들어간다.
+- id: 23094 | level: N2 | [リポート / リポート , 彼のリポートはたった今提出された。]
+  - meaning_ko: 보고서
+  - example_ko: 그의 보고는 단지 지금 제출되었다.
+- id: 23099 | level: N2 | [リボン / リボン , 彼女は髪をリボンで結んだ。]
+  - meaning_ko: 리본
+  - example_ko: 그녀는 머리카락을 리본으로 묶었다.
+- id: 23107 | level: N2 | [略す / りゃくす , その文からこの言葉を省略すべきです。]
+  - meaning_ko: 축약하다
+  - example_ko: 그 문장에서 이 단어를 생략해야 합니다.
+- id: 23112 | level: N2 | [流域 / りゅういき , ダムが切れて流域に大水が押し寄せた。]
+  - meaning_ko: (강) 유역
+  - example_ko: 댐이 끊어져 유역에 대수가 밀려들었다.
+- id: 23115 | level: N2 | [寮 / りょう , 寮生活には慣れましたか。]
+  - meaning_ko: 숙박소
+  - example_ko: 기숙사 생활에 익숙해졌습니까?
+- id: 23120 | level: N2 | [両～ / りょう～ , ]
+  - meaning_ko: 둘 다 ~
+- id: 23122 | level: N2 | [両側 / りょうがわ , 通りの両側には大勢の人がいた。]
+  - meaning_ko: 양쪽
+  - example_ko: 거리의 양측에는 많은 사람들이 있었다.
+- id: 23127 | level: N2 | [漁師 / りょうし , 漁師は釣り糸を水中に投げた。]
+  - meaning_ko: 어부
+  - example_ko: 어부는 낚싯줄을 물에 던졌다.
+- id: 23131 | level: N2 | [領事 / りょうじ , 領事館で働いています。]
+  - meaning_ko: 영사
+  - example_ko: 영사관에서 일하고 있습니다.
+- id: 23136 | level: N2 | [領収 / りょうしゅう , 領収書をいただけますか。]
+  - meaning_ko: 영수증
+  - example_ko: 영수증을 받을 수 있습니까?
+- id: 23141 | level: N2 | [臨時 / りんじ , 彼は臨時雇いを採用した。]
+  - meaning_ko: 일시적인
+  - example_ko: 그는 임시 고용을 채택했다.
+- id: 23148 | level: N2 | [留守番 / るすばん , 留守番しててね。]
+  - meaning_ko: 돌보는
+  - example_ko: 자동 응답하십시오.
+- id: 23153 | level: N2 | [例外 / れいがい , 例外は原則のある証拠。]
+  - meaning_ko: 예외
+  - example_ko: 예외는 원칙이 있는 증거.
+- id: 23156 | level: N2 | [零点 / れいてん , これは「零点」を意味する。]
+  - meaning_ko: 영
+  - example_ko: 이것은 "영점"을 의미한다.
+- id: 23163 | level: N2 | [冷凍 / れいとう , とにかく冷凍エビを与えよう。]
+  - meaning_ko: 동결
+  - example_ko: 어쨌든 냉동 새우를 먹자.
+- id: 23168 | level: N2 | [レインコート / レインコート , 君はレインコートを着たほうがよい。]
+  - meaning_ko: 비옷
+  - example_ko: 너는 레인 코트를 입는 편이 좋다.
+- id: 23172 | level: N2 | [レクリェーション / レクリェーション , ]
+  - meaning_ko: 휴양
+- id: 23178 | level: N2 | [レジャー / レジャー , 私には彼のレジャー観が面白い。]
+  - meaning_ko: 여가
+  - example_ko: 나에게는 그의 레저관이 재미있다.
+- id: 23183 | level: N2 | [列島 / れっとう , 日本は火山列島だ。]
+  - meaning_ko: 섬의 사슬
+  - example_ko: 일본은 화산열도다.
+- id: 23186 | level: N2 | [煉瓦 / れんが , 藁なしで煉瓦はできない。]
+  - meaning_ko: 벽돌
+  - example_ko: 짚 없이 벽돌은 할 수 없다.
+- id: 23191 | level: N2 | [連合 / れんごう , 戦争は連合軍の勝利に終わった。]
+  - meaning_ko: 노동 조합
+  - example_ko: 전쟁은 연합군의 승리로 끝났다.
+- id: 23196 | level: N2 | [レンズ / レンズ , レンズだけ交換できますか。]
+  - meaning_ko: 렌즈
+  - example_ko: 렌즈만 교체할 수 있습니까?
+- id: 23200 | level: N2 | [ローマ字 / ローマじ , ローマ字で書くのは日本語の学者の脳の健康に悪い。]
+  - meaning_ko: 로마자 표기
+  - example_ko: 로마자로 쓰는 것은 일본어 학자의 뇌 건강에 나쁘다.
+- id: 23206 | level: N2 | [ろうそく / ろうそく , 彼は暗がりでろうそくに火をつけた。]
+  - meaning_ko: 양초
+  - example_ko: 그는 어둠 속에서 촛불에 불을 붙였다.
+- id: 23214 | level: N2 | [録音 / ろくおん , その放送をテープに録音してくれ。]
+  - meaning_ko: (오디오) 녹음
+  - example_ko: 그 방송을 테이프에 녹음해 줘.
+- id: 23217 | level: N2 | [ロッカー / ロッカー , どの生徒もロッカーを持っている。]
+  - meaning_ko: 사물함
+  - example_ko: 모든 학생은 사물함을 가지고 있습니다.
+- id: 23219 | level: N2 | [ロビー / ロビー , ３時にロビーで会いましょう。]
+  - meaning_ko: 로비
+  - example_ko: 3시에 로비에서 만나요.
+- id: 23223 | level: N2 | [論ずる / ろんずる , ]
+  - meaning_ko: 논쟁하다
+- id: 23227 | level: N2 | [和～ / わ～ , ]
+  - meaning_ko: 일본식
+- id: 23237 | level: N2 | [和英 / わえい , 私は和英辞書が必要だ。]
+  - meaning_ko: 일본어-영어
+  - example_ko: 나는 와영 사전이 필요하다.
+- id: 23244 | level: N2 | [我～ / わが～ , ]
+  - meaning_ko: 우리 ~
+- id: 23252 | level: N2 | [分かれる / わかれる , 道が２つの小道に分かれるところへ来た。]
+  - meaning_ko: 분기하다
+  - example_ko: 길이 두 개의 길로 나뉘는 곳으로 왔다.
+- id: 23255 | level: N2 | [若々しい / わかわかしい , 彼女は相変わらず若々しい。]
+  - meaning_ko: 젊은
+  - example_ko: 그녀는 여전히 젊다.
+- id: 23260 | level: N2 | [詫びる / わびる , きみは失礼を詫びるべきだ。]
+  - meaning_ko: 사과하다
+  - example_ko: 너는 무례를 사과해야한다.
+- id: 23267 | level: N2 | [和服 / わふく , 洋服は和服より働きやすい。]
+  - meaning_ko: 일본옷
+  - example_ko: 옷은 일본 옷보다 일하기 쉽다.
+- id: 23271 | level: N2 | [割合に / わりあいに , ]
+  - meaning_ko: 비교적
+- id: 23276 | level: N2 | [割算 / わりざん , ]
+  - meaning_ko: 나눗셈 (수학)
+- id: 23282 | level: N2 | [割と / わりと , 割とありうる。]
+  - meaning_ko: 비교적
+  - example_ko: 비교적 있을 수 있다.
+- id: 23287 | level: N2 | [割引 / わりびき , 夜間の割引はありますか。]
+  - meaning_ko: 할인
+  - example_ko: 야간 할인이 있나요?
+- id: 23292 | level: N2 | [ワンピース / ワンピース , このワンピースはいくらですか。]
+  - meaning_ko: 원피스 드레스
+  - example_ko: 이 원피스는 얼마입니까?
+- id: 3182 | level: N3 | [作法 / さほう , 夜遅く人を訪問するのは無作法だ。]
+  - meaning_ko: 예의
+  - example_ko: 밤늦게 사람을 방문하는 것은 무작법이다.
+- id: 3186 | level: N3 | [様々 / さまざま , 彼の庭はいつも様々な花が咲く。]
+  - meaning_ko: 변화 많은
+  - example_ko: 그의 정원은 언제나 다양한 꽃이 피는다.
+- id: 3191 | level: N3 | [冷ます / さます , 煮物は一度冷ますと、味が染みこみ美味しくなります。]
+  - meaning_ko: 식히다
+  - example_ko: 조림은 한번 차면 맛이 얼룩 맛있게됩니다.
+- id: 3196 | level: N3 | [覚ます / さます , 目を覚ますと、家族が来ていた。]
+  - meaning_ko: 깨우다
+  - example_ko: 일어나서 가족이 왔습니다.
+- id: 3202 | level: N3 | [冷める / さめる , お茶が冷めるよ。]
+  - meaning_ko: 멋있어지다
+  - example_ko: 차가 식을거야.
+- id: 3210 | level: N3 | [覚める / さめる , 目が覚めると部屋に泥棒がいた。]
+  - meaning_ko: 깨우다
+  - example_ko: 일어나자 방에 도둑이 있었다.
+- id: 3214 | level: N3 | [左右 / さゆう , 彼は左右を見回した。]
+  - meaning_ko: 왼쪽과 오른쪽
+  - example_ko: 그는 좌우를 둘러봤다.
+- id: 3217 | level: N3 | [皿 / さら , 父はよく皿洗いをします。]
+  - meaning_ko: 그릇
+  - example_ko: 아버지는 잘 접시를 씻는다.
+- id: 3221 | level: N3 | [更に / さらに , 彼は更に十年間研究を続けた。]
+  - meaning_ko: 뿐만 아니라
+  - example_ko: 그는 십년간 연구를 계속했다.
+- id: 3225 | level: N3 | [去る / さる , 彼らはまもなく東京を去るということだ。]
+  - meaning_ko: 떠나다
+  - example_ko: 그들은 곧 도쿄를 떠난다는 것이다.
+- id: 3229 | level: N3 | [猿 / さる , 類人猿は知能が高い。]
+  - meaning_ko: 원숭이
+  - example_ko: 유인원은 지능이 높다.
+- id: 3232 | level: N3 | [騒ぎ / さわぎ , 彼らは昨夜大騒ぎをした。]
+  - meaning_ko: 소란
+  - example_ko: 그들은 어젯밤 큰 소란을 겪었다.
+- id: 3235 | level: N3 | [参加 / さんか , 夜のバスツアーに参加したいのですが。]
+  - meaning_ko: 참여
+  - example_ko: 저녁 버스 투어에 참가하고 싶습니다.
+- id: 3238 | level: N3 | [参考 / さんこう , 辞書は優れた参考本だ。]
+  - meaning_ko: 참조
+  - example_ko: 사전은 뛰어난 참고책이다.
+- id: 3242 | level: N3 | [賛成 / さんせい , 賛成です。]
+  - meaning_ko: 승인
+  - example_ko: 찬성입니다.
+- id: 3246 | level: N3 | [酸性 / さんせい , 酸性土を灰で中和する。]
+  - meaning_ko: 신맛
+  - example_ko: 산성 토양을 재로 중화한다.
+- id: 3250 | level: N3 | [酸素 / さんそ , 彼は酸素不足で死んだ。]
+  - meaning_ko: 산소
+  - example_ko: 그는 산소 부족으로 죽었다.
+- id: 3254 | level: N3 | [氏 / し , 鈴木氏は偉大な科学者だ。]
+  - meaning_ko: 성
+  - example_ko: 스즈키씨는 위대한 과학자다.
+- id: 3258 | level: N3 | [詩 / し , 僕は啄木の詩の多くを暗記した。]
+  - meaning_ko: 시
+  - example_ko: 나는 굉장한 시의 많은 것을 암기했다.
+- id: 3261 | level: N3 | [幸せ / しあわせ , 由美は幸せですね。]
+  - meaning_ko: 행복
+  - example_ko: 유미는 행복합니다.
+- id: 3266 | level: N3 | [ジーンズ / ジーンズ , 彼はジーンズをはいていた。]
+  - meaning_ko: 청바지
+  - example_ko: 그는 청바지를 입고 있었다.
+- id: 3270 | level: N3 | [ジェット機 / ジェットき , 二機のジェット機が同時に離陸した。]
+  - meaning_ko: 제트기
+  - example_ko: 두 대의 제트기가 동시에 이륙했다.
+- id: 3271 | level: N3 | [四角 / しかく , 箱の形は普通四角です。]
+  - meaning_ko: 정사각형
+  - example_ko: 상자 모양은 보통 사각형입니다.
+- id: 3275 | level: N3 | [直に / じかに , 率直に話してください。]
+  - meaning_ko: 즉시
+  - example_ko: 솔직하게 말해주세요.
+- id: 3278 | level: N3 | [しかも / しかも , しかも初陣があのドラゴン退治！]
+  - meaning_ko: 게다가
+  - example_ko: 게다가 초진이 그 드래곤 퇴치!
+- id: 3282 | level: N3 | [四季 / しき , 日本には四季があります。]
+  - meaning_ko: 사계절
+  - example_ko: 일본에는 사계절이 있습니다.
+- id: 3286 | level: N3 | [直 / じき , 彼女は率直にものを言う。]
+  - meaning_ko: 즉시
+  - example_ko: 그녀는 솔직하게 무슨을 말한다.
+- id: 3290 | level: N3 | [時期 / じき , しかるべき時期にお支払いいたしました。]
+  - meaning_ko: 시간
+  - example_ko: 적절한 시기에 지불했습니다.
+- id: 3294 | level: N3 | [支給 / しきゅう , 私たちは制服を支給された。]
+  - meaning_ko: 지불
+  - example_ko: 우리는 제복을 받았다.
+- id: 3298 | level: N3 | [至急 / しきゅう , 至急話したいことがあるのです。]
+  - meaning_ko: 긴급한
+  - example_ko: 빨리 이야기하고 싶은 것이 있습니다.
+- id: 3302 | level: N3 | [しきりに / しきりに , 彼女はしきりに帰りたがっていた。]
+  - meaning_ko: 자주
+  - example_ko: 그녀는 자꾸 돌아가고 싶었다.
+- id: 3306 | level: N3 | [刺激 / しげき , 彼女の元気な性格に刺激を受けた。]
+  - meaning_ko: 자극제
+  - example_ko: 그녀의 건강한 성격에 자극을 받았다.
+- id: 3309 | level: N3 | [資源 / しげん , 日本は天然資源に乏しい。]
+  - meaning_ko: 자원
+  - example_ko: 일본은 천연자원이 부족하다.
+- id: 3313 | level: N3 | [事件 / じけん , 最近、タチの悪い詐欺事件が多いわね。]
+  - meaning_ko: 이벤트
+  - example_ko: 최근 타치가 나쁜 사기 사건이 많네요.
+- id: 3317 | level: N3 | [時刻 / じこく , 飛行機の到着予定時刻は？]
+  - meaning_ko: 시간
+  - example_ko: 비행기 도착 예정 시간은?
+- id: 3320 | level: N3 | [自殺 / じさつ , 自殺なんてするんじゃない。]
+  - meaning_ko: 자살
+  - example_ko: 자살은 하지 않는다.
+- id: 3324 | level: N3 | [事実 / じじつ , 報告書は事実と完全に一致する。]
+  - meaning_ko: 사실
+  - example_ko: 보고는 사실과 완전하게 일치한다.
+- id: 3328 | level: N3 | [支出 / ししゅつ , 彼は支出を計算した。]
+  - meaning_ko: 지출
+  - example_ko: 그는 지출을 계산했다.
+- id: 3332 | level: N3 | [事情 / じじょう , 彼女はすべての事情を利用する。]
+  - meaning_ko: 상황
+  - example_ko: 그녀는 모든 사정을 이용한다.
+- id: 3336 | level: N3 | [詩人 / しじん , 彼女は著名な詩人です。]
+  - meaning_ko: 시인
+  - example_ko: 그녀는 유명한 시인입니다.
+- id: 3344 | level: N3 | [自身 / じしん , 妹はそれを自分自身の目で見た。]
+  - meaning_ko: 자신
+  - example_ko: 여동생은 그것을 자신의 눈으로 보았다.
+- id: 3349 | level: N3 | [沈む / しずむ , 陽があかあかと沈む。]
+  - meaning_ko: 가라앉다
+  - example_ko: 양이 아카아카와 가라앉는다.
+- id: 3352 | level: N3 | [自然 / しぜん , 明かりは自然に消えた。]
+  - meaning_ko: 자연
+  - example_ko: 불빛은 자연스럽게 사라졌다.
+- id: 3354 | level: N3 | [思想 / しそう , 彼は新しい思想を吸収した。]
+  - meaning_ko: 생각
+  - example_ko: 그는 새로운 사상을 흡수했다.
+- id: 3358 | level: N3 | [舌 / した , 彼女は毒舌家だ。]
+  - meaning_ko: 혀
+  - example_ko: 그녀는 독설가다.
+- id: 3360 | level: N3 | [次第 / しだい , 夕闇が次第に深まっていった。]
+  - meaning_ko: 주문하다
+  - example_ko: 황혼이 점차 깊어졌다.
+- id: 3365 | level: N3 | [従う / したがう , 両親には従うべきだ。]
+  - meaning_ko: (규칙을) 지키다
+  - example_ko: 부모님은 따라야 한다.
+- id: 3369 | level: N3 | [したがって / したがって , 父は私を医者にしたがっている。]
+  - meaning_ko: 그러므로
+  - example_ko: 아버지는 나를 의사에게 원한다.
+- id: 3373 | level: N3 | [親しい / したしい , 彼は親しい友人だ。]
+  - meaning_ko: 친밀한
+  - example_ko: 그는 친한 친구입니다.
+- id: 3377 | level: N3 | [質 / しつ , バカな質問があるんだ。]
+  - meaning_ko: 품질
+  - example_ko: 바보 같은 질문이 있다.
+- id: 3380 | level: N3 | [失業 / しつぎょう , 父が失業して一年になる。]
+  - meaning_ko: 실업
+  - example_ko: 아버지가 실업해 일년이 된다.
+- id: 3384 | level: N3 | [湿気 / しっけ , 当地の夏はひどく湿気が多い。]
+  - meaning_ko: 수분
+  - example_ko: 당지의 여름은 심하게 습기가 많다.
+- id: 3392 | level: N3 | [実験 / じっけん , 実験台ごときで恐れる俺様じゃないぞ。]
+  - meaning_ko: 실험실 작업
+  - example_ko: 실험대 때때로 두려워하는 나님이 아니야.
+- id: 3396 | level: N3 | [実現 / じつげん , 夢が実現した。]
+  - meaning_ko: 구현
+  - example_ko: 꿈이 실현되었다.
+- id: 3400 | level: N3 | [実行 / じっこう , 考えを実行に移すのは、難しい。]
+  - meaning_ko: 관행
+  - example_ko: 생각을 실행으로 옮기는 것은 어렵습니다.
+- id: 3403 | level: N3 | [実際 / じっさい , 理論と実際を結び付けるべきだ。]
+  - meaning_ko: 사실은
+  - example_ko: 이론과 실제를 연결해야 한다.
+- id: 3407 | level: N3 | [実施 / じっし , 徹底的な安全対策が実施された。]
+  - meaning_ko: 시행
+  - example_ko: 철저한 안전 대책이 실시되었다.
+- id: 3411 | level: N3 | [湿度 / しつど , 暑かった。その上湿度が高かった。]
+  - meaning_ko: 습기
+  - example_ko: 더웠다. 게다가 습도가 높았다.
+- id: 3415 | level: N3 | [じっと / じっと , 僕はじっと考えた。]
+  - meaning_ko: 꽉
+  - example_ko: 나는 가만히 생각했다.
+- id: 3418 | level: N3 | [実に / じつに , 彼のスイングは実に見事だ。]
+  - meaning_ko: 물론
+  - example_ko: 그의 스윙은 정말 훌륭하다.
+- id: 3425 | level: N3 | [実は / じつは , 実はこれで４度目の質問になります。]
+  - meaning_ko: 실제로
+  - example_ko: 실은 이것으로 4번째의 질문이 됩니다.
+- id: 3428 | level: N3 | [失望 / しつぼう , 彼らは互いに失望を感じている。]
+  - meaning_ko: 실망
+  - example_ko: 그들은 서로 실망을 느낀다.
+- id: 3432 | level: N3 | [実力 / じつりょく , 彼はどう見ても実力者だった。]
+  - meaning_ko: 능력
+  - example_ko: 그는 어떻게 봐도 실력자였다.
+- id: 3435 | level: N3 | [支店 / してん , 彼の娘婿は海外の支店に転勤になった。]
+  - meaning_ko: 지점(사무실)
+  - example_ko: 그의 딸 아가씨는 해외 지점에 전근이 되었다.
+- id: 3438 | level: N3 | [指導 / しどう , 彼女は彼よりも優れた指導者だ。]
+  - meaning_ko: 지도
+  - example_ko: 그녀는 그보다 뛰어난 지도자다.
+- id: 3443 | level: N3 | [自動 / じどう , 「車」は「自動車」の同意語です。]
+  - meaning_ko: 오토매틱
+  - example_ko: "차"는 "자동차"의 동의어입니다.
+- id: 3447 | level: N3 | [児童 / じどう , 彼女は児童心理学専攻だ。]
+  - meaning_ko: 어린이들
+  - example_ko: 그녀는 아동 심리학 전공이다.
+- id: 3451 | level: N3 | [品 / しな , 除草剤耐性品種でなぜ収量が増えるのか？]
+  - meaning_ko: 물건
+  - example_ko: 제초제 내성 품종으로 왜 수율이 증가하는가?
+- id: 3455 | level: N3 | [支配 / しはい , 民衆は支配者たちに反抗した。]
+  - meaning_ko: 규칙
+  - example_ko: 민중은 통치자들에게 반항했다.
+- id: 3459 | level: N3 | [芝居 / しばい , 彼女は新しい芝居を企画中だ。]
+  - meaning_ko: 놀다
+  - example_ko: 그녀는 새로운 연극을 기획 중이다.
+- id: 3463 | level: N3 | [しばしば / しばしば , 僕はしばしば彼女と文通している。]
+  - meaning_ko: 자주
+  - example_ko: 난 자주 그녀와 문통하고 있다.
+- id: 3467 | level: N3 | [芝生 / しばふ , 隣の芝生はうちのより青い。]
+  - meaning_ko: 잔디
+  - example_ko: 옆 잔디밭은 우리보다 더 파랗다.
+- id: 3471 | level: N3 | [支払 / しはらい , 料金はここでお支払いください。]
+  - meaning_ko: 지불
+  - example_ko: 요금은 여기에서 지불하십시오.
+- id: 3475 | level: N3 | [支払う / しはらう , 罰金は現金で支払うべし。]
+  - meaning_ko: 지불하다
+  - example_ko: 벌금은 현금으로 지불한다.
+- id: 3478 | level: N3 | [死亡 / しぼう , 彼の死亡告知が新聞に出た。]
+  - meaning_ko: 죽음
+  - example_ko: 그의 사망 고지가 신문에 나왔다.
+- id: 3482 | level: N3 | [資本 / しほん , 彼女の事業は資本金２０００ドルで始められた。]
+  - meaning_ko: 자금
+  - example_ko: 그녀의 사업은 자본금 2000달러로 시작됐다.
+- id: 3486 | level: N3 | [姉妹 / しまい , 隣人は４人姉妹と猫１匹です。]
+  - meaning_ko: 자매
+  - example_ko: 이웃은 4명 자매와 고양이 1마리입니다.
+- id: 3494 | level: N3 | [しまった (かん) / しまった (かん) , ]
+  - meaning_ko: 젠장!
+- id: 3498 | level: N3 | [自慢 / じまん , 父は自分の車を自慢している。]
+  - meaning_ko: 자부심
+  - example_ko: 아버지는 자신의 차를 자랑한다.
+- id: 3502 | level: N3 | [地味 / じみ , 彼女は地味な色を好む。]
+  - meaning_ko: 조용한
+  - example_ko: 그녀는 수수한 색깔을 좋아한다.
+- id: 3507 | level: N3 | [示す / しめす , 羅針盤の針は常に北を示す。]
+  - meaning_ko: 보여주기 위해
+  - example_ko: 나침반의 바늘은 항상 북쪽을 나타낸다.
+- id: 3512 | level: N3 | [占める / しめる , 他の物が漁夫の利を占める。]
+  - meaning_ko: 차지하다
+  - example_ko: 다른 물건이 어부의 이익을 차지한다.
+- id: 3518 | level: N3 | [湿る / しめる , ]
+  - meaning_ko: 젖다
+- id: 3523 | level: N3 | [下 / しも , 「塩を取って下さい」「はい、どうぞ」]
+  - meaning_ko: 아래에
+  - example_ko: "소금을 가지고 가십시오" "네, 제발"
+- id: 3528 | level: N3 | [霜 / しも , ゆうべ霜が降りた。]
+  - meaning_ko: 서리
+  - example_ko: 유베 서리가 내렸다.
+- id: 3532 | level: N3 | [借金 / しゃっきん , 友人から借金しないほうがよい。]
+  - meaning_ko: 빚
+  - example_ko: 친구로부터 부채하지 않는 편이 좋다.
+- id: 3537 | level: N3 | [しゃべる / しゃべる , 彼女は実によくしゃべる。]
+  - meaning_ko: 이야기하다
+  - example_ko: 그녀는 정말 잘 말한다.
+- id: 3542 | level: N3 | [週 / しゅう , 来週には凍るかも知れない。]
+  - meaning_ko: 주
+  - example_ko: 다음 주에는 얼릴지도 모른다.
+- id: 3548 | level: N3 | [州 / しゅう , 北海道は本州の北にある。]
+  - meaning_ko: 상태
+  - example_ko: 홋카이도는 혼슈의 북쪽에 있다.
+- id: 3553 | level: N3 | [銃 / じゅう , 彼女は銃を一発うった。]
+  - meaning_ko: 총
+  - example_ko: 그녀는 총을 한발 흘렸다.
+- id: 3558 | level: N3 | [周囲 / しゅうい , 惑星は太陽の周囲を回転する。]
+  - meaning_ko: 주위
+  - example_ko: 행성은 태양의 주위를 회전한다.
+- id: 3563 | level: N3 | [収穫 / しゅうかく , 米の収穫が下ったら大変なことになるぞ。]
+  - meaning_ko: 수확하다
+  - example_ko: 쌀의 수확이 내리면 힘든 일이 될거야.
+- id: 3568 | level: N3 | [宗教 / しゅうきょう , 両地域は宗教と文化が違っている。]
+  - meaning_ko: 종교
+  - example_ko: 두 지역은 종교와 문화가 다르다.
+- id: 3573 | level: N3 | [重視 / じゅうし , 彼を重視しているのですか。]
+  - meaning_ko: 중요성
+  - example_ko: 그를 중시하고 있습니까?
+- id: 3578 | level: N3 | [就職 / しゅうしょく , 彼女は就職の面接を受けた。]
+  - meaning_ko: 취업
+  - example_ko: 그녀는 취업 면접을 받았다.
+- id: 3579 | level: N3 | [ジュース / ジュース , 母親はオレンジジュースを２本買った。]
+  - meaning_ko: 주스
+  - example_ko: 어머니는 오렌지 주스를 두 샀다.
+- id: 3584 | level: N3 | [修正 / しゅうせい , 彼は自説を修正した。]
+  - meaning_ko: 개정
+  - example_ko: 그는 자신의 이론을 수정했습니다.
+- id: 3593 | level: N3 | [重体 / じゅうたい , 重体の赤ちゃんは医者の注意深い監視下に置かれていた。]
+  - meaning_ko: 심하게 아프다
+  - example_ko: 무거운 아기는 의사의 주의깊은 감시하에 놓여 있었다.
+- id: 3598 | level: N3 | [渋滞 / じゅうたい , 途中で交通渋滞に遭った。]
+  - meaning_ko: 혼잡(예:
+  - example_ko: 도중에 교통 정체를 당했다.
+- id: 3603 | level: N3 | [重大 / じゅうだい , 彼女は重大な失策を犯した。]
+  - meaning_ko: 심각한
+  - example_ko: 그녀는 심각한 실책을 저질렀다.
+- id: 3608 | level: N3 | [住宅 / じゅうたく , 農業住宅には納屋がある。]
+  - meaning_ko: 거주자
+  - example_ko: 농업 주택에는 헛간이 있다.
+- id: 3610 | level: N3 | [集団 / しゅうだん , 霊長類の毛づくろいは集団の結合を強める。]
+  - meaning_ko: 그룹
+  - example_ko: 영장류의 머리카락 만들기는 집단의 결합을 강화한다.
+- id: 3614 | level: N3 | [集中 / しゅうちゅう , 彼女は音楽に集中している。]
+  - meaning_ko: 집중
+  - example_ko: 그녀는 음악에 집중하고 있습니다.
+- id: 3619 | level: N3 | [収入 / しゅうにゅう , 僕は収入を越えた生活をしている。]
+  - meaning_ko: 소득
+  - example_ko: 나는 수입을 넘은 생활을 하고 있다.
+- id: 3628 | level: N3 | [住民 / じゅうみん , 彼は原住民との友好関係を確立した。]
+  - meaning_ko: 주민
+  - example_ko: 그는 원주민과 친절한 관계를 수립했다.
+- id: 3631 | level: N3 | [重要 / じゅうよう , これは重要ではない。]
+  - meaning_ko: 중요한
+  - example_ko: 이것은 중요하지 않습니다.
+- id: 3636 | level: N3 | [修理 / しゅうり , 僕のは今修理中なんだよ。]
+  - meaning_ko: 수리
+  - example_ko: 내가 지금 수리 중이야.
+- id: 3641 | level: N3 | [主義 / しゅぎ , 日本は先願主義を採用している。]
+  - meaning_ko: 교의
+  - example_ko: 일본은 선원주의를 채용하고 있다.
+- id: 3645 | level: N3 | [宿泊 / しゅくはく , 宿泊費込みの値段ですか。]
+  - meaning_ko: 하숙
+  - example_ko: 숙박비 포함 가격인가요?
+- id: 3653 | level: N3 | [手術 / しゅじゅつ , 父は手術をしてから体調が良い。]
+  - meaning_ko: 수술
+  - example_ko: 아버지는 수술을 하고 나서 컨디션이 좋다.
+- id: 3658 | level: N3 | [首相 / しゅしょう , 彼は首相にインタビューした。]
+  - meaning_ko: 총리
+  - example_ko: 그는 총리와 인터뷰했다.
+- id: 3663 | level: N3 | [手段 / しゅだん , 恋と戦は手段を選ばず。]
+  - meaning_ko: 수단
+  - example_ko: 사랑과 싸움은 수단을 가리지 않고.
+- id: 3668 | level: N3 | [主張 / しゅちょう , 被告は無実を主張した。]
+  - meaning_ko: 주장하다
+  - example_ko: 피고는 무고하다고 주장했다.
+- id: 3673 | level: N3 | [出場 / しゅつじょう , 彼はその競技の出場資格を失った。]
+  - meaning_ko: 참여
+  - example_ko: 그는 그 경기의 출전 자격을 잃었다.
+- id: 3675 | level: N3 | [出身 / しゅっしん , 彼女は良家の出身だ。]
+  - meaning_ko: 출신
+  - example_ko: 그녀는 양가의 출신이다.
+- id: 3682 | level: N3 | [出版 / しゅっぱん , 毎年沢山の数の書物が出版されている。]
+  - meaning_ko: 출판
+  - example_ko: 매년 많은 수의 책이 출판되고 있다.
+- id: 3687 | level: N3 | [首都 / しゅと , 東京は日本の首都です。]
+  - meaning_ko: 수도
+  - example_ko: 도쿄는 일본의 수도입니다.
+- id: 3692 | level: N3 | [主婦 / しゅふ , 物価が高いと不平を言う主婦が多い。]
+  - meaning_ko: 주부
+  - example_ko: 물가가 높다고 불평하는 주부가 많다.
+- id: 3696 | level: N3 | [主要 / しゅよう , 彼は主要点を点検した。]
+  - meaning_ko: 셰프
+  - example_ko: 그는 주요 점을 검사했다.
+- id: 3701 | level: N3 | [需要 / じゅよう , 輸入車の需要は強い。]
+  - meaning_ko: 수요
+  - example_ko: 수입차의 수요는 강하다.
+- id: 3706 | level: N3 | [種類 / しゅるい , 火力とお鍋と貝の種類によるわ。]
+  - meaning_ko: 다양성
+  - example_ko: 화력과 냄비와 조개의 종류에 따라.
+- id: 3710 | level: N3 | [順 / じゅん , 用紙は順に番号が打ってある。]
+  - meaning_ko: 주문하다
+  - example_ko: 용지는 순서대로 번호가 매겨져 있다.
+- id: 3714 | level: N3 | [瞬間 / しゅんかん , その瞬間、大音響とともに爆発した。]
+  - meaning_ko: 순간
+  - example_ko: 그 순간 대음향과 함께 폭발했다.
+- id: 3719 | level: N3 | [順調 / じゅんちょう , 万事順調だ。]
+  - meaning_ko: 잘 지내
+  - example_ko: 만사 순조롭다.
+- id: 3725 | level: N3 | [順番 / じゅんばん , 彼らは順番に歌を歌った。]
+  - meaning_ko: (일렬로) 돌아서다
+  - example_ko: 그들은 차례로 노래를 불렀다.
+- id: 3731 | level: N3 | [使用 / しよう , 外用のみに使用し、内服しないで下さい。]
+  - meaning_ko: 사용하다
+  - example_ko: 외용에만 사용하고 내복하지 마십시오.
+- id: 3735 | level: N3 | [小 / しょう , 靴が小さすぎるから新しいのを買う必要があるな。]
+  - meaning_ko: 작은
+  - example_ko: 신발이 너무 작기 때문에 새로운 것을 살 필요가있다.
+- id: 3739 | level: N3 | [章 / しょう , 彼女は文章がうまい。]
+  - meaning_ko: 장
+  - example_ko: 그녀는 문장이 좋다.
+- id: 3744 | level: N3 | [賞 / しょう , このパンって賞味期限大丈夫か？]
+  - meaning_ko: 상
+  - example_ko: 이 빵은 유통 기한 괜찮습니까?
+- id: 3753 | level: N3 | [上 / じょう , これ以上考えても無駄だ。]
+  - meaning_ko: 첫 번째 볼륨
+  - example_ko: 더 이상 생각해도 낭비다.
+- id: 3757 | level: N3 | [障害 / しょうがい , 彼は予期せぬ障害に出会った。]
+  - meaning_ko: 장애
+  - example_ko: 그는 예기치 못한 장애물을 만났다.
+- id: 3762 | level: N3 | [奨学金 / しょうがくきん , 彼は奨学金を得られそうだ。]
+  - meaning_ko: 장학금
+  - example_ko: 그는 장학금을 받을 것 같다.
+- id: 3767 | level: N3 | [乗客 / じょうきゃく , 列車は乗客でいっぱいだった。]
+  - meaning_ko: 승객
+  - example_ko: 기차는 승객으로 가득했습니다.
+- id: 3773 | level: N3 | [上京 / じょうきょう , 彼は明日上京する予定だ。]
+  - meaning_ko: 수도(도쿄)로 이동
+  - example_ko: 그는 내일 상경할 예정이다.
+- id: 3775 | level: N3 | [状況 / じょうきょう , 状況証拠としちゃあ、十分だね。]
+  - meaning_ko: 상황
+  - example_ko: 상황 증거라면 충분하네요.
+- id: 3779 | level: N3 | [条件 / じょうけん , 彼らは労働条件を改善したがっている。]
+  - meaning_ko: 정황
+  - example_ko: 그들은 노동조건을 개선하고 싶다.
+- id: 3783 | level: N3 | [正午 / しょうご , 列車は正午に到着するはずです。]
+  - meaning_ko: 정오
+  - example_ko: 기차는 정오에 도착해야합니다.
+- id: 3788 | level: N3 | [正直 / しょうじき , 正直が聞いて呆れるよ。]
+  - meaning_ko: 정직
+  - example_ko: 솔직히 듣고 어리석어.
+- id: 3792 | level: N3 | [常識 / じょうしき , 彼は非常識だ。]
+  - meaning_ko: 상식
+  - example_ko: 그는 비상식이다.
+- id: 3797 | level: N3 | [少女 / しょうじょ , 少女の鋭い感性に触れている。]
+  - meaning_ko: 젊은 처녀
+  - example_ko: 소녀의 날카로운 감성을 만지고 있다.
+- id: 3804 | level: N3 | [少々 / しょうしょう , 彼は少々太りぎみです。]
+  - meaning_ko: 조금
+  - example_ko: 그는 조금 뚱뚱합니다.
+- id: 3810 | level: N3 | [症状 / しょうじょう , 症状は軽いですよ。]
+  - meaning_ko: 증상
+  - example_ko: 증상은 가볍습니다.
+- id: 3816 | level: N3 | [生じる / しょうじる , 多くの病気が貧困から生じる。]
+  - meaning_ko: 발생하다
+  - example_ko: 많은 질병이 빈곤으로 인해 발생합니다.
+- id: 3821 | level: N3 | [状態 / じょうたい , 横には喧嘩状態の妻が眠っている。]
+  - meaning_ko: 상태
+  - example_ko: 옆에는 싸움 상태의 아내가 자고 있다.
+- id: 3828 | level: N3 | [上達 / じょうたつ , 彼女は中国語が上達している。]
+  - meaning_ko: 개선
+  - example_ko: 그녀는 중국어가 향상되었습니다.
+- id: 3833 | level: N3 | [冗談 / じょうだん , 冗談でしょ！？]
+  - meaning_ko: 농담
+  - example_ko: 농담이야! ?
+- id: 3837 | level: N3 | [上等 / じょうとう , 君のペンは僕のペンよりも上等です。]
+  - meaning_ko: 일등
+  - example_ko: 너의 펜은 내 펜보다 낫다.
+- id: 3842 | level: N3 | [衝突 / しょうとつ , 彼は父と意見が衝突した。]
+  - meaning_ko: 충돌
+  - example_ko: 그는 아버지와 의견이 충돌했다.
+- id: 3847 | level: N3 | [商人 / しょうにん , 彼は有名な商人だ。]
+  - meaning_ko: 상인
+  - example_ko: 그는 유명한 상인이다.
+- id: 3852 | level: N3 | [承認 / しょうにん , 彼は承認を保留した。]
+  - meaning_ko: 인식
+  - example_ko: 그는 승인을 보류했다.
+- id: 3857 | level: N3 | [少年 / しょうねん , 中国のＧＤＰ統計はオオカミ少年か。]
+  - meaning_ko: 소년들
+  - example_ko: 중국의 GDP 통계는 늑대 소년?
+- id: 3862 | level: N3 | [商売 / しょうばい , 父親が引退すると彼は商売を継いだ。]
+  - meaning_ko: 거래
+  - example_ko: 아버지가 은퇴하자 그는 장사를 이었다.
+- id: 3866 | level: N3 | [消費 / しょうひ , 彼は大量の酒を消費する。]
+  - meaning_ko: 소비
+  - example_ko: 그는 대량의 술을 소비한다.
+- id: 3871 | level: N3 | [商品 / しょうひん , 本当に最高の商品です。]
+  - meaning_ko: 상품
+  - example_ko: 정말 최고의 상품입니다.
+- id: 3876 | level: N3 | [賞品 / しょうひん , 先生はジョンに賞品を与えた。]
+  - meaning_ko: 상
+  - example_ko: 선생님은 존에게 상품을 주었다.
+- id: 3880 | level: N3 | [消防 / しょうぼう , 消防署に連絡してください。]
+  - meaning_ko: 소방
+  - example_ko: 소방서에 문의하십시오.
+- id: 3884 | level: N3 | [情報 / じょうほう , 微生物学の基本から最新の情報までを網羅する。]
+  - meaning_ko: 정보
+  - example_ko: 미생물학의 기본부터 최신의 정보까지를 망라한다.
+- id: 3889 | level: N3 | [証明 / しょうめい , 明白すぎて証明を要しない。]
+  - meaning_ko: 증거
+  - example_ko: 너무 분명해서 증명이 필요하지 않습니다.
+- id: 3894 | level: N3 | [省略 / しょうりゃく , その本の最終章は省略してよい。]
+  - meaning_ko: 생략
+  - example_ko: 책의 마지막 장은 생략 할 수 있습니다.
+- id: 3899 | level: N3 | [女王 / じょおう , 魔女の女王は死ぬ。]
+  - meaning_ko: 여왕
+  - example_ko: 마녀의 여왕은 죽는다.
+- id: 3908 | level: N3 | [職 / しょく , 退職を契機に茶道を始めた。]
+  - meaning_ko: 고용
+  - example_ko: 퇴직을 계기로 다도를 시작했다.
+- id: 3911 | level: N3 | [職業 / しょくぎょう , 彼女の職業は先生です。]
+  - meaning_ko: 직업
+  - example_ko: 그녀의 직업은 선생님입니다.
+- id: 3914 | level: N3 | [食卓 / しょくたく , 母は食卓の準備をした。]
+  - meaning_ko: 식탁
+  - example_ko: 어머니는 식탁을 준비했다.
+- id: 3917 | level: N3 | [食品 / しょくひん , 彼は食品会社に就職した。]
+  - meaning_ko: 식료품
+  - example_ko: 그는 식품 회사에 취직했다.
+- id: 3921 | level: N3 | [植物 / しょくぶつ , 緑色植物は自分自身の食物を作ることができる。]
+  - meaning_ko: 식물
+  - example_ko: 녹색 식물은 자신의 음식을 만들 수 있습니다.
+- id: 3926 | level: N3 | [食物 / しょくもつ , 毎日の飲食物には注意しなさい。]
+  - meaning_ko: 음식
+  - example_ko: 매일 음식에 주의하십시오.
+- id: 3935 | level: N3 | [食欲 / しょくよく , 彼は食欲旺盛だ。]
+  - meaning_ko: 식욕 (음식에 대한)
+  - example_ko: 그는 식욕 왕성하다.
+- id: 3940 | level: N3 | [食料 / しょくりょう , 不作で食料がひどく不足した。]
+  - meaning_ko: 음식
+  - example_ko: 부작으로 음식이 심하게 부족했다.
+- id: 3945 | level: N3 | [食糧 / しょくりょう , 旱魃は食糧不足を招いた。]
+  - meaning_ko: 식량
+  - example_ko: 旱魃는 음식 부족을 초래했다.
+- id: 3950 | level: N3 | [書斎 / しょさい , 父は車庫を書斎に改造した。]
+  - meaning_ko: 공부하다
+  - example_ko: 아버지는 차고를 서재로 개조했다.
+- id: 3955 | level: N3 | [女子 / じょし , 娘を女子校に入れた。]
+  - meaning_ko: 여성
+  - example_ko: 딸을 여자 학교에 넣었다.
+- id: 3959 | level: N3 | [助手 / じょしゅ , 彼は私を助手にしました。]
+  - meaning_ko: 돕는 사람
+  - example_ko: 그는 나를 조수로 만들었다.
+- id: 3964 | level: N3 | [徐々に / じょじょに , 父は徐々に回復しています。]
+  - meaning_ko: 느리게
+  - example_ko: 아버지는 점차 회복하고 있습니다.
+- id: 3969 | level: N3 | [署名 / しょめい , 忘れずに署名してください。]
+  - meaning_ko: 서명
+  - example_ko: 잊지 말고 서명하십시오.
+- id: 3974 | level: N3 | [書物 / しょもつ , 彼らはその書物を日光に当てた。]
+  - meaning_ko: 서적
+  - example_ko: 그들은 그 책을 햇빛에 비추었다.
+- id: 3979 | level: N3 | [女優 / じょゆう , 彼女は有名な女優だそうだ。]
+  - meaning_ko: 여배우
+  - example_ko: 그녀는 유명한 여배우라고 한다.
+- id: 3984 | level: N3 | [処理 / しょり , 僕は事故を処理した。]
+  - meaning_ko: 처리
+  - example_ko: 나는 사고를 처리했다.
+- id: 3988 | level: N3 | [書類 / しょるい , 必要書類を提出してください。]
+  - meaning_ko: 서류
+  - example_ko: 필요한 서류를 제출하십시오.
+- id: 3995 | level: N3 | [知らせ / しらせ , サイレンが急変を知らせました。]
+  - meaning_ko: 알아채다
+  - example_ko: 사이렌이 급변을 알렸다.
+- id: 3999 | level: N3 | [尻 / しり , 彼は尻尾を巻いて逃げた。]
+  - meaning_ko: 엉덩이
+  - example_ko: 그는 꼬리를 감고 도망쳤다.
+- id: 4004 | level: N3 | [知合い / しりあい , ]
+  - meaning_ko: 아는 사람
+- id: 4011 | level: N3 | [印 / しるし , 矢印は東京へ行く道を示す。]
+  - meaning_ko: 표시
+  - example_ko: 화살표는 도쿄로 가는 길을 나타낸다.
+- id: 4014 | level: N3 | [城 / しろ , あの村が敵の最後の牙城です。]
+  - meaning_ko: 성
+  - example_ko: 그 마을이 적의 마지막 아성입니다.
+- id: 4020 | level: N3 | [進学 / しんがく , 彼は大学院に進学しないだろう。]
+  - meaning_ko: 대학에 진학하다
+  - example_ko: 그는 대학원에 진학하지 않을 것이다.
+- id: 4024 | level: N3 | [神経 / しんけい , 母は神経痛が快癒した。]
+  - meaning_ko: 신경 이상
+  - example_ko: 어머니는 신경통이 쾌유했다.
+- id: 4029 | level: N3 | [真剣 / しんけん , 彼女はいつも真剣な表情をしている。]
+  - meaning_ko: 진지함
+  - example_ko: 그녀는 언제나 진지한 표정을 하고 있다.
+- id: 4036 | level: N3 | [信仰 / しんこう , 母はキリスト教を信仰している。]
+  - meaning_ko: (종교적) 신앙
+  - example_ko: 어머니는 기독교를 믿는다.
+- id: 4041 | level: N3 | [信号 / しんごう , 赤信号みんなで渡れば怖くない。]
+  - meaning_ko: 교통 신호등
+  - example_ko: 빨간 신호 모두 건너면 무섭지 않다.
+- id: 4046 | level: N3 | [人工 / じんこう , 非配偶者間人工授精を受けました。]
+  - meaning_ko: 인공의
+  - example_ko: 비배우자간 인공수정을 받았습니다.
+- id: 4050 | level: N3 | [深刻 / しんこく , 彼の病気は深刻だ。]
+  - meaning_ko: 심각한
+  - example_ko: 그의 병은 심각하다.
+- id: 4057 | level: N3 | [診察 / しんさつ , 彼女は綿密な診察を受けた。]
+  - meaning_ko: (환자의) 건강진단
+  - example_ko: 그녀는 면밀한 진찰을 받았다.
+- id: 4061 | level: N3 | [人種 / じんしゅ , 彼は人種差別と戦った。]
+  - meaning_ko: 인종(사람의)
+  - example_ko: 그는 인종차별과 싸웠다.
+- id: 4066 | level: N3 | [信じる / しんじる , 僕は君を信じる。]
+  - meaning_ko: 믿다
+  - example_ko: 나는 너를 믿는다.
+- id: 4071 | level: N3 | [人生 / じんせい , 多くの人が目的なく人生を漂う。]
+  - meaning_ko: (인간) 생명 (예:
+  - example_ko: 많은 사람들이 목적 없이 삶을 감돌게 된다.
+- id: 4076 | level: N3 | [親戚 / しんせき , 彼は彼女の遠い親戚だ。]
+  - meaning_ko: 친척
+  - example_ko: 그는 그녀의 먼 친척이다.
+- id: 4079 | level: N3 | [新鮮 / しんせん , 毎日新鮮な野菜サラダを食べてます。]
+  - meaning_ko: 신선한
+  - example_ko: 매일 신선한 야채 샐러드를 먹는다.
+- id: 4082 | level: N3 | [心臓 / しんぞう , 彼女は心臓が悪かった。]
+  - meaning_ko: 마음
+  - example_ko: 그녀는 심장이 나빴다.
+- id: 4089 | level: N3 | [身体 / しんたい , 彼らは川で身体を洗った。]
+  - meaning_ko: 몸
+  - example_ko: 그들은 강에서 몸을 씻었다.
+- id: 4097 | level: N3 | [身長 / しんちょう , 彼は彼女と同じ身長だ。]
+  - meaning_ko: 높이 (몸의)
+  - example_ko: 그는 그녀와 같은 키다.
+- id: 4102 | level: N3 | [慎重 / しんちょう , 本は慎重に選びなさい。]
+  - meaning_ko: 주의 깊은
+  - example_ko: 책은 신중하게 선택하십시오.
+- id: 4106 | level: N3 | [審判 / しんぱん , 審判は彼を勝者と認めた。]
+  - meaning_ko: 판정자
+  - example_ko: 심판은 그를 우승자로 인정했다.
+- id: 4110 | level: N3 | [人物 / じんぶつ , 人物画を描けるスクールを探しています。]
+  - meaning_ko: 성격
+  - example_ko: 인물화를 그릴 수 있는 스쿨을 찾고 있습니다.
+- id: 4115 | level: N3 | [進歩 / しんぽ , 文明の進歩がとても速い。]
+  - meaning_ko: 개선
+  - example_ko: 문명의 진보가 매우 빠릅니다.
+- id: 4119 | level: N3 | [親友 / しんゆう , 親友は何人いる？]
+  - meaning_ko: 친한 친구
+  - example_ko: 가장 친한 친구는 몇 명입니까?
+- id: 4125 | level: N3 | [信用 / しんよう , 「信用して」と彼は言った。]
+  - meaning_ko: 신뢰
+  - example_ko: "신용해"라고 그는 말했다.
+- id: 4130 | level: N3 | [信頼 / しんらい , お互いを信頼し合うしかない。]
+  - meaning_ko: 신뢰
+  - example_ko: 서로를 신뢰할 수밖에 없다.
+- id: 4135 | level: N3 | [心理 / しんり , 彼女は児童心理学専攻だ。]
+  - meaning_ko: 심리
+  - example_ko: 그녀는 아동 심리학 전공이다.
+- id: 4139 | level: N3 | [人類 / じんるい , 病気は人類にとって脅威である。]
+  - meaning_ko: 인류
+  - example_ko: 질병은 인류에게 위협입니다.
+- id: 4142 | level: N3 | [巣 / す , 世界は奇人の巣だ。]
+  - meaning_ko: 둥지
+  - example_ko: 세계는 기인의 둥지다.
+- id: 4146 | level: N3 | [酢 / す , 酢は嫌いです。]
+  - meaning_ko: 식초
+  - example_ko: 식초는 싫어.
+- id: 4150 | level: N3 | [図 / ず , 路線地図をもらえますか。]
+  - meaning_ko: 수치
+  - example_ko: 노선지도를 받을 수 있습니까?
+- id: 4155 | level: N3 | [水準 / すいじゅん , 彼は水準を満たしていなかった。]
+  - meaning_ko: 수준
+  - example_ko: 그는 수준을 충족시키지 못했다.
+- id: 4158 | level: N3 | [推薦 / すいせん , 彼は私にこの辞書を推薦してくれた。]
+  - meaning_ko: 추천
+  - example_ko: 그는 나에게이 사전을 추천해 주었다.
+- id: 4163 | level: N3 | [スイッチ / スイッチ , 必ずテレビのスイッチを切りなさい。]
+  - meaning_ko: 스위치
+  - example_ko: 반드시 텔레비전 스위치를 끄십시오.
+- id: 4169 | level: N3 | [睡眠 / すいみん , 風邪には睡眠が最良の薬です。]
+  - meaning_ko: 잠
+  - example_ko: 감기에는 수면이 가장 좋은 약입니다.
+- id: 4173 | level: N3 | [数 / すう , 理論的には、私は数学をしている。]
+  - meaning_ko: 숫자
+  - example_ko: 이론적으로, 나는 수학을하고 있습니다.
+- id: 4178 | level: N3 | [数字 / すうじ , 数字を合計して下さい。]
+  - meaning_ko: 숫자
+  - example_ko: 숫자를 합산하십시오.
+- id: 4185 | level: N3 | [スープ / スープ , 彼女は冷えたスープを夕食に暖めた。]
+  - meaning_ko: (서양) 수프
+  - example_ko: 그녀는 차가운 수프를 저녁 식사로 데웠다.
+- id: 4193 | level: N3 | [末 / すえ , 良い週末を。]
+  - meaning_ko: 끝
+  - example_ko: 좋은 주말을.
+- id: 4197 | level: N3 | [姿 / すがた , 正門前には、まだ人の姿もない。]
+  - meaning_ko: 수치
+  - example_ko: 정문 앞에는 아직 사람의 모습도 없다.
+- id: 4203 | level: N3 | [スキー / スキー , スキーをしたら、足を骨折したんだ。]
+  - meaning_ko: 스키
+  - example_ko: 스키를 하면 다리를 골절했다.
+- id: 4209 | level: N3 | [救う / すくう , 彼は彼女を救うために命をかけた。]
+  - meaning_ko: 에서 구출하다
+  - example_ko: 그는 그녀를 구하기 위해 목숨을 걸었다.
+- id: 4214 | level: N3 | [すくなくとも / すくなくとも , 弟は超重要人物だ。すくなくとも奴はそう思っている。]
+  - meaning_ko: 적어도
+  - example_ko: 동생은 매우 중요한 인물이다. 어쨌든 놈은 그렇게 생각하고 있다.
+- id: 4219 | level: N3 | [優れる / すぐれる , ]
+  - meaning_ko: 능가하다
+- id: 4223 | level: N3 | [スケート / スケート , 彼女はスケートが出来る。]
+  - meaning_ko: 홍어)
+  - example_ko: 그녀는 스케이트를 할 수 있다.
+- id: 4225 | level: N3 | [スケジュール / スケジュール , 電車はスケジュール通りに駅を出た。]
+  - meaning_ko: 일정
+  - example_ko: 기차는 일정대로 역을 나왔다.
+- id: 4232 | level: N3 | [少しも / すこしも , 僕は少しも幸せじゃない。]
+  - meaning_ko: 무엇이든
+  - example_ko: 나는 조금도 행복하지 않다.
+- id: 4237 | level: N3 | [過ごす / すごす , 彼女は余暇を人形を作って過ごす。]
+  - meaning_ko: 통과하다
+  - example_ko: 그녀는 여가를 인형을 만들고 보낸다.
+- id: 4241 | level: N3 | [筋 / すじ , 彼の首筋を血がすっと伝った。]
+  - meaning_ko: 근
+  - example_ko: 그의 목덜미를 피가 완전히 전했다.
+- id: 4245 | level: N3 | [進める / すすめる , もう少し前へ進める気がする。]
+  - meaning_ko: 전진하다
+  - example_ko: 좀 더 앞으로 나아갈 것 같다.
+- id: 4252 | level: N3 | [勧める / すすめる , 誰かに自殺を勧めることは犯罪ですか？]
+  - meaning_ko: (누군가에게) (무엇을) 하도록 촉구하다
+  - example_ko: 누군가에게 자살을 권하는 것은 범죄입니까?
+- id: 4257 | level: N3 | [スター / スター , 僕はスタートで一番遅れた。]
+  - meaning_ko: 별
+  - example_ko: 나는 시작에서 가장 늦었다.
+- id: 4261 | level: N3 | [スタイル / スタイル , 彼女はスタイルが悪い。]
+  - meaning_ko: 스타일
+  - example_ko: 그녀는 스타일이 나쁘다.
+- id: 4266 | level: N3 | [スタンド / スタンド , ニューススタンドで買えますよ。]
+  - meaning_ko: 서다
+  - example_ko: 뉴스 스탠드에서 살 수 있습니다.
+- id: 4272 | level: N3 | [頭痛 / ずつう , 頭痛がする。]
+  - meaning_ko: 두통
+  - example_ko: 두통이 난다.
+- id: 4277 | level: N3 | [ずっと / ずっと , 午後はずっと友人とおしゃべりをして過ごした。]
+  - meaning_ko: 오랫동안
+  - example_ko: 오후는 쭉 친구들과 얘기를 하고 지냈다.
+- id: 4281 | level: N3 | [すっぱい / すっぱい , 酢はすっぱい味がする。]
+  - meaning_ko: 시큼한
+  - example_ko: 식초는 맛을 낸다.
+- id: 4286 | level: N3 | [すてき / すてき , 彼女は今はすてきなドレスを着ている。]
+  - meaning_ko: 사랑스러운
+  - example_ko: 그녀는 지금 멋진 드레스를 입고 있습니다.
+- id: 4290 | level: N3 | [既に / すでに , 彼女は既にその話を知っていた。]
+  - meaning_ko: 벌써 (も도 마찬가지)
+  - example_ko: 그녀는 이미 그 이야기를 알고 있었다.
+- id: 4295 | level: N3 | [すなわち / すなわち , 彼は天文学、すなわち星の研究をしている。]
+  - meaning_ko: 즉
+  - example_ko: 그는 천문학, 즉 별을 연구하고 있습니다.
+- id: 4299 | level: N3 | [スピーチ / スピーチ , 彼らは順番にスピーチした。]
+  - meaning_ko: 연설
+  - example_ko: 그들은 차례로 연설했다.
+- id: 4303 | level: N3 | [全て / すべて , 学校に全てを求めることはできない。]
+  - meaning_ko: 모두
+  - example_ko: 학교에 모든 것을 요구할 수는 없다.
+- id: 4310 | level: N3 | [済ませる / すませる , 英語の辞書なしで済ませることができますか。]
+  - meaning_ko: 끝나다
+  - example_ko: 영어 사전없이 끝낼 수 있습니까?
+- id: 4313 | level: N3 | [角 / すみ , アリさん、今日もご苦労さんだよ。はい、角砂糖あげるよ。]
+  - meaning_ko: 모서리
+  - example_ko: 개미씨, 오늘도 고생씨야. 네, 각설탕을 줄게요.
+- id: 4318 | level: N3 | [墨 / すみ , その画家は唐墨で描いた。]
+  - meaning_ko: 잉크
+  - example_ko: 그 화가는 당묵으로 그렸다.
+- id: 4322 | level: N3 | [すみません (かん) / すみません (かん) , ]
+  - meaning_ko: 죄송합니다
+- id: 4326 | level: N3 | [澄む / すむ , ]
+  - meaning_ko: 지우다(예:
+- id: 4330 | level: N3 | [清む / すむ , ]
+  - meaning_ko: 지우다(예:
+- id: 4340 | level: N3 | [刷る / する , ]
+  - meaning_ko: 인쇄하다
+- id: 4345 | level: N3 | [為る / する , 今日、東京はとても寒く為るでしょう。]
+  - meaning_ko: 할 일
+  - example_ko: 오늘 도쿄는 매우 추워질 것입니다.
+- id: 4349 | level: N3 | [鋭い / するどい , 嗅覚は鋭いです。]
+  - meaning_ko: 뾰족한
+  - example_ko: 후각은 날카롭다.
+- id: 4356 | level: N3 | [すれ違う / すれちがう , 彼女は通りですれ違う時に私に微笑みかけた。]
+  - meaning_ko: 서로 지나가다
+  - example_ko: 그녀는 거리에서 다를 때 나에게 미소를 지었다.
+- id: 4361 | level: N3 | [ずれる / ずれる , 来週天気がくずれることはないでしょう。]
+  - meaning_ko: 이동하다
+  - example_ko: 다음 주 날씨가 망가지지 않을 것입니다.
+- id: 4366 | level: N3 | [正 / せい , あなたは正しい。]
+  - meaning_ko: (논리적) 사실
+  - example_ko: 당신은 맞습니다.
+- id: 4371 | level: N3 | [生 / せい , 生物学は好きになれません。]
+  - meaning_ko: 출생
+  - example_ko: 생물학은 좋아할 수 없습니다.
+- id: 4376 | level: N3 | [性 / せい , でも可能性は低そうだね。]
+  - meaning_ko: 섹스
+  - example_ko: 하지만 가능성은 낮을 것 같네요.
+- id: 4380 | level: N3 | [姓 / せい , 彼の両親はお百姓でした。]
+  - meaning_ko: 성
+  - example_ko: 그의 부모는 백성이었습니다.
+- id: 4385 | level: N3 | [所為 / せい , それは実際君の所為である。]
+  - meaning_ko: 원인
+  - example_ko: 저것은 진짜 너의 소위이다.
+- id: 4390 | level: N3 | [税 / ぜい , 利益は税金抜きですか。]
+  - meaning_ko: 세
+  - example_ko: 이익은 세금 제외입니까?
+- id: 4395 | level: N3 | [性格 / せいかく , 夢は我々の性格の試金石である。]
+  - meaning_ko: 성격
+  - example_ko: 꿈은 우리의 성격의 시금석이다.
+- id: 4403 | level: N3 | [正確 / せいかく , 僕の時計は正確だ。]
+  - meaning_ko: 정확한
+  - example_ko: 내 시계는 정확하다.
+- id: 4408 | level: N3 | [世紀 / せいき , 百年は一世紀と呼ばれる。]
+  - meaning_ko: 세기
+  - example_ko: 백년은 1세기로 불린다.
+- id: 4412 | level: N3 | [請求 / せいきゅう , 必要なだけのお金を私に請求してよい。]
+  - meaning_ko: 주장하다
+  - example_ko: 필요한만큼 돈을 저에게 청구할 수 있습니다.
+- id: 4416 | level: N3 | [税金 / ぜいきん , 利益は税金抜きですか。]
+  - meaning_ko: 세
+  - example_ko: 이익은 세금 제외입니까?
+- id: 4421 | level: N3 | [清潔 / せいけつ , 部屋を清潔にしておきなさい。]
+  - meaning_ko: 깨끗한
+  - example_ko: 방을 정화하십시오.
+- id: 4425 | level: N3 | [制限 / せいげん , 彼は会員数を２０に制限した。]
+  - meaning_ko: 제한
+  - example_ko: 그는 회원수를 20으로 제한했다.
+- id: 4430 | level: N3 | [成功 / せいこう , 両親は彼を静めるのに成功した。]
+  - meaning_ko: 성공
+  - example_ko: 부모는 그를 진정시키는 데 성공했다.
+- id: 4435 | level: N3 | [正式 / せいしき , 彼女は夫と正式に離婚した。]
+  - meaning_ko: 공식적인
+  - example_ko: 그녀는 남편과 공식적으로 이혼했다.
+- id: 4440 | level: N3 | [性質 / せいしつ , 油は水に浮く性質がある。]
+  - meaning_ko: 자연
+  - example_ko: 기름은 물에 뜨는 성격이 있다.
+- id: 4445 | level: N3 | [精神 / せいしん , 条約の精神が没却されていた。]
+  - meaning_ko: 정신
+  - example_ko: 조약의 정신이 몰각되었다.
+- id: 4450 | level: N3 | [成人 / せいじん , 彼女は成人前に死んだ。]
+  - meaning_ko: 성인
+  - example_ko: 그녀는 성인 전에 죽었다.
+- id: 4455 | level: N3 | [精々 / せいぜい , ]
+  - meaning_ko: 기껏해야
+- id: 4461 | level: N3 | [成績 / せいせき , 明日成績表をもらいます。]
+  - meaning_ko: 등급(예:
+  - example_ko: 내일 성적표를 받습니다.
+- id: 4465 | level: N3 | [製造 / せいぞう , 大量の材木が紙の製造に使われている。]
+  - meaning_ko: 제조
+  - example_ko: 대량의 재목이 종이의 제조에 사용되고 있다.
+- id: 4470 | level: N3 | [贅沢 / ぜいたく , 贅沢な暮らしをしたい。]
+  - meaning_ko: 사치
+  - example_ko: 사치스러운 생활을 하고 싶다.
+- id: 4475 | level: N3 | [成長 / せいちょう , 米は暖かい気候の下で成長する。]
+  - meaning_ko: 성장
+  - example_ko: 밥은 온난한 기후의 밑에 발전한다.
+- id: 4480 | level: N3 | [生長 / せいちょう , ]
+  - meaning_ko: 성장
+- id: 4485 | level: N3 | [制度 / せいど , 彼らはその制度を改めた。]
+  - meaning_ko: 체계
+  - example_ko: 그들은 그 제도를 바꿨다.
+- id: 4490 | level: N3 | [青年 / せいねん , 彼は有望な青年です。]
+  - meaning_ko: 청년
+  - example_ko: 그는 유망한 청소년입니다.
+- id: 4497 | level: N3 | [生年月日 / せいねんがっぴ , あなたの生年月日を書きなさい。]
+  - meaning_ko: 생년월일
+  - example_ko: 당신의 생년월일을 적으십시오.
+- id: 4503 | level: N3 | [製品 / せいひん , 私の見た限りでは、なかなか良い製品だ。]
+  - meaning_ko: 제조품
+  - example_ko: 내가 본 한에서는 꽤 좋은 제품이다.
+- id: 4508 | level: N3 | [政府 / せいふ , 郵政事業は政府の独占事業です。]
+  - meaning_ko: 정부
+  - example_ko: 우정 사업은 정부의 독점 사업입니다.
+- id: 4511 | level: N3 | [生物 / せいぶつ , 竜は想像上の生物である。]
+  - meaning_ko: 생물
+  - example_ko: 용은 상상의 생물이다.
+- id: 4514 | level: N3 | [生命 / せいめい , 彼は生命保険をかけた。]
+  - meaning_ko: 삶
+  - example_ko: 그는 생명 보험을 걸었다.
+- id: 4519 | level: N3 | [整理 / せいり , 彼は部屋をきちんと整理した。]
+  - meaning_ko: 정렬
+  - example_ko: 그는 방을 제대로 정리했다.
+- id: 4521 | level: N3 | [咳 / せき , 妻の乾咳が気になります。]
+  - meaning_ko: 기침
+  - example_ko: 아내의 건침이 걱정됩니다.
+- id: 4525 | level: N3 | [石炭 / せきたん , 彼らは石炭をもやした。]
+  - meaning_ko: 석탄
+  - example_ko: 그들은 석탄을 제거했다.
+- id: 4530 | level: N3 | [責任 / せきにん , 連帯責任は無責任。]
+  - meaning_ko: 의무
+  - example_ko: 연대 책임은 무책임.
+- id: 4533 | level: N3 | [石油 / せきゆ , 列車は石油で走らせるのですか。]
+  - meaning_ko: 기름
+  - example_ko: 기차는 석유로 달릴 수 있습니까?
+- id: 4537 | level: N3 | [世間 / せけん , 彼女は世間知らずだ。]
+  - meaning_ko: 세계
+  - example_ko: 그녀는 세상 모르겠다.
+- id: 4540 | level: N3 | [説 / せつ , 説明もできないよ。]
+  - meaning_ko: 이론
+  - example_ko: 설명도 할 수 없어.
+- id: 4544 | level: N3 | [積極的 / せっきょくてき , 民主主義は自由を積極的に認める。]
+  - meaning_ko: 긍정적인
+  - example_ko: 민주주의는 자유를 적극적으로 인정한다.
+- id: 4548 | level: N3 | [設計 / せっけい , 彼がその車を設計した。]
+  - meaning_ko: 계획
+  - example_ko: 그는 그 차를 디자인했다.
+- id: 4551 | level: N3 | [絶対 / ぜったい , 「先生の容態は？」「絶対安静だ」]
+  - meaning_ko: 분명히
+  - example_ko: 「선생님의 용태는?」 「절대 안정이다」
+- id: 4554 | level: N3 | [セット / セット , 目覚ましを７時にセットしよう。]
+  - meaning_ko: 세트
+  - example_ko: 알람을 7시에 설정합시다.
+- id: 4558 | level: N3 | [愛 / あい , 愛してる。]
+  - meaning_ko: 사랑
+  - example_ko: 사랑해.
+- id: 4562 | level: N3 | [相変わらず / あいかわらず , 父は相変わらず元気です。]
+  - meaning_ko: 언제나처럼
+  - example_ko: 아버지는 여전히 괜찮습니다.
+- id: 4566 | level: N3 | [愛情 / あいじょう , 彼女は両親の愛情を独占した。]
+  - meaning_ko: 사랑
+  - example_ko: 그녀는 부모의 애정을 독점했다.
+- id: 4569 | level: N3 | [合図 / あいず , 彼女は私に黙っているように合図した。]
+  - meaning_ko: 징후
+  - example_ko: 그녀는 나에게 침묵하는 것처럼 신호했다.
+- id: 4571 | level: N3 | [アイスクリーム / アイスクリーム , 彼女はアイスクリームが好きだ。]
+  - meaning_ko: 아이스크림
+  - example_ko: 그녀는 아이스크림을 좋아한다.
+- id: 4584 | level: N3 | [愛する / あいする , 彼らは平和を愛する国民である。]
+  - meaning_ko: 사랑하다
+  - example_ko: 그들은 평화를 사랑하는 국민이다.
+- id: 4587 | level: N3 | [相手 / あいて , 相手が悪かったな。]
+  - meaning_ko: 파트너
+  - example_ko: 상대가 나빴다.
+- id: 4590 | level: N3 | [あいにく / あいにく , 私は彼を訪ねたがあいにく留守だった。]
+  - meaning_ko: 안타깝게도
+  - example_ko: 나는 그를 방문했지만 불행히도 보류했다.
+- id: 4593 | level: N3 | [遭う / あう , 見つかったらひどい目に遭うぞ。]
+  - meaning_ko: 만나다
+  - example_ko: 발견되면 끔찍한 눈을 당할거야.
+- id: 4597 | level: N3 | [アウト / アウト , ログアウトするんじゃなかったよ。]
+  - meaning_ko: 밖으로
+  - example_ko: 로그 아웃하지 않았어.
+- id: 4600 | level: N3 | [明かり / あかり , 明かり窓に届かない。]
+  - meaning_ko: 등불
+  - example_ko: 불빛 창에 닿지 않는다.
+- id: 4605 | level: N3 | [空き / あき , 彼女は空き地に駐車した。]
+  - meaning_ko: 빈방 있음
+  - example_ko: 그녀는 빈 땅에 주차했다.
+- id: 4610 | level: N3 | [明らか / あきらか , 明らかに彼は答えを知っている。]
+  - meaning_ko: 분명한
+  - example_ko: 분명히 그는 대답을 알고 있습니다.
+- id: 4615 | level: N3 | [諦める / あきらめる , 失敗しても諦めるな。]
+  - meaning_ko: 포기하다
+  - example_ko: 실패해도 포기하지 마라.
+- id: 4624 | level: N3 | [飽きる / あきる , 刺身もこう毎日だと飽きるな。]
+  - meaning_ko: 피곤하다
+  - example_ko: 사시미도 이렇게 매일이라고 질리지 마.
+- id: 4627 | level: N3 | [握手 / あくしゅ , 彼らはおたがい握手をした。]
+  - meaning_ko: 악수
+  - example_ko: 그들은 두꺼운 악수를 했다.
+- id: 4632 | level: N3 | [悪魔 / あくま , 女は悪魔の宴へと向かう。]
+  - meaning_ko: 악마
+  - example_ko: 여자는 악마의 연회로 향한다.
+- id: 4640 | level: N3 | [明ける / あける , 夜が明ける。]
+  - meaning_ko: 새벽까지
+  - example_ko: 밤이 밝다.
+- id: 4645 | level: N3 | [揚げる / あげる , 得手に帆を揚げる。]
+  - meaning_ko: 들어 올리다
+  - example_ko: 득수에게 돛을 튀긴다.
+- id: 4654 | level: N3 | [挙げる / あげる , 私は一ヶ月後に結婚式を挙げる。]
+  - meaning_ko: 키우다
+  - example_ko: 한 달 후 결혼식을 꼽는다.
+- id: 4661 | level: N3 | [預かる / あずかる , 銀行は人の金を預かる。]
+  - meaning_ko: (누군가)를 위해 (무엇)을 유지하다
+  - example_ko: 은행은 사람의 돈을 맡는다.
+- id: 4667 | level: N3 | [預ける / あずける , 彼にそのような大金を預けるな。]
+  - meaning_ko: 구금하다
+  - example_ko: 그에게 그런 돈을 맡기지 마라.
+- id: 4671 | level: N3 | [汗 / あせ , 脇の下に汗をかいた。]
+  - meaning_ko: 땀
+  - example_ko: 겨드랑이에 땀을 흘렸다.
+- id: 4676 | level: N3 | [与える / あたえる , サブロンは肌に潤いを与えるクリームです。]
+  - meaning_ko: 주다
+  - example_ko: 사브론은 피부에 수분을주는 크림입니다.
+- id: 4680 | level: N3 | [温かい / あたたかい , 彼は温かい心の持ち主です。]
+  - meaning_ko: 따뜻한
+  - example_ko: 그는 따뜻한 마음의 소유자입니다.
+- id: 4687 | level: N3 | [暖まる / あたたまる , この部屋はすぐに暖まる。]
+  - meaning_ko: 워밍업하다
+  - example_ko: 이 방은 빨리 데워진다.
+- id: 4692 | level: N3 | [温まる / あたたまる , スープが温まるまで待ちなさい。]
+  - meaning_ko: 몸을 따뜻하게 하다
+  - example_ko: 수프가 따뜻해질 때까지 기다리십시오.
+- id: 4697 | level: N3 | [暖める / あたためる , この手袋が彼女の手を暖める。]
+  - meaning_ko: (누군가/무엇에게) 따뜻하게 하다
+  - example_ko: 이 장갑이 그녀의 손을 데우는.
+- id: 4702 | level: N3 | [温める / あたためる , 氷を温めるととける。]
+  - meaning_ko: 따뜻하게하다
+  - example_ko: 얼음을 따뜻하게 녹인다.
+- id: 4707 | level: N3 | [辺り / あたり , 辺りをよく見なさい。]
+  - meaning_ko: 부근
+  - example_ko: 주변을 잘 보십시오.
+- id: 4712 | level: N3 | [当たり前 / あたりまえ , 腹を立てるのも当たり前だな。]
+  - meaning_ko: 평소
+  - example_ko: 화를 내는 것도 당연하다.
+- id: 4714 | level: N3 | [当たる / あたる , 誰しもがぶち当たるダイエットの壁。]
+  - meaning_ko: 맞다
+  - example_ko: 누구나 부딪히는 다이어트 벽.
+- id: 4720 | level: N3 | [あちこち / あちこち , 彼女は地球のあちこちを旅行した。]
+  - meaning_ko: 이리저리
+  - example_ko: 그녀는 지구 곳곳을 여행했다.
+- id: 4727 | level: N3 | [扱う / あつかう , 歴史は過去を扱う。]
+  - meaning_ko: 치료하다
+  - example_ko: 역사는 과거를 다룬다.
+- id: 4732 | level: N3 | [集まり / あつまり , 明日集まりましょう。]
+  - meaning_ko: 모임
+  - example_ko: 내일 모이자.
+- id: 4737 | level: N3 | [当てる / あてる , 研究開発にお金を割り当てる。]
+  - meaning_ko: 치다
+  - example_ko: 연구 개발에 돈을 할당합니다.
+- id: 4742 | level: N3 | [跡 / あと , 腕の傷は跡を残した。]
+  - meaning_ko: 추적하다
+  - example_ko: 팔의 상처는 흔적을 남겼다.
+- id: 4747 | level: N3 | [穴 / あな , 兵士は穴の中に避難した。]
+  - meaning_ko: 구멍
+  - example_ko: 군인은 구멍에 대피했다.
+- id: 4752 | level: N3 | [油 / あぶら , 罠かもしれん、油断するな。]
+  - meaning_ko: 기름
+  - example_ko: 함정일지도 모르지만 방심하지 마라.
+- id: 4757 | level: N3 | [脂 / あぶら , あたし、低脂肪乳ね。]
+  - meaning_ko: 지방
+  - example_ko: 나, 저지방 우유.
+- id: 4762 | level: N3 | [誤り / あやまり , 彼女は私の誤りを指摘した。]
+  - meaning_ko: 오류
+  - example_ko: 그녀는 내 실수를 지적했다.
+- id: 4767 | level: N3 | [粗 / あら , 彼は態度が粗野だ。]
+  - meaning_ko: 결함
+  - example_ko: 그는 태도가 조야다.
+- id: 4772 | level: N3 | [嵐 / あらし , 近いうちに嵐になりそうだ。]
+  - meaning_ko: 폭풍
+  - example_ko: 조만간 폭풍이 될 것 같다.
+- id: 4777 | level: N3 | [争う / あらそう , わずかな額のことで言い争うのはよせ。]
+  - meaning_ko: 논쟁하다
+  - example_ko: 약간의 이마로 싸우는 것은 좋다.
+- id: 4781 | level: N3 | [新た / あらた , 明日はまた新たな日がやってくる。]
+  - meaning_ko: 새로운
+  - example_ko: 내일은 또 새로운 날이 올 것이다.
+- id: 4786 | level: N3 | [あらゆる / あらゆる , 母と私は、あらゆる点で違う。]
+  - meaning_ko: 모두
+  - example_ko: 어머니와 나는 모든면에서 다릅니다.
+- id: 4792 | level: N3 | [表す / あらわす , 沈黙は同意を表す。]
+  - meaning_ko: 표현하다
+  - example_ko: 침묵은 동의를 나타낸다.
+- id: 4796 | level: N3 | [現す / あらわす , 早晩彼女は姿を現すだろう。]
+  - meaning_ko: 보여주기 위해
+  - example_ko: 이른 저녁 그녀는 모습을 나타낼 것이다.
+- id: 4800 | level: N3 | [著す / あらわす , ]
+  - meaning_ko: 쓰다
+- id: 4805 | level: N3 | [現れ / あらわれ , 夜行ったことは昼現れる。]
+  - meaning_ko: 표현
+  - example_ko: 밤에 간 것은 낮에 나타난다.
+- id: 4812 | level: N3 | [現れる / あらわれる , 夜行ったことは昼現れる。]
+  - meaning_ko: 나타나다 (v.i.)
+  - example_ko: 밤에 간 것은 낮에 나타난다.
+- id: 4815 | level: N3 | [ありがとう / ありがとう , ありがとうございます！]
+  - meaning_ko: 감사합니다
+  - example_ko: 감사합니다!
+- id: 4822 | level: N3 | [在る; 有る / ある , ]
+  - meaning_ko: 살기 위해
+- id: 4827 | level: N3 | [或 / ある , 君に或る物を見せましょう。]
+  - meaning_ko: 특정...
+  - example_ko: 너에게 어떤 것을 보여주자.
+- id: 4829 | level: N3 | [あるいは / あるいは , 明日あるいは晴れるかもしれない。]
+  - meaning_ko: 또는
+  - example_ko: 내일 혹은 맑을지도 모른다.
+- id: 4834 | level: N3 | [アルバム / アルバム , 彼女は私にアルバムを買ってくれた。]
+  - meaning_ko: 앨범
+  - example_ko: 그녀는 나에게 앨범을 샀다.
+- id: 4839 | level: N3 | [泡 / あわ , 泡はみるみる無くなった。]
+  - meaning_ko: 거품
+  - example_ko: 거품은 보통 없어졌다.
+- id: 4844 | level: N3 | [合わせる / あわせる , ２．身頃の肩を縫い合わせる。]
+  - meaning_ko: 결합하다
+  - example_ko: 2. 길의 어깨를 바느질한다.
+- id: 4851 | level: N3 | [慌てる / あわてる , 慌てることは無駄を作る。]
+  - meaning_ko: 당황하다, 당황하다
+  - example_ko: 당황하는 것은 낭비를 만든다.
+- id: 4856 | level: N3 | [哀れ / あわれ , 僕の哀れな心は痛む。]
+  - meaning_ko: 어찌할 수 없는
+  - example_ko: 나의 불쌍한 마음은 아프다.
+- id: 4861 | level: N3 | [案 / あん , それは確かに一案です。]
+  - meaning_ko: 계획
+  - example_ko: 확실히 한 방안입니다.
+- id: 4866 | level: N3 | [案外 / あんがい , 案外、この本は読みやすいね。]
+  - meaning_ko: 뜻밖에
+  - example_ko: 의외로, 이 책은 읽기 쉽다.
+- id: 4872 | level: N3 | [暗記 / あんき , 僕は啄木の詩の多くを暗記した。]
+  - meaning_ko: 암기
+  - example_ko: 나는 굉장한 시의 많은 것을 암기했다.
+- id: 4874 | level: N3 | [安定 / あんてい , 彼は安定を失って倒れた。]
+  - meaning_ko: 안정
+  - example_ko: 그는 안정을 잃고 쓰러졌다.
+- id: 4882 | level: N3 | [あんなに / あんなに , 彼等にあんなに迷惑をかけて申し訳無い。]
+  - meaning_ko: 그 정도
+  - example_ko: 그들에게 그렇게 폐를 끼쳐 죄송합니다.
+- id: 4887 | level: N3 | [あんまり / あんまり , 父はあんまり果物を食べません。]
+  - meaning_ko: 별로
+  - example_ko: 아버지는 너무 과일을 먹지 않습니다.
+- id: 4892 | level: N3 | [胃 / い , 目は胃袋より大きい。]
+  - meaning_ko: 위
+  - example_ko: 눈은 위 ​​부대보다 크다.
+- id: 4896 | level: N3 | [委員 / いいん , 報告書は委員会によって作成されている。]
+  - meaning_ko: 위원회 위원
+  - example_ko: 보고서는 위원회에 의해 작성되었다.
+- id: 4900 | level: N3 | [意外 / いがい , 問題は意外にやさしかったよ。]
+  - meaning_ko: 예기치 않은
+  - example_ko: 문제는 의외로 쉬웠다.
+- id: 4905 | level: N3 | [行き / いき , 学校へ行きたくない。]
+  - meaning_ko: 가고 있다
+  - example_ko: 학교에 가고 싶지 않아.
+- id: 4916 | level: N3 | [息 / いき , 小学５年の息子が静岡から名古屋の小学校に転入しました。]
+  - meaning_ko: 호흡
+  - example_ko: 초등학교 5년의 아들이 시즈오카에서 나고야의 초등학교에 전입했습니다.
+- id: 4921 | level: N3 | [勢い / いきおい , 彼の出世は怒濤の勢いだ。]
+  - meaning_ko: 힘
+  - example_ko: 그의 출세는 분노의 기세다.
+- id: 4925 | level: N3 | [生き物 / いきもの , 人間は感情の生き物である。]
+  - meaning_ko: 생물
+  - example_ko: 인간은 감정의 생물이다.
+- id: 4932 | level: N3 | [いけない / いけない , 職業に貴賎をつけちゃいけないよ～。]
+  - meaning_ko: 해서는 안 된다
+  - example_ko: 직업에 귀호를 붙이면 안돼~.
+- id: 4936 | level: N3 | [医師 / いし , 彼の職業は医師だ。]
+  - meaning_ko: 의사
+  - example_ko: 그의 직업은 의사다.
+- id: 4941 | level: N3 | [意思 / いし , 彼は英語で自分の意思を伝えられる。]
+  - meaning_ko: 의도
+  - example_ko: 그는 영어로 자신의 의사를 전할 수 있다.
+- id: 4946 | level: N3 | [意志 / いし , 意志あるところには道がある。]
+  - meaning_ko: ~ 할 것이다
+  - example_ko: 의지 있는 곳에는 길이 있다.
+- id: 4951 | level: N3 | [維持 / いじ , 彼らはエアロビクスで元気を維持している。]
+  - meaning_ko: 유지
+  - example_ko: 그들은 에어로빅에서 건강을 유지하고 있습니다.
+- id: 4956 | level: N3 | [意識 / いしき , 彼女は病院で意識を取り戻した。]
+  - meaning_ko: 의식
+  - example_ko: 그녀는 병원에서 의식을 되찾았다.
+- id: 4961 | level: N3 | [異常 / いじょう , 僕は異常な物音を聞いた。]
+  - meaning_ko: 기묘
+  - example_ko: 나는 비정상적인 소리를 들었다.
+- id: 4964 | level: N3 | [意地悪 / いじわる , 彼女は意地悪女だ。]
+  - meaning_ko: 악의 있는
+  - example_ko: 그녀는 의지 악녀이다.
+- id: 4969 | level: N3 | [泉 / いずみ , 自民党が小泉人気の尻馬に乗った。]
+  - meaning_ko: 봄
+  - example_ko: 자민당이 고이즈미 인기의 후리마를 탔다.
+- id: 4974 | level: N3 | [いずれ / いずれ , 彼はいずれその秘密を知るでしょう。]
+  - meaning_ko: 어디
+  - example_ko: 그는 모두 그 비밀을 알 것입니다.
+- id: 4979 | level: N3 | [以前 / いぜん , 最近、以前からある痔が痛みます。]
+  - meaning_ko: 과거에
+  - example_ko: 최근, 이전부터 있는 치질이 아파요.
+- id: 4987 | level: N3 | [板 / いた , 良酒は看板を要せず。]
+  - meaning_ko: 판자
+  - example_ko: 양주는 간판을 필요로 하지 않고.
+- id: 4990 | level: N3 | [偉大 / いだい , 鈴木氏は偉大な科学者だ。]
+  - meaning_ko: 위대
+  - example_ko: 스즈키씨는 위대한 과학자다.
+- id: 4996 | level: N3 | [抱く / いだく , めんどりは卵がかえるまで抱く。]
+  - meaning_ko: 보유하다 (동사) (서술된 표현)
+  - example_ko: 멘도리는 계란이 바뀔 때까지 품는다.
+- id: 5000 | level: N3 | [いたずら / いたずら , 彼は友達にいたずらをした。]
+  - meaning_ko: 장난
+  - example_ko: 그는 친구에게 장난을 쳤다.
+- id: 5005 | level: N3 | [いただきます / いただきます , 諸設備の費用は払っていただきます。]
+  - meaning_ko: 식사 전 감사의 표현
+  - example_ko: 여러 설비의 비용은 지불하셔야 합니다.
+- id: 5008 | level: N3 | [痛み / いたみ , ここが差し込むように痛みます。]
+  - meaning_ko: 통증
+  - example_ko: 여기가 꽂는 것처럼 아프다.
+- id: 5012 | level: N3 | [至る / いたる , 彼は至る所で歓迎された。]
+  - meaning_ko: 올
+  - example_ko: 그는 곳곳에서 환영 받았다.
+- id: 5016 | level: N3 | [市 / いち , なんとかそこで支えよ。入市を許すな。]
+  - meaning_ko: 시장
+  - example_ko: 어떻게든 거기서 지지해라. 입시를 용서하지 마라.
+- id: 5020 | level: N3 | [位置 / いち , 日本は北半球に位置する。]
+  - meaning_ko: 장소
+  - example_ko: 일본은 북반구에 위치한다.
+- id: 5028 | level: N3 | [一時 / いちじ , 労働者は３週間一時解雇された。]
+  - meaning_ko: 한동안
+  - example_ko: 노동자는 3주간 일시 해고됐다.
+- id: 5033 | level: N3 | [一度に / いちどに , 両方一度にはできんよ。]
+  - meaning_ko: 한꺼번에
+  - example_ko: 둘 다 한번에 할 수 없어.
+- id: 5038 | level: N3 | [市場 / いちば , 贅沢品の市場は急速に成長している。]
+  - meaning_ko: 시장
+  - example_ko: 사치품 시장은 급속하게 성장하고 있다.
+- id: 5044 | level: N3 | [いつか / いつか , またいつか風のように走るんだ。]
+  - meaning_ko: 언젠가
+  - example_ko: 또 언젠가 바람처럼 달리는 거야.
+- id: 5048 | level: N3 | [一家 / いっか , 彼女が一家を支えている。]
+  - meaning_ko: 가족
+  - example_ko: 그녀가 일가를 지지하고 있다.
+- id: 5055 | level: N3 | [一種 / いっしゅ , 老化現象の一種です。]
+  - meaning_ko: 종
+  - example_ko: 노화 현상의 일종입니다.
+- id: 5060 | level: N3 | [一瞬 / いっしゅん , 多くの人々が一瞬のうちに殺された。]
+  - meaning_ko: 잠시
+  - example_ko: 많은 사람들이 순식간에 죽었다.
+- id: 5065 | level: N3 | [一生 / いっしょう , 落第しないように一生懸命勉強しなさい。]
+  - meaning_ko: (사람의) 일생 동안
+  - example_ko: 낙제하지 않도록 열심히 공부하십시오.
+- id: 5070 | level: N3 | [一層 / いっそう , 彼らは同じ大学に入ったので一層なかよくなった。]
+  - meaning_ko: 훨씬 더
+  - example_ko: 그들은 같은 대학에 들어갔기 때문에 더욱 좋아졌다.
+- id: 5076 | level: N3 | [一体 / いったい , 古賀、あんたの半生で一体何があったの？]
+  - meaning_ko: 하나의 개체
+  - example_ko: 코가, 너의 반생으로 도대체 무엇이 있었어?
+- id: 5078 | level: N3 | [一致 / いっち , 両極端は一致する。]
+  - meaning_ko: 합의
+  - example_ko: 양극단은 일치한다.
+- id: 5086 | level: N3 | [いつでも / いつでも , 僕の車いつでも使っていいよ。]
+  - meaning_ko: (에) 언제든지
+  - example_ko: 나의 차 언제라도 사용해도 좋다.
+- id: 5091 | level: N3 | [いつのまにか / いつのまにか , いつのまにか最下位になってた。]
+  - meaning_ko: 알기도 전에
+  - example_ko: 어느새 최하위가 되었다.
+- id: 5096 | level: N3 | [一般 / いっぱん , 労働者は一般に１日に８時間働く。]
+  - meaning_ko: 일반적인
+  - example_ko: 노동자는 일반적으로 하루에 8시간 일한다.
+- id: 5101 | level: N3 | [一方 / いっぽう , 彼女の親切に感謝する一方負担にも感じる。]
+  - meaning_ko: 반면에
+  - example_ko: 그녀의 친절에 감사하는 한편 부담에도 느낀다.
+- id: 5106 | level: N3 | [いつまでも / いつまでも , 彼はいつまでも泣き続けた。]
+  - meaning_ko: 영원히
+  - example_ko: 그는 언제까지나 계속 울었다.
+- id: 5111 | level: N3 | [移動 / いどう , 彼は机を右に移動させた。]
+  - meaning_ko: 이주
+  - example_ko: 그는 책상을 오른쪽으로 움직였다.
+- id: 5113 | level: N3 | [従兄弟 / いとこ , 彼らは、私の従兄弟です。]
+  - meaning_ko: 사촌(남자)
+  - example_ko: 그들은 내 종형제입니다.
+- id: 5118 | level: N3 | [従姉妹 / いとこ , 従姉妹の連絡先を教えられなくてごめん。]
+  - meaning_ko: 사촌(여)
+  - example_ko: 종자매의 연락처를 가르치지 못해서 미안.
+- id: 5122 | level: N3 | [稲 / いね , 雷には稲妻がつきものだ。]
+  - meaning_ko: 벼
+  - example_ko: 번개에는 번개가 붙는 것이다.
+- id: 5128 | level: N3 | [居眠り / いねむり , 彼は歴史の時間に居眠りをした。]
+  - meaning_ko: 졸다
+  - example_ko: 그는 역사 ​​시간에 졸음을 했다.
+- id: 5131 | level: N3 | [命 / いのち , 内気な人は外向的な人より短命？]
+  - meaning_ko: 삶
+  - example_ko: 수줍은 사람은 외향적인 사람보다 단명?
+- id: 5136 | level: N3 | [違反 / いはん , 彼は速度違反で有罪となった。]
+  - meaning_ko: 위반 (법률)
+  - example_ko: 그는 속도 위반으로 유죄가 되었다.
+- id: 5140 | level: N3 | [衣服 / いふく , 布に応じて衣服を裁て。]
+  - meaning_ko: 옷
+  - example_ko: 천에 따라 옷을 심판.
+- id: 5145 | level: N3 | [居間 / いま , 夕食がすむと居間へ移った。]
+  - meaning_ko: 거실
+  - example_ko: 저녁 식사가 끝나자 거실로 옮겼다.
+- id: 5150 | level: N3 | [今に / いまに , 雷が今にも落ちてきそうだ。]
+  - meaning_ko: 오래지 않아
+  - example_ko: 번개가 지금도 떨어질 것 같다.
+- id: 5154 | level: N3 | [今にも / いまにも , 雷が今にも落ちてきそうだ。]
+  - meaning_ko: 언제든지
+  - example_ko: 번개가 지금도 떨어질 것 같다.
+- id: 5159 | level: N3 | [イメージ / イメージ , 学生に黒人に対するイメージを聞いた。]
+  - meaning_ko: 자신의 이미지
+  - example_ko: 학생들에게 흑인에 대한 이미지를 들었다.
+- id: 5163 | level: N3 | [否 / いや , 夜を徹するか否か。]
+  - meaning_ko: 아니요
+  - example_ko: 밤을 철저하게 할 것인가.
+- id: 5168 | level: N3 | [以来 / いらい , ３年前に東京へ来て以来ここに住んでいる。]
+  - meaning_ko: ~부터
+  - example_ko: 3년 전에 도쿄에 온 이래 여기에 살고 있다.
+- id: 5172 | level: N3 | [依頼 / いらい , 弁護士は依頼人の無罪を主張した。]
+  - meaning_ko: 요구
+  - example_ko: 변호사는 의뢰인의 무죄를 주장했다.
+- id: 5181 | level: N3 | [いらいら / いらいら , 君は僕にとてもいらいらしている。]
+  - meaning_ko: 긴장하다
+  - example_ko: 너는 나에게 너무 괴롭다.
+- id: 5188 | level: N3 | [いらっしゃい / いらっしゃい , 毎度、またいらっしゃい。]
+  - meaning_ko: 환영
+  - example_ko: 매번 다시 오세요.
+- id: 5193 | level: N3 | [医療 / いりょう , 彼は医療に一生を捧げた。]
+  - meaning_ko: 의료
+  - example_ko: 그는 의료에 평생을 바쳤다.
+- id: 5196 | level: N3 | [岩 / いわ , 彼らの船は岩にぶつかった。]
+  - meaning_ko: 바위
+  - example_ko: 그들의 배는 바위에 부딪쳤다.
+- id: 5200 | level: N3 | [祝い / いわい , 父は誕生日の祝いに時計をくれた。]
+  - meaning_ko: 축하
+  - example_ko: 아버지는 생일 축하에 시계를 주었다.
+- id: 5207 | level: N3 | [祝う / いわう , 戦勝を祝う祝賀会が開かれた。]
+  - meaning_ko: 축하하다
+  - example_ko: 전승을 축하하는 축하회가 열렸다.
+- id: 5212 | level: N3 | [言わば / いわば , その老人は言わば生き字引だ。]
+  - meaning_ko: 말하자면
+  - example_ko: 그 노인은 말하자면 활자인이다.
+- id: 5218 | level: N3 | [いわゆる / いわゆる , 彼等はいわゆる暴走族です。]
+  - meaning_ko: 소위
+  - example_ko: 그들은 소위 폭주족입니다.
+- id: 5222 | level: N3 | [インク / インク , 彼女はインクを机の上にこぼした。]
+  - meaning_ko: 잉크
+  - example_ko: 그녀는 잉크를 책상 위에 쏟았다.
+- id: 5227 | level: N3 | [印刷 / いんさつ , 彼の仕事は印刷と関係がある。]
+  - meaning_ko: 인쇄
+  - example_ko: 그의 일은 인쇄와 관련이 있다.
+- id: 5232 | level: N3 | [印象 / いんしょう , 彼女は彼に間違った印象を抱いた。]
+  - meaning_ko: 인상
+  - example_ko: 그녀는 그에게 잘못된 인상을 받았다.
+- id: 5237 | level: N3 | [引退 / いんたい , 彼は役職から引退した。]
+  - meaning_ko: 퇴직
+  - example_ko: 그는 직책에서 은퇴했다.
+- id: 5241 | level: N3 | [インタビュー / インタビュー , 彼は首相にインタビューした。]
+  - meaning_ko: 회견
+  - example_ko: 그는 총리와 인터뷰했다.
+- id: 5246 | level: N3 | [引用 / いんよう , 彼女はキーツの詩を引用した。]
+  - meaning_ko: 인용
+  - example_ko: 그녀는 키츠의 시를 인용했다.
+- id: 5251 | level: N3 | [ウイスキー / ウイスキー , 彼はウイスキーを生で飲んだ。]
+  - meaning_ko: 위스키
+  - example_ko: 그는 위스키를 생으로 마셨다.
+- id: 5260 | level: N3 | [魚 / うお , 魚は遠火でゆっくり、こんがり焼き上げます。]
+  - meaning_ko: 물고기
+  - example_ko: 물고기는 먼 불에서 천천히 구운다.
+- id: 5267 | level: N3 | [うがい / うがい , 眠る前に電気を消したほうがいいですよ。]
+  - meaning_ko: 양치질
+  - example_ko: 잠자기 전에 전기를 끄는 것이 좋습니다.
+- id: 5272 | level: N3 | [受け取る / うけとる , 彼女はその金を受け取ることを拒否した。]
+  - meaning_ko: 받다
+  - example_ko: 그녀는 그 돈을 받는 것을 거부했다.
+- id: 5278 | level: N3 | [動かす / うごかす , 彼女が家具を動かすのを手伝った。]
+  - meaning_ko: 움직이다
+  - example_ko: 그녀가 가구를 움직이는 것을 도왔다.
+- id: 5283 | level: N3 | [兎 / うさぎ , 彼は脱兎のごとく逃げた。]
+  - meaning_ko: 토끼
+  - example_ko: 그는 탈토처럼 도망쳤다.
+- id: 5287 | level: N3 | [牛 / うし , この牛車で島一周めぐりしませんか。]
+  - meaning_ko: 가축
+  - example_ko: 이 소차로 섬 일주 순회하지 않겠습니까.
+- id: 5292 | level: N3 | [失う / うしなう , 面目を失うより死んだほうがましだ。]
+  - meaning_ko: 잃다
+  - example_ko: 면목을 잃는 것보다 죽는 편이 낫다.
+- id: 5299 | level: N3 | [疑う / うたがう , 彼女が来るかどうか疑う。]
+  - meaning_ko: 의심하다
+  - example_ko: 그녀가 올 것인지 의심.
+- id: 5304 | level: N3 | [宇宙 / うちゅう , だが宇宙は無限だ。]
+  - meaning_ko: 우주
+  - example_ko: 하지만 우주는 무한하다.
+- id: 5310 | level: N3 | [討つ / うつ , 彼は迫害者を懲らしめて人民たちのあだを討つだろう。]
+  - meaning_ko: 공격하다
+  - example_ko: 그는 박해자를 징계하고 인민들의 별을 토벌할 것이다.
+- id: 5314 | level: N3 | [撃つ / うつ , 動くな撃つぞ。]
+  - meaning_ko: 공격하다
+  - example_ko: 움직이지 마라.
+- id: 5319 | level: N3 | [うっかり / うっかり , 彼は宿題をうっかり忘れた。]
+  - meaning_ko: 마구
+  - example_ko: 그는 숙제를 실수로 잊었다.
+- id: 5326 | level: N3 | [映す / うつす , 庭は庭師を映す鏡だ。]
+  - meaning_ko: 투영하다
+  - example_ko: 정원은 정원사를 비추는 거울이다.
+- id: 5330 | level: N3 | [訴える / うったえる , 唯一の解決法は法に訴えることだ。]
+  - meaning_ko: 불평하다
+  - example_ko: 유일한 해결법은 법에 호소하는 것이다.
+- id: 5336 | level: N3 | [写る / うつる , ]
+  - meaning_ko: 사진을 찍다
+- id: 5340 | level: N3 | [映る / うつる , 窓に映る景色が、少しずつ流れていく。]
+  - meaning_ko: 반영하다
+  - example_ko: 창에 비치는 경치가 조금씩 흘러 간다.
+- id: 5343 | level: N3 | [うなる / うなる , 明日天気はどうなるだろうか。]
+  - meaning_ko: 신음하다
+  - example_ko: 내일 날씨는 어떻게 될까.
+- id: 5351 | level: N3 | [奪う / うばう , 機械は仕事から創造的な興味を奪う。]
+  - meaning_ko: 도둑질하다
+  - example_ko: 기계는 일에서 창조적인 관심사를 빼앗는다.
+- id: 5354 | level: N3 | [馬 / うま , 馬鹿みたい！]
+  - meaning_ko: 말
+  - example_ko: 바보같아!
+- id: 5359 | level: N3 | [生まれ / うまれ , 来月赤ん坊が生まれるんです。]
+  - meaning_ko: 출생
+  - example_ko: 다음 달 아기가 태어납니다.
+- id: 5364 | level: N3 | [有無 / うむ , 排卵の有無を調べる方法はありますか？]
+  - meaning_ko: 예 아니면 아니오
+  - example_ko: 배란의 유무를 조사하는 방법이 있습니까?
+- id: 5369 | level: N3 | [梅 / うめ , 明日から梅雨前線が活発になります。]
+  - meaning_ko: 자두
+  - example_ko: 내일부터 장마 앞선이 활발해집니다.
+- id: 5373 | level: N3 | [埋める / うめる , 私はこの国に骨を埋めるつもりです。]
+  - meaning_ko: 묻다
+  - example_ko: 저는 이 나라에 뼈를 채우려고 합니다.
+- id: 5375 | level: N3 | [裏切る / うらぎる , 友達の信頼を決して裏切るな。]
+  - meaning_ko: 배신하다
+  - example_ko: 친구의 신뢰를 결코 배신하지 마라.
+- id: 5384 | level: N3 | [羨ましい / うらやましい , トムが羨ましいよ。]
+  - meaning_ko: 부러워하는
+  - example_ko: 톰이 부러워.
+- id: 5388 | level: N3 | [売れる / うれる , 傘が良く売れる。]
+  - meaning_ko: 판매될
+  - example_ko: 우산이 잘 팔린다.
+- id: 5391 | level: N3 | [噂 / うわさ , 妙な噂が広がっている。]
+  - meaning_ko: 소문
+  - example_ko: 묘한 소문이 퍼지고 있다.
+- id: 5398 | level: N3 | [運 / うん , 運動のためプールにも通い始めた頃でした。]
+  - meaning_ko: 행운
+  - example_ko: 운동을 위해 수영장에도 다니기 시작했을 무렵이었습니다.
+- id: 5405 | level: N3 | [運転 / うんてん , 旅行中、ジョンと私は交替で車を運転した。]
+  - meaning_ko: 작업
+  - example_ko: 여행하는 동안 존과 나는 교체로 차를 운전했다.
+- id: 5411 | level: N3 | [柄 / え , 柄にもないことを言うな。]
+  - meaning_ko: (칼의 손잡이)
+  - example_ko: 무늬에도 없다는 것을 말하지 마라.
+- id: 5416 | level: N3 | [永遠 / えいえん , 満ち足りた心は永遠の祝宴である。]
+  - meaning_ko: 영원
+  - example_ko: 가득한 마음은 영원한 축제이다.
+- id: 5421 | level: N3 | [永久 / えいきゅう , 彼は永久に日本を離れた。]
+  - meaning_ko: 영원
+  - example_ko: 그는 영원히 일본을 떠났다.
+- id: 5426 | level: N3 | [影響 / えいきょう , 嵐は作物に多大な影響を与えた。]
+  - meaning_ko: 영향
+  - example_ko: 폭풍은 작물에 큰 영향을 미쳤다.
+- id: 5430 | level: N3 | [営業 / えいぎょう , 平常通り営業いたします。]
+  - meaning_ko: 사업
+  - example_ko: 평상시대로 영업합니다.
+- id: 5435 | level: N3 | [衛星 / えいせい , 東京はたくさんの衛星都市に囲まれている。]
+  - meaning_ko: 위성
+  - example_ko: 도쿄는 많은 위성 도시로 둘러싸여 있습니다.
+- id: 5439 | level: N3 | [栄養 / えいよう , 人工栄養で育てています。]
+  - meaning_ko: 영양물 섭취
+  - example_ko: 인공 영양으로 키우고 있습니다.
+- id: 5444 | level: N3 | [笑顔 / えがお , 彼女は彼の笑顔に完全にだまされた。]
+  - meaning_ko: (얼굴에) 미소를 짓다
+  - example_ko: 그녀는 그의 미소에 완전히 속았다.
+- id: 5448 | level: N3 | [描く / えがく , 彼は絵を描くのが好きだ。]
+  - meaning_ko: 그리다
+  - example_ko: 그는 그림을 그리는 것을 좋아한다.
+- id: 5451 | level: N3 | [餌 / えさ , 彼は釣り針に生き餌をつけた。]
+  - meaning_ko: 밥을 먹이다
+  - example_ko: 그는 낚시 바늘에 먹이를 줬다.
+- id: 5455 | level: N3 | [エネルギー / エネルギー , 僕はエネルギーを使い果たした。]
+  - meaning_ko: 에너지 (GER: 에너지)
+  - example_ko: 나는 에너지를 다 썼다.
+- id: 5459 | level: N3 | [得る / える , 良心を犠牲にして富を得るな。]
+  - meaning_ko: 얻기 위해
+  - example_ko: 양심을 희생하고 부를 얻지 마라.
+- id: 5468 | level: N3 | [円 / えん , えっ、結納品にン十万円？]
+  - meaning_ko: 원
+  - example_ko: 엣, 결납품에 10만엔?
+- id: 5471 | level: N3 | [延期 / えんき , 来週まで延期しましょう。]
+  - meaning_ko: 연기
+  - example_ko: 다음 주까지 연기하자.
+- id: 5478 | level: N3 | [演技 / えんぎ , 彼女は演技の才能がある。]
+  - meaning_ko: 연기
+  - example_ko: 그녀는 연기의 재능이 있다.
+- id: 5483 | level: N3 | [援助 / えんじょ , 友達の援助を当てにするな。]
+  - meaning_ko: 보조
+  - example_ko: 친구의 도움을 받지 마라.
+- id: 5487 | level: N3 | [エンジン / エンジン , 明日エンジンのテストをする予定だ。]
+  - meaning_ko: 엔진
+  - example_ko: 내일 엔진 테스트를 할 예정이다.
+- id: 5491 | level: N3 | [演説 / えんぜつ , 彼女は名演説をした。]
+  - meaning_ko: 연설
+  - example_ko: 그녀는 명연설을 했다.
+- id: 5496 | level: N3 | [演奏 / えんそう , 彼女はソナタを演奏した。]
+  - meaning_ko: 연주
+  - example_ko: 그녀는 쏘나타를 연주했다.
+- id: 5501 | level: N3 | [老い / おい , 老いも若きも戦争にいった。]
+  - meaning_ko: 노령
+  - example_ko: 늙어도 젊음도 전쟁에 갔다.
+- id: 5510 | level: N3 | [追い付く / おいつく , すぐにそっちに追い付くよ。]
+  - meaning_ko: 추월하다
+  - example_ko: 빨리 그 곳을 따라잡을거야.
+- id: 5515 | level: N3 | [王 / おう , 百円じゃなくて、王冠でした。]
+  - meaning_ko: 왕
+  - example_ko: 백엔이 아니라 왕관이었습니다.
+- id: 5520 | level: N3 | [追う / おう , 流行を追うな。]
+  - meaning_ko: 쫓다
+  - example_ko: 유행을 쫓지 말라.
+- id: 5524 | level: N3 | [応援 / おうえん , 彼らは皆その候補者を応援した。]
+  - meaning_ko: 지원
+  - example_ko: 그들은 모두 그 후보자를 응원했다.
+- id: 5529 | level: N3 | [王様 / おうさま , 彼は女王様にお辞儀をした。]
+  - meaning_ko: 왕
+  - example_ko: 그는 여왕님에게 인사를 했다.
+- id: 5534 | level: N3 | [王子 / おうじ , 妖精は王子を猫に変えた。]
+  - meaning_ko: 왕자
+  - example_ko: 요정은 왕자를 고양이로 바꿨다.
+- id: 5543 | level: N3 | [応じる / おうじる , 私は申し込みに応じる気になっている。]
+  - meaning_ko: 적응하다
+  - example_ko: 나는 신청에 응하는 신경이 쓰이고 있다.
+- id: 5546 | level: N3 | [横断 / おうだん , 老婦人が道を横断している。]
+  - meaning_ko: 횡단
+  - example_ko: 노부인이 길을 건너고 있다.
+- id: 5551 | level: N3 | [終える / おえる , 夕食前に宿題を終えるようにしなさい。]
+  - meaning_ko: 끝내다
+  - example_ko: 저녁 식사 전에 숙제를 끝내십시오.
+- id: 5556 | level: N3 | [大いに / おおいに , 僕は彼女の家族を大いにもてなしたよ。]
+  - meaning_ko: 많이
+  - example_ko: 나는 그녀의 가족을 매우 대접했다.
+- id: 5561 | level: N3 | [覆う / おおう , 富はあまたの苦痛を覆う。]
+  - meaning_ko: 덮다
+  - example_ko: 부는 오직 고통을 덮는다.
+- id: 5565 | level: N3 | [大家 / おおや , 友人の家は大家族です。]
+  - meaning_ko: 주인
+  - example_ko: 친구의 집은 대가족입니다.
+- id: 5570 | level: N3 | [丘 / おか , 平らな土地には山も丘もない。]
+  - meaning_ko: 언덕
+  - example_ko: 평평한 땅에는 산도 언덕도 없다.
+- id: 5574 | level: N3 | [沖 / おき , 彼は今まで沖縄へ行ったことがない。]
+  - meaning_ko: 넓은 바다
+  - example_ko: 그는 지금까지 오키나와에 가본 적이 없다.
+- id: 5582 | level: N3 | [奥 / おく , 来客達は彼の奥さんの料理を十分賞味した。]
+  - meaning_ko: 내부
+  - example_ko: 방문객들은 그의 부인의 요리를 충분히 맛보았다.
+- id: 5587 | level: N3 | [贈る / おくる , 彼女は贈るものを紙で包んだ。]
+  - meaning_ko: 발표하다
+  - example_ko: 그녀는 선물을 종이로 감쌌다.
+- id: 5589 | level: N3 | [起こる / おこる , 明日何が起こるか誰にわかるのか。]
+  - meaning_ko: 발생하다
+  - example_ko: 내일 무슨 일이 일어날지 누가 알 수 있을까.
+- id: 5593 | level: N3 | [押える / おさえる , ]
+  - meaning_ko: 멈추다
+- id: 5599 | level: N3 | [幼い / おさない , 幼い子供は語彙が少ない。]
+  - meaning_ko: 아주 어리다
+  - example_ko: 어린 아이는 어휘가 적다.
+- id: 5605 | level: N3 | [収める / おさめる , 珠玉の作品を収める。]
+  - meaning_ko: 저장하다 결제하다
+  - example_ko: 주옥의 작품을 담는다.
+- id: 5614 | level: N3 | [納める / おさめる , 所得税や法人税は直接税として納める。]
+  - meaning_ko: 저장하다 결제하다
+  - example_ko: 소득세나 법인세는 직접 세로 납부한다.
+- id: 5620 | level: N3 | [治める / おさめる , ]
+  - meaning_ko: 통치하다
+- id: 5625 | level: N3 | [お辞儀 / おじぎ , 彼は女王様にお辞儀をした。]
+  - meaning_ko: 절하다
+  - example_ko: 그는 여왕님에게 인사를 했다.
+- id: 5631 | level: N3 | [お洒落 / おしゃれ , お洒落しなくてもいいのよ。]
+  - meaning_ko: 멋지게 차려입은
+  - example_ko: 세련되지 않아도 돼.
+- id: 5636 | level: N3 | [お喋り / おしゃべり , 私ってお喋りなの。]
+  - meaning_ko: 수다쟁이
+  - example_ko: 내가 말하는거야.
+- id: 5639 | level: N3 | [汚染 / おせん , 麻薬汚染の問題は国際的である。]
+  - meaning_ko: 오염
+  - example_ko: 마약 오염 문제는 국제적입니다.
+- id: 5643 | level: N3 | [恐らく / おそらく , 恐らく明日は晴れでしょう。]
+  - meaning_ko: 아마도
+  - example_ko: 아마 내일은 맑을 것입니다.
+- id: 5648 | level: N3 | [恐れる / おそれる , 吠えている犬を恐れるな。]
+  - meaning_ko: 두려워하다
+  - example_ko: 짖는 개를 두려워하지 마라.
+- id: 5653 | level: N3 | [恐ろしい / おそろしい , 恐ろしい光景に彼は戦慄した。]
+  - meaning_ko: 끔찍한
+  - example_ko: 무서운 광경에 그는 전율했다.
+- id: 5658 | level: N3 | [教わる / おそわる , ]
+  - meaning_ko: 가르쳐지다
+- id: 5662 | level: N3 | [お互い / おたがい , お互いを信頼し合うしかない。]
+  - meaning_ko: 상호간의
+  - example_ko: 서로를 신뢰할 수밖에 없다.
+- id: 5667 | level: N3 | [穏やか / おだやか , 彼女はとても穏やかだ。]
+  - meaning_ko: 침착한
+  - example_ko: 그녀는 매우 평온하다.
+- id: 5672 | level: N3 | [男の人 / おとこのひと , 私が駅を出た時、男の人を見た。]
+  - meaning_ko: 남성
+  - example_ko: 내가 역을 나왔을 때 남자를 보았다.
+- id: 5677 | level: N3 | [大人しい / おとなしい , ]
+  - meaning_ko: 순종적인
+- id: 5686 | level: N3 | [劣る / おとる , この点で私は彼に劣る。]
+  - meaning_ko: 뒤쳐지다
+  - example_ko: 이 점에서 나는 그에게 뒤떨어진다.
+- id: 5688 | level: N3 | [鬼 / おに , 彼は仕事の鬼だ。]
+  - meaning_ko: 오우거
+  - example_ko: 그는 일의 귀신이다.
+- id: 5691 | level: N3 | [帯 / おび , 連帯責任は無責任。]
+  - meaning_ko: 밴드
+  - example_ko: 연대 책임은 무책임.
+- id: 5694 | level: N3 | [お昼 / おひる , 毎日お昼ご飯を作っているよ。]
+  - meaning_ko: 점심
+  - example_ko: 매일 점심 밥을 만들고 있어.
+- id: 5698 | level: N3 | [オフィス / オフィス , 彼女はホテルのオフィス近くに車を止めた。]
+  - meaning_ko: 사무실
+  - example_ko: 그녀는 호텔 사무실 근처에 차를 멈췄다.
+- id: 5703 | level: N3 | [溺れる / おぼれる , 危うく溺れるところだった。]
+  - meaning_ko: 익사하다
+  - example_ko: 위험하게 익사하는 곳이었다.
+- id: 5712 | level: N3 | [お前 / おまえ , お前はクズだ！]
+  - meaning_ko: 당신 (노래하다)
+  - example_ko: 너는 쓰레기다!
+- id: 5714 | level: N3 | [おめでとう / おめでとう , 優勝おめでとう。]
+  - meaning_ko: 축하해요!
+  - example_ko: 우승 축하합니다.
+- id: 5719 | level: N3 | [お目に掛かる / おめにかかる , ]
+  - meaning_ko: ~을 만나다
+- id: 5728 | level: N3 | [思い付く / おもいつく , ]
+  - meaning_ko: 생각하다
+- id: 5732 | level: N3 | [思い出 / おもいで , 僕は彼の名を思い出せない。]
+  - meaning_ko: 추억
+  - example_ko: 나는 그의 이름을 기억할 수 없다.
+- id: 5737 | level: N3 | [主に / おもに , 彼らは雇い主に忠実だ。]
+  - meaning_ko: 주로
+  - example_ko: 그들은 고용주에게 충실하다.
+- id: 5746 | level: N3 | [思わず / おもわず , 裏に何かあると思わずにはいられなかった。]
+  - meaning_ko: 의도하지 않은
+  - example_ko: 뒤에 뭔가 있다고 생각하지 않고는 있을 수 없었다.
+- id: 5751 | level: N3 | [泳ぎ / およぎ , 明日、泳ぎに行こうよ。]
+  - meaning_ko: 수영
+  - example_ko: 내일 수영하러 가자.
+- id: 5756 | level: N3 | [およそ / およそ , 父はおおよそ非芸術的な人だ。]
+  - meaning_ko: ~에 대한
+  - example_ko: 아버지는 대략 비예술적인 사람이다.
+- id: 5761 | level: N3 | [及ぼす / およぼす , 熱帯雨林の破壊は環境に影響を及ぼす。]
+  - meaning_ko: 발휘하다
+  - example_ko: 열대우림의 파괴는 환경에 영향을 미친다.
+- id: 5766 | level: N3 | [下す / おろす , 問題は誰が決定を下すかということだ。]
+  - meaning_ko: 낮추다
+  - example_ko: 문제는 누가 결정을 내릴까 하는 것이다.
+- id: 5770 | level: N3 | [降ろす / おろす , 駅のところで降ろすよ。]
+  - meaning_ko: 철거하다
+  - example_ko: 역에서 내려 가자.
+- id: 5774 | level: N3 | [卸す / おろす , ]
+  - meaning_ko: 도매로 판매하다
+- id: 5777 | level: N3 | [音 / おん , 私の趣味は音楽を聞くことです。]
+  - meaning_ko: 소리
+  - example_ko: 내 취미는 음악을 듣는 것입니다.
+- id: 5782 | level: N3 | [恩 / おん , 僕は彼に少なからず恩義がある。]
+  - meaning_ko: 호의
+  - example_ko: 나는 그에게 적지 않고 은혜가 있다.
+- id: 5788 | level: N3 | [温暖 / おんだん , 島の天候はとても温暖です。]
+  - meaning_ko: 따뜻함
+  - example_ko: 섬의 날씨는 매우 따뜻합니다.
+- id: 5792 | level: N3 | [温度 / おんど , 氷の温度は何度ですか。]
+  - meaning_ko: 온도
+  - example_ko: 얼음의 온도는 몇 번입니까?
+- id: 5797 | level: N3 | [可 / か , でも可能性は低そうだね。]
+  - meaning_ko: 상당한
+  - example_ko: 하지만 가능성은 낮을 것 같네요.
+- id: 5801 | level: N3 | [蚊 / か , 私は昨晩蚊になやまされた。]
+  - meaning_ko: 모기
+  - example_ko: 나는 어젯밤 모기로 떠났다.
+- id: 5805 | level: N3 | [課 / か , 輸入品は高い課税対象だ。]
+  - meaning_ko: 부서
+  - example_ko: 수입품은 높은 과세 대상이다.
+- id: 5811 | level: N3 | [カー / カー , カーテンに火が点いた。]
+  - meaning_ko: 자동차
+  - example_ko: 커튼에 불이 켜졌다.
+- id: 5816 | level: N3 | [カード / カード , クレジットカードでも良いですか？]
+  - meaning_ko: 카드
+  - example_ko: 신용 카드도 괜찮습니까?
+- id: 5822 | level: N3 | [貝 / かい , 火力とお鍋と貝の種類によるわ。]
+  - meaning_ko: 껍데기
+  - example_ko: 화력과 냄비와 조개의 종류에 따라.
+- id: 5829 | level: N3 | [害 / がい , 副作用としては、視力障害があります。]
+  - meaning_ko: 피해
+  - example_ko: 부작용으로는 시력 장애가 있습니다.
+- id: 5833 | level: N3 | [会員 / かいいん , 彼は友愛会の会員だ。]
+  - meaning_ko: 회원
+  - example_ko: 그는 우애회 회원이다.
+- id: 5838 | level: N3 | [絵画 / かいが , 彼は絵画の技法を完成させた。]
+  - meaning_ko: 그림
+  - example_ko: 그는 회화 기법을 완성했다.
+- id: 5842 | level: N3 | [海外 / かいがい , 母は私が海外に行くのを許した。]
+  - meaning_ko: 외국의
+  - example_ko: 어머니는 내가 해외로 가는 것을 용서했다.
+- id: 5847 | level: N3 | [会計 / かいけい , 料金は会計係へ払って下さい。]
+  - meaning_ko: 계정
+  - example_ko: 요금은 회계계에게 지불해 주세요.
+- id: 5854 | level: N3 | [解決 / かいけつ , 両者は解決に向かって一歩踏み出した。]
+  - meaning_ko: 합의
+  - example_ko: 양자는 해결을 향해 한 걸음 내디뎠다.
+- id: 5858 | level: N3 | [会合 / かいごう , 毎月一回会合を開いている。]
+  - meaning_ko: 회의
+  - example_ko: 매월 한 번 회의를 열고 있다.
+- id: 5862 | level: N3 | [外交 / がいこう , 彼は詩人で外交官だった。]
+  - meaning_ko: 외교
+  - example_ko: 그는 시인으로 외교관이었다.
+- id: 5867 | level: N3 | [開始 / かいし , 両国は平和交渉を開始した。]
+  - meaning_ko: 시작
+  - example_ko: 양국은 평화협상을 시작했다.
+- id: 5871 | level: N3 | [解釈 / かいしゃく , 彼女の親切は誤って解釈された。]
+  - meaning_ko: 설명
+  - example_ko: 그녀의 친절은 잘못 해석되었다.
+- id: 5876 | level: N3 | [外出 / がいしゅつ , 明日天気なら外出します。]
+  - meaning_ko: 나들이
+  - example_ko: 내일 날씨라면 외출합니다.
+- id: 5881 | level: N3 | [改善 / かいぜん , 日本の企業業績は改善した。]
+  - meaning_ko: 개량
+  - example_ko: 일본 기업 실적은 개선됐다.
+- id: 5888 | level: N3 | [快適 / かいてき , 彼は快適に過ごしている。]
+  - meaning_ko: 즐거운
+  - example_ko: 그는 편안하게 지내고 있습니다.
+- id: 5892 | level: N3 | [回復 / かいふく , 父は健康を回復した。]
+  - meaning_ko: 회복 (질병으로부터)
+  - example_ko: 아버지는 건강을 회복했다.
+- id: 5898 | level: N3 | [飼う / かう , 犬か猫か鶏を飼うようにしなさい。]
+  - meaning_ko: 유지하다
+  - example_ko: 개 또는 고양이 또는 닭을 기르게 하십시오.
+- id: 5902 | level: N3 | [帰す / かえす , 彼の成功は天才よりも努力に帰する。]
+  - meaning_ko: 다시 보내다
+  - example_ko: 그의 성공은 천재보다 노력으로 돌아간다.
+- id: 5906 | level: N3 | [代える / かえる , ]
+  - meaning_ko: 교환하다
+- id: 5909 | level: N3 | [替える / かえる , 私は着替える為に家に帰った。]
+  - meaning_ko: 교환하다
+  - example_ko: 나는 갈아입기 위해 집으로 돌아갔다.
+- id: 5916 | level: N3 | [換える / かえる , 乗り換えるのですか。]
+  - meaning_ko: 교환하다
+  - example_ko: 환승할까요?
+- id: 5923 | level: N3 | [反る / かえる , ]
+  - meaning_ko: 휘게하다
+- id: 5926 | level: N3 | [香り / かおり , 部屋の中は良い香りがしていた。]
+  - meaning_ko: 방향
+  - example_ko: 방 안에는 좋은 향기가 있었다.
+- id: 5929 | level: N3 | [画家 / がか , 彼女は才能豊かな画家さ。]
+  - meaning_ko: 화가
+  - example_ko: 그녀는 재능이 풍부한 화가입니다.
+- id: 5933 | level: N3 | [抱える / かかえる , そのことが我々が抱える問題に新しい面を加える。]
+  - meaning_ko: 안거나 팔에 안고 들고 다니다
+  - example_ko: 그것이 우리가 안고 있는 문제에 새로운 면을 더한다.
+- id: 5938 | level: N3 | [価格 / かかく , 日本車の価格は、比較的高い。]
+  - meaning_ko: 가격
+  - example_ko: 일본차의 가격은 비교적 높다.
+- id: 5942 | level: N3 | [化学 / かがく , 化学が嫌いだ。]
+  - meaning_ko: 화학
+  - example_ko: 화학이 싫어.
+- id: 5947 | level: N3 | [輝く / かがやく , どうして月は夜輝くのか。]
+  - meaning_ko: 빛나다
+  - example_ko: 어째서 달은 밤 빛나는 것인가.
+- id: 5952 | level: N3 | [係 / かかり , 無関係の人を殺るな！]
+  - meaning_ko: 담당자
+  - example_ko: 무관한 사람을 죽이지 마라!
+- id: 5959 | level: N3 | [罹る / かかる , ]
+  - meaning_ko: 고통을 받다
+- id: 5967 | level: N3 | [限る / かぎる , 夏はビールに限るね。]
+  - meaning_ko: 제한하다
+  - example_ko: 여름은 맥주에 한합니다.
+- id: 5971 | level: N3 | [掻く / かく , 彼は頭を掻く癖がある。]
+  - meaning_ko: 긁다
+  - example_ko: 그는 머리를 긁는 버릇이 있다.
+- id: 5979 | level: N3 | [嗅ぐ / かぐ , 匂い嗅ぐのやめろ！]
+  - meaning_ko: 냄새를 맡다
+  - example_ko: 냄새가 나면 그만!
+- id: 5986 | level: N3 | [家具 / かぐ , 部屋には家具がない。]
+  - meaning_ko: 가구
+  - example_ko: 방에는 가구가 없다.
+- id: 5988 | level: N3 | [学 / がく , 化学が嫌いだ。]
+  - meaning_ko: 학습
+  - example_ko: 화학이 싫어.
+- id: 5991 | level: N3 | [額 / がく , 募金はまだ目標額に達しない。]
+  - meaning_ko: 양
+  - example_ko: 모금은 아직 목표액에 도달하지 않았다.
+- id: 5994 | level: N3 | [覚悟 / かくご , 彼は失敗するかもしれないと覚悟を固めた。]
+  - meaning_ko: 해결
+  - example_ko: 그는 실패할지도 모른다고 각오를 굳혔다.
+- id: 6000 | level: N3 | [確実 / かくじつ , 彼女の当選は確実だ。]
+  - meaning_ko: 확실성
+  - example_ko: 그녀의 당선은 확실하다.
+- id: 6004 | level: N3 | [学者 / がくしゃ , 鈴木氏は偉大な科学者だ。]
+  - meaning_ko: 학자
+  - example_ko: 스즈키씨는 위대한 과학자다.
+- id: 6010 | level: N3 | [学習 / がくしゅう , 彼女は教え方を学習の遅い生徒に合わせた。]
+  - meaning_ko: 공부하다
+  - example_ko: 그녀는 가르치는 방법을 느린 학습 학생들에게 맞추었습니다.
+- id: 6014 | level: N3 | [隠す / かくす , 彼女に事実を隠すことはできない。]
+  - meaning_ko: 숨기다
+  - example_ko: 그녀에게 사실을 숨길 수는 없다.
+- id: 6020 | level: N3 | [拡大 / かくだい , 彼らの事業は拡大している。]
+  - meaning_ko: 확대
+  - example_ko: 그들의 사업은 확대되고 있다.
+- id: 6024 | level: N3 | [確認 / かくにん , 予約は確認されています。]
+  - meaning_ko: 확언
+  - example_ko: 예약은 확인되었습니다.
+- id: 6030 | level: N3 | [学問 / がくもん , 彼女は学問を愛する気持ちがある。]
+  - meaning_ko: 장학금
+  - example_ko: 그녀는 학문을 사랑하는 마음이 있다.
+- id: 6033 | level: N3 | [隠れる / かくれる , スタジオはとても狭くて、隠れる場所はない。]
+  - meaning_ko: 숨기다
+  - example_ko: 스튜디오는 매우 좁고 숨길 곳이 없다.
+- id: 6041 | level: N3 | [影 / かげ , 想像力は私たちの生活のどの側面にも影響を与える。]
+  - meaning_ko: 그늘
+  - example_ko: 상상력은 우리 삶의 모든 측면에 영향을 미칩니다.
+- id: 6046 | level: N3 | [陰 / かげ , 木陰は涼しかった。]
+  - meaning_ko: 그늘
+  - example_ko: 그늘은 시원했다.
+- id: 6051 | level: N3 | [欠ける / かける , 彼は経験に欠ける。]
+  - meaning_ko: 부족하다
+  - example_ko: 그는 경험이 부족하다.
+- id: 6055 | level: N3 | [加減 / かげん , 彼は手加減をしない人です。]
+  - meaning_ko: 조정
+  - example_ko: 그는 손가감을 하지 않는 사람입니다.
+- id: 6060 | level: N3 | [過去 / かこ , 老人は過去を振り返り過ぎです。]
+  - meaning_ko: 과거
+  - example_ko: 노인은 과거를 되돌아 보았습니다.
+- id: 6062 | level: N3 | [籠 / かご , 籠の中で鳥が鳴いていますね。]
+  - meaning_ko: 바구니
+  - example_ko: 바구니에서 새가 울리고 있습니다.
+- id: 6071 | level: N3 | [囲む / かこむ , 赤丸で囲む。]
+  - meaning_ko: 둘러싸다
+  - example_ko: 붉은 원으로 둘러싸다.
+- id: 6076 | level: N3 | [火災 / かさい , 彼は家に火災保険をかけた。]
+  - meaning_ko: 큰 화재
+  - example_ko: 그는 집에 화재 보험을 걸었다.
+- id: 6082 | level: N3 | [重なる / かさなる , 不幸は重なるものだ。]
+  - meaning_ko: 쌓여가다
+  - example_ko: 불행은 겹치는 것이다.
+- id: 6086 | level: N3 | [重ねる / かさねる , その野球の試合は回を重ねるごとに面白くなった。]
+  - meaning_ko: 쌓이다
+  - example_ko: 그 야구의 경기는 회를 거듭할 때마다 재미있게 되었다.
+- id: 6090 | level: N3 | [飾り / かざり , 彼女は宝石で飾りたてた。]
+  - meaning_ko: 장식
+  - example_ko: 그녀는 보석으로 장식했다.
+- id: 6091 | level: N3 | [貸し / かし , 用具を一式貸してください。]
+  - meaning_ko: 대출
+  - example_ko: 공구를 빌려주세요.
+- id: 6093 | level: N3 | [菓子 / かし , 子供は一般には菓子が好きだ。]
+  - meaning_ko: 과자
+  - example_ko: 아이는 일반적으로 과자를 좋아한다.
+- id: 6097 | level: N3 | [家事 / かじ , 彼女は家事をせっせとした。]
+  - meaning_ko: 집안일
+  - example_ko: 그녀는 가사를 초조했다.
+- id: 6102 | level: N3 | [賢い / かしこい , 彼女は本当に賢いよね？]
+  - meaning_ko: 지혜로운
+  - example_ko: 그녀는 정말 똑똑하죠?
+- id: 6106 | level: N3 | [歌手 / かしゅ , 僕はその歌手が好きになった。]
+  - meaning_ko: 가수
+  - example_ko: 나는 그 가수를 좋아하게 되었다.
+- id: 6116 | level: N3 | [稼ぐ / かせぐ , 彼女は週平均１０ポンド稼ぐ。]
+  - meaning_ko: 수입을 얻기 위해
+  - example_ko: 그녀는 주 평균 10파운드 적립.
+- id: 6122 | level: N3 | [数える / かぞえる , 私が１０数えるまで待ちなさい。]
+  - meaning_ko: 계산하다
+  - example_ko: 내가 10 셀 때까지 기다리십시오.
+- id: 6127 | level: N3 | [型 / かた , カップケーキ型に、ペーパーカップを並べます。]
+  - meaning_ko: 곰팡이
+  - example_ko: 컵케이크형에 종이컵을 늘어놓습니다.
+- id: 6134 | level: N3 | [肩 / かた , 肩慣らしには丁度いいかも。]
+  - meaning_ko: 어깨
+  - example_ko: 어깨 익숙함에는 정확히 좋을지도.
+- id: 6136 | level: N3 | [堅い / かたい , 彼は口が堅い。]
+  - meaning_ko: 딱딱한
+  - example_ko: 그는 입이 단단하다.
+- id: 6141 | level: N3 | [硬い / かたい , 鉄は硬い。]
+  - meaning_ko: 딱딱한
+  - example_ko: 철은 단단하다.
+- id: 6147 | level: N3 | [方々 / かたがた , 天皇は亡くなった方々の霊に祈りを捧げた。]
+  - meaning_ko: 명
+  - example_ko: 천황은 죽은 분들의 영에 기도를 바쳤다.
+- id: 6155 | level: N3 | [片付く / かたづく , 明日までには仕事は片付くよ。]
+  - meaning_ko: 정리하다
+  - example_ko: 내일까지는 일은 정리할게.
+- id: 6161 | level: N3 | [刀 / かたな , 単刀直入に尋ねたよ。]
+  - meaning_ko: 검
+  - example_ko: 단도 직입에 물었다.
+- id: 6165 | level: N3 | [語る / かたる , 神にかけて真実を語る事を誓う。]
+  - meaning_ko: 이야기하다
+  - example_ko: 하나님께 진리를 말하는 것을 맹세한다.
+- id: 6170 | level: N3 | [勝ち / かち , 負けるが勝ち。]
+  - meaning_ko: 이기다
+  - example_ko: 지는데 승리.
+- id: 6172 | level: N3 | [価値 / かち , これ以上は読む価値がない。]
+  - meaning_ko: 값
+  - example_ko: 더 이상 읽을 가치가 없다.
+- id: 6183 | level: N3 | [がっかり / がっかり , 友達がここにいないのでがっかりだ。]
+  - meaning_ko: 실망하다
+  - example_ko: 친구가 여기에 없기 때문에 실망이다.
+- id: 6188 | level: N3 | [活気 / かっき , 彼は活気のある人です。]
+  - meaning_ko: 활기
+  - example_ko: 그는 활기찬 사람입니다.
+- id: 6190 | level: N3 | [楽器 / がっき , 楽器をなにか演奏しますか。]
+  - meaning_ko: 악기
+  - example_ko: 악기를 뭔가 연주합니까?
+- id: 6194 | level: N3 | [学期 / がっき , 日本では新学期は４月に始まる。]
+  - meaning_ko: 학기 (학교)
+  - example_ko: 일본에서는 신학기는 4월에 시작된다.
+- id: 6199 | level: N3 | [活動 / かつどう , 夜に活動する動物もいる。]
+  - meaning_ko: 행동
+  - example_ko: 밤에 활동하는 동물도 있다.
+- id: 6203 | level: N3 | [活躍 / かつやく , 彼女は婦人解放運動で積極的に活躍した。]
+  - meaning_ko: 활동
+  - example_ko: 그녀는 여성 해방 운동에서 적극적으로 활약했다.
+- id: 6208 | level: N3 | [活用 / かつよう , 彼は風呂敷を十分に活用した。]
+  - meaning_ko: 활용
+  - example_ko: 그는 보자기를 충분히 활용했다.
+- id: 6213 | level: N3 | [仮定 / かてい , 奥さんがいると仮定してごらん。]
+  - meaning_ko: 추정
+  - example_ko: 부인이 있다고 가정해 봐.
+- id: 6218 | level: N3 | [過程 / かてい , 彼はボート作りの過程を説明した。]
+  - meaning_ko: 프로세스
+  - example_ko: 그는 배를 만드는 과정을 설명했다.
+- id: 6223 | level: N3 | [課程 / かてい , 私は高校の全課程を修了した。]
+  - meaning_ko: 강의
+  - example_ko: 고등학교 전 과정을 마쳤습니다.
+- id: 6227 | level: N3 | [悲しむ / かなしむ , なんでそんなに悲しむの。]
+  - meaning_ko: 슬퍼하다
+  - example_ko: 왜 그렇게 슬퍼하는 거야.
+- id: 6234 | level: N3 | [必ずしも / かならずしも , 理論と実際とは必ずしも一致しない。]
+  - meaning_ko: (아님) 항상
+  - example_ko: 이론과 실제와 반드시 일치하지는 않는다.
+- id: 6239 | level: N3 | [かなり / かなり , 変換にはかなりの時間がかかる。]
+  - meaning_ko: 상당히
+  - example_ko: 변환에는 상당한 시간이 걸린다.
+- id: 6244 | level: N3 | [金 / かね , 税金を払ったら実生活の始まりだ。]
+  - meaning_ko: 금
+  - example_ko: 세금을 내면 실생활의 시작이다.
+- id: 6248 | level: N3 | [鐘 / かね , 彼女の心臓は恐怖で早鐘を打った。]
+  - meaning_ko: 벨
+  - example_ko: 그녀의 심장은 공포로 조종을 쳤다.
+- id: 6251 | level: N3 | [可能 / かのう , でも可能性は低そうだね。]
+  - meaning_ko: 가능한
+  - example_ko: 하지만 가능성은 낮을 것 같네요.
+- id: 6255 | level: N3 | [株 / かぶ , 本日の株価は下がり気味です。]
+  - meaning_ko: 재고
+  - example_ko: 오늘의 주가는 하락 기미입니다.
+- id: 6257 | level: N3 | [被る / かぶる , 教室では帽子を被るべきではない。]
+  - meaning_ko: 입다
+  - example_ko: 교실에서는 모자를 쓰지 말아야 한다.
+- id: 6266 | level: N3 | [我慢 / がまん , 自分でも我慢ができない。]
+  - meaning_ko: 인내심
+  - example_ko: 스스로도 참을 수 없다.
+- id: 6280 | level: N3 | [神 / かみ , 条約の精神が没却されていた。]
+  - meaning_ko: 하나님
+  - example_ko: 조약의 정신이 몰각되었다.
+- id: 6286 | level: N3 | [雷 / かみなり , 雷鳴が空に轟いた。]
+  - meaning_ko: 우뢰
+  - example_ko: 뇌명이 하늘에 울렸다.
+- id: 6288 | level: N3 | [髪の毛 / かみのけ , 髪の毛を後ろになでつけた。]
+  - meaning_ko: 머리(머리)
+  - example_ko: 머리카락을 뒤로 쓰다듬었다.
+- id: 6294 | level: N3 | [科目 / かもく , 物理は私の好きな科目だ。]
+  - meaning_ko: (학교) 과목
+  - example_ko: 물리는 내가 좋아하는 과목이다.
+- id: 6298 | level: N3 | [かもしれない / かもしれない , 列車に乗り遅れたのかもしれない。]
+  - meaning_ko: 아마도
+  - example_ko: 기차를 타고 늦었을지도 모른다.
+- id: 6301 | level: N3 | [かゆい / かゆい , 目がかゆいです。]
+  - meaning_ko: 가려움
+  - example_ko: 눈이 가려워요.
+- id: 6304 | level: N3 | [歌謡 / かよう , 最近は皆が歌えるような歌謡曲を聞くこともなくなった。]
+  - meaning_ko: 노래
+  - example_ko: 최근에는 모두가 노래할 수 있는 가요곡을 듣는 일도 없어졌다.
+- id: 6308 | level: N3 | [空 / から , おなか空いた！]
+  - meaning_ko: 비어 있는
+  - example_ko: 배고파!
+- id: 6312 | level: N3 | [殻 / から , 卵の殻は壊れやすい。]
+  - meaning_ko: 껍데기
+  - example_ko: 계란 껍질은 깨지기 쉽다.
+- id: 6325 | level: N3 | [刈る / かる , 芝は刈る必要がある。]
+  - meaning_ko: (머리카락을) 자르다
+  - example_ko: 잔디는 깎을 필요가 있다.
+- id: 6327 | level: N3 | [河 / かわ , 陸に上がった河童。]
+  - meaning_ko: 강
+  - example_ko: 육지에 오른 가동.
+- id: 6332 | level: N3 | [皮 / かわ , 狼の噂をするとその皮が見える。]
+  - meaning_ko: 피부
+  - example_ko: 늑대의 소문을 하면 그 피부가 보인다.
+- id: 6338 | level: N3 | [革 / かわ , 良い革は何年ももつ。]
+  - meaning_ko: 가죽
+  - example_ko: 좋은 가죽은 수년간 있다.
+- id: 6343 | level: N3 | [可愛そう / かわいそう , ]
+  - meaning_ko: 가난한
+- id: 6348 | level: N3 | [可愛らしい / かわいらしい , その猫は可愛らしい。]
+  - meaning_ko: 사랑스러운
+  - example_ko: 그 고양이는 귀엽다.
+- id: 6353 | level: N3 | [乾かす / かわかす , 洗濯物を乾かす時間だ。]
+  - meaning_ko: 말리다
+  - example_ko: 세탁물을 말리는 시간이다.
+- id: 6359 | level: N3 | [渇く / かわく , しょっちゅう喉が渇くんだよ。]
+  - meaning_ko: 목마르다
+  - example_ko: 쇼츄 목이 마르군.
+- id: 6374 | level: N3 | [代る / かわる , ]
+  - meaning_ko: ~을 대신하다
+- id: 6377 | level: N3 | [缶 / かん , 薬缶のお湯が沸いている。]
+  - meaning_ko: ~할 수 있다
+  - example_ko: 약 캔의 물이 끓는다.
+- id: 6381 | level: N3 | [勘 / かん , 勘定書を頼むよ。]
+  - meaning_ko: 지각
+  - example_ko: 계정을 부탁해.
+- id: 6386 | level: N3 | [考え / かんがえ , 良い考えだね！]
+  - meaning_ko: 생각
+  - example_ko: 좋은 생각이야!
+- id: 6388 | level: N3 | [感覚 / かんかく , 彼女は美的感覚がある。]
+  - meaning_ko: 감각
+  - example_ko: 그녀는 미적 감각이 있습니다.
+- id: 6390 | level: N3 | [間隔 / かんかく , 彼が答える前に長い時間の間隔があった。]
+  - meaning_ko: 공간
+  - example_ko: 그가 응답하기 전에 장시간 거리가 있었다.
+- id: 6397 | level: N3 | [観客 / かんきゃく , 彼の観客は最近減ってきている。]
+  - meaning_ko: 청중
+  - example_ko: 그의 관객은 최근 줄어들고 있다.
+- id: 6402 | level: N3 | [環境 / かんきょう , 両手に花でいい環境じゃん！]
+  - meaning_ko: 환경
+  - example_ko: 양손에 꽃으로 좋은 환경이야!
+- id: 6406 | level: N3 | [歓迎 / かんげい , 来る者は誰でも歓迎だ。]
+  - meaning_ko: 환영
+  - example_ko: 오는 사람은 누구나 환영한다.
+- id: 6411 | level: N3 | [観光 / かんこう , 毎年、多くの観光客がこの島に来る。]
+  - meaning_ko: 관광
+  - example_ko: 매년 많은 관광객들이 이 섬에 온다.
+- id: 6414 | level: N3 | [観察 / かんさつ , 太陽の黒点を観察しよう。]
+  - meaning_ko: 관찰
+  - example_ko: 태양의 검은 점을 관찰하자.
+- id: 6419 | level: N3 | [感じ / かんじ , 比較的難しいジグソーだと感じました。]
+  - meaning_ko: 감정
+  - example_ko: 비교적 어려운 지그소라고 느꼈습니다.
+- id: 6424 | level: N3 | [感謝 / かんしゃ , 彼女は僕たちの手助けに感謝した。]
+  - meaning_ko: 감사해요
+  - example_ko: 그녀는 우리의 도움에 감사했다.
+- id: 6429 | level: N3 | [患者 / かんじゃ , 良い医者は患者に同情を示す。]
+  - meaning_ko: 인내심 있는
+  - example_ko: 좋은 의사는 환자에게 동정심을 보인다.
+- id: 6434 | level: N3 | [勘定 / かんじょう , 勘定書を頼むよ。]
+  - meaning_ko: 계산
+  - example_ko: 계정을 부탁해.
+- id: 6445 | level: N3 | [感情 / かんじょう , 時々感情が抑えられないことがある。]
+  - meaning_ko: 감정
+  - example_ko: 때때로 감정이 억제되지 않는 경우가 있다.
+- id: 6449 | level: N3 | [感じる / かんじる , 良書を読むといつも幸せだと感じる。]
+  - meaning_ko: 느끼다
+  - example_ko: 양서를 읽으면 항상 행복하다고 느낀다.
+- id: 6454 | level: N3 | [感心 / かんしん , 彼の勇気に感心せずにはいられなかった。]
+  - meaning_ko: 감탄
+  - example_ko: 그의 용기에 감탄하지 않고는 있을 수 없었다.
+- id: 6459 | level: N3 | [関心 / かんしん , 父は古代史に関心を持っている。]
+  - meaning_ko: 우려
+  - example_ko: 아버지는 고대사에 관심을 가지고 있다.
+- id: 6463 | level: N3 | [関する / かんする , 今日はオームの法則に関する実験を行います。]
+  - meaning_ko: 우려하다
+  - example_ko: 오늘은 옴의 법칙에 관한 실험을합니다.
+- id: 6467 | level: N3 | [完成 / かんせい , 練習が完成を生む。]
+  - meaning_ko: 완벽한
+  - example_ko: 연습이 완성을 낳는다.
+- id: 6473 | level: N3 | [完全 / かんぜん , 僕は君の意見に完全に同意する。]
+  - meaning_ko: 완전
+  - example_ko: 나는 너의 의견에 완전히 동의한다.
+- id: 6478 | level: N3 | [乾燥 / かんそう , 肌が乾燥しています。]
+  - meaning_ko: 마른
+  - example_ko: 피부가 건조합니다.
+- id: 6486 | level: N3 | [感想 / かんそう , それの感想は？]
+  - meaning_ko: (그의) 인상
+  - example_ko: 그것의 감상은?
+- id: 6491 | level: N3 | [感動 / かんどう , 必ずその光景に感動するだろう。]
+  - meaning_ko: 깊은 감동을 받고
+  - example_ko: 반드시 그 광경에 감동할 것이다.
+- id: 6494 | level: N3 | [監督 / かんとく , 彼は監督に挨拶さえしなかった。]
+  - meaning_ko: 감독
+  - example_ko: 그는 감독에게 인사조차하지 않았다.
+- id: 6498 | level: N3 | [管理 / かんり , 畑違いの品質管理課は如何ですか？]
+  - meaning_ko: 제어
+  - example_ko: 밭 차이의 품질 관리과는 어떻습니까?
+- id: 6503 | level: N3 | [完了 / かんりょう , よし！掃討完了！]
+  - meaning_ko: 완성
+  - example_ko: 좋아! 소토 완료!
+- id: 6506 | level: N3 | [関連 / かんれん , 俳句は季節と関連が深い。]
+  - meaning_ko: 관계
+  - example_ko: 하이쿠는 계절과 관련이 깊다.
+- id: 6515 | level: N3 | [議員 / ぎいん , 彼は国会議員に選出された。]
+  - meaning_ko: 국회의원
+  - example_ko: 그는 국회의원으로 선출되었다.
+- id: 6520 | level: N3 | [記憶 / きおく , 彼女は交通事故で記憶を失った。]
+  - meaning_ko: 메모리
+  - example_ko: 그녀는 교통사고로 기억을 잃었다.
+- id: 6528 | level: N3 | [気温 / きおん , 平均気温が上昇した。]
+  - meaning_ko: 온도 (날씨 - 사물에는 사용되지 않음)
+  - example_ko: 평균 기온이 상승했다.
+- id: 6533 | level: N3 | [機械 / きかい , 彼女はこの機械を動かせない。]
+  - meaning_ko: 기계
+  - example_ko: 그녀는 이 기계를 움직일 수 없다.
+- id: 6538 | level: N3 | [器械 / きかい , 彼は器械運動が得意だ。]
+  - meaning_ko: 기구
+  - example_ko: 그는 계기운동이 잘된다.
+- id: 6543 | level: N3 | [議会 / ぎかい , 彼らは法案を議会に提出した。]
+  - meaning_ko: 다이어트
+  - example_ko: 그들은 법안을 의회에 제출했다.
+- id: 6547 | level: N3 | [期間 / きかん , 博覧会の開催期間は６ヶ月です。]
+  - meaning_ko: 기간
+  - example_ko: 박람회 개최 기간은 6개월입니다.
+- id: 6553 | level: N3 | [機関 / きかん , 調査機関がその効果を調べた。]
+  - meaning_ko: 엔진
+  - example_ko: 조사기관이 그 효과를 조사했다.
+- id: 6557 | level: N3 | [企業 / きぎょう , 不況のため企業業績は悪化した。]
+  - meaning_ko: 산업
+  - example_ko: 불황 때문에 기업 실적은 악화됐다.
+- id: 6562 | level: N3 | [効く / きく , 風邪に効く薬はありますか。]
+  - meaning_ko: 효과적이다
+  - example_ko: 감기에 걸리는 약이 있습니까?
+- id: 6566 | level: N3 | [期限 / きげん , このパンって賞味期限大丈夫か？]
+  - meaning_ko: 사선
+  - example_ko: 이 빵은 유통 기한 괜찮습니까?
+- id: 6569 | level: N3 | [機嫌 / きげん , 彼女は不機嫌だった。]
+  - meaning_ko: 기분
+  - example_ko: 그녀는 불쾌했다.
+- id: 6576 | level: N3 | [気候 / きこう , 彼は寒い気候にすぐ慣れた。]
+  - meaning_ko: 기후
+  - example_ko: 그는 추운 기후에 익숙해졌습니다.
+- id: 6579 | level: N3 | [岸 / きし , 湾岸戦争についてどう思いますか。]
+  - meaning_ko: 은행
+  - example_ko: 걸프 전쟁에 대해 어떻게 생각하십니까?
+- id: 6586 | level: N3 | [生地 / きじ , 彼は出生地は確かにイタリアだと誓った。]
+  - meaning_ko: 구조
+  - example_ko: 그는 출생지는 확실히 이탈리아라고 맹세했다.
+- id: 6590 | level: N3 | [記事 / きじ , またアフィ狙いの記事か。]
+  - meaning_ko: 기사
+  - example_ko: 또한 Affi 목표의 기사?
+- id: 6594 | level: N3 | [技師 / ぎし , 彼は有能な技師です。]
+  - meaning_ko: 엔지니어
+  - example_ko: 그는 유능한 기술자입니다.
+- id: 6598 | level: N3 | [記者 / きしゃ , 彼は将来有望な記者だと思う。]
+  - meaning_ko: 보고자
+  - example_ko: 그는 장래 유망한 기자라고 생각한다.
+- id: 6602 | level: N3 | [傷 / きず , 腕の傷は跡を残した。]
+  - meaning_ko: 상처
+  - example_ko: 팔의 상처는 흔적을 남겼다.
+- id: 6606 | level: N3 | [期待 / きたい , 旅行は期待通りでしたか。]
+  - meaning_ko: 기대
+  - example_ko: 여행은 예상대로였는가?
+- id: 6611 | level: N3 | [気体 / きたい , 水は温められると、気体になる。]
+  - meaning_ko: 증기
+  - example_ko: 물이 따뜻해지면 기체가됩니다.
+- id: 6618 | level: N3 | [帰宅 / きたく , 夜になったので、帰宅した。]
+  - meaning_ko: 집으로 돌아가다
+  - example_ko: 밤이 되었으므로 귀가했다.
+- id: 6624 | level: N3 | [貴重 / きちょう , 友情ほど貴重なものはない。]
+  - meaning_ko: 귀중한
+  - example_ko: 우정만큼 귀중한 것은 없다.
+- id: 6628 | level: N3 | [議長 / ぎちょう , 彼女は議長に話しかけた。]
+  - meaning_ko: 의장
+  - example_ko: 그녀는 의장에게 말을 걸었다.
+- id: 6635 | level: N3 | [きちんと / きちんと , 約束はきちんと果たすべきだ。]
+  - meaning_ko: 정확하게
+  - example_ko: 약속은 제대로 해야 한다.
+- id: 6644 | level: N3 | [きつい / きつい , 彼女は夫の首に抱きついた。]
+  - meaning_ko: 단단한
+  - example_ko: 그녀는 남편의 목에 껴안았다.
+- id: 6649 | level: N3 | [気付く / きづく , 子どもは一日に千回も違いに気付く。]
+  - meaning_ko: 알아차리다
+  - example_ko: 아이는 하루에 천 번이나 차이를 알아차린다.
+- id: 6654 | level: N3 | [気に入る / きにいる , 多分私はこの本が気に入るでしょう。]
+  - meaning_ko: 좋아하다
+  - example_ko: 어쩌면 나는이 책을 좋아할 것이다.
+- id: 6657 | level: N3 | [記入 / きにゅう , 用紙に自分の名を記入した。]
+  - meaning_ko: 기입
+  - example_ko: 용지에 자신의 이름을 기입했다.
+- id: 6661 | level: N3 | [記念 / きねん , 兵士達は平和記念碑を建てた。]
+  - meaning_ko: 기념
+  - example_ko: 군인들은 평화 기념비를 세웠다.
+- id: 6666 | level: N3 | [機能 / きのう , 泳者の呼吸機能の特性について。]
+  - meaning_ko: 기능
+  - example_ko: 수영자의 호흡 기능의 특성에 대해.
+- id: 6676 | level: N3 | [気の毒 / きのどく , 本当にお気の毒に存じます。]
+  - meaning_ko: 불쌍한
+  - example_ko: 정말 기분이 좋다.
+- id: 6681 | level: N3 | [寄付 / きふ , 彼女は赤十字に寄付した。]
+  - meaning_ko: 기부금
+  - example_ko: 그녀는 적십자에게 기부했다.
+- id: 6684 | level: N3 | [希望 / きぼう , 命ある限り希望あり。]
+  - meaning_ko: 희망
+  - example_ko: 생명 있는 한 희망 있다.
+- id: 6688 | level: N3 | [基本 / きほん , 順を追って基本的なタグを覚えていこう。]
+  - meaning_ko: 기초적인
+  - example_ko: 순서를 따라 기본적인 태그를 기억하자.
+- id: 6693 | level: N3 | [決まり / きまり , 一両日中にも決まりそうだ。]
+  - meaning_ko: 합의
+  - example_ko: 하루 종일에도 결정될 것 같다.
+- id: 6697 | level: N3 | [気味 / きみ , 貧血気味です。]
+  - meaning_ko: -좋다
+  - example_ko: 빈혈 기미입니다.
+- id: 6701 | level: N3 | [奇妙 / きみょう , 彼女は奇妙な夢を見た。]
+  - meaning_ko: 이상한
+  - example_ko: 그녀는 이상한 꿈을 꾸었다.
+- id: 6710 | level: N3 | [義務 / ぎむ , 法律に従うのは我々の義務だ。]
+  - meaning_ko: 의무
+  - example_ko: 법률을 따르는 것은 우리의 의무다.
+- id: 6715 | level: N3 | [疑問 / ぎもん , 疑問が氷解しました！]
+  - meaning_ko: 질문
+  - example_ko: 의문이 빙해되었습니다!
+- id: 6719 | level: N3 | [逆 / ぎゃく , しかし、逆もまた真である。]
+  - meaning_ko: 뒤집다
+  - example_ko: 그러나 반대도 참이다.
+- id: 6725 | level: N3 | [キャプテン / キャプテン , 彼らは彼をキャプテンにした。]
+  - meaning_ko: 선장
+  - example_ko: 그들은 그를 캡틴으로 만들었습니다.
+- id: 6730 | level: N3 | [キャンプ / キャンプ , 彼らは水際でキャンプをした。]
+  - meaning_ko: 캠프
+  - example_ko: 그들은 물가에서 캠프를 했다.
+- id: 6734 | level: N3 | [旧 / きゅう , 彼は駅から帰る途中、旧友に会った。]
+  - meaning_ko: 전-
+  - example_ko: 그는 역에서 돌아가는 도중 옛 친구를 만났다.
+- id: 6737 | level: N3 | [級 / きゅう , 日本語検定の二級に受かった。]
+  - meaning_ko: 수업
+  - example_ko: 일본어 검정의 2급에 받았다.
+- id: 6740 | level: N3 | [球 / きゅう , いい球を放るようになったな、恵一君。]
+  - meaning_ko: 지구
+  - example_ko: 좋은 공을 떠나게 되었구나, 에이치군.
+- id: 6745 | level: N3 | [休暇 / きゅうか , 良い休暇を。]
+  - meaning_ko: 휴가
+  - example_ko: 좋은 휴가를.
+- id: 6749 | level: N3 | [休憩 / きゅうけい , 彼らはしばらく休憩した。]
+  - meaning_ko: 나머지
+  - example_ko: 그들은 잠시 쉬었다.
+- id: 6753 | level: N3 | [急激 / きゅうげき , 輸入量の急激な増加に我々は驚いた。]
+  - meaning_ko: 갑자기
+  - example_ko: 수입량의 급격한 증가에 우리는 놀랐다.
+- id: 6759 | level: N3 | [吸収 / きゅうしゅう , 綿は水を吸収する。]
+  - meaning_ko: 흡수
+  - example_ko: 면은 물을 흡수한다.
+- id: 6764 | level: N3 | [救助 / きゅうじょ , 彼らには臨時救助が必要だ。]
+  - meaning_ko: 안도
+  - example_ko: 그들에게는 임시 구조가 필요하다.
+- id: 6776 | level: N3 | [急速 / きゅうそく , 彼女は急速に英語力が伸びた。]
+  - meaning_ko: 빠른(예:
+  - example_ko: 그녀는 급속히 영어 능력이 늘었다.
+- id: 6780 | level: N3 | [休息 / きゅうそく , 彼らは今休息している。]
+  - meaning_ko: 나머지
+  - example_ko: 그들은 지금 휴식하고 있다.
+- id: 6785 | level: N3 | [急に / きゅうに , 僕は急に悲しくなった。]
+  - meaning_ko: 갑자기
+  - example_ko: 나는 갑자기 슬퍼졌다.
+- id: 6790 | level: N3 | [給料 / きゅうりょう , 労働者が給料をもらうのは当然だ。]
+  - meaning_ko: 샐러리
+  - example_ko: 노동자가 급료를 받는 것은 당연하다.
+- id: 6793 | level: N3 | [器用 / きよう , 父は器用で何でも修理してしまう。]
+  - meaning_ko: 잘 만들어진
+  - example_ko: 아버지는 손쉽게 무엇이든 수리합니다.
+- id: 6797 | level: N3 | [教科書 / きょうかしょ , 彼は教科書型の人間だ。]
+  - meaning_ko: 교과서
+  - example_ko: 그는 교과서형의 인간이다.
+- id: 6802 | level: N3 | [競技 / きょうぎ , 彼らは団体競技に参加した。]
+  - meaning_ko: 게임
+  - example_ko: 그들은 단체 경기에 참가했다.
+- id: 6807 | level: N3 | [行儀 / ぎょうぎ , 母は私に行儀よくするようにと言った。]
+  - meaning_ko: 예의
+  - example_ko: 어머니는 나에게 능숙하게 하라고 말했다.
+- id: 6812 | level: N3 | [供給 / きょうきゅう , 蜜蜂は蜜を供給してくれる。]
+  - meaning_ko: 공급
+  - example_ko: 꿀벌은 꿀을 공급해준다.
+- id: 6816 | level: N3 | [教授 / きょうじゅ , 明日、私たちの教授は英国に帰るのよ。]
+  - meaning_ko: 가르침
+  - example_ko: 내일 우리 교수는 영국으로 돌아갈거야.
+- id: 6822 | level: N3 | [強調 / きょうちょう , 僕はこの点を特に強調したい。]
+  - meaning_ko: 중요성
+  - example_ko: 나는 이 점을 특히 강조하고 싶다.
+- id: 6827 | level: N3 | [共通 / きょうつう , 僕らには何も共通点がない。]
+  - meaning_ko: 공통
+  - example_ko: 우리에게는 아무것도 공통점이 없다.
+- id: 6832 | level: N3 | [共同 / きょうどう , 彼らは共同声明に同意した。]
+  - meaning_ko: 협력
+  - example_ko: 그들은 공동 성명에 동의했다.
+- id: 6837 | level: N3 | [恐怖 / きょうふ , 彼女は恐怖の叫び声をあげた。]
+  - meaning_ko: 두려움
+  - example_ko: 그녀는 공포의 외침을 들었다.
+- id: 6842 | level: N3 | [協力 / きょうりょく , 両者にとって協力が実を結んだようだ。]
+  - meaning_ko: 협력
+  - example_ko: 양자에게 협력이 열매를 맺은 것 같다.
+- id: 6847 | level: N3 | [強力 / きょうりょく , 彼らはより強力な武器を作った。]
+  - meaning_ko: 강한
+  - example_ko: 그들은 더 강력한 무기를 만들었습니다.
+- id: 6851 | level: N3 | [許可 / きょか , 無試験で入学を許可された。]
+  - meaning_ko: 허가
+  - example_ko: 무시험으로 입학이 허용되었다.
+- id: 6855 | level: N3 | [局 / きょく , 結局は誰でも自分で学ぶしかない。]
+  - meaning_ko: 사무실
+  - example_ko: 결국 누구나 스스로 배울 수밖에 없다.
+- id: 6861 | level: N3 | [巨大 / きょだい , 東京は巨大な都市です。]
+  - meaning_ko: 거대한
+  - example_ko: 도쿄는 거대한 도시입니다.
+- id: 6874 | level: N3 | [嫌う / きらう , 自然は真空を嫌う。]
+  - meaning_ko: 미워하다
+  - example_ko: 자연은 진공을 싫어한다.
+- id: 6878 | level: N3 | [霧 / きり , 夜霧に当たって風邪をひいた。]
+  - meaning_ko: 안개
+  - example_ko: 밤 안개에 닿아 감기에 걸렸다.
+- id: 6882 | level: N3 | [切れ / きれ , フロッピーなフロッピーはもう売り切れ。]
+  - meaning_ko: 옷감
+  - example_ko: 플로피 플로피는 이미 매진.
+- id: 6888 | level: N3 | [切れる / きれる , 彼は頭が切れる。]
+  - meaning_ko: 잘 자르다
+  - example_ko: 그는 머리가 끊어진다.
+- id: 6893 | level: N3 | [記録 / きろく , 無言が記録されたためしはない。]
+  - meaning_ko: 기록
+  - example_ko: 무언이 기록되었기 때문에 하지 않는다.
+- id: 6897 | level: N3 | [議論 / ぎろん , 彼女は彼の議論に反駁した。]
+  - meaning_ko: 논쟁
+  - example_ko: 그녀는 그의 논쟁에 반박했다.
+- id: 6906 | level: N3 | [銀 / ぎん , 雄弁は銀、沈黙は金。]
+  - meaning_ko: 은
+  - example_ko: 웅변은 은, 침묵은 금.
+- id: 6910 | level: N3 | [禁煙 / きんえん , 父は禁煙を決意した。]
+  - meaning_ko: 금연
+  - example_ko: 아버지는 금연을 결심했다.
+- id: 6917 | level: N3 | [金額 / きんがく , 彼は彼女にかなりの金額を与えた。]
+  - meaning_ko: 돈의 양
+  - example_ko: 그는 그녀에게 상당한 금액을 주었다.
+- id: 6922 | level: N3 | [金庫 / きんこ , 彼は金庫を私に預けた。]
+  - meaning_ko: 안전한
+  - example_ko: 그는 금고를 나에게 맡겼다.
+- id: 6927 | level: N3 | [禁止 / きんし , ネタバレは禁止です。]
+  - meaning_ko: 금지
+  - example_ko: 스포일러는 금지입니다.
+- id: 6932 | level: N3 | [金銭 / きんせん , 父が金銭的援助をしてくれます。]
+  - meaning_ko: 돈
+  - example_ko: 아버지가 금전적 원조를 해 줍니다.
+- id: 6937 | level: N3 | [金属 / きんぞく , 銅も銀も金属である。]
+  - meaning_ko: 금속
+  - example_ko: 구리도 은도 금속이다.
+- id: 6942 | level: N3 | [近代 / きんだい , 彼は近代文学を専攻している。]
+  - meaning_ko: 현대
+  - example_ko: 그는 근대 문학을 전공하고 있다.
+- id: 6946 | level: N3 | [緊張 / きんちょう , 冷戦の緊張が高まった。]
+  - meaning_ko: 긴장
+  - example_ko: 냉전의 긴장이 높아졌다.
+- id: 6951 | level: N3 | [筋肉 / きんにく , 全身筋肉痛だ。]
+  - meaning_ko: 근
+  - example_ko: 전신근육통이다.
+- id: 6956 | level: N3 | [金融 / きんゆう , 彼女は金融市場の取材を担当している。]
+  - meaning_ko: 재원
+  - example_ko: 그녀는 금융시장의 취재를 담당하고 있다.
+- id: 6961 | level: N3 | [句 / く , 文句を言えば切りがない。]
+  - meaning_ko: 구절
+  - example_ko: 불평을 하면 자르지 않는다.
+- id: 6965 | level: N3 | [食う / くう , 大魚は小魚を食う。]
+  - meaning_ko: (남성) (저속어) 먹다
+  - example_ko: 큰 물고기는 작은 물고기를 먹는다.
+- id: 6975 | level: N3 | [偶然 / ぐうぜん , 僕は偶然温泉を見つけた。]
+  - meaning_ko: (우연히)
+  - example_ko: 나는 우연히 온천을 발견했다.
+- id: 6980 | level: N3 | [臭い / くさい , 彼がしたおならは臭い。]
+  - meaning_ko: 냄새나는
+  - example_ko: 그가 한 방귀는 냄새.
+- id: 6983 | level: N3 | [鎖 / くさり , 兵隊が町への道を封鎖した。]
+  - meaning_ko: 체인
+  - example_ko: 군대가 마을로가는 길을 봉쇄했다.
+- id: 6986 | level: N3 | [腐る / くさる , 暑いと牛乳はすぐに腐る。]
+  - meaning_ko: 썩다
+  - example_ko: 뜨겁고 우유는 즉시 썩습니다.
+- id: 6995 | level: N3 | [癖 / くせ , 彼女は爪を噛む癖がある。]
+  - meaning_ko: 습관 (종종 나쁜 습관)
+  - example_ko: 그녀는 손톱을 씹는 버릇이 있다.
+- id: 6999 | level: N3 | [管 / くだ , 畑違いの品質管理課は如何ですか？]
+  - meaning_ko: 파이프
+  - example_ko: 밭 차이의 품질 관리과는 어떻습니까?
+- id: 7003 | level: N3 | [具体 / ぐたい , 彼の考えは具体的でも抽象的でもなかった。]
+  - meaning_ko: 콘크리트
+  - example_ko: 그의 생각은 구체적이거나 추상적이지 않았다.
+- id: 7007 | level: N3 | [下り / くだり , 夜のとばりが下りつつある。]
+  - meaning_ko: 하행 열차(도쿄에서 출발)
+  - example_ko: 밤의 토바리가 내려가고 있다.
+- id: 7012 | level: N3 | [下る / くだる , 坂を下ると海が見えてきました。]
+  - meaning_ko: 내려오다
+  - example_ko: 비탈을 내리면 바다가 보였습니다.
+- id: 7016 | level: N3 | [苦痛 / くつう , 兵士は苦痛でうめいた。]
+  - meaning_ko: 통증
+  - example_ko: 군인은 고통으로 신음했다.
+- id: 7023 | level: N3 | [ぐっすり / ぐっすり , ゆうべはぐっすり眠れたよ。]
+  - meaning_ko: 잠 들어
+  - example_ko: 유베는 굉장히 잠을 잘 수 있었다.
+- id: 7027 | level: N3 | [区別 / くべつ , 狼と犬の区別がつきますか。]
+  - meaning_ko: 구별
+  - example_ko: 늑대와 개를 구별할 수 있습니까?
+- id: 7033 | level: N3 | [組 / くみ , 社長が社員の主体的な取り組みを促した。]
+  - meaning_ko: 수업
+  - example_ko: 사장이 사원의 주체적인 대처를 촉구했다.
+- id: 7037 | level: N3 | [組合 / くみあい , 労働組合はストを宣言した。]
+  - meaning_ko: 협회
+  - example_ko: 노동조합은 파업을 선언했다.
+- id: 7042 | level: N3 | [組む / くむ , そろそろ本気で仕事に取り組むころだよ。]
+  - meaning_ko: 함께 모으다
+  - example_ko: 이제 진심으로 일에 임할 무렵이야.
+- id: 7047 | level: N3 | [汲む / くむ , ]
+  - meaning_ko: 그리다
+- id: 7054 | level: N3 | [酌む / くむ , ]
+  - meaning_ko: 사케를 대접하다
+- id: 7059 | level: N3 | [悔しい / くやしい , 決勝戦で負けるほど悔しいものはない。]
+  - meaning_ko: 유감스럽다
+  - example_ko: 결승전에서 질 정도로 분한 것은 없다.
+- id: 7063 | level: N3 | [位 / くらい , 卵は１ダース単位で売られる。]
+  - meaning_ko: 등급
+  - example_ko: 계란은 다스 단위로 팔린다.
+- id: 7067 | level: N3 | [暮らし / くらし , 贅沢な暮らしをしたい。]
+  - meaning_ko: 생활
+  - example_ko: 사치스러운 생활을 하고 싶다.
+- id: 7075 | level: N3 | [クラシック / クラシック , 私は音楽、ことにクラシックが好きだ。]
+  - meaning_ko: 고전)
+  - example_ko: 나는 음악, 클래식을 좋아한다.
+- id: 7084 | level: N3 | [暮らす / くらす , 裕福に暮らす。]
+  - meaning_ko: 살기 위해
+  - example_ko: 부유하게 살다.
+- id: 7085 | level: N3 | [グラス / グラス , 彼女はグラスにワインを満たした。]
+  - meaning_ko: 유리
+  - example_ko: 그녀는 유리에 와인을 채웠다.
+- id: 7091 | level: N3 | [グランド / グランド , 彼女はグランドピアノでその曲を引いた。]
+  - meaning_ko: 선
+  - example_ko: 그녀는 그랜드 피아노에서 그 노래를 그렸다.
+- id: 7095 | level: N3 | [クリーム / クリーム , 僕にアイスクリームとっといてよ。]
+  - meaning_ko: 크림
+  - example_ko: 나에게 아이스크림이 있어요.
+- id: 7104 | level: N3 | [繰り返す / くりかえす , 歴史は繰り返す。]
+  - meaning_ko: 반복하다
+  - example_ko: 역사는 반복한다.
+- id: 7108 | level: N3 | [クリスマス / クリスマス , メリークリスマス！]
+  - meaning_ko: 크리스마스
+  - example_ko: 메리 크리스마스!
+- id: 7114 | level: N3 | [狂う / くるう , 一つ間違えば一里も狂う。]
+  - meaning_ko: 미치다
+  - example_ko: 하나 틀리면 일리도 미친다.
+- id: 7116 | level: N3 | [グループ / グループ , 彼等は二つのグループに分けられた。]
+  - meaning_ko: 그룹
+  - example_ko: 그들은 두 그룹으로 나뉘었다.
+- id: 7121 | level: N3 | [苦しい / くるしい , 彼は私達に対して実に堅苦しい。]
+  - meaning_ko: 힘든
+  - example_ko: 그는 저희에 대하여 진실하게 단단하다.
+- id: 7128 | level: N3 | [苦しむ / くるしむ , 生きることは苦しむこと。]
+  - meaning_ko: 고통을 받다
+  - example_ko: 사는 것은 고통받는 것.
+- id: 7132 | level: N3 | [暮れ / くれ , 夕暮れが谷間に迫っていた。]
+  - meaning_ko: 연말
+  - example_ko: 황혼이 골짜기에 다가갔다.
+- id: 7135 | level: N3 | [苦労 / くろう , 部屋探しは苦労することがある。]
+  - meaning_ko: 고난
+  - example_ko: 방 찾기는 고생할 수 있다.
+- id: 7140 | level: N3 | [加える / くわえる , 彼は必要な変更を加える。]
+  - meaning_ko: 추가하다
+  - example_ko: 그는 필요한 변화를 추가한다.
+- id: 7148 | level: N3 | [咥える / くわえる , ]
+  - meaning_ko: 입에 뭔가를 물고
+- id: 7153 | level: N3 | [詳しい / くわしい , 彼女はその問題に詳しい。]
+  - meaning_ko: 상세한
+  - example_ko: 그녀는 그 문제에 익숙하다.
+- id: 7159 | level: N3 | [加わる / くわわる , 彼が私達に加わるのは当然だと思った。]
+  - meaning_ko: 가입하다
+  - example_ko: 그가 우리에게 합류하는 것은 당연하다고 생각했다.
+- id: 7161 | level: N3 | [訓 / くん , 彼女は秘書となる訓練を受けた。]
+  - meaning_ko: 일본어 원어민의 한자 읽기
+  - example_ko: 그녀는 비서가 되는 훈련을 받았다.
+- id: 7165 | level: N3 | [軍 / ぐん , 明日我々は敵軍に出くわすだろう。]
+  - meaning_ko: 군대
+  - example_ko: 내일 우리는 적군을 만날 것이다.
+- id: 7169 | level: N3 | [郡 / ぐん , これは豊能郡の地図です。]
+  - meaning_ko: 국가
+  - example_ko: 이것은 도요 노군의지도입니다.
+- id: 7172 | level: N3 | [軍隊 / ぐんたい , 彼は軍隊にいる。]
+  - meaning_ko: 군대
+  - example_ko: 그는 군대에 있다.
+- id: 7182 | level: N3 | [訓練 / くんれん , 彼女は秘書となる訓練を受けた。]
+  - meaning_ko: 관행
+  - example_ko: 그녀는 비서가 되는 훈련을 받았다.
+- id: 7186 | level: N3 | [計 / けい , 彼を待ち伏せる一計を案じた。]
+  - meaning_ko: 계획
+  - example_ko: 그를 매복할 수 있는 한계를 안았다.
+- id: 7189 | level: N3 | [敬意 / けいい , 勇者に敬意を払いなさい。]
+  - meaning_ko: 존경
+  - example_ko: 용사에게 경의를 표하십시오.
+- id: 7195 | level: N3 | [経営 / けいえい , 会社が日中合弁で経営しています。]
+  - meaning_ko: 관리
+  - example_ko: 회사가 주간 합작으로 운영하고 있습니다.
+- id: 7199 | level: N3 | [景気 / けいき , 不景気なのに依然物価は高い。]
+  - meaning_ko: 상태
+  - example_ko: 불경기인데 여전히 물가는 높다.
+- id: 7205 | level: N3 | [傾向 / けいこう , 物価は上昇傾向にある。]
+  - meaning_ko: 성향
+  - example_ko: 물가는 상승세에 있다.
+- id: 7210 | level: N3 | [警告 / けいこく , 彼らは船に危険を警告した。]
+  - meaning_ko: 경고
+  - example_ko: 그들은 배에 위험을 경고했다.
+- id: 7215 | level: N3 | [計算 / けいさん , 旅行の総費用を計算してくれますか。]
+  - meaning_ko: 계산
+  - example_ko: 여행의 총 비용을 계산해 주시겠습니까?
+- id: 7218 | level: N3 | [掲示 / けいじ , 全従業員ラウンジに発表を掲示します。]
+  - meaning_ko: 알아채다
+  - example_ko: 모든 직원 라운지에 발표를 게시합니다.
+- id: 7224 | level: N3 | [刑事 / けいじ , 彼は刑事だ。]
+  - meaning_ko: 형사
+  - example_ko: 그는 형사다.
+- id: 7232 | level: N3 | [芸術 / げいじゅつ , 私は芸術家ではない。全然向いていない。]
+  - meaning_ko: (괜찮아) 예술
+  - example_ko: 나는 예술가가 아니다. 전혀 적합하지 않다.
+- id: 7237 | level: N3 | [契約 / けいやく , 彼女は本を書くことを契約した。]
+  - meaning_ko: 계약
+  - example_ko: 그녀는 책을 쓰는 것을 계약했다.
+- id: 7243 | level: N3 | [経由 / けいゆ , 彼らはカレー経由でパリにいった。]
+  - meaning_ko: 그런데 길을 가다
+  - example_ko: 그들은 카레를 통해 파리에 갔다.
+- id: 7247 | level: N3 | [ケース / ケース , 彼女はすべての服をスーツケースに丸め込んだ。]
+  - meaning_ko: 사례
+  - example_ko: 그녀는 모든 옷을 가방에 반올림했다.
+- id: 7252 | level: N3 | [ゲーム / ゲーム , 夕食後またゲームを続けよう。]
+  - meaning_ko: 게임
+  - example_ko: 저녁 식사 후 다시 게임을 계속합시다.
+- id: 7257 | level: N3 | [劇 / げき , 劇の批評はおしなべて好評だった。]
+  - meaning_ko: 드라마
+  - example_ko: 극의 비평은 말하자면 호평이었다.
+- id: 7261 | level: N3 | [劇場 / げきじょう , 彼はその劇場で映写係をやっている。]
+  - meaning_ko: 극장
+  - example_ko: 그는 그 극장에서 영사계를 하고 있다.
+- id: 7267 | level: N3 | [化粧 / けしょう , 母は出かける前に化粧をした。]
+  - meaning_ko: 메이크업(화장품)
+  - example_ko: 어머니는 나가기 전에 화장을 했다.
+- id: 7272 | level: N3 | [けち / けち , 職業に貴賎をつけちゃいけないよ～。]
+  - meaning_ko: 인색
+  - example_ko: 직업에 귀호를 붙이면 안돼~.
+- id: 7278 | level: N3 | [血液 / けつえき , 病院で検査用の血液を採血した。]
+  - meaning_ko: 피
+  - example_ko: 병원에서 검사용 혈액을 채혈했다.
+- id: 7281 | level: N3 | [結果 / けっか , 実験の結果は今ひとつぱっとしなかった。]
+  - meaning_ko: 결과
+  - example_ko: 실험의 결과는 지금 하나 빠지지 않았다.
+- id: 7284 | level: N3 | [欠陥 / けっかん , 彼の専門的知識の欠陥が昇進を妨げた。]
+  - meaning_ko: 결함
+  - example_ko: 그의 전문 지식의 결함은 승진을 방해했다.
+- id: 7287 | level: N3 | [結局 / けっきょく , 結局は誰でも自分で学ぶしかない。]
+  - meaning_ko: 결국
+  - example_ko: 결국 누구나 스스로 배울 수밖에 없다.
+- id: 7294 | level: N3 | [決心 / けっしん , 僕は脚本家で食べていく決心をした。]
+  - meaning_ko: 결정
+  - example_ko: 나는 각본가에서 먹어가는 결심을 했다.
+- id: 7297 | level: N3 | [欠席 / けっせき , 無断で欠席すべきではない。]
+  - meaning_ko: 결석
+  - example_ko: 무단으로 결석해서는 안된다.
+- id: 7306 | level: N3 | [決定 / けってい , 弁護士は行動の手順を決定した。]
+  - meaning_ko: 결정
+  - example_ko: 변호사는 행동 절차를 결정했다.
+- id: 7311 | level: N3 | [欠点 / けってん , 不注意は重大な欠点と見なされた。]
+  - meaning_ko: 결점
+  - example_ko: 부주의는 심각한 단점으로 간주되었다.
+- id: 7316 | level: N3 | [結論 / けつろん , 彼を首にすべきだと言う結論に達した。]
+  - meaning_ko: 결론
+  - example_ko: 그를 목에 해야 한다는 결론에 이르렀다.
+- id: 7320 | level: N3 | [煙 / けむり , 僕は一年前に禁煙した。]
+  - meaning_ko: 연기
+  - example_ko: 나는 일년 전에 금연했다.
+- id: 7325 | level: N3 | [蹴る / ける , 彼が私を蹴るんです。]
+  - meaning_ko: 걷어차다
+  - example_ko: 그가 나를 걷어차는 거야.
+- id: 7330 | level: N3 | [券 / けん , 彼は、旅券を余そうとした。]
+  - meaning_ko: 표
+  - example_ko: 그는 여권을 남기려고 했다.
+- id: 7335 | level: N3 | [県 / けん , 兵庫県の人口はどれぐらいですか。]
+  - meaning_ko: 현
+  - example_ko: 효고현의 인구는 얼마입니까?
+- id: 7340 | level: N3 | [見解 / けんかい , 本当はその声明は彼の個人的見解にすぎない。]
+  - meaning_ko: 의견
+  - example_ko: 사실 그 성명은 그의 개인적인 견해에 지나지 않는다.
+- id: 7346 | level: N3 | [限界 / げんかい , 我慢にも限界がある。]
+  - meaning_ko: 한계
+  - example_ko: 인내에도 한계가 있다.
+- id: 7351 | level: N3 | [現金 / げんきん , 罰金は現金で支払うべし。]
+  - meaning_ko: 현금
+  - example_ko: 벌금은 현금으로 지불한다.
+- id: 7357 | level: N3 | [言語 / げんご , 文化は言語を破壊する。]
+  - meaning_ko: 언어
+  - example_ko: 문화는 언어를 파괴한다.
+- id: 7362 | level: N3 | [健康 / けんこう , 夜更かししていると健康を損なうよ。]
+  - meaning_ko: 건강한)
+  - example_ko: 밤새도록 하고 있으면 건강을 해칠 것이다.
+- id: 7367 | level: N3 | [検査 / けんさ , 血圧計が大切な検査器械です。]
+  - meaning_ko: 점검
+  - example_ko: 혈압계가 중요한 검사 계기입니다.
+- id: 7372 | level: N3 | [現在 / げんざい , 現在は舞子に住んでいません。]
+  - meaning_ko: 지금 (今 (いま)와 동일)
+  - example_ko: 현재는 마이코에 살지 않습니다.
+- id: 7376 | level: N3 | [現実 / げんじつ , 予算は不正確で、しかも非現実的に思える。]
+  - meaning_ko: 현실
+  - example_ko: 예산은 부정확하고 게다가 비현실적으로 보인다.
+- id: 7380 | level: N3 | [現象 / げんしょう , 老化現象の一種です。]
+  - meaning_ko: 현상
+  - example_ko: 노화 현상의 일종입니다.
+- id: 7386 | level: N3 | [現状 / げんじょう , 彼は現状を大いに嘆いた。]
+  - meaning_ko: 현재 상태
+  - example_ko: 그는 현재 상황을 매우 한탄했다.
+- id: 7388 | level: N3 | [建設 / けんせつ , 美術館の建設にいくらお金が使われたのですか。]
+  - meaning_ko: 건설
+  - example_ko: 미술관의 건설에 얼마의 돈이 사용되었습니까?
+- id: 7393 | level: N3 | [現代 / げんだい , 麻薬中毒は現代社会の癌だ。]
+  - meaning_ko: 오늘
+  - example_ko: 마약중독은 현대사회의 암이다.
+- id: 7396 | level: N3 | [建築 / けんちく , 木造建築物は火がつきやすい。]
+  - meaning_ko: 건설
+  - example_ko: 목조 건축물은 불이 붙기 쉽다.
+- id: 7401 | level: N3 | [見当 / けんとう , 僕の鞄はどこにも見当たらなかった。]
+  - meaning_ko: 추정
+  - example_ko: 내 가방은 어디에도 보이지 않았다.
+- id: 7406 | level: N3 | [検討 / けんとう , 別の角度から問題を検討する。]
+  - meaning_ko: 고려 사항
+  - example_ko: 다른 각도에서 문제를 고려하십시오.
+- id: 7412 | level: N3 | [現場 / げんば , 彼らは事故の現場へ急行した。]
+  - meaning_ko: 실제 장소
+  - example_ko: 그들은 사고 현장으로 급행했다.
+- id: 7417 | level: N3 | [憲法 / けんぽう , 平等は憲法で守られている。]
+  - meaning_ko: 헌법
+  - example_ko: 평등은 헌법으로 지켜진다.
+- id: 7426 | level: N3 | [権利 / けんり , 民主国家では全ての国民は平等の権利を持つ。]
+  - meaning_ko: 오른쪽
+  - example_ko: 민주국가에서는 모든 국민은 평등의 권리를 가진다.
+- id: 7431 | level: N3 | [後 / ご , また後でかけ直していただけませんか？]
+  - meaning_ko: 나중에
+  - example_ko: 다시 나중에 다시 받을 수 없습니까?
+- id: 7436 | level: N3 | [碁 / ご , 父は碁をやります。]
+  - meaning_ko: 바둑(영토 점령 보드게임)
+  - example_ko: 아버지는 바둑을 한다.
+- id: 7441 | level: N3 | [恋 / こい , 遠距離恋愛をしたことはありますか。]
+  - meaning_ko: 사랑
+  - example_ko: 원거리 연애를 한 적이 있습니까?
+- id: 7446 | level: N3 | [濃い / こい , 父は濃いコーヒーが好きです。]
+  - meaning_ko: 두꺼운 (색상으로
+  - example_ko: 아버지는 진한 커피를 좋아합니다.
+- id: 7449 | level: N3 | [恋人 / こいびと , 恋人よ、我に帰れ。]
+  - meaning_ko: 애인
+  - example_ko: 연인이야, 나에게 돌아가라.
+- id: 7454 | level: N3 | [幸運 / こううん , 僕は幸運にも成功した。]
+  - meaning_ko: 행운을 빌어요
+  - example_ko: 나는 행운에도 성공했다.
+- id: 7457 | level: N3 | [講演 / こうえん , 彼は講演するためホールに行った。]
+  - meaning_ko: 강의
+  - example_ko: 그는 강연하기 위해 홀에 갔다.
+- id: 7461 | level: N3 | [効果 / こうか , 利益は効果を発揮してる。]
+  - meaning_ko: 효과
+  - example_ko: 이익은 효과를 발휘하고 있다.
+- id: 7466 | level: N3 | [硬貨 / こうか , 彼の手のひらに硬貨を置く。]
+  - meaning_ko: 동전
+  - example_ko: 그의 손바닥에 동전을 넣어.
+- id: 7471 | level: N3 | [高価 / こうか , 彼女は高価な指輪をしている。]
+  - meaning_ko: 높은 가격
+  - example_ko: 그녀는 비싼 반지를 하고 있다.
+- id: 7476 | level: N3 | [豪華 / ごうか , 女王は豪華な服装をしていた。]
+  - meaning_ko: 고급스러운
+  - example_ko: 여왕은 화려한 복장을 하고 있었다.
+- id: 7483 | level: N3 | [合格 / ごうかく , 妹はその試験に合格した。]
+  - meaning_ko: 성공
+  - example_ko: 여동생은 그 시험을 통과했다.
+- id: 7486 | level: N3 | [交換 / こうかん , あ、今度ケー番交換しませんか？]
+  - meaning_ko: 교환
+  - example_ko: 아, 이번에 케이번 교환하지 않겠습니까?
+- id: 7492 | level: N3 | [航空 / こうくう , 彼女は手紙を航空便で送った。]
+  - meaning_ko: 비행
+  - example_ko: 그녀는 편지를 항공 우편으로 보냈다.
+- id: 7497 | level: N3 | [光景 / こうけい , 恐ろしい光景に彼は戦慄した。]
+  - meaning_ko: 장면
+  - example_ko: 무서운 광경에 그는 전율했다.
+- id: 7503 | level: N3 | [合計 / ごうけい , 彼らは投票数を合計した。]
+  - meaning_ko: 합계
+  - example_ko: 그들은 투표 수를 합산했다.
+- id: 7506 | level: N3 | [攻撃 / こうげき , 兵士たちは敵の攻撃に抵抗した。]
+  - meaning_ko: 공격
+  - example_ko: 군인들은 적의 공격에 저항했다.
+- id: 7513 | level: N3 | [貢献 / こうけん , 彼女は非常に会社に貢献した。]
+  - meaning_ko: 기부금
+  - example_ko: 그녀는 아주 회사에 공헌했다.
+- id: 7516 | level: N3 | [広告 / こうこく , 彼らは売り家の広告を出した。]
+  - meaning_ko: 광고
+  - example_ko: 그들은 판매자 광고를 냈다.
+- id: 7519 | level: N3 | [交際 / こうさい , 妹は彼らとの交際を望んでいない。]
+  - meaning_ko: 우정
+  - example_ko: 여동생은 그들과의 교제를 원하지 않습니다.
+- id: 7528 | level: N3 | [校舎 / こうしゃ , 彼は校舎に放火した。]
+  - meaning_ko: 학교 건물
+  - example_ko: 그는 학교 건물에 방화했다.
+- id: 7533 | level: N3 | [後者 / こうしゃ , 前者より後者の方がいい。]
+  - meaning_ko: 후자
+  - example_ko: 전자보다 후자 쪽이 좋다.
+- id: 7537 | level: N3 | [工場 / こうば , 勧工場には約２０の出店が並んだ。]
+  - meaning_ko: 공장
+  - example_ko: 권공장에는 약 20개 출점이 늘었다.
+- id: 7542 | level: N3 | [公正 / こうせい , 彼は人に公正に振る舞う。]
+  - meaning_ko: 정당성
+  - example_ko: 그는 사람에게 공정하게 행동한다.
+- id: 7546 | level: N3 | [構成 / こうせい , 水は水素と酸素で構成されている。]
+  - meaning_ko: 조직
+  - example_ko: 물은 수소와 산소로 구성된다.
+- id: 7551 | level: N3 | [高速 / こうそく , 僕は５８号の高速道路を使ったよ。]
+  - meaning_ko: 고속
+  - example_ko: 나는 58호의 고속도로를 사용했어.
+- id: 7556 | level: N3 | [行動 / こうどう , 正義が行動によって表される。]
+  - meaning_ko: 행동
+  - example_ko: 정의는 행동으로 표현된다.
+- id: 7563 | level: N3 | [強盗 / ごうとう , 暴力団は強盗を計画していた。]
+  - meaning_ko: 강도
+  - example_ko: 폭력단은 강도를 계획하고 있었다.
+- id: 7568 | level: N3 | [後輩 / こうはい , トムは高校の後輩です。]
+  - meaning_ko: 그룹의 후배들
+  - example_ko: 톰은 고등학교 후배입니다.
+- id: 7573 | level: N3 | [幸福 / こうふく , 無知は幸福。]
+  - meaning_ko: 행복
+  - example_ko: 무지는 행복.
+- id: 7576 | level: N3 | [公平 / こうへい , 法が常に公平であるとは限らない。]
+  - meaning_ko: 공평
+  - example_ko: 법이 항상 공평하다는 것은 아니다.
+- id: 7580 | level: N3 | [候補 / こうほ , 彼は立候補した。]
+  - meaning_ko: 입후보
+  - example_ko: 그는 입후보했다.
+- id: 7584 | level: N3 | [考慮 / こうりょ , 全てを考慮してもやはり勝てない仕様になっています。]
+  - meaning_ko: 고려 사항
+  - example_ko: 모든 것을 고려해도 역시 이길 수 없는 사양으로 되어 있습니다.
+- id: 7590 | level: N3 | [越える / こえる , 彼の年収は１０万ドルを越える。]
+  - meaning_ko: 초과하다
+  - example_ko: 그의 연봉은 10만 달러를 넘는다.
+- id: 7597 | level: N3 | [超える / こえる , 制限スピードを超えるなよ。]
+  - meaning_ko: 초과하다
+  - example_ko: 제한 속도를 초과하지 마라.
+- id: 7601 | level: N3 | [コーチ / コーチ , そして、私があなた達のコーチです。]
+  - meaning_ko: 코치
+  - example_ko: 그리고 내가 당신의 코치입니다.
+- id: 7605 | level: N3 | [コード / コード , 彼らは、レコードを買います。]
+  - meaning_ko: 암호
+  - example_ko: 그들은 레코드를 구입합니다.
+- id: 7610 | level: N3 | [氷 / こおり , 疑問が氷解しました！]
+  - meaning_ko: 얼음
+  - example_ko: 의문이 빙해되었습니다!
+- id: 7616 | level: N3 | [凍る / こおる , 凍るように冷たい。]
+  - meaning_ko: 얼다
+  - example_ko: 얼어붙게 차갑다.
+- id: 7619 | level: N3 | [ゴール / ゴール , 彼女が最後にゴールした人です。]
+  - meaning_ko: 목표
+  - example_ko: 그녀가 마지막으로 목표로 한 사람입니다.
+- id: 7624 | level: N3 | [誤解 / ごかい , 彼らの争いは誤解に基づくものだ。]
+  - meaning_ko: 오해
+  - example_ko: 그들의 싸움은 오해에 근거한 것이다.
+- id: 7628 | level: N3 | [語学 / ごがく , 彼女には素晴らしい語学の才がある。]
+  - meaning_ko: 어학 공부
+  - example_ko: 그녀는 훌륭한 어학의 재능이 있다.
+- id: 7632 | level: N3 | [呼吸 / こきゅう , 彼女は深呼吸をした。]
+  - meaning_ko: 호흡
+  - example_ko: 그녀는 심호흡을 했다.
+- id: 7635 | level: N3 | [故郷 / こきょう , 彼女は生まれ故郷に埋葬された。]
+  - meaning_ko: 고향
+  - example_ko: 그녀는 태어난 고향에 묻혔다.
+- id: 7638 | level: N3 | [極 / ごく , 警察が医療事故の立件に消極的だ。]
+  - meaning_ko: 상당히
+  - example_ko: 경찰이 의료사고 입건에 소극적이다.
+- id: 7648 | level: N3 | [国語 / こくご , 先週中国語を習い始めました。]
+  - meaning_ko: 자국어
+  - example_ko: 지난 주 중국어를 배우기 시작했습니다.
+- id: 7653 | level: N3 | [国籍 / こくせき , 彼の国籍はどこですか。]
+  - meaning_ko: 국적
+  - example_ko: 그의 국적은 어디입니까?
+- id: 7658 | level: N3 | [黒板 / こくばん , 彼は黒板に正方形を二つ書いた。]
+  - meaning_ko: 칠판
+  - example_ko: 그는 칠판에 사각형을 두 개 썼다.
+- id: 7663 | level: N3 | [克服 / こくふく , 彼は多くの困難を克服した。]
+  - meaning_ko: 정복
+  - example_ko: 그는 많은 어려움을 극복했다.
+- id: 7667 | level: N3 | [国民 / こくみん , 彼女の死は国民に深い悲しみをもたらした。]
+  - meaning_ko: 국가의
+  - example_ko: 그녀의 죽음은 국민에게 깊은 슬픔을 가져왔다.
+- id: 7672 | level: N3 | [穀物 / こくもつ , 彼らは大量の穀物を蓄えている。]
+  - meaning_ko: 곡물
+  - example_ko: 그들은 많은 양의 곡물을 저장합니다.
+- id: 7675 | level: N3 | [腰 / こし , 思い切って聞き出せない、弱腰な僕。]
+  - meaning_ko: 잘 알고 있기
+  - example_ko: 과감하게 들을 수 없는, 약한 나.
+- id: 7681 | level: N3 | [胡椒 / こしょう , もう少し胡椒を入れて。]
+  - meaning_ko: 후추
+  - example_ko: 조금 후추를 넣어.
+- id: 7689 | level: N3 | [個人 / こじん , 彼は個人教育を受ける特権がある。]
+  - meaning_ko: 개인
+  - example_ko: 그는 개인교육을 받는 특권이 있다.
+- id: 7694 | level: N3 | [越す / こす , 来月に引っ越す予定です。]
+  - meaning_ko: 넘어가다 (예:
+  - example_ko: 다음달에 이사할 예정입니다.
+- id: 7698 | level: N3 | [超す / こす , ]
+  - meaning_ko: 건너다
+- id: 7703 | level: N3 | [国家 / こっか , 両国家は戦争を始めた。]
+  - meaning_ko: 상태
+  - example_ko: 양국은 전쟁을 시작했다.
+- id: 7713 | level: N3 | [国会 / こっかい , 彼は国会議員に選出された。]
+  - meaning_ko: 국민의회
+  - example_ko: 그는 국회의원으로 선출되었다.
+- id: 7717 | level: N3 | [国境 / こっきょう , 明日中には国境を越えます。]
+  - meaning_ko: 국가 또는 주 경계
+  - example_ko: 내일에는 국경을 넘을 것입니다.
+- id: 7724 | level: N3 | [骨折 / こっせつ , 腕を骨折しました。]
+  - meaning_ko: 뼈 골절
+  - example_ko: 팔을 부러뜨렸다.
+- id: 7730 | level: N3 | [小包 / こづつみ , 彼はその小包を縛った。]
+  - meaning_ko: 소포
+  - example_ko: 그는 그 소포를 묶었다.
+- id: 7735 | level: N3 | [琴 / こと , これは竪琴だ。]
+  - meaning_ko: 일본 하프
+  - example_ko: 이것은 금고이다.
+- id: 7746 | level: N3 | [異なる / ことなる , 僕の考えは君と異なる。]
+  - meaning_ko: 다르다
+  - example_ko: 내 생각은 너와 다르다.
+- id: 7748 | level: N3 | [諺 / ことわざ , 彼は有名な諺をいくつか聖書から引用した。]
+  - meaning_ko: 속담
+  - example_ko: 그는 유명한 속담을 여러 성경에서 인용했다.
+- id: 7758 | level: N3 | [断る / ことわる , 彼女は彼のプロポーズを断るほかなかった。]
+  - meaning_ko: 거절하다
+  - example_ko: 그녀는 그의 프로포즈를 거절할 수밖에 없었다.
+- id: 7763 | level: N3 | [粉 / こな , 私、粉薬って苦手なのよね。]
+  - meaning_ko: 밀가루
+  - example_ko: 나, 가루 약은 서투른거야.
+- id: 7768 | level: N3 | [好み / このみ , あなたは私の好みのタイプです。]
+  - meaning_ko: 기호
+  - example_ko: 당신은 내가 좋아하는 유형입니다.
+- id: 7773 | level: N3 | [好む / このむ , 不幸は仲間を好む。]
+  - meaning_ko: 좋아하다
+  - example_ko: 불행은 동료를 좋아한다.
+- id: 7778 | level: N3 | [こぼす / こぼす , 僕はもう君がぐちをこぼすのを聞き飽きている。]
+  - meaning_ko: 유출하다
+  - example_ko: 난 이미 네가 구찌를 쏟는 것을 듣고 지루하다.
+- id: 7783 | level: N3 | [こぼれる / こぼれる , そんな運び方じゃ絶対こぼれるって。]
+  - meaning_ko: 넘치다
+  - example_ko: 그런 운반 방법이라면 절대 쏟아진다고.
+- id: 7786 | level: N3 | [塵 / ごみ , 塵も積もれば山となる。]
+  - meaning_ko: 쓰레기
+  - example_ko: 먼지도 쌓이면 산이 된다.
+- id: 7790 | level: N3 | [小麦 / こむぎ , 毎年小麦は豊作だ。]
+  - meaning_ko: 밀
+  - example_ko: 매년 밀은 풍작이다.
+- id: 7798 | level: N3 | [ごめんなさい / ごめんなさい , 遅れてごめんなさい。]
+  - meaning_ko: 양해 부탁드립니다
+  - example_ko: 늦어서 미안해.
+- id: 7803 | level: N3 | [小屋 / こや , 部屋は兎小屋みたいだけど。]
+  - meaning_ko: 오두막
+  - example_ko: 방은 토끼집 같지만.
+- id: 7807 | level: N3 | [これら / これら , これらの物は私の物ではない。]
+  - meaning_ko: 이것들
+  - example_ko: 이 물건은 내 물건이 아닙니다.
+- id: 7812 | level: N3 | [殺す / ころす , 動物を殺すのはまっぴらだ。]
+  - meaning_ko: 죽이다
+  - example_ko: 동물을 죽이는 것은 확실합니다.
+- id: 7818 | level: N3 | [転ぶ / ころぶ , 赤ん坊はよく転ぶ。]
+  - meaning_ko: 넘어지다
+  - example_ko: 아기는 잘 넘어진다.
+- id: 7823 | level: N3 | [今回 / こんかい , 彼は今回の事故で６回目だ。]
+  - meaning_ko: 지금
+  - example_ko: 그는 이번 사고로 6번째다.
+- id: 7828 | level: N3 | [今後 / こんご , 今後もっと一生懸命勉強すると決意した。]
+  - meaning_ko: 지금부터
+  - example_ko: 앞으로 더 열심히 공부하겠다고 결의했다.
+- id: 7833 | level: N3 | [混雑 / こんざつ , 道路は様々な乗物で混雑していた。]
+  - meaning_ko: 착란
+  - example_ko: 도로는 다양한 차량으로 혼잡했습니다.
+- id: 7838 | level: N3 | [こんなに / こんなに , 何でこんなに遅くまで起きてるの？]
+  - meaning_ko: 그래서
+  - example_ko: 왜 이렇게 늦게까지 일어나고 있는 거야?
+- id: 7842 | level: N3 | [困難 / こんなん , 予期せぬ困難が起こった。]
+  - meaning_ko: 어려움
+  - example_ko: 예기치 못한 어려움이 일어났다.
+- id: 7848 | level: N3 | [今日 / こんにち , 今日はもう聞かないよ。]
+  - meaning_ko: 오늘
+  - example_ko: 오늘은 더 이상 듣지 않아.
+- id: 7852 | level: N3 | [こんにちは / こんにちは , こんにちは、私、ナンシーよ！]
+  - meaning_ko: 안녕하세요
+  - example_ko: 안녕하세요, 나, 낸시!
+- id: 7856 | level: N3 | [婚約 / こんやく , 私は婚約を解消しました。]
+  - meaning_ko: 약혼
+  - example_ko: 약혼을 해소했습니다.
+- id: 7861 | level: N3 | [混乱 / こんらん , 彼らは混乱していますね。]
+  - meaning_ko: 혼돈
+  - example_ko: 그들은 혼란스러워요.
+- id: 7867 | level: N3 | [差 / さ , ここが差し込むように痛みます。]
+  - meaning_ko: 차이점
+  - example_ko: 여기가 꽂는 것처럼 아프다.
+- id: 7872 | level: N3 | [サービス / サービス , 別にサービス料を申し受けます。]
+  - meaning_ko: 서비스
+  - example_ko: 별도로 서비스료를 부과합니다.
+- id: 7877 | level: N3 | [際 / さい , 指導部の交代は、国際政治経済に重要な影響を与える。]
+  - meaning_ko: 를 계기로
+  - example_ko: 지도부의 교체는 국제 정치 경제에 중요한 영향을 미친다.
+- id: 7882 | level: N3 | [最高 / さいこう , 本当に最高の商品です。]
+  - meaning_ko: 제일 높은
+  - example_ko: 정말 최고의 상품입니다.
+- id: 7886 | level: N3 | [財産 / ざいさん , 猛台風が財産に被害を与えた。]
+  - meaning_ko: 재산
+  - example_ko: 맹태풍이 재산에 피해를 끼쳤다.
+- id: 7890 | level: N3 | [最終 / さいしゅう , 彼は最終列車に乗り遅れた。]
+  - meaning_ko: 마지막
+  - example_ko: 그는 마지막 열차를 타고 늦었다.
+- id: 7895 | level: N3 | [最中 / さいちゅう , 彼女はきゅうりを切っている最中だった。]
+  - meaning_ko: 중간에
+  - example_ko: 그녀는 오이를 자르고 있는 동안이었다.
+- id: 7900 | level: N3 | [最低 / さいてい , 費用は最低一万円です。]
+  - meaning_ko: 최소
+  - example_ko: 비용은 최소 1만엔입니다.
+- id: 7903 | level: N3 | [才能 / さいのう , 僕には多くの才能がある。]
+  - meaning_ko: 재능
+  - example_ko: 나에게는 많은 재능이 있다.
+- id: 7908 | level: N3 | [裁判 / さいばん , 被告は上級裁判所に控訴するだろう。]
+  - meaning_ko: 재판
+  - example_ko: 피고는 상급법원에 항소할 것이다.
+- id: 7912 | level: N3 | [材料 / ざいりょう , 泥は陶器を作るのに必要な材料です。]
+  - meaning_ko: 재료
+  - example_ko: 진흙은 도자기를 만드는 데 필요한 재료입니다.
+- id: 7915 | level: N3 | [幸い / さいわい , 不幸の裏には幸いあり。]
+  - meaning_ko: 다행스럽게도
+  - example_ko: 불행의 뒤에는 다행히 있습니다.
+- id: 7921 | level: N3 | [サイン / サイン , ファンは彼にサインを求めた。]
+  - meaning_ko: 자필
+  - example_ko: 팬들은 그에게 사인을 요청했다.
+- id: 7925 | level: N3 | [境 / さかい , 両手に花でいい環境じゃん！]
+  - meaning_ko: 국경
+  - example_ko: 양손에 꽃으로 좋은 환경이야!
+- id: 7933 | level: N3 | [逆らう / さからう , 彼に逆らうな。]
+  - meaning_ko: 반대하다
+  - example_ko: 그를 거절하지 마라.
+- id: 7937 | level: N3 | [盛り / さかり , 彼女は今女盛りだ。]
+  - meaning_ko: 거들기
+  - example_ko: 그녀는 지금 여성이다.
+- id: 7942 | level: N3 | [作業 / さぎょう , 彼等は作業を終えてしまった。]
+  - meaning_ko: 일하다
+  - example_ko: 그들은 일을 끝냈다.
+- id: 7949 | level: N3 | [裂く / さく , 私は彼がその手紙を引き裂くのを見た。]
+  - meaning_ko: 찢다
+  - example_ko: 나는 그가 그 편지를 찢는 것을 보았다.
+- id: 7954 | level: N3 | [昨 / さく , 昨日動物園に行った。]
+  - meaning_ko: 작년)
+  - example_ko: 어제 동물원에 갔다.
+- id: 7959 | level: N3 | [作品 / さくひん , この評論を優勝作品に選んだ基準は何ですか。]
+  - meaning_ko: 일하다
+  - example_ko: 이 평론을 우승 작품으로 선택한 기준은 무엇입니까?
+- id: 7966 | level: N3 | [作物 / さくもつ , 嵐は作物に大損害を与えた。]
+  - meaning_ko: 생산하다(예:
+  - example_ko: 폭풍은 작물에 큰 손해를 주었다.
+- id: 7972 | level: N3 | [桜 / さくら , 彼は桜の木を切り倒した。]
+  - meaning_ko: 벚꽃
+  - example_ko: 그는 벚꽃 나무를 잘라냈다.
+- id: 7976 | level: N3 | [酒 / さけ , こんな時は、迎え酒に限ります。]
+  - meaning_ko: 술
+  - example_ko: 이런 때는, 맞이 술에 한정합니다.
+- id: 7982 | level: N3 | [叫ぶ / さけぶ , 野原で叫ぶ声がした。]
+  - meaning_ko: 소리치다
+  - example_ko: 들판에서 외치는 소리가 났다.
+- id: 7988 | level: N3 | [避ける / さける , 問題は、いかに核戦争を避けるかである。]
+  - meaning_ko: (신체적 접촉을) 피하다
+  - example_ko: 문제는, 어떻게 핵전쟁을 피하는가 이다.
+- id: 7990 | level: N3 | [支える / ささえる , 今の俺を支えるものは希望だけ。]
+  - meaning_ko: 지원하다
+  - example_ko: 지금의 나를 지지하는 것은 희망뿐.
+- id: 7993 | level: N3 | [刺さる / ささる , ]
+  - meaning_ko: 붙이다
+- id: 8002 | level: N3 | [刺す / さす , 敵の体に剣を突き刺す。]
+  - meaning_ko: 찌르다
+  - example_ko: 적의 몸에 검을 찌르다.
+- id: 8006 | level: N3 | [指す / さす , 磁石の針は北を指す。]
+  - meaning_ko: 가리키다
+  - example_ko: 자석 바늘은 북쪽을 가리킨다.
+- id: 8010 | level: N3 | [挿す / さす , ]
+  - meaning_ko: 삽입하다
+- id: 8016 | level: N3 | [注す / さす , 市販の家具ではサイズが合わないから、家具を特注する。]
+  - meaning_ko: (마시다) 따르다
+  - example_ko: 시판의 가구에서는 사이즈가 맞지 않기 때문에, 가구를 특주한다.
+- id: 8021 | level: N3 | [射す / さす , 水は光を反射する。]
+  - meaning_ko: 빛나다
+  - example_ko: 물은 빛을 반사합니다.
+- id: 8026 | level: N3 | [座席 / ざせき , 彼は座席から立ちあがった。]
+  - meaning_ko: 좌석
+  - example_ko: 그는 좌석에서 일어났다.
+- id: 8032 | level: N3 | [誘う / さそう , 宇宙の果てへと私を誘う。]
+  - meaning_ko: (당신과 함께 뭔가를 하도록 누군가를) 초대하다
+  - example_ko: 우주의 끝으로 나를 초대한다.
+- id: 8036 | level: N3 | [札 / さつ , 母を見送りに札幌駅に行ってきたところです。]
+  - meaning_ko: 청구서
+  - example_ko: 어머니를 배송에 삿포로 역에 다녀 왔습니다.
+- id: 8040 | level: N3 | [作家 / さっか , 母はその作家を高く評価している。]
+  - meaning_ko: 작가
+  - example_ko: 어머니는 그 작가를 높이 평가하고 있다.
+- id: 8047 | level: N3 | [作曲 / さっきょく , 彼は二流の作曲家にすぎない。]
+  - meaning_ko: 작곡(음악)
+  - example_ko: 그는 2류 작곡가에 불과하다.
+- id: 8052 | level: N3 | [ざっと / ざっと , 父は新聞にざっと目をとおした。]
+  - meaning_ko: 대충
+  - example_ko: 아버지는 신문에 조금 눈을 떴다.
+- id: 8058 | level: N3 | [さっぱり / さっぱり , 冷水浴で彼はさっぱりした。]
+  - meaning_ko: 기분이 상쾌하다
+  - example_ko: 냉수욕에서 그는 상쾌했다.
+- id: 8062 | level: N3 | [さて / さて , さてと・・・見つかる前にずらかるか。]
+  - meaning_ko: 잘
+  - example_ko: 그런데... 발견되기 전에 어긋나는가.
+- id: 8067 | level: N3 | [砂漠 / さばく , 夕闇が砂漠をつつんだ。]
+  - meaning_ko: 사막
+  - example_ko: 황혼이 사막을 쫓았다.
+- id: 8072 | level: N3 | [差別 / さべつ , 彼は人種差別と戦った。]
+  - meaning_ko: 차별
+  - example_ko: 그는 인종차별과 싸웠다.
+- id: 8077 | level: N3 | [ママ / ママ , 台所でママのお手伝いをしたの。]
+  - meaning_ko: 엄마
+  - example_ko: 부엌에서 엄마를 도왔습니다.
+- id: 8083 | level: N3 | [豆 / まめ , 彼はコーヒー豆をいっている。]
+  - meaning_ko: 콩
+  - example_ko: 그는 커피 콩을 말한다.
+- id: 8086 | level: N3 | [守る / まもる , 約束は守るものだよ。]
+  - meaning_ko: 보호하기 위해
+  - example_ko: 약속은 지키는 것이다.
+- id: 8091 | level: N3 | [迷う / まよう , 彼はどこへ行っても道に迷う。]
+  - meaning_ko: 당황하다
+  - example_ko: 그는 어디로 가든 길을 잃는다.
+- id: 8094 | level: N3 | [丸 / まる , 富士山に登るのに丸一晩かかった。]
+  - meaning_ko: 원
+  - example_ko: 후지산에 오르는 데는 하루하루가 걸렸다.
+- id: 8105 | level: N3 | [まるで / まるで , まるで、沈む船から逃げるネズミみたいね。]
+  - meaning_ko: 마치
+  - example_ko: 마치 가라앉는 배에서 도망치는 쥐처럼.
+- id: 8109 | level: N3 | [万一 / まんいち , 万一明日雨が降れば家にいます。]
+  - meaning_ko: 우연히
+  - example_ko: 만일 내일 비가 내리면 집에 있습니다.
+- id: 8114 | level: N3 | [満足 / まんぞく , 両親は私の今年の成績に満足した。]
+  - meaning_ko: 만족
+  - example_ko: 부모는 나의 올해 성적에 만족했다.
+- id: 8118 | level: N3 | [身 / み , ご出身はどちらですか。]
+  - meaning_ko: 몸
+  - example_ko: 출신은 어느 쪽입니까?
+- id: 8123 | level: N3 | [実 / み , 真実のみが美しい。]
+  - meaning_ko: 과일
+  - example_ko: 진실만이 아름답다.
+- id: 8129 | level: N3 | [見送り / みおくり , 友人を見送りに行ってきた所です。]
+  - meaning_ko: 하나를 배웅하다
+  - example_ko: 친구를 배웅하러 온 곳입니다.
+- id: 8134 | level: N3 | [味方 / みかた , 僕はあなたの味方です。]
+  - meaning_ko: 동맹국
+  - example_ko: 난 네 아군이야.
+- id: 8139 | level: N3 | [見事 / みごと , 彼のスイングは実に見事だ。]
+  - meaning_ko: 화려한
+  - example_ko: 그의 스윙은 정말 훌륭하다.
+- id: 8145 | level: N3 | [ミス / ミス , ミスタイプです。すみません。]
+  - meaning_ko: 놓치다(실수하다
+  - example_ko: 미스 타입입니다. 죄송합니다.
+- id: 8151 | level: N3 | [満ちる / みちる , ]
+  - meaning_ko: 가득 차다
+- id: 8156 | level: N3 | [密 / みつ , 私は秘密を漏らしたりしません。]
+  - meaning_ko: 두꺼운
+  - example_ko: 나는 비밀을 누설하지 않습니다.
+- id: 8160 | level: N3 | [認める / みとめる , 僕が不注意なことは認める。]
+  - meaning_ko: 인식하다
+  - example_ko: 내가 부주의한 것은 인정한다.
+- id: 8167 | level: N3 | [見舞い / みまい , 友人を見舞いに行く所です。]
+  - meaning_ko: 동정의 표현
+  - example_ko: 친구를 찾는 곳입니다.
+- id: 8171 | level: N3 | [土産 / みやげ , 彼女へのお土産には何が一番いいと思う？]
+  - meaning_ko: 기념품
+  - example_ko: 그녀에게 기념품은 무엇이 가장 좋다고 생각하니?
+- id: 8177 | level: N3 | [都 / みやこ , 列車で京都まで行った。]
+  - meaning_ko: 도시
+  - example_ko: 열차로 교토까지 갔다.
+- id: 8182 | level: N3 | [妙 / みょう , 妙な音が聞こえた。]
+  - meaning_ko: 이상한
+  - example_ko: 묘한 소리가 들렸다.
+- id: 8186 | level: N3 | [明後日 / みょうごにち , 明後日雨が降れば、私は家にいます。]
+  - meaning_ko: 내일 모레
+  - example_ko: 내일 비가 내리면 집에 있어요.
+- id: 8190 | level: N3 | [未来 / みらい , 未来への希望で胸が高鳴る。]
+  - meaning_ko: 미래 (생활 시제)
+  - example_ko: 미래에 대한 희망으로 가슴이 울린다.
+- id: 8194 | level: N3 | [魅力 / みりょく , 美香は恵子と同様魅力的だ。]
+  - meaning_ko: 매력
+  - example_ko: 미카는 에코와 마찬가지로 매력적이다.
+- id: 8198 | level: N3 | [診る / みる , ]
+  - meaning_ko: (환자를) 검사하다
+- id: 8203 | level: N3 | [ミルク / ミルク , 母はそのミルクの味を見た。]
+  - meaning_ko: 우유
+  - example_ko: 어머니는 그 우유의 맛을 보았다.
+- id: 8208 | level: N3 | [無 / む , 授業が全然無いとでも言うの？！]
+  - meaning_ko: 아무것도 아님
+  - example_ko: 수업이 전혀 없다고 해도? !
+- id: 8213 | level: N3 | [向かい / むかい , 面と向かい合って立ちなさい。]
+  - meaning_ko: 깃 달기
+  - example_ko: 얼굴과 마주보고 서십시오.
+- id: 8218 | level: N3 | [迎え / むかえ , 六時頃車で迎えにきます。]
+  - meaning_ko: 회의
+  - example_ko: 6시경 차로 맞이하겠습니다.
+- id: 8223 | level: N3 | [向く / むく , 足の向くままに歩いた。]
+  - meaning_ko: 직면하다
+  - example_ko: 다리를 향한 채로 걸었다.
+- id: 8229 | level: N3 | [剥く / むく , 栗を剥くのって、めんどくさっ。]
+  - meaning_ko: 껍질을 벗기다
+  - example_ko: 밤을 벗기는 건, 귀찮게 살짝.
+- id: 8237 | level: N3 | [向ける / むける , 銃を私に向けるな。]
+  - meaning_ko: 쪽으로 향하다
+  - example_ko: 총을 나를 향하지 마라.
+- id: 8241 | level: N3 | [無視 / むし , 無視された気がした。]
+  - meaning_ko: 무시
+  - example_ko: 무시된 느낌이 들었다.
+- id: 8245 | level: N3 | [蒸し暑い / むしあつい , 日本の夏は蒸し暑い。]
+  - meaning_ko: 습한
+  - example_ko: 일본의 여름은 덥다.
+- id: 8250 | level: N3 | [虫歯 / むしば , 虫歯を治療しろ。]
+  - meaning_ko: 공동
+  - example_ko: 충치를 치료하십시오.
+- id: 8255 | level: N3 | [寧ろ / むしろ , ]
+  - meaning_ko: 꽤
+- id: 8261 | level: N3 | [蒸す / むす , ]
+  - meaning_ko: 찌다
+- id: 8265 | level: N3 | [結ぶ / むすぶ , 彼の努力は実を結ぶだろう。]
+  - meaning_ko: 묶다
+  - example_ko: 그의 노력은 열매를 맺을 것이다.
+- id: 8270 | level: N3 | [無駄 / むだ , これ以上考えても無駄だ。]
+  - meaning_ko: 무용
+  - example_ko: 더 이상 생각해도 낭비다.
+- id: 8274 | level: N3 | [夢中 / むちゅう , 父はそのゲームに夢中でした。]
+  - meaning_ko: 으깨다
+  - example_ko: 아버지는 그 게임에 열중했다.
+- id: 8278 | level: N3 | [胸 / むね , 未来への希望で胸が高鳴る。]
+  - meaning_ko: 가슴
+  - example_ko: 미래에 대한 희망으로 가슴이 울린다.
+- id: 8282 | level: N3 | [無料 / むりょう , 無料です。]
+  - meaning_ko: 무료
+  - example_ko: 무료입니다.
+- id: 8286 | level: N3 | [芽 / め , 木々に芽が出ている。]
+  - meaning_ko: 새싹
+  - example_ko: 나무에 싹이 나온다.
+- id: 8289 | level: N3 | [明確 / めいかく , 明確な返事が欲しい。]
+  - meaning_ko: 분명한
+  - example_ko: 명확한 대답을 원합니다.
+- id: 8300 | level: N3 | [名刺 / めいし , 彼は名刺を出した。]
+  - meaning_ko: (이름) 카드
+  - example_ko: 그는 명함을 냈다.
+- id: 8305 | level: N3 | [名詞 / めいし , 「クレオパトラ」は美人の代名詞になっている。]
+  - meaning_ko: 명사
+  - example_ko: 「클레오파트라」는 미인의 대명사가 되고 있다.
+- id: 8309 | level: N3 | [命じる / めいじる , 回れ右を命じる。]
+  - meaning_ko: 주문하다
+  - example_ko: 돌려 오른쪽을 명령한다.
+- id: 8314 | level: N3 | [名人 / めいじん , 有名人と偶然会うのは珍しい。]
+  - meaning_ko: 주인
+  - example_ko: 유명인과 우연히 만나는 것은 드물다.
+- id: 8319 | level: N3 | [命令 / めいれい , 彼女の助言は命令も同然だ。]
+  - meaning_ko: 주문하다
+  - example_ko: 그녀의 조언은 명령도 마찬가지다.
+- id: 8324 | level: N3 | [迷惑 / めいわく , 迷惑にならないようにしなさい。]
+  - meaning_ko: 문제
+  - example_ko: 성가시게 하지 마십시오.
+- id: 8330 | level: N3 | [目上 / めうえ , 彼は目上の人に対して丁重である。]
+  - meaning_ko: 지위가 높은 사람
+  - example_ko: 그는 눈에 사람에 대하여 정중하다.
+- id: 8335 | level: N3 | [飯 / めし , 毎日お昼ご飯を作っているよ。]
+  - meaning_ko: 식사
+  - example_ko: 매일 점심 밥을 만들고 있어.
+- id: 8339 | level: N3 | [滅多に / めったに , 彼は滅多に遊びに来ない。]
+  - meaning_ko: 드물게 (부정 동사 포함)
+  - example_ko: 그는 드물게 놀러 오지 않는다.
+- id: 8342 | level: N3 | [メモ / メモ , 彼女の言うことは必ずメモを取って下さい。]
+  - meaning_ko: 각서
+  - example_ko: 그녀가 말하는 것은 반드시 메모를 가지고 가십시오.
+- id: 8347 | level: N3 | [面 / めん , 面白そう！]
+  - meaning_ko: 얼굴
+  - example_ko: 재미있어!
+- id: 8353 | level: N3 | [綿 / めん , 綿は水を吸収する。]
+  - meaning_ko: 면
+  - example_ko: 면은 물을 흡수한다.
+- id: 8357 | level: N3 | [免許 / めんきょ , 免許証を拝見できますか。]
+  - meaning_ko: 특허
+  - example_ko: 면허증을 볼 수 있습니까?
+- id: 8362 | level: N3 | [面接 / めんせつ , 来週面接においでいただけますか。]
+  - meaning_ko: 회견
+  - example_ko: 다음 주 인터뷰에 드세요?
+- id: 8367 | level: N3 | [面倒 / めんどう , 私も親の面倒とか見られないですね。]
+  - meaning_ko: 문제
+  - example_ko: 나도 부모의 번거로움이라든지 볼 수 없네요.
+- id: 8372 | level: N3 | [メンバー / メンバー , 彼はゴルフクラブのメンバーです。]
+  - meaning_ko: 회원
+  - example_ko: 그는 골프 클럽 회원입니다.
+- id: 8383 | level: N3 | [申し込む / もうしこむ , 奨学金を申し込むつもりだよ。]
+  - meaning_ko: 신청하다
+  - example_ko: 장학금을 신청할 생각이야.
+- id: 8385 | level: N3 | [申し訳 / もうしわけ , あら、申し訳ございません。]
+  - meaning_ko: 사과
+  - example_ko: 오, 죄송합니다.
+- id: 8390 | level: N3 | [毛布 / もうふ , 毛布をください。]
+  - meaning_ko: 담요
+  - example_ko: 담요를주세요.
+- id: 8393 | level: N3 | [燃える / もえる , 木が燃える。]
+  - meaning_ko: 태우다
+  - example_ko: 나무가 타오른다.
+- id: 8398 | level: N3 | [目的 / もくてき , 多くの人が目的なく人生を漂う。]
+  - meaning_ko: 목적
+  - example_ko: 많은 사람들이 목적 없이 삶을 감돌게 된다.
+- id: 8401 | level: N3 | [目標 / もくひょう , 法の目標は正義である。]
+  - meaning_ko: 표시
+  - example_ko: 법의 목표는 정의이다.
+- id: 8412 | level: N3 | [文字 / もじ , 名前を大文字で書いてください。]
+  - meaning_ko: 편지 (알파벳)
+  - example_ko: 이름을 대문자로 작성하십시오.
+- id: 8421 | level: N3 | [もしかすると / もしかすると , もしかすると彼が来るかも。]
+  - meaning_ko: 아마도
+  - example_ko: 혹시 그가 올지도.
+- id: 8425 | level: N3 | [もしも / もしも , もしもし、山田医院です。]
+  - meaning_ko: 만약에
+  - example_ko: 만약 야마다 진료소입니다.
+- id: 8430 | level: N3 | [持ち上げる / もちあげる , 包みを持ち上げるのを手伝って。]
+  - meaning_ko: 키우다
+  - example_ko: 포장을 들어 올리는 데 도움.
+- id: 8436 | level: N3 | [用いる / もちいる , イギリス人が用いる表現はたくさんある。]
+  - meaning_ko: 사용하다
+  - example_ko: 영국인이 사용하는 표현은 많이 있습니다.
+- id: 8441 | level: N3 | [もったいない / もったいない , 時間がもったいない。]
+  - meaning_ko: 낭비적인
+  - example_ko: 시간이 아깝다.
+- id: 8447 | level: N3 | [尤も / もっとも , ]
+  - meaning_ko: 아주 맞아
+- id: 8451 | level: N3 | [元 / もと , 元気？旅行は良かった？]
+  - meaning_ko: 기원
+  - example_ko: 괜찮아? 여행은 좋았어?
+- id: 8456 | level: N3 | [基 / もと , バナーと同じ、白を基調としたデザイン。]
+  - meaning_ko: 기초
+  - example_ko: 배너와 같은 흰색을 기조로 한 디자인.
+- id: 8460 | level: N3 | [素 / もと , パパはラテン語の素養もあったのです。]
+  - meaning_ko: 초기
+  - example_ko: 아빠는 라틴어 소양도 있었습니다.
+- id: 8468 | level: N3 | [戻す / もどす , 長い休暇で彼は健康を取り戻すだろう。]
+  - meaning_ko: 복원하다
+  - example_ko: 긴 휴가로 그는 건강을 되찾을 것입니다.
+- id: 8473 | level: N3 | [基づく / もとづく , 税金は収入に基づく。]
+  - meaning_ko: 근거를 두다
+  - example_ko: 세금은 소득에 근거한다.
+- id: 8478 | level: N3 | [求める / もとめる , 名声を求めるな。]
+  - meaning_ko: 요청하다
+  - example_ko: 명성을 추구하지 마십시오.
+- id: 8483 | level: N3 | [者 / もの , この世は、愚か者だらけ。]
+  - meaning_ko: 사람(人(ひと)과 동일)
+  - example_ko: 이 세상은 어리석은 사람 투성이.
+- id: 8487 | level: N3 | [物音 / ものおと , 物音が聞こえたようだ。]
+  - meaning_ko: 소리
+  - example_ko: 물음이 들린 것 같다.
+- id: 8492 | level: N3 | [物語 / ものがたり , 物語は結末に近づいた。]
+  - meaning_ko: 이야기
+  - example_ko: 이야기는 결말에 접근했다.
+- id: 8497 | level: N3 | [物事 / ものごと , 物事を整頓するのはとても難しい。]
+  - meaning_ko: 것들
+  - example_ko: 사물을 정돈하는 것은 매우 어렵다.
+- id: 8502 | level: N3 | [燃やす / もやす , 石炭や石油やガスを燃やすと、様々なガスが発生する。]
+  - meaning_ko: 태우다
+  - example_ko: 석탄, 석유 및 가스를 태우면 다양한 가스가 발생합니다.
+- id: 8507 | level: N3 | [模様 / もよう , 彼女はその皿の模様が気に入っている。]
+  - meaning_ko: 무늬
+  - example_ko: 그녀는 그 접시의 모양이 마음에 든다.
+- id: 8513 | level: N3 | [文句 / もんく , 文句を言えば切りがない。]
+  - meaning_ko: 불만
+  - example_ko: 불평을 하면 자르지 않는다.
+- id: 8518 | level: N3 | [やがて / やがて , やがて万物は死に絶えます。]
+  - meaning_ko: 오래지 않아
+  - example_ko: 이윽고 만물은 죽음으로 끊어집니다.
+- id: 8522 | level: N3 | [役 / やく , 私のパソコンは何かの役に立つはずだ。]
+  - meaning_ko: 역할
+  - example_ko: 내 컴퓨터는 뭔가 도움이 될 것입니다.
+- id: 8527 | level: N3 | [約 / やく , 約束するよ。]
+  - meaning_ko: 약
+  - example_ko: 약속할게.
+- id: 8532 | level: N3 | [訳 / やく , あら、申し訳ございません。]
+  - meaning_ko: 번역
+  - example_ko: 오, 죄송합니다.
+- id: 8536 | level: N3 | [訳す / やくす , 詩を別の言語に翻訳するのは難しい。]
+  - meaning_ko: 번역하다
+  - example_ko: 시를 다른 언어로 번역하는 것은 어렵습니다.
+- id: 8543 | level: N3 | [役割 / やくわり , 彼女はこの企画で重要な役割を演じた。]
+  - meaning_ko: 부품 할당(할당)
+  - example_ko: 그녀는 이 기획에서 중요한 역할을 맡았다.
+- id: 8548 | level: N3 | [家賃 / やちん , 来月から家賃を値上げします。]
+  - meaning_ko: 임차료
+  - example_ko: 다음 달부터 집세를 인상합니다.
+- id: 8553 | level: N3 | [厄介 / やっかい , 厄介な事だ。]
+  - meaning_ko: 문제
+  - example_ko: 귀찮은 일이다.
+- id: 8558 | level: N3 | [宿 / やど , 宿代をケチって野宿しました。]
+  - meaning_ko: 여인숙
+  - example_ko: 숙대를 케치하고 노숙했습니다.
+- id: 8563 | level: N3 | [雇う / やとう , 彼らは私をその会社に雇うと言った。]
+  - meaning_ko: 고용하다
+  - example_ko: 그들은 나를 그 회사에 고용한다고 말했다.
+- id: 8568 | level: N3 | [屋根 / やね , 梁が屋根をささえている。]
+  - meaning_ko: 지붕
+  - example_ko: 빔이 지붕을 조차 하고 있다.
+- id: 8573 | level: N3 | [破る / やぶる , 約束を破るのは良くない。]
+  - meaning_ko: 찢다
+  - example_ko: 약속을 어기는 것은 좋지 않다.
+- id: 8578 | level: N3 | [破れる / やぶれる , そんなに引っ張らないで、服が破れるでしょ！]
+  - meaning_ko: 찢어지다
+  - example_ko: 그렇게 당기지 말고 옷이 깨질 것입니다!
+- id: 8580 | level: N3 | [辞める / やめる , 彼女は仕事を辞めることにした。]
+  - meaning_ko: 은퇴하다
+  - example_ko: 그녀는 일을 그만두기로 결정했다.
+- id: 8584 | level: N3 | [やや / やや , 風がやや衰えた。]
+  - meaning_ko: 조금
+  - example_ko: 바람이 다소 쇠퇴했다.
+- id: 8586 | level: N3 | [唯一 / ゆいいつ , 唯一の解決法は法に訴えることだ。]
+  - meaning_ko: 오직
+  - example_ko: 유일한 해결법은 법에 호소하는 것이다.
+- id: 8589 | level: N3 | [勇気 / ゆうき , 用心は勇気の大半。]
+  - meaning_ko: 용기
+  - example_ko: 조심은 용기의 대부분.
+- id: 8596 | level: N3 | [友好 / ゆうこう , 両国は友好関係を打ち切った。]
+  - meaning_ko: 우정
+  - example_ko: 양국은 우호관계를 끊었다.
+- id: 8600 | level: N3 | [有効 / ゆうこう , このオファーは５日間有効です。]
+  - meaning_ko: 유효한
+  - example_ko: 이 쿠폰은 5일 동안 유효합니다.
+- id: 8605 | level: N3 | [優秀 / ゆうしゅう , 彼女は優秀な学生だ。]
+  - meaning_ko: 우월
+  - example_ko: 그녀는 우수한 학생이다.
+- id: 8614 | level: N3 | [優勝 / ゆうしょう , 優勝には程遠い。]
+  - meaning_ko: 종합적인 승리
+  - example_ko: 우승에는 그리 멀다.
+- id: 8618 | level: N3 | [友情 / ゆうじょう , 友情は相互理解にある。]
+  - meaning_ko: 우정
+  - example_ko: 우정은 상호 이해에 있다.
+- id: 8621 | level: N3 | [友人 / ゆうじん , 本状の持参人は友人の鈴木君です。]
+  - meaning_ko: 친구 (공식)
+  - example_ko: 본장의 지참인은 친구의 스즈키군입니다.
+- id: 8626 | level: N3 | [有能 / ゆうのう , 彼女は有能で頼りになる助手だ。]
+  - meaning_ko: 할 수 있는
+  - example_ko: 그녀는 유능하고 의지가 되는 조수다.
+- id: 8631 | level: N3 | [郵便 / ゆうびん , 郵便料金はいくらになりますか。]
+  - meaning_ko: 우편
+  - example_ko: 우편 요금은 얼마입니까?
+- id: 8635 | level: N3 | [ユーモア / ユーモア , 彼女はユーモアがわかる。]
+  - meaning_ko: 기분
+  - example_ko: 그녀는 유머를 알 수 있습니다.
+- id: 8639 | level: N3 | [有利 / ゆうり , 万事は我々に有利だ。]
+  - meaning_ko: 유리한
+  - example_ko: 만사는 우리에게 유리하다.
+- id: 8644 | level: N3 | [床 / ゆか , 君のめがねが床に落ちたよ。]
+  - meaning_ko: 바닥
+  - example_ko: 너의 안경이 바닥에 떨어졌다.
+- id: 8647 | level: N3 | [愉快 / ゆかい , 彼女は愉快そうに笑った。]
+  - meaning_ko: 즐거운
+  - example_ko: 그녀는 유쾌하게 웃었다.
+- id: 8656 | level: N3 | [譲る / ゆずる , 若者は老人に席を譲るべきだ。]
+  - meaning_ko: 뒤집다
+  - example_ko: 젊은이는 노인에게 자리를 양보해야 한다.
+- id: 8661 | level: N3 | [豊か / ゆたか , インドは地域色豊かな食文化があります。]
+  - meaning_ko: 풍족한
+  - example_ko: 인도에는 지역 풍부한 음식 문화가 있습니다.
+- id: 8667 | level: N3 | [茹でる / ゆでる , ソーセージは茹でるより焼くほうが好き。]
+  - meaning_ko: 끓이다
+  - example_ko: 소시지는 삶는 것보다 굽는 편을 좋아한다.
+- id: 8674 | level: N3 | [許す / ゆるす , 彼には気を許すな。]
+  - meaning_ko: 허락하다
+  - example_ko: 그에게 신경을 쓰지 마라.
+- id: 8678 | level: N3 | [夜 / よ , 今夜教会に行くよ。]
+  - meaning_ko: 저녁
+  - example_ko: 오늘 밤 교회에 갈거야.
+- id: 8682 | level: N3 | [夜明け / よあけ , 夜明けになって初めて彼は寝ついた。]
+  - meaning_ko: 새벽
+  - example_ko: 새벽에 처음으로 그는 잠을 자었다.
+- id: 8685 | level: N3 | [酔う / よう , 彼は酔うと手がつけられない。]
+  - meaning_ko: 취하다
+  - example_ko: 그는 술에 취하면 손을 대지 않는다.
+- id: 8689 | level: N3 | [容易 / ようい , 容易に試験に通ると思う。]
+  - meaning_ko: 쉬운
+  - example_ko: 쉽게 시험에 다닐 것이라고 생각합니다.
+- id: 8696 | level: N3 | [容器 / ようき , 容器を見ずに中身を見よ。]
+  - meaning_ko: 컨테이너
+  - example_ko: 용기를 보지 않고 내용을 보라.
+- id: 8703 | level: N3 | [陽気 / ようき , 彼女はいつも陽気だ。]
+  - meaning_ko: 계절
+  - example_ko: 그녀는 항상 쾌활하다.
+- id: 8709 | level: N3 | [要求 / ようきゅう , 労働者達は賃上げを要求した。]
+  - meaning_ko: 요구
+  - example_ko: 노동자들은 임금 인상을 요구했다.
+- id: 8713 | level: N3 | [用心 / ようじん , 用心しなさい。]
+  - meaning_ko: 케어
+  - example_ko: 조심하십시오.
+- id: 8719 | level: N3 | [様子 / ようす , 疲れた様子だね。私がハンドルを握ろうか。]
+  - meaning_ko: 측면
+  - example_ko: 지친 모습이다. 나가 손잡이를 붙잡는가?
+- id: 8725 | level: N3 | [要するに / ようするに , 要するに彼らは腹が減っているのだ。]
+  - meaning_ko: 한마디로
+  - example_ko: 요컨대 그들은 배가 줄어들고 있는 것이다.
+- id: 8729 | level: N3 | [要素 / ようそ , 努力は成功の基本要素である。]
+  - meaning_ko: 요소
+  - example_ko: 노력은 성공의 기본 요소이다.
+- id: 8734 | level: N3 | [要点 / ようてん , 本の要点を抜粋した。]
+  - meaning_ko: 요점
+  - example_ko: 책의 요점을 발췌했다.
+- id: 8742 | level: N3 | [曜日 / ようび , 日曜日でも、働きます。]
+  - meaning_ko: 요일
+  - example_ko: 일요일에도 일합니다.
+- id: 8747 | level: N3 | [ヨーロッパ / ヨーロッパ , 来週ヨーロッパに発つ予定です。]
+  - meaning_ko: 유럽
+  - example_ko: 다음주 유럽으로 나갈 예정입니다.
+- id: 8752 | level: N3 | [予期 / よき , 予期せぬ困難が起こった。]
+  - meaning_ko: 기대
+  - example_ko: 예기치 못한 어려움이 일어났다.
+- id: 8757 | level: N3 | [横切る / よこぎる , 通りを走って横切るな。]
+  - meaning_ko: 건너다 (ex.
+  - example_ko: 거리를 달리고 횡단하지 마라.
+- id: 8762 | level: N3 | [汚す / よごす , タバコの煙は部屋の空気を汚す。]
+  - meaning_ko: 오염시키다
+  - example_ko: 담배 연기는 방의 공기를 더럽힌다.
+- id: 8767 | level: N3 | [予算 / よさん , 予算案は上院を通過した。]
+  - meaning_ko: 추정
+  - example_ko: 예산안은 상원을 통과했다.
+- id: 8772 | level: N3 | [止す / よす , 彼らは古い規制を廃止することを決めた。]
+  - meaning_ko: 멈추다
+  - example_ko: 그들은 오래된 규정을 폐지하기로 결정했다.
+- id: 8776 | level: N3 | [寄せる / よせる , インターネットで願書を取り寄せるといいよ。]
+  - meaning_ko: 수집하다
+  - example_ko: 인터넷에서 원서를 주문하면 좋다.
+- id: 8781 | level: N3 | [予測 / よそく , 選挙の結果を予測するのは難しい。]
+  - meaning_ko: 예측
+  - example_ko: 선거 결과를 예측하기는 어렵다.
+- id: 8786 | level: N3 | [ヨット / ヨット , 彼は小さなヨットで大西洋を横断した。]
+  - meaning_ko: 요트
+  - example_ko: 그는 작은 요트에서 대서양을 횡단했다.
+- id: 8791 | level: N3 | [夜中 / よなか , 夜中過ぎに起きました。]
+  - meaning_ko: 자정
+  - example_ko: 한밤중에 일어났습니다.
+- id: 8796 | level: N3 | [世の中 / よのなか , 万事が金の世の中だ。]
+  - meaning_ko: 사회
+  - example_ko: 만사가 김세상이다.
+- id: 8801 | level: N3 | [余分 / よぶん , 余分な金はない。]
+  - meaning_ko: 추가의
+  - example_ko: 여분의 금은 없다.
+- id: 8806 | level: N3 | [予報 / よほう , 予報通り、雪が降った。]
+  - meaning_ko: 예측
+  - example_ko: 예보대로 눈이 내렸다.
+- id: 8811 | level: N3 | [予防 / よぼう , 予防は治療にまさる。]
+  - meaning_ko: 방지
+  - example_ko: 예방은 치료에 적합합니다.
+- id: 8817 | level: N3 | [読み / よみ , 本を取ってそれを読みなさい。]
+  - meaning_ko: 독서
+  - example_ko: 책을 가지고 그것을 읽으십시오.
+- id: 8822 | level: N3 | [嫁 / よめ , 彼が花嫁の父親です。]
+  - meaning_ko: 신부
+  - example_ko: 그가 신부의 아버지입니다.
+- id: 8827 | level: N3 | [余裕 / よゆう , 旅行は私には余裕のない贅沢である。]
+  - meaning_ko: 과잉
+  - example_ko: 여행은 나에게 여유가 없는 사치품이다.
+- id: 8832 | level: N3 | [より / より , それをするより他はない。]
+  - meaning_ko: 트위스트
+  - example_ko: 그것을 하는 보다는 다른 사람은 없다.
+- id: 8837 | level: N3 | [因る / よる , ]
+  - meaning_ko: 에서 오는
+- id: 8840 | level: N3 | [喜び / よろこび , 両親の喜びようはとても大きかった。]
+  - meaning_ko: 기쁨
+  - example_ko: 부모의 기쁨은 매우 컸다.
+- id: 8845 | level: N3 | [よろしく (かん) / よろしく (かん) , ]
+  - meaning_ko: 안부 인사
+- id: 8850 | level: N3 | [四 / よん , 四天王も倒した、クソ長い地下迷宮もクリアした。]
+  - meaning_ko: 네
+  - example_ko: 시텐왕도 쓰러뜨린 빌어 먹을 긴 지하 미궁도 클리어했다.
+- id: 8858 | level: N3 | [来 / らい～ , 家に来ませんか。]
+  - meaning_ko: 다음 ~
+  - example_ko: 집에 오지 않겠습니까?
+- id: 8860 | level: N3 | [ライター / ライター , 僕はライターの火を消した。]
+  - meaning_ko: 거룻배
+  - example_ko: 나는 라이터의 불을 끄었다.
+- id: 8865 | level: N3 | [楽 / らく , 心配しないで、楽しくいこう！]
+  - meaning_ko: 편안
+  - example_ko: 걱정하지 마세요, 재미있게 가자!
+- id: 8870 | level: N3 | [ラケット / ラケット , 彼はラケットを下に置いた。]
+  - meaning_ko: 라켓
+  - example_ko: 그는 라켓을 아래에 두었다.
+- id: 8875 | level: N3 | [利益 / りえき , 利益は税金抜きですか。]
+  - meaning_ko: 이익
+  - example_ko: 이익은 세금 제외입니까?
+- id: 8883 | level: N3 | [理解 / りかい , 特に理解力がある訳でもない普通の中学生です。]
+  - meaning_ko: 이해
+  - example_ko: 특히 이해력이 있는 것도 아닌 보통 중학생입니다.
+- id: 8886 | level: N3 | [陸 / りく , 明日、彼は月に着陸する。]
+  - meaning_ko: 땅
+  - example_ko: 내일, 그는 달에 착륙한다.
+- id: 8889 | level: N3 | [利口 / りこう , 利口な学生達は早くテストを終えた。]
+  - meaning_ko: 영리한
+  - example_ko: 영리한 학생들은 빨리 테스트를 마쳤다.
+- id: 8893 | level: N3 | [離婚 / りこん , 離婚するんじゃないかしら。]
+  - meaning_ko: 이혼
+  - example_ko: 이혼하지 않을까.
+- id: 8897 | level: N3 | [理想 / りそう , 理想は言葉によって表現される。]
+  - meaning_ko: 이상적인
+  - example_ko: 이상은 기간에 의해 표현된다.
+- id: 8901 | level: N3 | [率 / りつ , 率直に話してください。]
+  - meaning_ko: 비율
+  - example_ko: 솔직하게 말해주세요.
+- id: 8907 | level: N3 | [留学 / りゅうがく , 両親は私が留学することに反対した。]
+  - meaning_ko: 해외 유학
+  - example_ko: 부모님은 제가 유학하는 것에 반대했습니다.
+- id: 8912 | level: N3 | [流行 / りゅうこう , 流行を追うな。]
+  - meaning_ko: 유행하는
+  - example_ko: 유행을 쫓지 말라.
+- id: 8917 | level: N3 | [量 / りょう , 警察は学校で大量の薬物を押収した。]
+  - meaning_ko: 수량
+  - example_ko: 경찰은 학교에서 대량의 약물을 압수했다.
+- id: 8922 | level: N3 | [寮 / りょう , 寮生活には慣れましたか。]
+  - meaning_ko: 숙박소
+  - example_ko: 기숙사 생활에 익숙해졌습니까?
+- id: 8926 | level: N3 | [両替 / りょうがえ , 両替所はどこですか。]
+  - meaning_ko: 변화
+  - example_ko: 환전소는 어디입니까?
+- id: 8931 | level: N3 | [料金 / りょうきん , 料金表を見せて下さい。]
+  - meaning_ko: 요금
+  - example_ko: 요금표를 보여주세요.
+- id: 8936 | level: N3 | [例 / れい , 例１，２のように訂正せよ。]
+  - meaning_ko: 사례
+  - example_ko: 실시예 1, 2와 같이 정정하라.
+- id: 8946 | level: N3 | [礼 / れい , 失礼に振舞ったりしないのが一番だと思う。]
+  - meaning_ko: 감사의 표현
+  - example_ko: 실례에 행동하거나 하지 않는 것이 제일이라고 생각한다.
+- id: 8950 | level: N3 | [例外 / れいがい , 例外は原則のある証拠。]
+  - meaning_ko: 예외
+  - example_ko: 예외는 원칙이 있는 증거.
+- id: 8954 | level: N3 | [礼儀 / れいぎ , 礼状を書くとは彼も礼儀正しかった。]
+  - meaning_ko: 예의
+  - example_ko: 예장을 쓰는 것은 그도 예의 바랐다.
+- id: 8959 | level: N3 | [冷静 / れいせい , 冷静に考えて見ろよ！]
+  - meaning_ko: 침착한
+  - example_ko: 냉정하게 생각해 보라!
+- id: 8964 | level: N3 | [列 / れつ , 列車に間に合ったのか？！]
+  - meaning_ko: 대기줄
+  - example_ko: 기차에 늦었습니까? !
+- id: 8971 | level: N3 | [列車 / れっしゃ , 列車に間に合ったのか？！]
+  - meaning_ko: 기차 (보통)
+  - example_ko: 기차에 늦었습니까? !
+- id: 8976 | level: N3 | [レベル / レベル , ３作目はレベルが一段上でした。]
+  - meaning_ko: 수준
+  - example_ko: 3번째는 레벨이 1단 위였습니다.
+- id: 8983 | level: N3 | [連想 / れんそう , 緑は草を連想させる。]
+  - meaning_ko: (아이디어의) 연합
+  - example_ko: 녹색은 잔디를 연상시킨다.
+- id: 8984 | level: N3 | [連続 / れんぞく , 彼女は連続して医学的発見をした。]
+  - meaning_ko: 연이은
+  - example_ko: 그녀는 연속적으로 의학적 발견을 했다.
+- id: 8991 | level: N3 | [老人 / ろうじん , 老人をいたわりなさい。]
+  - meaning_ko: 노인들
+  - example_ko: 노인을 두드리십시오.
+- id: 8994 | level: N3 | [労働 / ろうどう , 去年の選挙で労働党の票数が増えた。]
+  - meaning_ko: 노동
+  - example_ko: 지난해 선거에서 노동당의 표수가 늘었다.
+- id: 9002 | level: N3 | [ロケット / ロケット , 彼らはロケットを発射した。]
+  - meaning_ko: 로켓
+  - example_ko: 그들은 로켓을 발사했다.
+- id: 9007 | level: N3 | [論じる / ろんじる , 彼女は単に議論のために論じる。]
+  - meaning_ko: 논쟁하다
+  - example_ko: 그녀는 단순히 논쟁을 위해 토론한다.
+- id: 9012 | level: N3 | [論争 / ろんそう , 論争にやっとけりが付いた。]
+  - meaning_ko: 논쟁
+  - example_ko: 논쟁에 겨우 뒤흔들었다.
+- id: 9017 | level: N3 | [論文 / ろんぶん , 論文を書き終えましたか。]
+  - meaning_ko: 명제
+  - example_ko: 논문을 작성했나요?
+- id: 9022 | level: N3 | [輪 / わ , 霧のため山の輪郭がぼんやりしていた。]
+  - meaning_ko: 반지
+  - example_ko: 안개 때문에 산의 윤곽이 흐릿해졌다.
+- id: 9026 | level: N3 | [ワイン / ワイン , ワインとは、ボトルに詰められた詩である。]
+  - meaning_ko: 와인
+  - example_ko: 와인은 병에 담긴 시입니다.
+- id: 9030 | level: N3 | [わがまま / わがまま , 彼女は決してわがままではない。]
+  - meaning_ko: 이기주의
+  - example_ko: 그녀는 결코 낯설지 않다.
+- id: 9035 | level: N3 | [別れ / わかれ , 僕は友達と喧嘩別れした。]
+  - meaning_ko: 이별
+  - example_ko: 나는 친구와 싸우고 헤어졌다.
+- id: 9042 | level: N3 | [分かれる / わかれる , 道が２つの小道に分かれるところへ来た。]
+  - meaning_ko: 분기하다
+  - example_ko: 길이 두 개의 길로 나뉘는 곳으로 왔다.
+- id: 9045 | level: N3 | [脇 / わき , 脇腹が少し痛い。]
+  - meaning_ko: 옆
+  - example_ko: 겨드랑이가 조금 아프다.
+- id: 9050 | level: N3 | [湧く / わく , ]
+  - meaning_ko: 끓이다
+- id: 9056 | level: N3 | [分ける / わける , 本物と偽物を見分けるのは困難だ。]
+  - meaning_ko: 나누다
+  - example_ko: 진짜와 가짜를 구분하는 것은 어렵다.
+- id: 9060 | level: N3 | [わざと / わざと , わざとやったのね！]
+  - meaning_ko: 일부러
+  - example_ko: 일부러 한거야!
+- id: 9066 | level: N3 | [僅か / わずか , その列車の乗客はほんの僅かしかいない。]
+  - meaning_ko: 오직
+  - example_ko: 그 열차의 승객은 얼마 밖에 없다.
+- id: 9076 | level: N3 | [話題 / わだい , 話題を変えましょう。]
+  - meaning_ko: 주제
+  - example_ko: 화제를 바꾸자.
+- id: 9081 | level: N3 | [笑い / わらい , 部屋中が笑いでいっぱいだった。]
+  - meaning_ko: 웃다
+  - example_ko: 방안이 웃음으로 가득했다.
+- id: 9085 | level: N3 | [割る / わる , 私は窓を割るのを見られた。]
+  - meaning_ko: 나누다
+  - example_ko: 나는 창을 깨는 것을 보았다.
+- id: 9088 | level: N3 | [悪口 / わるくち , 彼女は私に悪口を浴びせた。]
+  - meaning_ko: 남용
+  - example_ko: 그녀는 나에게 욕을 했다.
+- id: 9092 | level: N3 | [我々 / われわれ , 我々を見てにたりと笑った。]
+  - meaning_ko: 우리
+  - example_ko: 우리를 보러 가서 웃었다.
+- id: 9098 | level: N3 | [湾 / わん , 湾岸戦争についてどう思いますか。]
+  - meaning_ko: 만
+  - example_ko: 걸프 전쟁에 대해 어떻게 생각하십니까?
+- id: 9103 | level: N3 | [椀 / わん , みんなのお椀にスープを注いで。]
+  - meaning_ko: 그릇
+  - example_ko: 모두의 그릇에 수프를 부어.
+- id: 9107 | level: N3 | [碗 / わん , 誰がその茶碗をわったのか。]
+  - meaning_ko: 그릇
+  - example_ko: 누가 그 찻잔을 낳았는가.
+- id: 9112 | level: N3 | [悪 / あく , こいつは悪いウサギだった。]
+  - meaning_ko: 사악한
+  - example_ko: 이 녀석은 나쁜 토끼였다.
+- id: 9118 | level: N3 | [当り / あたり , 道に迷って、彼は行き当りばったりに道を選んだ。]
+  - meaning_ko: 때리다
+  - example_ko: 길을 잃었고, 그는 가로질러 길을 택했다.
+- id: 9123 | level: N3 | [アップ / アップ , 労働者たちは賃金アップを要求して団結した。]
+  - meaning_ko: 위로
+  - example_ko: 노동자들은 임금 업을 요구하고 단결했다.
+- id: 9131 | level: N3 | [宛てる / あてる , ]
+  - meaning_ko: 해결하기 위해
+- id: 9138 | level: N3 | [アンケート / アンケート , アンケートの項目が多すぎる。]
+  - meaning_ko: 설문지 (FRE: enquete)
+  - example_ko: 설문조사 항목이 너무 많습니다.
+- id: 9143 | level: N3 | [異 / い , 毎年、世界各地に異常な天気が起きています。]
+  - meaning_ko: (의견의) 차이
+  - example_ko: 매년 세계 각지에 비정상적인 날씨가 일어나고 있습니다.
+- id: 9144 | level: N3 | [意 / い , 沈黙は同意を表す。]
+  - meaning_ko: ~ 할 것이다
+  - example_ko: 침묵은 동의를 나타낸다.
+- id: 9152 | level: N3 | [医院 / いいん , 医院を受診した。]
+  - meaning_ko: 진료실 (수술)
+  - example_ko: 진료소를 진찰했다.
+- id: 9156 | level: N3 | [怒り / いかり , 老人の怒りも和らいだ。]
+  - meaning_ko: 화
+  - example_ko: 노인의 분노도 부드럽다.
+- id: 9159 | level: N3 | [粋 / いき , 本の要点を抜粋した。]
+  - meaning_ko: 우아한
+  - example_ko: 책의 요점을 발췌했다.
+- id: 9163 | level: N3 | [意地 / いじ , 彼女は意地悪女だ。]
+  - meaning_ko: 처분
+  - example_ko: 그녀는 의지 악녀이다.
+- id: 9167 | level: N3 | [依然 / いぜん , 不景気なのに依然物価は高い。]
+  - meaning_ko: 아직
+  - example_ko: 불경기인데 여전히 물가는 높다.
+- id: 9173 | level: N3 | [傷める / いためる , ]
+  - meaning_ko: 손상을 입히다
+- id: 9181 | level: N3 | [炒める / いためる , 「焼く」のと「炒める」のって、何が違うの？]
+  - meaning_ko: 볶다
+  - example_ko: '굽는'과 '볶음'은 무엇이 다른가?
+- id: 9186 | level: N3 | [一帯 / いったい , 雨があたり一帯に降っている。]
+  - meaning_ko: 지역
+  - example_ko: 비가 당 일대에 내리고 있다.
+- id: 9189 | level: N3 | [異動 / いどう , ]
+  - meaning_ko: 변화
+- id: 9192 | level: N3 | [衣料 / いりょう , 衣料品がだぶついている。]
+  - meaning_ko: 의류
+  - example_ko: 의류품이 부딪쳤다.
+- id: 9198 | level: N3 | [渦 / うず , 大きな渦巻きと急流があります。]
+  - meaning_ko: 소용돌이
+  - example_ko: 큰 소용돌이와 토런트가 있습니다.
+- id: 9207 | level: N3 | [埋まる / うまる , ]
+  - meaning_ko: 묻히다
+- id: 9213 | level: N3 | [産む / うむ , 鳥は卵を産む。]
+  - meaning_ko: 출산하다 (v.t.)
+  - example_ko: 새는 계란을 낳는다.
+- id: 9216 | level: N3 | [縁 / えん , 腐れ縁と思ってあきらめる。]
+  - meaning_ko: 가능성
+  - example_ko: 썩은 인연이라고 생각하고 포기한다.
+- id: 9221 | level: N3 | [尾 / お , 君の不首尾は承知している。]
+  - meaning_ko: 꼬리
+  - example_ko: 너의 부수미는 알고 있다.
+- id: 9226 | level: N3 | [負う / おう , 両親は子供達の教育に責任を負う。]
+  - meaning_ko: 견디다
+  - example_ko: 부모는 아이들의 교육에 책임을 진다.
+- id: 9230 | level: N3 | [遅れ / おくれ , 列車は雪のため遅れた。]
+  - meaning_ko: 지연
+  - example_ko: 기차는 눈 때문에 늦었다.
+- id: 9234 | level: N3 | [教え / おしえ , 生きる意味を教えてくれ。]
+  - meaning_ko: 가르침
+  - example_ko: 사는 의미를 말해줘.
+- id: 9238 | level: N3 | [驚き / おどろき , 本当か、これは驚きだ。]
+  - meaning_ko: 놀라다
+  - example_ko: 사실, 이것은 놀랍습니다.
+- id: 9240 | level: N3 | [織る / おる , 私の祖母ははたを織るのが好きだ。]
+  - meaning_ko: 짜다
+  - example_ko: 할머니는 털을 짜는 것을 좋아합니다.
+- id: 9247 | level: N3 | [欠く / かく , 水は生きるうえで欠くべからざるものだ。]
+  - meaning_ko: 부족하다
+  - example_ko: 물은 살아가는 데 빼놓을 수 없는 것이다.
+- id: 9256 | level: N3 | [核 / かく , 文明は今や核戦争に脅かされている。]
+  - meaning_ko: 핵
+  - example_ko: 문명은 이제 핵전쟁에 위협받고 있다.
+- id: 9259 | level: N3 | [格 / かく , 私はいつも不思議な性格の方が好きだった。]
+  - meaning_ko: 상태
+  - example_ko: 나는 항상 이상한 성격을 좋아했다.
+- id: 9266 | level: N3 | [学歴 / がくれき , 彼は学歴を鼻にかけている。]
+  - meaning_ko: 학문적 배경
+  - example_ko: 그는 학력을 코에 걸고 있다.
+- id: 9272 | level: N3 | [駆ける / かける , コートを駆ける娘の姿に、在りし日の妻がオーバーラップする。]
+  - meaning_ko: 달리다
+  - example_ko: 코트를 달리는 딸의 모습에, 날의 아내가 오버랩한다.
+- id: 9279 | level: N3 | [賭ける / かける , デイブが彼の新車に大金を払ったほうに僕は賭けるよ。]
+  - meaning_ko: 내기하다
+  - example_ko: 데이브가 그의 신차에 큰 돈을 지불하는 쪽에 나는 내기할게.
+- id: 9284 | level: N3 | [課題 / かだい , 明日の課題は何ですか。]
+  - meaning_ko: 주제
+  - example_ko: 내일의 과제는 무엇입니까?
+- id: 9287 | level: N3 | [片付け / かたづけ , 部屋を片付けなさい。]
+  - meaning_ko: 정리
+  - example_ko: 방을 정리하십시오.
+- id: 9289 | level: N3 | [加味 / かみ , ]
+  - meaning_ko: 양념
+- id: 9293 | level: N3 | [借り / かり , トイレをお借りしていい？]
+  - meaning_ko: 차용
+  - example_ko: 화장실을 빌릴 수 있습니까?
+- id: 9299 | level: N3 | [狩り / かり , 彼は森へ狩りに行った。]
+  - meaning_ko: 수렵
+  - example_ko: 그는 숲으로 사냥하러 갔다.
+- id: 9309 | level: N3 | [～観 / かん , ]
+  - meaning_ko: 감정
+- id: 9313 | level: N3 | [癌 / がん , 彼は癌で死んだ。]
+  - meaning_ko: 암
+  - example_ko: 그는 암으로 죽었다.
+- id: 9318 | level: N3 | [刊行 / かんこう , ついに新しい小説が刊行された。]
+  - meaning_ko: 출판
+  - example_ko: 드디어 새로운 소설이 간행되었다.
+- id: 9325 | level: N3 | [慣行 / かんこう , その慣行は廃止すべきだ。]
+  - meaning_ko: 관습적인 관행
+  - example_ko: 그 관행은 폐지해야 한다.
+- id: 9329 | level: N3 | [歓声 / かんせい , 聴衆から歓声があがった。]
+  - meaning_ko: 환호
+  - example_ko: 청중으로부터 환호가 올랐다.
+- id: 9339 | level: N3 | [官僚 / かんりょう , 彼の辞職で官僚の席に空きができた。]
+  - meaning_ko: 관료
+  - example_ko: 그의 사직으로 관료의 자리에 빈 공간이 생겼다.
+- id: 9344 | level: N3 | [器官 / きかん , 物を視覚的に覚える器官は視床下部の下にある。]
+  - meaning_ko: 기관(신체의
+  - example_ko: 물건을 시각적으로 기억하는 기관은 시상 하부 아래에 있습니다.
+- id: 9349 | level: N3 | [季刊 / きかん , ]
+  - meaning_ko: 분기별(예:
+- id: 9354 | level: N3 | [起源 / きげん , 仏教はインドに起源を発した。]
+  - meaning_ko: 기원
+  - example_ko: 불교는 인도에 기원을 했다.
+- id: 9359 | level: N3 | [機構 / きこう , どこか機構が悪いに違いない。]
+  - meaning_ko: 기구
+  - example_ko: 어딘가 기구가 나쁘다.
+- id: 9364 | level: N3 | [築く / きずく , 約束を守り、信頼関係を築く。]
+  - meaning_ko: 구축하다
+  - example_ko: 약속을 지키고 신뢰관계를 구축한다.
+- id: 9369 | level: N3 | [規制 / きせい , 食事は規制正しくとりなさい。]
+  - meaning_ko: 규제
+  - example_ko: 식사는 규제 바르게 취하십시오.
+- id: 9373 | level: N3 | [丘陵 / きゅうりょう , 飛行機から見ると、小さな丘陵は平地のように見える。]
+  - meaning_ko: 언덕
+  - example_ko: 비행기에서 보면 작은 구릉은 평지처럼 보입니다.
+- id: 9380 | level: N3 | [協議 / きょうぎ , 役員評議会が組織されて新提案を協議した。]
+  - meaning_ko: 회의
+  - example_ko: 임원 평의회가 조직되어 새로운 제안을 협의했다.
+- id: 9384 | level: N3 | [享受 / きょうじゅ , 日本は戦後繁栄を享受している。]
+  - meaning_ko: 향유
+  - example_ko: 일본은 전후 번영을 누리고 있다.
+- id: 9390 | level: N3 | [協調 / きょうちょう , 私は協調性がある。]
+  - meaning_ko: 협력
+  - example_ko: 나는 협력이 있다.
+- id: 9395 | level: N3 | [切り / きり , 文句を言えば切りがない。]
+  - meaning_ko: 제한
+  - example_ko: 불평을 하면 자르지 않는다.
+- id: 9399 | level: N3 | [菌 / きん , 細菌は小さすぎて我々の眼には見えない。]
+  - meaning_ko: 세균
+  - example_ko: 세균은 너무 작아서 우리 눈에는 보이지 않는다.
+- id: 9405 | level: N3 | [近視 / きんし , 仮性近視です。]
+  - meaning_ko: 근시
+  - example_ko: 가성 근시입니다.
+- id: 9410 | level: N3 | [苦 / く , 情熱は苦悩を生む。]
+  - meaning_ko: 문제
+  - example_ko: 열정은 고뇌를 낳는다.
+- id: 9415 | level: N3 | [群 / ぐん , 彼女抜群ですよ。]
+  - meaning_ko: 그룹
+  - example_ko: 그녀 발군이에요.
+- id: 9420 | level: N3 | [刑 / けい , 法廷は彼を死刑に処した。]
+  - meaning_ko: 패널티
+  - example_ko: 법정은 그를 사형에 처했다.
+- id: 9425 | level: N3 | [経緯 / けいい , 事の経緯はこうです。]
+  - meaning_ko: 일련의 사건
+  - example_ko: 일의 경위는 이렇습니다.
+- id: 9427 | level: N3 | [計器 / けいき , 例えば、温度計や気圧計などの計器は器具です。]
+  - meaning_ko: 미터
+  - example_ko: 예를 들어, 온도계나 기압계 등의 계기는 기구입니다.
+- id: 9431 | level: N3 | [契機 / けいき , 退職を契機に茶道を始めた。]
+  - meaning_ko: 기회
+  - example_ko: 퇴직을 계기로 다도를 시작했다.
+- id: 9436 | level: N3 | [携帯 / けいたい , 小さな道具セットは旅をする時携帯に便利だ。]
+  - meaning_ko: 뭔가를 들고
+  - example_ko: 작은 도구 세트는 여행을 할 때 휴대폰에 편리하다.
+- id: 9439 | level: N3 | [形態 / けいたい , 怒りは狂気の１形態です。]
+  - meaning_ko: 형태
+  - example_ko: 분노는 광기의 한 형태입니다.
+- id: 9441 | level: N3 | [血管 / けっかん , 血液は血管を流れる。]
+  - meaning_ko: 혈관
+  - example_ko: 혈액은 혈관을 흐른다.
+- id: 9450 | level: N3 | [決行 / けっこう , 試合は雨天決行です。]
+  - meaning_ko: (의지를 가지고) 하고 있다
+  - example_ko: 경기는 우천 결행입니다.
+- id: 9455 | level: N3 | [件 / けん , 殺人事件の背後に潜むミステリーを解き明かせ。]
+  - meaning_ko: 문제
+  - example_ko: 살인 사건 뒤에 숨어있는 미스터리를 풀어.
+- id: 9460 | level: N3 | [減少 / げんしょう , 騒音は徐々に減少した。]
+  - meaning_ko: 감소하다
+  - example_ko: 소음은 서서히 감소했다.
+- id: 9465 | level: N3 | [公演 / こうえん , この公演はもう終わりました。]
+  - meaning_ko: 공개 공연
+  - example_ko: 이 공연은 이미 끝났습니다.
+- id: 9470 | level: N3 | [後悔 / こうかい , 本当の事を言った事を後悔している。]
+  - meaning_ko: 후회
+  - example_ko: 진짜를 말한 것을 후회하고 있다.
+- id: 9478 | level: N3 | [航海 / こうかい , 彼らは航海に出た。]
+  - meaning_ko: 돛
+  - example_ko: 그들은 항해에 나갔다.
+- id: 9483 | level: N3 | [拘束 / こうそく , この誓約書には法的拘束力はありません。]
+  - meaning_ko: 제한
+  - example_ko: 이 서약서에는 법적 구속력이 없습니다.
+- id: 9490 | level: N3 | [荒廃 / こうはい , その城は荒廃している。]
+  - meaning_ko: 망치다
+  - example_ko: 그 성은 황폐하고 있다.
+- id: 9495 | level: N3 | [降伏 / こうふく , 敵に降伏する。]
+  - meaning_ko: 조건부 항복
+  - example_ko: 적에게 항복한다.
+- id: 9500 | level: N3 | [興奮 / こうふん , 妹は水鳥を見て興奮した。]
+  - meaning_ko: 흥분
+  - example_ko: 여동생은 물새를 보고 흥분했다.
+- id: 9506 | level: N3 | [語句 / ごく , この語句の意味は何ですか？]
+  - meaning_ko: 단어
+  - example_ko: 이 단어의 의미는 무엇입니까?
+- id: 9509 | level: N3 | [個々 / ここ , 個々の戦闘にはみな勝っても戦争に負けることがある。]
+  - meaning_ko: 개인
+  - example_ko: 개별 전투는 모두 이겨도 전쟁에 질 수 있다.
+- id: 9517 | level: N3 | [故人 / こじん , 故人は８０歳であった。]
+  - meaning_ko: 고인
+  - example_ko: 고인은 80세였다.
+- id: 9522 | level: N3 | [小銭 / こぜに , 小銭をお持ちですか。]
+  - meaning_ko: 동전
+  - example_ko: 동전을 가지고 계십니까?
+- id: 9524 | level: N3 | [ことによると / ことによると , ことによると、きみにも一緒にきてもらう。]
+  - meaning_ko: (상황에 따라)
+  - example_ko: 일에 따르면, 너에게도 함께 온다.
+- id: 9528 | level: N3 | [コンテスト / コンテスト , 彼女は美人コンテストに参加した。]
+  - meaning_ko: 경쟁
+  - example_ko: 그녀는 미인 콘테스트에 참가했다.
+- id: 9531 | level: N3 | [採集 / さいしゅう , 趣味は昆虫採集なんだ。]
+  - meaning_ko: 수집
+  - example_ko: 취미는 곤충 채집이다.
+- id: 9536 | level: N3 | [作 / さく , 時間はいくらでも作れる。]
+  - meaning_ko: 작품
+  - example_ko: 시간은 얼마든지 만들 수 있다.
+- id: 9540 | level: N3 | [策 / さく , 僕はもう万策尽きた。]
+  - meaning_ko: 계획
+  - example_ko: 난 이미 만책 다했다.
+- id: 9544 | level: N3 | [設備 / せつび , 電器設備に近づかないように。]
+  - meaning_ko: 장비
+  - example_ko: 전기 장비에 접근하지 않도록.
+- id: 9548 | level: N3 | [絶滅 / ぜつめつ , 絶滅は進化の一部である。]
+  - meaning_ko: 파괴
+  - example_ko: 멸종은 진화의 일부이다.
+- id: 9556 | level: N3 | [節約 / せつやく , 彼は節約によってひと財産作った。]
+  - meaning_ko: 절약하다
+  - example_ko: 그는 저축을 통해 사람 재산 만들었다.
+- id: 9560 | level: N3 | [攻める / せめる , 彼は私にその問題をいかに攻めるべきかについて教えてくれた。]
+  - meaning_ko: 공격하다
+  - example_ko: 그는 나에게 그 문제를 어떻게 공격해야 하는지에 대해 가르쳐 주었다.
+- id: 9565 | level: N3 | [責める / せめる , 彼をその過失で責めるな。]
+  - meaning_ko: 비난하다
+  - example_ko: 그를 그 과실로 비난하지 마라.
+- id: 9568 | level: N3 | [善 / ぜん , 彼らは労働条件を改善したがっている。]
+  - meaning_ko: 좋은
+  - example_ko: 그들은 노동조건을 개선하고 싶다.
+- id: 9579 | level: N3 | [全 / ぜん , 授業が全然無いとでも言うの？！]
+  - meaning_ko: 모두
+  - example_ko: 수업이 전혀 없다고 해도? !
+- id: 9584 | level: N3 | [全員 / ぜんいん , 夕食には家族全員がそろう。]
+  - meaning_ko: 전원
+  - example_ko: 저녁에는 가족 전원이 모인다.
+- id: 9590 | level: N3 | [専攻 / せんこう , 彼女は歴史を専攻した。]
+  - meaning_ko: 주요 과목
+  - example_ko: 그녀는 역사를 전공했다.
+- id: 9596 | level: N3 | [全国 / ぜんこく , 彼は全国的名声があった。]
+  - meaning_ko: 국민 전체
+  - example_ko: 그는 전국적 명성이 있었다.
+- id: 9599 | level: N3 | [洗剤 / せんざい , 食器用洗剤で手がかぶれました。]
+  - meaning_ko: 세정제
+  - example_ko: 식기용 세제로 손이 닿았습니다.
+- id: 9607 | level: N3 | [先日 / せんじつ , 僕は先日この本を買った。]
+  - meaning_ko: 다른 날
+  - example_ko: 나는 요 전날 이 책을 샀다.
+- id: 9612 | level: N3 | [前者 / ぜんしゃ , 前者より後者の方がいい。]
+  - meaning_ko: 전자
+  - example_ko: 전자보다 후자 쪽이 좋다.
+- id: 9617 | level: N3 | [選手 / せんしゅ , 良きコーチはいわば選手の親のようなものだ。]
+  - meaning_ko: 팀에 선발된 선수(보통 운동선수)
+  - example_ko: 좋은 코치는 이른바 선수의 부모와 같은 것이다.
+- id: 9622 | level: N3 | [全身 / ぜんしん , 彼は日光を全身に浴びた。]
+  - meaning_ko: 몸 전체
+  - example_ko: 그는 햇빛을 전신에 받았다.
+- id: 9625 | level: N3 | [前進 / ぜんしん , 彼女はゆっくりと前進した。]
+  - meaning_ko: 전진
+  - example_ko: 그녀는 천천히 전진했다.
+- id: 9630 | level: N3 | [センター / センター , 学生センターは話をするのに良いところだ。]
+  - meaning_ko: 센터
+  - example_ko: 학생센터는 이야기를 하기에 좋은 곳이다.
+- id: 9635 | level: N3 | [全体 / ぜんたい , 竜巻で村全体が破壊された。]
+  - meaning_ko: 전체
+  - example_ko: 토네이도로 마을 전체가 파괴되었다.
+- id: 9640 | level: N3 | [選択 / せんたく , 他にどんな選択肢があるの？]
+  - meaning_ko: 선택
+  - example_ko: 다른 어떤 옵션이 있습니까?
+- id: 9646 | level: N3 | [宣伝 / せんでん , 彼は自己宣伝に熱心だ。]
+  - meaning_ko: 광고
+  - example_ko: 그는 자기 선전에 열심이다.
+- id: 9652 | level: N3 | [象 / ぞう , そういう印象を与えるつもりではなかったんです。]
+  - meaning_ko: 코끼리
+  - example_ko: 그런 인상을 줄 생각은 아니었어요.
+- id: 9657 | level: N3 | [騒音 / そうおん , 彼女は騒音にかまわず話しつづけた。]
+  - meaning_ko: 소음
+  - example_ko: 그녀는 소음에 상관없이 이야기를 계속했다.
+- id: 9662 | level: N3 | [増加 / ぞうか , 旅行者の数が近年大きく増加した。]
+  - meaning_ko: 증가하다
+  - example_ko: 여행자 수가 최근 크게 증가했다.
+- id: 9667 | level: N3 | [操作 / そうさ , 彼は新しい機械を操作した。]
+  - meaning_ko: 작업
+  - example_ko: 그는 새로운 기계를 조작했다.
+- id: 9672 | level: N3 | [想像 / そうぞう , 竜は想像上の生物である。]
+  - meaning_ko: 상상력
+  - example_ko: 용은 상상의 생물이다.
+- id: 9677 | level: N3 | [相続 / そうぞく , 彼女は父親の全財産を相続した。]
+  - meaning_ko: 계승
+  - example_ko: 그녀는 아버지의 전체 재산을 상속했다.
+- id: 9682 | level: N3 | [装置 / そうち , 彼の発明品は従来の装置よりも優れている。]
+  - meaning_ko: 장비
+  - example_ko: 그의 발명품은 종래의 장치보다 우수하다.
+- id: 9684 | level: N3 | [相当 / そうとう , 被害額は相当なものになるだろう。]
+  - meaning_ko: 상당히
+  - example_ko: 피해액은 상당한 것이 될 것이다.
+- id: 9687 | level: N3 | [速度 / そくど , 飛行機は速度を増した。]
+  - meaning_ko: 속도
+  - example_ko: 비행기는 속도를 늘렸다.
+- id: 9692 | level: N3 | [底 / そこ , 彼女は絶望のどん底にあった。]
+  - meaning_ko: 맨 아래
+  - example_ko: 그녀는 절망의 밑바닥에 있었다.
+- id: 9701 | level: N3 | [そこで / そこで , そこでベス下手より登場！]
+  - meaning_ko: 그래서 (conj.)
+  - example_ko: 거기서 베스 서투른보다 등장!
+- id: 9704 | level: N3 | [組織 / そしき , 彼らは政党を組織した。]
+  - meaning_ko: 조직
+  - example_ko: 그들은 정당을 조직했다.
+- id: 9709 | level: N3 | [そして / そして , そしてもう一つは疑わしい結論を出した。]
+  - meaning_ko: 그런 다음
+  - example_ko: 그리고 다른 하나는 의심스러운 결론을 내렸다.
+- id: 9717 | level: N3 | [注ぐ / そそぐ , 火に油を注ぐだけだ。]
+  - meaning_ko: (에) 붓다
+  - example_ko: 불에 기름을 부을 뿐이다.
+- id: 9722 | level: N3 | [育つ / そだつ , 植物は土壌で育つ。]
+  - meaning_ko: 자라다
+  - example_ko: 식물은 토양에서 자랍니다.
+- id: 9727 | level: N3 | [そっくり / そっくり , 父親にそっくりだ。]
+  - meaning_ko: 분열하는 이미지
+  - example_ko: 아버지와 똑같다.
+- id: 9729 | level: N3 | [そっと / そっと , 彼女をそっとしておこう。]
+  - meaning_ko: 부드럽게
+  - example_ko: 그녀를 살짝 두자.
+- id: 9734 | level: N3 | [袖 / そで , 無い袖は振れぬ。]
+  - meaning_ko: 소매
+  - example_ko: 없는 소매는 흔들리지 않는다.
+- id: 9739 | level: N3 | [備える / そなえる , 最悪に備える必要がある。]
+  - meaning_ko: 준비하다
+  - example_ko: 최악에 대비할 필요가 있다.
+- id: 9746 | level: N3 | [具える / そなえる , ]
+  - meaning_ko: 갖추어져 있다
+- id: 9748 | level: N3 | [そのうえ / そのうえ , 彼は頭が良く、そのうえ礼儀正しい。]
+  - meaning_ko: 게다가
+  - example_ko: 그는 머리가 좋고 게다가 예의 바르다.
+- id: 9751 | level: N3 | [そのうち / そのうち , 彼はそのうち来るかもしれない。]
+  - meaning_ko: 오래지 않아
+  - example_ko: 그는 한동안 올지도 모른다.
+- id: 9756 | level: N3 | [そのまま / そのまま , 本はそのままにしておきなさい。]
+  - meaning_ko: 변함없이
+  - example_ko: 책은 그대로 두십시오.
+- id: 9759 | level: N3 | [蕎麦 / そば , 日本では大晦日に蕎麦を食べる習慣があります。]
+  - meaning_ko: 소바(메밀국수)
+  - example_ko: 일본에서는 새해 전날에 메밀을 먹는 습관이 있습니다.
+- id: 9764 | level: N3 | [ソファー / ソファー , 目覚めたらソファーに寝ていた。]
+  - meaning_ko: 소파
+  - example_ko: 일어나면 소파에 자고 있었다.
+- id: 9769 | level: N3 | [粗末 / そまつ , 道具を粗末に使うな。]
+  - meaning_ko: 겸손한
+  - example_ko: 도구를 거칠게 사용하지 마라.
+- id: 9778 | level: N3 | [それぞれ / それぞれ , 彼らはそれぞれ賞をもらった。]
+  - meaning_ko: 각
+  - example_ko: 그들은 각각 상을 받았다.
+- id: 9785 | level: N3 | [それでも / それでも , 彼女は欠点があるがそれでもやはり美しい。]
+  - meaning_ko: 하지만 (여전히)
+  - example_ko: 그녀는 단점이 있지만 여전히 아름답습니다.
+- id: 9787 | level: N3 | [それと / それと , 歩いて行こうかそれとも車で行こうか。]
+  - meaning_ko: 그리고
+  - example_ko: 걸어갈까 아니면 차로 갈까.
+- id: 9791 | level: N3 | [それとも / それとも , 歩いて行こうかそれとも車で行こうか。]
+  - meaning_ko: 또는
+  - example_ko: 걸어갈까 아니면 차로 갈까.
+- id: 9797 | level: N3 | [揃う / そろう , ]
+  - meaning_ko: 완전해지다
+- id: 9804 | level: N3 | [揃える / そろえる , 基本的な道具を揃えるだけで十万超える。]
+  - meaning_ko: 일을 정리하다
+  - example_ko: 기본적인 도구를 갖추는 것만으로 10만을 넘는다.
+- id: 9806 | level: N3 | [損 / そん , 列車の後部３両はひどい損傷を受けた。]
+  - meaning_ko: 손실
+  - example_ko: 열차 뒤쪽 객차 3량이 심하게 파손됐다.
+- id: 9810 | level: N3 | [損害 / そんがい , 嵐は作物に大損害を与えた。]
+  - meaning_ko: 손상
+  - example_ko: 폭풍은 작물에 큰 손해를 주었다.
+- id: 9814 | level: N3 | [尊敬 / そんけい , 離れてみれば尊敬は増す。]
+  - meaning_ko: 존경
+  - example_ko: 멀리 보면 존경은 늘어난다.
+- id: 9818 | level: N3 | [存在 / そんざい , 天文学者が局部超銀河団の存在を推定しました。]
+  - meaning_ko: 존재
+  - example_ko: 천문학자가 국부 초은하단의 존재를 추정했다.
+- id: 9821 | level: N3 | [尊重 / そんちょう , 彼は先生の忠告を尊重した。]
+  - meaning_ko: 존경
+  - example_ko: 그는 선생님의 충고를 존중했다.
+- id: 9830 | level: N3 | [田 / た , もしもし、山田医院です。]
+  - meaning_ko: 논
+  - example_ko: 만약 야마다 진료소입니다.
+- id: 9835 | level: N3 | [他 / た , 何か他の言い方はある？]
+  - meaning_ko: 기타(특히 장소 및 사물)
+  - example_ko: 뭔가 다른 말씀이 있나요?
+- id: 9840 | level: N3 | [対 / たい , 私が絶対勝てないってあなた言った？]
+  - meaning_ko: 쌍
+  - example_ko: 내가 절대 이길 수 없다고 말했어?
+- id: 9844 | level: N3 | [大 / だい , 人ごみは大嫌い。]
+  - meaning_ko: 큰
+  - example_ko: 쓰레기는 싫어.
+- id: 9848 | level: N3 | [題 / だい , 何が問題なの？]
+  - meaning_ko: 제목
+  - example_ko: 무엇이 잘못되었나요?
+- id: 9851 | level: N3 | [体育 / たいいく , 彼らは体育館に集まった。]
+  - meaning_ko: 체육
+  - example_ko: 그들은 체육관에 모였다.
+- id: 9855 | level: N3 | [体温 / たいおん , 母は私の体温を計った。]
+  - meaning_ko: 온도 (몸)
+  - example_ko: 어머니는 내 체온을 측정했다.
+- id: 9860 | level: N3 | [大会 / たいかい , 毎年、浜松で凧揚げ大会が開かれる。]
+  - meaning_ko: 협약
+  - example_ko: 매년 하마마츠에서 연 튀김 대회가 열린다.
+- id: 9864 | level: N3 | [大気 / たいき , 当市には大気汚染はありません。]
+  - meaning_ko: 대기
+  - example_ko: 당시에는 대기 오염이 없습니다.
+- id: 9877 | level: N3 | [代金 / だいきん , 品物は代金引換でお送りいたします。]
+  - meaning_ko: 가격
+  - example_ko: 상품은 대금 상환으로 보내드립니다.
+- id: 9880 | level: N3 | [退屈 / たいくつ , ねぇ遊んでよ、とっても退屈なの！]
+  - meaning_ko: 지겨움
+  - example_ko: 네, 놀아, 너무 지루해!
+- id: 9884 | level: N3 | [滞在 / たいざい , 彼女は滞在を５日間延ばした。]
+  - meaning_ko: 머무르다
+  - example_ko: 그녀는 체류를 5일 동안 연장했다.
+- id: 9888 | level: N3 | [大使 / たいし , 彼は駐英大使に選ばれた。]
+  - meaning_ko: 대사
+  - example_ko: 그는 주영 대사로 선정되었다.
+- id: 9892 | level: N3 | [大した / たいした , 彼女は大した詩人ではありません。]
+  - meaning_ko: 중요한
+  - example_ko: 그녀는 큰 시인이 아닙니다.
+- id: 9901 | level: N3 | [体重 / たいじゅう , 浴室の秤で体重を計った。]
+  - meaning_ko: (몸) 체중
+  - example_ko: 욕실의 무게로 체중을 잰다.
+- id: 9905 | level: N3 | [対象 / たいしょう , 輸入品は高い課税対象だ。]
+  - meaning_ko: 목표
+  - example_ko: 수입품은 높은 과세 대상이다.
+- id: 9909 | level: N3 | [対照 / たいしょう , 彼女の新しい小説は前作とは対照的にとても面白い。]
+  - meaning_ko: 차이
+  - example_ko: 그녀의 새로운 소설은 전작과는 대조적으로 매우 흥미 롭습니다.
+- id: 9913 | level: N3 | [大臣 / だいじん , 彼は大臣を辞めた。]
+  - meaning_ko: 내각 장관
+  - example_ko: 그는 장관을 그만두었다.
+- id: 9918 | level: N3 | [対する / たいする , 乳幼児に対する医療がもっと必要である。]
+  - meaning_ko: 직면하다
+  - example_ko: 영유아에 대한 의료가 더 필요하다.
+- id: 9923 | level: N3 | [大戦 / たいせん , 翌年、第一次世界大戦が始まりました。]
+  - meaning_ko: 대전
+  - example_ko: 이듬해 제1차 세계대전이 시작되었습니다.
+- id: 9926 | level: N3 | [態度 / たいど , 老人はごう慢な態度をとった。]
+  - meaning_ko: 태도
+  - example_ko: 노인은 거만한 태도를 취했다.
+- id: 9931 | level: N3 | [大統領 / だいとうりょう , 米国大統領は今来日中です。]
+  - meaning_ko: 대통령
+  - example_ko: 미국 대통령은 오늘 낮 동안입니다.
+- id: 9937 | level: N3 | [大半 / たいはん , 用心は勇気の大半。]
+  - meaning_ko: 대부분의
+  - example_ko: 조심은 용기의 대부분.
+- id: 9943 | level: N3 | [代表 / だいひょう , 彼を私たちの代表として選ぶ。]
+  - meaning_ko: 대표
+  - example_ko: 그를 우리 대표로 선택한다.
+- id: 9950 | level: N3 | [大部分 / だいぶぶん , 煉瓦の大部分は粘土からなっている。]
+  - meaning_ko: 대부분의 부분
+  - example_ko: 벽돌의 대부분은 점토로 이루어져 있습니다.
+- id: 9954 | level: N3 | [タイプライター / タイプライター , 電子タイプライターはありますか。]
+  - meaning_ko: 타이프라이터
+  - example_ko: 전자 타입 라이터가 있습니까?
+- id: 9959 | level: N3 | [逮捕 / たいほ , 無罪の男が誤って逮捕された。]
+  - meaning_ko: 체포
+  - example_ko: 무죄의 남자가 실수로 체포되었다.
+- id: 9964 | level: N3 | [題名 / だいめい , 彼女は私が題名を知らない歌を歌った。]
+  - meaning_ko: 제목
+  - example_ko: 그녀는 내가 제목을 모르는 노래를 불렀다.
+- id: 9968 | level: N3 | [ダイヤ / ダイヤ , 列車のダイヤが遅れています。]
+  - meaning_ko: (철도) 일정
+  - example_ko: 기차의 다이아몬드가 지연되었습니다.
+- id: 9976 | level: N3 | [太陽 / たいよう , 太陽の黒点を観察しよう。]
+  - meaning_ko: 해
+  - example_ko: 태양의 검은 점을 관찰하자.
+- id: 9980 | level: N3 | [平ら / たいら , 平らな土地には山も丘もない。]
+  - meaning_ko: 평탄
+  - example_ko: 평평한 땅에는 산도 언덕도 없다.
+- id: 9985 | level: N3 | [代理 / だいり , 旅行代理店に問い合わせてみよう。]
+  - meaning_ko: 대표
+  - example_ko: 여행사에 문의해 보자.
+- id: 9990 | level: N3 | [大陸 / たいりく , 翌朝になって初めて大陸が見えた。]
+  - meaning_ko: 대륙
+  - example_ko: 다음날 아침이 되어 처음으로 대륙이 보였다.
+- id: 9994 | level: N3 | [倒す / たおす , 本末を転倒するな。]
+  - meaning_ko: 던져버리다
+  - example_ko: 본말을 넘어뜨리지 마라.
+- id: 9999 | level: N3 | [タオル / タオル , 彼女はタオルを固く絞った。]
+  - meaning_ko: (손) 수건
+  - example_ko: 그녀는 수건을 단단히 짜냈다.
+- id: 10002 | level: N3 | [だが / だが , だが宇宙は無限だ。]
+  - meaning_ko: 하지만
+  - example_ko: 하지만 우주는 무한하다.
+- id: 10008 | level: N3 | [互い / たがい , お互いを信頼し合うしかない。]
+  - meaning_ko: 상호간의
+  - example_ko: 서로를 신뢰할 수밖에 없다.
+- id: 10009 | level: N3 | [高める / たかめる , 社長は従業員に生産性を高めるように命じた。]
+  - meaning_ko: 키우다
+  - example_ko: 사장은 직원들에게 생산성을 높이라고 명령했다.
+- id: 10014 | level: N3 | [宝 / たから , 友人ほど貴重な宝はほとんどない。]
+  - meaning_ko: 보물
+  - example_ko: 친구만큼 귀중한 보물은 거의 없다.
+- id: 10019 | level: N3 | [宅 / たく , 安価な簡易住宅を提供します。]
+  - meaning_ko: 집
+  - example_ko: 저렴한 간이 주택을 제공합니다.
+- id: 10025 | level: N3 | [炊く / たく , 炊飯器でご飯を炊くよ。]
+  - meaning_ko: 끓이다
+  - example_ko: 밥솥으로 밥을 끓여.
+- id: 10030 | level: N3 | [焚く / たく , ]
+  - meaning_ko: 태우다
+- id: 10047 | level: N3 | [だけど / だけど , 一晩泊めてもらいたいんだけど。]
+  - meaning_ko: 하지만
+  - example_ko: 하룻밤 묵고 싶지만.
+- id: 10051 | level: N3 | [たしか / たしか , 恋は盲目。憎しみもまたしかり。]
+  - meaning_ko: 확실한
+  - example_ko: 사랑은 맹목. 증오도 역시.
+- id: 10059 | level: N3 | [確かめる / たしかめる , 彼は私に日付を確かめるように言った。]
+  - meaning_ko: 확인하다
+  - example_ko: 그는 저에게 날짜를 확인하도록 말했다.
+- id: 10064 | level: N3 | [多少 / たしょう , 彼は多少編集の知識がある。]
+  - meaning_ko: 조금
+  - example_ko: 그는 다소 편집 지식이 있다.
+- id: 10068 | level: N3 | [助かる / たすかる , それはとても助かる。]
+  - meaning_ko: 구원받다
+  - example_ko: 그것은 아주 도움이 된다.
+- id: 10074 | level: N3 | [助ける / たすける , 盲導犬は目の見えない人を助ける。]
+  - meaning_ko: 도와주다 (v.t.)
+  - example_ko: 맹도견은 눈에 보이지 않는 사람을 돕는다.
+- id: 10080 | level: N3 | [ただ / ただ , 言ってみただけだよ！]
+  - meaning_ko: 무료
+  - example_ko: 말했을 뿐이야!
+- id: 10084 | level: N3 | [只 / ただ , この新聞は只です。]
+  - meaning_ko: 무료
+  - example_ko: 이 신문은 단지입니다.
+- id: 10087 | level: N3 | [唯 / ただ , 唯一の解決法は法に訴えることだ。]
+  - meaning_ko: 호수
+  - example_ko: 유일한 해결법은 법에 호소하는 것이다.
+- id: 10091 | level: N3 | [戦い / たたかい , 私たちは戦いに勝った。]
+  - meaning_ko: 전투
+  - example_ko: 우리는 싸움을 이겼다.
+- id: 10095 | level: N3 | [戦う / たたかう , 正義のために戦う。]
+  - meaning_ko: 싸우다
+  - example_ko: 정의를 위해 싸운다.
+- id: 10104 | level: N3 | [叩く / たたく , 戸を叩く音がした。]
+  - meaning_ko: 파업하다
+  - example_ko: 문을 두드리는 소리가 났다.
+- id: 10109 | level: N3 | [直ちに / ただちに , 彼女は直ちに車の方へ向かった。]
+  - meaning_ko: 즉시
+  - example_ko: 그녀는 즉시 차쪽으로 향했다.
+- id: 10113 | level: N3 | [畳む / たたむ , そこの角にある駄菓子屋さん、店を畳むそうよ。]
+  - meaning_ko: (옷을) 접다
+  - example_ko: 거기 모퉁이에 있는 과자 가게, 가게를 접을 것 같아.
+- id: 10118 | level: N3 | [立ち上がる / たちあがる , 立ち上がるの手伝って。]
+  - meaning_ko: 일어서다
+  - example_ko: 일어나는 데 도움이.
+- id: 10123 | level: N3 | [立場 / たちば , 彼女は耳が遠いなので不利な立場である。]
+  - meaning_ko: 점
+  - example_ko: 그녀는 귀가 멀기 때문에 불리한 입장이다.
+- id: 10128 | level: N3 | [建つ / たつ , 口では大阪の城も建つ。]
+  - meaning_ko: 서다
+  - example_ko: 입에서는 오사카의 성도 세워진다.
+- id: 10133 | level: N3 | [経つ / たつ , 彼がここへ来てから１年が経つ。]
+  - meaning_ko: (시간이) 지나가다
+  - example_ko: 그가 여기에 온 지 1년이 지났다.
+- id: 10139 | level: N3 | [達する / たっする , 郵便屋さんは毎朝手紙を配達する。]
+  - meaning_ko: 도달하다
+  - example_ko: 우편집은 매일 아침 편지를 배달한다.
+- id: 10146 | level: N3 | [だって / だって , 女性だってエッチしたい。]
+  - meaning_ko: 하지만
+  - example_ko: 여자도 음란하고 싶다.
+- id: 10150 | level: N3 | [たっぷり / たっぷり , 時間はたっぷりあった。]
+  - meaning_ko: 가득한
+  - example_ko: 시간은 많이 있었다.
+- id: 10154 | level: N3 | [たとえ / たとえ , たとえ悪くなくても、謝るべきだ。]
+  - meaning_ko: 설사
+  - example_ko: 비록 나쁘지 않아도 사과해야 한다.
+- id: 10161 | level: N3 | [谷 / たに , 霧で谷が見えなかった。]
+  - meaning_ko: 골짜기
+  - example_ko: 안개로 계곡이 보이지 않았다.
+- id: 10169 | level: N3 | [他人 / たにん , 他人より身内。]
+  - meaning_ko: 관련없는 사람
+  - example_ko: 타인보다 신내.
+- id: 10174 | level: N3 | [種 / たね , 社長さんの車種と色は？]
+  - meaning_ko: 씨앗
+  - example_ko: 사장씨의 차종과 색은?
+- id: 10179 | level: N3 | [束 / たば , 約束するよ。]
+  - meaning_ko: 다발
+  - example_ko: 약속할게.
+- id: 10183 | level: N3 | [足袋 / たび , 着物に足袋は欠かせません。]
+  - meaning_ko: 일본식 양말(발가락이 갈라진 양말)
+  - example_ko: 기모노에 버선은 빠뜨릴 수 없습니다.
+- id: 10186 | level: N3 | [度 / たび , 毎度、またいらっしゃい。]
+  - meaning_ko: 발생 카운터
+  - example_ko: 매번 다시 오세요.
+- id: 10189 | level: N3 | [旅 / たび , 元気？旅行は良かった？]
+  - meaning_ko: 여행하다
+  - example_ko: 괜찮아? 여행은 좋았어?
+- id: 10194 | level: N3 | [たびたび / たびたび , 彼はたびたび学校に遅刻する。]
+  - meaning_ko: 자주
+  - example_ko: 그는 때때로 학교에 늦었다.
+- id: 10199 | level: N3 | [玉 / たま , 艱難汝を玉にす。]
+  - meaning_ko: 공
+  - example_ko: 艱難汝을 구슬로 만든다.
+- id: 10208 | level: N3 | [弾 / たま , 彼女はバッハ弾きです。]
+  - meaning_ko: 총알
+  - example_ko: 그녀는 바흐 연주입니다.
+- id: 10214 | level: N3 | [偶 / たま , 僕は偶然温泉を見つけた。]
+  - meaning_ko: 우수
+  - example_ko: 나는 우연히 온천을 발견했다.
+- id: 10222 | level: N3 | [騙す / だます , 同僚を騙すのは良くないよ。]
+  - meaning_ko: 속이다
+  - example_ko: 동료를 속이는 것은 좋지 않아.
+- id: 10226 | level: N3 | [偶々 / たまたま , ]
+  - meaning_ko: 뜻밖에
+- id: 10230 | level: N3 | [たまらない / たまらない , 聞きたくてたまらない。]
+  - meaning_ko: 참을 수 없는
+  - example_ko: 듣고 싶어서 견딜 수 없다.
+- id: 10235 | level: N3 | [溜まる / たまる , 人は溜まれば溜まるほど欲しくなるものだ。]
+  - meaning_ko: 수집하다
+  - example_ko: 사람은 쌓이면 쌓을수록 원하는 셈이다.
+- id: 10243 | level: N3 | [黙る / だまる , 黙ることを知らない者は話し上手ではない。]
+  - meaning_ko: 침묵하다
+  - example_ko: 침묵을 모르는 사람은 말하기 능숙하지 않다.
+- id: 10250 | level: N3 | [試し / ためし , 物は試し。]
+  - meaning_ko: 재판
+  - example_ko: 물건은 시도.
+- id: 10255 | level: N3 | [試す / ためす , 彼は、試す。]
+  - meaning_ko: 시도하다
+  - example_ko: 그는 시도한다.
+- id: 10259 | level: N3 | [溜める / ためる , ]
+  - meaning_ko: 축적하다
+- id: 10262 | level: N3 | [便り / たより , 無事に便りなし。]
+  - meaning_ko: 소식
+  - example_ko: 무사히 소식 없음.
+- id: 10270 | level: N3 | [頼る / たよる , 彼らはすぐに仲間に頼る。]
+  - meaning_ko: 의지하다
+  - example_ko: 그들은 빨리 동료를 의지한다.
+- id: 10275 | level: N3 | [段 / だん , 値段が高すぎる！]
+  - meaning_ko: 단계
+  - example_ko: 가격이 너무 높다!
+- id: 10278 | level: N3 | [単位 / たんい , 米はキロ単位で売られる。]
+  - meaning_ko: 학점 (학교 과정)
+  - example_ko: 쌀은 킬로 단위로 팔린다.
+- id: 10282 | level: N3 | [単語 / たんご , 彼は辞書でその単語を調べた。]
+  - meaning_ko: 단어
+  - example_ko: 그는 사전에서 그 단어를 조사했다.
+- id: 10286 | level: N3 | [男子 / だんし , 男子生徒はめいめい卒業証書を受け取った。]
+  - meaning_ko: 청년
+  - example_ko: 남학생은 메이메이 졸업증서를 받았다.
+- id: 10289 | level: N3 | [単純 / たんじゅん , 彼女は子供のように単純だ。]
+  - meaning_ko: 간단
+  - example_ko: 그녀는 아이처럼 간단합니다.
+- id: 10293 | level: N3 | [誕生 / たんじょう , お誕生日おめでとうムーリエル！]
+  - meaning_ko: 출생
+  - example_ko: 생일 축하 무리엘!
+- id: 10300 | level: N3 | [ダンス / ダンス , 彼女はダンスがうまい。]
+  - meaning_ko: 춤
+  - example_ko: 그녀는 댄스가 좋다.
+- id: 10306 | level: N3 | [団体 / だんたい , 彼らは団体競技に参加した。]
+  - meaning_ko: 조직
+  - example_ko: 그들은 단체 경기에 참가했다.
+- id: 10311 | level: N3 | [担当 / たんとう , 彼が環境担当の大臣です。]
+  - meaning_ko: (에서) 담당
+  - example_ko: 그가 환경 담당 장관입니다.
+- id: 10315 | level: N3 | [単なる / たんなる , 彼ら単なる習慣の奴隷だ。]
+  - meaning_ko: 호수
+  - example_ko: 그들은 단순한 습관의 노예다.
+- id: 10319 | level: N3 | [単に / たんに , 木造家屋は簡単に燃える。]
+  - meaning_ko: 간단히
+  - example_ko: 목조 주택은 쉽게 타오른다.
+- id: 10323 | level: N3 | [地 / ち , 生き地獄は、言い過ぎだと私も思う。]
+  - meaning_ko: 지구
+  - example_ko: 살아있는 지옥은 너무 지나치다고 나도 생각한다.
+- id: 10327 | level: N3 | [地位 / ちい , 父はもっとよい地位につくために辞職した。]
+  - meaning_ko: (분
+  - example_ko: 아버지는 더 나은 입지를 붙이기 위해 사직했다.
+- id: 10332 | level: N3 | [地域 / ちいき , 両地域は宗教と文化が違っている。]
+  - meaning_ko: 영역
+  - example_ko: 두 지역은 종교와 문화가 다르다.
+- id: 10337 | level: N3 | [チーズ / チーズ , 母はナイフでチーズを切った。]
+  - meaning_ko: 치즈
+  - example_ko: 어머니는 칼로 치즈를 자른다.
+- id: 10342 | level: N3 | [チーム / チーム , あのチームはつわものぞろいだ。]
+  - meaning_ko: 팀
+  - example_ko: 그 팀은 화가 났다.
+- id: 10347 | level: N3 | [知恵 / ちえ , 知恵は小出しにせよ。]
+  - meaning_ko: 지혜
+  - example_ko: 지혜는 질내 사정으로 하라.
+- id: 10352 | level: N3 | [地下 / ちか , 彼女は銀座で地下鉄に乗った。]
+  - meaning_ko: 최하부
+  - example_ko: 그녀는 긴자에서 지하철을 타고
+- id: 10357 | level: N3 | [違い / ちがい , 私は違います。あなたです。]
+  - meaning_ko: 차이점
+  - example_ko: 나는 다르다. 당신입니다.
+- id: 10364 | level: N3 | [違いない / ちがいない , 落としてしまったに違いない。]
+  - meaning_ko: (문구) 물론이죠
+  - example_ko: 떨어뜨린 것임에 틀림없다.
+- id: 10369 | level: N3 | [近頃 / ちかごろ , 彼女は近頃太ってきた。]
+  - meaning_ko: 최근에
+  - example_ko: 그녀는 최근 뚱뚱해졌다.
+- id: 10376 | level: N3 | [地球 / ちきゅう , 陸と水で地球の表面は出来ている。]
+  - meaning_ko: 지구
+  - example_ko: 육지와 물로 지구의 표면은 만들어져 있다.
+- id: 10382 | level: N3 | [地区 / ちく , 市のこの地区の建物は皆醜悪だ。]
+  - meaning_ko: 구역
+  - example_ko: 시의 이 지구의 건물은 모두 추악하다.
+- id: 10386 | level: N3 | [遅刻 / ちこく , 学校に遅刻した。]
+  - meaning_ko: 늦음
+  - example_ko: 학교에 늦었다.
+- id: 10391 | level: N3 | [知事 / ちじ , 彼は知事と長年の付き合いです。]
+  - meaning_ko: 현 지사
+  - example_ko: 그는 주지사와 수년간의 교제입니다.
+- id: 10394 | level: N3 | [知識 / ちしき , 百科事典は知識の宝庫だ。]
+  - meaning_ko: 지식
+  - example_ko: 백과사전은 지식의 보고다.
+- id: 10399 | level: N3 | [父親 / ちちおや , 娘の父親は金離れがいい。]
+  - meaning_ko: 아버지
+  - example_ko: 딸의 아버지는 돈 멀리 좋다.
+- id: 10403 | level: N3 | [知能 / ちのう , 類人猿は知能が高い。]
+  - meaning_ko: 지능
+  - example_ko: 유인원은 지능이 높다.
+- id: 10407 | level: N3 | [地平線 / ちへいせん , 地平線の上に月が見えた。]
+  - meaning_ko: 수평선
+  - example_ko: 수평선 위에 달이 보였다.
+- id: 10411 | level: N3 | [地方 / ちほう , 彼女は地方公務員だ。]
+  - meaning_ko: 영역
+  - example_ko: 그녀는 지방공무원이다.
+- id: 10418 | level: N3 | [茶 / ちゃ , 退職を契機に茶道を始めた。]
+  - meaning_ko: 차
+  - example_ko: 퇴직을 계기로 다도를 시작했다.
+- id: 10422 | level: N3 | [チャンス / チャンス , 彼女に会えるチャンスを逃して残念だ。]
+  - meaning_ko: 가능성
+  - example_ko: 그녀를 만날 수 있는 기회를 놓치고 유감이다.
+- id: 10427 | level: N3 | [ちゃんと / ちゃんと , 避妊はちゃんとコンドームつけてたのよね？]
+  - meaning_ko: 아주
+  - example_ko: 피임은 제대로 콘돔을 붙였습니까?
+- id: 10432 | level: N3 | [中 / ちゅう , 食事中本を読んだ。]
+  - meaning_ko: 내부에
+  - example_ko: 식사 중 책을 읽었다.
+- id: 10437 | level: N3 | [注 / ちゅう , 十八禁なので要注意！]
+  - meaning_ko: 주석
+  - example_ko: 18금이므로 요주의!
+- id: 10442 | level: N3 | [中央 / ちゅうおう , 彼は舞台の中央に１人のこされた。]
+  - meaning_ko: 본부
+  - example_ko: 그는 무대의 중앙에 한 명의 문질렀다.
+- id: 10449 | level: N3 | [中学 / ちゅうがく , 彼は中学校に入った。]
+  - meaning_ko: 중학교
+  - example_ko: 그는 중학교에 들어갔다.
+- id: 10456 | level: N3 | [中古 / ちゅうこ , 彼は中古車を扱っている。]
+  - meaning_ko: 사용된
+  - example_ko: 그는 중고차를 다루고 있다.
+- id: 10461 | level: N3 | [中止 / ちゅうし , 雨天中止になりそうな計画だな。]
+  - meaning_ko: 보류
+  - example_ko: 우천 중지가 될 것 같은 계획이다.
+- id: 10467 | level: N3 | [駐車 / ちゅうしゃ , 彼女は空き地に駐車した。]
+  - meaning_ko: 주차(예:
+  - example_ko: 그녀는 빈 땅에 주차했다.
+- id: 10472 | level: N3 | [昼食 / ちゅうしょく , きょう何を昼食に食べましたか。]
+  - meaning_ko: 점심(昼ご飯(ひuruごはん)과 동일)
+  - example_ko: 오늘 무엇을 점심으로 먹었습니까?
+- id: 10476 | level: N3 | [中心 / ちゅうしん , 郵便局は町の中心部にある。]
+  - meaning_ko: 센터
+  - example_ko: 우체국은 마을의 중심부에 있다.
+- id: 10484 | level: N3 | [注目 / ちゅうもく , 彼女は私達の注目を集めた。]
+  - meaning_ko: 알아채다
+  - example_ko: 그녀는 우리의 관심을 끌었다.
+- id: 10488 | level: N3 | [注文 / ちゅうもん , 彼女は紅茶を注文した。]
+  - meaning_ko: 주문하다
+  - example_ko: 그녀는 차를 주문했다.
+- id: 10491 | level: N3 | [長期 / ちょうき , 長期貸借契約預かり金。]
+  - meaning_ko: 오랜 기간
+  - example_ko: 장기 대차 계약 예금.
+- id: 10496 | level: N3 | [調査 / ちょうさ , 物価を調査するために委員会が設立された。]
+  - meaning_ko: 조사
+  - example_ko: 물가를 조사하기 위해 위원회가 설립되었다.
+- id: 10501 | level: N3 | [調子 / ちょうし , 風邪を引いて本調子ではない。]
+  - meaning_ko: 상태
+  - example_ko: 감기에 걸려 본 상태가 아니다.
+- id: 10505 | level: N3 | [頂上 / ちょうじょう , 彼は頂上に足早に駆け登った。]
+  - meaning_ko: 맨 위
+  - example_ko: 그는 정상에 발바닥으로 뛰어 올랐다.
+- id: 10512 | level: N3 | [ちょうだい / ちょうだい , 連絡ちょうだい！]
+  - meaning_ko: -- kuだsai의 구어체 형태
+  - example_ko: 연락 그냥!
+- id: 10517 | level: N3 | [貯金 / ちょきん , 不時の時に備えて貯金しなさい。]
+  - meaning_ko: (은행) 저축
+  - example_ko: 불시에 대비하여 저축하십시오.
+- id: 10524 | level: N3 | [直接 / ちょくせつ , 彼女に直接言ったらどうですか。]
+  - meaning_ko: 직접
+  - example_ko: 그녀에게 직접 말하면 어때?
+- id: 10528 | level: N3 | [著者 / ちょしゃ , 著者はその本を姉にささげた。]
+  - meaning_ko: 작가
+  - example_ko: 저자는 그 책을 누나에게 바쳤다.
+- id: 10537 | level: N3 | [散らす / ちらす , 私をどなり散らす人は気にならないわ。]
+  - meaning_ko: 흩어지다
+  - example_ko: 나를 흩뜨리는 사람은 신경이 쓰이지 않아.
+- id: 10542 | level: N3 | [散る / ちる , 秋には葉が散る。]
+  - meaning_ko: 떨어지다
+  - example_ko: 가을에는 잎이 흩어진다.
+- id: 10546 | level: N3 | [遂に / ついに , 遂に彼は目的を達した。]
+  - meaning_ko: 마지막으로
+  - example_ko: 마침내 그는 목표를 도달했다.
+- id: 10552 | level: N3 | [通過 / つうか , 予算案は上院を通過した。]
+  - meaning_ko: 통과하다
+  - example_ko: 예산안은 상원을 통과했다.
+- id: 10556 | level: N3 | [通貨 / つうか , 日本の円は安定した通貨だ。]
+  - meaning_ko: 통화
+  - example_ko: 일본 엔은 안정된 통화다.
+- id: 10561 | level: N3 | [通学 / つうがく , 彼は徒歩通学だ。]
+  - meaning_ko: 학교로 통근
+  - example_ko: 그는 도보 통학이다.
+- id: 10564 | level: N3 | [通勤 / つうきん , 父はいつも歩いて通勤するわけではない。]
+  - meaning_ko: 직장으로 통근
+  - example_ko: 아버지는 항상 걷고 통근하는 것은 아니다.
+- id: 10569 | level: N3 | [通行 / つうこう , 爆発で通行人が何人か死んだ。]
+  - meaning_ko: 통로
+  - example_ko: 폭발로 통행인이 몇 명 죽었다.
+- id: 10575 | level: N3 | [通じる / つうじる , 彼にはロシア語が通じる。]
+  - meaning_ko: 달려가다
+  - example_ko: 그에게는 러시아어가 통한다.
+- id: 10577 | level: N3 | [通信 / つうしん , 彼は、無電で通信を送った。]
+  - meaning_ko: 일치
+  - example_ko: 그는 무전하고 통신을 보냈다.
+- id: 10581 | level: N3 | [通訳 / つうやく , 彼女は通訳として雇われた。]
+  - meaning_ko: 해석
+  - example_ko: 그녀는 통역으로 고용되었다.
+- id: 10585 | level: N3 | [捕まる / つかまる , 警察に捕まるかと思った。]
+  - meaning_ko: 체포되다
+  - example_ko: 경찰에 잡힐까 생각했다.
+- id: 10588 | level: N3 | [掴む / つかむ , 雲を掴むような話だな。]
+  - meaning_ko: 붙잡다
+  - example_ko: 구름을 잡는 듯한 이야기구나.
+- id: 10595 | level: N3 | [疲れ / つかれ , 疲れているんだ。]
+  - meaning_ko: 피로
+  - example_ko: 피곤해.
+- id: 10604 | level: N3 | [付き合い / つきあい , 彼は付き合いにくい。]
+  - meaning_ko: 사회화
+  - example_ko: 그는 사귀기 어렵다.
+- id: 10611 | level: N3 | [付合う / つきあう , ]
+  - meaning_ko: ~와 연합하다
+- id: 10616 | level: N3 | [次々 / つぎつぎ , 飛行機が次々に到着した。]
+  - meaning_ko: 연속해서
+  - example_ko: 비행기가 차례로 도착했다.
+- id: 10622 | level: N3 | [付く / つく , 彼女の水着は目に付く。]
+  - meaning_ko: 인접하다
+  - example_ko: 그녀의 수영복은 눈에 띈다.
+- id: 10626 | level: N3 | [就く / つく , 友人の好意で職に就くことができた。]
+  - meaning_ko: (장소에) 정착하다
+  - example_ko: 친구의 호의로 직장에 갈 수 있었다.
+- id: 10631 | level: N3 | [突く / つく , もうすぐ、トムの貯金が底を突く。]
+  - meaning_ko: 밀어붙이다
+  - example_ko: 곧 톰의 저금이 바닥을 찌른다.
+- id: 10636 | level: N3 | [次ぐ / つぐ , きれい好きは敬神に次ぐ美徳。]
+  - meaning_ko: 옆에 순위를 매기다
+  - example_ko: 예쁜 좋아는 경신에 이은 미덕.
+- id: 10647 | level: N3 | [付ける / つける , 理論と実際を結び付けるべきだ。]
+  - meaning_ko: 부착하다
+  - example_ko: 이론과 실제를 연결해야 한다.
+- id: 10651 | level: N3 | [着ける / つける , 昼までに彼の家に着けると思う？]
+  - meaning_ko: 입다
+  - example_ko: 낮까지 그의 집에 갈 수 있을까?
+- id: 10657 | level: N3 | [伝わる / つたわる , 光や音は波の形で伝わる。]
+  - meaning_ko: 물려받다
+  - example_ko: 빛과 소리는 파도의 형태로 전달됩니다.
+- id: 10659 | level: N3 | [土 / つち , 土曜日、去年から通い始めた陶芸教室。]
+  - meaning_ko: 지구
+  - example_ko: 토요일, 작년부터 다니기 시작한 도예 교실.
+- id: 10663 | level: N3 | [続き / つづき , 毎年毎年不作続きだった。]
+  - meaning_ko: 계속
+  - example_ko: 매년 매년 불작속이었다.
+- id: 10668 | level: N3 | [包み / つつみ , 包みを開けて下さい。]
+  - meaning_ko: 묶음
+  - example_ko: 소포를 여십시오.
+- id: 10672 | level: N3 | [勤め / つとめ , 父は銀行に勤めています。]
+  - meaning_ko: 일하다
+  - example_ko: 아버지는 은행에서 일합니다.
+- id: 10681 | level: N3 | [務め / つとめ , 毎日の務めを怠るな。]
+  - meaning_ko: 의무
+  - example_ko: 매일 업무를 게을리하지 마라.
+- id: 10686 | level: N3 | [繋がる / つながる , 自慰は狂気に繋がる。]
+  - meaning_ko: 연결되다
+  - example_ko: 자위는 광기에 연결된다.
+- id: 10691 | level: N3 | [繋ぐ / つなぐ , フォークダンスで男子と手を繋ぐのがやだ。]
+  - meaning_ko: 묶다
+  - example_ko: 포크댄스로 남자와 손을 잡는 것이 야다.
+- id: 10695 | level: N3 | [繋げる / つなげる , ]
+  - meaning_ko: 연결하다
+- id: 10698 | level: N3 | [常に / つねに , 羅針盤の針は常に北を示す。]
+  - meaning_ko: 항상 (いつも와 동일) (쓰기 표현)
+  - example_ko: 나침반의 바늘은 항상 북쪽을 나타낸다.
+- id: 10702 | level: N3 | [翼 / つばさ , 鳥は翼で飛ぶ。]
+  - meaning_ko: 날개
+  - example_ko: 새는 날개로 날아간다.
+- id: 10707 | level: N3 | [つまり / つまり , つまり疲労困憊、心も体もクタクタです。]
+  - meaning_ko: 즉
+  - example_ko: 즉 피로 곤민, 마음도 몸도 쿠타쿠타입니다.
+- id: 10711 | level: N3 | [罪 / つみ , 同性愛者ですが何か？それが犯罪だとでも？]
+  - meaning_ko: 범죄
+  - example_ko: 게이지만 뭔가? 그것이 범죄라도?
+- id: 10716 | level: N3 | [積む / つむ , 一隻の船に全部を積む冒険をするな。]
+  - meaning_ko: 쌓이다
+  - example_ko: 한척의 배에 전부를 쌓는 모험을 하지 말라.
+- id: 10721 | level: N3 | [詰める / つめる , 彼らは出資を切り詰めるでしょう。]
+  - meaning_ko: 포장하다
+  - example_ko: 그들은 투자를 잘라낼 것입니다.
+- id: 10726 | level: N3 | [積もる / つもる , 距離を見積もるのは難しいな。]
+  - meaning_ko: 쌓이다
+  - example_ko: 거리를 추정하기는 어렵다.
+- id: 10730 | level: N3 | [梅雨 / つゆ , 明日から梅雨前線が活発になります。]
+  - meaning_ko: 우기
+  - example_ko: 내일부터 장마 앞선이 활발해집니다.
+- id: 10735 | level: N3 | [辛い / つらい , 流産はとても辛い経験です。]
+  - meaning_ko: 아픈
+  - example_ko: 유산은 매우 매운 경험입니다.
+- id: 10740 | level: N3 | [釣 / つり , 毎週釣りに行く。]
+  - meaning_ko: 어업
+  - example_ko: 매주 낚시하러 간다.
+- id: 10745 | level: N3 | [連れ / つれ , 連れてきてもらえてうれしいです。]
+  - meaning_ko: 동반자
+  - example_ko: 데려와서 기뻐요.
+- id: 10750 | level: N3 | [出 / で , ご出身はどちらですか。]
+  - meaning_ko: 유출
+  - example_ko: 출신은 어느 쪽입니까?
+- id: 10755 | level: N3 | [出会い / であい , 彼女との出会いが始まった。]
+  - meaning_ko: 회의
+  - example_ko: 그녀와의 만남이 시작되었다.
+- id: 10760 | level: N3 | [出合い / であい , ]
+  - meaning_ko: 만남
+- id: 10768 | level: N3 | [出会う / であう , 彼女と偶然出会う。]
+  - meaning_ko: 우연히 만나다
+  - example_ko: 그녀와 우연히 만난다.
+- id: 10772 | level: N3 | [提案 / ていあん , 僕はその提案に同意した。]
+  - meaning_ko: 제안
+  - example_ko: 나는 그 제안에 동의했다.
+- id: 10779 | level: N3 | [定期 / ていき , 洋服を定期的に買う余裕はありません。]
+  - meaning_ko: 고정 기간
+  - example_ko: 옷을 정기적으로 살 여유가 없습니다.
+- id: 10783 | level: N3 | [抵抗 / ていこう , あなたは抵抗できない。]
+  - meaning_ko: 저항
+  - example_ko: 당신은 저항할 수 없습니다.
+- id: 10789 | level: N3 | [提出 / ていしゅつ , 要約を火曜日までに提出しなさい。]
+  - meaning_ko: 프레젠테이션
+  - example_ko: 요약을 화요일까지 제출하십시오.
+- id: 10793 | level: N3 | [停電 / ていでん , 嵐で停電した。]
+  - meaning_ko: 정전
+  - example_ko: 폭풍으로 정전했다.
+- id: 10797 | level: N3 | [程度 / ていど , 彼女は知能の程度が高い。]
+  - meaning_ko: 도
+  - example_ko: 그녀는 지능의 정도가 높다.
+- id: 10803 | level: N3 | [停留所 / ていりゅうじょ , 次の停留所で降ります。]
+  - meaning_ko: 버스나 트램 정류장
+  - example_ko: 다음 정류장에서 내립니다.
+- id: 10810 | level: N3 | [デート / デート , 夕べジェーンとデートした。]
+  - meaning_ko: 날짜('사회적 참여'의 의미에서만)
+  - example_ko: 저녁 제인과 데이트했다.
+- id: 10815 | level: N3 | [敵 / てき , 彼は敵を料理した。]
+  - meaning_ko: 적
+  - example_ko: 그는 적을 요리했다.
+- id: 10821 | level: N3 | [出来事 / できごと , 悲しい出来事は忘れなさい。]
+  - meaning_ko: 사건이 일어나고
+  - example_ko: 슬픈 사건은 잊으십시오.
+- id: 10826 | level: N3 | [適する / てきする , ]
+  - meaning_ko: 적합하다
+- id: 10830 | level: N3 | [適切 / てきせつ , 病人が適切な看護を受けられるようにしなさい。]
+  - meaning_ko: 적절한
+  - example_ko: 아픈 사람이 적절한 간호를받을 수 있도록하십시오.
+- id: 10835 | level: N3 | [適度 / てきど , 適度の運動は体に良い。]
+  - meaning_ko: 보통의
+  - example_ko: 적당한 운동은 몸에 좋다.
+- id: 10840 | level: N3 | [適用 / てきよう , 私たちはその事例にこの規則を適用できる。]
+  - meaning_ko: 신청
+  - example_ko: 우리는 그 사례에 이 규칙을 적용할 수 있다.
+- id: 10845 | level: N3 | [できれば / できれば , 世界一周ができればいいのに。]
+  - meaning_ko: 가능하다면…
+  - example_ko: 세계 일주를 할 수 있으면 좋겠는데.
+- id: 10851 | level: N3 | [手品 / てじな , 彼は面白い手品をたくさん知っている。]
+  - meaning_ko: 요술 트릭
+  - example_ko: 그는 재미있는 마술을 많이 알고 있습니다.
+- id: 10854 | level: N3 | [ですから / ですから , 約束やぶったら、絶交ですからね？]
+  - meaning_ko: 그러므로
+  - example_ko: 약속이나 쓰면 절교니까요?
+- id: 10859 | level: N3 | [鉄 / てつ , 木は浮くが鉄は沈む。]
+  - meaning_ko: 철
+  - example_ko: 나무는 뜨지만 철은 가라앉는다.
+- id: 10863 | level: N3 | [哲学 / てつがく , 哲学研究は人文科学の１つだ。]
+  - meaning_ko: 철학
+  - example_ko: 철학연구는 인문과학 중 하나다.
+- id: 10867 | level: N3 | [手伝い / てつだい , 忙しければ、私が手伝います。]
+  - meaning_ko: 돕다
+  - example_ko: 바쁘면 내가 도와줄게.
+- id: 10872 | level: N3 | [徹底 / てってい , 彼は徹底した利己主義者だ。]
+  - meaning_ko: 완전
+  - example_ko: 그는 철저한 이기주의자다.
+- id: 10881 | level: N3 | [鉄道 / てつどう , 彼は鉄道事故で死んだ。]
+  - meaning_ko: 철도
+  - example_ko: 그는 철도 사고로 죽었다.
+- id: 10885 | level: N3 | [徹夜 / てつや , 彼女は徹夜で母を見守った。]
+  - meaning_ko: 밤새도록 깨어있어
+  - example_ko: 그녀는 밤새도록 어머니를 지켜보았다.
+- id: 10888 | level: N3 | [手間 / てま , 時を得た一針は九針の手間を省く。]
+  - meaning_ko: 시간
+  - example_ko: 시간을 얻은 한 바늘은 구침의 번거로움을 생략한다.
+- id: 10892 | level: N3 | [デモ / デモ , 彼はその反戦デモに参加した。]
+  - meaning_ko: 데모
+  - example_ko: 그는 그 반전 데모에 참가했다.
+- id: 10897 | level: N3 | [典型 / てんけい , 彼女はあらゆる婦徳の典型である。]
+  - meaning_ko: 유형
+  - example_ko: 그녀는 각 부덕의 전형이다.
+- id: 10903 | level: N3 | [天候 / てんこう , 予想した以上に悪い天候だ。]
+  - meaning_ko: 날씨
+  - example_ko: 예상한 것보다 나쁜 날씨다.
+- id: 10908 | level: N3 | [電子 / でんし , 電子工学の専門用語がわからない。]
+  - meaning_ko: 전자
+  - example_ko: 전자공학의 전문 용어를 모른다.
+- id: 10912 | level: N3 | [テント / テント , 彼らは山頂にテントを立てた。]
+  - meaning_ko: 텐트
+  - example_ko: 그들은 정상에 텐트를 세웠다.
+- id: 10917 | level: N3 | [伝統 / でんとう , 彼は古い伝統に背を向けた。]
+  - meaning_ko: 전통
+  - example_ko: 그는 오래된 전통에 등을 돌렸다.
+- id: 10922 | level: N3 | [天然 / てんねん , 彼女の髪は天然パーマだ。]
+  - meaning_ko: 자연
+  - example_ko: 그녀의 머리카락은 천연 파마이다.
+- id: 10926 | level: N3 | [問い / とい , 旅行代理店に問い合わせてみよう。]
+  - meaning_ko: 질문
+  - example_ko: 여행사에 문의해 보자.
+- id: 10934 | level: N3 | [党 / とう , 自民党が小泉人気の尻馬に乗った。]
+  - meaning_ko: 정당 (정치적)
+  - example_ko: 자민당이 고이즈미 인기의 후리마를 탔다.
+- id: 10939 | level: N3 | [塔 / とう , 雷がその塔に落ちた。]
+  - meaning_ko: 탑
+  - example_ko: 번개가 그 탑에 떨어졌다.
+- id: 10944 | level: N3 | [答案 / とうあん , 彼は答案を提出した。]
+  - meaning_ko: 시험지
+  - example_ko: 그는 답안을 제출했다.
+- id: 10948 | level: N3 | [同一 / どういつ , 同一現象が観察された。]
+  - meaning_ko: 신원
+  - example_ko: 동일한 현상이 관찰되었다.
+- id: 10953 | level: N3 | [銅貨 / どうか , ここの数枚の銅貨がある。]
+  - meaning_ko: 구리 동전
+  - example_ko: 여기 몇 장의 동화가 있다.
+- id: 10956 | level: N3 | [当時 / とうじ , 当時の農家の暴利はすさまじかった。]
+  - meaning_ko: 그때에
+  - example_ko: 당시 농가의 폭리는 엄청났다.
+- id: 10961 | level: N3 | [動詞 / どうし , 不規則動詞の勉強は好きではない。]
+  - meaning_ko: 동사
+  - example_ko: 불규칙 동사 공부는 좋아하지 않는다.
+- id: 10964 | level: N3 | [同時 / どうじ , 彼らは同時に出発した。]
+  - meaning_ko: 동시에)
+  - example_ko: 그들은 동시에 출발했다.
+- id: 10973 | level: N3 | [どうしても / どうしても , 歴史はどうしても伝統に甘いですからね。]
+  - meaning_ko: 어떤 대가를 치르더라도
+  - example_ko: 역사는 아무래도 전통에 달콤하니까요.
+- id: 10978 | level: N3 | [どうぞよろしく / どうぞよろしく , どうぞよろしく。]
+  - meaning_ko: 만나서 반가워요
+  - example_ko: 잘 부탁드립니다.
+- id: 10984 | level: N3 | [到着 / とうちゃく , 列車は定刻に到着した。]
+  - meaning_ko: 도착
+  - example_ko: 기차는 정각에 도착했다.
+- id: 10988 | level: N3 | [道徳 / どうとく , 彼は不道徳な男だ。]
+  - meaning_ko: 수신
+  - example_ko: 그는 부도덕한 남자다.
+- id: 10993 | level: N3 | [投票 / とうひょう , 彼らは投票数を合計した。]
+  - meaning_ko: 투표
+  - example_ko: 그들은 투표 수를 합산했다.
+- id: 10997 | level: N3 | [東洋 / とうよう , 彼は東洋芸術のかなりの専門家だ。]
+  - meaning_ko: 동양
+  - example_ko: 그는 동양 예술의 상당한 전문가다.
+- id: 11003 | level: N3 | [同様 / どうよう , 僕も君と同様楽しくない。]
+  - meaning_ko: 동일한
+  - example_ko: 나도 너처럼 즐겁지 않다.
+- id: 11008 | level: N3 | [童謡 / どうよう , 彼は、オペラはもちろんのこと、童謡すら歌えない。]
+  - meaning_ko: 어린이 노래
+  - example_ko: 그는 오페라는 물론, 동요조차 노래할 수 없다.
+- id: 11012 | level: N3 | [同僚 / どうりょう , 彼は同僚に受けがよい。]
+  - meaning_ko: 동료
+  - example_ko: 그는 동료에게 받을 수 있다.
+- id: 11017 | level: N3 | [道路 / どうろ , 老人が一人、道路で死んでいた。]
+  - meaning_ko: 도로
+  - example_ko: 노인이 한 명 도로에서 죽었다.
+- id: 11023 | level: N3 | [通す / とおす , 戻ってきてから、目を通すから。]
+  - meaning_ko: 통과시키다
+  - example_ko: 돌아오고 나서, 눈을 통과하기 때문에.
+- id: 11026 | level: N3 | [通り過ぎる / とおりすぎる , 彼女は通り過ぎるときに必ず声をかけた。]
+  - meaning_ko: 통과하다
+  - example_ko: 그녀는 지나갈 때 반드시 말을 걸었다.
+- id: 11031 | level: N3 | [都会 / とかい , 彼女は都会の生活を心に描いた。]
+  - meaning_ko: 도시
+  - example_ko: 그녀는 도시의 삶을 마음에 그렸다.
+- id: 11038 | level: N3 | [溶く / とく , ]
+  - meaning_ko: (페인트를) 녹이다
+- id: 11044 | level: N3 | [解く / とく , 彼女は容易に問題を解くことができた。]
+  - meaning_ko: 풀다
+  - example_ko: 그녀는 쉽게 문제를 풀 수 있었다.
+- id: 11049 | level: N3 | [退く / どく , 退くのは無理、だって私の本質だ。]
+  - meaning_ko: 후퇴하다
+  - example_ko: 물러나는 것은 무리, 나의 본질이다.
+- id: 11054 | level: N3 | [毒 / どく , その中毒者は麻薬の過剰摂取で死んだ。]
+  - meaning_ko: 독
+  - example_ko: 그 중독자는 마약의 과다 복용으로 죽었다.
+- id: 11059 | level: N3 | [得意 / とくい , 料理は得意です。]
+  - meaning_ko: 자부심
+  - example_ko: 요리는 잘합니다.
+- id: 11063 | level: N3 | [読書 / どくしょ , 母はメガネなしでは読書できない。]
+  - meaning_ko: 독서
+  - example_ko: 어머니는 안경 없이는 읽을 수 없습니다.
+- id: 11068 | level: N3 | [独身 / どくしん , 彼らはともに独身だ。]
+  - meaning_ko: 하나의
+  - example_ko: 그들은 모두 독신이다.
+- id: 11072 | level: N3 | [特徴 / とくちょう , 彼の性格の特徴は厚かましさだ。]
+  - meaning_ko: 형질)
+  - example_ko: 그의 성격의 특징은 두껍다.
+- id: 11077 | level: N3 | [特長 / とくちょう , 割と安いのもこの店の特長。]
+  - meaning_ko: 장점
+  - example_ko: 비교적 싼 것도 이 가게의 특징.
+- id: 11082 | level: N3 | [独特 / どくとく , 彼は独特の節回しで演説した。]
+  - meaning_ko: 특질
+  - example_ko: 그는 독특한 절회로 연설했다.
+- id: 11090 | level: N3 | [独立 / どくりつ , 彼等は独立の為に血を流した。]
+  - meaning_ko: 독립(예:
+  - example_ko: 그들은 독립을 위해 피를 흘렸다.
+- id: 11094 | level: N3 | [溶ける / とける , 氷が溶けると水になる。]
+  - meaning_ko: 녹다
+  - example_ko: 얼음이 녹으면 물이 된다.
+- id: 11100 | level: N3 | [解ける / とける , 氷は解けると水に戻る。]
+  - meaning_ko: 풀리다
+  - example_ko: 얼음은 풀리면 물로 돌아온다.
+- id: 11104 | level: N3 | [どこか / どこか , どこから来ましたか？]
+  - meaning_ko: 어딘가에
+  - example_ko: 어디에서 왔니?
+- id: 11110 | level: N3 | [ところが / ところが , 広島に口和というところがあります。]
+  - meaning_ko: 하지만
+  - example_ko: 히로시마에 구와라는 곳이 있습니다.
+- id: 11113 | level: N3 | [ところで / ところで , 郵便局はその通りを下ったところです。]
+  - meaning_ko: 그런데
+  - example_ko: 우체국은 그대로 내린 곳입니다.
+- id: 11119 | level: N3 | [登山 / とざん , 彼は登山になれている。]
+  - meaning_ko: 등산
+  - example_ko: 그는 등산이 되고 있다.
+- id: 11124 | level: N3 | [都市 / とし , 名古屋は城で有名な都市だ。]
+  - meaning_ko: 도시
+  - example_ko: 나고야는 성으로 유명한 도시다.
+- id: 11131 | level: N3 | [年月 / としつき , 年月が経った。]
+  - meaning_ko: 몇 달과 몇 년
+  - example_ko: 몇 년이 지났습니다.
+- id: 11135 | level: N3 | [図書 / としょ , 明日図書館でね。]
+  - meaning_ko: 서적
+  - example_ko: 내일 도서관에서.
+- id: 11140 | level: N3 | [年寄 / としより , お年寄りには親切にしなさい。]
+  - meaning_ko: 노인들
+  - example_ko: 노인에게 친절하게하십시오.
+- id: 11145 | level: N3 | [閉じる / とじる , その物語は彼の死で幕を閉じる。]
+  - meaning_ko: 닫다(예:
+  - example_ko: 그 이야기는 그의 죽음으로 막을 닫습니다.
+- id: 11150 | level: N3 | [途端 / とたん , 店を出た途端に先生に会った。]
+  - meaning_ko: 방금
+  - example_ko: 가게를 나온 순간 선생님을 만났다.
+- id: 11155 | level: N3 | [土地 / とち , 平らな土地には山も丘もない。]
+  - meaning_ko: 토지의 음모
+  - example_ko: 평평한 땅에는 산도 언덕도 없다.
+- id: 11159 | level: N3 | [突然 / とつぜん , 老人が突然私に話しかけた。]
+  - meaning_ko: 갑자기
+  - example_ko: 노인이 갑자기 나에게 말을 걸었다.
+- id: 11164 | level: N3 | [トップ / トップ , 彼女はクラスでトップです。]
+  - meaning_ko: 맨 위
+  - example_ko: 그녀는 수업에서 최고입니다.
+- id: 11169 | level: N3 | [届く / とどく , 目の届く限り水ばかりだ。]
+  - meaning_ko: 도달하다
+  - example_ko: 눈이 닿는 한 물만이다.
+- id: 11173 | level: N3 | [とにかく / とにかく , 彼女はとにかく外出したくなかった。]
+  - meaning_ko: 아무리 해도
+  - example_ko: 그녀는 어쨌든 외출하고 싶지 않았다.
+- id: 11181 | level: N3 | [飛ばす / とばす , 飛ばすぞ！]
+  - meaning_ko: 건너뛰다
+  - example_ko: 날아라!
+- id: 11184 | level: N3 | [飛び出す / とびだす , 待ちくたびれているか全速力で飛び出すかだ。]
+  - meaning_ko: 뛰어내리다
+  - example_ko: 기다리고 뭉개져 있는지 전속력으로 튀어나올까.
+- id: 11191 | level: N3 | [留める / とめる , 彼が言ったことなど気に留めるな。]
+  - meaning_ko: 고정하다
+  - example_ko: 그가 말한 것 등 신경쓰지 마.
+- id: 11195 | level: N3 | [泊める / とめる , 一晩彼を泊めることができる。]
+  - meaning_ko: 누군가를 머물게 하다 (over night) (v.t.)
+  - example_ko: 하룻밤 그를 묵을 수 있다.
+- id: 11198 | level: N3 | [友 / とも , 親友は何人いる？]
+  - meaning_ko: 친구
+  - example_ko: 가장 친한 친구는 몇 명입니까?
+- id: 11205 | level: N3 | [共に / ともに , 「風と共に去りぬ」を読む。]
+  - meaning_ko: 와 공유
+  - example_ko: "바람과 함께 떠나지 않는다"를 읽는다.
+- id: 11209 | level: N3 | [虎 / とら , 檻に入れられた虎は盛んに尾を振った。]
+  - meaning_ko: 호랑이
+  - example_ko: 새장에 들어간 호랑이는 활발하게 꼬리를 흔들었다.
+- id: 11213 | level: N3 | [ドライブ / ドライブ , 彼は彼女をドライブに連れ出した。]
+  - meaning_ko: 운전하다
+  - example_ko: 그는 그녀를 드라이브로 데려갔다.
+- id: 11217 | level: N3 | [トラック / トラック , 門はトラックには狭過ぎた。]
+  - meaning_ko: 트럭
+  - example_ko: 문은 트럭에 너무 좁았다.
+- id: 11226 | level: N3 | [ドラマ / ドラマ , 彼らはその小説をドラマ化した。]
+  - meaning_ko: 드라마
+  - example_ko: 그들은 그 소설을 드라마화했다.
+- id: 11231 | level: N3 | [トランプ / トランプ , 「トランプしたいなあ」「私も」]
+  - meaning_ko: 카드 놀이 (점등: 트럼프)
+  - example_ko: "트럼프하고 싶다" "나도"
+- id: 11236 | level: N3 | [取り上げる / とりあげる , 電話が鳴る。スーザンは受話器を取り上げる。]
+  - meaning_ko: 차지하다
+  - example_ko: 전화가 울린다. 수잔은 수화기를 다룬다.
+- id: 11241 | level: N3 | [努力 / どりょく , 長年の努力が烏有に帰した。]
+  - meaning_ko: 엄청난 노력
+  - example_ko: 오랜 노력이 우유로 돌아왔다.
+- id: 11244 | level: N3 | [トレーニング / トレーニング , 厳しいトレーニングに、彼は音を上げた。]
+  - meaning_ko: 훈련
+  - example_ko: 어려운 훈련에, 그는 소리를 올렸다.
+- id: 11249 | level: N3 | [ドレス / ドレス , 母は私に素敵なドレスを作ってくれた。]
+  - meaning_ko: 드레스
+  - example_ko: 어머니는 나에게 멋진 드레스를 만들어 주었다.
+- id: 11254 | level: N3 | [取れる / とれる , 彼は責任の取れるボスですよ。]
+  - meaning_ko: 벗어나다
+  - example_ko: 그는 책임을 질 수 있는 보스예요.
+- id: 11259 | level: N3 | [泥 / どろ , 柳の下の泥鰌。]
+  - meaning_ko: 진흙
+  - example_ko: 버드 나무 아래 진흙.
+- id: 11265 | level: N3 | [トン / トン , リレー用のバトンが１本足りないんです。]
+  - meaning_ko: 톤(1000파운드)
+  - example_ko: 릴레이용 배턴이 1개 부족합니다.
+- id: 11270 | level: N3 | [とんでもない / とんでもない , 彼は天才なんてとんでもない。]
+  - meaning_ko: 터무니없는
+  - example_ko: 그는 천재는 터무니 없다.
+- id: 11275 | level: N3 | [どんなに / どんなに , 10ヶ国語を話せたらどんなにかっこいいだろう！]
+  - meaning_ko: 어떻게
+  - example_ko: 10개국어를 할 수 있다면 아무리 멋지겠지!
+- id: 11280 | level: N3 | [トンネル / トンネル , 道路が紙の花のトンネルのようです。]
+  - meaning_ko: 터널
+  - example_ko: 도로가 종이 꽃 터널처럼 보입니다.
+- id: 11283 | level: N3 | [名 / な , あなたの名前は？]
+  - meaning_ko: 이름
+  - example_ko: 당신의 이름은?
+- id: 11288 | level: N3 | [内容 / ないよう , 話の焦点は内容に置かれている。]
+  - meaning_ko: 주제
+  - example_ko: 대화의 초점은 내용에 놓여 있다.
+- id: 11293 | level: N3 | [なお / なお , 彼女は無理なお願いをしている。]
+  - meaning_ko: 아직
+  - example_ko: 그녀는 무리한 부탁을 하고 있다.
+- id: 11297 | level: N3 | [仲 / なか , 仲間がすべて寝ていた。]
+  - meaning_ko: 관계
+  - example_ko: 동료가 모두 자고 있었다.
+- id: 11305 | level: N3 | [流す / ながす , 水に流す。]
+  - meaning_ko: 배수하다
+  - example_ko: 물에 흘린다.
+- id: 11309 | level: N3 | [半ば / なかば , 彼女は４０代半ばで再婚した。]
+  - meaning_ko: 가운데
+  - example_ko: 그녀는 40대 중반에 재혼했다.
+- id: 11314 | level: N3 | [仲間 / なかま , 仲間がすべて寝ていた。]
+  - meaning_ko: 회사
+  - example_ko: 동료가 모두 자고 있었다.
+- id: 11319 | level: N3 | [中身 / なかみ , 容器を見ずに中身を見よ。]
+  - meaning_ko: 내용물)
+  - example_ko: 용기를 보지 않고 내용을 보라.
+- id: 11322 | level: N3 | [中味 / なかみ , ]
+  - meaning_ko: 내용물
+- id: 11327 | level: N3 | [眺め / ながめ , 壮大な眺めですね。]
+  - meaning_ko: 장면
+  - example_ko: 장대한 전망입니다.
+- id: 11332 | level: N3 | [眺める / ながめる , 星を眺めるのは興味深い。]
+  - meaning_ko: 보기
+  - example_ko: 별을 바라 보는 것은 흥미 롭습니다.
+- id: 11339 | level: N3 | [流れ / ながれ , その瞳から一粒の涙が、流れ落ちた。]
+  - meaning_ko: 개울
+  - example_ko: 그 눈동자에서 한 알의 눈물이 흘러내렸다.
+- id: 11347 | level: N3 | [流れる / ながれる , 水は低きに流れる。]
+  - meaning_ko: 흐르다
+  - example_ko: 물은 낮게 흐른다.
+- id: 11351 | level: N3 | [亡くす / なくす , 「忙しい」と言う字は心を亡くすと書く。]
+  - meaning_ko: 누군가를 잃다
+  - example_ko: "바쁘다"는 글자는 마음을 잃는다고 쓴다.
+- id: 11354 | level: N3 | [殴る / なぐる , 痛い！由紀子！痛いよ。グーで殴るのはよせよ！]
+  - meaning_ko: 파업하다
+  - example_ko: 아프다! 유키코! 아파요. 구로 때리는 것은 좋지 않아!
+- id: 11359 | level: N3 | [無し / なし , 僕は彼女無しに生きる術を学んだ。]
+  - meaning_ko: 없이
+  - example_ko: 나는 그녀 없이 사는 술을 배웠다.
+- id: 11363 | level: N3 | [なぜなら / なぜなら , 私は山に登る、なぜならそれがそこにあるからだ。]
+  - meaning_ko: 왜냐하면
+  - example_ko: 나는 산에 올라간다, 왜냐하면 그것이 거기에 있기 때문이다.
+- id: 11368 | level: N3 | [謎 / なぞ , 彼女の失踪で謎が一段と面白くなった。]
+  - meaning_ko: 수수께끼
+  - example_ko: 그녀의 실종으로 수수께끼가 한층 더 재미있게 되었다.
+- id: 11373 | level: N3 | [納得 / なっとく , けい子と一朗が納得ずくで別れた。]
+  - meaning_ko: 동의
+  - example_ko: 케이코와 이치로가 납득없이 헤어졌다.
+- id: 11378 | level: N3 | [何か / なにか , 何かしてみましょう。]
+  - meaning_ko: 무엇
+  - example_ko: 뭔가 해보자.
+- id: 11382 | level: N3 | [なにも / なにも , 彼女はなにも言わなかった。]
+  - meaning_ko: 아무것도 아님
+  - example_ko: 그녀는 아무것도 말하지 않았다.
+- id: 11384 | level: N3 | [鍋 / なべ , この鍋物はえぐいよ。]
+  - meaning_ko: 소스 냄비
+  - example_ko: 이 냄비는 좋다.
+- id: 11390 | level: N3 | [怠ける / なまける , 彼は怠ける傾向がある。]
+  - meaning_ko: 한가하다
+  - example_ko: 그는 게으른 경향이 있다.
+- id: 11394 | level: N3 | [波 / なみ , 風の水の面が波だった。]
+  - meaning_ko: 파도
+  - example_ko: 바람의 물면이 파도였다.
+- id: 11400 | level: N3 | [涙 / なみだ , 涙にむせんで何も言えなかった。]
+  - meaning_ko: 눈물
+  - example_ko: 눈물을 흘리며 아무 말도 할 수 없었다.
+- id: 11406 | level: N3 | [悩む / なやむ , そのことで悩むな。]
+  - meaning_ko: 괴로워하다
+  - example_ko: 그걸로 고민하지 마라.
+- id: 11416 | level: N3 | [鳴らす / ならす , 彼らは８時にそのベルを鳴らす。]
+  - meaning_ko: 울리다
+  - example_ko: 그들은 8시에 그 벨을 울린다.
+- id: 11421 | level: N3 | [生る / なる , ]
+  - meaning_ko: 열매를 맺다
+- id: 11424 | level: N3 | [馴れる / なれる , ]
+  - meaning_ko: 길들여지다
+- id: 11429 | level: N3 | [縄 / なわ , 彼は縄で木に縛り付けられた。]
+  - meaning_ko: 로프
+  - example_ko: 그는 줄로 나무에 묶여 있었다.
+- id: 11435 | level: N3 | [何で / なんで , 何でこんなに遅くまで起きてるの？]
+  - meaning_ko: 왜
+  - example_ko: 왜 이렇게 늦게까지 일어나고 있는 거야?
+- id: 11439 | level: N3 | [何でも / なんでも , 欲しいものは何でもあげるよ。]
+  - meaning_ko: 꼭
+  - example_ko: 원하는 것은 무엇이든 줄 것입니다.
+- id: 11445 | level: N3 | [何とか / なんとか , 彼女は何とかわいらしい少女でしょう。]
+  - meaning_ko: 어떻게든
+  - example_ko: 그녀는 어쩌면 예쁜 소녀일 것이다.
+- id: 11457 | level: N3 | [似合う / にあう , 本当によく似合う。]
+  - meaning_ko: (사람에게) 어울리다
+  - example_ko: 정말 잘 어울린다.
+- id: 11461 | level: N3 | [煮える / にえる , タマネギはジャガイモよりはやく煮える。]
+  - meaning_ko: 끓이다
+  - example_ko: 양파는 감자보다 빨리 끓인다.
+- id: 11469 | level: N3 | [苦手 / にがて , カキコ苦手なんです。]
+  - meaning_ko: 가난한 (에)
+  - example_ko: 굴 싫어요.
+- id: 11474 | level: N3 | [握る / にぎる , それは、手に汗握る試合だった。]
+  - meaning_ko: 파악하다
+  - example_ko: 그것은 손에 땀 잡는 경기였다.
+- id: 11478 | level: N3 | [日 / にち , お誕生日おめでとうムーリエル！]
+  - meaning_ko: 낮
+  - example_ko: 생일 축하 무리엘!
+- id: 11482 | level: N3 | [日常 / にちじょう , 彼女は日常生活から逃げ出したかった。]
+  - meaning_ko: 평범한
+  - example_ko: 그녀는 일상 생활에서 도망치고 싶었다.
+- id: 11484 | level: N3 | [日光 / にっこう , 彼は日光を全身に浴びた。]
+  - meaning_ko: 햇빛
+  - example_ko: 그는 햇빛을 전신에 받았다.
+- id: 11486 | level: N3 | [日中 / にっちゅう , 私は一日中出掛けていた。]
+  - meaning_ko: 낮
+  - example_ko: 하루 종일 외출했다.
+- id: 11492 | level: N3 | [にっこり / にっこり , 彼女は母親を見てにっこりと笑った。]
+  - meaning_ko: 상냥하게 웃다
+  - example_ko: 그녀는 어머니를 보면서 웃고 있었다.
+- id: 11497 | level: N3 | [日本 / にっぽん , 私は日本語が話せない。]
+  - meaning_ko: 일본
+  - example_ko: 나는 일본어를 말할 수 없다.
+- id: 11509 | level: N3 | [入場 / にゅうじょう , 用事以外は入場お断り。]
+  - meaning_ko: 입구
+  - example_ko: 용사 이외는 입장 거절.
+- id: 11512 | level: N3 | [煮る / にる , くたくたに煮る。]
+  - meaning_ko: 끓이다
+  - example_ko: 쿠타쿠타에 끓인다.
+- id: 11517 | level: N3 | [人気 / にんき , ほんのちょいやくで人気があるのはすごい！]
+  - meaning_ko: 인기
+  - example_ko: 아주 조금 인기가 있는 것은 대단하다!
+- id: 11522 | level: N3 | [人間 / にんげん , 人間は決して永遠には生きられないものだ。]
+  - meaning_ko: 인간
+  - example_ko: 인간은 결코 영원히 살 수 없는 것이다.
+- id: 11532 | level: N3 | [抜く / ぬく , 神経を抜く必要があります。]
+  - meaning_ko: 추출하다
+  - example_ko: 신경을 뽑아야합니다.
+- id: 11534 | level: N3 | [抜ける / ぬける , 森を抜ける小道があります。]
+  - meaning_ko: 나오다
+  - example_ko: 숲을 빠져나가는 길이 있습니다.
+- id: 11539 | level: N3 | [布 / ぬの , 財布をなくしたの。]
+  - meaning_ko: 옷감
+  - example_ko: 지갑을 잃었어.
+- id: 11547 | level: N3 | [濡らす / ぬらす , 携帯を濡らすなよ。]
+  - meaning_ko: 젖다
+  - example_ko: 휴대폰을 적시지 마라.
+- id: 11551 | level: N3 | [根 / ね , 実も結ぶが、挿し木でも根付くらしい？]
+  - meaning_ko: 뿌리
+  - example_ko: 열매도 묶지만, 꽂아도 뿌리 붙는 것 같다?
+- id: 11555 | level: N3 | [値 / ね , 値段が高すぎる！]
+  - meaning_ko: 값
+  - example_ko: 가격이 너무 높다!
+- id: 11561 | level: N3 | [願い / ねがい , 勘定お願いします。]
+  - meaning_ko: 욕구
+  - example_ko: 계정 부탁드립니다.
+- id: 11566 | level: N3 | [願う / ねがう , 私達は平和を願う。]
+  - meaning_ko: 욕망하다
+  - example_ko: 우리는 평화를 바란다.
+- id: 11571 | level: N3 | [鼠 / ねずみ , 犯人は袋の中の鼠だ。]
+  - meaning_ko: 생쥐
+  - example_ko: 범인은 가방 안의 사타구니다.
+- id: 11576 | level: N3 | [熱帯 / ねったい , 彼は熱帯魚を飼っている。]
+  - meaning_ko: 열대
+  - example_ko: 그는 열대어를 기르고 있습니다.
+- id: 11581 | level: N3 | [熱中 / ねっちゅう , 彼女は勉学に熱中している。]
+  - meaning_ko: 열광
+  - example_ko: 그녀는 공부에 열중하고 있다.
+- id: 11583 | level: N3 | [年間 / ねんかん , 彼は７年間、合気道をやっていた。]
+  - meaning_ko: 년도
+  - example_ko: 그는 7년간 합기도를 하고 있었다.
+- id: 11591 | level: N3 | [年中 / ねんじゅう , 彼は年中喫煙をしている。]
+  - meaning_ko: 일년 내내
+  - example_ko: 그는 연중 흡연을 하고 있다.
+- id: 11602 | level: N3 | [年代 / ねんだい , 彼女は１９５０年代の生まれです。]
+  - meaning_ko: 나이
+  - example_ko: 그녀는 1950년대의 태생입니다.
+- id: 11607 | level: N3 | [年齢 / ねんれい , 来年私はあなたの３倍の年齢になる。]
+  - meaning_ko: 나이
+  - example_ko: 내년에 나는 당신의 세 배 나이가 될 것입니다.
+- id: 11612 | level: N3 | [野 / の , 野菜を食べたら？]
+  - meaning_ko: 필드
+  - example_ko: 야채를 먹으면?
+- id: 11616 | level: N3 | [能 / のう , でも可能性は低そうだね。]
+  - meaning_ko: 능숙하다
+  - example_ko: 하지만 가능성은 낮을 것 같네요.
+- id: 11620 | level: N3 | [農家 / のうか , 彼は人里離れた農家に住んでいる。]
+  - meaning_ko: 농장주
+  - example_ko: 그는 한적한 농가에 살고 있다.
+- id: 11624 | level: N3 | [農業 / のうぎょう , 彼は農業大学へ行きました。]
+  - meaning_ko: 농업
+  - example_ko: 그는 농업 대학에 갔다.
+- id: 11629 | level: N3 | [農民 / のうみん , 農民は作物を作る。]
+  - meaning_ko: 농부
+  - example_ko: 농민은 작물을 만든다.
+- id: 11635 | level: N3 | [能力 / のうりょく , 話すことは人間の能力の一つである。]
+  - meaning_ko: 능력
+  - example_ko: 말하는 것은 인간의 능력 중 하나입니다.
+- id: 11640 | level: N3 | [ノー / ノー , 今のはノーカンだからね。]
+  - meaning_ko: 아니요
+  - example_ko: 지금은 노칸이니까요.
+- id: 11644 | level: N3 | [軒 / のき , 彼女は鳥かごを軒からつるした。]
+  - meaning_ko: 처마
+  - example_ko: 그녀는 새장을 처마에서 매달았다.
+- id: 11652 | level: N3 | [残す / のこす , やり残すことがないように頑張るぞ。]
+  - meaning_ko: (뒤에) 떠나다
+  - example_ko: 할 일이 없도록 최선을 다할 것입니다.
+- id: 11657 | level: N3 | [残り / のこり , 彼女の３台の車は１台が青で残りは白だ。]
+  - meaning_ko: 남은
+  - example_ko: 그녀의 3대의 차는 1대가 파랗고 나머지는 흰색이다.
+- id: 11663 | level: N3 | [乗せる / のせる , バスは乗客を乗せるために止まった。]
+  - meaning_ko: (무엇)에 놓다
+  - example_ko: 버스는 승객을 태우기 위해 멈췄다.
+- id: 11668 | level: N3 | [載せる / のせる , この荷物をトラックに載せるの手伝って。]
+  - meaning_ko: (무엇)에 놓다
+  - example_ko: 이 짐을 트럭에 올리는 데 도움이.
+- id: 11674 | level: N3 | [覗く / のぞく , 雲の切れ間から覗く星が、ひときわ美しく見えた。]
+  - meaning_ko: 엿보다
+  - example_ko: 구름 틈 사이에서 들여다보는 별이 한층 아름답게 보였다.
+- id: 11679 | level: N3 | [除く / のぞく , 急所を除くすべての攻撃を認める。]
+  - meaning_ko: 제거하다
+  - example_ko: 급소를 제외한 모든 공격을 인정한다.
+- id: 11684 | level: N3 | [望み / のぞみ , 望みのものを言ってください。]
+  - meaning_ko: 소망
+  - example_ko: 원하는 것을 말해주세요.
+- id: 11689 | level: N3 | [望む / のぞむ , 望むべきことは何もない。]
+  - meaning_ko: 욕망하다
+  - example_ko: 원하는 것은 아무것도 없다.
+- id: 11699 | level: N3 | [ノック / ノック , 母親がドアをノックした。]
+  - meaning_ko: 노크
+  - example_ko: 어머니가 문을 두드렸다.
+- id: 11704 | level: N3 | [伸ばす / のばす , 売り上げを伸ばすために懸命に働いた。]
+  - meaning_ko: 연장하다
+  - example_ko: 판매를 늘리기 위해 열심히 일했습니다.
+- id: 11708 | level: N3 | [延ばす / のばす , 彼は出発を延ばすことにした。]
+  - meaning_ko: 연장하다
+  - example_ko: 그는 출발을 연장하기로 결정했다.
+- id: 11712 | level: N3 | [伸びる / のびる , 夏には草がよく伸びる。]
+  - meaning_ko: 연장하다
+  - example_ko: 여름에는 잔디가 잘 자랍니다.
+- id: 11720 | level: N3 | [延びる / のびる , 全ての生き物は、生き延びるための本能的衝動を持っている。]
+  - meaning_ko: 연장하다
+  - example_ko: 모든 생물은 살아남기 위한 본능적인 충동을 가지고 있다.
+- id: 11725 | level: N3 | [述べる / のべる , 彼は二言三言述べると行ってしまった。]
+  - meaning_ko: 진술하다
+  - example_ko: 그는 두 말 삼말을 말하러 갔다.
+- id: 11730 | level: N3 | [上る / のぼる , 月は東から上る。]
+  - meaning_ko: 상승하다
+  - example_ko: 달은 동쪽에서 올라간다.
+- id: 11735 | level: N3 | [昇る / のぼる , 太陽は常に東から昇る。]
+  - meaning_ko: 일어나다
+  - example_ko: 태양은 항상 동쪽에서 떠오른다.
+- id: 11740 | level: N3 | [載る / のる , 選挙の結果は夕刊に載るでしょう。]
+  - meaning_ko: (인쇄물에) 나타나다
+  - example_ko: 선거 결과는 석간에 실릴 것이다.
+- id: 11745 | level: N3 | [のんびり / のんびり , 日曜日はのんびりしています。]
+  - meaning_ko: 평온한
+  - example_ko: 일요일은 한가롭습니다.
+- id: 11750 | level: N3 | [場 / ば , 最悪の場合を考えておこう。]
+  - meaning_ko: 장소
+  - example_ko: 최악의 경우를 생각해 봅시다.
+- id: 11755 | level: N3 | [はあ (かん) / はあ (かん) , ]
+  - meaning_ko: (한숨을 쉬다)
+- id: 11759 | level: N3 | [パーセント / パーセント , 米の値段が３パーセント上がった。]
+  - meaning_ko: 퍼센트
+  - example_ko: 쌀 가격이 3% 올랐다.
+- id: 11764 | level: N3 | [灰 / はい , 酸性土を灰で中和する。]
+  - meaning_ko: 금연 건강 증진 협회
+  - example_ko: 산성 토양을 재로 중화한다.
+- id: 11774 | level: N3 | [バイオリン / バイオリン , 彼女は大変上手にバイオリンを弾く。]
+  - meaning_ko: 바이올린
+  - example_ko: 그녀는 매우 잘 바이올린을 연주합니다.
+- id: 11779 | level: N3 | [ハイキング / ハイキング , 彼は病気のためにハイキングに行けなかった。]
+  - meaning_ko: 하이킹
+  - example_ko: 그는 질병 때문에 하이킹에 갈 수 없었다.
+- id: 11782 | level: N3 | [配達 / はいたつ , 郵便配達人は一軒づつ郵便を配る。]
+  - meaning_ko: 배달
+  - example_ko: 우편 배달인은 한 채씩 우편을 배부한다.
+- id: 11784 | level: N3 | [パイプ / パイプ , 彼はパイプをくわえて話した。]
+  - meaning_ko: 파이프
+  - example_ko: 그는 파이프를 통해 말했다.
+- id: 11789 | level: N3 | [俳優 / はいゆう , 彼らは俳優です。]
+  - meaning_ko: 배우
+  - example_ko: 그들은 배우입니다.
+- id: 11794 | level: N3 | [パイロット / パイロット , 彼女の息子はジェット機のパイロットです。]
+  - meaning_ko: 조종사
+  - example_ko: 그녀의 아들은 제트기의 조종사입니다.
+- id: 11802 | level: N3 | [生える / はえる , 植物が生える。]
+  - meaning_ko: 성장하다
+  - example_ko: 식물이 자랍니다.
+- id: 11805 | level: N3 | [墓 / はか , 彼を墓に埋めた。]
+  - meaning_ko: 무덤
+  - example_ko: 그를 무덤에 묻었다.
+- id: 11813 | level: N3 | [馬鹿 / ばか , 馬鹿みたい！]
+  - meaning_ko: 바보
+  - example_ko: 바보같아!
+- id: 11818 | level: N3 | [博士 / はかせ , 彼女は博士号を取得した。]
+  - meaning_ko: 박사호
+  - example_ko: 그녀는 박사 학위를 받았다.
+- id: 11823 | level: N3 | [計る / はかる , 事を計るは人、事を成すは神。]
+  - meaning_ko: 측정하다
+  - example_ko: 일을 세는 사람, 일을 이루는 하나님.
+- id: 11827 | level: N3 | [量る / はかる , 今日から毎日体重量ることにした。]
+  - meaning_ko: 측정하다
+  - example_ko: 오늘부터 매일 몸무게하기로 했다.
+- id: 11832 | level: N3 | [測る / はかる , 馬の斤量を測る。]
+  - meaning_ko: 측정하다
+  - example_ko: 말의 양을 측정한다.
+- id: 11837 | level: N3 | [掃く / はく , 台所をきれいに掃くのを忘れないように。]
+  - meaning_ko: 쓸어버리다
+  - example_ko: 부엌을 깨끗하게 닦는 것을 잊지 않도록.
+- id: 11843 | level: N3 | [吐く / はく , 時には弱音を吐くけど。]
+  - meaning_ko: 토하다
+  - example_ko: 때로는 약음을 토한다.
+- id: 11848 | level: N3 | [拍手 / はくしゅ , 彼は拍手かっさいを受けた。]
+  - meaning_ko: 박수를 치다
+  - example_ko: 그는 박수를 받았다.
+- id: 11851 | level: N3 | [莫大 / ばくだい , 彼は莫大な財産を所有している。]
+  - meaning_ko: 막대한
+  - example_ko: 그는 엄청난 재산을 소유하고 있습니다.
+- id: 11858 | level: N3 | [爆発 / ばくはつ , その瞬間、大音響とともに爆発した。]
+  - meaning_ko: 폭발
+  - example_ko: 그 순간 대음향과 함께 폭발했다.
+- id: 11863 | level: N3 | [博物館 / はくぶつかん , 彼は博物館へ行く道を私に聞いた。]
+  - meaning_ko: 박물관
+  - example_ko: 그는 박물관에 가는 길을 들었다.
+- id: 11867 | level: N3 | [激しい / はげしい , 本当に好き嫌いが激しいんだから。]
+  - meaning_ko: 폭력적인
+  - example_ko: 정말 좋아하고 싫어하는 것이 격렬하니까.
+- id: 11873 | level: N3 | [はさみ / はさみ , 私は紙をはさみで切った。]
+  - meaning_ko: 가위
+  - example_ko: 나는 종이를 가위로 자른다.
+- id: 11879 | level: N3 | [破産 / はさん , 彼は破産している。]
+  - meaning_ko: (개인) 파산
+  - example_ko: 그는 파산했다.
+- id: 11884 | level: N3 | [端 / はし , 両極端は一致する。]
+  - meaning_ko: 끝(예:
+  - example_ko: 양극단은 일치한다.
+- id: 11886 | level: N3 | [始まり / はじまり , 歴史の授業は９時に始まります。]
+  - meaning_ko: 기원
+  - example_ko: 역사 수업은 9시에 시작됩니다.
+- id: 11887 | level: N3 | [パス / パス , パスワードは「Muiriel」です。]
+  - meaning_ko: 길
+  - example_ko: 암호는 "Muiriel"입니다.
+- id: 11891 | level: N3 | [外す / はずす , 誰にも口外するな。]
+  - meaning_ko: 풀다
+  - example_ko: 누구에게도 구외하지 마라.
+- id: 11897 | level: N3 | [パスポート / パスポート , 彼はパスポートを取り出した。]
+  - meaning_ko: 여권
+  - example_ko: 그는 여권을 꺼냈다.
+- id: 11905 | level: N3 | [外れる / はずれる , 私、時々顎が外れるのよ。]
+  - meaning_ko: 연결이 끊어지다
+  - example_ko: 나, 가끔 턱이 벗겨져.
+- id: 11912 | level: N3 | [旗 / はた , 敵の旗艦を撃破しました！]
+  - meaning_ko: 깃발
+  - example_ko: 적의 기함을 격파했습니다!
+- id: 11917 | level: N3 | [肌 / はだ , 彼女は肌を太陽にさらさなかった。]
+  - meaning_ko: 피부
+  - example_ko: 그녀는 피부를 태양에 노출시키지 않았다.
+- id: 11922 | level: N3 | [裸 / はだか , 労働者たちは腰まで裸だった。]
+  - meaning_ko: 적나라한
+  - example_ko: 노동자들은 허리까지 알몸이었다.
+- id: 11927 | level: N3 | [畑 / はたけ , 彼は教育畑で育った。]
+  - meaning_ko: 필드
+  - example_ko: 그는 교육밭에서 자랐다.
+- id: 11932 | level: N3 | [働き / はたらき , 日曜日でも、働きます。]
+  - meaning_ko: 일하다
+  - example_ko: 일요일에도 일합니다.
+- id: 11937 | level: N3 | [バッグ / バッグ , 戻ってハンドバッグを取ってくるわ。]
+  - meaning_ko: 가방
+  - example_ko: 돌아와 핸드백을 가져올거야.
+- id: 11941 | level: N3 | [発見 / はっけん , 彼女は連続して医学的発見をした。]
+  - meaning_ko: 발견
+  - example_ko: 그녀는 연속적으로 의학적 발견을 했다.
+- id: 11948 | level: N3 | [発行 / はっこう , 彼女は再発行を申し出た。]
+  - meaning_ko: 이슈(출판물)
+  - example_ko: 그녀는 재발행을 제안했다.
+- id: 11955 | level: N3 | [発車 / はっしゃ , 列車は五時ちょうどに発車した。]
+  - meaning_ko: 차량 출발
+  - example_ko: 기차는 5시에 다만 출발했다.
+- id: 11957 | level: N3 | [発射 / はっしゃ , 彼らはロケットを発射した。]
+  - meaning_ko: 발사
+  - example_ko: 그들은 로켓을 발사했다.
+- id: 11962 | level: N3 | [罰する / ばっする , 罪に比例して罰するべきだ。]
+  - meaning_ko: 처벌하다
+  - example_ko: 죄에 비례하여 벌해야 한다.
+- id: 11967 | level: N3 | [発達 / はったつ , 彼の精神発達は遅かった。]
+  - meaning_ko: 개발
+  - example_ko: 그의 정신 발달은 늦었다.
+- id: 11973 | level: N3 | [ばったり / ばったり , 彼は横にばったり倒れた。]
+  - meaning_ko: (만나다) 우연히
+  - example_ko: 그는 옆으로 쓰러졌다.
+- id: 11980 | level: N3 | [発展 / はってん , 貿易は諸国の発展を促進する。]
+  - meaning_ko: 개발
+  - example_ko: 무역은 국가의 발전을 촉진한다.
+- id: 11985 | level: N3 | [発表 / はっぴょう , 嵐が接近していると発表された。]
+  - meaning_ko: 발표
+  - example_ko: 폭풍이 접근하고 있다고 발표되었다.
+- id: 11990 | level: N3 | [発明 / はつめい , 僕は若いとき、発明家になりたかった。]
+  - meaning_ko: 발명
+  - example_ko: 나는 어렸을 때 발명가가 되고 싶었다.
+- id: 11995 | level: N3 | [派手 / はで , 君はいつも派手なネクタイをしている。]
+  - meaning_ko: 화려한
+  - example_ko: 넌 항상 화려한 넥타이를 하고 있다.
+- id: 12000 | level: N3 | [話し合う / はなしあう , 話し合う問題のリストを作って下さい。]
+  - meaning_ko: 토론하다
+  - example_ko: 토론하는 문제의 목록을 만드십시오.
+- id: 12004 | level: N3 | [離す / はなす , 手を離すなよ。]
+  - meaning_ko: 헤어지다
+  - example_ko: 손을 놓지 마라.
+- id: 12008 | level: N3 | [放す / はなす , 彼は自分の家を手放すことにした。]
+  - meaning_ko: 분리하다
+  - example_ko: 그는 자신의 집을 놓기로 결정했다.
+- id: 12012 | level: N3 | [離れる / はなれる , 彼は４月に日本を離れる。]
+  - meaning_ko: (무엇
+  - example_ko: 그는 4월에 일본을 떠난다.
+- id: 12017 | level: N3 | [放れる / はなれる , ]
+  - meaning_ko: 떠나다
+- id: 12022 | level: N3 | [羽 / はね , 鷲が一羽空高く飛んでいた。]
+  - meaning_ko: 비행
+  - example_ko: 독수리가 한 날 하늘 높이 날고 있었다.
+- id: 12027 | level: N3 | [羽根 / はね , 羽根突きって、したことある？]
+  - meaning_ko: 깃털
+  - example_ko: 날개 찌르고, 한 적이 있니?
+- id: 12031 | level: N3 | [幅 / はば , 幅はどれくらいですか。]
+  - meaning_ko: 너비
+  - example_ko: 너비는 얼마입니까?
+- id: 12037 | level: N3 | [母親 / ははおや , 娘は母親に同行して欲しいと頼んだ。]
+  - meaning_ko: 어머니
+  - example_ko: 딸은 어머니에게 동행해 달라고 부탁했다.
+- id: 12042 | level: N3 | [省く / はぶく , この２行は省くべきだ。]
+  - meaning_ko: 생략하다
+  - example_ko: 이 두 줄은 생략해야합니다.
+- id: 12047 | level: N3 | [場面 / ばめん , 彼はその場面を見て驚いた。]
+  - meaning_ko: 장면
+  - example_ko: 그는 그 장면을 보고 놀랐다.
+- id: 12054 | level: N3 | [流行る / はやる , ]
+  - meaning_ko: 인기를 끌다
+- id: 12058 | level: N3 | [腹 / はら , 彼は腹が据わっている。]
+  - meaning_ko: 복부
+  - example_ko: 그는 배가 고프다.
+- id: 12062 | level: N3 | [原 / はら , toのつかない不定詞を原形不定詞と言う。]
+  - meaning_ko: 필드
+  - example_ko: to가 붙지 않는 부정사를 원형 부정사라고 한다.
+- id: 12067 | level: N3 | [バランス / バランス , 彼はバランスを失って自転車から落ちた。]
+  - meaning_ko: 균형
+  - example_ko: 그는 균형을 잃고 자전거에서 떨어졌다.
+- id: 12072 | level: N3 | [針 / はり , 母は針仕事で忙しかった。]
+  - meaning_ko: 바늘
+  - example_ko: 어머니는 바늘 일로 바빴다.
+- id: 12077 | level: N3 | [範囲 / はんい , 彼は勢力範囲を広げようとした。]
+  - meaning_ko: 정도
+  - example_ko: 그는 세력 범위를 넓히려고 했다.
+- id: 12084 | level: N3 | [反抗 / はんこう , 彼は激しく逮捕に反抗した。]
+  - meaning_ko: 반대
+  - example_ko: 그는 격렬하게 체포에 반항했다.
+- id: 12088 | level: N3 | [犯罪 / はんざい , 暴力犯罪は郊外にも広がった。]
+  - meaning_ko: 범죄
+  - example_ko: 폭력범죄는 교외에도 퍼졌다.
+- id: 12093 | level: N3 | [ハンサム / ハンサム , 父はハンサムなのを自慢している。]
+  - meaning_ko: 멋있는
+  - example_ko: 아버지는 잘생긴 것을 자랑한다.
+- id: 12097 | level: N3 | [反省 / はんせい , 彼は自分自身の考えを反省した。]
+  - meaning_ko: 반사
+  - example_ko: 그는 자신의 생각을 반성했다.
+- id: 12102 | level: N3 | [判断 / はんだん , 冷静な判断を必要とする状況である。]
+  - meaning_ko: 심판
+  - example_ko: 냉정한 판단을 필요로 하는 상황이다.
+- id: 12107 | level: N3 | [犯人 / はんにん , 彼らは惨めな犯人に同情した。]
+  - meaning_ko: 범죄자
+  - example_ko: 그들은 비참한 범인에 동정했다.
+- id: 12111 | level: N3 | [販売 / はんばい , 彼の仕事は販売の促進です。]
+  - meaning_ko: 판매
+  - example_ko: 그의 일은 판매 촉진입니다.
+- id: 12116 | level: N3 | [灯 / ひ , ハリーは本当に蛍光灯だね。]
+  - meaning_ko: 빛
+  - example_ko: 해리는 정말 형광등이군요.
+- id: 12120 | level: N3 | [ビール / ビール , 冷たいビールが飲みたいなあ！]
+  - meaning_ko: 맥주
+  - example_ko: 차가운 맥주를 마시고 싶다!
+- id: 12127 | level: N3 | [被害 / ひがい , 嵐の被害は何もなかった。]
+  - meaning_ko: 손상
+  - example_ko: 폭풍 피해는 아무것도 없었다.
+- id: 12132 | level: N3 | [比較 / ひかく , 訳文を原文と比較しなさい。]
+  - meaning_ko: 비교
+  - example_ko: 번역을 원본과 비교하십시오.
+- id: 12138 | level: N3 | [ピクニック / ピクニック , 明日ピクニックに行くつもりだ。]
+  - meaning_ko: 피크닉
+  - example_ko: 내일 피크닉에 갈 생각이다.
+- id: 12142 | level: N3 | [悲劇 / ひげき , 悲劇が町を襲った。]
+  - meaning_ko: 비극
+  - example_ko: 비극이 마을을 덮쳤다.
+- id: 12147 | level: N3 | [飛行 / ひこう , 両親を飛行機事故でなくしたのだった。]
+  - meaning_ko: 비행
+  - example_ko: 부모님을 비행기 사고가 아니었던 것이었다.
+- id: 12152 | level: N3 | [膝 / ひざ , 膝を曲げて、前を見て。]
+  - meaning_ko: 무릎
+  - example_ko: 무릎을 구부리고 앞을 봐.
+- id: 12157 | level: N3 | [非常 / ひじょう , 夏は、当地は非常に暑いです。]
+  - meaning_ko: 비상
+  - example_ko: 여름은이 지역이 매우 덥습니다.
+- id: 12162 | level: N3 | [美人 / びじん , 美人店員は手袋を袋に包みながら尋ねた。]
+  - meaning_ko: 아름다운 사람(여자)
+  - example_ko: 미인 점원은 장갑을 봉투에 감싸면서 물었다.
+- id: 12172 | level: N3 | [日付 / ひづけ , 彼女は日付を数字で書いた。]
+  - meaning_ko: 날짜
+  - example_ko: 그녀는 날짜를 숫자로 썼다.
+- id: 12179 | level: N3 | [引越し / ひっこし , 引越しの時、粗大のごみをたくさん出した。]
+  - meaning_ko: 움직이는
+  - example_ko: 이사 때 조대 쓰레기를 많이 냈다.
+- id: 12182 | level: N3 | [必死 / ひっし , 非常に怖くなって彼は必死に逃げた。]
+  - meaning_ko: 절망
+  - example_ko: 매우 무서워서 그는 필사적으로 도망쳤다.
+- id: 12186 | level: N3 | [ぴったり / ぴったり , 服がぴったり合っていた。]
+  - meaning_ko: 정확히
+  - example_ko: 옷이 딱 맞고 있었다.
+- id: 12194 | level: N3 | [引っ張る / ひっぱる , 引っ張るぞ。]
+  - meaning_ko: 당기다
+  - example_ko: 당길거야.
+- id: 12198 | level: N3 | [否定 / ひてい , 欲望は需要を否定する。]
+  - meaning_ko: 부정
+  - example_ko: 욕망은 수요를 부인한다.
+- id: 12202 | level: N3 | [ビデオ / ビデオ , 彼はビデオを持っています。]
+  - meaning_ko: 비디오테이프
+  - example_ko: 그는 비디오를 가지고 있습니다.
+- id: 12206 | level: N3 | [一言 / ひとこと , 彼女は一言も発せられなかった。]
+  - meaning_ko: 한 단어
+  - example_ko: 그녀는 한마디도 낼 수 없었다.
+- id: 12212 | level: N3 | [人込み / ひとごみ , 人込みを体を横にして抜けた。]
+  - meaning_ko: 사람들의 군중
+  - example_ko: 인입을 몸을 옆으로 빠졌다.
+- id: 12216 | level: N3 | [等しい / ひとしい , 彼の英語力は私のそれと等しい。]
+  - meaning_ko: 동일한
+  - example_ko: 그의 영어 능력은 나의 그것과 동등하다.
+- id: 12219 | level: N3 | [独り / ひとり , 彼女は独りで映画を見に行った。]
+  - meaning_ko: 홀로
+  - example_ko: 그녀는 혼자서 영화를 보러 갔다.
+- id: 12224 | level: N3 | [一人一人 / ひとりひとり , 選手一人一人が最善を尽くした。]
+  - meaning_ko: 하나씩
+  - example_ko: 선수 한사람 한사람이 최선을 다했다.
+- id: 12229 | level: N3 | [批判 / ひはん , 私を批判するのは止めて！]
+  - meaning_ko: 비판
+  - example_ko: 나를 비판하지 마라!
+- id: 12234 | level: N3 | [批評 / ひひょう , 批評にそんなに神経質になるな。]
+  - meaning_ko: 비판
+  - example_ko: 비평에 그렇게 신경질이 되지 말아라.
+- id: 12239 | level: N3 | [秘密 / ひみつ , 私は秘密を漏らしたりしません。]
+  - meaning_ko: 비밀
+  - example_ko: 나는 비밀을 누설하지 않습니다.
+- id: 12242 | level: N3 | [微妙 / びみょう , 非常に微妙な状況だった。]
+  - meaning_ko: 연약한
+  - example_ko: 매우 미묘한 상황이었다.
+- id: 12247 | level: N3 | [紐 / ひも , 彼女は洗濯物を紐にかけた。]
+  - meaning_ko: 끈
+  - example_ko: 그녀는 세탁물을 끈에 걸었다.
+- id: 12251 | level: N3 | [冷やす / ひやす , リンゴは冷やすと甘みが増します。]
+  - meaning_ko: 식히다
+  - example_ko: 사과는 식히면 단맛이 증가합니다.
+- id: 12255 | level: N3 | [費用 / ひよう , 費用を全部一緒にしよう。]
+  - meaning_ko: 비용
+  - example_ko: 비용을 전부 함께 하자.
+- id: 12263 | level: N3 | [表 / ひょう , 沈黙は同意を表す。]
+  - meaning_ko: 테이블(예:
+  - example_ko: 침묵은 동의를 나타낸다.
+- id: 12266 | level: N3 | [秒 / びょう , 陣痛が約４５秒続きます。]
+  - meaning_ko: 초(60분)
+  - example_ko: 진통이 약 45초 계속됩니다.
+- id: 12270 | level: N3 | [評価 / ひょうか , 母はその作家を高く評価している。]
+  - meaning_ko: 평가
+  - example_ko: 어머니는 그 작가를 높이 평가하고 있다.
+- id: 12277 | level: N3 | [表現 / ひょうげん , 理想は言葉によって表現される。]
+  - meaning_ko: 표현
+  - example_ko: 이상은 기간에 의해 표현된다.
+- id: 12283 | level: N3 | [表情 / ひょうじょう , 表情が明るくなった。]
+  - meaning_ko: 표정
+  - example_ko: 표정이 밝아졌다.
+- id: 12285 | level: N3 | [平等 / びょうどう , 平等は憲法で守られている。]
+  - meaning_ko: 평등
+  - example_ko: 평등은 헌법으로 지켜진다.
+- id: 12289 | level: N3 | [評判 / ひょうばん , 評判どおりに振る舞う。]
+  - meaning_ko: 명성
+  - example_ko: 평판대로 행동한다.
+- id: 12295 | level: N3 | [表面 / ひょうめん , 表面的な理由がいくつかある。]
+  - meaning_ko: 표면
+  - example_ko: 표면적인 이유가 몇 가지 있다.
+- id: 12301 | level: N3 | [広がる / ひろがる , 火はあなたの足より速く広がることがある。]
+  - meaning_ko: (밖으로) 퍼지다
+  - example_ko: 불은 당신의 다리보다 빨리 퍼질 수 있습니다.
+- id: 12307 | level: N3 | [広げる / ひろげる , よい映画は人の視野を広げる。]
+  - meaning_ko: 퍼지다
+  - example_ko: 좋은 영화는 남자의 시각을 넓힌다.
+- id: 12312 | level: N3 | [広める / ひろめる , 旅行は人の視野を広める。]
+  - meaning_ko: 넓히다
+  - example_ko: 여행은 사람의 시각을 전파한다.
+- id: 12317 | level: N3 | [瓶 / びん , 瓶は粉々に割れた。]
+  - meaning_ko: 병
+  - example_ko: 병은 가루로 깨졌다.
+- id: 12322 | level: N3 | [便 / びん , 風の便りに聞いた。]
+  - meaning_ko: 방법
+  - example_ko: 바람 소식에 들었다.
+- id: 12327 | level: N3 | [ピン / ピン , 望遠鏡のピントをあわせた。]
+  - meaning_ko: 핀
+  - example_ko: 망원경의 초점을 맞췄다.
+- id: 12334 | level: N3 | [不 / ふ , あなたに不満があります。]
+  - meaning_ko: 안(~)
+  - example_ko: 당신에게 불만이 있습니다.
+- id: 12349 | level: N3 | [分 / ぶ , 時間があるか分かりません。]
+  - meaning_ko: 나누기
+  - example_ko: 시간이 있는지 모르겠습니다.
+- id: 12354 | level: N3 | [不安 / ふあん , 不安の影が彼女の顔をさっとよぎった。]
+  - meaning_ko: 불안
+  - example_ko: 불안의 그림자가 그녀의 얼굴을 살짝 흔들었다.
+- id: 12359 | level: N3 | [風景 / ふうけい , 彼はよく風景を書く。]
+  - meaning_ko: 경치
+  - example_ko: 그는 잘 풍경을 쓴다.
+- id: 12364 | level: N3 | [夫婦 / ふうふ , 夫婦水入らずが気楽でいい。]
+  - meaning_ko: 부부
+  - example_ko: 부부 물 들어가지 않고 편하고 좋다.
+- id: 12369 | level: N3 | [笛 / ふえ , 彼は歩きながら口笛を吹いた。]
+  - meaning_ko: 플루트
+  - example_ko: 그는 걸으면서 휘파람을 불었다.
+- id: 12373 | level: N3 | [不可 / ふか , 良い食習慣を持つことが不可欠なことである。]
+  - meaning_ko: 잘못된
+  - example_ko: 좋은 식습관을 갖는 것이 필수적인 것이다.
+- id: 12379 | level: N3 | [深まる / ふかまる , 謎は深まる一方だわ。]
+  - meaning_ko: 심화하다
+  - example_ko: 수수께끼는 깊어지는 한편이다.
+- id: 12382 | level: N3 | [武器 / ぶき , 神を称え、武器を配置せよ。]
+  - meaning_ko: 무기
+  - example_ko: 하나님을 기리며 무기를 배치하라.
+- id: 12389 | level: N3 | [拭く / ふく , 窓を拭くの忘れないでね。]
+  - meaning_ko: 닦다
+  - example_ko: 창문을 닦는 것을 잊지 마세요.
+- id: 12394 | level: N3 | [服装 / ふくそう , 服装の決まりはありますか。]
+  - meaning_ko: 옷
+  - example_ko: 복장의 결정이 있습니까?
+- id: 12398 | level: N3 | [含む / ふくむ , 水は水素と酸素を含む。]
+  - meaning_ko: 함유하다
+  - example_ko: 물은 수소와 산소를 포함한다.
+- id: 12401 | level: N3 | [含める / ふくめる , ]
+  - meaning_ko: 포함하다
+- id: 12406 | level: N3 | [袋 / ふくろ , 目は胃袋より大きい。]
+  - meaning_ko: 가방
+  - example_ko: 눈은 위 ​​부대보다 크다.
+- id: 12410 | level: N3 | [不幸 / ふこう , 僕は不幸かも知れないけれど自殺はしない。]
+  - meaning_ko: 불행
+  - example_ko: 나는 불행할지도 모르지만 자살은 하지 않는다.
+- id: 12414 | level: N3 | [節 / ふし , どこの関節がはずれたの？]
+  - meaning_ko: 곡조
+  - example_ko: 어디 관절이 벗어났습니까?
+- id: 12418 | level: N3 | [無事 / ぶじ , 無事に便りなし。]
+  - meaning_ko: 안전
+  - example_ko: 무사히 소식 없음.
+- id: 12423 | level: N3 | [不思議 / ふしぎ , この場所には不思議な雰囲気がある。]
+  - meaning_ko: 신비
+  - example_ko: 이 장소에는 이상한 분위기가 있다.
+- id: 12426 | level: N3 | [不自由 / ふじゆう , 目の不自由なその人は出口の方へ手探りで行った。]
+  - meaning_ko: 불편감
+  - example_ko: 눈의 불편한 그 사람은 출구쪽으로 수탐으로 갔다.
+- id: 12430 | level: N3 | [夫人 / ふじん , 彼は夫人のいのままだった。]
+  - meaning_ko: 부인
+  - example_ko: 그는 부인의 버섯이었다.
+- id: 12439 | level: N3 | [婦人 / ふじん , 老婦人は病気で寝ていた。]
+  - meaning_ko: 여자
+  - example_ko: 늙은 여자는 병으로 자고 있었다.
+- id: 12445 | level: N3 | [不正 / ふせい , 不正行為のため彼は解雇された。]
+  - meaning_ko: 부당
+  - example_ko: 부정 행위 때문에 그는 해고되었다.
+- id: 12452 | level: N3 | [防ぐ / ふせぐ , 冷蔵庫は食品の腐敗を防ぐ。]
+  - meaning_ko: (반대하여) 방어하다
+  - example_ko: 냉장고는 식품의 부패를 방지한다.
+- id: 12457 | level: N3 | [不足 / ふそく , 旱魃は食糧不足を招いた。]
+  - meaning_ko: 불충분
+  - example_ko: 旱魃는 음식 부족을 초래했다.
+- id: 12463 | level: N3 | [舞台 / ぶたい , 僕は舞台の上であがった。]
+  - meaning_ko: 무대(극장)
+  - example_ko: 나는 무대 위에서 올랐다.
+- id: 12469 | level: N3 | [双子 / ふたご , 彼女は双子です。]
+  - meaning_ko: 쌍둥이
+  - example_ko: 그녀는 쌍둥이입니다.
+- id: 12473 | level: N3 | [再び / ふたたび , 本を再び読み続けた。]
+  - meaning_ko: 다시
+  - example_ko: 책을 다시 읽었습니다.
+- id: 12478 | level: N3 | [普段 / ふだん , 普段着でおいでください。]
+  - meaning_ko: 일상적인 상황에서
+  - example_ko: 평상복으로 가십시오.
+- id: 12485 | level: N3 | [打つ / ぶつ , 諸神は悪を雷で打つという。]
+  - meaning_ko: 치다
+  - example_ko: 제신은 악을 번개로 친다고 한다.
+- id: 12491 | level: N3 | [不通 / ふつう , 不通区間の開通の見込みはまだない。]
+  - meaning_ko: 봉쇄
+  - example_ko: 불통구간의 개통 전망은 아직 없다.
+- id: 12501 | level: N3 | [物価 / ぶっか , 物価指数はこれまでの最高に達した。]
+  - meaning_ko: (상품/소비자) 가격
+  - example_ko: 물가지수는 지금까지 최고에 달했다.
+- id: 12506 | level: N3 | [ぶつかる / ぶつかる , 彼女はもう少しで車にぶつかるところだった。]
+  - meaning_ko: 파업하다
+  - example_ko: 그녀는 조금 더 차에 부딪히는 곳이었다.
+- id: 12511 | level: N3 | [ぶつける / ぶつける , ビリさんは顔を窓によくぶつける。]
+  - meaning_ko: 노크하다
+  - example_ko: 빌리 씨는 얼굴을 창문에 잘 부딪친다.
+- id: 12516 | level: N3 | [物質 / ぶっしつ , 物質は温度によって形を変える。]
+  - meaning_ko: 재료
+  - example_ko: 물질은 온도에 따라 모양을 바꾼다.
+- id: 12522 | level: N3 | [物理 / ぶつり , 物理学は基本的な自然科学である。]
+  - meaning_ko: 물리학
+  - example_ko: 물리학은 기본적인 자연과학이다.
+- id: 12526 | level: N3 | [筆 / ふで , 万年筆を持っていますか。]
+  - meaning_ko: 붓
+  - example_ko: 만년필을 가지고 있습니까?
+- id: 12530 | level: N3 | [ふと / ふと , 僕はふと足を止めた。]
+  - meaning_ko: 갑자기
+  - example_ko: 나는 문득 다리를 멈췄다.
+- id: 12534 | level: N3 | [部分 / ぶぶん , 煉瓦の大部分は粘土からなっている。]
+  - meaning_ko: 부분
+  - example_ko: 벽돌의 대부분은 점토로 이루어져 있습니다.
+- id: 12539 | level: N3 | [不平 / ふへい , 物価が高いと不平を言う主婦が多い。]
+  - meaning_ko: 불평
+  - example_ko: 물가가 높다고 불평하는 주부가 많다.
+- id: 12543 | level: N3 | [不満 / ふまん , あなたに不満があります。]
+  - meaning_ko: 불만
+  - example_ko: 당신에게 불만이 있습니다.
+- id: 12550 | level: N3 | [増やす / ふやす , 書物は人生の楽しみを増やす。]
+  - meaning_ko: 증가시키다 (v.t.)
+  - example_ko: 책은 인생의 즐거움을 늘린다.
+- id: 12555 | level: N3 | [殖やす / ふやす , ]
+  - meaning_ko: 증가하다
+- id: 12560 | level: N3 | [プラス / プラス , 近頃はプラスティックで出来た靴が多い。]
+  - meaning_ko: ...을 더한
+  - example_ko: 요즘은 플라스틱으로 만든 신발이 많다.
+- id: 12565 | level: N3 | [プラスチック / プラスチック , 化学が私たちにプラスチックを与えてくれた。]
+  - meaning_ko: 플라스틱
+  - example_ko: 화학이 우리에게 플라스틱을 주었다.
+- id: 12573 | level: N3 | [プラン / プラン , 彼は自分のプランを詳しく説明した。]
+  - meaning_ko: 계획
+  - example_ko: 그는 자신의 계획을 자세히 설명했다.
+- id: 12578 | level: N3 | [不利 / ふり , 彼に不利な判決がでた。]
+  - meaning_ko: 불리
+  - example_ko: 그에게 불리한 판결이 있었다.
+- id: 12584 | level: N3 | [振る / ふる , 勿体振るのはやめてくれ。]
+  - meaning_ko: 흔들다
+  - example_ko: 물론 흔들리는 것은 그만해줘.
+- id: 12589 | level: N3 | [震える / ふるえる , 心が震える。]
+  - meaning_ko: 떨다
+  - example_ko: 마음이 떨린다.
+- id: 12595 | level: N3 | [ブレーキ / ブレーキ , 彼はブレーキを踏んだ。]
+  - meaning_ko: 브레이크
+  - example_ko: 그는 브레이크를 밟았다.
+- id: 12597 | level: N3 | [触れる / ふれる , 陳列物に手を触れるな。]
+  - meaning_ko: 만지다
+  - example_ko: 진열물에 손을 대지 마라.
+- id: 12601 | level: N3 | [プロ / プロ , 長崎にプロサッカーチームをつくりましょう！]
+  - meaning_ko: 전문적인
+  - example_ko: 나가사키에 프로 축구 팀을 만들어 봅시다!
+- id: 12612 | level: N3 | [文 / ぶん , それは文脈による。]
+  - meaning_ko: 문장
+  - example_ko: 그것은 문맥에 의한다.
+- id: 12617 | level: N3 | [雰囲気 / ふんいき , 雰囲気がいやだった。]
+  - meaning_ko: 분위기(예:
+  - example_ko: 분위기가 불쾌했어요.
+- id: 12622 | level: N3 | [分析 / ぶんせき , 彼はその問題を徹底的に分析した。]
+  - meaning_ko: 분석
+  - example_ko: 그는 그 문제를 철저히 분석했다.
+- id: 12625 | level: N3 | [文明 / ぶんめい , 文明の進歩がとても速い。]
+  - meaning_ko: 문명
+  - example_ko: 문명의 진보가 매우 빠릅니다.
+- id: 12629 | level: N3 | [分野 / ぶんや , これが一番得意な分野です。]
+  - meaning_ko: 필드
+  - example_ko: 이것이 가장 좋은 분야입니다.
+- id: 12634 | level: N3 | [塀 / へい , 塀に登るな。]
+  - meaning_ko: 벽
+  - example_ko: 담에 오르지 마라.
+- id: 12638 | level: N3 | [平均 / へいきん , 平均台の上にまたがりなさい。]
+  - meaning_ko: 평형
+  - example_ko: 평균 받침대의 위로 가십시오.
+- id: 12642 | level: N3 | [平和 / へいわ , 両国は平和交渉を開始した。]
+  - meaning_ko: 평화
+  - example_ko: 양국은 평화협상을 시작했다.
+- id: 12651 | level: N3 | [別に / べつに , 「何を考えてるの？」「別に・・・」]
+  - meaning_ko: (아님) 특별히
+  - example_ko: 「무엇을 생각하고 있는 거야?」 「별로・・・」
+- id: 12658 | level: N3 | [減らす / へらす , 包装は腐敗を減らす。]
+  - meaning_ko: 감소하다
+  - example_ko: 포장은 썩음을 감소시킨다.
+- id: 12664 | level: N3 | [減る / へる , 列車の旅は減る傾向にある。]
+  - meaning_ko: (크기나 개수가) 줄어들다
+  - example_ko: 기차 여행은 감소하는 경향이 있다.
+- id: 12668 | level: N3 | [ベルト / ベルト , 忘れずに安全ベルトを閉めなさい。]
+  - meaning_ko: 양복용 벨트
+  - example_ko: 잊지 말고 안전 벨트를 닫으십시오.
+- id: 12677 | level: N3 | [変化 / へんか , 変化のない毎日の生活に飽きていた。]
+  - meaning_ko: 변화
+  - example_ko: 변화가 없는 매일의 생활에 질렸다.
+- id: 12680 | level: N3 | [ペンキ / ペンキ , 壁にペンキが塗られた。]
+  - meaning_ko: 페인트
+  - example_ko: 벽에 페인트가 칠해졌습니다.
+- id: 12683 | level: N3 | [変更 / へんこう , 路線の変更はできますか。]
+  - meaning_ko: 변화
+  - example_ko: 노선을 변경할 수 있습니까?
+- id: 12689 | level: N3 | [ベンチ / ベンチ , 木の下にベンチがあります。]
+  - meaning_ko: 벤치
+  - example_ko: 나무 아래에 벤치가 있습니다.
+- id: 12693 | level: N3 | [弁当 / べんとう , 弁当を弟に分けてあげなさい。]
+  - meaning_ko: 도시락
+  - example_ko: 도시락을 동생으로 나눠주세요.
+- id: 12697 | level: N3 | [方 / ほう , 眠った方がいいよ。]
+  - meaning_ko: 옆
+  - example_ko: 자는 것이 좋다.
+- id: 12703 | level: N3 | [法 / ほう , 排卵の有無を調べる方法はありますか？]
+  - meaning_ko: 법(법률: X 법)
+  - example_ko: 배란의 유무를 조사하는 방법이 있습니까?
+- id: 12708 | level: N3 | [棒 / ぼう , 夕べ彼の家は泥棒に入られた。]
+  - meaning_ko: 폴
+  - example_ko: 저녁 그의 집은 도둑에 들어갔다.
+- id: 12712 | level: N3 | [冒険 / ぼうけん , 子供の頃から冒険が好きだった。]
+  - meaning_ko: 위험
+  - example_ko: 어렸을 때부터 모험을 좋아했다.
+- id: 12717 | level: N3 | [方向 / ほうこう , 友達が示した方向へ行った。]
+  - meaning_ko: 방향
+  - example_ko: 친구가 보여준 방향으로 갔다.
+- id: 12722 | level: N3 | [報告 / ほうこく , 報告書をよく調べた。]
+  - meaning_ko: 보고서
+  - example_ko: 보고서를 잘 조사했다.
+- id: 12728 | level: N3 | [宝石 / ほうせき , 宝石の関税を払った。]
+  - meaning_ko: 보석
+  - example_ko: 보석 관세를 지불했다.
+- id: 12733 | level: N3 | [包装 / ほうそう , 包装は腐敗を減らす。]
+  - meaning_ko: 포장
+  - example_ko: 포장은 썩음을 감소시킨다.
+- id: 12738 | level: N3 | [豊富 / ほうふ , 彼は話題の豊富な人だ。]
+  - meaning_ko: 풍부
+  - example_ko: 그는 화제가 풍부한 사람이다.
+- id: 12743 | level: N3 | [方法 / ほうほう , 排卵の有無を調べる方法はありますか？]
+  - meaning_ko: 방법
+  - example_ko: 배란의 유무를 조사하는 방법이 있습니까?
+- id: 12751 | level: N3 | [訪問 / ほうもん , 明日彼を訪問します。]
+  - meaning_ko: 부르다
+  - example_ko: 내일 그를 방문합니다.
+- id: 12761 | level: N3 | [吠える / ほえる , 彼女は吠える犬を怖がる。]
+  - meaning_ko: 짖다
+  - example_ko: 그녀는 짖는 개를 두려워한다.
+- id: 12765 | level: N3 | [ボーイ / ボーイ , 彼女はボーイフレンドと別れるつもりだ。]
+  - meaning_ko: 문지기
+  - example_ko: 그녀는 남자 친구와 헤어질거야.
+- id: 12770 | level: N3 | [ボート / ボート , 彼女は遠くにボートを見つけた。]
+  - meaning_ko: 노 젓는 배
+  - example_ko: 그녀는 멀리 보트를 발견했다.
+- id: 12777 | level: N3 | [ホーム / ホーム , 列車は１０番ホームに到着します。]
+  - meaning_ko: 플랫폼
+  - example_ko: 열차는 10번 홈에 도착합니다.
+- id: 12781 | level: N3 | [ボール / ボール , 両手でそのボールを持ちなさい。]
+  - meaning_ko: 공
+  - example_ko: 양손으로 그 공을 잡으십시오.
+- id: 12791 | level: N3 | [誇り / ほこり , 母は私を誇りに思うとよく言った。]
+  - meaning_ko: 자부심
+  - example_ko: 어머니는 저를 자랑스럽게 생각합니다.
+- id: 12795 | level: N3 | [埃 / ほこり , 雨で埃がおさまった。]
+  - meaning_ko: 먼지
+  - example_ko: 비에 먼지가 가라앉았다.
+- id: 12799 | level: N3 | [保証 / ほしょう , 保証は一年間です。]
+  - meaning_ko: 보장하다
+  - example_ko: 보증은 일년입니다.
+- id: 12804 | level: N3 | [保存 / ほぞん , 彼らはその建物を保存してきた。]
+  - meaning_ko: 보존
+  - example_ko: 그들은 그 건물을 저장했습니다.
+- id: 12808 | level: N3 | [歩道 / ほどう , 歩道を歩きなさい。]
+  - meaning_ko: 보도
+  - example_ko: 보도를 걸으십시오.
+- id: 12812 | level: N3 | [仏 / ほとけ , 妹は英仏語を使いこなす。]
+  - meaning_ko: 불
+  - example_ko: 여동생은 영어 불어를 잘 다룬다.
+- id: 12817 | level: N3 | [骨 / ほね , 祖母の遺灰は寺院に置かれた骨壷に入っている。]
+  - meaning_ko: 뼈
+  - example_ko: 할머니의 유회는 사원에 놓인 골반에 들어 있다.
+- id: 12821 | level: N3 | [炎 / ほのお , 硫黄は青い炎を上げて燃える。]
+  - meaning_ko: 불꽃
+  - example_ko: 유황은 푸른 불꽃을 올리고 타오른다.
+- id: 12831 | level: N3 | [頬 / ほほ , 涙が彼女の頬に流れた。]
+  - meaning_ko: 뺨 (얼굴의)
+  - example_ko: 눈물이 그녀의 뺨에 흘렀다.
+- id: 12840 | level: N3 | [ほぼ / ほぼ , ほぼ終わった。]
+  - meaning_ko: 거의
+  - example_ko: 거의 끝났다.
+- id: 12844 | level: N3 | [微笑む / ほほえむ , 運命は大胆な者に微笑む。]
+  - meaning_ko: 미소 짓다
+  - example_ko: 운명은 대담한 자에게 미소를 짓는다.
+- id: 12848 | level: N3 | [堀 / ほり , ]
+  - meaning_ko: 해자 외호
+- id: 12852 | level: N3 | [濠 / ほり , ]
+  - meaning_ko: 해자 외호
+- id: 12857 | level: N3 | [本当 / ほんと , 彼女は本当に賢いよね？]
+  - meaning_ko: 진실
+  - example_ko: 그녀는 정말 똑똑하죠?
+- id: 12862 | level: N3 | [本人 / ほんにん , 私は日本人ですが、日本に住んでいません。]
+  - meaning_ko: 그 사람 자신
+  - example_ko: 저는 일본인이지만 일본에 살지 않습니다.
+- id: 12866 | level: N3 | [本物 / ほんもの , 本物を追求しろ。]
+  - meaning_ko: 정품
+  - example_ko: 진짜를 추구하라.
+- id: 12872 | level: N3 | [ぼんやり / ぼんやり , 彼女はぼんやり顔をしている。]
+  - meaning_ko: 어둑한
+  - example_ko: 그녀는 흐릿한 얼굴을 하고 있다.
+- id: 12878 | level: N3 | [間 / ま , 時間はいくらでも作れる。]
+  - meaning_ko: 공간
+  - example_ko: 시간은 얼마든지 만들 수 있다.
+- id: 12883 | level: N3 | [まあ / まあ , カレーはまあまあでした。]
+  - meaning_ko: 글쎄 (겸손하거나 주저하는 말을 할 때 사용)
+  - example_ko: 카레는 글쎄요.
+- id: 12888 | level: N3 | [マーケット / マーケット , 母はマーケットへ買い物に行きました。]
+  - meaning_ko: 시장
+  - example_ko: 어머니는 시장에 쇼핑하러 갔다.
+- id: 12893 | level: N3 | [マイク / マイク , さっきなぜかマイクが入らなかった。]
+  - meaning_ko: 마이크
+  - example_ko: 아까 왠지 마이크가 들어가지 않았다.
+- id: 12897 | level: N3 | [迷子 / まいご , 旅先では迷子になりやすい。]
+  - meaning_ko: 길을 잃은(길 잃은) 아이
+  - example_ko: 여행지에서는 길을 잃기 쉽다.
+- id: 12901 | level: N3 | [マイナス / マイナス , 経済はマイナス成長を記録した。]
+  - meaning_ko: 마이너스
+  - example_ko: 경제는 부정적인 성장을 기록했다.
+- id: 12912 | level: N3 | [任せる / まかせる , 任せるよ。]
+  - meaning_ko: 다른 사람에게 맡기다
+  - example_ko: 맡길거야.
+- id: 12915 | level: N3 | [巻く / まく , ヘビがとぐろを巻く。]
+  - meaning_ko: 바람을 피우다
+  - example_ko: 뱀이 참치를 감는다.
+- id: 12918 | level: N3 | [蒔く / まく , 春が来ると、彼らは畑を耕し種を蒔く。]
+  - meaning_ko: (씨앗을) 뿌리다
+  - example_ko: 봄이 오면 그들은 밭을 경작하고 씨를 뿌린다.
+- id: 12922 | level: N3 | [撒く / まく , ]
+  - meaning_ko: 흩어지다
+- id: 12925 | level: N3 | [幕 / まく , 幕が下りた。]
+  - meaning_ko: 커튼
+  - example_ko: 막이 내렸다.
+- id: 12931 | level: N3 | [負け / まけ , 負けない！]
+  - meaning_ko: 패배시키다
+  - example_ko: 지지 않는다!
+- id: 12935 | level: N3 | [孫 / まご , 彼らは孫を誉めた。]
+  - meaning_ko: 손자
+  - example_ko: 그들은 손자를 칭찬했다.
+- id: 12940 | level: N3 | [まさか / まさか , まさかリアルに借金の催促だったの？]
+  - meaning_ko: 결코
+  - example_ko: 설마 리얼하게 빚의 촉촉이었어?
+- id: 12946 | level: N3 | [まさに / まさに , 列車はまさに駅を出ようとしていた。]
+  - meaning_ko: 바르게
+  - example_ko: 기차는 바로 역을 나가려고 했다.
+- id: 12951 | level: N3 | [混ざる / まざる , この物質は水と混ざる。]
+  - meaning_ko: 섞이다
+  - example_ko: 이 물질은 물과 섞입니다.
+- id: 12956 | level: N3 | [交ざる / まざる , ]
+  - meaning_ko: 섞이다
+- id: 12963 | level: N3 | [混じる / まじる , 未来のことを考えると、不安と希望が入り混じる。]
+  - meaning_ko: 섞이다
+  - example_ko: 미래를 생각하면 불안과 희망이 섞인다.
+- id: 12968 | level: N3 | [交じる / まじる , 父の髪に白髪が交じるようになった。]
+  - meaning_ko: 섞이다
+  - example_ko: 아버지의 머리카락에 백발이 교차하게 되었다.
+- id: 12978 | level: N3 | [増す / ます , 離れてみれば尊敬は増す。]
+  - meaning_ko: 증가하다
+  - example_ko: 멀리 보면 존경은 늘어난다.
+- id: 12983 | level: N3 | [貧しい / まずしい , 貧しい人々を軽蔑するな。]
+  - meaning_ko: 가난한
+  - example_ko: 가난한 사람들을 경멸하지 마라.
+- id: 12988 | level: N3 | [マスター / マスター , 彼は教えられたことはすべてマスターした。]
+  - meaning_ko: 바 주인
+  - example_ko: 그는 가르친 모든 것을 마스터했다.
+- id: 12994 | level: N3 | [ますます / ますます , 話が進むにつれ彼の弁舌はますますさえた。]
+  - meaning_ko: 점점 (도와 마찬가지)
+  - example_ko: 이야기가 진행됨에 따라 그의 변설은 점점 심해졌다.
+- id: 12999 | level: N3 | [混ぜる / まぜる , 赤と青を混ぜると紫になる。]
+  - meaning_ko: 섞다
+  - example_ko: 빨강과 파랑을 섞으면 보라색이 된다.
+- id: 13002 | level: N3 | [交ぜる / まぜる , ]
+  - meaning_ko: 섞이다
+- id: 13007 | level: N3 | [街 / まち , パリは世界で最も美しい街である。]
+  - meaning_ko: 도시
+  - example_ko: 파리는 세계에서 가장 아름다운 도시입니다.
+- id: 13011 | level: N3 | [間違い / まちがい , 明らかに君の間違いだ。]
+  - meaning_ko: 실수
+  - example_ko: 분명히 너의 실수다.
+- id: 13019 | level: N3 | [松 / まつ , 毎年、浜松で凧揚げ大会が開かれる。]
+  - meaning_ko: 소나무
+  - example_ko: 매년 하마마츠에서 연 튀김 대회가 열린다.
+- id: 13023 | level: N3 | [真っ赤 / まっか , 彼女の両頬が真っ赤になった。]
+  - meaning_ko: 진한 빨간색
+  - example_ko: 그녀의 두 뺨이 새빨갛게 되었다.
+- id: 13027 | level: N3 | [全く / まったく , それは全くの真実です。]
+  - meaning_ko: 정말
+  - example_ko: 그것은 완전히 진실입니다.
+- id: 13033 | level: N3 | [祭 / まつり , 僕は文化祭で女装した。]
+  - meaning_ko: 제전
+  - example_ko: 나는 문화제로 여장했다.
+- id: 13038 | level: N3 | [まとまる / まとまる , 交渉がうまくまとまることを心から願っている。]
+  - meaning_ko: 수집하다
+  - example_ko: 협상이 잘 이루어지기를 진심으로 바란다.
+- id: 13040 | level: N3 | [まとめる / まとめる , クラスをまとめるのが君の役目だ。]
+  - meaning_ko: 정리하다
+  - example_ko: 클래스를 정리하는 것이 너의 역할이다.
+- id: 13048 | level: N3 | [学ぶ / まなぶ , 物理学は学ぶのが簡単ではない。]
+  - meaning_ko: 배우다
+  - example_ko: 물리학은 배우기 쉽지 않다.
+- id: 13053 | level: N3 | [真似 / まね , 彼女は先生の真似がうまい。]
+  - meaning_ko: 흉내
+  - example_ko: 그녀는 선생님의 모방이 좋다.
+- id: 13059 | level: N3 | [招く / まねく , 怠惰は失敗を招く。]
+  - meaning_ko: 초대하다
+  - example_ko: 게으름은 실패를 초래한다.
+- id: 13064 | level: N3 | [まぶしい / まぶしい , 太陽がまぶしい。]
+  - meaning_ko: 눈부신
+  - example_ko: 태양이 눈부시다.
+- id: 13068 | level: N3 | [柵 / さく , 私は柵を緑に塗った。]
+  - meaning_ko: 울타리
+  - example_ko: 나는 울타리를 녹색으로 칠했다.
+- id: 13074 | level: N3 | [裂ける / さける , 眦が裂けるほど目を見張る。]
+  - meaning_ko: 분할하다
+  - example_ko: 눈물이 찢어질 만큼 눈을 바라본다.
+- id: 13079 | level: N3 | [裁く / さばく , 誰がこの事件を裁くのでしょうか。]
+  - meaning_ko: 판단하다
+  - example_ko: 누가 이 사건을 심판할 것인가?
+- id: 13081 | level: N3 | [酸化 / さんか , 二酸化炭素はそれ自体は毒ではない。]
+  - meaning_ko: 산화
+  - example_ko: 이산화탄소는 그 자체는 독이 아니다.
+- id: 13084 | level: N3 | [死 / し , 人は食事を取らなければ死んでしまう。]
+  - meaning_ko: 죽음
+  - example_ko: 사람은 식사를 취하지 않으면 죽어 버린다.
+- id: 13090 | level: N3 | [資格 / しかく , 彼女は弁護士の資格を得た。]
+  - meaning_ko: 자격
+  - example_ko: 그녀는 변호사의 자격을 얻었다.
+- id: 13099 | level: N3 | [視覚 / しかく , 視覚は五感の１つである。]
+  - meaning_ko: 시력
+  - example_ko: 시각은 오감의 하나이다.
+- id: 13103 | level: N3 | [指揮 / しき , 彼が我が軍の指揮官です。]
+  - meaning_ko: 명령
+  - example_ko: 그가 우리 군의 지휘관입니다.
+- id: 13107 | level: N3 | [磁気 / じき , その機械は磁気の力で動く。]
+  - meaning_ko: 자기
+  - example_ko: 그것의 기계는 자석의 힘에 달린다.
+- id: 13112 | level: N3 | [磁器 / じき , その陶磁器は特別な棚に陳列されていた。]
+  - meaning_ko: 도자기
+  - example_ko: 그 도자기는 특별한 선반에 진열되어 있었다.
+- id: 13118 | level: N3 | [自己 / じこ , 彼女に自己紹介する機会がなかった。]
+  - meaning_ko: 본인
+  - example_ko: 그녀에게 자기 소개할 기회가 없었다.
+- id: 13122 | level: N3 | [字体 / じたい , ]
+  - meaning_ko: 세례반
+- id: 13127 | level: N3 | [辞退 / じたい , 私はその仕事を辞退したい。]
+  - meaning_ko: 거절
+  - example_ko: 나는 그 일을 거절하고 싶다.
+- id: 13132 | level: N3 | [視点 / してん , 全体を見渡す視点が大事。]
+  - meaning_ko: 의견
+  - example_ko: 전체를 바라보는 관점이 중요.
+- id: 13137 | level: N3 | [脂肪 / しぼう , あたし、低脂肪乳ね。]
+  - meaning_ko: 지방
+  - example_ko: 나, 저지방 우유.
+- id: 13141 | level: N3 | [志望 / しぼう , 今回の模試も志望校合格範囲内か。]
+  - meaning_ko: 소망
+  - example_ko: 이번 모시도 지망교 합격 범위내인가.
+- id: 13146 | level: N3 | [衆 / しゅう , 民衆は支配者たちに反抗した。]
+  - meaning_ko: 대중
+  - example_ko: 민중은 통치자들에게 반항했다.
+- id: 13150 | level: N3 | [住 / じゅう , どこに住んでいますか？]
+  - meaning_ko: 주거
+  - example_ko: 어디에 살고 있습니까?
+- id: 13156 | level: N3 | [修飾 / しゅうしょく , 副詞は何を修飾するでしょう？]
+  - meaning_ko: 장식
+  - example_ko: 부사는 무엇을 한정할 것인가?
+- id: 13163 | level: N3 | [私用 / しよう , 私用の新しい傘を買おっと。]
+  - meaning_ko: 개인적인 용도
+  - example_ko: 개인용 우산을 사 죄송합니다.
+- id: 13167 | level: N3 | [仕様 / しよう , 仕様、価格は変更することがあります。]
+  - meaning_ko: 방법
+  - example_ko: 사양, 가격은 변경될 수 있습니다.
+- id: 13174 | level: N3 | [情 / じょう , 情熱は苦悩を生む。]
+  - meaning_ko: 감정
+  - example_ko: 열정은 고뇌를 낳는다.
+- id: 13178 | level: N3 | [生涯 / しょうがい , 彼女は生涯独身であった。]
+  - meaning_ko: 일생
+  - example_ko: 그녀는 평생 독신이었다.
+- id: 13180 | level: N3 | [上司 / じょうし , 僕の直属の上司は気難しい。]
+  - meaning_ko: 우월한 사람
+  - example_ko: 내 직속 상사는 힘들다.
+- id: 13186 | level: N3 | [正体 / しょうたい , 彼らは彼の正体を警察にばらした。]
+  - meaning_ko: 자연스러운 모양
+  - example_ko: 그들은 그의 정체를 경찰에 뿌렸다.
+- id: 13189 | level: N3 | [照明 / しょうめい , 彼は十一時に全ての照明を消した。]
+  - meaning_ko: 조명
+  - example_ko: 그는 11시에 모든 조명을 꺼냈다.
+- id: 13194 | level: N3 | [女史 / じょし , コブ女史が帰ってくる日が待ち遠しいよ。ほんとに。]
+  - meaning_ko: 부인
+  - example_ko: 코브 여사가 돌아오는 날이 기다리고 있어. 정말.
+- id: 13202 | level: N3 | [助詞 / じょし , 日本語の助詞の「は」と「が」は一生使いこなせそうにないわ。]
+  - meaning_ko: (그램) 입자
+  - example_ko: 일본어 조사의 「하」와「가」는 평생 잘 다룰 것 같지 않아.
+- id: 13207 | level: N3 | [ショック / ショック , 彼女はショック死した。]
+  - meaning_ko: 충격
+  - example_ko: 그녀는 충격 죽었다.
+- id: 13210 | level: N3 | [進行 / しんこう , 日本経済では、大きなひずみが進行しつつある。]
+  - meaning_ko: 전진
+  - example_ko: 일본 경제에서는 큰 변형이 진행되고 있다.
+- id: 13218 | level: N3 | [新興 / しんこう , 大本教は日本の新興宗教の一つに数えられる。]
+  - meaning_ko: 상승
+  - example_ko: 대본교는 일본의 신흥 종교의 하나로 꼽힌다.
+- id: 13220 | level: N3 | [振興 / しんこう , 政府は工業の振興計画を開始した。]
+  - meaning_ko: 홍보
+  - example_ko: 정부는 공업 진흥 계획을 시작했다.
+- id: 13225 | level: N3 | [申告 / しんこく , 申告するものはありません。]
+  - meaning_ko: 보고서
+  - example_ko: 신고할 것은 없습니다.
+- id: 13230 | level: N3 | [真理 / しんり , 真理は多言を要せず。]
+  - meaning_ko: 진실
+  - example_ko: 진리는 다언을 필요로 하지 않는다.
+- id: 13234 | level: N3 | [水洗 / すいせん , このドレスは水洗いができますか。]
+  - meaning_ko: 홍조
+  - example_ko: 이 드레스는 물로 씻을 수 있습니까?
+- id: 13239 | level: N3 | [ストレス / ストレス , 彼女はストレスに対処できない。]
+  - meaning_ko: 스트레스
+  - example_ko: 그녀는 스트레스를 다룰 수 없다.
+- id: 13247 | level: N3 | [擦る / する , 隣の病室からキュウリを擦る音が聞こえてきた。]
+  - meaning_ko: 문지르다
+  - example_ko: 옆의 병실에서 오이를 문지르는 소리가 들려왔다.
+- id: 13251 | level: N3 | [正規 / せいき , 正規表現で空白はどのように表されるのでしょうか？]
+  - meaning_ko: 정기적인
+  - example_ko: 정규식으로 공백은 어떻게 표현됩니까?
+- id: 13255 | level: N3 | [精巧 / せいこう , その機械は精巧に出来ているので、すぐ壊れる。]
+  - meaning_ko: 정교한
+  - example_ko: 그 기계는 정교하게 되어 있기 때문에, 곧 망가진다.
+- id: 13260 | level: N3 | [精算 / せいさん , 二人はレジへ行き精算した。]
+  - meaning_ko: 정산
+  - example_ko: 두 사람은 계산대에 가서 정산했다.
+- id: 13265 | level: N3 | [成年 / せいねん , 娘は今年成年になる。]
+  - meaning_ko: 다수
+  - example_ko: 딸은 올해 성년이 된다.
+- id: 13270 | level: N3 | [声明 / せいめい , 彼の声明文は次の通りだ。]
+  - meaning_ko: 선언
+  - example_ko: 그의 성명문은 다음과 같다.
+- id: 13277 | level: N3 | [姓名 / せいめい , あなたの姓名を教えてください。]
+  - meaning_ko: 성명
+  - example_ko: 당신의 성명을 말해주세요.
+- id: 13280 | level: N3 | [生理 / せいり , 生理は順調ですか。]
+  - meaning_ko: 생리학
+  - example_ko: 생리는 순조롭습니까?
+- id: 13287 | level: N3 | [膳 / ぜん , 食卓を膳立てしてください。]
+  - meaning_ko: (작은) 테이블
+  - example_ko: 식탁을 곁들인다.
+- id: 13292 | level: N3 | [禅 / ぜん , 彼は座禅を組んだ。]
+  - meaning_ko: 선도)
+  - example_ko: 그는 좌선을 맺었다.
+- id: 13296 | level: N3 | [選挙 / せんきょ , 選挙に勝つには「見た目」が何割？]
+  - meaning_ko: 선거
+  - example_ko: 선거를 이기려면 「외형」이 몇할까?
+- id: 13300 | level: N3 | [先行 / せんこう , 稲光は雷の音に先行する。]
+  - meaning_ko: 선행
+  - example_ko: 벼광은 번개 소리에 선행한다.
+- id: 13304 | level: N3 | [選考 / せんこう , 職員の選考に関する規則を次のように定める。]
+  - meaning_ko: 선택
+  - example_ko: 직원의 선고에 관한 규칙을 다음과 같이 정한다.
+- id: 13309 | level: N3 | [相 / そう , 遊び相手がなくて孤独だった。]
+  - meaning_ko: 측면
+  - example_ko: 놀이 상대가 없어 외로웠다.
+- id: 13314 | level: N3 | [沿う / そう , ご希望に沿うように努力します。]
+  - meaning_ko: 함께 달리다
+  - example_ko: 희망을 따르도록 노력합니다.
+- id: 13318 | level: N3 | [添う / そう , 彼女に付き添う人がいない。]
+  - meaning_ko: 동행하다
+  - example_ko: 그녀와 함께하는 사람이 없습니다.
+- id: 13324 | level: N3 | [僧 / そう , 門前の小僧習わぬ経を読む。]
+  - meaning_ko: 수도사
+  - example_ko: 문 앞의 소승 배우지 않는 경을 읽는다.
+- id: 13327 | level: N3 | [像 / ぞう , 画像をクリックすると次ページへ移ります！]
+  - meaning_ko: 동상
+  - example_ko: 이미지를 클릭하면 다음 페이지로 이동합니다!
+- id: 13336 | level: N3 | [捜査 / そうさ , 容疑者は捜査官にうそを言った。]
+  - meaning_ko: 검색(특히 범죄 수사에서
+  - example_ko: 용의자는 수사관에게 거짓말을 했다.
+- id: 13339 | level: N3 | [操縦 / そうじゅう , 彼は彼らに船の操縦法を教えた。]
+  - meaning_ko: 관리
+  - example_ko: 그는 그들에게 배의 조종법을 가르쳤다.
+- id: 13344 | level: N3 | [創造 / そうぞう , 創造説は擬似科学だ。]
+  - meaning_ko: 창조
+  - example_ko: 창조설은 의사과학이다.
+- id: 13348 | level: N3 | [隊 / たい , 警官隊はデモ隊と乱闘になった。]
+  - meaning_ko: 파티
+  - example_ko: 경관대는 시위대와 난투가 되었다.
+- id: 13353 | level: N3 | [退学 / たいがく , 私は高校を退学になった。]
+  - meaning_ko: 학교를 자퇴하다
+  - example_ko: 고등학교를 퇴학했다.
+- id: 13358 | level: N3 | [タイトル / タイトル , その本のタイトルは何ですか。]
+  - meaning_ko: 제목
+  - example_ko: 그 책의 제목은 무엇입니까?
+- id: 13363 | level: N3 | [ダウン / ダウン , 機械故障によるダウンタイム。]
+  - meaning_ko: 아래에
+  - example_ko: 기계 고장으로 인한 다운타임.
+- id: 13371 | level: N3 | [高まる / たかまる , 自分の成長を実感するたびに、自己肯定感が高まる。]
+  - meaning_ko: 상승하다
+  - example_ko: 자신의 성장을 실감할 때마다 자기 긍정감이 높아진다.
+- id: 13376 | level: N3 | [断つ / たつ , それは快刀乱麻を断つような解答でした。]
+  - meaning_ko: 절단하다
+  - example_ko: 그것은 쾌도란마를 거절하는 해답이었다.
+- id: 13381 | level: N3 | [盾 / たて , 彼は矛盾している。]
+  - meaning_ko: 방패
+  - example_ko: 그는 모순된다.
+- id: 13386 | level: N3 | [例え / たとえ , 例えば、小鳥は特別な防御装置を備えている。]
+  - meaning_ko: 예
+  - example_ko: 예를 들어, 작은 새는 특별한 방어 장치를 갖추고 있습니다.
+- id: 13389 | level: N3 | [チャイム / チャイム , チャイムが鳴ったね。]
+  - meaning_ko: 차임
+  - example_ko: 차임이 울렸다.
+- id: 13393 | level: N3 | [挑戦 / ちょうせん , 彼は大声で私に挑戦した。]
+  - meaning_ko: 도전
+  - example_ko: 그는 큰 소리로 나에게 도전했다.
+- id: 13395 | level: N3 | [治療 / ちりょう , 予防は治療にまさる。]
+  - meaning_ko: 의료
+  - example_ko: 예방은 치료에 적합합니다.
+- id: 13404 | level: N3 | [接ぐ / つぐ , 枝が伸び、実が成ることを想定して接ぐ場所を選びましょう。]
+  - meaning_ko: 가입하다
+  - example_ko: 가지가 늘어나고 열매가 되는 것을 상정해 접하는 장소를 선택합시다.
+- id: 13409 | level: N3 | [継ぐ / つぐ , 彼は王位を継ぐだろう。]
+  - meaning_ko: 성공하다 (사업이나 상속을 받는 사람
+  - example_ko: 그는 왕위를 이어줄 것이다.
+- id: 13420 | level: N3 | [摘む / つむ , 新茶を摘む季節になった。]
+  - meaning_ko: 뽑다
+  - example_ko: 신차를 따는 계절이 되었다.
+- id: 13425 | level: N3 | [露 / つゆ , 露が草の葉におりている。]
+  - meaning_ko: 이슬
+  - example_ko: 이슬이 잔디 잎에 있습니다.
+- id: 13432 | level: N3 | [強まる / つよまる , 夜になると歯の痛みがいっそう強まる。]
+  - meaning_ko: 강해지다
+  - example_ko: 밤이 되면 치아 통증이 더욱 강해진다.
+- id: 13436 | level: N3 | [強める / つよめる , 霊長類の毛づくろいは集団の結合を強める。]
+  - meaning_ko: 강화하다
+  - example_ko: 영장류의 머리카락 만들기는 집단의 결합을 강화한다.
+- id: 13441 | level: N3 | [データ / データ , データ化して、壁紙も作ってある。]
+  - meaning_ko: 데이터
+  - example_ko: 데이터화해, 벽지도 만들고 있다.
+- id: 13446 | level: N3 | [デザイン / デザイン , バナーと同じ、白を基調としたデザイン。]
+  - meaning_ko: 설계
+  - example_ko: 배너와 같은 흰색을 기조로 한 디자인.
+- id: 13452 | level: N3 | [デザート / デザート , 全部食べないとデザート抜きですよ。]
+  - meaning_ko: 디저트
+  - example_ko: 전부 먹지 않으면 디저트 제외입니다.
+- id: 13458 | level: N3 | [転校 / てんこう , 彼は昨年転校した。]
+  - meaning_ko: 학교를 바꾸다
+  - example_ko: 그는 작년에 전학했다.
+- id: 13463 | level: N3 | [伝言 / でんごん , 訪問者は彼の妹に伝言を頼んだ。]
+  - meaning_ko: 구두 메시지
+  - example_ko: 방문자는 그의 여동생에게 전언을 물었다.
+- id: 13467 | level: N3 | [と / と , 何と言ったらいいか・・・。]
+  - meaning_ko: 그리고
+  - example_ko: 뭐라고 하면 좋을까・・・.
+- id: 13474 | level: N3 | [問う / とう , 彼にもう一杯いかがかと問う。]
+  - meaning_ko: 묻다
+  - example_ko: 그에게 또 한가득 어떨까 묻는다.
+- id: 13479 | level: N3 | [棟 / とう , 父は棟梁なんですよ。]
+  - meaning_ko: 능선(지붕의
+  - example_ko: 아버지는 동양이에요.
+- id: 13484 | level: N3 | [倒産 / とうさん , 多くの小さな会社が倒産した。]
+  - meaning_ko: (기업) 파산
+  - example_ko: 많은 작은 회사가 파산했다.
+- id: 13488 | level: N3 | [同士 / どうし , 彼らはお隣同士です。]
+  - meaning_ko: 서로
+  - example_ko: 그들은 서로 옆에 있습니다.
+- id: 13491 | level: N3 | [同志 / どうし , 彼らは同志である。]
+  - meaning_ko: 같은 마음
+  - example_ko: 그들은 동지이다.
+- id: 13495 | level: N3 | [当然 / とうぜん , 当然よ、抜き打ちなんだもの。]
+  - meaning_ko: 분명한
+  - example_ko: 당연히, 빼앗긴 것.
+- id: 13497 | level: N3 | [動揺 / どうよう , 彼はその知らせに動揺した。]
+  - meaning_ko: 방해
+  - example_ko: 그는 그 소식에 동요했다.
+- id: 13505 | level: N3 | [説く / とく , それ、女口説くときに使えそう。]
+  - meaning_ko: 설명하다
+  - example_ko: 그것, 여자 입설할 때 사용할 수 있을 것 같다.
+- id: 13515 | level: N3 | [綴じる / とじる , 紙を綴じるのにホチキスはとても便利です。]
+  - meaning_ko: 묶다
+  - example_ko: 종이를 철자하는 스테이플은 매우 편리합니다.
+- id: 13519 | level: N3 | [供 / とも , 安価な簡易住宅を提供します。]
+  - meaning_ko: 따르는
+  - example_ko: 저렴한 간이 주택을 제공합니다.
+- id: 13527 | level: N3 | [並 / なみ , 夕食がテーブルに並べられた。]
+  - meaning_ko: 중간(예:
+  - example_ko: 저녁 식사가 테이블에 정렬되었습니다.
+- id: 13532 | level: N3 | [慣らす / ならす , 狼を飼い慣らすことはできません。]
+  - meaning_ko: 익숙해지다
+  - example_ko: 늑대를 길들일 수 없습니다.
+- id: 13537 | level: N3 | [馴らす / ならす , ]
+  - meaning_ko: 길들여지다
+- id: 13542 | level: N3 | [難 / なん , 難民がごみごみした裏町に住んでいました。]
+  - meaning_ko: 어려움
+  - example_ko: 난민이 쓰레기 쓰레기 뒷마을에 살았습니다.
+- id: 13552 | level: N3 | [年鑑 / ねんかん , この年鑑には美しい写真がたくさん載っている。]
+  - meaning_ko: 연감
+  - example_ko: 이 연감에는 아름다운 사진이 많이 실려있다.
+- id: 13556 | level: N3 | [脳 / のう , 彼らは遅くまで首脳会談を続けた。]
+  - meaning_ko: 뇌
+  - example_ko: 그들은 늦게까지 정상회담을 계속했다.
+- id: 13562 | level: N3 | [臨む / のぞむ , ファシズム勢力との総力戦に臨む。]
+  - meaning_ko: 조심하다
+  - example_ko: 파시즘 세력과의 총력전에 임한다.
+- id: 13566 | level: N3 | [肺 / はい , 彼は肺癌を恐れている。]
+  - meaning_ko: 폐
+  - example_ko: 그는 폐암을 두려워한다.
+- id: 13572 | level: N3 | [～敗 / はい , ]
+  - meaning_ko: 손실 카운터
+- id: 13579 | level: N3 | [映える / はえる , ]
+  - meaning_ko: 빛나다
+- id: 13584 | level: N3 | [諮る / はかる , ]
+  - meaning_ko: 상담하다
+- id: 13589 | level: N3 | [図る / はかる , 彼らと協力して世界平和を図る。]
+  - meaning_ko: 음모를 꾸미다
+  - example_ko: 그들과 협력하여 세계평화를 도모한다.
+- id: 13593 | level: N3 | [生やす / はやす , トムの父親は、トムが長髪にしたり、ヒゲを生やすのを認めない。]
+  - meaning_ko: 성장하다
+  - example_ko: 톰의 아버지는 톰이 긴 머리를 잡거나 수염을 낳는 것을 인정하지 않는다.
+- id: 13598 | level: N3 | [班 / はん , マークは建設班の中では働き者だった。]
+  - meaning_ko: 그룹
+  - example_ko: 마크는 건설반 안에서 일하는 사람이었다.
+- id: 13603 | level: N3 | [判 / はん , 私を批判するのは止めて！]
+  - meaning_ko: (종이나 책의) 크기
+  - example_ko: 나를 비판하지 마라!
+- id: 13607 | level: N3 | [版 / はん , 日本語版があったらいいな。]
+  - meaning_ko: 판
+  - example_ko: 일본어판이 있으면 좋겠다.
+- id: 13610 | level: N3 | [碑 / ひ , 兵士達は平和記念碑を建てた。]
+  - meaning_ko: 비문이 새겨진 비석
+  - example_ko: 군인들은 평화 기념비를 세웠다.
+- id: 13615 | level: N3 | [非行 / ひこう , 青少年の非行が急速に増加している。]
+  - meaning_ko: 과실
+  - example_ko: 청소년의 비행이 급속히 증가하고 있다.
+- id: 13620 | level: N3 | [票 / ひょう , すぐに伝票をお持ちします。]
+  - meaning_ko: 상표
+  - example_ko: 즉시 전표를 가지고 있습니다.
+- id: 13625 | level: N3 | [広まる / ひろまる , 悪い噂というものは、すぐに広まるものです。]
+  - meaning_ko: 퍼지다
+  - example_ko: 나쁜 소문은 바로 퍼지는 것입니다.
+- id: 13629 | level: N3 | [深める / ふかめる , 常に学び続け、知識を深める。]
+  - meaning_ko: 심화하다
+  - example_ko: 항상 계속 배우고 지식을 깊게합니다.
+- id: 13632 | level: N3 | [福 / ふく , 裕福に暮らす。]
+  - meaning_ko: 행운
+  - example_ko: 부유하게 살다.
+- id: 13636 | level: N3 | [振り / ふり , 腕を前後に振りなさい。]
+  - meaning_ko: 스타일
+  - example_ko: 팔을 앞뒤로 흔들어라.
+- id: 13641 | level: N3 | [経る / へる , ]
+  - meaning_ko: 통과하다
+- id: 13645 | level: N3 | [保護 / ほご , 彼女を保護する義務がある。]
+  - meaning_ko: 케어
+  - example_ko: 그녀를 보호할 의무가 있다.
+- id: 13650 | level: N3 | [保障 / ほしょう , 平等は憲法で保障されている。]
+  - meaning_ko: 보장하다
+  - example_ko: 평등은 헌법으로 보장된다.
+- id: 13655 | level: N3 | [補償 / ほしょう , 彼はお金でその事故の補償をした。]
+  - meaning_ko: 보상
+  - example_ko: 그는 돈으로 사고를 보상했다.
+- id: 13659 | level: N3 | [ほっと / ほっと , 老婆はほっと息をついてにっこり笑った。]
+  - meaning_ko: 안도감을 느끼다
+  - example_ko: 노파는 안심하고 숨을 쉬고 웃고 있었다.
+- id: 13664 | level: N3 | [前もって / まえもって , 彼は前もって荷物を送った。]
+  - meaning_ko: 미리
+  - example_ko: 그는 미리 수하물을 보냈다.
+- id: 13674 | level: N3 | [膜 / まく , 私の結膜炎は慢性です。]
+  - meaning_ko: 막
+  - example_ko: 내 결막염은 만성입니다.
+- id: 13680 | level: N3 | [マスコミ / マスコミ , イメージはマスコミの情報に形成される。]
+  - meaning_ko: 매스커뮤니케이션
+  - example_ko: 이미지는 언론 정보에 형성된다.
+- id: 13681 | level: N3 | [股 / また , 彼女は内股だ。]
+  - meaning_ko: 대퇴골
+  - example_ko: 그녀는 가랑이다.
+- id: 13690 | level: N3 | [マッサージ / マッサージ , 私にはマッサージが必要だ。]
+  - meaning_ko: 마사지
+  - example_ko: 나에게는 마사지가 필요하다.
+- id: 13697 | level: N3 | [見掛ける / みかける , 私はあなたを時々見掛ける。]
+  - meaning_ko: (어쩌다 보니)
+  - example_ko: 나는 당신을 때때로 보인다.
+- id: 13702 | level: N3 | [捲る / めくる , ]
+  - meaning_ko: 뒤집다
+- id: 13706 | level: N3 | [メッセージ / メッセージ , 副大統領はメッセージをラジオで伝えた。]
+  - meaning_ko: 메시지
+  - example_ko: 부 대통령은 메시지를 라디오로 전했다.
+- id: 13710 | level: N3 | [野党 / やとう , 野党は所得税減税法案を提出した。]
+  - meaning_ko: 야당
+  - example_ko: 야당은 소득세 감세법안을 제출했다.
+- id: 13716 | level: N3 | [優 / ゆう , 勿論最初の約束優先ということで謝ったわ。]
+  - meaning_ko: 우월
+  - example_ko: 물론 최초의 약속 우선이라는 것으로 사과했어.
+- id: 13721 | level: N3 | [有機 / ゆうき , 人間は複雑な有機体だ。]
+  - meaning_ko: 본질적인
+  - example_ko: 인간은 복잡한 유기체다.
+- id: 13726 | level: N3 | [世 / よ , 世界は奇人の巣だ。]
+  - meaning_ko: 세계
+  - example_ko: 세계는 기인의 둥지다.
+- id: 13730 | level: N3 | [良い / よい , 良い考えだね！]
+  - meaning_ko: 좋은
+  - example_ko: 좋은 생각이야!
+- id: 13737 | level: N3 | [予想 / よそう , 良い結果が予想される。]
+  - meaning_ko: 기대
+  - example_ko: 좋은 결과가 예상됩니다.
+- id: 13742 | level: N3 | [弱まる / よわまる , ]
+  - meaning_ko: 약화시키다
+- id: 13746 | level: N3 | [弱める / よわめる , 時は友情を深めるが、恋愛を弱める。]
+  - meaning_ko: 약화시키다
+  - example_ko: 때는 우정을 깊게 하지만 연애를 약화시킨다.
+- id: 13749 | level: N3 | [ラベル / ラベル , 彼は鞄にラベルを貼った。]
+  - meaning_ko: 상표
+  - example_ko: 그는 가방에 라벨을 붙였다.
+- id: 13754 | level: N3 | [ルール / ルール , 例外のないルールはない。]
+  - meaning_ko: 규칙
+  - example_ko: 예외가 없는 규칙은 없다.
+- id: 13759 | level: N3 | [枠 / わく , 彼はドア枠の下に立った。]
+  - meaning_ko: 액자
+  - example_ko: 그는 문틀 아래에 서 있었다.
+- id: 13764 | level: N3 | [表示 / ひょうじ , 箱の内容はラベルに表示されている。]
+  - meaning_ko: 표시하다
+  - example_ko: 상자의 내용은 라벨에 표시됩니다.
+- id: 976 | level: N4 | [踏む / ふむ , 割れたガラスを踏むな。]
+  - meaning_ko: 밟다
+  - example_ko: 깨진 유리를 밟지 마라.
+- id: 978 | level: N4 | [～区 / ～く , ]
+  - meaning_ko: ~ 지구
+- id: 980 | level: N4 | [すっと / すっと , 彼の首筋を血がすっと伝った。]
+  - meaning_ko: 똑바로
+  - example_ko: 그의 목덜미를 피가 완전히 전했다.
+- id: 982 | level: N4 | [盗む / ぬすむ , 盗むのは悪いことだ。]
+  - meaning_ko: 훔치다
+  - example_ko: 훔치는 것은 나쁜 일이다.
+- id: 984 | level: N4 | [大抵 / たいてい , 母は大抵大変忙しかった。]
+  - meaning_ko: 일반적으로
+  - example_ko: 어머니는 대개 매우 바빴다.
+- id: 986 | level: N4 | [とうとう / とうとう , 母はとうとう私の考えに従った。]
+  - meaning_ko: 마지막으로
+  - example_ko: 어머니는 마침내 내 생각을 따랐다.
+- id: 988 | level: N4 | [ガソリン / ガソリン , 大型車はガソリンを食う。]
+  - meaning_ko: 가솔린
+  - example_ko: 대형차는 가솔린을 먹는다.
+- id: 990 | level: N4 | [鳴る / なる , 未来への希望で胸が高鳴る。]
+  - meaning_ko: 소리를 내다
+  - example_ko: 미래에 대한 희망으로 가슴이 울린다.
+- id: 992 | level: N4 | [しっかり / しっかり , 皆さんネチケットはしっかり。]
+  - meaning_ko: 단단히
+  - example_ko: 여러분 네티켓은 확실히.
+- id: 994 | level: N4 | [生きる / いきる , 生きる意味を教えてくれ。]
+  - meaning_ko: 살기 위해
+  - example_ko: 사는 의미를 말해줘.
+- id: 995 | level: N4 | [苦い / にがい , 恋の味は苦い。]
+  - meaning_ko: 격렬한
+  - example_ko: 사랑의 맛은 쓴다.
+- id: 998 | level: N4 | [沸く / わく , トムは、やかんが沸くのを待っていました。]
+  - meaning_ko: 끓이다
+  - example_ko: 톰은 주전자가 끓을 때까지 기다리고있었습니다.
+- id: 1000 | level: N4 | [意見 / いけん , 両親は私の意見に反対している。]
+  - meaning_ko: 의견
+  - example_ko: 부모님은 내 의견에 반대하고 있습니다.
+- id: 1002 | level: N4 | [やはり; やっぱり / やはり; やっぱり , ]
+  - meaning_ko: 내 생각대로
+- id: 1004 | level: N4 | [漫画 / まんが , 僕の趣味は漫画を読む事です。]
+  - meaning_ko: 만화 (책)
+  - example_ko: 내 취미는 만화를 읽는 것입니다.
+- id: 1006 | level: N4 | [ステレオ / ステレオ , 自分のステレオを持っています。]
+  - meaning_ko: 스테레오 재생
+  - example_ko: 자신의 스테레오가 있습니다.
+- id: 1008 | level: N4 | [医学 / いがく , 彼女は医学生でした。]
+  - meaning_ko: 의학
+  - example_ko: 그녀는 의학생이었습니다.
+- id: 1010 | level: N4 | [テキスト / テキスト , ・テキストデータの誤字脱字を修正。]
+  - meaning_ko: 텍스트
+  - example_ko: · 텍스트 데이터의 오자 탈자를 수정.
+- id: 1012 | level: N4 | [～月 / ～つき , ]
+  - meaning_ko: 월
+- id: 1014 | level: N4 | [折る / おる , 木を折るな。]
+  - meaning_ko: 스냅하다
+  - example_ko: 나무를 접지 마라.
+- id: 1016 | level: N4 | [～会 / ～かい , ]
+  - meaning_ko: ~ 회의
+- id: 1018 | level: N4 | [うかがう / うかがう , 病気のため本日はうかがうことができませんでした。]
+  - meaning_ko: 묻다
+  - example_ko: 질병 때문에 오늘은 엿볼 수 없었습니다.
+- id: 1020 | level: N4 | [聞こえる / きこえる , 変な音が聞こえる。]
+  - meaning_ko: 들리다
+  - example_ko: 이상한 소리가 들린다.
+- id: 1022 | level: N4 | [僕 / ぼく , 僕はすごく太ってる。]
+  - meaning_ko: I (남성이 동등하거나 낮은 지위에 있는 사람에게 사용함)
+  - example_ko: 나는 굉장히 뚱뚱해.
+- id: 1023 | level: N4 | [必ず / かならず , 必ず弱火で煮立たないように煮ること。]
+  - meaning_ko: 확실히
+  - example_ko: 반드시 약한 불로 끓이지 않도록 삶는 것.
+- id: 1026 | level: N4 | [壊す / こわす , 文化は言語を破壊する。]
+  - meaning_ko: 깨다
+  - example_ko: 문화는 언어를 파괴한다.
+- id: 1028 | level: N4 | [怒る / おこる , 彼女が怒るのも当然だ。]
+  - meaning_ko: 화를 내다
+  - example_ko: 그녀가 화내는 것도 당연하다.
+- id: 1030 | level: N4 | [床屋 / とこや , 床屋に行きなさい。]
+  - meaning_ko: 이발소(가게)
+  - example_ko: 이발사에 가십시오.
+- id: 1032 | level: N4 | [オートバイ / オートバイ , 彼女はオートバイに上手に乗る。]
+  - meaning_ko: 오토바이 (lit: auto-bi(ke))
+  - example_ko: 그녀는 오토바이에 잘 타고.
+- id: 1034 | level: N4 | [運動 / うんどうする , 運動のためプールにも通い始めた頃でした。]
+  - meaning_ko: 운동
+  - example_ko: 운동을 위해 수영장에도 다니기 시작했을 무렵이었습니다.
+- id: 1036 | level: N4 | [止む / やむ , 雨は止む兆しが無い。]
+  - meaning_ko: 멈추다
+  - example_ko: 비는 멈출 조짐이 없다.
+- id: 1038 | level: N4 | [もし / もし , もし間違いを見つけたら訂正してください。]
+  - meaning_ko: 만약에
+  - example_ko: 실수를 발견하면 정정하십시오.
+- id: 1040 | level: N4 | [表 / おもて , 沈黙は同意を表す。]
+  - meaning_ko: 표면
+  - example_ko: 침묵은 동의를 나타낸다.
+- id: 1042 | level: N4 | [大学生 / だいがくせい , 妹は２１で大学生です。]
+  - meaning_ko: 대학생
+  - example_ko: 여동생은 21로 대학생입니다.
+- id: 1044 | level: N4 | [運転手 / うんてんしゅ , 彼はバスの運転手だ。]
+  - meaning_ko: 운전자 (직업별)
+  - example_ko: 그는 버스 운전사다.
+- id: 1046 | level: N4 | [予習 / よしゅう , 彼は予習した。]
+  - meaning_ko: 수업 준비 (수업을 위해)
+  - example_ko: 그는 예습했다.
+- id: 1048 | level: N4 | [心配 / しんぱいする , 心配しないで。]
+  - meaning_ko: 걱정하다
+  - example_ko: 걱정하지 마세요.
+- id: 1050 | level: N4 | [別 / べつ , 本当の自信と空威張りは別問題だ。]
+  - meaning_ko: 구별
+  - example_ko: 진정한 자신감과 공위감은 별문제다.
+- id: 1052 | level: N4 | [非常に / ひじょうに , 夏は、当地は非常に暑いです。]
+  - meaning_ko: 극도로
+  - example_ko: 여름은이 지역이 매우 덥습니다.
+- id: 1054 | level: N4 | [お宅 / おたく , 明日お宅に伺います。]
+  - meaning_ko: (다른 사람의) 집
+  - example_ko: 내일 집에 묻겠습니다.
+- id: 1056 | level: N4 | [柔らかい / やわらかい , 柔らかい便が出ます。]
+  - meaning_ko: 부드러움 (질감과 관련하여)
+  - example_ko: 부드러운 편이 나옵니다.
+- id: 1058 | level: N4 | [拾う / ひろう , タクシーを拾うのに苦労した。]
+  - meaning_ko: (무엇)을 집다
+  - example_ko: 택시를 데리러 고생했다.
+- id: 1060 | level: N4 | [～ございます / ～ございます , ]
+  - meaning_ko: (예의 바르게)
+- id: 1061 | level: N4 | [気 / き , 私はなぜか夜の方が元気だ。]
+  - meaning_ko: 영혼
+  - example_ko: 나는 왠지 밤이 더 좋다.
+- id: 1063 | level: N4 | [比べる / くらべる , 父親に比べると彼は深みがない。]
+  - meaning_ko: 비교하다
+  - example_ko: 아버지에 비하면 그는 깊이가 없다.
+- id: 1065 | level: N4 | [ほとんど / ほとんど , 列車はほとんど１時間遅れていた。]
+  - meaning_ko: 주로
+  - example_ko: 열차는 거의 1시간 늦었다.
+- id: 1066 | level: N4 | [つもり / つもり , 自分勝手にするつもりはない。]
+  - meaning_ko: 의도
+  - example_ko: 자신 마음대로 할 생각은 없다.
+- id: 1068 | level: N4 | [郊外 / こうがい , 彼女の家は郊外にある。]
+  - meaning_ko: 근교
+  - example_ko: 그녀의 집은 교외에 있다.
+- id: 1070 | level: N4 | [だめ / だめ , もうだめだ。]
+  - meaning_ko: 쓸모 없는
+  - example_ko: 이미 안돼.
+- id: 1072 | level: N4 | [売り場 / うりば , 切符売り場はどこですか。]
+  - meaning_ko: 물건 파는 곳
+  - example_ko: 표 매장은 어디입니까?
+- id: 1074 | level: N4 | [正月 / しょうがつ , 正月はすぐそこまで来ている。]
+  - meaning_ko: 새해
+  - example_ko: 설날은 바로 거기까지 왔다.
+- id: 1076 | level: N4 | [規則 / きそく , 不規則動詞の勉強は好きではない。]
+  - meaning_ko: 규칙
+  - example_ko: 불규칙 동사 공부는 좋아하지 않는다.
+- id: 1078 | level: N4 | [うん / うん , うんざりするのにももう疲れた。]
+  - meaning_ko: 네 (비공식)
+  - example_ko: 지쳐도 이미 지쳤다.
+- id: 1080 | level: N4 | [発音 / はつおん , 彼の発音は決して完全ではない。]
+  - meaning_ko: 발음
+  - example_ko: 그의 발음은 결코 완전하지 않다.
+- id: 1084 | level: N4 | [焼く / やく , 私の母は毎朝パンを焼く。]
+  - meaning_ko: 굽다
+  - example_ko: 나의 어머니는 매일 아침 빵을 굽는다.
+- id: 1085 | level: N4 | [屋上 / おくじょう , 昨夜、屋上から星を観察した。]
+  - meaning_ko: 옥상
+  - example_ko: 어젯밤 옥상에서 별을 관찰했다.
+- id: 1087 | level: N4 | [失礼 / しつれい , 失礼に振舞ったりしないのが一番だと思う。]
+  - meaning_ko: 무례
+  - example_ko: 실례에 행동하거나 하지 않는 것이 제일이라고 생각한다.
+- id: 1088 | level: N4 | [ごみ / ごみ , 人ごみは大嫌い。]
+  - meaning_ko: 쓰레기
+  - example_ko: 쓰레기는 싫어.
+- id: 1092 | level: N4 | [アフリカ / アフリカ , 野生の虎はアフリカでは見られません。]
+  - meaning_ko: 아프리카
+  - example_ko: 야생 호랑이는 아프리카에서 볼 수 없습니다.
+- id: 1094 | level: N4 | [点 / てん , カーテンに火が点いた。]
+  - meaning_ko: 표시
+  - example_ko: 커튼에 불이 켜졌다.
+- id: 1096 | level: N4 | [一生懸命 / いっしょうけんめい , 落第しないように一生懸命勉強しなさい。]
+  - meaning_ko: 매우 열심히 ("열심히 일하다"에서와 같이)
+  - example_ko: 낙제하지 않도록 열심히 공부하십시오.
+- id: 1097 | level: N4 | [今度 / こんど , 僕は今度の日曜日は勤務だ。]
+  - meaning_ko: 지금
+  - example_ko: 나는 이번 일요일은 근무다.
+- id: 1099 | level: N4 | [機会 / きかい , 別の機会を待て。]
+  - meaning_ko: 가능성
+  - example_ko: 다른 기회를 기다립니다.
+- id: 1101 | level: N4 | [建てる / たてる , 父は壁を建てるのに忙しい。]
+  - meaning_ko: 구축하다
+  - example_ko: 아버지는 벽을 세우기에 바쁘다.
+- id: 1104 | level: N4 | [複雑 / ふくざつ , 複雑炭水化物って何か知ってますか。]
+  - meaning_ko: 복잡성
+  - example_ko: 복잡한 탄수화물은 무엇인지 아십니까?
+- id: 1106 | level: N4 | [彼 / かれ , 彼は時々変です。]
+  - meaning_ko: 그
+  - example_ko: 그는 때때로 이상합니다.
+- id: 1108 | level: N4 | [いらっしゃる / いらっしゃる , 長くいらっしゃるつもりですか。]
+  - meaning_ko: -- いiku에 대한 경어 표현
+  - example_ko: 오랫동안 계시겠습니까?
+- id: 1110 | level: N4 | [布団 / ふとん , 布団をはがされた。]
+  - meaning_ko: 이불
+  - example_ko: 이불을 벗겼다.
+- id: 1112 | level: N4 | [大事 / だいじ , 体を大事にしなさい。]
+  - meaning_ko: 중요한
+  - example_ko: 몸을 돌보아라.
+- id: 1114 | level: N4 | [贈り物 / おくりもの , 彼女は贈り物を紙に包んだ。]
+  - meaning_ko: 선물
+  - example_ko: 그녀는 선물을 종이에 감쌌다.
+- id: 1116 | level: N4 | [泥棒 / どろぼう , 彼女は泥棒同然だ。]
+  - meaning_ko: 도둑
+  - example_ko: 그녀는 도둑과 같다.
+- id: 1118 | level: N4 | [～製 / ～せい , ]
+  - meaning_ko: ~에서 만든
+- id: 1120 | level: N4 | [注意 / ちゅうい , 十八禁なので要注意！]
+  - meaning_ko: 주의
+  - example_ko: 18금이므로 요주의!
+- id: 1122 | level: N4 | [台風 / たいふう , 嵐は発達して台風になった。]
+  - meaning_ko: 태풍
+  - example_ko: 아라시는 발달하여 태풍이 되었다.
+- id: 1124 | level: N4 | [日 / ひ , お誕生日おめでとうムーリエル！]
+  - meaning_ko: 해
+  - example_ko: 생일 축하 무리엘!
+- id: 1126 | level: N4 | [～軒 / ～けん , ]
+  - meaning_ko: 주택용 카운터
+- id: 1128 | level: N4 | [そう / そう , 面白そう！]
+  - meaning_ko: 정말
+  - example_ko: 재미있어!
+- id: 1130 | level: N4 | [通る / とおる , 彼女の声はよく通る。]
+  - meaning_ko: (을) 지나가다
+  - example_ko: 그녀의 목소리는 잘 통과한다.
+- id: 1131 | level: N4 | [過ぎる / すぎる , あまり食べ過ぎるな。]
+  - meaning_ko: 초과하다
+  - example_ko: 너무 먹지 마라.
+- id: 1133 | level: N4 | [レポート; リポート / レポート; リポート , ]
+  - meaning_ko: 보고서
+- id: 1136 | level: N4 | [葉 / は , 分からない言葉がたくさんある。]
+  - meaning_ko: 잎
+  - example_ko: 모르는 말이 많이 있다.
+- id: 1137 | level: N4 | [必要 / ひつよう , 君の助けが必要なんだ。]
+  - meaning_ko: 필요한
+  - example_ko: 너의 도움이 필요해.
+- id: 1140 | level: N4 | [課長 / かちょう , 彼女は課長に話しかけた。]
+  - meaning_ko: 과장
+  - example_ko: 그녀는 과장에게 말을 걸었다.
+- id: 1141 | level: N4 | [地震 / じしん , 壁が地震で崩れた。]
+  - meaning_ko: 지진
+  - example_ko: 벽이 지진으로 무너졌다.
+- id: 1143 | level: N4 | [すると / すると , 僕は彼女を幸せにすると言った。]
+  - meaning_ko: 그리고
+  - example_ko: 나는 그녀를 행복하게 만들었다고 말했다.
+- id: 1146 | level: N4 | [止める / やめる , 父にとって酒を止めるのは難しい。]
+  - meaning_ko: 끝내다
+  - example_ko: 아버지에게 술을 멈추는 것은 어렵다.
+- id: 1147 | level: N4 | [ガラス / ガラス , 彼女はガラスの破片で指を切った。]
+  - meaning_ko: 유리
+  - example_ko: 그녀는 유리 파편으로 손가락을 자른다.
+- id: 1149 | level: N4 | [～学部 / ～がくぶ , ]
+  - meaning_ko: 대학의 학과
+- id: 1151 | level: N4 | [厳しい / きびしい , 父は私にはとても厳しい。]
+  - meaning_ko: 딱딱한
+  - example_ko: 아버지는 나에게 매우 힘들다.
+- id: 1153 | level: N4 | [エスカレーター / エスカレーター , エスカレーターはどこですか？]
+  - meaning_ko: 에스컬레이터
+  - example_ko: 에스컬레이터는 어디입니까?
+- id: 1154 | level: N4 | [人口 / じんこう , 発展途上国の人口増加は急速だ。]
+  - meaning_ko: 인구
+  - example_ko: 개발도상국의 인구 증가는 급속하다.
+- id: 1156 | level: N4 | [月 / つき , 明日、彼は月に着陸する。]
+  - meaning_ko: 달
+  - example_ko: 내일, 그는 달에 착륙한다.
+- id: 1158 | level: N4 | [絹 / きぬ , 彼女は豪華な絹の服を着ていた。]
+  - meaning_ko: 명주
+  - example_ko: 그녀는 고급스러운 실크 옷을 입고 있었다.
+- id: 1161 | level: N4 | [ちっとも / ちっとも , 野球はちっとも好きではない。]
+  - meaning_ko: 전혀 (부정 동사)
+  - example_ko: 야구는 조금도 좋아하지 않는다.
+- id: 1163 | level: N4 | [深い / ふかい , 流れの静かな川は水が深い。]
+  - meaning_ko: 깊은
+  - example_ko: 흐름의 조용한 강은 물이 깊다.
+- id: 1165 | level: N4 | [壊れる / こわれる , 上述の車が壊れる。]
+  - meaning_ko: 부서지다
+  - example_ko: 위에서 언급 한 자동차가 부러집니다.
+- id: 1167 | level: N4 | [揺れる / ゆれる , 私は床が揺れるのを感じた。]
+  - meaning_ko: 흔들다
+  - example_ko: 나는 바닥이 흔들리는 것을 느꼈다.
+- id: 1169 | level: N4 | [落る / おちる , ]
+  - meaning_ko: 떨어지다
+- id: 1172 | level: N4 | [できるだけ / できるだけ , できるだけ安くあげようとした。]
+  - meaning_ko: 가능하다면
+  - example_ko: 가능한 한 싸게 주려고 했다.
+- id: 1173 | level: N4 | [悲しい / かなしい , 悲しい物語に涙を催した。]
+  - meaning_ko: 슬픈
+  - example_ko: 슬픈 이야기에 눈물을 주었다.
+- id: 1176 | level: N4 | [中学校 / ちゅうがっこう , 彼は中学校に入った。]
+  - meaning_ko: 중학생
+  - example_ko: 그는 중학교에 들어갔다.
+- id: 1178 | level: N4 | [ガス / ガス , 彼はガスを蓄えている。]
+  - meaning_ko: 가스
+  - example_ko: 그는 가스를 저장합니다.
+- id: 1180 | level: N4 | [祈る / いのる , 成功を祈るわ。]
+  - meaning_ko: 기도하다
+  - example_ko: 성공을 기원합니다.
+- id: 1182 | level: N4 | [盛ん / さかん , 彼は盛んにしている。]
+  - meaning_ko: 번영하는
+  - example_ko: 그는 번성했다.
+- id: 1184 | level: N4 | [アルバイト / アルバイト , 母は私がアルバイトをすることに反対なの。]
+  - meaning_ko: 아르바이트
+  - example_ko: 어머니는 내가 아르바이트를하는 것에 반대하는 거야.
+- id: 1186 | level: N4 | [起こす / おこす , 眠れる獅子は起こすな。]
+  - meaning_ko: (누군가를) 깨우다
+  - example_ko: 잠자는 사자는 일으키지 마라.
+- id: 1188 | level: N4 | [致す / いたす , 両極端は一致する。]
+  - meaning_ko: -- '수루'에 대한 매우 겸손한 표현 --
+  - example_ko: 양극단은 일치한다.
+- id: 1190 | level: N4 | [噛む / かむ , 窮鼠猫を噛む。]
+  - meaning_ko: 물다
+  - example_ko: 빈약한 고양이를 씹는다.
+- id: 1192 | level: N4 | [赤ちゃん / あかちゃん , 子供や赤ちゃんは生理的に苦手なの。]
+  - meaning_ko: 아기
+  - example_ko: 아이와 아기는 생리적으로 약하지.
+- id: 1194 | level: N4 | [浅い / あさい , 眠りが浅いんだ。]
+  - meaning_ko: 얕은
+  - example_ko: 잠이 얕다.
+- id: 1196 | level: N4 | [嘘 / うそ , 嘘ではないにしろ、ホラに近い。]
+  - meaning_ko: 거짓말하다
+  - example_ko: 거짓말이 아니더라도, 호라에 가깝다.
+- id: 1197 | level: N4 | [小説 / しょうせつ , 来月号から新連載小説が始まります。]
+  - meaning_ko: 소설
+  - example_ko: 다음 달호부터 신연재 소설이 시작됩니다.
+- id: 1199 | level: N4 | [親 / おや , 親友は何人いる？]
+  - meaning_ko: 부모
+  - example_ko: 가장 친한 친구는 몇 명입니까?
+- id: 1201 | level: N4 | [それに / それに , 本当を言うと私はそれに飽きた。]
+  - meaning_ko: 게다가
+  - example_ko: 사실을 말하면 나는 그것에 질렸다.
+- id: 1204 | level: N4 | [西洋 / せいよう , 彼は西洋文化が好きだ。]
+  - meaning_ko: 서부
+  - example_ko: 그는 서양 문화를 좋아한다.
+- id: 1205 | level: N4 | [思う / おもう , 私ならそう言っただろうと思う。]
+  - meaning_ko: 생각하다
+  - example_ko: 나라면 그렇게 말했을 거라고 생각한다.
+- id: 1208 | level: N4 | [パート (タイム) / パート (タイム) , ]
+  - meaning_ko: 파트타임(특히 여성 파트타임 직원)
+- id: 1210 | level: N4 | [時代 / じだい , 漱石は鴎外と同時代の人であった。]
+  - meaning_ko: 나이
+  - example_ko: 소세키는 鴎外와 동시대의 사람이었다.
+- id: 1212 | level: N4 | [申し上げる / もうしあげる , 反対申し上げるつもりは全然なかったのです。]
+  - meaning_ko: (겸손하게)말하다
+  - example_ko: 반대 말씀 드릴 생각은 전혀 없었습니다.
+- id: 1214 | level: N4 | [～式 / ～しき , ]
+  - meaning_ko: ~ 행사
+- id: 1216 | level: N4 | [出席 / しゅっせきする , 僕は会議に出席します。]
+  - meaning_ko: 출석
+  - example_ko: 나는 회의에 참석한다.
+- id: 1218 | level: N4 | [～家 / ～か , ]
+  - meaning_ko: ~을 전문으로 하는 사람
+- id: 1220 | level: N4 | [迎える / むかえる , 彼女は友人を迎える為に玄関へ行った。]
+  - meaning_ko: 환영하다
+  - example_ko: 그녀는 친구를 맞이하기 위해 현관에 갔다.
+- id: 1221 | level: N4 | [触る / さわる , それは触ると柔らかい。]
+  - meaning_ko: 만지다
+  - example_ko: 그것은 만지면 부드럽습니다.
+- id: 1224 | level: N4 | [建て / ～だて , 来年は新しい家を建てたい。]
+  - meaning_ko: ~ 이야기
+  - example_ko: 내년에는 새로운 집을 세우고 싶다.
+- id: 1226 | level: N4 | [社長 / しゃちょう , 父は社長に昇進した。]
+  - meaning_ko: 회사의 사장
+  - example_ko: 아버지는 사장으로 승진했다.
+- id: 1228 | level: N4 | [動物園 / どうぶつえん , 昨日動物園に行った。]
+  - meaning_ko: 동물원
+  - example_ko: 어제 동물원에 갔다.
+- id: 1230 | level: N4 | [捕まえる / つかまえる , 私たちは狐を捕まえるためにわなをしかけた。]
+  - meaning_ko: 잡으려고
+  - example_ko: 우리는 여우를 잡기 위해 똥을 냈다.
+- id: 1232 | level: N4 | [季節 / きせつ , 冬は私の一番好きな季節です。]
+  - meaning_ko: 계절 (날씨를 기준으로)
+  - example_ko: 겨울은 제가 가장 좋아하는 계절입니다.
+- id: 1234 | level: N4 | [寄る / よる , 明日の朝７時に誘いに寄るよ。]
+  - meaning_ko: 들르다
+  - example_ko: 내일 아침 7시에 권유에 들러.
+- id: 1236 | level: N4 | [決まる / きまる , 人の幸福は財産よりも人間性で決まる。]
+  - meaning_ko: 설정될
+  - example_ko: 사람의 행복은 재산보다 인간성으로 정해진다.
+- id: 1238 | level: N4 | [開く / ひらく , 瞼が大きく開く。]
+  - meaning_ko: 열다
+  - example_ko: 눈꺼풀이 크게 열린다.
+- id: 1242 | level: N4 | [逃げる / にげる , 彼は逃げる以外手だてがなかった。]
+  - meaning_ko: 탈출하다
+  - example_ko: 그는 도망치는 것 외에는 손이 없었다.
+- id: 1244 | level: N4 | [だから / だから , だから何？]
+  - meaning_ko: 그래서
+  - example_ko: 그래서 무엇?
+- id: 1246 | level: N4 | [残念 / ざんねん , 本当に残念だと思う。]
+  - meaning_ko: 후회
+  - example_ko: 정말 유감이라고 생각한다.
+- id: 1249 | level: N4 | [畳 / たたみ , 彼は畳の上に大の字になった。]
+  - meaning_ko: 다다미(일본식 밀짚자리)
+  - example_ko: 그는 다다미 위에 큰 글자가 되었다.
+- id: 1252 | level: N4 | [丁寧 / ていねい , 彼女は私に丁寧に頭を下げた。]
+  - meaning_ko: 예의 바른
+  - example_ko: 그녀는 나에게 정중하게 머리를 내렸다.
+- id: 1255 | level: N4 | [地理 / ちり , 彼は地理と歴史が好きだ。]
+  - meaning_ko: 지리학
+  - example_ko: 그는 지리와 역사를 좋아한다.
+- id: 1260 | level: N4 | [さっき / さっき , さっきなぜかマイクが入らなかった。]
+  - meaning_ko: 조금 전에
+  - example_ko: 아까 왠지 마이크가 들어가지 않았다.
+- id: 1263 | level: N4 | [怖い / こわい , 彼女は怖いもの知らずなの。]
+  - meaning_ko: 무서운
+  - example_ko: 그녀는 무서운 것 모르겠어.
+- id: 1266 | level: N4 | [包む / つつむ , 包む必要はありません。]
+  - meaning_ko: 포장하다
+  - example_ko: 포장할 필요가 없습니다.
+- id: 1268 | level: N4 | [なるべく / なるべく , 大至急お願い、なるべく早くお願いします。]
+  - meaning_ko: 가능하다면
+  - example_ko: 최대한 빨리 부탁드립니다. 가능한 빨리 부탁드립니다.
+- id: 1269 | level: N4 | [無理 / むり , 老人に新しいことは無理だ。]
+  - meaning_ko: 무모한
+  - example_ko: 노인에게 새로운 것은 무리다.
+- id: 1274 | level: N4 | [サンドイッチ / サンドイッチ , いくつサンドイッチ残ってるの？]
+  - meaning_ko: 샌드위치
+  - example_ko: 몇 샌드위치 남아 있니?
+- id: 1277 | level: N4 | [会議室 / かいぎしつ , 会議室は現在使用中です。]
+  - meaning_ko: 회의실
+  - example_ko: 회의실은 현재 사용 중입니다.
+- id: 1280 | level: N4 | [品物 / しなもの , 品物は昨日入荷しました。]
+  - meaning_ko: 상품
+  - example_ko: 물건은 어제 입하했습니다.
+- id: 1283 | level: N4 | [人形 / にんぎょう , 妹は人形で遊んでいる。]
+  - meaning_ko: 인형
+  - example_ko: 여동생은 인형으로 놀고 있다.
+- id: 1286 | level: N4 | [利用 / りよう , このサービスは一時的にご利用いただけません。]
+  - meaning_ko: 사용
+  - example_ko: 이 서비스는 일시적으로 사용할 수 없습니다.
+- id: 1290 | level: N4 | [飾る / かざる , 私は部屋を花で飾るのが好きだ。]
+  - meaning_ko: 장식하다
+  - example_ko: 나는 방을 꽃으로 장식하는 것을 좋아한다.
+- id: 1295 | level: N4 | [恥ずかしい / はずかしい , 貧乏であることを恥ずかしいと思わない。]
+  - meaning_ko: 부끄러운
+  - example_ko: 가난하다는 것을 부끄럽다고 생각하지 않는다.
+- id: 1298 | level: N4 | [いくら～ても / いくら～ても , ]
+  - meaning_ko: 아무리 많아도 ~
+- id: 1301 | level: N4 | [用事 / ようじ , 彼は用事で出かけた。]
+  - meaning_ko: 챙겨야 할 사업
+  - example_ko: 그는 용사로 나갔다.
+- id: 1302 | level: N4 | [ビル / ビル , そのビルは日本一高い建物です。]
+  - meaning_ko: (약어) 건물
+  - example_ko: 그 빌딩은 일본 제일 높은 건물입니다.
+- id: 1305 | level: N4 | [けんかする / けんかする , 私はよく彼女とけんかする。]
+  - meaning_ko: 싸움
+  - example_ko: 나는 잘 그녀와 싸운다.
+- id: 1307 | level: N4 | [頑張る / がんばる , よし、気合入れて頑張るか。]
+  - meaning_ko: 최선을 다하려고
+  - example_ko: 좋아, 기합 넣어 열심히 할까.
+- id: 1311 | level: N4 | [投げる / なげる , 速球を投げる。]
+  - meaning_ko: 투구하다
+  - example_ko: 속구를 던진다.
+- id: 1314 | level: N4 | [故障 / こしょうする , 冷水機が故障している。]
+  - meaning_ko: 고장
+  - example_ko: 냉수기가 고장났습니다.
+- id: 1317 | level: N4 | [力 / ちから , 私の力を甘く見ないで。]
+  - meaning_ko: 힘
+  - example_ko: 내 힘을 달게 보지 마라.
+- id: 1320 | level: N4 | [受ける / うける , 父は手術を受ける事になっている。]
+  - meaning_ko: (시험을 치르다
+  - example_ko: 아버지는 수술을 받게 되어 있다.
+- id: 1325 | level: N4 | [気分 / きぶん , 気分がよくないんだ。]
+  - meaning_ko: 감정
+  - example_ko: 기분이 좋지 않아.
+- id: 1328 | level: N4 | [間違える / まちがえる , 彼は英語を書くと必ず間違える。]
+  - meaning_ko: 실수하다
+  - example_ko: 그는 영어를 쓰면 반드시 실수한다.
+- id: 1331 | level: N4 | [そんな / そんな , そんなことは起きないでしょう。]
+  - meaning_ko: 그런
+  - example_ko: 그런 일은 일어나지 않을 것입니다.
+- id: 1334 | level: N4 | [星 / ほし , 隕石が燃えて、流星となる。]
+  - meaning_ko: 별
+  - example_ko: 운석이 타오르고 유성이 된다.
+- id: 1337 | level: N4 | [場合 / ばあい , 最悪の場合を考えておこう。]
+  - meaning_ko: 사례
+  - example_ko: 최악의 경우를 생각해 봅시다.
+- id: 1340 | level: N4 | [やっと / やっと , 論争にやっとけりが付いた。]
+  - meaning_ko: 마침내
+  - example_ko: 논쟁에 겨우 뒤흔들었다.
+- id: 1342 | level: N4 | [足りる / たりる , それだけで十分足りるだろう。]
+  - meaning_ko: 충분하다
+  - example_ko: 그것만으로 충분히 충분할 것이다.
+- id: 1345 | level: N4 | [行う / おこなう , 彼は系統立った調査を行うことにした。]
+  - meaning_ko: 수행하다
+  - example_ko: 그는 체계적인 조사를 하기로 결정했다.
+- id: 1347 | level: N4 | [ぶどう / ぶどう , ぶどう酒を一瓶ください。]
+  - meaning_ko: 포도
+  - example_ko: 포도주를 한 병 주세요.
+- id: 1348 | level: N4 | [無くなる / なくなる , 金は持っていると無くなる。]
+  - meaning_ko: 사라지다
+  - example_ko: 금은 가지고 있으면 분실된다.
+- id: 1353 | level: N4 | [準備 / じゅんびする , 明日の準備で忙しい。]
+  - meaning_ko: 준비하다
+  - example_ko: 내일 준비에 바쁘다.
+- id: 1354 | level: N4 | [世界 / せかい , 世界は奇人の巣だ。]
+  - meaning_ko: 세계
+  - example_ko: 세계는 기인의 둥지다.
+- id: 1356 | level: N4 | [住所 / じゅうしょ , 名前と住所を言ってください。]
+  - meaning_ko: 주소
+  - example_ko: 이름과 주소를 말하십시오.
+- id: 1362 | level: N4 | [再来月 / さらいげつ , 再来月は１２月だ。]
+  - meaning_ko: 다음 달
+  - example_ko: 재래달은 12월이다.
+- id: 1364 | level: N4 | [林 / はやし , 林に竹が目立つ。]
+  - meaning_ko: 숲
+  - example_ko: 숲에 대나무가 눈에 띈다.
+- id: 1367 | level: N4 | [倍 / ばい , 僕の蔵書は彼の二倍だ。]
+  - meaning_ko: 더블
+  - example_ko: 내 장서는 그의 두 배다.
+- id: 1371 | level: N4 | [痩せる / やせる , 痩せる必要がないというのは残念だ。]
+  - meaning_ko: 체중 감량
+  - example_ko: 슬리밍할 필요가 없다는 것은 유감이다.
+- id: 1374 | level: N4 | [線 / せん , やだストッキング伝線しちゃってる。]
+  - meaning_ko: 선
+  - example_ko: 야다 스타킹 전선 해 버리고 있다.
+- id: 1377 | level: N4 | [戦争 / せんそう , 老いも若きも戦争にいった。]
+  - meaning_ko: 전쟁
+  - example_ko: 늙어도 젊음도 전쟁에 갔다.
+- id: 1381 | level: N4 | [決める / きめる , 屋根の勾配をどうするか決めるのはとても重要です。]
+  - meaning_ko: 결정하다 (동사)
+  - example_ko: 지붕의 기울기를 어떻게 할지 결정하는 것은 매우 중요합니다.
+- id: 1385 | level: N4 | [調べる / しらべる , 排卵の有無を調べる方法はありますか？]
+  - meaning_ko: 확인하다
+  - example_ko: 배란의 유무를 조사하는 방법이 있습니까?
+- id: 1388 | level: N4 | [寝坊 / ねぼう , 彼女は朝寝坊だ。]
+  - meaning_ko: 늦잠을 자다
+  - example_ko: 그녀는 아침 침상이다.
+- id: 1390 | level: N4 | [パパ / パパ , 俺のパパはダメだと言った。]
+  - meaning_ko: 아빠
+  - example_ko: 내 아빠는 좋지 않다고 말했다.
+- id: 1394 | level: N4 | [光る / ひかる , 使っている鎌は光る。]
+  - meaning_ko: 빛나다
+  - example_ko: 사용하고 있는 낫은 빛난다.
+- id: 1396 | level: N4 | [夫 / おっと , 夫と娘はぐっすりと眠っている。]
+  - meaning_ko: 남편
+  - example_ko: 남편과 딸은 푹 자고 있다.
+- id: 1399 | level: N4 | [雲 / くも , 雷雲が谷一面にたれこめていた。]
+  - meaning_ko: 구름
+  - example_ko: 뇌운이 계곡 일면에 접어들었다.
+- id: 1401 | level: N4 | [坂 / さか , 彼はもう下り坂だね。]
+  - meaning_ko: 경사
+  - example_ko: 그는 이미 내리막이다.
+- id: 1406 | level: N4 | [～(て) しまう / ～(て) しまう , ]
+  - meaning_ko: ~을 끝내다
+- id: 1409 | level: N4 | [飛行場 / ひこうじょう , 飛行機はすでに飛行場を立っていた。]
+  - meaning_ko: 공항
+  - example_ko: 비행기는 이미 비행장을 서 있었다.
+- id: 1412 | level: N4 | [柔道 / じゅうどう , 柔道を練習しています。]
+  - meaning_ko: 유도
+  - example_ko: 유도를 연습하고 있습니다.
+- id: 1415 | level: N4 | [決して / けっして , 人間は決して永遠には生きられないものだ。]
+  - meaning_ko: 절대
+  - example_ko: 인간은 결코 영원히 살 수 없는 것이다.
+- id: 1418 | level: N4 | [事務所 / じむしょ , 明日の朝、必ず事務所にきなさい。]
+  - meaning_ko: 사무실
+  - example_ko: 내일 아침, 반드시 사무실에 오세요.
+- id: 1420 | level: N4 | [連絡 / れんらく , 連絡をとりつづけて。]
+  - meaning_ko: 의사소통
+  - example_ko: 연락을 계속해.
+- id: 1423 | level: N4 | [小学校 / しょうがっこう , 彼は大学教授というよりむしろ小学校の教師である。]
+  - meaning_ko: 초등학교
+  - example_ko: 그는 대학 교수보다는 오히려 초등학교 교사이다.
+- id: 1426 | level: N4 | [客 / きゃく , お客様、もう少しお静かに。]
+  - meaning_ko: 손님
+  - example_ko: 고객, 조금 더 조용히.
+- id: 1429 | level: N4 | [昔 / むかし , 戸籍上の縁は切れても、昔日の絆はそのままだ。]
+  - meaning_ko: 옛날
+  - example_ko: 호적상의 인연은 끊어져도, 옛날의 유대는 그대로.
+- id: 1432 | level: N4 | [美しい / うつくしい , 人生は美しい。]
+  - meaning_ko: 아름다운
+  - example_ko: 인생은 아름답습니다.
+- id: 1435 | level: N4 | [捨てる / すてる , ここにゴミ捨てるべからず。]
+  - meaning_ko: (쓰레기를) 버리다
+  - example_ko: 여기에 쓰레기를 버릴 수 없어.
+- id: 1438 | level: N4 | [なさる / なさる , 病気が全快なさるように。]
+  - meaning_ko: -- sururu에 대한 경어 표현 --
+  - example_ko: 질병이 전쾌한 것처럼.
+- id: 1440 | level: N4 | [事 / こと , 作り事はすべて、真実だ。]
+  - meaning_ko: 것들)
+  - example_ko: 제작은 모두 진실이다.
+- id: 1445 | level: N4 | [どんどん / どんどん , 霧がどんどん濃くなっている。]
+  - meaning_ko: 빠르고 꾸준히
+  - example_ko: 안개가 점점 진해지고 있다.
+- id: 1447 | level: N4 | [試合 / しあい , 友達とテニスの試合をしたが負けた。]
+  - meaning_ko: 성냥
+  - example_ko: 친구와 테니스 경기를 했지만 졌다.
+- id: 1450 | level: N4 | [適当 / てきとう , 適当な語で空所を満たせ。]
+  - meaning_ko: 적합
+  - example_ko: 적당한 말로 공소를 채우십시오.
+- id: 1453 | level: N4 | [素晴らしい / すばらしい , 彼女は素晴らしい字を書く。]
+  - meaning_ko: 아주 멋진
+  - example_ko: 그녀는 멋진 글자를 씁니다.
+- id: 1456 | level: N4 | [美術館 / びじゅつかん , 美術館はどこにありますか。]
+  - meaning_ko: 미술관
+  - example_ko: 박물관은 어디에 있습니까?
+- id: 1459 | level: N4 | [文法 / ぶんぽう , 文法的に正しい文章を作るよう心がけるべきだ。]
+  - meaning_ko: 문법
+  - example_ko: 문법적으로 올바른 문장을 만들도록 유의해야 한다.
+- id: 1462 | level: N4 | [終わり / おわり , 遊びは終わりだ。]
+  - meaning_ko: 끝
+  - example_ko: 놀이는 끝이다.
+- id: 1465 | level: N4 | [壁 / かべ , データ化して、壁紙も作ってある。]
+  - meaning_ko: 벽
+  - example_ko: 데이터화해, 벽지도 만들고 있다.
+- id: 1468 | level: N4 | [一度 / いちど , 両方一度にはできんよ。]
+  - meaning_ko: 한 번
+  - example_ko: 둘 다 한번에 할 수 없어.
+- id: 1471 | level: N4 | [お礼 / おれい , 前もってお礼を申し上げます。]
+  - meaning_ko: 감사의 표현
+  - example_ko: 미리 감사드립니다.
+- id: 1473 | level: N4 | [親切 / しんせつ , 老人に親切にしなさい。]
+  - meaning_ko: 친절
+  - example_ko: 노인에게 친절하게하십시오.
+- id: 1475 | level: N4 | [知らせる / しらせる , 着いたら電報で知らせるよ。]
+  - meaning_ko: 통지하다
+  - example_ko: 도착하면 전보로 알려줄게.
+- id: 1478 | level: N4 | [歯医者 / はいしゃ , 明日は歯医者へいかねばならないでしょう。]
+  - meaning_ko: 치과 의사
+  - example_ko: 내일은 치과 의사에게 가야 할 것입니다.
+- id: 1482 | level: N4 | [熱心 / ねっしん , 彼女は非常に研究熱心だった。]
+  - meaning_ko: 열광
+  - example_ko: 그녀는 매우 연구 열심이었다.
+- id: 1484 | level: N4 | [始める / はじめる , 問題はいつ始めるかだ。]
+  - meaning_ko: 시작하다
+  - example_ko: 문제는 언제 시작할 것인가.
+- id: 1486 | level: N4 | [もらう / もらう , 労働者が給料をもらうのは当然だ。]
+  - meaning_ko: 받다
+  - example_ko: 노동자가 급료를 받는 것은 당연하다.
+- id: 1489 | level: N4 | [泣く / なく , さぁ笑って、泣くのは後！]
+  - meaning_ko: 울다
+  - example_ko: 자 웃고, 울음은 후!
+- id: 1492 | level: N4 | [治る / なおる , 風邪が治るのに長くかかった。]
+  - meaning_ko: 나아지기 위해
+  - example_ko: 감기에 걸리는 데 오랜 시간이 걸렸다.
+- id: 1495 | level: N4 | [熱 / ねつ , 情熱は苦悩を生む。]
+  - meaning_ko: 발열
+  - example_ko: 열정은 고뇌를 낳는다.
+- id: 1498 | level: N4 | [お祭り / おまつり , そのお祭りを見たいのですが。]
+  - meaning_ko: 제전
+  - example_ko: 그 축제를 보고 싶습니다만.
+- id: 1503 | level: N4 | [水道 / すいどう , 水道水は飲まないほうがいいよ。]
+  - meaning_ko: 수도 서비스
+  - example_ko: 수돗물은 마시지 않는 것이 좋다.
+- id: 1506 | level: N4 | [匂い / におい , 僕は匂いを嗅いだ。]
+  - meaning_ko: 냄새
+  - example_ko: 나는 냄새를 맡았다.
+- id: 1509 | level: N4 | [ベル / ベル , ３作目はレベルが一段上でした。]
+  - meaning_ko: 벨
+  - example_ko: 3번째는 레벨이 1단 위였습니다.
+- id: 1512 | level: N4 | [赤ん坊 / あかんぼう , 赤ん坊の世話を焼けるのが嬉しい。]
+  - meaning_ko: 아기
+  - example_ko: 아기를 돌보는 것이 기쁘다.
+- id: 1515 | level: N4 | [おかしい / おかしい , 父はおかしい事を言うのが好きだ。]
+  - meaning_ko: 이상한
+  - example_ko: 아버지는 재미있는 것을 말하는 것을 좋아한다.
+- id: 1518 | level: N4 | [事故 / じこ , 連日交通事故が起きる。]
+  - meaning_ko: 사고
+  - example_ko: 연일교통사고가 일어난다.
+- id: 1521 | level: N4 | [変 / へん , 彼は時々変です。]
+  - meaning_ko: 이상한
+  - example_ko: 그는 때때로 이상합니다.
+- id: 1524 | level: N4 | [辞典 / じてん , トムは中日辞典を買った。]
+  - meaning_ko: 백과 사전
+  - example_ko: 톰은 주니치 사전을 샀다.
+- id: 1528 | level: N4 | [残る / のこる , 彼女は行くか残るかどちらかだった。]
+  - meaning_ko: 남아있다 (v.i.)
+  - example_ko: 그녀는 가거나 남아 있는 어느 쪽이든이었다.
+- id: 1532 | level: N4 | [立てる / たてる , 僕は機械を組み立てるのが好きだ。]
+  - meaning_ko: (무엇을) 일어서다
+  - example_ko: 나는 기계를 조립하는 것을 좋아한다.
+- id: 1534 | level: N4 | [くれる / くれる , 一緒に旅行してくれる人がいないんだ。]
+  - meaning_ko: 주다
+  - example_ko: 함께 여행해 줄 사람이 없어.
+- id: 1538 | level: N4 | [～員 / ～いん , ]
+  - meaning_ko: ~의 회원
+- id: 1540 | level: N4 | [原因 / げんいん , 投稿一覧の下の凡例を見て原因が分かりました。]
+  - meaning_ko: 원인
+  - example_ko: 투고 일람 아래의 범례를 보고 원인을 알았습니다.
+- id: 1543 | level: N4 | [驚く / おどろく , 驚くことではないね。]
+  - meaning_ko: 놀라다
+  - example_ko: 놀랍지 않아.
+- id: 1547 | level: N4 | [いただく / 頂く , 会っていただく時間はおありでしょうか。]
+  - meaning_ko: -- たべRU 및 のむ에 대한 매우 겸손한 표현
+  - example_ko: 만나는 시간이 있나요?
+- id: 1550 | level: N4 | [祖母 / そぼ , 祖母の遺灰は寺院に置かれた骨壷に入っている。]
+  - meaning_ko: 할머니
+  - example_ko: 할머니의 유회는 사원에 놓인 골반에 들어 있다.
+- id: 1552 | level: N4 | [場所 / ばしょ , この場所には不思議な雰囲気がある。]
+  - meaning_ko: 장소
+  - example_ko: 이 장소에는 이상한 분위기가 있다.
+- id: 1554 | level: N4 | [答 / こたえ , 何て答えたの？]
+  - meaning_ko: 답변
+  - example_ko: 뭐 대답했어?
+- id: 1557 | level: N4 | [もちろん / もちろん , 無罪の人々は、もちろん放免された。]
+  - meaning_ko: 틀림없이
+  - example_ko: 무죄의 사람들은 물론 방면되었다.
+- id: 1560 | level: N4 | [漬ける / つける , 私のおばあちゃん、漬物を漬けるのが上手なんだよ。]
+  - meaning_ko: 담그다
+  - example_ko: 내 할머니, 절임을 담그는 것이 좋다.
+- id: 1564 | level: N4 | [受付 / うけつけ , 受付で聞いてご覧なさい。]
+  - meaning_ko: 리셉션(ist) 데스크
+  - example_ko: 접수에서 듣고 보십시오.
+- id: 1566 | level: N4 | [内 / うち , 内気な人は外向的な人より短命？]
+  - meaning_ko: 이내에
+  - example_ko: 수줍은 사람은 외향적인 사람보다 단명?
+- id: 1568 | level: N4 | [スクリーン / スクリーン , トムはスクリーンに釘付けだった。]
+  - meaning_ko: 화면
+  - example_ko: 톰은 스크린에 못을 박았다.
+- id: 1571 | level: N4 | [増える / ふえる , 除草剤耐性品種でなぜ収量が増えるのか？]
+  - meaning_ko: 증가하다
+  - example_ko: 제초제 내성 품종으로 왜 수율이 증가하는가?
+- id: 1574 | level: N4 | [または / または , 今は彼らは小型車または中型車を好む。]
+  - meaning_ko: 또는
+  - example_ko: 지금 그들은 소형 차 또는 중형차를 좋아한다.
+- id: 1579 | level: N4 | [けがする / けがする , 特定の食べ物を食べた後に、胸やけがするのですか？]
+  - meaning_ko: 부상 (물체를 움직이기 위해)
+  - example_ko: 특정 음식을 먹은 후 가슴이나 부상을 입습니까?
+- id: 1582 | level: N4 | [以下 / いか , 彼はまだ４０歳以下だ。]
+  - meaning_ko: 미만
+  - example_ko: 그는 아직 40세 이하다.
+- id: 1585 | level: N4 | [選ぶ / えらぶ , 友達を選ぶ時は冷静に。]
+  - meaning_ko: 선택하다
+  - example_ko: 친구를 선택할 때는 냉정하게.
+- id: 1588 | level: N4 | [～ばかり / ～ばかり , ]
+  - meaning_ko: 방금 했어요 ~
+- id: 1591 | level: N4 | [心 / こころ , 心配しないで。]
+  - meaning_ko: 마음
+  - example_ko: 걱정하지 마세요.
+- id: 1595 | level: N4 | [～だす / ～だす , ]
+  - meaning_ko: ~을 시작하다
+- id: 1597 | level: N4 | [サラダ / サラダ , 彼女は魚をサラダ油で揚げた。]
+  - meaning_ko: 샐러드
+  - example_ko: 그녀는 물고기를 샐러드 기름으로 튀겼다.
+- id: 1601 | level: N4 | [届ける / とどける , これを届けるよう頼まれたんです。]
+  - meaning_ko: 배달하다 (v.t.)
+  - example_ko: 이것을 전달하도록 부탁했습니다.
+- id: 1604 | level: N4 | [挨拶 / あいさつする , 彼女は私に『おはよう』と挨拶をした。]
+  - meaning_ko: 인사하다
+  - example_ko: 그녀는 나에게 '안녕하세요'라고 인사를 했다.
+- id: 1607 | level: N4 | [景色 / けしき , 離れて見ると景色に魅力がつく。]
+  - meaning_ko: 경치
+  - example_ko: 멀리 보면 경치에 매력이 붙는다.
+- id: 1610 | level: N4 | [確か / たしか , それは確かに一案です。]
+  - meaning_ko: 내 기억이 맞다면
+  - example_ko: 확실히 한 방안입니다.
+- id: 1611 | level: N4 | [ステーキ / ステーキ , ステーキがもっと欲しい。]
+  - meaning_ko: 스테이크
+  - example_ko: 스테이크를 더 원한다.
+- id: 1613 | level: N4 | [食料品 / しょくりょうひん , 日本の食料品を扱っていますか。]
+  - meaning_ko: 식료품
+  - example_ko: 일본 식료품을 다루고 있습니까?
+- id: 1616 | level: N4 | [森 / もり , 森林の空気はおいしい。]
+  - meaning_ko: 숲
+  - example_ko: 숲의 공기는 맛있다.
+- id: 1620 | level: N4 | [以内 / いない , 徒歩５分以内に着くはずです。]
+  - meaning_ko: 이내에
+  - example_ko: 도보 5분 이내에 도착할 것입니다.
+- id: 1625 | level: N4 | [予定 / よてい , 予定日の夕方に破水しました。]
+  - meaning_ko: 계획
+  - example_ko: 예정일 저녁에 파수했습니다.
+- id: 1627 | level: N4 | [オーバー / オーバー , 彼女は外出する前にオーバーをきた。]
+  - meaning_ko: 외투
+  - example_ko: 그녀는 외출하기 전에 넘어졌다.
+- id: 1631 | level: N4 | [乾く / かわく , 皮は乾くにつれて堅くなった。]
+  - meaning_ko: 건조해지다
+  - example_ko: 피부는 마르면서 단단해졌다.
+- id: 1633 | level: N4 | [石 / いし , この板状の固い岩石の層をプレートと呼ぶ。]
+  - meaning_ko: 결석
+  - example_ko: 이 판상의 단단한 암석의 층을 플레이트라고 부른다.
+- id: 1636 | level: N4 | [思い出す / おもいだす , 彼を見ると必ず兄を思い出す。]
+  - meaning_ko: 회상하다
+  - example_ko: 그를 보면 반드시 형을 기억한다.
+- id: 1639 | level: N4 | [踊る / おどる , 彼女は踊るのが上手です。]
+  - meaning_ko: 춤을 추다
+  - example_ko: 그녀는 춤추는 것이 좋다.
+- id: 1641 | level: N4 | [細かい / こまかい , 彼等は細かい差異に気がつかなかった。]
+  - meaning_ko: 작은
+  - example_ko: 그들은 미세한 차이를 깨닫지 못했습니다.
+- id: 1644 | level: N4 | [塗る / ぬる , 壁を塗るつもりです。]
+  - meaning_ko: 그림을 그리다
+  - example_ko: 벽을 칠 것입니다.
+- id: 1647 | level: N4 | [ご主人 / ごしゅじん , ご主人はご在宅ですか。]
+  - meaning_ko: (당신의
+  - example_ko: 남편은 재택입니까?
+- id: 1651 | level: N4 | [珍しい / めずらしい , 有名人と偶然会うのは珍しい。]
+  - meaning_ko: 특이한
+  - example_ko: 유명인과 우연히 만나는 것은 드물다.
+- id: 1654 | level: N4 | [用 / よう , 「信用して」と彼は言った。]
+  - meaning_ko: 심부름
+  - example_ko: "신용해"라고 그는 말했다.
+- id: 1658 | level: N4 | [公務員 / こうむいん , 私は公務員です。]
+  - meaning_ko: 공무원
+  - example_ko: 나는 공무원입니다.
+- id: 1660 | level: N4 | [お嬢さん / おじょうさん , お嬢さんのお名前は？]
+  - meaning_ko: (누군가의) 딸 (공손한)
+  - example_ko: 아가씨의 이름은?
+- id: 1663 | level: N4 | [用意 / ようい , 用意はいいかい。]
+  - meaning_ko: 준비
+  - example_ko: 준비는 좋다.
+- id: 1667 | level: N4 | [探す / さがす , 彼は真珠を探すのをやめた。]
+  - meaning_ko: 검색하다
+  - example_ko: 그는 진주를 찾는 것을 중단했다.
+- id: 1669 | level: N4 | [形 / かたち , 洗ったあと引っ張って形にして。]
+  - meaning_ko: 모양
+  - example_ko: 씻은 후 당겨 모양으로 해.
+- id: 1673 | level: N4 | [運転 / うんてんする , 旅行中、ジョンと私は交替で車を運転した。]
+  - meaning_ko: 운전
+  - example_ko: 여행하는 동안 존과 나는 교체로 차를 운전했다.
+- id: 1675 | level: N4 | [すっかり / すっかり , 夜がすっかり更けた。]
+  - meaning_ko: 모두
+  - example_ko: 밤이 완전히 바뀌었다.
+- id: 1679 | level: N4 | [アナウンサー / アナウンサー , 私は将来テレビのアナウンサーになりたい。]
+  - meaning_ko: 아나운서
+  - example_ko: 나는 미래에 TV 아나운서가되고 싶다.
+- id: 1681 | level: N4 | [お土産 / おみやげ , 彼はお土産をもって帰った。]
+  - meaning_ko: 기념품
+  - example_ko: 그는 기념품으로 돌아왔다.
+- id: 1685 | level: N4 | [消しゴム / けしゴム , 消しゴム借りていい？]
+  - meaning_ko: 지우개
+  - example_ko: 지우개를 빌릴 수 있습니까?
+- id: 1688 | level: N4 | [旅館 / りょかん , 日没後彼らはその旅館に着いた。]
+  - meaning_ko: 일본식 여관
+  - example_ko: 일몰 후 그들은 그 여관에 도착했다.
+- id: 1691 | level: N4 | [海岸 / かいがん , 別荘は海岸にある。]
+  - meaning_ko: 해안
+  - example_ko: 별장은 해안에 있다.
+- id: 1694 | level: N4 | [寂しい / さびしい , 彼女がいなくてとても寂しい。]
+  - meaning_ko: 외로운
+  - example_ko: 그녀가 없어서 매우 외롭다.
+- id: 1697 | level: N4 | [火 / ひ , カーテンに火が点いた。]
+  - meaning_ko: 불
+  - example_ko: 커튼에 불이 켜졌다.
+- id: 1700 | level: N4 | [育てる / そだてる , 羊や牛を育てることもできるだろう。]
+  - meaning_ko: 올리다 (v.t.)
+  - example_ko: 양이나 소를 키울 수도 있을 것이다.
+- id: 1702 | level: N4 | [味噌 / みそ , 味噌汁が温まった。]
+  - meaning_ko: 된장
+  - example_ko: 된장국이 따뜻해졌다.
+- id: 1705 | level: N4 | [お祝い / おいわい , 心からお祝いを申し上げます。]
+  - meaning_ko: 축하
+  - example_ko: 진심으로 축하드립니다.
+- id: 1708 | level: N4 | [乗り物 / のりもの , 乗り物は子供向けである。]
+  - meaning_ko: 차량
+  - example_ko: 놀이기구는 어린이를위한 것입니다.
+- id: 1711 | level: N4 | [案内 / あんないする , 僕がこの町を案内しましょうか。]
+  - meaning_ko: 정보
+  - example_ko: 제가 이 마을을 안내할까요?
+- id: 1716 | level: N4 | [通う / かよう , 私は歩いて学校に通う。]
+  - meaning_ko: 앞뒤로 이동
+  - example_ko: 나는 걷고 학교에 다닌다.
+- id: 1720 | level: N4 | [連れる / つれる , ]
+  - meaning_ko: 이끌다
+- id: 1722 | level: N4 | [技術 / ぎじゅつ , 技術が追いつくまでに5年はかかるだろう。]
+  - meaning_ko: 기술
+  - example_ko: 기술이 따라잡기까지 5년은 걸릴 것이다.
+- id: 1725 | level: N4 | [小鳥 / ことり , 彼女は小鳥を注意して見つめた。]
+  - meaning_ko: 작은 새
+  - example_ko: 그녀는 작은 새를 조심스럽게 바라 보았다.
+- id: 1728 | level: N4 | [下宿 / げしゅく , 彼女は学生を下宿させている。]
+  - meaning_ko: 하숙
+  - example_ko: 그녀는 학생을 하숙시키고 있다.
+- id: 1732 | level: N4 | [ジャム / ジャム , そのジャムをちょっとなめてみた。]
+  - meaning_ko: 잼
+  - example_ko: 그 잼을 조금 핥아 보았다.
+- id: 1737 | level: N4 | [招待 / しょうたいする , 夕食に招待されてうれしい。]
+  - meaning_ko: 초대
+  - example_ko: 저녁 식사에 초대되어 기쁩니다.
+- id: 1741 | level: N4 | [鏡 / かがみ , 目は心の鏡。]
+  - meaning_ko: 거울
+  - example_ko: 눈은 마음의 거울.
+- id: 1748 | level: N4 | [はず / はず , どこの関節がはずれたの？]
+  - meaning_ko: 그래야지
+  - example_ko: 어디 관절이 벗어났습니까?
+- id: 1751 | level: N4 | [法律 / ほうりつ , 僕は決して法律を破ることはしない。]
+  - meaning_ko: 법
+  - example_ko: 나는 결코 법률을 어기지 않는다.
+- id: 1756 | level: N4 | [進む / すすむ , 矢印が進むべき方向を指示する。]
+  - meaning_ko: 전진하다
+  - example_ko: 화살표가 진행할 방향을 지시합니다.
+- id: 1758 | level: N4 | [楽む / たのしむ , ]
+  - meaning_ko: 즐기다
+- id: 1761 | level: N4 | [貿易 / ぼうえき , 僕は将来、外国貿易をやりたい。]
+  - meaning_ko: 거래
+  - example_ko: 나는 장래, 외국 무역을 하고 싶다.
+- id: 1764 | level: N4 | [反対 / はんたい , 心情的には賛成、けれど現実的に反対します。]
+  - meaning_ko: 대들다
+  - example_ko: 심정적으로는 찬성, 하지만 현실적으로 반대합니다.
+- id: 1769 | level: N4 | [おる / おる , 彼女は容易に試験にとおると思う。]
+  - meaning_ko: -- '있다'에 대한 매우 겸손한 표현 --
+  - example_ko: 그녀는 쉽게 시험에 착수한다고 생각한다.
+- id: 1773 | level: N4 | [申す / もうす , ]
+  - meaning_ko: -- 매우 겸손한(겸손한) 표현: 言(い우) --
+- id: 1777 | level: N4 | [試験 / しけん , 試験が教育を駄目にしていると思う。]
+  - meaning_ko: 시험
+  - example_ko: 시험이 교육을 낭비하고 있다고 생각합니다.
+- id: 1779 | level: N4 | [真面目 / まじめ , 彼は真面目な性格だ。]
+  - meaning_ko: 성실한
+  - example_ko: 그는 성실한 성격이다.
+- id: 1783 | level: N4 | [ごらんになる / ごらんになる , ]
+  - meaning_ko: -- まり에 대한 존댓말 --
+- id: 1787 | level: N4 | [店員 / てんいん , 彼は店員に金を渡した。]
+  - meaning_ko: 사무원
+  - example_ko: 그는 점원에게 돈을 넘겼다.
+- id: 1792 | level: N4 | [泊まる / とまる , 夜はこのホテルに泊まるつもりです。]
+  - meaning_ko: (over night) 머물다 (v.i.)
+  - example_ko: 밤에는 이 호텔에 머무를 것입니다.
+- id: 1798 | level: N4 | [よろしい / よろしい , もう一度伺ってよろしいですか。]
+  - meaning_ko: (여보.) 좋아요
+  - example_ko: 다시 한번 물어보시겠습니까?
+- id: 1800 | level: N4 | [今夜 / こんや , 今夜教会に行くよ。]
+  - meaning_ko: 오늘 저녁
+  - example_ko: 오늘 밤 교회에 갈거야.
+- id: 1804 | level: N4 | [おつり / おつり , はい、おつりです。]
+  - meaning_ko: 변화
+  - example_ko: 네, 축제입니다.
+- id: 1808 | level: N4 | [チェックする / チェックする , 私は仕事を一つ終えるごとにリストの上でチェックする。]
+  - meaning_ko: 확인하다
+  - example_ko: 나는 일을 끝낼 때마다 명부 높은 쪽으로 검사한다.
+- id: 1812 | level: N4 | [会話 / かいわ , 聾者は手話で会話ができる。]
+  - meaning_ko: 대화
+  - example_ko: 수감자는 수화로 대화할 수 있다.
+- id: 1816 | level: N4 | [空気 / くうき , 森林の空気はおいしい。]
+  - meaning_ko: 공기
+  - example_ko: 숲의 공기는 맛있다.
+- id: 1820 | level: N4 | [交通 / こうつう , 連日交通事故が起きる。]
+  - meaning_ko: 교통
+  - example_ko: 연일교통사고가 일어난다.
+- id: 1824 | level: N4 | [ワープロ / ワープロ , 父は私にワープロを買ってくれた。]
+  - meaning_ko: 워드 프로세서
+  - example_ko: 아버지는 나에게 워드 프로세서를 샀다.
+- id: 1828 | level: N4 | [喜ぶ / よろこぶ , 彼がそれを聞いたら喜ぶよ。]
+  - meaning_ko: 기뻐하다
+  - example_ko: 그가 들으면 기뻐해.
+- id: 1835 | level: N4 | [急行 / きゅうこう , 彼らは事故の現場へ急行した。]
+  - meaning_ko: 급행열차나 버스
+  - example_ko: 그들은 사고 현장으로 급행했다.
+- id: 1838 | level: N4 | [皆 / みな , 皆さんネチケットはしっかり。]
+  - meaning_ko: 모든 사람
+  - example_ko: 여러분 네티켓은 확실히.
+- id: 1842 | level: N4 | [味 / あじ , 愛のない人生など全く無意味だ。]
+  - meaning_ko: 맛
+  - example_ko: 사랑이 없는 인생 등 완전히 무의미하다.
+- id: 1846 | level: N4 | [空港 / くうこう , 明夜は、成田空港に行く。]
+  - meaning_ko: 공항
+  - example_ko: 내일은 나리타 공항에 간다.
+- id: 1850 | level: N4 | [手袋 / てぶくろ , 彼女は車の中に手袋を置き忘れた。]
+  - meaning_ko: 장갑)
+  - example_ko: 그녀는 차 안에 장갑을 두고 잊었다.
+- id: 1853 | level: N4 | [校長 / こうちょう , 彼は校長に昇進した。]
+  - meaning_ko: 주요한
+  - example_ko: 그는 교장으로 승진했다.
+- id: 1857 | level: N4 | [ごちそう / ごちそう , 満腹はごちそうも同然。]
+  - meaning_ko: 잔치
+  - example_ko: 포만은 잔치도 동연.
+- id: 1861 | level: N4 | [踊り / おどり , 踊りましょうか。]
+  - meaning_ko: 춤
+  - example_ko: 춤출까요?
+- id: 1865 | level: N4 | [興味 / きょうみ , 護教論には興味ないんだ。]
+  - meaning_ko: (뭔가에) 관심
+  - example_ko: 나는 사과에는 관심이 없습니다.
+- id: 1872 | level: N4 | [引っ越す / ひっこす , 来月に引っ越す予定です。]
+  - meaning_ko: 새로운 거주지로 이사하기 위해
+  - example_ko: 다음달에 이사할 예정입니다.
+- id: 1875 | level: N4 | [冷房 / れいぼう , この部屋は冷房してある。]
+  - meaning_ko: 냉각
+  - example_ko: 이 방은 냉방되어 있다.
+- id: 1878 | level: N4 | [都合 / つごう , 万事好都合にいった。]
+  - meaning_ko: 상황
+  - example_ko: 만사 편리하게 갔다.
+- id: 1880 | level: N4 | [遠慮 / えんりょする , 彼は無遠慮な人だ。]
+  - meaning_ko: 제지
+  - example_ko: 그는 무서운 사람이다.
+- id: 1884 | level: N4 | [亡くなる / なくなる , 毎年交通事故で亡くなる老人が多い。]
+  - meaning_ko: 세상을 떠나다
+  - example_ko: 매년 교통사고로 사망하는 노인이 많다.
+- id: 1887 | level: N4 | [科学 / かがく , 創造説は擬似科学だ。]
+  - meaning_ko: 과학
+  - example_ko: 창조설은 의사과학이다.
+- id: 1890 | level: N4 | [はっきり / はっきり , 郵便の宛名ははっきり正確に。]
+  - meaning_ko: 분명히
+  - example_ko: 우편 주소는 명확하게 정확하게.
+- id: 1898 | level: N4 | [差し上げる / さしあげる , 突然にかような奇怪な手紙を差し上げる非礼をお許し下さい。]
+  - meaning_ko: --あげRU의 겸허한 표현 --
+  - example_ko: 갑자기 그런 기괴한 편지를 드리는 비례를 용서하십시오.
+- id: 1901 | level: N4 | [気持ち / きもち , 僕は特別気持ちがいい。]
+  - meaning_ko: 감정
+  - example_ko: 나는 특별한 기분이 좋다.
+- id: 1905 | level: N4 | [祖父 / そふ , お祖父さんがかなり老衰している。]
+  - meaning_ko: 할아버지
+  - example_ko: 할아버지가 꽤 노쇠하고 있다.
+- id: 1909 | level: N4 | [港 / みなと , 明夜は、成田空港に行く。]
+  - meaning_ko: 항구
+  - example_ko: 내일은 나리타 공항에 간다.
+- id: 1913 | level: N4 | [予約 / よやく , 予約席はありますか。]
+  - meaning_ko: 예약
+  - example_ko: 예약석이 있나요?
+- id: 1916 | level: N4 | [凄い / すごい , そいつは凄い！]
+  - meaning_ko: 훌륭한
+  - example_ko: 그 녀석은 굉장하다!
+- id: 1923 | level: N4 | [入学 / にゅうがくする , 無試験で入学を許可された。]
+  - meaning_ko: 학교나 대학교 입학
+  - example_ko: 무시험으로 입학이 허용되었다.
+- id: 1927 | level: N4 | [片付ける / かたづける , 家を片付ける必要がある。]
+  - meaning_ko: (청소하다) 정리하다 (v.t.)
+  - example_ko: 집을 정리할 필요가 있다.
+- id: 1932 | level: N4 | [写す / うつす , 彼女は友達のノートを写す。]
+  - meaning_ko: 복사하다 (동사)
+  - example_ko: 그녀는 친구의 노트를 찍는다.
+- id: 1936 | level: N4 | [パソコン / パソコン , 私のパソコンは何かの役に立つはずだ。]
+  - meaning_ko: (개인용) 컴퓨터
+  - example_ko: 내 컴퓨터는 뭔가 도움이 될 것입니다.
+- id: 1940 | level: N4 | [部長 / ぶちょう , 部長が不在のときはブラウン氏が業務を管理する。]
+  - meaning_ko: 부서(부서) 과장
+  - example_ko: 부장이 부재할 때는 브라운씨가 업무를 관리한다.
+- id: 1943 | level: N4 | [火事 / かじ , 夜の間に火事が起こった。]
+  - meaning_ko: 불
+  - example_ko: 밤 사이에 화재가 일어났다.
+- id: 1948 | level: N4 | [足す / たす , 補給はまもなく不足するでしょう。]
+  - meaning_ko: (숫자를) 더하다
+  - example_ko: 보급은 곧 부족할 것입니다.
+- id: 1952 | level: N4 | [教会 / きょうかい , 今夜教会に行くよ。]
+  - meaning_ko: 교회
+  - example_ko: 오늘 밤 교회에 갈거야.
+- id: 1955 | level: N4 | [彼ら / かれら , 彼らは言い争いをした。]
+  - meaning_ko: 그들(보통 남자)
+  - example_ko: 그들은 싸움을 했다.
+- id: 1957 | level: N4 | [一杯 / いっぱい , 夜、彼は外に出て一杯やる。]
+  - meaning_ko: 가득한
+  - example_ko: 밤에 그는 밖으로 나가서 가득합니다.
+- id: 1960 | level: N4 | [アメリカ / アメリカ , お金を稼ぎたいならアメリカが一番だ。]
+  - meaning_ko: 미국
+  - example_ko: 돈을 벌고 싶다면 미국이 제일이다.
+- id: 1962 | level: N4 | [男性 / だんせい , 男性は色っぽい女性が大好きなのです。]
+  - meaning_ko: 남성
+  - example_ko: 남성은 여러 가지 빛깔의 여성을 사랑합니다.
+- id: 1966 | level: N4 | [理由 / りゆう , 理由は誰も分からない。]
+  - meaning_ko: 이유
+  - example_ko: 이유는 아무도 모른다.
+- id: 1970 | level: N4 | [生産 / せいさんする , 米の生産高は減ってきた。]
+  - meaning_ko: 생산
+  - example_ko: 쌀 생산고는 줄어들었다.
+- id: 1974 | level: N4 | [着物 / きもの , 彼女は着物に穴を空けた。]
+  - meaning_ko: 키모노
+  - example_ko: 그녀는 기모노에 구멍을 뚫었다.
+- id: 1978 | level: N4 | [おもちゃ / おもちゃ , 僕のおもちゃを直して。]
+  - meaning_ko: 장난감
+  - example_ko: 내 장난감을 고쳐.
+- id: 1983 | level: N4 | [暮れる / くれる , 冬の日は速く暮れる。]
+  - meaning_ko: 어두워지다
+  - example_ko: 겨울의 날은 빨리 사는다.
+- id: 1992 | level: N4 | [釣る / つる , 海老で鯛を釣る。]
+  - meaning_ko: 낚시하다
+  - example_ko: 새우로 도미를 낚는다.
+- id: 1996 | level: N4 | [～ちゃん / ～ちゃん , ]
+  - meaning_ko: 친숙한(여성) 사람을 가리키는 접미사
+- id: 2000 | level: N4 | [打つ / うつ , 諸神は悪を雷で打つという。]
+  - meaning_ko: 치다
+  - example_ko: 제신은 악을 번개로 친다고 한다.
+- id: 2003 | level: N4 | [あんな / あんな , あんないい男そうそういないぞ！！]
+  - meaning_ko: 그런
+  - example_ko: 별로 없는 남자 그렇게 없어! !
+- id: 2007 | level: N4 | [謝る / あやまる , あなたは彼女に謝るべきだった。]
+  - meaning_ko: 사과하다
+  - example_ko: 너는 그녀에게 사과해야했다.
+- id: 2010 | level: N4 | [昼間 / ひるま , 彼らは昼間だけ働きます。]
+  - meaning_ko: 낮
+  - example_ko: 그들은 낮에만 일합니다.
+- id: 2014 | level: N4 | [教育 / きょういく , 良い言葉は教育の結果である。]
+  - meaning_ko: 교육
+  - example_ko: 좋은 기간은 교육의 결과이다.
+- id: 2017 | level: N4 | [女性 / じょせい , 男性は色っぽい女性が大好きなのです。]
+  - meaning_ko: 여성
+  - example_ko: 남성은 여러 가지 빛깔의 여성을 사랑합니다.
+- id: 2022 | level: N4 | [米 / こめ , 米国にノウと言えるのか？]
+  - meaning_ko: 생 쌀
+  - example_ko: 미국에 노우라고 할 수 있을까?
+- id: 2025 | level: N4 | [邪魔 / じゃま , 離れて邪魔にならないようにする。]
+  - meaning_ko: 방해
+  - example_ko: 멀리 방해가 되지 않도록 한다.
+- id: 2027 | level: N4 | [国際 / こくさい , 麻薬汚染の問題は国際的である。]
+  - meaning_ko: 국제적인
+  - example_ko: 마약 오염 문제는 국제적입니다.
+- id: 2029 | level: N4 | [隅 / すみ , 彼は店の奥の暗い隅に姿を消した。]
+  - meaning_ko: 모서리
+  - example_ko: 그는 가게 안쪽의 어두운 구석에 모습을 지웠다.
+- id: 2037 | level: N4 | [伺う / うかがう , あすスミスさんのお宅に伺うことになっている。]
+  - meaning_ko: 行KU(いKU)의 겸손한 형태
+  - example_ko: 아스 스미스 씨의 집에 묻는 것이 되어 있다.
+- id: 2043 | level: N4 | [再来週 / さらいしゅう , また再来週。]
+  - meaning_ko: 다음주 다음 주
+  - example_ko: 또한 다시 다음 주.
+- id: 2046 | level: N4 | [夢 / ゆめ , 私には夢がある。]
+  - meaning_ko: 꿈
+  - example_ko: 나에게는 꿈이 있다.
+- id: 2051 | level: N4 | [喉 / のど , 喉が渇いた。]
+  - meaning_ko: 목
+  - example_ko: 목이 마른다.
+- id: 2055 | level: N4 | [最近 / さいきん , それは最近の写真？]
+  - meaning_ko: 최근에
+  - example_ko: 그것은 최근 사진?
+- id: 2059 | level: N4 | [周り / まわり , 僕は周りを見回した。]
+  - meaning_ko: 주위
+  - example_ko: 나는 주위를 둘러봤다.
+- id: 2063 | level: N4 | [歴史 / れきし , 歴史は繰り返す。]
+  - meaning_ko: 역사
+  - example_ko: 역사는 반복한다.
+- id: 2067 | level: N4 | [不便 / ふべん , 電話がないのは不便なことだ。]
+  - meaning_ko: 불편
+  - example_ko: 전화가 없는 것은 불편한 일이다.
+- id: 2071 | level: N4 | [血 / ち , 血圧計が大切な検査器械です。]
+  - meaning_ko: 피
+  - example_ko: 혈압계가 중요한 검사 계기입니다.
+- id: 2076 | level: N4 | [～続ける / ～つづける , ]
+  - meaning_ko: ~을 계속하다
+- id: 2080 | level: N4 | [毛 / け , 髪の毛を後ろになでつけた。]
+  - meaning_ko: 머리카락
+  - example_ko: 머리카락을 뒤로 쓰다듬었다.
+- id: 2083 | level: N4 | [ひどい / ひどい , 予想以上にひどい天気だ。]
+  - meaning_ko: 끔찍한
+  - example_ko: 예상 이상으로 끔찍한 날씨다.
+- id: 2088 | level: N4 | [例えば / たとえば , 例えば、小鳥は特別な防御装置を備えている。]
+  - meaning_ko: 예를 들어
+  - example_ko: 예를 들어, 작은 새는 특별한 방어 장치를 갖추고 있습니다.
+- id: 2092 | level: N4 | [中々 / なかなか , ]
+  - meaning_ko: 매우
+- id: 2095 | level: N4 | [随分 / ずいぶん , 彼は夜随分遅くまで働いた。]
+  - meaning_ko: 극도로
+  - example_ko: 그는 밤 늦게까지 일했다.
+- id: 2100 | level: N4 | [～やすい / ～やすい , ]
+  - meaning_ko: 하기 쉽다 ~
+- id: 2104 | level: N4 | [押し入れ / おしいれ , トムは妹を押し入れに閉じ込めた。]
+  - meaning_ko: 벽장
+  - example_ko: 톰은 여동생을 압입에 갇혔다.
+- id: 2108 | level: N4 | [電灯 / でんとう , 彼は電灯を消し忘れた。]
+  - meaning_ko: 전등
+  - example_ko: 그는 전등을 끄는 것을 잊었다.
+- id: 2112 | level: N4 | [叱る / しかる , 彼は必ず私達を叱るだろう。]
+  - meaning_ko: 꾸짖다
+  - example_ko: 그는 반드시 우리를 꾸짖을 것이다.
+- id: 2113 | level: N4 | [サンダル / サンダル , サンダルを買った。]
+  - meaning_ko: 샌들
+  - example_ko: 샌들을 샀다.
+- id: 2116 | level: N4 | [びっくりする / びっくりする , トムはびっくりするくらいに絵が下手だ。]
+  - meaning_ko: 놀라다
+  - example_ko: 톰은 놀랄 정도로 그림이 좋지 않다.
+- id: 2119 | level: N4 | [うまい / うまい , 料理のうまい女性が欲しい。]
+  - meaning_ko: 맛있는
+  - example_ko: 요리의 좋은 여자를 원합니다.
+- id: 2125 | level: N4 | [変える / かえる , 老人が考えを変えるのは難しい。]
+  - meaning_ko: 변화하다
+  - example_ko: 노인이 생각을 바꾸는 것은 어렵다.
+- id: 2129 | level: N4 | [講堂 / こうどう , 講堂は熱心な応募者でいっぱいだ。]
+  - meaning_ko: 강당
+  - example_ko: 강당은 열성적인 응모자로 가득했다.
+- id: 2133 | level: N4 | [子 / こ , あなたが女の子だからよ。]
+  - meaning_ko: 어린이
+  - example_ko: 당신이 여자이기 때문에.
+- id: 2137 | level: N4 | [沸かす / わかす , 今からお湯を沸かすから、それまでちょっと待ってて。]
+  - meaning_ko: 끓이다
+  - example_ko: 지금부터 뜨거운 물을 끓으니까, 그때까지 조금 기다려.
+- id: 2141 | level: N4 | [レジ / レジ , クレジットカードでも良いですか？]
+  - meaning_ko: 등록하다
+  - example_ko: 신용 카드도 괜찮습니까?
+- id: 2145 | level: N4 | [しばらく / しばらく , しばらくぶりのよい天気だね。]
+  - meaning_ko: 잠깐
+  - example_ko: 잠시 후 좋은 날씨입니다.
+- id: 2149 | level: N4 | [特に / とくに , 僕はこの点を特に強調したい。]
+  - meaning_ko: 특히
+  - example_ko: 나는 이 점을 특히 강조하고 싶다.
+- id: 2156 | level: N4 | [空く / あく , あと１０分で手が空く。]
+  - meaning_ko: 열다
+  - example_ko: 앞으로 10분만에 손이 비워진다.
+- id: 2160 | level: N4 | [計画 / けいかくする , 休暇の計画を予め立てている。]
+  - meaning_ko: 계획
+  - example_ko: 휴가 계획을 미리 세우고 있다.
+- id: 2164 | level: N4 | [通り / とおり , 残念ながら昨日はご覧の通りの結果となりました。]
+  - meaning_ko: ~ 거리
+  - example_ko: 불행히도 어제는 보시다시피 결과가되었습니다.
+- id: 2166 | level: N4 | [下着 / したぎ , 汚い下着を人前で洗うな。]
+  - meaning_ko: 속옷
+  - example_ko: 더러운 속옷을 사람 앞에서 씻지 마라.
+- id: 2170 | level: N4 | [経済 / けいざい , 良質の品を買うのは経済的である。]
+  - meaning_ko: 경제학
+  - example_ko: 고품질 물건을 사는 것은 경제적이다.
+- id: 2174 | level: N4 | [こう / こう , 最悪の場合を考えておこう。]
+  - meaning_ko: 이와 같이
+  - example_ko: 최악의 경우를 생각해 봅시다.
+- id: 2178 | level: N4 | [是非 / ぜひ , 是非、彼に会いたいわ。]
+  - meaning_ko: 틀림없이
+  - example_ko: 부디, 그를 만나고 싶다.
+- id: 2183 | level: N4 | [裏 / うら , 裏には裏がある。]
+  - meaning_ko: 뒷면
+  - example_ko: 뒤에는 뒤가 있다.
+- id: 2185 | level: N4 | [為 / ため , 汚い行為の報いは必ず自分に返ってくる。]
+  - meaning_ko: 좋은
+  - example_ko: 더러운 행위의 보상은 반드시 자신에게 돌아온다.
+- id: 2188 | level: N4 | [おいでになる / おいでになる , おいでになるのを楽しみにしています。]
+  - meaning_ko: (여보.) 되려고
+  - example_ko: 어서 오기를 기대합니다.
+- id: 2195 | level: N4 | [変わる / かわる , 野菜の値段は日々変わる。]
+  - meaning_ko: 바꾸다 (v.i.)
+  - example_ko: 야채 가격은 매일 바뀐다.
+- id: 2199 | level: N4 | [以外 / いがい , 用事以外は入場お断り。]
+  - meaning_ko: 이외의
+  - example_ko: 용사 이외는 입장 거절.
+- id: 2201 | level: N4 | [済む / すむ , 気が済むまでやってみたら。]
+  - meaning_ko: 끝내다
+  - example_ko: 마음이 끝날 때까지 해보면.
+- id: 2207 | level: N4 | [ハンバーグ / ハンバーグ , ハンバーグを２個注文した。]
+  - meaning_ko: 햄버거 스테이크
+  - example_ko: 햄버그 2개를 주문했다.
+- id: 2209 | level: N4 | [市 / し , なんとかそこで支えよ。入市を許すな。]
+  - meaning_ko: 도시
+  - example_ko: 어떻게든 거기서 지지해라. 입시를 용서하지 마라.
+- id: 2213 | level: N4 | [引き出し / ひきだし , 彼女は銀行からお金を引き出した。]
+  - meaning_ko: 서랍
+  - example_ko: 그녀는 은행에서 돈을 꺼냈다.
+- id: 2219 | level: N4 | [遊び / あそび , 遊び半分に学校へ来るな。]
+  - meaning_ko: 놀다
+  - example_ko: 놀이 절반에 학교에 오지 마.
+- id: 2222 | level: N4 | [支度 / したくする , 夕飯の支度が出来ました。]
+  - meaning_ko: 준비
+  - example_ko: 저녁밥의 지도가 생겼습니다.
+- id: 2226 | level: N4 | [～始める / ～はじめる , ]
+  - meaning_ko: ~을 시작하다
+- id: 2232 | level: N4 | [見える / みえる , 狼の噂をするとその皮が見える。]
+  - meaning_ko: 눈에 띄다
+  - example_ko: 늑대의 소문을 하면 그 피부가 보인다.
+- id: 2236 | level: N4 | [十分 / じゅうぶん , 状況証拠としちゃあ、十分だね。]
+  - meaning_ko: 충분한
+  - example_ko: 상황 증거라면 충분하네요.
+- id: 2238 | level: N4 | [音 / おと , 私の趣味は音楽を聞くことです。]
+  - meaning_ko: 소리
+  - example_ko: 내 취미는 음악을 듣는 것입니다.
+- id: 2241 | level: N4 | [きっと / きっと , 明日はきっと大雨が降るだろう。]
+  - meaning_ko: 확실히
+  - example_ko: 내일은 분명 폭우가 내릴 것이다.
+- id: 2245 | level: N4 | [まず / まず , 例文の選定がまずかったです。]
+  - meaning_ko: 가장 먼저)
+  - example_ko: 예문의 선정이 좋지 않았습니다.
+- id: 2248 | level: N4 | [遠く / とおく , 風は種を遠くへ運ぶ。]
+  - meaning_ko: 멀리
+  - example_ko: 바람은 씨를 멀리로 나른다.
+- id: 2252 | level: N4 | [大体 / だいたい , 彼の言ったことは大体正しい。]
+  - meaning_ko: 약
+  - example_ko: 그의 말한 것은 대체로 옳다.
+- id: 2256 | level: N4 | [折れる / おれる , 折れるより曲がれ。]
+  - meaning_ko: 깨다
+  - example_ko: 접히는 것보다 구부러져.
+- id: 2259 | level: N4 | [正しい / ただしい , あなたは正しい。]
+  - meaning_ko: 옳은
+  - example_ko: 당신은 맞습니다.
+- id: 2262 | level: N4 | [輸入 / ゆにゅう , 輸入品は高い課税対象だ。]
+  - meaning_ko: 수입
+  - example_ko: 수입품은 높은 과세 대상이다.
+- id: 2266 | level: N4 | [返事 / へんじ , 良い返事をお待ちしております。]
+  - meaning_ko: 회신하다
+  - example_ko: 좋은 답변을 기다리고 있습니다.
+- id: 2270 | level: N4 | [都 / と , 列車で京都まで行った。]
+  - meaning_ko: 대주교
+  - example_ko: 열차로 교토까지 갔다.
+- id: 2277 | level: N4 | [産業 / さんぎょう , 彼女は不動産業者です。]
+  - meaning_ko: 산업
+  - example_ko: 그녀는 부동산업자입니다.
+- id: 2283 | level: N4 | [伝える / つたえる , 彼女に真実を伝える気がしない。]
+  - meaning_ko: (메시지를) 전달하다
+  - example_ko: 그녀에게 진실을 전할 생각이 없다.
+- id: 2286 | level: N4 | [お金持ち / かねもち; おかねもち , 彼女はお金持ちに違いない。]
+  - meaning_ko: 호부
+  - example_ko: 그녀는 부자가 될 것입니다.
+- id: 2289 | level: N4 | [説明 / せつめい , 説明もできないよ。]
+  - meaning_ko: 설명
+  - example_ko: 설명도 할 수 없어.
+- id: 2292 | level: N4 | [島 / しま , 広島に口和というところがあります。]
+  - meaning_ko: 섬
+  - example_ko: 히로시마에 구와라는 곳이 있습니다.
+- id: 2296 | level: N4 | [道具 / どうぐ , 彼女は紅茶道具一式を買った。]
+  - meaning_ko: 도구
+  - example_ko: 그녀는 차 도구 세트를 샀다.
+- id: 2298 | level: N4 | [滑る / すべる , スキーは滑る？]
+  - meaning_ko: 미끄러지다
+  - example_ko: 스키가 미끄러지나요?
+- id: 2307 | level: N4 | [それほど / それほど , 文法の基本原則はそれほど難しくはない。]
+  - meaning_ko: 그 정도
+  - example_ko: 문법의 기본 원칙은 그리 어렵지 않다.
+- id: 2310 | level: N4 | [以上 / いじょう , これ以上考えても無駄だ。]
+  - meaning_ko: 이상
+  - example_ko: 더 이상 생각해도 낭비다.
+- id: 2314 | level: N4 | [～まま / ～まま , ]
+  - meaning_ko: 그대로
+- id: 2318 | level: N4 | [特急 / とっきゅう , 特急のホームは何番ですか。]
+  - meaning_ko: 특급 (급행보다 빠른 열차)
+  - example_ko: 특급 홈은 몇 번입니까?
+- id: 2322 | level: N4 | [プレゼント / プレゼント , プレゼントにするきれいな貝がらをひろいにいったよ！]
+  - meaning_ko: 현재의
+  - example_ko: 선물로 하는 깨끗한 조개를 들여다보았다!
+- id: 2327 | level: N4 | [～(に) よると / ～(に) よると , ]
+  - meaning_ko: ~에 따르면
+- id: 2332 | level: N4 | [妻 / つま , 妻の乾咳が気になります。]
+  - meaning_ko: 아내 (겸손)
+  - example_ko: 아내의 건침이 걱정됩니다.
+- id: 2335 | level: N4 | [帰り / かえり , 家に帰りましょうか。]
+  - meaning_ko: 반품
+  - example_ko: 집에 가자.
+- id: 2338 | level: N4 | [具合 / ぐあい , 万事具合がいい。]
+  - meaning_ko: 상태
+  - example_ko: 만사 상태가 좋다.
+- id: 2342 | level: N4 | [堅; 硬; 固い / かたい , ]
+  - meaning_ko: 단단한
+- id: 2343 | level: N4 | [駐車場 / ちゅうしゃじょう , 駐車場はありますか。]
+  - meaning_ko: 주차장
+  - example_ko: 주차장이 있습니까?
+- id: 2347 | level: N4 | [スーツ / スーツ , 彼女は彼にスーツを新調してやった。]
+  - meaning_ko: 정장
+  - example_ko: 그녀는 그에게 양복을 새롭게 해주었다.
+- id: 2351 | level: N4 | [危険 / きけん , ここの下りも手掛かりがないので危険だ。]
+  - meaning_ko: 위험
+  - example_ko: 여기 내리기도 단서가 없기 때문에 위험하다.
+- id: 2357 | level: N4 | [髪 / かみ , マリアさんの髪は長いです。]
+  - meaning_ko: 머리카락
+  - example_ko: 마리아의 머리는 길다.
+- id: 2361 | level: N4 | [天気予報 / てんきよほう , 天気予報を信じてないの？]
+  - meaning_ko: 일기 예보
+  - example_ko: 일기 예보를 믿지 않니?
+- id: 2364 | level: N4 | [彼女 / かのじょ , 僕は彼女無しに生きる術を学んだ。]
+  - meaning_ko: 여자 친구
+  - example_ko: 나는 그녀 없이 사는 술을 배웠다.
+- id: 2367 | level: N4 | [間 / あいだ , 時間はいくらでも作れる。]
+  - meaning_ko: 공간
+  - example_ko: 시간은 얼마든지 만들 수 있다.
+- id: 2370 | level: N4 | [卒業 / そつぎょう , 来年の春は卒業したいなあ。]
+  - meaning_ko: 눈금
+  - example_ko: 내년 봄은 졸업하고 싶다.
+- id: 2376 | level: N4 | [それで / それで , それで何をしようとしているの？]
+  - meaning_ko: 그리고 (conj.)
+  - example_ko: 그렇다면 무엇을하려고합니까?
+- id: 2380 | level: N4 | [枝 / えだ , 柳の枝に雪折れなし。]
+  - meaning_ko: 나뭇가지
+  - example_ko: 버드 나무 가지에 눈이 부러지지 않습니다.
+- id: 2384 | level: N4 | [専門 / せんもん , 専門ガッコのタメだよ。]
+  - meaning_ko: 주요한
+  - example_ko: 전문 가코의 타메야.
+- id: 2388 | level: N4 | [そろそろ / そろそろ , 彼女はそろそろ３５歳だ。]
+  - meaning_ko: 서서히
+  - example_ko: 그녀는 이제 35세다.
+- id: 2392 | level: N4 | [送る / おくる , 敵に塩を送る。]
+  - meaning_ko: 보내다
+  - example_ko: 적에게 소금을 보내십시오.
+- id: 2395 | level: N4 | [あげる / あげる , ケーキ一個で手を打ってあげるよ。]
+  - meaning_ko: 주다
+  - example_ko: 케이크 한 개로 손을 쳐 줄게.
+- id: 2400 | level: N4 | [騒ぐ / さわぐ , そんなに騒ぐな。]
+  - meaning_ko: 소음을 내다
+  - example_ko: 그렇게 떠들지 마.
+- id: 2405 | level: N4 | [尋ねる / たずねる , 彼女に尋ねる勇気がありますか。]
+  - meaning_ko: 문의하다
+  - example_ko: 그녀에게 물어볼 용기가 있습니까?
+- id: 2408 | level: N4 | [放送 / ほうそうする , 放送局の前で待っているよ。]
+  - meaning_ko: 방송
+  - example_ko: 방송국 앞에서 기다리고 있어.
+- id: 2411 | level: N4 | [政治 / せいじ , 各国の政治家がホワイトハウス詣でをした。]
+  - meaning_ko: 정치
+  - example_ko: 각국의 정치인이 백악관 참배를 했다.
+- id: 2415 | level: N4 | [市民 / しみん , 彼は米国の市民権を得た。]
+  - meaning_ko: 시민
+  - example_ko: 그는 미국 시민권을 얻었다.
+- id: 2418 | level: N4 | [ファックス / ファックス , それを私にファックスしてください。]
+  - meaning_ko: 팩스
+  - example_ko: 그것을 나에게 팩스하십시오.
+- id: 2426 | level: N4 | [負ける / まける , 負けるな。]
+  - meaning_ko: (게임을) 지다 (v.i.)
+  - example_ko: 잃지 마라.
+- id: 2431 | level: N4 | [指輪 / ゆびわ , 母はダイヤの指輪を手放す他なかった。]
+  - meaning_ko: (손가락) 반지
+  - example_ko: 어머니는 다이아몬드 반지를 놓을 수밖에 없었다.
+- id: 2434 | level: N4 | [田舎 / いなか , 僕は田舎で育った。]
+  - meaning_ko: 시골의
+  - example_ko: 나는 시골에서 자랐다.
+- id: 2438 | level: N4 | [見つける / みつける , 忙しい人ほどより多くの時間を見つける。]
+  - meaning_ko: 발견하다
+  - example_ko: 바쁜 사람만큼 더 많은 시간을 찾습니다.
+- id: 2440 | level: N4 | [高校生 / こうこうせい , 彼らは高校生です。]
+  - meaning_ko: 고등학생
+  - example_ko: 그들은 고등학생입니다.
+- id: 2444 | level: N4 | [講義 / こうぎ , 文学の講義をする。]
+  - meaning_ko: 강의
+  - example_ko: 문학 강의를 한다.
+- id: 2448 | level: N4 | [そんなに / そんなに , そんなに待ちたくない。]
+  - meaning_ko: 너무 많이
+  - example_ko: 그렇게 기다리고 싶지 않아.
+- id: 2452 | level: N4 | [昼休み / ひるやすみ , お昼休みはいつ？]
+  - meaning_ko: 점심시간
+  - example_ko: 점심 시간은 언제?
+- id: 2455 | level: N4 | [忘れ物 / わすれもの , 忘れ物ない？]
+  - meaning_ko: 유실물
+  - example_ko: 잊지 마세요?
+- id: 2458 | level: N4 | [下りる / おりる , 階段を下りるのがつらくてね。]
+  - meaning_ko: 내려오다
+  - example_ko: 계단을 내리는 것이 힘들어요.
+- id: 2463 | level: N4 | [腕 / うで , 場合によっては腕力に訴えてもよい。]
+  - meaning_ko: 팔 (몸을 기준으로)
+  - example_ko: 어떤 경우에는 팔력에 호소할 수 있다.
+- id: 2468 | level: N4 | [訳 / わけ , あら、申し訳ございません。]
+  - meaning_ko: 이유
+  - example_ko: 오, 죄송합니다.
+- id: 2474 | level: N4 | [承知 / しょうちする , 万万承知の上です。]
+  - meaning_ko: 동의
+  - example_ko: 만만 승지의 위입니다.
+- id: 2477 | level: N4 | [日記 / にっき , 毎日日記をつけている。]
+  - meaning_ko: 다이어리
+  - example_ko: 매일 일기를 붙이고 있다.
+- id: 2481 | level: N4 | [高校; 高等学校 / こうこう; こうとうがっこう , ]
+  - meaning_ko: 고등학교
+- id: 2485 | level: N4 | [似る / にる , 息子は父親に似る。]
+  - meaning_ko: 닮다
+  - example_ko: 아들은 아버지와 비슷합니다.
+- id: 2492 | level: N4 | [～おわる / ～おわる , ]
+  - meaning_ko: ~을 끝내다
+- id: 2494 | level: N4 | [暖房 / だんぼう , 暖房を消しましたか。]
+  - meaning_ko: 난방
+  - example_ko: 난방을 지웠습니까?
+- id: 2498 | level: N4 | [留守 / るす , 留守番しててね。]
+  - meaning_ko: 결석
+  - example_ko: 자동 응답하십시오.
+- id: 2502 | level: N4 | [割合 / わりあい , 彼らは１時間３マイルの割合で歩いた。]
+  - meaning_ko: 비율
+  - example_ko: 그들은 1시간 3마일의 비율로 걸었다.
+- id: 2506 | level: N4 | [寺 / てら , 明日は、寺巡りをしよう。]
+  - meaning_ko: 절
+  - example_ko: 내일은 절을 둘러보자.
+- id: 2512 | level: N4 | [慣れる / なれる , 田舎の生活にすぐ慣れるでしょう。]
+  - meaning_ko: 익숙해지다
+  - example_ko: 시골 생활에 익숙해질 것입니다.
+- id: 2516 | level: N4 | [普通 / ふつう , 揚げ物は私の体質に普通合わないんだ。]
+  - meaning_ko: 흔한
+  - example_ko: 튀김은 나의 체질에 보통 맞지 않는다.
+- id: 2520 | level: N4 | [手伝う / てつだう , 僕は手伝うためにきた。]
+  - meaning_ko: 돕기 위해
+  - example_ko: 나는 돕기 위해 왔다.
+- id: 2523 | level: N4 | [なるほど / なるほど , 彼は害になるほど酒に溺れた。]
+  - meaning_ko: 알겠어요
+  - example_ko: 그는 해가 될수록 술에 빠졌다.
+- id: 2528 | level: N4 | [くださる / くださる , 梅村先生が英語を教えてくださる。]
+  - meaning_ko: (혼자) 주다
+  - example_ko: 우메무라 선생님이 영어를 가르쳐 주신다.
+- id: 2532 | level: N4 | [息子 / むすこ , 鈴木氏が息子さんを誇りに思うのはもっともだ。]
+  - meaning_ko: (겸손한) 아들
+  - example_ko: 스즈키씨가 아들을 자랑스럽게 생각하는 것은 가장이다.
+- id: 2536 | level: N4 | [お子さん / おこさん , お宅のお子さんは丈夫ですね。]
+  - meaning_ko: (다른 사람의) 아이 (공손한)
+  - example_ko: 집의 아이는 튼튼합니다.
+- id: 2540 | level: N4 | [会場 / かいじょう , 彼はクラスを代表して会場に出た。]
+  - meaning_ko: 장소
+  - example_ko: 그는 수업을 대표하여 회장에 나섰다.
+- id: 2541 | level: N4 | [笑う / わらう , 目くそ鼻くそを笑う。]
+  - meaning_ko: 웃다
+  - example_ko: 눈썹 코 젠장을 웃는다.
+- id: 2548 | level: N4 | [運ぶ / はこぶ , 風は種を遠くへ運ぶ。]
+  - meaning_ko: 수송하다
+  - example_ko: 바람은 씨를 멀리로 나른다.
+- id: 2551 | level: N4 | [文学 / ぶんがく , 米文学の蔵書がたくさんある。]
+  - meaning_ko: 문학
+  - example_ko: 미국 문학 장서가 많이 있다.
+- id: 2555 | level: N4 | [光 / ひかり , ハリーは本当に蛍光灯だね。]
+  - meaning_ko: 빛
+  - example_ko: 해리는 정말 형광등이군요.
+- id: 2558 | level: N4 | [お見舞い / おみまい , お見舞いありがとう。]
+  - meaning_ko: 아픈 사람을 부르는 것
+  - example_ko: 방문해 주셔서 감사합니다.
+- id: 2563 | level: N4 | [席 / せき , 彼は少し横に詰めて席を空けてあげた。]
+  - meaning_ko: 좌석
+  - example_ko: 그는 조금 옆에 넣고 자리를 비웠다.
+- id: 2566 | level: N4 | [～様 / ～さま , ]
+  - meaning_ko: 씨.
+- id: 2570 | level: N4 | [ご存じ / ごぞんじ , 既にご存じのように。]
+  - meaning_ko: 앎
+  - example_ko: 이미 아시다시피.
+- id: 2576 | level: N4 | [下る / さがる , 坂を下ると海が見えてきました。]
+  - meaning_ko: 하강하다
+  - example_ko: 비탈을 내리면 바다가 보였습니다.
+- id: 2580 | level: N4 | [字 / じ , 第二に、当時のヨーロッパの識字率が低かったことだ。]
+  - meaning_ko: 편지
+  - example_ko: 둘째, 당시 유럽의 식자율이 낮았던 것이다.
+- id: 2584 | level: N4 | [アジア / アジア , 日本は東アジアにあります。]
+  - meaning_ko: 아시아
+  - example_ko: 일본은 동아시아에 있습니다.
+- id: 2588 | level: N4 | [褒める / ほめる , 褒めると彼女はうぬぼれるよ。]
+  - meaning_ko: 칭찬하다
+  - example_ko: 칭찬하면 그녀는 우울해진다.
+- id: 2592 | level: N4 | [あ / あ , 時間があるか分かりません。]
+  - meaning_ko: 아
+  - example_ko: 시간이 있는지 모르겠습니다.
+- id: 2595 | level: N4 | [最も / もっとも , 緑が最も多くオレンジを食べた。]
+  - meaning_ko: 최대
+  - example_ko: 녹색이 가장 많이 오렌지를 먹었다.
+- id: 2601 | level: N4 | [合う / あう , 噛み合う犬は呼び難し。]
+  - meaning_ko: 적합하다
+  - example_ko: 맞물리는 개는 부르기 어렵다.
+- id: 2604 | level: N4 | [～代 / ～だい , ]
+  - meaning_ko: ~ 나이
+- id: 2608 | level: N4 | [最後 / さいご , 彼は最後の試合をエンジョイしたんだろうか。]
+  - meaning_ko: 마지막
+  - example_ko: 그는 마지막 경기를 즐겼을까.
+- id: 2613 | level: N4 | [値段 / ねだん , 値段が高すぎる！]
+  - meaning_ko: 가격
+  - example_ko: 가격이 너무 높다!
+- id: 2619 | level: N4 | [退院 / たいいんする , 彼女は入退院を繰り返している。]
+  - meaning_ko: 병원을 떠나다
+  - example_ko: 그녀는 입퇴원을 반복하고 있다.
+- id: 2622 | level: N4 | [展覧会 / てんらんかい , 美術展覧会に行きましたか。]
+  - meaning_ko: 전시회
+  - example_ko: 미술 전시회에 갔습니까?
+- id: 2626 | level: N4 | [久しぶり / ひさしぶり , 大変お久しぶりです。]
+  - meaning_ko: 오랜만이야
+  - example_ko: 매우 오랜만입니다.
+- id: 2630 | level: N4 | [カーテン / カーテン , カーテンに火が点いた。]
+  - meaning_ko: 커튼
+  - example_ko: 커튼에 불이 켜졌다.
+- id: 2636 | level: N4 | [汽車 / きしゃ , 彼は汽車を降りた。]
+  - meaning_ko: 기차(증기)
+  - example_ko: 그는 기차를 내렸다.
+- id: 2639 | level: N4 | [遅れる / おくれる , 列車に乗り遅れるな。]
+  - meaning_ko: () 늦다
+  - example_ko: 기차를 타지 마라.
+- id: 2644 | level: N4 | [見つかる / みつかる , 北斗七星は簡単に見つかる。]
+  - meaning_ko: 발견하다 (v.i.)
+  - example_ko: 호쿠토 칠성은 쉽게 찾을 수 있습니다.
+- id: 2648 | level: N4 | [召し上がる / めしあがる , さあいらっしゃい、何を召し上がるか言いたまえ。]
+  - meaning_ko: -- 식베루(たべRU)와 飲む(のむ)의 경칭 --
+  - example_ko: 자, 뭐 드시는지 말해줘.
+- id: 2651 | level: N4 | [太る / ふとる , 食べ過ぎると太る。]
+  - meaning_ko: 체중을 늘리다
+  - example_ko: 과식하면 뚱뚱해진다.
+- id: 2654 | level: N4 | [注射 / ちゅうしゃ , 麻酔の注射をします。]
+  - meaning_ko: 주입
+  - example_ko: 마취 주사를 합니다.
+- id: 2658 | level: N4 | [様 / よう , 彼女は哀れを誘う有様だった。]
+  - meaning_ko: 방법
+  - example_ko: 그녀는 불쌍한 유혹이었다.
+- id: 2663 | level: N4 | [～おき / ～おき , ]
+  - meaning_ko: ~마다
+- id: 2667 | level: N4 | [最初 / さいしょ , 最初着る前に洗濯してください。]
+  - meaning_ko: 시작
+  - example_ko: 처음 입기 전에 세탁하십시오.
+- id: 2671 | level: N4 | [御～ / ご～ , ]
+  - meaning_ko: 명예로운 ~
+- id: 2674 | level: N4 | [安心 / あんしん , 私よりもっとエッチな人もいて安心しました。]
+  - meaning_ko: 마음의 평화
+  - example_ko: 나보다 더 야한 사람도 있어 안심했습니다.
+- id: 2680 | level: N4 | [直る / なおる , 患者が確かに直るとは私は申しません。]
+  - meaning_ko: 고쳐질
+  - example_ko: 환자가 확실히 고쳐질 것이라고는 말하지 않습니다.
+- id: 2682 | level: N4 | [集める / あつめる , 卵を取り集めるのが彼の仕事だ。]
+  - meaning_ko: 수집하다
+  - example_ko: 계란을 모으는 것이 그의 일이다.
+- id: 2686 | level: N4 | [直す / なおす , 心機一転して出直すのが一番だね。]
+  - meaning_ko: 교정하다 (v.t.)
+  - example_ko: 심기 일전하고 다시 하는 것이 제일이군요.
+- id: 2690 | level: N4 | [続く / つづく , 良い天気は続くでしょう。]
+  - meaning_ko: 계속되는
+  - example_ko: 좋은 날씨는 계속 될 것입니다.
+- id: 2696 | level: N4 | [先輩 / せんぱい , 彼は仕事の上では私の先輩だ。]
+  - meaning_ko: 그룹의 선배들
+  - example_ko: 그는 직장에서 나의 선배입니다.
+- id: 2699 | level: N4 | [約束 / やくそく , 約束するよ。]
+  - meaning_ko: 준비
+  - example_ko: 약속할게.
+- id: 2704 | level: N4 | [世話 / せわする , 赤ん坊の世話を焼けるのが嬉しい。]
+  - meaning_ko: 돌보는
+  - example_ko: 아기를 돌보는 것이 기쁘다.
+- id: 2707 | level: N4 | [近所 / きんじょ , 隣近所の人を夕食に招いた。]
+  - meaning_ko: 이웃
+  - example_ko: 이웃의 사람을 저녁 식사에 초대했다.
+- id: 2710 | level: N4 | [将来 / しょうらい , 母は私の将来を案じている。]
+  - meaning_ko: (미래에
+  - example_ko: 어머니는 내 미래를 안내하고 있습니다.
+- id: 2716 | level: N4 | [億 / おく , 輸出は３００億ドル増加した。]
+  - meaning_ko: 억
+  - example_ko: 수출은 300억 달러 증가했다.
+- id: 2720 | level: N4 | [数学 / すうがく , 明日数学の小テストがある。]
+  - meaning_ko: 수학
+  - example_ko: 내일 수학의 작은 시험이 있다.
+- id: 2724 | level: N4 | [文化 / ぶんか , 僕は文化祭で女装した。]
+  - meaning_ko: 문화
+  - example_ko: 나는 문화제로 여장했다.
+- id: 2728 | level: N4 | [払う / はらう , 払う金があれば、払えるのだが。]
+  - meaning_ko: 지불하다
+  - example_ko: 지불할 돈이 있으면 지불할 수 있는데.
+- id: 2732 | level: N4 | [習慣 / しゅうかん , 本を読むのは、私の習慣である。]
+  - meaning_ko: 관습 (문화와 관련하여)
+  - example_ko: 책을 읽는 것은 내 습관입니다.
+- id: 2735 | level: N4 | [焼ける / やける , あんたは世話の焼けるひとだね。]
+  - meaning_ko: 태우다
+  - example_ko: 너는 돌보는 사람이다.
+- id: 2740 | level: N4 | [君 / きみ , 君の気付いていない問題がある。]
+  - meaning_ko: 당신 (남성의 경우 비공식)
+  - example_ko: 너의 깨닫지 못한 문제가 있다.
+- id: 2742 | level: N4 | [冷える / ひえる , ひどく冷えるなあ。]
+  - meaning_ko: 차가워지다
+  - example_ko: 심하게 식히지 마라.
+- id: 2746 | level: N4 | [点く / つく , 明日のテスト何点くらい取れそう？]
+  - meaning_ko: 시작될
+  - example_ko: 내일 테스트 몇 점 정도 잡힐 수 있을까?
+- id: 2750 | level: N4 | [この間 / このあいだ , この間彼に会った。]
+  - meaning_ko: 다른 날
+  - example_ko: 그동안 그를 만났다.
+- id: 2755 | level: N4 | [格好 / かっこう , 彼女しゃれた格好してるね。]
+  - meaning_ko: 모습
+  - example_ko: 그녀 세련된 모습이야.
+- id: 2759 | level: N4 | [かまう / かまう , 大統領はかまうものかと言った。]
+  - meaning_ko: 마음에
+  - example_ko: 대통령은 물어볼까라고 말했다.
+- id: 2762 | level: N4 | [続ける / つづける , 宇宙は無限に膨張し続けるのか？]
+  - meaning_ko: 계속하다
+  - example_ko: 우주는 무한히 팽창을 계속할까?
+- id: 2765 | level: N4 | [落す / おとす , そのコップを落すな。]
+  - meaning_ko: 떨어뜨리다
+  - example_ko: 그 컵을 떨어뜨리지 마라.
+- id: 2769 | level: N4 | [明日 / あす , 明日会いましょうか？]
+  - meaning_ko: 내일
+  - example_ko: 내일 만나요?
+- id: 2773 | level: N4 | [出発 / しゅっぱつする , 列車は定刻通りに出発した。]
+  - meaning_ko: 출발
+  - example_ko: 기차는 정시대로 출발했다.
+- id: 2778 | level: N4 | [拝見 / はいけんする , 搭乗券を拝見します。]
+  - meaning_ko: (겸손하게) (공손하게) 보고 있어요
+  - example_ko: 탑승권을 배견합니다.
+- id: 2780 | level: N4 | [割れる / われる , 君の重さじゃ氷が割れるよ。]
+  - meaning_ko: 깨다
+  - example_ko: 너의 무게는 얼음이 깨질거야.
+- id: 2785 | level: N4 | [背中 / せなか , 彼女は私に背中を向けた。]
+  - meaning_ko: (몸의) 뒤
+  - example_ko: 그녀는 나에게 등을 돌렸다.
+- id: 2790 | level: N4 | [新聞社 / しんぶんしゃ , どちらの新聞社にお勤めですか。]
+  - meaning_ko: 신문사
+  - example_ko: 어느 신문사에서 일합니까?
+- id: 2796 | level: N4 | [いじめる / いじめる , いじめるのはやめて！]
+  - meaning_ko: 괴롭히다
+  - example_ko: 괴롭히는 것은 그만!
+- id: 2799 | level: N4 | [回る、回す / まわる、まわす , ]
+  - meaning_ko: 돌아다니다
+- id: 2804 | level: N4 | [～君 / ～くん , ]
+  - meaning_ko: (후배) 씨 ~
+- id: 2808 | level: N4 | [おっしゃる / おっしゃる , 全くあなたのおっしゃる通りです。]
+  - meaning_ko: -- い우에 대한 경어 표현 --
+  - example_ko: 완전히 당신의 말씀입니다.
+- id: 2810 | level: N4 | [眠い / ねむい , 眠いのは当然だ。]
+  - meaning_ko: 졸린
+  - example_ko: 졸리는 것은 당연하다.
+- id: 2816 | level: N4 | [濡れる / ぬれる , 猫は濡れるのを嫌がる。]
+  - meaning_ko: 젖다
+  - example_ko: 고양이는 젖는 것을 싫어한다.
+- id: 2819 | level: N4 | [倒れる / たおれる , 内部分裂した家は倒れる。]
+  - meaning_ko: 무너지다
+  - example_ko: 내부 부분 찢어진 집은 쓰러진다.
+- id: 2820 | level: N4 | [スーパー (マーケット) / スーパー (マーケット) , ]
+  - meaning_ko: 슈퍼마켓
+- id: 2824 | level: N4 | [アクセサリー / アクセサリー , 彼女は服にアクセサリーを付けている。]
+  - meaning_ko: 종범
+  - example_ko: 그녀는 옷에 액세서리를 붙이고 있다.
+- id: 2829 | level: N4 | [考える / かんがえる , 最近考えることが多過ぎる。]
+  - meaning_ko: (에 대해) 생각하다
+  - example_ko: 최근 생각이 너무 많다.
+- id: 2832 | level: N4 | [向かう / むかう , 深々と嘆息して、廊下へ向かう。]
+  - meaning_ko: 직면하다
+  - example_ko: 깊이 탄식하고 복도로 향한다.
+- id: 2835 | level: N4 | [自由 / じゆう , 自由について私に話したかったの？]
+  - meaning_ko: 자유
+  - example_ko: 나에게 자유에 대해 이야기하고 싶었나요?
+- id: 2840 | level: N4 | [仕方 / しかた , 料理の仕方がわかりません。]
+  - meaning_ko: (뭔가를 하는) 방식
+  - example_ko: 요리 방법을 모르겠습니다.
+- id: 2843 | level: N4 | [首 / くび , 富士山に登った後で一首浮かんだ。]
+  - meaning_ko: 목
+  - example_ko: 후지산에 오른 후 일목 떠올랐다.
+- id: 2845 | level: N4 | [程 / ほど , 優勝には程遠い。]
+  - meaning_ko: 도
+  - example_ko: 우승에는 그리 멀다.
+- id: 2849 | level: N4 | [代わり / かわり , 父が忙しいので、私が代わりに行きます。]
+  - meaning_ko: 대리자
+  - example_ko: 아버지가 바빠서 제가 대신 가겠습니다.
+- id: 2853 | level: N4 | [失敗 / しっぱい , 躊躇うものは失敗する。]
+  - meaning_ko: 실패
+  - example_ko: 망설이는 것은 실패한다.
+- id: 2857 | level: N4 | [工業 / こうぎょう , 日本は工業国だ。]
+  - meaning_ko: (제조)산업
+  - example_ko: 일본은 공업국이다.
+- id: 2866 | level: N4 | [移る / うつる , つばめは温かい土地へ移る。]
+  - meaning_ko: (집에서) 이사하다
+  - example_ko: 츠바메는 따뜻한 땅으로 옮겨진다.
+- id: 2869 | level: N4 | [スーツケース / スーツケース , 彼女はすべての服をスーツケースに丸め込んだ。]
+  - meaning_ko: 여행 가방
+  - example_ko: 그녀는 모든 옷을 가방에 반올림했다.
+- id: 2873 | level: N4 | [ひげ / ひげ , 彼は口ひげを生やしている。]
+  - meaning_ko: 수염
+  - example_ko: 그는 콧수염을 낳고 있다.
+- id: 2878 | level: N4 | [研究室 / けんきゅうしつ , 研究室に戻りなさい。]
+  - meaning_ko: 교수실
+  - example_ko: 실험실로 돌아가십시오.
+- id: 2879 | level: N4 | [工場 / こうじょう , 勧工場には約２０の出店が並んだ。]
+  - meaning_ko: 공장
+  - example_ko: 권공장에는 약 20개 출점이 늘었다.
+- id: 2887 | level: N4 | [紹介 / しょうかい , うまくいったら連ドラを紹介してあげる。]
+  - meaning_ko: 소개
+  - example_ko: 잘하면 연도라를 소개해 준다.
+- id: 2891 | level: N4 | [けれど; けれども / けれど; けれども , ]
+  - meaning_ko: 하지만
+- id: 2895 | level: N4 | [舟 / ふね , 舟は行方不明だ。]
+  - meaning_ko: 배
+  - example_ko: 배는 행방불명이다.
+- id: 2898 | level: N4 | [動く / うごく , 路面電車は電気で動く。]
+  - meaning_ko: 움직이다
+  - example_ko: 노면 전철은 전기로 움직입니다.
+- id: 2903 | level: N4 | [～(に) ついて / ～(に) ついて , ]
+  - meaning_ko: ~에 대한
+- id: 2907 | level: N4 | [コンサート / コンサート , 来週コンサートに行きます。]
+  - meaning_ko: 콘서트
+  - example_ko: 다음 주 콘서트에 가자.
+- id: 2911 | level: N4 | [虫 / むし , 虫の音がきこえます。]
+  - meaning_ko: 곤충
+  - example_ko: 벌레의 소리가 들립니다.
+- id: 2915 | level: N4 | [優しい / やさしい , 優しい人です。]
+  - meaning_ko: 종류 (사람)
+  - example_ko: 부드러운 사람입니다.
+- id: 2918 | level: N4 | [コンピュータ; コンピューター / コンピュータ; コンピューター , ]
+  - meaning_ko: 컴퓨터
+- id: 2921 | level: N4 | [植える / うえる , 春は木を植える時期です。]
+  - meaning_ko: 심다
+  - example_ko: 봄은 나무를 심는 시기입니다.
+- id: 2924 | level: N4 | [両方 / りょうほう , 両方一度にはできんよ。]
+  - meaning_ko: 양쪽
+  - example_ko: 둘 다 한번에 할 수 없어.
+- id: 2930 | level: N4 | [汚れる / よごれる , おべべが汚れるよ。]
+  - meaning_ko: 더러워지다
+  - example_ko: 오베가 더러워.
+- id: 2933 | level: N4 | [水泳 / すいえい , 僕は水泳が苦手です。]
+  - meaning_ko: 수영
+  - example_ko: 저는 수영을 싫어합니다.
+- id: 2935 | level: N4 | [経験 / けいけんする , 流産はとても辛い経験です。]
+  - meaning_ko: 경험
+  - example_ko: 유산은 매우 매운 경험입니다.
+- id: 2941 | level: N4 | [勝つ / かつ , 選挙に勝つには「見た目」が何割？]
+  - meaning_ko: 승리하다
+  - example_ko: 선거를 이기려면 「외형」이 몇할까?
+- id: 2944 | level: N4 | [砂 / すな , 卵に砂糖を入れてかき混ぜなさい。]
+  - meaning_ko: 모래
+  - example_ko: 계란에 설탕을 넣고 약동하십시오.
+- id: 2947 | level: N4 | [警察 / けいさつ , 警察を呼んで！]
+  - meaning_ko: 경찰
+  - example_ko: 경찰을 불러!
+- id: 2956 | level: N4 | [取り替える / とりかえる , 雨戸を取り替えることにしたんだ。]
+  - meaning_ko: 교환하다
+  - example_ko: 우도를 바꾸기로 했다.
+- id: 2958 | level: N4 | [急ぐ / いそぐ , 急ぐ必要はなかったのに。]
+  - meaning_ko: 서두르다
+  - example_ko: 서두를 필요는 없었는데.
+- id: 2961 | level: N4 | [簡単 / かんたん , 良い事、悪い事を区別するのは簡単だ。]
+  - meaning_ko: 단순한
+  - example_ko: 좋은 일, 나쁜 일을 구별하는 것은 간단하다.
+- id: 2965 | level: N4 | [参る / まいる , 君には参るよ。]
+  - meaning_ko: 行ku, 来루의 겸손한 표현
+  - example_ko: 너에게 들어갈게.
+- id: 2968 | level: N4 | [全然 / ぜんぜん , 話は語っても全然減らない。]
+  - meaning_ko: 별말씀을요
+  - example_ko: 이야기는 말해도 전혀 줄지 않는다.
+- id: 2969 | level: N4 | [特別 / とくべつ , 僕は特別気持ちがいい。]
+  - meaning_ko: 특별한
+  - example_ko: 나는 특별한 기분이 좋다.
+- id: 2974 | level: N4 | [復習 / ふくしゅう , 第５課を復習しましょう。]
+  - meaning_ko: (수업의) 복습
+  - example_ko: 제5과를 복습합시다.
+- id: 2977 | level: N4 | [間に合う / まにあう , 彼女は間に合うでしょうか。]
+  - meaning_ko: 시간에 맞춰
+  - example_ko: 그녀는 시간이 맞을까요?
+- id: 2979 | level: N4 | [役に立つ / やくにたつ , 私のパソコンは何かの役に立つはずだ。]
+  - meaning_ko: 도움이 되기 위해
+  - example_ko: 내 컴퓨터는 뭔가 도움이 될 것입니다.
+- id: 2981 | level: N4 | [もうすぐ / もうすぐ , もうすぐ授業が再開する。]
+  - meaning_ko: 곧
+  - example_ko: 곧 수업이 재개된다.
+- id: 2983 | level: N4 | [真中 / まんなか , 湖の真中に、その島がある。]
+  - meaning_ko: 가운데
+  - example_ko: 호수 한가운데에 그 섬이 있다.
+- id: 2985 | level: N4 | [戻る / もどる , 父がいつ戻るか知りません。]
+  - meaning_ko: 돌아오다 (v.i.)
+  - example_ko: 아버지가 언제 돌아갈지 모르겠습니다.
+- id: 2987 | level: N4 | [研究 / けんきゅう , 野生の花の研究が好きだ。]
+  - meaning_ko: 공부하다
+  - example_ko: 야생화의 연구를 좋아한다.
+- id: 2989 | level: N4 | [ケーキ / ケーキ , 僕もケーキが好きだ。]
+  - meaning_ko: 케이크
+  - example_ko: 나도 케이크를 좋아한다.
+- id: 2991 | level: N4 | [草 / くさ , 除草剤耐性品種でなぜ収量が増えるのか？]
+  - meaning_ko: 잔디
+  - example_ko: 제초제 내성 품종으로 왜 수율이 증가하는가?
+- id: 2993 | level: N4 | [込む / こむ , ここが差し込むように痛みます。]
+  - meaning_ko: 붐비다
+  - example_ko: 여기가 꽂는 것처럼 아프다.
+- id: 2995 | level: N4 | [この頃 / このごろ , ジョンはこの頃心配がない。]
+  - meaning_ko: 요즘에는
+  - example_ko: 존은 요즘 걱정이 없다.
+- id: 2997 | level: N4 | [訪ねる / たずねる , 明日彼を訪ねるつもりだ。]
+  - meaning_ko: 방문하다
+  - example_ko: 내일 그를 찾아갈 생각이다.
+- id: 2999 | level: N4 | [下げる / さげる , 関税を下げることを望む。]
+  - meaning_ko: 낮추다 (동사)
+  - example_ko: 관세를 낮추고 싶다.
+- id: 3001 | level: N4 | [花見 / はなみ , お花見に行きませんか？]
+  - meaning_ko: 꽃놀이
+  - example_ko: 꽃놀이에 가지 않습니까?
+- id: 3002 | level: N4 | [途中 / とちゅう , 途中でにわか雨にあったんだよ。]
+  - meaning_ko: 가는 길에
+  - example_ko: 도중에 와우 비에 있었어.
+- id: 3005 | level: N4 | [入院 / にゅういんする , 母は今入院しています。]
+  - meaning_ko: 입원
+  - example_ko: 어머니는 지금 입원하고 있습니다.
+- id: 3007 | level: N4 | [乗り換える / のりかえる , 乗り換えるのですか。]
+  - meaning_ko: (열차를) 환승하다
+  - example_ko: 환승할까요?
+- id: 3009 | level: N4 | [別れる / わかれる , 別れる時がやって来た。]
+  - meaning_ko: 헤어지다
+  - example_ko: 헤어질 때가 왔다.
+- id: 3012 | level: N4 | [～町 / ～ちょう , ]
+  - meaning_ko: ~의 마을
+- id: 3015 | level: N4 | [安全 / あんぜん , 忘れずに安全ベルトを閉めなさい。]
+  - meaning_ko: 안전
+  - example_ko: 잊지 말고 안전 벨트를 닫으십시오.
+- id: 3017 | level: N4 | [看護婦 / かんごふ , 彼女は看護婦の資格を持っている。]
+  - meaning_ko: (여자) 간호사
+  - example_ko: 그녀는 간호사의 자격을 가지고 있습니다.
+- id: 3020 | level: N4 | [見物 / けんぶつ , 町中見物でもするか？]
+  - meaning_ko: 관광
+  - example_ko: 동네 구경에서도 할까?
+- id: 3023 | level: N4 | [相談 / そうだんする , 無理な相談じゃないだろう。]
+  - meaning_ko: 상의
+  - example_ko: 무리한 상담이 아닐 것이다.
+- id: 3026 | level: N4 | [ガソリンスタンド / ガソリンスタンド , 次のガソリンスタンドに寄ろうよ。]
+  - meaning_ko: 주유소
+  - example_ko: 다음 주유소에 가자.
+- id: 3028 | level: N4 | [テニス / テニス , テニス部と合コンしましょう。]
+  - meaning_ko: 테니스
+  - example_ko: 테니스부와 합콘합시다.
+- id: 3035 | level: N4 | [眠る / ねむる , 眠ることができなかった。]
+  - meaning_ko: 잠을 자다
+  - example_ko: 잠을 잘 수 없었다.
+- id: 3037 | level: N4 | [上がる / あがる , 物価が上がるのは確かだ。]
+  - meaning_ko: 상승하다
+  - example_ko: 물가가 오르는 것은 확실하다.
+- id: 3041 | level: N4 | [翻訳 / ほんやく , 翻訳の質が良くなった。]
+  - meaning_ko: 번역
+  - example_ko: 번역의 질이 좋아졌다.
+- id: 3045 | level: N4 | [食事 / しょくじする , 食事中本を読んだ。]
+  - meaning_ko: 식사
+  - example_ko: 식사 중 책을 읽었다.
+- id: 3051 | level: N4 | [お陰 / おかげ , 事故のお陰で私は注意深くなった。]
+  - meaning_ko: 덕분에 또는 덕분에
+  - example_ko: 사고 덕분에 조심스러워졌습니다.
+- id: 3057 | level: N4 | [娘 / むすめ , 私の娘は尻が重いので困る。]
+  - meaning_ko: 딸 (겸손)
+  - example_ko: 나의 딸은 엉덩이가 무겁기 때문에 곤란하다.
+- id: 3060 | level: N4 | [湯 / ゆ , 薬缶のお湯が沸いている。]
+  - meaning_ko: 뜨거운 물
+  - example_ko: 약 캔의 물이 끓는다.
+- id: 3062 | level: N4 | [競争 / きょうそう , 彼女は大食い競争で一番になった。]
+  - meaning_ko: 경쟁
+  - example_ko: 그녀는 대식 경쟁에서 최고가 되었다.
+- id: 3068 | level: N4 | [会議 / かいぎ , 和平会議が来週始まる。]
+  - meaning_ko: 비즈니스 미팅
+  - example_ko: 평화회의가 다음주 시작된다.
+- id: 3071 | level: N4 | [湖 / みずうみ , 琵琶湖は日本最大の湖です。]
+  - meaning_ko: 호수
+  - example_ko: 비와코는 일본 최대의 호수입니다.
+- id: 3078 | level: N4 | [集まる / あつまる , 類をもって集まる。]
+  - meaning_ko: 모으다 (v.i.)
+  - example_ko: 종류로 모인다.
+- id: 3082 | level: N4 | [～にくい / ～にくい , ]
+  - meaning_ko: ~하기 어렵다
+- id: 3086 | level: N4 | [生活 / せいかつする , 生活費が断然上がった。]
+  - meaning_ko: 생활
+  - example_ko: 생활비가 단연 올랐다.
+- id: 3089 | level: N4 | [糸 / いと , プチッ、と糸を犬歯で噛み切った。]
+  - meaning_ko: 실
+  - example_ko: 쁘띠, 실을 개 이빨로 씹었다.
+- id: 3093 | level: N4 | [関係 / かんけい , 無関係の人を殺るな！]
+  - meaning_ko: 관계)
+  - example_ko: 무관한 사람을 죽이지 마라!
+- id: 3095 | level: N4 | [ピアノ / ピアノ , 彼はピアノを上手に弾く。]
+  - meaning_ko: 피아노
+  - example_ko: 그는 피아노를 잘 연주한다.
+- id: 3099 | level: N4 | [～目 / ～め , ]
+  - meaning_ko: 번호 ~ 순서
+- id: 3104 | level: N4 | [番組 / ばんぐみ , 由美は英語の番組を聞くために早くおきました。]
+  - meaning_ko: 방송 프로그램
+  - example_ko: 유미는 영어 프로그램을 듣기 위해 일찍 일어났습니다.
+- id: 3106 | level: N4 | [急 / きゅう , サイレンが急変を知らせました。]
+  - meaning_ko: 긴급한
+  - example_ko: 사이렌이 급변을 알렸다.
+- id: 3111 | level: N4 | [棚 / たな , 本が一冊棚から落ちた。]
+  - meaning_ko: 선반
+  - example_ko: 책이 한 권의 선반에서 떨어졌다.
+- id: 3120 | level: N4 | [木綿 / もめん , このブラウスは木綿製です。]
+  - meaning_ko: 면
+  - example_ko: 이 블라우스는 목화입니다.
+- id: 3123 | level: N4 | [輸出 / ゆしゅつする , 輸出業界は青息吐息だ。]
+  - meaning_ko: 내보내다
+  - example_ko: 수출업계는 청식 한숨이다.
+- id: 3127 | level: N4 | [タイプ / タイプ , 私のタイプじゃない。]
+  - meaning_ko: 유형
+  - example_ko: 내 유형이 아닙니다.
+- id: 3131 | level: N4 | [すり / すり , ゆうべはぐっすり眠れたよ。]
+  - meaning_ko: 소매치기
+  - example_ko: 유베는 굉장히 잠을 잘 수 있었다.
+- id: 3137 | level: N4 | [嬉しい / うれしい , 私は彼女に会えて嬉しい。]
+  - meaning_ko: 행복하다
+  - example_ko: 나는 그녀를 만나서 기쁘다.
+- id: 3139 | level: N4 | [アルコール / アルコール , 彼女はアルコール中毒だ。]
+  - meaning_ko: 술
+  - example_ko: 그녀는 알코올 중독이다.
+- id: 3143 | level: N4 | [ソフト / ソフト , そのソフトは完璧からほど遠い。]
+  - meaning_ko: 부드러운
+  - example_ko: 그 소프트는 완벽으로부터 멀다.
+- id: 3147 | level: N4 | [神社 / じんじゃ , 初詣、ご利益があるのはどこの神社？]
+  - meaning_ko: 신사
+  - example_ko: 하츠미, 이익이 있는 것은 어디의 신사?
+- id: 3151 | level: N4 | [大分 / だいぶ , 彼女は大分に行く予定です。]
+  - meaning_ko: 충분히 좋게
+  - example_ko: 그녀는 오이타에 갈 예정입니다.
+- id: 3155 | level: N4 | [楽しみ / たのしみ , 野球をすることが楽しみです。]
+  - meaning_ko: 기쁨
+  - example_ko: 야구를하는 것이 기대됩니다.
+- id: 3157 | level: N4 | [趣味 / しゅみ , 腕時計の収集が趣味だ。]
+  - meaning_ko: 취미
+  - example_ko: 손목시계 수집이 취미다.
+- id: 3159 | level: N4 | [電報 / でんぽう , 彼女は来ると電報を打ってきた。]
+  - meaning_ko: 전보
+  - example_ko: 그녀는 올 때 전보를 쳤다.
+- id: 3164 | level: N4 | [家内 / かない , 家内は今、夕食の支度をしている。]
+  - meaning_ko: (자신의) 아내
+  - example_ko: 가내는 지금 저녁 식사를 하고 있다.
+- id: 3167 | level: N4 | [指 / ゆび , 私たちはもう終わったわ。指輪を返して！]
+  - meaning_ko: 손가락
+  - example_ko: 우리는 이미 끝났어. 반지를 돌려주세요!
+- id: 3170 | level: N4 | [これから / これから , 彼は、昔も今も、またこれからも私の親友だ。]
+  - meaning_ko: 지금부터
+  - example_ko: 그는 옛날도 지금도, 또 앞으로도 내 가장 친한 친구다.
+- id: 3173 | level: N4 | [たまに / たまに , 本当にたまにしか来ないからね。]
+  - meaning_ko: 가끔
+  - example_ko: 정말 가끔 밖에 오지 않으니까.
+- id: 3177 | level: N4 | [社会 / しゃかい , 階層問題に対する、消費社会論の著である。]
+  - meaning_ko: 사회
+  - example_ko: 계층 문제에 대한 소비 사회론의 저이다.
+- id: 1 | level: N5 | [ああ / ああ , 「ああ！」は感嘆詞だ。]
+  - meaning_ko: 아!
+  - example_ko: 「아아!」는 감탄사다.
+- id: 2 | level: N5 | [会う / あう , 翌日私に会うと彼はいった。]
+  - meaning_ko: 만나다
+  - example_ko: 다음날 나를 만날 것이라고 그는 말했다.
+- id: 3 | level: N5 | [青 / あお , 隣の芝生はうちのより青い。]
+  - meaning_ko: 파란색
+  - example_ko: 옆 잔디밭은 우리보다 더 파랗다.
+- id: 4 | level: N5 | [青い / あおい , 隣の芝生はうちのより青い。]
+  - meaning_ko: 파란색
+  - example_ko: 옆 잔디밭은 우리보다 더 파랗다.
+- id: 5 | level: N5 | [赤 / あか , 赤い冷蔵庫を見たことがない。]
+  - meaning_ko: 빨간색
+  - example_ko: 빨간 냉장고를 본 적이 없다.
+- id: 6 | level: N5 | [赤い / あかい , 赤いネクタイを買いました。]
+  - meaning_ko: 빨간색
+  - example_ko: 빨간 넥타이를 샀다.
+- id: 7 | level: N5 | [明るい / あかるい , 君はなかなか地理に明るいな。]
+  - meaning_ko: 밝다 (성격이나 날씨와 관련해)
+  - example_ko: 너는 좀처럼 지리적으로 밝다.
+- id: 8 | level: N5 | [秋 / あき , 木の葉は秋に紅葉する。]
+  - meaning_ko: 가을 (계절)
+  - example_ko: 나뭇잎은 가을에 단풍한다.
+- id: 9 | level: N5 | [開く / あく , 瞼が大きく開く。]
+  - meaning_ko: 열다
+  - example_ko: 눈꺼풀이 크게 열린다.
+- id: 10 | level: N5 | [開ける / あける , 父は私に窓を開けるように頼んだ。]
+  - meaning_ko: 열다 (동사)
+  - example_ko: 아버지는 나에게 창문을 열라고 부탁했다.
+- id: 11 | level: N5 | [上げる / あげる , 包みを持ち上げるのを手伝って。]
+  - meaning_ko: 키우다
+  - example_ko: 포장을 들어 올리는 데 도움.
+- id: 12 | level: N5 | [朝 / あさ , 今朝テレビを見ました。]
+  - meaning_ko: 아침
+  - example_ko: 오늘 아침 TV를 보았습니다.
+- id: 13 | level: N5 | [朝御飯 / あさごはん , 朝御飯ができています。]
+  - meaning_ko: 아침
+  - example_ko: 아침밥이 되어 있습니다.
+- id: 14 | level: N5 | [明後日 / あさって , 明後日雨が降れば、私は家にいます。]
+  - meaning_ko: 내일 모레
+  - example_ko: 내일 비가 내리면 집에 있어요.
+- id: 15 | level: N5 | [足; 脚 / あし , ]
+  - meaning_ko: 발
+- id: 16 | level: N5 | [明日 / あした , 明日会いましょうか？]
+  - meaning_ko: 내일
+  - example_ko: 내일 만나요?
+- id: 17 | level: N5 | [あそこ / あそこ , 彼はあそこの塔を指さした。]
+  - meaning_ko: 거기
+  - example_ko: 그는 저기 타워를 가리켰다.
+- id: 18 | level: N5 | [遊ぶ / あそぶ , 遊ぶよりはまず仕事。]
+  - meaning_ko: 놀다
+  - example_ko: 놀기보다 먼저 일.
+- id: 19 | level: N5 | [暖かい / あたたかい , 米は暖かい国でできる。]
+  - meaning_ko: 따뜻한
+  - example_ko: 밥은 온난한 나라에서 할 수 있다.
+- id: 20 | level: N5 | [頭 / あたま , 頭痛がする。]
+  - meaning_ko: 머리
+  - example_ko: 두통이 난다.
+- id: 21 | level: N5 | [新しい / あたらしい , 違うよ、新しい彼じゃない。]
+  - meaning_ko: 새로운
+  - example_ko: 다르다, 새로운 그가 아니다.
+- id: 22 | level: N5 | [あちら / あちら , 彼の目はあちらこちらに動いた。]
+  - meaning_ko: 이쪽으로 (정중하게)
+  - example_ko: 그의 눈은 여기저기로 움직였다.
+- id: 23 | level: N5 | [暑い / あつい , 夜はとても暑い。]
+  - meaning_ko: 덥다 (날씨와 관련해)
+  - example_ko: 밤은 매우 덥다.
+- id: 24 | level: N5 | [熱い / あつい , 彼女は熱い風呂につかるのが好きだ。]
+  - meaning_ko: 뜨거운 (물체)
+  - example_ko: 그녀는 뜨거운 목욕을하는 것을 좋아합니다.
+- id: 25 | level: N5 | [厚い / あつい , 彼は情に厚い人だ。]
+  - meaning_ko: 친절한
+  - example_ko: 그는 정에 두꺼운 사람이다.
+- id: 26 | level: N5 | [あっち / あっち , あっちの本は私のです。]
+  - meaning_ko: 저기
+  - example_ko: 저쪽의 책은 나입니다.
+- id: 27 | level: N5 | [後 / あと , また後でかけ直していただけませんか？]
+  - meaning_ko: 나중에 (나중에)
+  - example_ko: 다시 나중에 다시 받을 수 없습니까?
+- id: 28 | level: N5 | [あなた / あなた , あなたが女の子だからよ。]
+  - meaning_ko: 너
+  - example_ko: 당신이 여자이기 때문에.
+- id: 29 | level: N5 | [兄 / あに , 兄ちゃん、こっち生中二つー。]
+  - meaning_ko: (나의) 형 (겸손하다)
+  - example_ko: 오빠, 이쪽 생중 2개-.
+- id: 30 | level: N5 | [姉 / あね , 姉は頭の回転がいい。]
+  - meaning_ko: (나의) 누나 (겸손하다)
+  - example_ko: 누나는 머리 회전이 좋다.
+- id: 31 | level: N5 | [アパート / アパート , 彼女は一人でアパートに住んでいる。]
+  - meaning_ko: 아파트 (약어)
+  - example_ko: 그녀는 혼자 아파트에 살고 있습니다.
+- id: 32 | level: N5 | [あの / あの , あの人は化け物のような力持ちだ。]
+  - meaning_ko: 저기 그거
+  - example_ko: 그 사람은 괴물 같은 힘이다.
+- id: 33 | level: N5 | [浴びる / あびる , 彼女は毎朝シャワーを浴びるといった。]
+  - meaning_ko: 목욕하다
+  - example_ko: 그녀는 매일 아침 샤워를 한다고 한다.
+- id: 34 | level: N5 | [危ない / あぶない , 彼女の命は危ない。]
+  - meaning_ko: 위험한
+  - example_ko: 그녀의 생명은 위험하다.
+- id: 35 | level: N5 | [甘い / あまい , 彼女は自分の子どもに甘い。]
+  - meaning_ko: 관대한
+  - example_ko: 그녀는 자신의 아이에게 달콤합니다.
+- id: 36 | level: N5 | [余り / あまり , 余り楽しくなかったな。]
+  - meaning_ko: 별로
+  - example_ko: 너무 즐겁지 않았다.
+- id: 37 | level: N5 | [雨 / あめ , 雨が降っている。]
+  - meaning_ko: 비
+  - example_ko: 비가 내리고 있다.
+- id: 38 | level: N5 | [飴 / あめ , 飴がほしい。]
+  - meaning_ko: (단단한) 사탕
+  - example_ko: 사탕을 원한다.
+- id: 39 | level: N5 | [洗う / あらう , 彼はその車を洗う必要はない。]
+  - meaning_ko: 씻다
+  - example_ko: 그는 그 차를 씻을 필요가 없다.
+- id: 40 | level: N5 | [在る / ある , 山小屋は頂上の下の方に在る。]
+  - meaning_ko: 장차 ~ 가 되는
+  - example_ko: 산장은 정상 아래쪽에 있다.
+- id: 41 | level: N5 | [有る / ある , 彼女の作文には誤りがひとつ有る。]
+  - meaning_ko: 장차 ~ 가 되는
+  - example_ko: 그녀의 작문에는 잘못이 하나 있다.
+- id: 42 | level: N5 | [歩く / あるく , ほらっ、キリキリ歩くっ！]
+  - meaning_ko: 걷기
+  - example_ko: 이봐, 깨끗이 걸어!
+- id: 43 | level: N5 | [あれ / あれ , あれ？あなたまだここにいたのね！]
+  - meaning_ko: 그거 (저기)
+  - example_ko: 어라? 너 아직 여기 있었어!
+- id: 44 | level: N5 | [いい; よい / いい; よい , ]
+  - meaning_ko: 좋은
+- id: 45 | level: N5 | [いいえ / いいえ , いいえ。新婚旅行で一度グアムへ行きました。]
+  - meaning_ko: 아니요
+  - example_ko: 아니. 신혼여행으로 한번 괌에 갔습니다.
+- id: 46 | level: N5 | [言う / いう , 授業が全然無いとでも言うの？！]
+  - meaning_ko: 말하다
+  - example_ko: 수업이 전혀 없다고 해도? !
+- id: 47 | level: N5 | [家 / いえ , 家に来ませんか。]
+  - meaning_ko: 집
+  - example_ko: 집에 오지 않겠습니까?
+- id: 48 | level: N5 | [いかが / いかが , 葉巻はいかが？]
+  - meaning_ko: 어떻게
+  - example_ko: 시가는 어떻습니까?
+- id: 49 | level: N5 | [行く / いく; ゆく , 今夜教会に行くよ。]
+  - meaning_ko: 가다
+  - example_ko: 오늘 밤 교회에 갈거야.
+- id: 50 | level: N5 | [いくつ / いくつ , おいくつですか？]
+  - meaning_ko: 얼마나
+  - example_ko: 몇몇?
+- id: 51 | level: N5 | [いくら / いくら , いくらですか？]
+  - meaning_ko: 얼마나 많이
+  - example_ko: 얼마입니까?
+- id: 52 | level: N5 | [池 / いけ , その巨木の枝が池に覆いかぶさっていた。]
+  - meaning_ko: 연못
+  - example_ko: 그 거목의 가지가 연못에 덮여 있었다.
+- id: 53 | level: N5 | [医者 / いしゃ , 医者になれる日はまだほど遠い。]
+  - meaning_ko: 의사
+  - example_ko: 의사가 될 수 있는 날은 아직 멀다.
+- id: 54 | level: N5 | [椅子 / いす , 隣の部屋から椅子を持って来て下さい。]
+  - meaning_ko: 의자
+  - example_ko: 옆 방에서 의자를 가져오십시오.
+- id: 55 | level: N5 | [忙しい / いそがしい , 明日の準備で忙しい。]
+  - meaning_ko: 바쁜 (사람들
+  - example_ko: 내일 준비에 바쁘다.
+- id: 56 | level: N5 | [痛い / いたい , 目が痛いです。]
+  - meaning_ko: 아프다
+  - example_ko: 눈이 아프다.
+- id: 57 | level: N5 | [一 / いち , 私は一日に100ユーロ稼ぎます。]
+  - meaning_ko: 하나
+  - example_ko: 하루에 100유로 벌어요.
+- id: 58 | level: N5 | [一日 / いちにち , ローマは一日にして成らず。]
+  - meaning_ko: 하루(기간)
+  - example_ko: 로마는 하루가 되어서는 안 된다.
+- id: 59 | level: N5 | [一番 / いちばん , 冬は私の一番好きな季節です。]
+  - meaning_ko: 최고 (대부분)
+  - example_ko: 겨울은 제가 가장 좋아하는 계절입니다.
+- id: 60 | level: N5 | [いつ / いつ , こいつは悪いウサギだった。]
+  - meaning_ko: 언제
+  - example_ko: 이 녀석은 나쁜 토끼였다.
+- id: 61 | level: N5 | [五日 / いつか , 人の噂も七十五日。]
+  - meaning_ko: 5일
+  - example_ko: 사람의 소문도 75일.
+- id: 62 | level: N5 | [一緒 / いっしょ , 一緒に食べに行きましょう。]
+  - meaning_ko: 함께
+  - example_ko: 함께 먹으러 가자.
+- id: 63 | level: N5 | [五つ / いつつ , 彼女はケーキを五つに分けた。]
+  - meaning_ko: 다섯 개
+  - example_ko: 그녀는 케이크를 다섯 개로 나누었다.
+- id: 64 | level: N5 | [いつも / いつも , いつも何曜日なら空いていますか？]
+  - meaning_ko: 언제나
+  - example_ko: 항상 몇 요일이라면 비어 있습니까?
+- id: 65 | level: N5 | [犬 / いぬ , 噛み合う犬は呼び難し。]
+  - meaning_ko: 개
+  - example_ko: 맞물리는 개는 부르기 어렵다.
+- id: 66 | level: N5 | [今 / いま , 今日はとても暑い。]
+  - meaning_ko: 지금
+  - example_ko: 오늘은 너무 덥다.
+- id: 67 | level: N5 | [意味 / いみ , 愛のない人生など全く無意味だ。]
+  - meaning_ko: 의미
+  - example_ko: 사랑이 없는 인생 등 완전히 무의미하다.
+- id: 68 | level: N5 | [妹 / いもうと , 私たちは姉妹３人で喫茶店を始めた。]
+  - meaning_ko: 여동생 (겸손)
+  - example_ko: 우리는 자매 3명으로 다방을 시작했다.
+- id: 69 | level: N5 | [嫌 / いや , 化学が嫌いだ。]
+  - meaning_ko: 불쾌한
+  - example_ko: 화학이 싫어.
+- id: 70 | level: N5 | [入口 / いりぐち , 入口の側で立った。]
+  - meaning_ko: 입구
+  - example_ko: 입구 옆에 서 있었다.
+- id: 71 | level: N5 | [居る / いる , 幽霊は本当に居るのだろうか。]
+  - meaning_ko: (겸손하다) (움직이다)
+  - example_ko: 유령은 정말로 있는 것일까.
+- id: 72 | level: N5 | [要る / いる , 英語を学ぶには忍耐が要る。]
+  - meaning_ko: 필요하다
+  - example_ko: 영어를 배우려면 인내가 필요하다.
+- id: 73 | level: N5 | [入れる / いれる , 卵をすべて一つのかごに入れるな。]
+  - meaning_ko: 넣다
+  - example_ko: 모든 계란을 하나의 바구니에 넣지 마십시오.
+- id: 74 | level: N5 | [色 / いろ , 社長さんの車種と色は？]
+  - meaning_ko: 색상
+  - example_ko: 사장씨의 차종과 색은?
+- id: 75 | level: N5 | [色々 / いろいろ , 彼は色々不思議なことをした。]
+  - meaning_ko: 다양한
+  - example_ko: 그는 여러가지 이상한 일을 했다.
+- id: 76 | level: N5 | [上 / うえ , これ以上考えても無駄だ。]
+  - meaning_ko: 위(위로
+  - example_ko: 더 이상 생각해도 낭비다.
+- id: 77 | level: N5 | [後ろ / うしろ , 髪の毛を後ろになでつけた。]
+  - meaning_ko: 뒤쪽에
+  - example_ko: 머리카락을 뒤로 쓰다듬었다.
+- id: 78 | level: N5 | [薄い / うすい , 氷が薄いから君の体重では無理だ。]
+  - meaning_ko: 얇은
+  - example_ko: 얼음이 얇기 때문에 네 체중에서는 무리다.
+- id: 79 | level: N5 | [歌 / うた , マリア・カラスは有名なオペラ歌手でした。]
+  - meaning_ko: 노래
+  - example_ko: 마리아 까라스는 유명한 오페라 가수였습니다.
+- id: 80 | level: N5 | [歌う / うたう , 彼女は悲しい歌を歌うのは嫌いだ。]
+  - meaning_ko: 노래하다
+  - example_ko: 그녀는 슬픈 노래를 부르는 것을 싫어한다.
+- id: 81 | level: N5 | [うち / うち , うちはうち、そとはそと。]
+  - meaning_ko: 집
+  - example_ko: 우치하우치, 소토하소토.
+- id: 82 | level: N5 | [生まれる / うまれる , 来月赤ん坊が生まれるんです。]
+  - meaning_ko: 태어나다
+  - example_ko: 다음 달 아기가 태어납니다.
+- id: 83 | level: N5 | [海 / うみ , 私の目は夢を反映する海である。]
+  - meaning_ko: 바다
+  - example_ko: 나의 눈은 꿈을 반영하는 바다이다.
+- id: 84 | level: N5 | [売る / うる , 彼は売ると約束した。]
+  - meaning_ko: 팔다 (동사)
+  - example_ko: 그는 팔라고 약속했다.
+- id: 85 | level: N5 | [うるさい / うるさい , 彼女は服装にうるさい。]
+  - meaning_ko: 시끄러운
+  - example_ko: 그녀는 복장에 시끄럽다.
+- id: 86 | level: N5 | [上着 / うわぎ , 彼女は上着を脱いだ。]
+  - meaning_ko: 코트
+  - example_ko: 그녀는 겉옷을 벗었다.
+- id: 87 | level: N5 | [絵 / え , 理想を絵に描いたような男性だった。]
+  - meaning_ko: 그림
+  - example_ko: 이상을 그림에 그린 듯한 남성이었다.
+- id: 88 | level: N5 | [映画 / えいが , 映画は2時間続いた。]
+  - meaning_ko: 영화
+  - example_ko: 영화는 2시간 동안 계속되었다.
+- id: 89 | level: N5 | [映画館 / えいがかん , 突然、映画館で火事が起きた。]
+  - meaning_ko: 영화관
+  - example_ko: 갑자기 영화관에서 화재가 일어났다.
+- id: 90 | level: N5 | [英語 / えいご , 誰か英語を話す人はいますか。]
+  - meaning_ko: 영어(언어)
+  - example_ko: 누군가 영어를 사용하는 사람이 있습니까?
+- id: 91 | level: N5 | [ええ / ええ , 君、ええ仕事をしてるな。]
+  - meaning_ko: 예
+  - example_ko: 너, 그래 일을 하고 있지.
+- id: 92 | level: N5 | [駅 / えき , 私が駅を出た時、男の人を見た。]
+  - meaning_ko: 역
+  - example_ko: 내가 역을 나왔을 때 남자를 보았다.
+- id: 93 | level: N5 | [エレベーター / エレベーター , 彼は五階までエレベーターに乗った。]
+  - meaning_ko: 엘리베이터
+  - example_ko: 그는 5층까지 엘리베이터를 탔다.
+- id: 94 | level: N5 | [～円 / ～えん , ]
+  - meaning_ko: 엔
+- id: 95 | level: N5 | [鉛筆 / えんぴつ , 彼女は鉛筆で紙に円を描いた。]
+  - meaning_ko: 연필
+  - example_ko: 그녀는 연필로 종이에 원을 그렸다.
+- id: 96 | level: N5 | [お～ / お～ , ]
+  - meaning_ko: 명예로운 ~ (존경)
+- id: 97 | level: N5 | [美味しい / おいしい , これはとても美味しいですよ。]
+  - meaning_ko: 맛있는
+  - example_ko: 이것은 매우 맛있습니다.
+- id: 98 | level: N5 | [多い / おおい , 最近、タチの悪い詐欺事件が多いわね。]
+  - meaning_ko: 많은
+  - example_ko: 최근 타치가 나쁜 사기 사건이 많네요.
+- id: 99 | level: N5 | [大きい / おおきい , しーっ、声が大きい。]
+  - meaning_ko: 큰
+  - example_ko: 음, 목소리가 크다.
+- id: 100 | level: N5 | [大きな / おおきな , モールの中に、比較的大きなシネコンがある。]
+  - meaning_ko: 큰
+  - example_ko: 쇼핑몰에 비교적 큰 영화관이 있습니다.
+- id: 101 | level: N5 | [大勢 / おおぜい , 彼は大勢の新聞記者にとり囲まれた。]
+  - meaning_ko: 많은 사람들
+  - example_ko: 그는 많은 신문 기자로 둘러싸였다.
+- id: 102 | level: N5 | [お母さん / おかあさん , 「どなたですか」「お母さんよ」]
+  - meaning_ko: 어머니 (공식)
+  - example_ko: "누구입니까?" "엄마"
+- id: 103 | level: N5 | [お菓子 / おかし , 自由にお菓子をお取りください。]
+  - meaning_ko: 과자
+  - example_ko: 자유롭게 과자를 가져 가십시오.
+- id: 104 | level: N5 | [お金 / おかね , お金がないので、プチッと旅行。]
+  - meaning_ko: 돈
+  - example_ko: 돈이 없기 때문에 쁘띠 여행.
+- id: 105 | level: N5 | [起きる / おきる , 連日交通事故が起きる。]
+  - meaning_ko: 일어나다(예:
+  - example_ko: 연일교통사고가 일어난다.
+- id: 106 | level: N5 | [置く / おく , 彼を放って置くことはできない。]
+  - meaning_ko: 넣다
+  - example_ko: 그를 떠나 놓을 수 없다.
+- id: 107 | level: N5 | [奥さん / おくさん , 彼女は良い奥さんになるでしょう。]
+  - meaning_ko: (다른 사람의) 아내 (Hon.)
+  - example_ko: 그녀는 좋은 부인이 될 것입니다.
+- id: 108 | level: N5 | [お酒 / おさけ , 飛行機でお酒飲むと、気圧のせいか酔いやすい。]
+  - meaning_ko: 동기
+  - example_ko: 비행기로 술 마시면 기압 탓인지 취하기 쉽다.
+- id: 109 | level: N5 | [お皿 / おさら , 私は、夕食後、お皿を洗った。]
+  - meaning_ko: 그릇
+  - example_ko: 나는 저녁 식사 후 접시를 씻었다.
+- id: 110 | level: N5 | [伯父; 叔父さん / おじさん , ]
+  - meaning_ko: 삼촌
+- id: 111 | level: N5 | [おじいさん / おじいさん , 彼女はおじいさんに育てられた。]
+  - meaning_ko: 할아버지
+  - example_ko: 그녀는 할아버지에게 자랐다.
+- id: 112 | level: N5 | [教える / おしえる , 彼女は学生に英語を教える。]
+  - meaning_ko: 가르치다
+  - example_ko: 그녀는 학생들에게 영어를 가르친다.
+- id: 113 | level: N5 | [押す / おす , ボタンを押すだけで出窓はあく。]
+  - meaning_ko: 밀다
+  - example_ko: 버튼을 누르는 것만으로 출창은 열린다.
+- id: 114 | level: N5 | [遅い / おそい , 脈が遅いです。]
+  - meaning_ko: 느린
+  - example_ko: 맥이 느립니다.
+- id: 115 | level: N5 | [お茶 / おちゃ , 母がお茶を入れてくれています。]
+  - meaning_ko: (녹차
+  - example_ko: 어머니가 차를 넣어주고 있습니다.
+- id: 116 | level: N5 | [お手洗い / おてあらい , お手洗いはどこですか。]
+  - meaning_ko: 화장실
+  - example_ko: 화장실은 어디입니까?
+- id: 117 | level: N5 | [お父さん / おとうさん , 夕べお父さんが病院で死んだ。]
+  - meaning_ko: 아버지 (공식)
+  - example_ko: 저녁 아빠가 병원에서 죽었다.
+- id: 118 | level: N5 | [弟 / おとうと , 私の弟はテレビを見ている。]
+  - meaning_ko: 남동생
+  - example_ko: 내 동생은 TV를 시청합니다.
+- id: 119 | level: N5 | [男 / おとこ , 私が駅を出た時、男の人を見た。]
+  - meaning_ko: 남성
+  - example_ko: 내가 역을 나왔을 때 남자를 보았다.
+- id: 120 | level: N5 | [男の子 / おとこのこ , 裸の男の子達が川で泳いでいた。]
+  - meaning_ko: 소년
+  - example_ko: 벌거 벗은 소년들이 강에서 수영했다.
+- id: 121 | level: N5 | [一昨日 / おととい , 一昨日成田に着きました。]
+  - meaning_ko: 그저께
+  - example_ko: 어제 나리타에 도착했습니다.
+- id: 122 | level: N5 | [おととし / おととし , おととし、オーストラリアに引っ越しました。]
+  - meaning_ko: 지난 해
+  - example_ko: 오토시, 호주로 이사했습니다.
+- id: 123 | level: N5 | [大人 / おとな , 彼女の家族は大人数だ。]
+  - meaning_ko: 성인
+  - example_ko: 그녀의 가족은 어른이다.
+- id: 124 | level: N5 | [お腹 / おなか , いつご飯食べるの？お腹空いたよ。]
+  - meaning_ko: 위
+  - example_ko: 언제 밥 먹어? 배고파.
+- id: 125 | level: N5 | [同じ / おなじ , それらはみんな同じかい？]
+  - meaning_ko: 같은
+  - example_ko: 그들은 모두 동일합니까?
+- id: 126 | level: N5 | [お兄さん / おにいさん , 彼は彼のお兄さんに劣らず賢い。]
+  - meaning_ko: (다른 사람의) 형 (공식적으로)
+  - example_ko: 그는 그의 오빠보다 똑똑하다.
+- id: 127 | level: N5 | [お姉さん / おねえさん , 彼女はトムのお姉さんです。]
+  - meaning_ko: 언니 (공식)
+  - example_ko: 그녀는 톰의 언니입니다.
+- id: 128 | level: N5 | [伯母さん; 叔母さん / おばさん , ]
+  - meaning_ko: 이모
+- id: 129 | level: N5 | [おばあさん / おばあさん , 木陰におばあさんがいるのが見える。]
+  - meaning_ko: 할머니
+  - example_ko: 그늘에 할머니가 있는 것이 보인다.
+- id: 130 | level: N5 | [お風呂 / おふろ , お風呂はついてますか。]
+  - meaning_ko: 목욕
+  - example_ko: 목욕이 켜져 있습니까?
+- id: 131 | level: N5 | [お弁当 / おべんとう , 普通のお弁当にしてね。]
+  - meaning_ko: 도시락
+  - example_ko: 평범한 도시락으로 해주세요.
+- id: 132 | level: N5 | [覚える / おぼえる , 彼は名前を覚えるのが下手だ。]
+  - meaning_ko: 배우다
+  - example_ko: 그는 이름을 기억하는 것이 나쁘다.
+- id: 133 | level: N5 | [おまわりさん / おまわりさん , そのおまわりさんは勤務中です。]
+  - meaning_ko: 경찰관 (친절한 용어)
+  - example_ko: 그 주위는 근무 중입니다.
+- id: 134 | level: N5 | [重い / おもい , 彼女は重い病気になった。]
+  - meaning_ko: 무거운
+  - example_ko: 그녀는 무거운 아프다.
+- id: 135 | level: N5 | [面白い / おもしろい , それは面白い。]
+  - meaning_ko: 흥미로운
+  - example_ko: 그것은 재미 있습니다.
+- id: 136 | level: N5 | [泳ぐ / およぐ , 夜に泳ぐのは危険です。]
+  - meaning_ko: 수영하다
+  - example_ko: 밤에 수영하는 것은 위험합니다.
+- id: 137 | level: N5 | [降りる / おりる , 彼はその駅で降りるように言われた。]
+  - meaning_ko: 내리다
+  - example_ko: 그는 그 역에서 내리라고 말했다.
+- id: 138 | level: N5 | [終る / おわる , 議長は意見が不一致に終る可能性を排除しなかった。]
+  - meaning_ko: 끝내다
+  - example_ko: 의장은 의견이 불일치로 끝날 가능성을 배제하지 않았다.
+- id: 139 | level: N5 | [音楽 / おんがく , 私の趣味は音楽を聞くことです。]
+  - meaning_ko: 음악
+  - example_ko: 내 취미는 음악을 듣는 것입니다.
+- id: 140 | level: N5 | [女 / おんな , あなたが女の子だからよ。]
+  - meaning_ko: 여성
+  - example_ko: 당신이 여자이기 때문에.
+- id: 141 | level: N5 | [女の子 / おんなのこ , あなたが女の子だからよ。]
+  - meaning_ko: 소녀
+  - example_ko: 당신이 여자이기 때문에.
+- id: 142 | level: N5 | [～回 / ～かい , ]
+  - meaning_ko: 발생 카운터(~회)
+- id: 143 | level: N5 | [～階 / ～かい , ]
+  - meaning_ko: 건물의 층(층) 카운터
+- id: 144 | level: N5 | [外国 / がいこく , 外国人って面白いなあ。]
+  - meaning_ko: 외국
+  - example_ko: 외국인은 재미있다.
+- id: 145 | level: N5 | [外国人 / がいこくじん , 外国人って面白いなあ。]
+  - meaning_ko: 외국인
+  - example_ko: 외국인은 재미있다.
+- id: 146 | level: N5 | [会社 / かいしゃ , 彼はライバル会社に引き抜かれました。]
+  - meaning_ko: 회사
+  - example_ko: 그는 라이벌 회사로 끌려갔다.
+- id: 147 | level: N5 | [階段 / かいだん , 彼女は階段を降りてきていた。]
+  - meaning_ko: 계단
+  - example_ko: 그녀는 계단을 내려왔다.
+- id: 148 | level: N5 | [買い物 / かいもの , 買い物袋をどすんとテーブルの上に置いた。]
+  - meaning_ko: 쇼핑
+  - example_ko: 쇼핑백을 가볍게 테이블 위에 놓았다.
+- id: 149 | level: N5 | [買う / かう , 良質の品を買うのは経済的である。]
+  - meaning_ko: 구매
+  - example_ko: 고품질 물건을 사는 것은 경제적이다.
+- id: 150 | level: N5 | [返す / かえす , 歴史は繰り返す。]
+  - meaning_ko: 무언가를 돌려주다
+  - example_ko: 역사는 반복한다.
+- id: 151 | level: N5 | [帰る / かえる , 明日、私たちの教授は英国に帰るのよ。]
+  - meaning_ko: 돌아가다
+  - example_ko: 내일 우리 교수는 영국으로 돌아갈거야.
+- id: 152 | level: N5 | [顔 / かお , けいこは枕に顔をうずめて泣いた。]
+  - meaning_ko: 얼굴(신체부분)
+  - example_ko: 케이코는 베개에 얼굴을 부끄럽게 울었다.
+- id: 153 | level: N5 | [かかる / かかる , どれくらいかかるのかしら。]
+  - meaning_ko: (시간이 많이 소요됩니다)
+  - example_ko: 얼마나 걸릴까.
+- id: 154 | level: N5 | [鍵 / かぎ , 部屋に鍵を忘れました。]
+  - meaning_ko: 자물쇠
+  - example_ko: 방에 열쇠를 잊었다.
+- id: 155 | level: N5 | [書く / かく , 話すことと書くことは別物だ。]
+  - meaning_ko: 쓰다
+  - example_ko: 말하는 것과 쓰는 것은 별개다.
+- id: 156 | level: N5 | [学生 / がくせい , 大学生の時、有理子が愛欲に身を委ねた。]
+  - meaning_ko: 학생
+  - example_ko: 대학생 때 유리코가 애욕에 몸을 맡겼다.
+- id: 157 | level: N5 | [～か月 / ～かげつ , ]
+  - meaning_ko: (개) 개월
+- id: 158 | level: N5 | [掛ける / かける , 彼女に話し掛けるのはよそう。]
+  - meaning_ko: 입다 (예를 들어
+  - example_ko: 그녀에게 말을 걸면 좋다.
+- id: 159 | level: N5 | [かける / かける , 話しかけるな。]
+  - meaning_ko: 다이얼링/전화 걸기(예:
+  - example_ko: 말을 걸지 마라.
+- id: 160 | level: N5 | [傘 / かさ , 用心に傘を持っていった方がいい。]
+  - meaning_ko: 우산
+  - example_ko: 조심스럽게 우산을 가져가는 것이 좋습니다.
+- id: 161 | level: N5 | [貸す / かす , 彼女はあなたに本を貸すだろう。]
+  - meaning_ko: 빌려주다
+  - example_ko: 그녀는 당신에게 책을 빌려줄 것입니다.
+- id: 162 | level: N5 | [風 / かぜ , 風がおだやかになった。]
+  - meaning_ko: 바람
+  - example_ko: 바람이 부드러워졌습니다.
+- id: 163 | level: N5 | [風邪 / かぜ , 夜霧に当たって風邪をひいた。]
+  - meaning_ko: 추운
+  - example_ko: 밤 안개에 닿아 감기에 걸렸다.
+- id: 164 | level: N5 | [方 / かた , 眠った方がいいよ。]
+  - meaning_ko: -- 人(ひと)의 경칭 --
+  - example_ko: 자는 것이 좋다.
+- id: 165 | level: N5 | [家族 / かぞく , 来週になると一家族が入ってくる。]
+  - meaning_ko: 가족
+  - example_ko: 다음주가 되면 한 가족이 들어온다.
+- id: 166 | level: N5 | [片仮名 / かたかな , 平仮名は書けるんだけど、片仮名はまだ書けないんだ。]
+  - meaning_ko: 가타카나
+  - example_ko: 히라가나는 쓸 수 있지만, 가타카나는 아직 쓸 수 없다.
+- id: 167 | level: N5 | [～月 / ～がつ , ]
+  - meaning_ko: 올해의 달
+- id: 168 | level: N5 | [学校 / がっこう , 学校に遅刻した。]
+  - meaning_ko: 학교
+  - example_ko: 학교에 늦었다.
+- id: 169 | level: N5 | [カップ / カップ , 卵３個と１カップの砂糖をまぜてください。]
+  - meaning_ko: 컵
+  - example_ko: 계란 3개와 1컵의 설탕을 섞어 주세요.
+- id: 170 | level: N5 | [家庭 / かてい , 彼女は金持ちの家庭に育った。]
+  - meaning_ko: 집
+  - example_ko: 그녀는 부자의 가정에서 자랐다.
+- id: 171 | level: N5 | [角 / かど , アリさん、今日もご苦労さんだよ。はい、角砂糖あげるよ。]
+  - meaning_ko: 코너(예:
+  - example_ko: 개미씨, 오늘도 고생씨야. 네, 각설탕을 줄게요.
+- id: 172 | level: N5 | [かばん / かばん , 僕はケンにそのかばんを返した。]
+  - meaning_ko: 가방
+  - example_ko: 나는 켄에게 그 가방을 돌려주었다.
+- id: 173 | level: N5 | [花瓶 / かびん , 母は棚の上に大きな花瓶を置いた。]
+  - meaning_ko: (꽃병
+  - example_ko: 어머니는 선반에 큰 꽃병을 놓았다.
+- id: 174 | level: N5 | [かぶる / かぶる , 彼らは帽子をかぶると外へ出た。]
+  - meaning_ko: 입다
+  - example_ko: 그들은 모자를 쓰고 밖으로 나갔다.
+- id: 175 | level: N5 | [紙 / かみ , データ化して、壁紙も作ってある。]
+  - meaning_ko: 종이
+  - example_ko: 데이터화해, 벽지도 만들고 있다.
+- id: 176 | level: N5 | [カメラ / カメラ , 僕はこのカメラが欲しい。]
+  - meaning_ko: 카메라
+  - example_ko: 나는 이 카메라를 원한다.
+- id: 177 | level: N5 | [火曜日 / かようび , 要約を火曜日までに提出しなさい。]
+  - meaning_ko: 화요일
+  - example_ko: 요약을 화요일까지 제출하십시오.
+- id: 178 | level: N5 | [辛い / からい , 流産はとても辛い経験です。]
+  - meaning_ko: 뜨겁고 매운
+  - example_ko: 유산은 매우 매운 경험입니다.
+- id: 179 | level: N5 | [体 / からだ , 体を大事にしなさい。]
+  - meaning_ko: 몸
+  - example_ko: 몸을 돌보아라.
+- id: 180 | level: N5 | [借りる / かりる , 道具を借りる事が出来ますか。]
+  - meaning_ko: 빌리다
+  - example_ko: 도구를 빌릴 수 있습니까?
+- id: 181 | level: N5 | [～がる / ～がる , ]
+  - meaning_ko: 느끼다
+- id: 182 | level: N5 | [軽い / かるい , 私は気が短いし、口も軽い男だ。]
+  - meaning_ko: 빛
+  - example_ko: 나는 신경이 짧고 입도 가벼운 남자다.
+- id: 183 | level: N5 | [カレー / カレー , カレーはまあまあでした。]
+  - meaning_ko: 카레(카레라이스의 약어)
+  - example_ko: 카레는 글쎄요.
+- id: 184 | level: N5 | [カレンダー / カレンダー , 彼はカレンダーをめくった。]
+  - meaning_ko: 달력
+  - example_ko: 그는 달력을 넘겼다.
+- id: 185 | level: N5 | [川; 河 / かわ , ]
+  - meaning_ko: 강
+- id: 186 | level: N5 | [～側 / ～がわ , ]
+  - meaning_ko: ~ 쪽
+- id: 187 | level: N5 | [可愛い / かわいい , 憎い憎いは可愛いの裏。]
+  - meaning_ko: 귀여운
+  - example_ko: 미워 미워는 귀여운 뒤.
+- id: 188 | level: N5 | [漢字 / かんじ , 彼は漢字が全く書けない。]
+  - meaning_ko: 한자
+  - example_ko: 그는 한자를 전혀 쓸 수 없다.
+- id: 189 | level: N5 | [木 / き , 木造建築物は火がつきやすい。]
+  - meaning_ko: 나무
+  - example_ko: 목조 건축물은 불이 붙기 쉽다.
+- id: 190 | level: N5 | [黄色 / きいろ , 木の葉は秋には黄色になる。]
+  - meaning_ko: 노란색
+  - example_ko: 나뭇잎은 가을에는 노란색이 된다.
+- id: 191 | level: N5 | [黄色い / きいろい , 彼は黄色いあの家に住んでいる。]
+  - meaning_ko: 노란색
+  - example_ko: 그는 노란 그 집에 살고 있습니다.
+- id: 192 | level: N5 | [消える / きえる , 雪はすぐに消えるだろう。]
+  - meaning_ko: 사라지다
+  - example_ko: 눈이 빨리 사라질 것입니다.
+- id: 193 | level: N5 | [聞く / きく , なんで聞くの？]
+  - meaning_ko: 듣다
+  - example_ko: 왜 듣는거야?
+- id: 194 | level: N5 | [北 / きた , 冷たい北風が木の葉を茶色にした。]
+  - meaning_ko: 북쪽
+  - example_ko: 차가운 북풍이 나무 잎을 갈색으로 만들었다.
+- id: 195 | level: N5 | [ギター / ギター , 彼女はギターを弾きます。]
+  - meaning_ko: 기타
+  - example_ko: 그녀는 기타를 연주합니다.
+- id: 196 | level: N5 | [汚い / きたない , 彼の部屋は汚い。]
+  - meaning_ko: 더러운
+  - example_ko: 그의 방은 더럽다.
+- id: 197 | level: N5 | [喫茶店 / きっさてん , 母は喫茶店をしています。]
+  - meaning_ko: 카페
+  - example_ko: 어머니는 다방을 하고 있습니다.
+- id: 198 | level: N5 | [切手 / きって , 封筒に切手を貼りなさい。]
+  - meaning_ko: 우편(우표) 우표
+  - example_ko: 봉투에 우표를 붙이십시오.
+- id: 199 | level: N5 | [切符 / きっぷ , 僕はただで切符をもらった。]
+  - meaning_ko: 티켓
+  - example_ko: 나는 단지 표를 받았다.
+- id: 200 | level: N5 | [昨日 / きのう , 昨日動物園に行った。]
+  - meaning_ko: 어제
+  - example_ko: 어제 동물원에 갔다.
+- id: 201 | level: N5 | [九 / きゅう , 彼は十中八九来るだろう。]
+  - meaning_ko: 아홉
+  - example_ko: 그는 십중팔구 올 것이다.
+- id: 202 | level: N5 | [牛肉 / ぎゅうにく , 神戸は良質の牛肉で有名だ。]
+  - meaning_ko: 소고기
+  - example_ko: 고베는 양질의 쇠고기로 유명하다.
+- id: 203 | level: N5 | [牛乳 / ぎゅうにゅう , 腐った牛乳は酸っぱい。]
+  - meaning_ko: 우유
+  - example_ko: 썩은 우유는 신맛.
+- id: 204 | level: N5 | [今日 / きょう , 今日はもう聞かないよ。]
+  - meaning_ko: 오늘
+  - example_ko: 오늘은 더 이상 듣지 않아.
+- id: 205 | level: N5 | [教室 / きょうしつ , 彼女は教室の前の方に立っていた。]
+  - meaning_ko: 교실
+  - example_ko: 그녀는 교실 앞으로 서 있었다.
+- id: 206 | level: N5 | [兄弟 / きょうだい , 父は５人兄弟です。]
+  - meaning_ko: 형제자매(겸손)
+  - example_ko: 아버지는 다섯 명의 형제입니다.
+- id: 207 | level: N5 | [去年 / きょねん , 僕は去年長い旅をした。]
+  - meaning_ko: 작년
+  - example_ko: 나는 작년 긴 여행을 했다.
+- id: 208 | level: N5 | [嫌い / きらい , 化学が嫌いだ。]
+  - meaning_ko: 싫어함
+  - example_ko: 화학이 싫어.
+- id: 209 | level: N5 | [切る / きる , 友達の信頼を決して裏切るな。]
+  - meaning_ko: 자르다
+  - example_ko: 친구의 신뢰를 결코 배신하지 마라.
+- id: 210 | level: N5 | [着る / きる , 彼女は白を着ると魅力的です。]
+  - meaning_ko: (허리 위로 오는 옷을) 입다
+  - example_ko: 그녀는 흰색을 입으면 매력적입니다.
+- id: 211 | level: N5 | [綺麗 / きれい , 夜の空は、とても綺麗なものだ。]
+  - meaning_ko: 예쁜
+  - example_ko: 밤하늘은 매우 깨끗한 것이다.
+- id: 212 | level: N5 | [キロ; キログラム / キロ; キログラム , ]
+  - meaning_ko: (약어) 킬로(킬로그램)
+- id: 213 | level: N5 | [キロ; キロメートル / キロ; キロメートル , ]
+  - meaning_ko: (약어) 킬로(킬로미터)
+- id: 214 | level: N5 | [銀行 / ぎんこう , 郵便局は銀行のちょうど真ん前だよ。]
+  - meaning_ko: 은행
+  - example_ko: 우체국은 은행의 바로 앞이야.
+- id: 215 | level: N5 | [金曜日 / きんようび , 弁護士さんに金曜日に会えますか。]
+  - meaning_ko: 금요일
+  - example_ko: 변호사 씨가 금요일에 만날 수 있습니까?
+- id: 217 | level: N5 | [薬 / くすり , 私、粉薬って苦手なのよね。]
+  - meaning_ko: 약
+  - example_ko: 나, 가루 약은 서투른거야.
+- id: 218 | level: N5 | [下さい / ください , 何が起きたのか話して下さい。]
+  - meaning_ko: (te형 동사와 함께) 나를 위해 해주세요
+  - example_ko: 무슨 일이 있었는지 말해주세요.
+- id: 219 | level: N5 | [果物 / くだもの , 彼らは果物が好きです。]
+  - meaning_ko: 과일
+  - example_ko: 그들은 과일을 좋아합니다.
+- id: 220 | level: N5 | [口 / くち , 口を開けてください！]
+  - meaning_ko: 채용 공고
+  - example_ko: 입을 열어주세요!
+- id: 221 | level: N5 | [靴 / くつ , 靴ひもがとけた。]
+  - meaning_ko: 신발
+  - example_ko: 신발 끈이 잡혔다.
+- id: 222 | level: N5 | [靴下 / くつした , 彼女は靴下を直した。]
+  - meaning_ko: 양말
+  - example_ko: 그녀는 양말을 고쳤다.
+- id: 223 | level: N5 | [国 / くに , 外国人って面白いなあ。]
+  - meaning_ko: 국가
+  - example_ko: 외국인은 재미있다.
+- id: 224 | level: N5 | [曇り / くもり , 曇りの日です。]
+  - meaning_ko: 흐림
+  - example_ko: 흐린 날입니다.
+- id: 225 | level: N5 | [曇る / くもる , マスクをつけると眼鏡が曇る。]
+  - meaning_ko: 흐려지다
+  - example_ko: 마스크를 붙이면 안경이 흐린다.
+- id: 226 | level: N5 | [暗い / くらい , 僕は暗いうちに起きた。]
+  - meaning_ko: 어두운
+  - example_ko: 나는 어둠 속에서 일어났다.
+- id: 227 | level: N5 | [～くらい; ぐらい / ～くらい; ぐらい , ]
+  - meaning_ko: 대략적인 (수량)
+- id: 228 | level: N5 | [クラス / クラス , 僕のクラスの友達だよ。]
+  - meaning_ko: 수업
+  - example_ko: 내 클래스의 친구야.
+- id: 229 | level: N5 | [グラム / グラム , 私の体重は５８キログラムです。]
+  - meaning_ko: 그램
+  - example_ko: 내 체중은 58kg입니다.
+- id: 230 | level: N5 | [来る / くる , ジュネーブから来る列車が駅に到着します。]
+  - meaning_ko: 올
+  - example_ko: 제네바에서 오는 기차가 역에 도착합니다.
+- id: 231 | level: N5 | [車 / くるま , 社長さんの車種と色は？]
+  - meaning_ko: 자동차
+  - example_ko: 사장씨의 차종과 색은?
+- id: 232 | level: N5 | [黒 / くろ , 太陽の黒点を観察しよう。]
+  - meaning_ko: 검은색
+  - example_ko: 태양의 검은 점을 관찰하자.
+- id: 233 | level: N5 | [黒い / くろい , 彼女は色が黒い。]
+  - meaning_ko: 검은색
+  - example_ko: 그녀는 색이 까맣다.
+- id: 234 | level: N5 | [警官 / けいかん , 彼女の父は警官である。]
+  - meaning_ko: 경찰관
+  - example_ko: 그녀의 아버지는 경찰이다.
+- id: 235 | level: N5 | [今朝 / けさ , 今朝テレビを見ました。]
+  - meaning_ko: 오늘 아침
+  - example_ko: 오늘 아침 TV를 보았습니다.
+- id: 236 | level: N5 | [消す / けす , 人のいない部屋の照明をこまめに消す。]
+  - meaning_ko: 지우다
+  - example_ko: 사람이 없는 방의 조명을 자주 끄십시오.
+- id: 237 | level: N5 | [結構 / けっこう , 遊ぶ時間は結構あります。]
+  - meaning_ko: 화려한
+  - example_ko: 놀 시간은 상당히 있습니다.
+- id: 238 | level: N5 | [結婚 / けっこん (する) , 私は先月結婚式を挙げました。]
+  - meaning_ko: 결혼하다(결혼하다)
+  - example_ko: 지난달 결혼식을 꼽았다.
+- id: 239 | level: N5 | [月曜日 / げつようび , 来週の月曜日に必ずお返しします。]
+  - meaning_ko: 월요일
+  - example_ko: 다음 주 월요일에 반드시 답장합니다.
+- id: 240 | level: N5 | [玄関 / げんかん , 彼女は玄関のごみをはいた。]
+  - meaning_ko: 입구 (집이나 건물에)
+  - example_ko: 그녀는 현관의 쓰레기를 끼웠다.
+- id: 241 | level: N5 | [元気 / げんき , 元気？旅行は良かった？]
+  - meaning_ko: 건강한)
+  - example_ko: 괜찮아? 여행은 좋았어?
+- id: 242 | level: N5 | [～個 / ～こ , ]
+  - meaning_ko: 작은 품목을 위한 카운터(예:
+- id: 243 | level: N5 | [五 / ご , 嗅覚は五感の一つである。]
+  - meaning_ko: 다섯
+  - example_ko: 후각은 오감의 하나이다.
+- id: 244 | level: N5 | [～語 / ～ご , ]
+  - meaning_ko: 단어
+- id: 245 | level: N5 | [公園 / こうえん , 公園を散歩しています。]
+  - meaning_ko: 공원
+  - example_ko: 공원을 산책하고 있습니다.
+- id: 246 | level: N5 | [交差点 / こうさてん , きのう交差点でお釜を掘られちゃったよ。]
+  - meaning_ko: 교차로
+  - example_ko: 어제 교차로에서 솥을 파고 버렸어.
+- id: 247 | level: N5 | [紅茶 / こうちゃ , 彼女は紅茶を注文した。]
+  - meaning_ko: 홍차
+  - example_ko: 그녀는 차를 주문했다.
+- id: 248 | level: N5 | [交番 / こうばん , 交番が近くにある。]
+  - meaning_ko: 파출소
+  - example_ko: 교번이 근처에 있다.
+- id: 249 | level: N5 | [声 / こえ , しーっ、声が大きい。]
+  - meaning_ko: 목소리
+  - example_ko: 음, 목소리가 크다.
+- id: 250 | level: N5 | [コート / コート , 毛皮のコートが特売中です。]
+  - meaning_ko: 코트
+  - example_ko: 모피 코트가 특매 중입니다.
+- id: 251 | level: N5 | [コーヒー / コーヒー , 今欲しいのは熱い一杯のコーヒーです。]
+  - meaning_ko: 커피
+  - example_ko: 지금 원하는 것은 뜨거운 커피 한잔입니다.
+- id: 252 | level: N5 | [ここ / ここ , ここから遠いの？]
+  - meaning_ko: 여기
+  - example_ko: 여기에서 멀지?
+- id: 253 | level: N5 | [午後 / ごご , 列車は午後２時半に出る。]
+  - meaning_ko: 오후
+  - example_ko: 열차는 오후 2시 반에 나온다.
+- id: 254 | level: N5 | [九日 / ここのか , 来月九日に両親がわたしのうちへ遊びに来ます。]
+  - meaning_ko: 9일
+  - example_ko: 다음 달 9일에 부모님이 내게 놀러옵니다.
+- id: 255 | level: N5 | [九つ / ここのつ , 新二は九つのココナッツを食べました。]
+  - meaning_ko: 아홉 가지
+  - example_ko: 신지는 9개의 코코넛을 먹었다.
+- id: 256 | level: N5 | [午前 / ごぜん , 母は午前中病院に行きます。]
+  - meaning_ko: 아침
+  - example_ko: 어머니는 아침에 병원에 간다.
+- id: 257 | level: N5 | [答える / こたえる , タイポみると答える気なくす。]
+  - meaning_ko: 대답하다
+  - example_ko: 타이포 보면 대답할 생각 없게 한다.
+- id: 258 | level: N5 | [こちら / こちら , こちらの飲み物は単品となります。]
+  - meaning_ko: 이 사람 (예의바르게)
+  - example_ko: 이 음료는 단품입니다.
+- id: 259 | level: N5 | [こっち / こっち , 兄ちゃん、こっち生中二つー。]
+  - meaning_ko: 이 사람
+  - example_ko: 오빠, 이쪽 생중 2개-.
+- id: 260 | level: N5 | [コップ / コップ , 彼女もコップを割った。]
+  - meaning_ko: 텀블러
+  - example_ko: 그녀도 컵을 깨뜨렸다.
+- id: 261 | level: N5 | [今年 / ことし , 今年は暖冬ね。すごしやすくていいや。]
+  - meaning_ko: 올해
+  - example_ko: 올해는 따뜻한 겨울입니다. 멋지기 쉽고 좋다.
+- id: 262 | level: N5 | [言葉 / ことば , 分からない言葉がたくさんある。]
+  - meaning_ko: 언어
+  - example_ko: 모르는 말이 많이 있다.
+- id: 263 | level: N5 | [子供 / こども , 年明けに子供が産まれる予定です♪]
+  - meaning_ko: 어린이들)
+  - example_ko: 새해에 아이가 태어날 예정입니다 ♪
+- id: 264 | level: N5 | [この / この , 誰がこの問題をしらないんだ？]
+  - meaning_ko: 이것
+  - example_ko: 누가이 문제를하지 않습니다?
+- id: 265 | level: N5 | [御飯 / ごはん , 夕御飯ができました。]
+  - meaning_ko: 밥 (익힌 것)
+  - example_ko: 저녁밥을 만들었습니다.
+- id: 266 | level: N5 | [コピーする / コピーする , 著者の許可なしに本をコピーすることは違法です。]
+  - meaning_ko: 복사하다
+  - example_ko: 저자의 허가 없이 책을 복사하는 것은 불법입니다.
+- id: 267 | level: N5 | [困る / こまる , 僕はしばしばお金に困る。]
+  - meaning_ko: 괴로워하다
+  - example_ko: 난 자주 돈이 어려워.
+- id: 268 | level: N5 | [これ / これ , これは駄洒落です。]
+  - meaning_ko: 이거
+  - example_ko: 이것은 낭비입니다.
+- id: 269 | level: N5 | [～ころ; ～ごろ / ～ころ; ～ごろ , ]
+  - meaning_ko: ~에 대한
+- id: 270 | level: N5 | [今月 / こんげつ , 彼らは今月の３日に結婚した。]
+  - meaning_ko: 이번 달
+  - example_ko: 그들은 이달 3일 결혼했다.
+- id: 271 | level: N5 | [今週 / こんしゅう , 平和会談は今週始まる。]
+  - meaning_ko: 이번 주
+  - example_ko: 평화회담은 이번 주 시작된다.
+- id: 272 | level: N5 | [こんな / こんな , 何でこんなに遅くまで起きてるの？]
+  - meaning_ko: 그런
+  - example_ko: 왜 이렇게 늦게까지 일어나고 있는 거야?
+- id: 273 | level: N5 | [今晩 / こんばん , 友達が今晩来ます。]
+  - meaning_ko: 오늘 밤
+  - example_ko: 친구가 오늘 밤에 온다.
+- id: 274 | level: N5 | [さあ / さあ , さあ、根比べをしよう。]
+  - meaning_ko: 지금 오세요
+  - example_ko: 자, 뿌리 비교를 하자.
+- id: 275 | level: N5 | [～歳 / ～さい , ]
+  - meaning_ko: ~ 살
+- id: 276 | level: N5 | [財布 / さいふ , 財布をなくしたの。]
+  - meaning_ko: 지갑
+  - example_ko: 지갑을 잃었어.
+- id: 277 | level: N5 | [魚 / さかな , 魚は遠火でゆっくり、こんがり焼き上げます。]
+  - meaning_ko: 물고기
+  - example_ko: 물고기는 먼 불에서 천천히 구운다.
+- id: 278 | level: N5 | [先 / さき , 先週中国語を習い始めました。]
+  - meaning_ko: 미래
+  - example_ko: 지난 주 중국어를 배우기 시작했습니다.
+- id: 279 | level: N5 | [咲く / さく , 梅の花は3月に咲く。]
+  - meaning_ko: 꽃을 피우다
+  - example_ko: 매화는 3월에 피어난다.
+- id: 280 | level: N5 | [作文 / さくぶん , 彼女は作文が優秀だ。]
+  - meaning_ko: 수필
+  - example_ko: 그녀는 작문이 우수하다.
+- id: 281 | level: N5 | [差す / さす , 彼の言動には嫌気が差す。]
+  - meaning_ko: 손을 들다(뻗다)
+  - example_ko: 그의 언동에는 혐기가 든다.
+- id: 282 | level: N5 | [～冊 / ～さつ , ]
+  - meaning_ko: 책 카운터
+- id: 283 | level: N5 | [雑誌 / ざっし , 母は雑誌を読んでいる。]
+  - meaning_ko: 잡지
+  - example_ko: 어머니는 잡지를 읽고 있다.
+- id: 284 | level: N5 | [砂糖 / さとう , 彼女は砂糖を塩と間違えた。]
+  - meaning_ko: 설탕
+  - example_ko: 그녀는 설탕을 소금으로 실수했다.
+- id: 285 | level: N5 | [寒い / さむい , 北の方では冬が寒いです。]
+  - meaning_ko: 추운 (날씨와 관련하여)
+  - example_ko: 북쪽에서는 겨울이 춥습니다.
+- id: 286 | level: N5 | [さ来年 / さらいねん , ]
+  - meaning_ko: 다음 해 이후
+- id: 287 | level: N5 | [～さん / ～さん , ]
+  - meaning_ko: ~씨
+- id: 288 | level: N5 | [三 / さん , 授業は八時三十分から始まるから。]
+  - meaning_ko: 삼
+  - example_ko: 수업은 8시 3분부터 시작되기 때문.
+- id: 289 | level: N5 | [散歩 / さんぽ (する) , 公園を散歩しています。]
+  - meaning_ko: 걷다
+  - example_ko: 공원을 산책하고 있습니다.
+- id: 290 | level: N5 | [四 / し , 四天王も倒した、クソ長い地下迷宮もクリアした。]
+  - meaning_ko: 네
+  - example_ko: 시텐왕도 쓰러뜨린 빌어 먹을 긴 지하 미궁도 클리어했다.
+- id: 291 | level: N5 | [～時 / ～じ , ]
+  - meaning_ko: ~시(시간)
+- id: 292 | level: N5 | [塩 / しお , 敵に塩を送る。]
+  - meaning_ko: 소금
+  - example_ko: 적에게 소금을 보냅니다.
+- id: 293 | level: N5 | [しかし / しかし , しかし、逆もまた真である。]
+  - meaning_ko: 하지만
+  - example_ko: 그러나 반대도 참이다.
+- id: 294 | level: N5 | [時間 / じかん , 時間はいくらでも作れる。]
+  - meaning_ko: 시간
+  - example_ko: 시간은 얼마든지 만들 수 있다.
+- id: 295 | level: N5 | [～時間 / ～じかん , ]
+  - meaning_ko: ~ 시간
+- id: 296 | level: N5 | [仕事 / しごと , 私は自分の仕事を気に入っています。]
+  - meaning_ko: 일하다
+  - example_ko: 나는 내 일을 좋아한다.
+- id: 297 | level: N5 | [辞書 / じしょ , 僕は辞書を持っています。]
+  - meaning_ko: 사전
+  - example_ko: 나는 사전을 가지고 있다.
+- id: 298 | level: N5 | [静か / しずか , お客様、もう少しお静かに。]
+  - meaning_ko: 조용한
+  - example_ko: 고객, 조금 더 조용히.
+- id: 299 | level: N5 | [下 / した , 「塩を取って下さい」「はい、どうぞ」]
+  - meaning_ko: 아래에
+  - example_ko: "소금을 가지고 가십시오" "네, 제발"
+- id: 300 | level: N5 | [七 / しち , 北斗七星は簡単に見つかる。]
+  - meaning_ko: 일곱
+  - example_ko: 호쿠토 칠성은 쉽게 찾을 수 있습니다.
+- id: 301 | level: N5 | [質問 / しつもん , バカな質問があるんだ。]
+  - meaning_ko: 질문
+  - example_ko: 바보 같은 질문이 있다.
+- id: 302 | level: N5 | [自転車 / じてんしゃ , 木の下にある自転車は私のです。]
+  - meaning_ko: 자전거
+  - example_ko: 나무 밑에 있는 자전거는 나입니다.
+- id: 303 | level: N5 | [自動車 / じどうしゃ , 「車」は「自動車」の同意語です。]
+  - meaning_ko: 자동차
+  - example_ko: "차"는 "자동차"의 동의어입니다.
+- id: 304 | level: N5 | [死ぬ / しぬ , 魔女の女王は死ぬ。]
+  - meaning_ko: 죽다
+  - example_ko: 마녀의 여왕은 죽는다.
+- id: 305 | level: N5 | [字引 / じびき , 彼女はいわゆる生き字引だ。]
+  - meaning_ko: 사전
+  - example_ko: 그녀는 소위 살아있는 글자다.
+- id: 306 | level: N5 | [自分 / じぶん , 自分勝手にするつもりはない。]
+  - meaning_ko: 내 자신
+  - example_ko: 자신 마음대로 할 생각은 없다.
+- id: 307 | level: N5 | [閉まる / しまる , 店は７時に閉まる。]
+  - meaning_ko: 닫다
+  - example_ko: 가게는 7시에 닫힌다.
+- id: 308 | level: N5 | [閉める / しめる , 門を閉める時間だ。]
+  - meaning_ko: 닫다
+  - example_ko: 문을 닫을 시간이다.
+- id: 309 | level: N5 | [締める / しめる , 口と財布は締めるが得。]
+  - meaning_ko: 묶다
+  - example_ko: 입과 지갑은 조이지만 얻는다.
+- id: 310 | level: N5 | [じゃ; じゃあ / じゃ; じゃあ , ]
+  - meaning_ko: 잘
+- id: 311 | level: N5 | [写真 / しゃしん , それは最近の写真？]
+  - meaning_ko: 사진
+  - example_ko: 그것은 최근 사진?
+- id: 312 | level: N5 | [シャツ / シャツ , 僕はシャツを取り替えます。]
+  - meaning_ko: 셔츠
+  - example_ko: 나는 셔츠를 바꿉니다.
+- id: 313 | level: N5 | [シャワー / シャワー , シャワーはどこですか。]
+  - meaning_ko: 샤워
+  - example_ko: 샤워는 어디입니까?
+- id: 314 | level: N5 | [十 / じゅう , えっ、結納品にン十万円？]
+  - meaning_ko: 열
+  - example_ko: 엣, 결납품에 10만엔?
+- id: 315 | level: N5 | [～中 / ～じゅう , ]
+  - meaning_ko: ~ 동안
+- id: 316 | level: N5 | [～週間 / ～しゅうかん , ]
+  - meaning_ko: ~ 주
+- id: 317 | level: N5 | [授業 / じゅぎょう , 明日授業があります。]
+  - meaning_ko: (학교의) 수업
+  - example_ko: 내일 수업이 있습니다.
+- id: 318 | level: N5 | [宿題 / しゅくだい , 夕食前に宿題をしなさいよ。]
+  - meaning_ko: 숙제
+  - example_ko: 저녁 식사 전에 숙제를 하십시오.
+- id: 319 | level: N5 | [上手 / じょうず , 彼はピアノを上手に弾く。]
+  - meaning_ko: 잘하다
+  - example_ko: 그는 피아노를 잘 연주한다.
+- id: 320 | level: N5 | [丈夫 / じょうぶ , このパンって賞味期限大丈夫か？]
+  - meaning_ko: 강한
+  - example_ko: 이 빵은 유통 기한 괜찮습니까?
+- id: 321 | level: N5 | [醤油 / しょうゆ , トム、そこの醤油取って。]
+  - meaning_ko: 간장
+  - example_ko: 톰, 거기 간장 가져가라.
+- id: 322 | level: N5 | [食堂 / しょくどう , 食堂は何時にあきますか。]
+  - meaning_ko: 카페테리아
+  - example_ko: 식당은 몇시에 열릴까요?
+- id: 323 | level: N5 | [知る / しる , 文の前後関係から単語の意味を知る。]
+  - meaning_ko: 알고
+  - example_ko: 문장의 전후 관계로부터 단어의 의미를 알 수 있다.
+- id: 324 | level: N5 | [白 / しろ , 面白そう！]
+  - meaning_ko: 하얀색
+  - example_ko: 재미있어!
+- id: 325 | level: N5 | [白い / しろい , それは面白い。]
+  - meaning_ko: 하얀색
+  - example_ko: 그것은 재미 있습니다.
+- id: 326 | level: N5 | [～人 / ～じん , ]
+  - meaning_ko: 사람들을 위한 카운터
+- id: 327 | level: N5 | [新聞 / しんぶん , この新聞はロハだ。]
+  - meaning_ko: 신문
+  - example_ko: 이 신문은 로하다.
+- id: 328 | level: N5 | [水曜日 / すいようび , 彼女は先週の水曜日から病気です。]
+  - meaning_ko: 수요일
+  - example_ko: 그녀는 지난 주 수요일부터 아프다.
+- id: 329 | level: N5 | [吸う / すう , 父はたばこを吸う。]
+  - meaning_ko: 숨을 쉬다
+  - example_ko: 아버지는 담배를 피운다.
+- id: 330 | level: N5 | [スカート / スカート , 彼女は白いスカートを赤く染めた。]
+  - meaning_ko: 치마
+  - example_ko: 그녀는 하얀 치마를 붉게 물들었다.
+- id: 331 | level: N5 | [好き / すき , もう好きじゃない。]
+  - meaning_ko: 기호
+  - example_ko: 더 이상 좋아하지 않아.
+- id: 332 | level: N5 | [～すぎ / ～すぎ , ]
+  - meaning_ko: 과거
+- id: 333 | level: N5 | [少ない / すくない , 流感で死ぬ人は少ない。]
+  - meaning_ko: 조금
+  - example_ko: 유감으로 죽는 사람은 적다.
+- id: 334 | level: N5 | [すぐに / すぐに , すぐに戻ります。]
+  - meaning_ko: 즉시
+  - example_ko: 빨리 돌아갑니다.
+- id: 335 | level: N5 | [少し / すこし , お客様、もう少しお静かに。]
+  - meaning_ko: 작은
+  - example_ko: 고객, 조금 더 조용히.
+- id: 336 | level: N5 | [涼しい / すずしい , 天候もよいし涼しい。]
+  - meaning_ko: 시원한
+  - example_ko: 날씨도 좋고 시원하다.
+- id: 337 | level: N5 | [～ずつ / ～ずつ , ]
+  - meaning_ko: 한 번에
+- id: 338 | level: N5 | [ストーブ / ストーブ , 彼はストーブで体を暖めた。]
+  - meaning_ko: 히터 (점등 : 스토브)
+  - example_ko: 그는 난로로 몸을 데우었다.
+- id: 339 | level: N5 | [スプーン / スプーン , 増夫はスプーンを曲げられる。]
+  - meaning_ko: 숟가락
+  - example_ko: 증부는 숟가락을 구부릴 수 있다.
+- id: 340 | level: N5 | [スポーツ / スポーツ , 野球は面白いスポーツです。]
+  - meaning_ko: 스포츠
+  - example_ko: 야구는 재미있는 스포츠입니다.
+- id: 341 | level: N5 | [ズボン / ズボン , 彼は赤いズボンをはいていた。]
+  - meaning_ko: 바지
+  - example_ko: 그는 빨간 바지를 입고 있었다.
+- id: 342 | level: N5 | [住む / すむ , 彼等には住む家がありません。]
+  - meaning_ko: 거주하다
+  - example_ko: 그들에게는 사는 집이 없습니다.
+- id: 343 | level: N5 | [する / する , 自分勝手にするつもりはない。]
+  - meaning_ko: 할 일
+  - example_ko: 자신 마음대로 할 생각은 없다.
+- id: 344 | level: N5 | [座る / すわる , 彼女は座ることに慣れている。]
+  - meaning_ko: 앉다
+  - example_ko: 그녀는 앉기에 익숙하다.
+- id: 345 | level: N5 | [背 / せい , 恵子は私ほど背が高くない。]
+  - meaning_ko: (그의) 키
+  - example_ko: 케이코는 나만큼 키가 크지 않다.
+- id: 346 | level: N5 | [生徒 / せいと , 雷は生徒たちを怖がらせた。]
+  - meaning_ko: 학생
+  - example_ko: 번개는 학생들을 두려워했다.
+- id: 347 | level: N5 | [セーター / セーター , 母は私にセーターをつくってくれた。]
+  - meaning_ko: 스웨터
+  - example_ko: 어머니는 나에게 스웨터를 만들었다.
+- id: 348 | level: N5 | [石鹸 / せっけん , 石鹸がありません。]
+  - meaning_ko: 비누
+  - example_ko: 비누가 없습니다.
+- id: 349 | level: N5 | [背広 / せびろ , 私は新しい背広を買った。]
+  - meaning_ko: 남자 정장
+  - example_ko: 나는 새로운 배광을 샀다.
+- id: 350 | level: N5 | [狭い / せまい , 彼らは狭い道を歩いていった。]
+  - meaning_ko: 좁은
+  - example_ko: 그들은 좁은 길을 걸어갔다.
+- id: 351 | level: N5 | [ゼロ / ゼロ , 今の不況で経済成長はゼロとなった。]
+  - meaning_ko: 영
+  - example_ko: 지금의 불황으로 경제 성장은 제로가 되었다.
+- id: 352 | level: N5 | [千 / せん , 一立方メートルは千リットルにあたる。]
+  - meaning_ko: 천
+  - example_ko: 일입방 미터는 천 리터에 해당한다.
+- id: 353 | level: N5 | [先月 / せんげつ , 母は先月から病気だ。]
+  - meaning_ko: 전달
+  - example_ko: 어머니는 지난달부터 아프다.
+- id: 354 | level: N5 | [先週 / せんしゅう , 先週中国語を習い始めました。]
+  - meaning_ko: 지난주
+  - example_ko: 지난 주 중국어를 배우기 시작했습니다.
+- id: 355 | level: N5 | [先生 / せんせい , 「先生の容態は？」「絶対安静だ」]
+  - meaning_ko: 선생님
+  - example_ko: 「선생님의 용태는?」 「절대 안정이다」
+- id: 356 | level: N5 | [洗濯 / せんたく , 最初着る前に洗濯してください。]
+  - meaning_ko: 세탁
+  - example_ko: 처음 입기 전에 세탁하십시오.
+- id: 357 | level: N5 | [全部 / ぜんぶ , 留守の間にお金を全部盗まれてしまった。]
+  - meaning_ko: 모두
+  - example_ko: 부재중에 돈을 전부 도난당했다.
+- id: 358 | level: N5 | [そう; そうです / そう; そうです , ]
+  - meaning_ko: 예
+- id: 359 | level: N5 | [掃除 / そうじ (する) , 妹と私は交換で部屋を掃除します。]
+  - meaning_ko: 청소
+  - example_ko: 여동생과 나는 교환으로 방을 청소합니다.
+- id: 360 | level: N5 | [そうして; そして / そうして; そして , ]
+  - meaning_ko: 그리고
+- id: 361 | level: N5 | [そこ / そこ , そこに問題がある。]
+  - meaning_ko: 그 장소
+  - example_ko: 거기 문제가 있다.
+- id: 362 | level: N5 | [そちら / そちら , 明日そちらへ持ってまいります。]
+  - meaning_ko: 저기
+  - example_ko: 내일 그쪽으로 가져 가겠습니다.
+- id: 363 | level: N5 | [そっち / そっち , そっちの本は私のです。]
+  - meaning_ko: 저기
+  - example_ko: 그 책은 나입니다.
+- id: 364 | level: N5 | [外 / そと , 外は真っ暗だ。]
+  - meaning_ko: 밖의
+  - example_ko: 밖은 어둡다.
+- id: 365 | level: N5 | [その / その , そのことは全く予想していませんでした。]
+  - meaning_ko: 저것
+  - example_ko: 그건 전혀 예상하지 못했습니다.
+- id: 366 | level: N5 | [そば / そば , 愛ちゃんは私のそばに座った。]
+  - meaning_ko: 가까운
+  - example_ko: 아이는 내 옆에 앉았다.
+- id: 367 | level: N5 | [空 / そら , おなか空いた！]
+  - meaning_ko: 하늘
+  - example_ko: 배고파!
+- id: 368 | level: N5 | [それ / それ , それは最近の写真？]
+  - meaning_ko: 그거
+  - example_ko: 그것은 최근 사진?
+- id: 369 | level: N5 | [それから / それから , 風呂に入り、それから寝なさい。]
+  - meaning_ko: 그런 다음
+  - example_ko: 목욕에 들어가고 나서 자십시오.
+- id: 370 | level: N5 | [それでは / それでは , それでは本末転倒だ。]
+  - meaning_ko: 그 상황에서
+  - example_ko: 그럼 본말 전도다.
+- id: 371 | level: N5 | [～台 / ～だい , ]
+  - meaning_ko: 차량 카운터
+- id: 372 | level: N5 | [大学 / だいがく , 大学院生のケンは去年アメリカに行った。]
+  - meaning_ko: 대학
+  - example_ko: 대학원생 켄은 작년 미국에 갔다.
+- id: 373 | level: N5 | [大使館 / たいしかん , 日本大使館はどこにありますか。]
+  - meaning_ko: 대사관
+  - example_ko: 일본 대사관은 어디에 있습니까?
+- id: 374 | level: N5 | [大丈夫 / だいじょうぶ , このパンって賞味期限大丈夫か？]
+  - meaning_ko: 괜찮아 (괜찮아)
+  - example_ko: 이 빵은 유통 기한 괜찮습니까?
+- id: 375 | level: N5 | [大好き / だいすき , 麻雀が大好きです。]
+  - meaning_ko: 매우 호감이 가는
+  - example_ko: 마작을 사랑 해요.
+- id: 376 | level: N5 | [大切 / たいせつ , 血圧計が大切な検査器械です。]
+  - meaning_ko: 중요한
+  - example_ko: 혈압계가 중요한 검사 계기입니다.
+- id: 377 | level: N5 | [台所 / だいどころ , 母は台所にいます。]
+  - meaning_ko: 주방
+  - example_ko: 어머니는 부엌에 있습니다.
+- id: 378 | level: N5 | [大変 / たいへん , 好奇心がお旺盛なのは大変に結構なことである。]
+  - meaning_ko: 매우
+  - example_ko: 호기심이 왕성한 것은 몹시 상당한 일이다.
+- id: 379 | level: N5 | [高い / たかい , 欲しいものがみつかると、決まって高いものだ。]
+  - meaning_ko: 키가 큰
+  - example_ko: 원하는 것이 발견되면, 정해져 높은 것이다.
+- id: 380 | level: N5 | [～だけ / ～だけ , ]
+  - meaning_ko: 단지 ~
+- id: 381 | level: N5 | [沢山 / たくさん , 彼女は服に沢山お金を使う。]
+  - meaning_ko: 많은
+  - example_ko: 그녀는 옷에 돈을 많이 쓴다.
+- id: 382 | level: N5 | [タクシー / タクシー , 来月タクシー料金があがります。]
+  - meaning_ko: 택시
+  - example_ko: 다음 달 택시 요금이 부과됩니다.
+- id: 383 | level: N5 | [出す / だす , 藪をつついてヘビを出す。]
+  - meaning_ko: (무엇을) 꺼내다
+  - example_ko: 藪을 붙여 뱀을 낸다.
+- id: 384 | level: N5 | [～たち / ～たち , ]
+  - meaning_ko: 복수 접미사
+- id: 385 | level: N5 | [立つ / たつ , 林に竹が目立つ。]
+  - meaning_ko: 일어서다
+  - example_ko: 숲에 대나무가 눈에 띈다.
+- id: 386 | level: N5 | [たて / たて , 彼は腹をたてた。]
+  - meaning_ko: 길이
+  - example_ko: 그는 배고프다.
+- id: 387 | level: N5 | [建物 / たてもの , 郵便局はその茶色の建物です。]
+  - meaning_ko: 건물
+  - example_ko: 우체국은 그 갈색 건물입니다.
+- id: 388 | level: N5 | [楽しい / たのしい , 旅行は楽しい。]
+  - meaning_ko: 재미있는
+  - example_ko: 여행은 재미있다.
+- id: 389 | level: N5 | [頼む / たのむ , 頼むよー。]
+  - meaning_ko: 요청하다
+  - example_ko: 부탁해-.
+- id: 390 | level: N5 | [たばこ / たばこ , 父はめったにたばこを吸わない。]
+  - meaning_ko: 담배
+  - example_ko: 아버지는 거의 담배를 피우지 않습니다.
+- id: 391 | level: N5 | [多分 / たぶん , 明日の夜は多分雪だろう。]
+  - meaning_ko: 아마도
+  - example_ko: 내일 밤은 어쩌면 눈일 것이다.
+- id: 392 | level: N5 | [食べ物 / たべもの , 宇宙でどうやって食べ物をみつけるの？]
+  - meaning_ko: 음식
+  - example_ko: 우주에서 어떻게 음식을 찾는가?
+- id: 393 | level: N5 | [食べる / たべる , 羊は草を食べる。]
+  - meaning_ko: 먹다
+  - example_ko: 양은 잔디를 먹는다.
+- id: 394 | level: N5 | [卵 / たまご , すみません、卵はどこにありますか？]
+  - meaning_ko: 계란
+  - example_ko: 죄송합니다, 계란은 어디에 있나요?
+- id: 395 | level: N5 | [誰 / だれ , 誰にも分からないよ。]
+  - meaning_ko: WHO
+  - example_ko: 아무도 모르겠어.
+- id: 396 | level: N5 | [誰か / だれか , あなた私が誰か知らないのね。]
+  - meaning_ko: 누구
+  - example_ko: 너 내가 누군지 모르겠어.
+- id: 397 | level: N5 | [誕生日 / たんじょうび , お誕生日おめでとうムーリエル！]
+  - meaning_ko: 생일
+  - example_ko: 생일 축하 무리엘!
+- id: 398 | level: N5 | [段々 / だんだん , 段々暗くなっていきます。]
+  - meaning_ko: 서서히
+  - example_ko: 점점 어두워집니다.
+- id: 399 | level: N5 | [小さい / ちいさい , 彼女は足が小さい。]
+  - meaning_ko: 작은
+  - example_ko: 그녀는 다리가 작다.
+- id: 400 | level: N5 | [小さな / ちいさな , 父は福岡に小さな店を持っています。]
+  - meaning_ko: 작은
+  - example_ko: 아버지는 후쿠오카에 작은 가게가 있습니다.
+- id: 401 | level: N5 | [近い / ちかい , 病院はここから近い。]
+  - meaning_ko: 가까운
+  - example_ko: 병원은 여기에서 가깝습니다.
+- id: 402 | level: N5 | [違う / ちがう , 話が違うじゃないか。]
+  - meaning_ko: 다르다
+  - example_ko: 이야기가 다르지 않나.
+- id: 403 | level: N5 | [近く / ちかく , 夕方近く雨が降りだした。]
+  - meaning_ko: 가까운
+  - example_ko: 저녁 가까이 비가 내렸다.
+- id: 404 | level: N5 | [地下鉄 / ちかてつ , 彼らは地下鉄で行きました。]
+  - meaning_ko: 지하철
+  - example_ko: 그들은 지하철로 갔다.
+- id: 405 | level: N5 | [地図 / ちず , 路線地図をもらえますか。]
+  - meaning_ko: 지도
+  - example_ko: 노선지도를 받을 수 있습니까?
+- id: 406 | level: N5 | [父 / ちち , お祖父さんがかなり老衰している。]
+  - meaning_ko: (나의) 아버지
+  - example_ko: 할아버지가 꽤 노쇠하고 있다.
+- id: 407 | level: N5 | [茶色 / ちゃいろ , 木の葉は秋には茶色になる。]
+  - meaning_ko: 갈색
+  - example_ko: 나뭇잎은 가을에는 갈색이 된다.
+- id: 408 | level: N5 | [茶碗 / ちゃわん , 誰がその茶碗をわったのか。]
+  - meaning_ko: 밥그릇
+  - example_ko: 누가 그 찻잔을 낳았는가.
+- id: 410 | level: N5 | [丁度 / ちょうど , 丁度欲しかった物です。]
+  - meaning_ko: 단지
+  - example_ko: 꼭 원했던 것입니다.
+- id: 411 | level: N5 | [ちょっと / ちょっと , ちょっと、そこのきみ！]
+  - meaning_ko: 조금
+  - example_ko: 이봐, 거기 너!
+- id: 413 | level: N5 | [使う / つかう , 列車で旅をする人もいれば、車を使う人もいた。]
+  - meaning_ko: 사용하다
+  - example_ko: 어떤 사람들은 기차로 여행했고, 다른 사람들은 자동차로 여행했습니다.
+- id: 414 | level: N5 | [疲れる / つかれる , 冬は疲れる。]
+  - meaning_ko: () 피곤해지다
+  - example_ko: 겨울은 피곤하다.
+- id: 415 | level: N5 | [次 / つぎ , 「いつ戻りますか」「天候次第です」]
+  - meaning_ko: 다음
+  - example_ko: "언제 돌아갈까" "날씨에 달려 있습니다"
+- id: 416 | level: N5 | [着く / つく , いつ着くの？]
+  - meaning_ko: 도착하다
+  - example_ko: 언제 도착하니?
+- id: 417 | level: N5 | [机 / つくえ , 部屋の中に机があります。]
+  - meaning_ko: 책상
+  - example_ko: 방에 책상이 있습니다.
+- id: 418 | level: N5 | [作る / つくる , 硫黄はマッチを作るのに使われる。]
+  - meaning_ko: 만들다
+  - example_ko: 유황은 성냥을 만드는 데 사용됩니다.
+- id: 419 | level: N5 | [つける / つける , 問題は誰が猫に鈴をつけるかだ。]
+  - meaning_ko: 켜다(예:
+  - example_ko: 문제는 누가 고양이에 종을 붙이는가다.
+- id: 420 | level: N5 | [勤める / つとめる , 彼はコンサルティングファームに勤める。]
+  - meaning_ko: (을 위해) 일하다
+  - example_ko: 그는 컨설팅 농장에서 일한다.
+- id: 421 | level: N5 | [つまらない / つまらない , 彼らはつまらないことで喧嘩をした。]
+  - meaning_ko: 지루한
+  - example_ko: 그들은 지루함으로 싸움을 했다.
+- id: 422 | level: N5 | [冷たい / つめたい , 冷たい風は海から吹いている。]
+  - meaning_ko: 차가운 (것들
+  - example_ko: 차가운 바람은 바다에서 불고 있습니다.
+- id: 423 | level: N5 | [強い / つよい , 私は好奇心が強いです。]
+  - meaning_ko: 강한
+  - example_ko: 나는 호기심이 강하다.
+- id: 424 | level: N5 | [手 / て , 射手は鹿を射た。]
+  - meaning_ko: 손
+  - example_ko: 궁수는 사슴을 쏘았다.
+- id: 425 | level: N5 | [テープ / テープ , 明日そのテープを返してください。]
+  - meaning_ko: 줄자
+  - example_ko: 내일 그 테이프를 돌려주세요.
+- id: 426 | level: N5 | [テープレコーダー / テープレコーダー , テープレコーダーは有用な教具です。]
+  - meaning_ko: 테이프 레코더
+  - example_ko: 테이프 레코더는 유용한 교구입니다.
+- id: 427 | level: N5 | [テーブル / テーブル , 夕食がテーブルに並べられた。]
+  - meaning_ko: 테이블
+  - example_ko: 저녁 식사가 테이블에 정렬되었습니다.
+- id: 428 | level: N5 | [出かける / でかける , 夕食を済ませたら出かけるよ。]
+  - meaning_ko: 외출하다
+  - example_ko: 저녁을 마치면 나갈거야.
+- id: 429 | level: N5 | [手紙 / てがみ , 郵便屋さんは毎朝手紙を配達する。]
+  - meaning_ko: 편지
+  - example_ko: 우편집은 매일 아침 편지를 배달한다.
+- id: 430 | level: N5 | [できる / できる , できるよ！]
+  - meaning_ko: (성취하다) 할 수 있다
+  - example_ko: 할 수 있어!
+- id: 431 | level: N5 | [出口 / でぐち , 彼らは出口のほうに進んだ。]
+  - meaning_ko: 출구
+  - example_ko: 그들은 출구쪽으로 갔다.
+- id: 432 | level: N5 | [テスト / テスト , 来週からテストが始まる。]
+  - meaning_ko: 시험
+  - example_ko: 다음 주부터 테스트가 시작됩니다.
+- id: 433 | level: N5 | [では / では , 驚くことではないね。]
+  - meaning_ko: 그 다음에
+  - example_ko: 놀랍지 않아.
+- id: 434 | level: N5 | [デパート / デパート , 彼はデパートへ買い物に行った。]
+  - meaning_ko: (약어) 백화점
+  - example_ko: 그는 백화점에 쇼핑하러 갔다.
+- id: 435 | level: N5 | [でも / でも , 時間はいくらでも作れる。]
+  - meaning_ko: 하지만
+  - example_ko: 시간은 얼마든지 만들 수 있다.
+- id: 436 | level: N5 | [出る / でる , 列車は６時に出る。]
+  - meaning_ko: 나타나다
+  - example_ko: 열차는 6시에 나온다.
+- id: 437 | level: N5 | [テレビ / テレビ , 今朝テレビを見ました。]
+  - meaning_ko: 텔레비전
+  - example_ko: 오늘 아침 TV를 보았습니다.
+- id: 438 | level: N5 | [天気 / てんき , 良い天気は続くでしょう。]
+  - meaning_ko: 날씨
+  - example_ko: 좋은 날씨는 계속 될 것입니다.
+- id: 439 | level: N5 | [電気 / でんき , 路面電車は電気で動く。]
+  - meaning_ko: 전기
+  - example_ko: 노면 전철은 전기로 움직입니다.
+- id: 440 | level: N5 | [電車 / でんしゃ , 路面電車は電気で動く。]
+  - meaning_ko: 전기 열차
+  - example_ko: 노면 전철은 전기로 움직입니다.
+- id: 441 | level: N5 | [電話 / でんわ , 電話はどこでできる？]
+  - meaning_ko: 전화
+  - example_ko: 전화는 어디서 할 수 있습니까?
+- id: 442 | level: N5 | [戸 / と , あと、戸締りよろしくな。]
+  - meaning_ko: 문(일본식)
+  - example_ko: 그리고, 단단히 죄송합니다.
+- id: 443 | level: N5 | [～度 / ～ど , ]
+  - meaning_ko: 발생 카운터
+- id: 444 | level: N5 | [ドア / ドア , 冷蔵庫のドアを開いたらリンゴが落ちた。]
+  - meaning_ko: 문(서양식)
+  - example_ko: 냉장고 문을 열면 사과가 떨어졌다.
+- id: 445 | level: N5 | [トイレ / トイレ , トイレをお借りしていい？]
+  - meaning_ko: 화장실
+  - example_ko: 화장실을 빌릴 수 있습니까?
+- id: 446 | level: N5 | [どう / どう , してもいないことをどうして謝るの？]
+  - meaning_ko: 어떻게
+  - example_ko: 하지 않아도 되는 것을 어떻게 사과할까?
+- id: 447 | level: N5 | [どうして / どうして , してもいないことをどうして謝るの？]
+  - meaning_ko: 왜
+  - example_ko: 하지 않아도 되는 것을 어떻게 사과할까?
+- id: 448 | level: N5 | [どうぞ / どうぞ , 有り難う、どうぞ頼みます。]
+  - meaning_ko: 제발
+  - example_ko: 고맙습니다, 부탁드립니다.
+- id: 449 | level: N5 | [動物 / どうぶつ , 昨日動物園に行った。]
+  - meaning_ko: 동물
+  - example_ko: 어제 동물원에 갔다.
+- id: 450 | level: N5 | [どうも / どうも , 本当にどうも。]
+  - meaning_ko: 감사합니다
+  - example_ko: 정말 아무래도.
+- id: 452 | level: N5 | [遠い / とおい , ここから遠いの？]
+  - meaning_ko: 멀리 (멀리)
+  - example_ko: 여기에서 멀지?
+- id: 453 | level: N5 | [十日 / とおか , 彼は三十日で太平洋を渡った。]
+  - meaning_ko: 일순
+  - example_ko: 그는 30일 만에 태평양을 건넜다.
+- id: 455 | level: N5 | [時々 / ときどき , 彼は時々変です。]
+  - meaning_ko: 때때로
+  - example_ko: 그는 때때로 이상합니다.
+- id: 456 | level: N5 | [時計 / とけい , 腕時計の収集が趣味だ。]
+  - meaning_ko: 시계
+  - example_ko: 손목시계 수집이 취미다.
+- id: 457 | level: N5 | [どこ / どこ , 電話はどこでできる？]
+  - meaning_ko: 어디
+  - example_ko: 전화는 어디서 할 수 있습니까?
+- id: 458 | level: N5 | [所 / ところ , 誰にでも長所と短所がある。]
+  - meaning_ko: 장소
+  - example_ko: 누구에게나 장점과 단점이 있다.
+- id: 459 | level: N5 | [年 / とし , １０年は待つには長い時間だ。]
+  - meaning_ko: 년도
+  - example_ko: 10년은 기다리기에는 오랜 시간이다.
+- id: 460 | level: N5 | [図書館 / としょかん , 明日図書館でね。]
+  - meaning_ko: 도서관
+  - example_ko: 내일 도서관에서.
+- id: 462 | level: N5 | [どちら / どちら , ご出身はどちらですか。]
+  - meaning_ko: 어느 (하나) (방법)
+  - example_ko: 출신은 어느 쪽입니까?
+- id: 463 | level: N5 | [どっち / どっち , 問題はどっちを選ぶかだ。]
+  - meaning_ko: 어느 것
+  - example_ko: 문제는 어느 쪽을 선택하는가다.
+- id: 465 | level: N5 | [とても / とても , 彼はとてもセクシーだ。]
+  - meaning_ko: 흠뻑)
+  - example_ko: 그는 매우 섹시하다.
+- id: 468 | level: N5 | [どなた / どなた , 留守中どなたか見えましたか。]
+  - meaning_ko: WHO
+  - example_ko: 보류 중 누군가 보였습니까?
+- id: 470 | level: N5 | [隣 / となり , 遠くの兄弟より、良き隣人。]
+  - meaning_ko: 옆에
+  - example_ko: 먼 형제보다 좋은 이웃.
+- id: 471 | level: N5 | [どの / どの , どのくらいいたの？]
+  - meaning_ko: 어느
+  - example_ko: 얼마나 됐니?
+- id: 474 | level: N5 | [飛ぶ / とぶ , 飛ぶ前に見よ。]
+  - meaning_ko: 날다
+  - example_ko: 날기 전에 보라.
+- id: 476 | level: N5 | [止まる / とまる , 車が家の前に止まる音が聞こえた。]
+  - meaning_ko: 멈추다
+  - example_ko: 차가 집 앞에 멈추는 소리가 들렸다.
+- id: 477 | level: N5 | [友達 / ともだち , 私は友達に話しかけた。]
+  - meaning_ko: 친구
+  - example_ko: 나는 친구에게 말을 걸었다.
+- id: 478 | level: N5 | [土曜日 / どようび , 来週の土曜日は暇です。]
+  - meaning_ko: 토요일
+  - example_ko: 다음 주 토요일은 여가입니다.
+- id: 481 | level: N5 | [鳥 / とり , 蝙蝠は鳥ではなく哺乳類だ。]
+  - meaning_ko: 치킨(점등.
+  - example_ko: 蝙蝠은 새가 아니라 포유류다.
+- id: 483 | level: N5 | [鶏肉 / とりにく , 彼女は鶏肉を買った。]
+  - meaning_ko: 닭고기
+  - example_ko: 그녀는 닭고기를 샀다.
+- id: 486 | level: N5 | [取る / とる , 年を取ると目ざとくなる。]
+  - meaning_ko: (수업을) 듣다
+  - example_ko: 나이가 들면 눈빛이 된다.
+- id: 487 | level: N5 | [撮る / とる , 彼は写真を撮るのが上手だ。]
+  - meaning_ko: (사진을) 찍다
+  - example_ko: 그는 사진을 찍는 것이 좋다.
+- id: 489 | level: N5 | [どれ / どれ , どれくらいかかるのかしら。]
+  - meaning_ko: 어느 것
+  - example_ko: 얼마나 걸릴까.
+- id: 491 | level: N5 | [どんな / どんな , 他にどんな選択肢があるの？]
+  - meaning_ko: 무엇
+  - example_ko: 다른 어떤 옵션이 있습니까?
+- id: 493 | level: N5 | [ない / ない , 知らない。]
+  - meaning_ko: 거기에는 없다
+  - example_ko: 몰라.
+- id: 495 | level: N5 | [ナイフ / ナイフ , 母はナイフでチーズを切った。]
+  - meaning_ko: 칼
+  - example_ko: 어머니는 칼로 치즈를 자른다.
+- id: 497 | level: N5 | [中 / なか , 食事中本を読んだ。]
+  - meaning_ko: 내부에
+  - example_ko: 식사 중 책을 읽었다.
+- id: 499 | level: N5 | [長い / ながい , マリアさんの髪は長いです。]
+  - meaning_ko: 긴
+  - example_ko: 마리아의 머리는 길다.
+- id: 501 | level: N5 | [鳴く / なく , 鳥は鳴く。]
+  - meaning_ko: 소리를 내다 (동물)
+  - example_ko: 새는 울린다.
+- id: 504 | level: N5 | [無くす / なくす , 新しい政府は国から腐敗を無くすと約束した。]
+  - meaning_ko: 뭔가를 잃다
+  - example_ko: 새로운 정부는 나라에서 부패를 없애겠다고 약속했다.
+- id: 506 | level: N5 | [なぜ / なぜ , 私はなぜか夜の方が元気だ。]
+  - meaning_ko: 왜(どуして와 동일)
+  - example_ko: 나는 왠지 밤이 더 좋다.
+- id: 507 | level: N5 | [夏 / なつ , 夏休みの間、私は夜中に夕食を食べていた。]
+  - meaning_ko: 여름
+  - example_ko: 여름방학 동안 저는 한밤중에 저녁을 먹고 있었다.
+- id: 510 | level: N5 | [夏休み / なつやすみ , 愉快な夏休みでありますように！]
+  - meaning_ko: 여름방학
+  - example_ko: 유쾌한 여름 휴가가 되길 바랍니다!
+- id: 512 | level: N5 | [～など / ～など , ]
+  - meaning_ko: 등등
+- id: 514 | level: N5 | [七つ / ななつ , あなたが仕事をする上での「七つ道具」と言えば何ですか？]
+  - meaning_ko: 일곱 가지
+  - example_ko: 당신이 일을 하는 '일곱 도구'라고 하면 무엇입니까?
+- id: 516 | level: N5 | [何 / なん; なに , だから何？]
+  - meaning_ko: 무엇
+  - example_ko: 그래서 무엇?
+- id: 518 | level: N5 | [七日 / なのか , 一週間は七日です。]
+  - meaning_ko: 7일
+  - example_ko: 일주일은 7일입니다.
+- id: 520 | level: N5 | [名前 / なまえ , あなたの名前は？]
+  - meaning_ko: 이름
+  - example_ko: 당신의 이름은?
+- id: 522 | level: N5 | [習う / ならう , 父は私にピアノを習うように勧めた。]
+  - meaning_ko: 배우다
+  - example_ko: 아버지는 나에게 피아노를 배울 것을 권했다.
+- id: 524 | level: N5 | [並ぶ / ならぶ , 英国人は列を作って並ぶのに慣れている。]
+  - meaning_ko: 줄을 서다
+  - example_ko: 영국인은 줄을 만들고 늘어놓는 데 익숙하다.
+- id: 526 | level: N5 | [並べる / ならべる , 身長順に男の子を並べる。]
+  - meaning_ko: (사물을) 나란히 놓다
+  - example_ko: 키순으로 소년을 늘어놓는다.
+- id: 528 | level: N5 | [なる / なる , 年を取ると目ざとくなる。]
+  - meaning_ko: 되다
+  - example_ko: 나이가 들면 눈빛이 된다.
+- id: 530 | level: N5 | [何～ / なん～ , ]
+  - meaning_ko: 어떤 종류의 ~
+- id: 532 | level: N5 | [二 / に , 兄ちゃん、こっち生中二つー。]
+  - meaning_ko: 둘
+  - example_ko: 오빠, 이쪽 생중 2개-.
+- id: 534 | level: N5 | [にぎやか / にぎやか , 森は鳥でにぎやかだ。]
+  - meaning_ko: 분주한
+  - example_ko: 숲은 새로 활기차다.
+- id: 536 | level: N5 | [肉 / にく , １．とりむね肉を細切りにする。]
+  - meaning_ko: 고기
+  - example_ko: 1. 어쩌면 고기를 잘게 썬다.
+- id: 538 | level: N5 | [西 / にし , 列車は西へ走っていた。]
+  - meaning_ko: 서쪽
+  - example_ko: 기차는 서쪽으로 달리고 있었다.
+- id: 540 | level: N5 | [～日 / ～にち , ]
+  - meaning_ko: ~ 달의 일
+- id: 542 | level: N5 | [日曜日 / にちようび , 日曜日でも、働きます。]
+  - meaning_ko: 일요일
+  - example_ko: 일요일에도 일합니다.
+- id: 544 | level: N5 | [荷物 / にもつ , 彼女は手荷物をたくさん持ってきた。]
+  - meaning_ko: 수화물
+  - example_ko: 그녀는 수하물을 많이 가져왔다.
+- id: 546 | level: N5 | [ニュース / ニュース , ニューススタンドで買えますよ。]
+  - meaning_ko: 소식
+  - example_ko: 뉴스 스탠드에서 살 수 있습니다.
+- id: 548 | level: N5 | [庭 / にわ , どこか有名な庭園に行ったの？]
+  - meaning_ko: 정원
+  - example_ko: 어딘가 유명한 정원에 갔니?
+- id: 550 | level: N5 | [脱ぐ / ぬぐ , 君にはシャッポを脱ぐよ。]
+  - meaning_ko: (옷을) 벗다
+  - example_ko: 너에게는 샤포를 벗어.
+- id: 552 | level: N5 | [温い / ぬるい , ここはちょっと温いですね？]
+  - meaning_ko: 미적지근한
+  - example_ko: 여기 좀 따뜻하네요?
+- id: 553 | level: N5 | [ネクタイ / ネクタイ , 赤いネクタイを買いました。]
+  - meaning_ko: 묶다
+  - example_ko: 빨간 넥타이를 샀다.
+- id: 555 | level: N5 | [猫 / ねこ , 隣人は４人姉妹と猫１匹です。]
+  - meaning_ko: 고양이
+  - example_ko: 이웃은 4명 자매와 고양이 1마리입니다.
+- id: 557 | level: N5 | [寝る / ねる , 寝る前に風邪薬を3錠飲んだ。]
+  - meaning_ko: 잠을 자다
+  - example_ko: 잠자기 전에 감기약을 3정 마셨다.
+- id: 559 | level: N5 | [～年 / ～ねん , ]
+  - meaning_ko: ~년
+- id: 561 | level: N5 | [ノート / ノート , 本とノートをしまいなさい。]
+  - meaning_ko: 공책
+  - example_ko: 책으로 주를 만드십시오.
+- id: 564 | level: N5 | [登る / のぼる , 塀に登るな。]
+  - meaning_ko: 오르다
+  - example_ko: 담에 오르지 마라.
+- id: 566 | level: N5 | [飲み物 / のみもの , こちらの飲み物は単品となります。]
+  - meaning_ko: 마시다
+  - example_ko: 이 음료는 단품입니다.
+- id: 568 | level: N5 | [飲む / のむ , 父は酒を飲むのをやめた。]
+  - meaning_ko: 마시다
+  - example_ko: 아버지는 술을 마시는 것을 멈췄다.
+- id: 571 | level: N5 | [乗る / のる , そんなに沢山パンに乗るんか？]
+  - meaning_ko: 타다
+  - example_ko: 그렇게 많은 빵을 타는가?
+- id: 573 | level: N5 | [歯 / は , プチッ、と糸を犬歯で噛み切った。]
+  - meaning_ko: 이빨
+  - example_ko: 쁘띠, 실을 개 이빨로 씹었다.
+- id: 575 | level: N5 | [パーティー / パーティー , 来週の土曜にパーティーを開くつもりです。]
+  - meaning_ko: 파티
+  - example_ko: 다음 주 토요일에 파티를 열겠습니다.
+- id: 577 | level: N5 | [はい / はい , それはいささか唐突だ。]
+  - meaning_ko: 예
+  - example_ko: 그것은 조금 갑자기이다.
+- id: 579 | level: N5 | [～杯 / ～はい , ]
+  - meaning_ko: 한 컵 분량의 카운터
+- id: 581 | level: N5 | [灰皿 / はいざら , 灰皿を下さい。]
+  - meaning_ko: 재떨이
+  - example_ko: 재떨이를 주십시오.
+- id: 583 | level: N5 | [入る / はいる , 本は今では誰にでも手に入る。]
+  - meaning_ko: 들어가다
+  - example_ko: 책은 지금은 누구에게나 손에 든다.
+- id: 585 | level: N5 | [葉書 / はがき , 葉書をおくれ。]
+  - meaning_ko: 엽서
+  - example_ko: 엽서를 줘.
+- id: 587 | level: N5 | [はく / はく , 列車は待ってはくれない。]
+  - meaning_ko: (허리 아래에 있는 물건을) 입다
+  - example_ko: 기차는 기다려주지 않는다.
+- id: 588 | level: N5 | [箱 / はこ , 料金には箱代は含みません。]
+  - meaning_ko: 상자
+  - example_ko: 요금에는 박스 요금은 포함되어 있지 않습니다.
+- id: 590 | level: N5 | [橋 / はし , 兵隊が橋を見張っていた。]
+  - meaning_ko: 다리
+  - example_ko: 군대가 다리를 바라보고 있었다.
+- id: 592 | level: N5 | [箸 / はし , ルーシーは箸が使えないんだ。]
+  - meaning_ko: 젓가락
+  - example_ko: 루시는 젓가락을 사용할 수 없다.
+- id: 595 | level: N5 | [始まる / はじまる , 話は遠い昔に始まる。]
+  - meaning_ko: (무엇이) 시작되다
+  - example_ko: 이야기는 먼 옛날에 시작된다.
+- id: 596 | level: N5 | [初め; 始め / はじめ , ]
+  - meaning_ko: 시작
+- id: 597 | level: N5 | [初めて / はじめて , 翌朝になって初めて大陸が見えた。]
+  - meaning_ko: 처음으로
+  - example_ko: 다음날 아침이 되어 처음으로 대륙이 보였다.
+- id: 599 | level: N5 | [走る / はしる , 考えただけで虫唾が走るわ。]
+  - meaning_ko: 달리다
+  - example_ko: 생각한 것만으로 벌레가 달릴거야.
+- id: 601 | level: N5 | [バス / バス , 翌朝、彼はバスで旅していた。]
+  - meaning_ko: 버스
+  - example_ko: 다음날 아침, 그는 버스로 여행하고 있었다.
+- id: 603 | level: N5 | [バター / バター , 恵子、バタートーストあるか。]
+  - meaning_ko: 버터
+  - example_ko: 케이코, 버터 토스트 있는가?
+- id: 605 | level: N5 | [二十歳 / はたち , 彼は二十歳のときにこの本を書いた。]
+  - meaning_ko: 20세
+  - example_ko: 그는 20살 때 이 책을 썼다.
+- id: 608 | level: N5 | [働く / はたらく , 毎日働く時間帯が違うんです。]
+  - meaning_ko: 일하다
+  - example_ko: 매일 일하는 시간대가 다릅니다.
+- id: 610 | level: N5 | [八 / はち , 夜の八時です。]
+  - meaning_ko: 여덟
+  - example_ko: 밤의 8시입니다.
+- id: 613 | level: N5 | [二十日 / はつか , 今日は金曜日、十月二十日だ。]
+  - meaning_ko: 이십일
+  - example_ko: 오늘은 금요일, 10월 20일이다.
+- id: 615 | level: N5 | [花 / はな , 恥ずかしがってる立花はとってもキュートだ。]
+  - meaning_ko: 꽃
+  - example_ko: 부끄러워하는 타치바나는 매우 귀엽다.
+- id: 617 | level: N5 | [鼻 / はな , 目くそ鼻くそを笑う。]
+  - meaning_ko: 코
+  - example_ko: 눈썹 코 젠장을 웃는다.
+- id: 619 | level: N5 | [話 / はなし , 明日帰ったら電話します。]
+  - meaning_ko: 이야기하다(채팅하다)
+  - example_ko: 내일 돌아오면 전화하겠습니다.
+- id: 621 | level: N5 | [話す / はなす , 誰か英語を話す人はいますか。]
+  - meaning_ko: 말하다
+  - example_ko: 누군가 영어를 사용하는 사람이 있습니까?
+- id: 623 | level: N5 | [母 / はは , 「どなたですか」「お母さんよ」]
+  - meaning_ko: (나의) 어머니
+  - example_ko: "누구입니까?" "엄마"
+- id: 625 | level: N5 | [早い / はやい , 北欧では冬の訪れが早い。]
+  - meaning_ko: 일찍
+  - example_ko: 북유럽에서는 겨울 방문이 빠르다.
+- id: 627 | level: N5 | [速い / はやい , 文明の進歩がとても速い。]
+  - meaning_ko: 빠른
+  - example_ko: 문명의 진보가 매우 빠릅니다.
+- id: 629 | level: N5 | [春 / はる , 私の子供達はもうすぐ春休みです。]
+  - meaning_ko: 봄
+  - example_ko: 내 아이들은 곧 봄 방학입니다.
+- id: 631 | level: N5 | [貼る / はる , 手紙に切手を貼るのを忘れるな。]
+  - meaning_ko: 게시하다
+  - example_ko: 편지에 우표를 붙이는 것을 잊지 마라.
+- id: 633 | level: N5 | [晴れ / はれ , 嵐の後すぐに空は晴れ上がった。]
+  - meaning_ko: 맑은(화창한) 날씨
+  - example_ko: 폭풍 후 곧 하늘이 맑아졌다.
+- id: 635 | level: N5 | [晴れる / はれる , 明日晴れるといいな。]
+  - meaning_ko: 화창하다
+  - example_ko: 내일 맑으면 좋겠다.
+- id: 637 | level: N5 | [半 / はん , 面白半分なら来ないで欲しい。]
+  - meaning_ko: 절반(예:
+  - example_ko: 재미 반이라면 오지 말고 싶다.
+- id: 638 | level: N5 | [晩 / ばん , 友達が今晩来ます。]
+  - meaning_ko: 저녁
+  - example_ko: 친구가 오늘 밤에 온다.
+- id: 641 | level: N5 | [～番 / ～ばん , ]
+  - meaning_ko: ~일
+- id: 642 | level: N5 | [パン / パン , そんなに沢山パンに乗るんか？]
+  - meaning_ko: 빵
+  - example_ko: 그렇게 많은 빵을 타는가?
+- id: 645 | level: N5 | [ハンカチ / ハンカチ , 彼女はハンカチで鼻をかんだ。]
+  - meaning_ko: 손수건
+  - example_ko: 그녀는 손수건으로 코를 씹었다.
+- id: 647 | level: N5 | [番号 / ばんごう , 予約番号は１００３です。]
+  - meaning_ko: 숫자
+  - example_ko: 예약 번호는 1003입니다.
+- id: 649 | level: N5 | [晩御飯 / ばんごはん , 母は晩御飯の支度で忙しい。]
+  - meaning_ko: 저녁
+  - example_ko: 어머니는 저녁밥의 지도로 바쁘다.
+- id: 651 | level: N5 | [半分 / はんぶん , 遊び半分に学校へ来るな。]
+  - meaning_ko: 반
+  - example_ko: 놀이 절반에 학교에 오지 마.
+- id: 653 | level: N5 | [東 / ひがし , 東京ミッドタウンは緑がいっぱい！]
+  - meaning_ko: 동쪽
+  - example_ko: 도쿄 미드 타운은 녹색이 가득!
+- id: 655 | level: N5 | [～匹 / ～ひき , ]
+  - meaning_ko: 작은 동물용 카운터
+- id: 657 | level: N5 | [引く / ひく , 風邪を引くと私はいつも鼻水が出る。]
+  - meaning_ko: 당기다
+  - example_ko: 감기에 걸리면 언제나 콧물이 나온다.
+- id: 659 | level: N5 | [弾く / ひく , 彼はピアノを上手に弾く。]
+  - meaning_ko: (현악기나 피아노를) 연주하다
+  - example_ko: 그는 피아노를 잘 연주한다.
+- id: 661 | level: N5 | [低い / ひくい , 彼女はいつも低い声で話す。]
+  - meaning_ko: 짧은
+  - example_ko: 그녀는 항상 낮은 목소리로 말한다.
+- id: 663 | level: N5 | [飛行機 / ひこうき , 両親を飛行機事故でなくしたのだった。]
+  - meaning_ko: 비행기
+  - example_ko: 부모님을 비행기 사고가 아니었던 것이었다.
+- id: 665 | level: N5 | [左 / ひだり , 僕は左利きです。]
+  - meaning_ko: 왼쪽
+  - example_ko: 나는 왼손잡이입니다.
+- id: 667 | level: N5 | [人 / ひと , 親友は何人いる？]
+  - meaning_ko: 남성
+  - example_ko: 가장 친한 친구는 몇 명입니까?
+- id: 668 | level: N5 | [一つ / ひとつ , 僕はボードの上の駒を一つ前に進めた。]
+  - meaning_ko: 한 가지
+  - example_ko: 나는 보드에서 한 조각을 앞으로 옮겼습니다.
+- id: 670 | level: N5 | [一月 / ひとつき , 彼らは１９７０年に一月違いで生まれた。]
+  - meaning_ko: 한 달
+  - example_ko: 그들은 1970년 한 달 차이로 태어났다.
+- id: 672 | level: N5 | [一人 / ひとり , トランプをするのにもう一人必要だ。]
+  - meaning_ko: 한 사람
+  - example_ko: 카드놀이를 하려면 다른 사람이 필요해요.
+- id: 674 | level: N5 | [暇 / ひま , 休暇の計画を予め立てている。]
+  - meaning_ko: 자유 시간
+  - example_ko: 휴가 계획을 미리 세우고 있다.
+- id: 676 | level: N5 | [百 / ひゃく , 百円じゃなくて、王冠でした。]
+  - meaning_ko: 백
+  - example_ko: 백엔이 아니라 왕관이었습니다.
+- id: 677 | level: N5 | [病院 / びょういん , 私は病院で点滴を受けた。]
+  - meaning_ko: 병원
+  - example_ko: 나는 병원에서 물방울을 받았다.
+- id: 679 | level: N5 | [病気 / びょうき , 初めは病気だと思った。]
+  - meaning_ko: 병
+  - example_ko: 처음에는 아프다고 생각했다.
+- id: 681 | level: N5 | [平仮名 / ひらがな , 平仮名は書けるんだけど、片仮名はまだ書けないんだ。]
+  - meaning_ko: 히라가나
+  - example_ko: 히라가나는 쓸 수 있지만, 가타카나는 아직 쓸 수 없다.
+- id: 683 | level: N5 | [昼 / ひる , 毎日お昼ご飯を作っているよ。]
+  - meaning_ko: 정오
+  - example_ko: 매일 점심 밥을 만들고 있어.
+- id: 685 | level: N5 | [昼御飯 / ひるごはん , ]
+  - meaning_ko: 점심
+- id: 688 | level: N5 | [広い / ひろい , 本通りは大変広い。]
+  - meaning_ko: 넓다
+  - example_ko: 책길은 매우 넓다.
+- id: 690 | level: N5 | [フィルム / フィルム , 実験はすべてフィルムに記録された。]
+  - meaning_ko: 필름(롤)
+  - example_ko: 모든 실험은 필름에 기록되었다.
+- id: 691 | level: N5 | [封筒 / ふうとう , 封筒をください。]
+  - meaning_ko: 봉투
+  - example_ko: 봉투를주세요.
+- id: 693 | level: N5 | [プール / プール , 毎日市営プールに行きます。]
+  - meaning_ko: 수영장
+  - example_ko: 저는 매일 시립 수영장에 갑니다.
+- id: 695 | level: N5 | [フォーク / フォーク , 彼らはナイフとフォークで食事をする。]
+  - meaning_ko: 포크
+  - example_ko: 그들은 나이프와 포크를 가지고 먹습니다.
+- id: 699 | level: N5 | [吹く / ふく , 羹に懲りて膾を吹く]
+  - meaning_ko: 불다 (바람
+  - example_ko: 뾰족하게 징계하고 질을 불어
+- id: 700 | level: N5 | [服 / ふく , 私は服を脱いでいる。]
+  - meaning_ko: 옷
+  - example_ko: 나는 옷을 벗고 있다.
+- id: 702 | level: N5 | [二つ / ふたつ , 本当に瓜二つだったわ。]
+  - meaning_ko: 두 가지
+  - example_ko: 정말로 두개였어요.
+- id: 703 | level: N5 | [豚肉 / ぶたにく , 豚肉は私には合わない。]
+  - meaning_ko: 돼지고기
+  - example_ko: 돼지고기는 나에게 맞지 않는다.
+- id: 705 | level: N5 | [二人 / ふたり , 二人の間がしっくり行かない。]
+  - meaning_ko: 두 사람
+  - example_ko: 두 사람 사이가 제대로 가지 않는다.
+- id: 706 | level: N5 | [二日 / ふつか , 二日後に彼は帰ってきた。]
+  - meaning_ko: 이틀
+  - example_ko: 이틀 후에 그는 돌아왔다.
+- id: 708 | level: N5 | [太い / ふとい , 彼は太い首をしている。]
+  - meaning_ko: 지방
+  - example_ko: 그는 두꺼운 목을 하고 있다.
+- id: 710 | level: N5 | [冬 / ふゆ , 冬は私の一番好きな季節です。]
+  - meaning_ko: 겨울
+  - example_ko: 겨울은 제가 가장 좋아하는 계절입니다.
+- id: 712 | level: N5 | [降る / ふる , 空が怪しい。雨が降るかな。]
+  - meaning_ko: 침전하다
+  - example_ko: 하늘이 수상하다. 비가 내릴까.
+- id: 713 | level: N5 | [古い / ふるい , 母は頭が古い。]
+  - meaning_ko: 오래된(객체와 관련하여
+  - example_ko: 어머니는 머리가 오래되었습니다.
+- id: 715 | level: N5 | [～分 / ～ふん , ]
+  - meaning_ko: ~ 분
+- id: 717 | level: N5 | [文章 / ぶんしょう , 彼女は文章がうまい。]
+  - meaning_ko: 문장
+  - example_ko: 그녀는 문장이 좋다.
+- id: 720 | level: N5 | [ページ / ページ , このページはリンクフリーです。]
+  - meaning_ko: 페이지
+  - example_ko: 이 페이지는 링크 무료입니다.
+- id: 722 | level: N5 | [下手 / へた , そこでベス下手より登場！]
+  - meaning_ko: 미숙한
+  - example_ko: 거기서 베스 서투른보다 등장!
+- id: 723 | level: N5 | [ベッド / ベッド , 母親は赤ん坊をベッドに横にした。]
+  - meaning_ko: 침대
+  - example_ko: 어머니는 아기를 침대에 누웠다.
+- id: 725 | level: N5 | [ペット / ペット , 彼女はペットに何を飼っているのですか。]
+  - meaning_ko: 애완 동물
+  - example_ko: 그녀는 애완 동물에 무엇을 기르고 있습니까?
+- id: 728 | level: N5 | [部屋 / へや , この部屋の本は私の物ではありません。]
+  - meaning_ko: 방
+  - example_ko: 이 방의 책은 내 물건이 아닙니다.
+- id: 729 | level: N5 | [辺 / へん , 夜にこの辺を歩くのは心配だ。]
+  - meaning_ko: 영역
+  - example_ko: 밤에 이 근처를 걷는 것은 걱정이다.
+- id: 732 | level: N5 | [ペン / ペン , 例えば、これは一本のペンです。]
+  - meaning_ko: 펜
+  - example_ko: 예를 들어, 이것은 하나의 펜입니다.
+- id: 734 | level: N5 | [勉強 / べんきょう (する) , パリで勉強したい。]
+  - meaning_ko: 공부하다
+  - example_ko: 파리에서 공부하고 싶다.
+- id: 736 | level: N5 | [便利 / べんり , この百科事典は検索に便利である。]
+  - meaning_ko: 편리한
+  - example_ko: 이 백과 사전은 검색에 편리합니다.
+- id: 739 | level: N5 | [帽子 / ぼうし , 彼女は黒い帽子をかぶっていた。]
+  - meaning_ko: 모자
+  - example_ko: 그녀는 검은 모자를 쓰고 있었다.
+- id: 741 | level: N5 | [ボールペン / ボールペン , 彼はボールペンを逆さに持った。]
+  - meaning_ko: 볼펜
+  - example_ko: 그는 볼펜을 거꾸로 잡았다.
+- id: 743 | level: N5 | [ポケット / ポケット , 彼女は鍵をポケットに入れた。]
+  - meaning_ko: 포켓
+  - example_ko: 그녀는 열쇠를 주머니에 넣었다.
+- id: 744 | level: N5 | [欲しい / ほしい , ホットチョコレート欲しい人ー？]
+  - meaning_ko: 원하다
+  - example_ko: 뜨거운 초콜릿을 원하십니까?
+- id: 745 | level: N5 | [ポスト / ポスト , 彼はポストに手紙を入れた。]
+  - meaning_ko: 사서함
+  - example_ko: 그는 포스트에 편지를 넣었다.
+- id: 747 | level: N5 | [細い / ほそい , 君がいないと心細い。]
+  - meaning_ko: 얇은
+  - example_ko: 네가 없으면 마음이 얇다.
+- id: 749 | level: N5 | [ボタン / ボタン , 彼女は上着にボタンを縫い付けた。]
+  - meaning_ko: 단추
+  - example_ko: 그녀는 겉옷에 버튼을 꿰매었다.
+- id: 751 | level: N5 | [ホテル / ホテル , 旅行者たちは海岸のホテルにとまった。]
+  - meaning_ko: 호텔
+  - example_ko: 여행자들은 해안 호텔에 머물렀다.
+- id: 754 | level: N5 | [本 / ほん , 私は日本語が話せない。]
+  - meaning_ko: 책
+  - example_ko: 나는 일본어를 말할 수 없다.
+- id: 757 | level: N5 | [～本 / ～ほん , ]
+  - meaning_ko: 긴 원통형 물건을 위한 카운터
+- id: 759 | level: N5 | [本棚 / ほんだな , 本棚の上に手が届きますか。]
+  - meaning_ko: 책장
+  - example_ko: 책장 위에 손이 닿습니까?
+- id: 761 | level: N5 | [本当 / ほんとう , 彼女は本当に賢いよね？]
+  - meaning_ko: 진짜
+  - example_ko: 그녀는 정말 똑똑하죠?
+- id: 763 | level: N5 | [～枚 / ～まい , ]
+  - meaning_ko: 평평한 물건을 위한 카운터
+- id: 767 | level: N5 | [毎朝 / まいあさ , 毎朝六時に彼を起こします。]
+  - meaning_ko: 매일 아침
+  - example_ko: 매일 아침 6시에 그를 일으킵니다.
+- id: 768 | level: N5 | [毎月 / まいげつ; まいつき , 毎月友達から便りがある。]
+  - meaning_ko: 매달
+  - example_ko: 매달 친구에게서 소식이 있다.
+- id: 770 | level: N5 | [毎週 / まいしゅう , 毎週釣りに行く。]
+  - meaning_ko: 매주
+  - example_ko: 매주 낚시하러 간다.
+- id: 772 | level: N5 | [毎日 / まいにち , 毎日曜日に教会に行きます。]
+  - meaning_ko: 매일
+  - example_ko: 매일 요일에 교회에 간다.
+- id: 775 | level: N5 | [毎年 / まいねん; まいとし , 毎年友達から便りがある。]
+  - meaning_ko: 매년
+  - example_ko: 매년 친구에게서 소식이 있다.
+- id: 777 | level: N5 | [毎晩 / まいばん , 毎晩電話するよ。]
+  - meaning_ko: 매일 밤
+  - example_ko: 매일 밤 전화하겠습니다.
+- id: 779 | level: N5 | [前 / まえ , あなたの名前は？]
+  - meaning_ko: ~ 전에
+  - example_ko: 당신의 이름은?
+- id: 782 | level: N5 | [～前 / ～まえ , ]
+  - meaning_ko: ~앞에
+- id: 784 | level: N5 | [曲る / まがる , ]
+  - meaning_ko: 회전하다
+- id: 786 | level: N5 | [まずい / まずい , 彼女は石につまずいた。]
+  - meaning_ko: 끔찍한 (음식과 관련하여)
+  - example_ko: 그녀는 돌로 넘어졌다.
+- id: 788 | level: N5 | [また / また , またアフィ狙いの記事か。]
+  - meaning_ko: 그리고
+  - example_ko: 또한 Affi 목표의 기사?
+- id: 790 | level: N5 | [まだ / まだ , あぁまだ、宵の口だね。]
+  - meaning_ko: 아직
+  - example_ko: 아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아이전]
+- id: 792 | level: N5 | [町 / まち , 町中見物でもするか？]
+  - meaning_ko: 도시
+  - example_ko: 동네 구경에서도 할까?
+- id: 794 | level: N5 | [待つ / まつ , 待つしかない。]
+  - meaning_ko: 기다리다
+  - example_ko: 기다릴 수밖에 없다.
+- id: 796 | level: N5 | [まっすぐ / まっすぐ , 腕をまっすぐ伸ばしなさい。]
+  - meaning_ko: 똑바로 (앞으로)
+  - example_ko: 팔을 똑바로 기지개하십시오.
+- id: 798 | level: N5 | [マッチ / マッチ , 硫黄はマッチを作るのに使われる。]
+  - meaning_ko: 성냥
+  - example_ko: 유황은 성냥을 만드는 데 사용됩니다.
+- id: 800 | level: N5 | [窓 / まど , 列車の窓からその城がちらりと見えた。]
+  - meaning_ko: 창문
+  - example_ko: 기차 창문에서 그 성이 깜짝 놀랐다.
+- id: 802 | level: N5 | [丸い; 円い / まるい , ]
+  - meaning_ko: 둥근
+- id: 804 | level: N5 | [万 / まん , えっ、結納品にン十万円？]
+  - meaning_ko: 만
+  - example_ko: 엣, 결납품에 10만엔?
+- id: 806 | level: N5 | [万年筆 / まんねんひつ , 万年筆を持っていますか。]
+  - meaning_ko: 만년필
+  - example_ko: 만년필을 가지고 있습니까?
+- id: 808 | level: N5 | [磨く / みがく , 僕は１日に２回歯を磨く。]
+  - meaning_ko: (이를) 닦다
+  - example_ko: 나는 하루에 두 번 치아를 닦는다.
+- id: 810 | level: N5 | [右 / みぎ , 日本車は右ハンドルです。]
+  - meaning_ko: 오른쪽
+  - example_ko: 일본차는 오른쪽 핸들입니다.
+- id: 812 | level: N5 | [短い / みじかい , 要するに人生は短い。]
+  - meaning_ko: 짧은 (길이)
+  - example_ko: 요컨대 인생은 짧다.
+- id: 814 | level: N5 | [水 / みず , 予定日の夕方に破水しました。]
+  - meaning_ko: 물
+  - example_ko: 예정일 저녁에 파수했습니다.
+- id: 816 | level: N5 | [店 / みせ , 勧工場には約２０の出店が並んだ。]
+  - meaning_ko: 가게
+  - example_ko: 권공장에는 약 20개 출점이 늘었다.
+- id: 818 | level: N5 | [見せる / みせる , 彼女が姿を見せることは確実だ。]
+  - meaning_ko: 보여주기 위해
+  - example_ko: 그녀가 모습을 보여주는 것은 확실하다.
+- id: 820 | level: N5 | [道 / みち , 往復旅行？片道だけです。]
+  - meaning_ko: 도로
+  - example_ko: 왕복 여행? 편도뿐입니다.
+- id: 822 | level: N5 | [三日 / みっか , 彼は三日前に出発した。]
+  - meaning_ko: 사흘
+  - example_ko: 그는 3일 전에 출발했다.
+- id: 823 | level: N5 | [三つ / みっつ , 彼は私より三つ年下です。]
+  - meaning_ko: 세개
+  - example_ko: 그는 나보다 세 년이 넘는다.
+- id: 825 | level: N5 | [緑 / みどり , 緑色のはありますか。]
+  - meaning_ko: 녹색
+  - example_ko: 녹색이 있습니까?
+- id: 827 | level: N5 | [皆さん / みなさん , 皆さんネチケットはしっかり。]
+  - meaning_ko: 여러분
+  - example_ko: 여러분 네티켓은 확실히.
+- id: 829 | level: N5 | [南 / みなみ , 風は南へ吹く。]
+  - meaning_ko: 남쪽
+  - example_ko: 바람은 남쪽으로 불어.
+- id: 831 | level: N5 | [耳 / みみ , それは君の空耳だ。]
+  - meaning_ko: 귀
+  - example_ko: 그것은 너의 귀입니다.
+- id: 833 | level: N5 | [見る / みる , 外を見ると雨が降り始めている。]
+  - meaning_ko: 보려고
+  - example_ko: 밖을 보면 비가 내리기 시작했다.
+- id: 835 | level: N5 | [みんな / みんな , それらはみんな同じかい？]
+  - meaning_ko: 모두
+  - example_ko: 그들은 모두 동일합니까?
+- id: 837 | level: N5 | [六日 / むいか , 六日に郵便局で荷物を送りました。]
+  - meaning_ko: 6일
+  - example_ko: 6일에 우체국에서 짐을 보냈습니다.
+- id: 839 | level: N5 | [向こう / むこう , 郵便局は半マイル向こうにある。]
+  - meaning_ko: 그 너머에
+  - example_ko: 우체국은 반 마일 저쪽에 있다.
+- id: 842 | level: N5 | [難しい / むずかしい , 考えを実行に移すのは、難しい。]
+  - meaning_ko: 어려운
+  - example_ko: 생각을 실행으로 옮기는 것은 어렵습니다.
+- id: 844 | level: N5 | [六つ / むっつ , 私の望遠鏡で木星とその六つの衛星を見ることができます。]
+  - meaning_ko: 여섯 가지
+  - example_ko: 내 망원경으로 목성과 6 개의 위성을 볼 수 있습니다.
+- id: 845 | level: N5 | [村 / むら , 竜巻で村全体が破壊された。]
+  - meaning_ko: 마을
+  - example_ko: 토네이도로 마을 전체가 파괴되었다.
+- id: 847 | level: N5 | [目 / め , 多くの人が目的なく人生を漂う。]
+  - meaning_ko: 눈)
+  - example_ko: 많은 사람들이 목적 없이 삶을 감돌게 된다.
+- id: 849 | level: N5 | [メートル / メートル , 一立方メートルは千リットルにあたる。]
+  - meaning_ko: 미터
+  - example_ko: 일입방 미터는 천 리터에 해당한다.
+- id: 851 | level: N5 | [眼鏡 / めがね , 彼は双眼鏡で競馬を見た。]
+  - meaning_ko: 안경
+  - example_ko: 그는 쌍안경으로 경마를 보았다.
+- id: 853 | level: N5 | [もう / もう , もう好きじゃない。]
+  - meaning_ko: 이미
+  - example_ko: 더 이상 좋아하지 않아.
+- id: 855 | level: N5 | [木曜日 / もくようび , 木曜日、君のためにあけとくから。]
+  - meaning_ko: 목요일
+  - example_ko: 목요일, 너를 위해 열어서.
+- id: 858 | level: N5 | [もしもし / もしもし , もしもし。小川ですが。]
+  - meaning_ko: 안녕하세요? (전화에서 사용됨)
+  - example_ko: 만약. 시내입니다만.
+- id: 860 | level: N5 | [持つ / もつ , 何よ！またその子の肩を持つ気！？]
+  - meaning_ko: 보유하다
+  - example_ko: 뭐야! 또 그 아이의 어깨를 가지는 기분! ?
+- id: 861 | level: N5 | [もっと / もっと , もっと時間が必要だ。]
+  - meaning_ko: 더
+  - example_ko: 좀 더 시간이 필요하다.
+- id: 863 | level: N5 | [物 / もの , 堅い書き物は大嫌いだ。]
+  - meaning_ko: 사물(구체적인 물체)
+  - example_ko: 단단한 글은 싫다.
+- id: 865 | level: N5 | [門 / もん , 専門ガッコのタメだよ。]
+  - meaning_ko: 문
+  - example_ko: 전문 가코의 타메야.
+- id: 867 | level: N5 | [問題 / もんだい , 何が問題なの？]
+  - meaning_ko: 문제
+  - example_ko: 무엇이 잘못되었나요?
+- id: 869 | level: N5 | [～屋 / ～や , ]
+  - meaning_ko: ~ 가게
+- id: 871 | level: N5 | [八百屋 / やおや , 私は八百屋の外で彼に出会った。]
+  - meaning_ko: 청과물 상인
+  - example_ko: 나는 야채집 밖에서 그를 만났다.
+- id: 873 | level: N5 | [野菜 / やさい , 野菜を食べたら？]
+  - meaning_ko: 채소
+  - example_ko: 야채를 먹으면?
+- id: 875 | level: N5 | [易しい / やさしい , 第２課は易しい。]
+  - meaning_ko: 쉬운
+  - example_ko: 제2과는 쉽다.
+- id: 877 | level: N5 | [安い / やすい , 飛行機は早割でとれば安いよ。]
+  - meaning_ko: 저렴하다
+  - example_ko: 비행기는 조기 할인하면 싸다.
+- id: 879 | level: N5 | [休み / やすみ , 休みは終わった。]
+  - meaning_ko: 휴일
+  - example_ko: 휴가는 끝났다.
+- id: 881 | level: N5 | [休む / やすむ , 彼は休む必要があった。]
+  - meaning_ko: 쉬다
+  - example_ko: 그는 휴식할 필요가 있었다.
+- id: 884 | level: N5 | [八つ / やっつ , 彼女は八つだ。]
+  - meaning_ko: 여덟 가지
+  - example_ko: 그녀는 8개다.
+- id: 885 | level: N5 | [山 / やま , 私は山にいました。]
+  - meaning_ko: 산
+  - example_ko: 나는 산에 있었다.
+- id: 887 | level: N5 | [やる / やる , こらしめてやる。]
+  - meaning_ko: 할 일
+  - example_ko: 몰래 준다.
+- id: 889 | level: N5 | [夕方 / ゆうがた , 夕方私は犬と散歩する。]
+  - meaning_ko: 늦은 오후(보통 저녁 식사 직전)
+  - example_ko: 저녁 나는 개로 산책한다.
+- id: 891 | level: N5 | [夕飯 / ゆうはん , 夕飯をせかせる。]
+  - meaning_ko: 저녁
+  - example_ko: 저녁을 얹게 한다.
+- id: 894 | level: N5 | [郵便局 / ゆうびんきょく , 郵便局へ行ってきたところだ。]
+  - meaning_ko: 우체국
+  - example_ko: 우체국에 다녀온 곳이다.
+- id: 896 | level: N5 | [昨夜 / ゆうべ , 昨夜は、遅かったんです。]
+  - meaning_ko: 어젯밤
+  - example_ko: 어젯밤은 늦었습니다.
+- id: 898 | level: N5 | [有名 / ゆうめい , 翌朝、彼は村中で有名になっていた。]
+  - meaning_ko: 유명한
+  - example_ko: 다음날 아침 그는 마을에서 유명해졌습니다.
+- id: 900 | level: N5 | [雪 / ゆき , 吹雪でえらい目に遭った。]
+  - meaning_ko: 눈
+  - example_ko: 눈보라로 힘들었다.
+- id: 902 | level: N5 | [ゆっくりと / ゆっくりと , 幅の広い川はゆっくりと流れる。]
+  - meaning_ko: 느리게
+  - example_ko: 넓은 강이 천천히 흐른다.
+- id: 904 | level: N5 | [八日 / ようか , 日本では、八月八日はヒゲの日です。]
+  - meaning_ko: 8일
+  - example_ko: 일본에서는 8월 8일은 수염의 날입니다.
+- id: 906 | level: N5 | [洋服 / ようふく , 洋服は和服より働きやすい。]
+  - meaning_ko: 서양식 옷
+  - example_ko: 옷은 일본 옷보다 일하기 쉽다.
+- id: 908 | level: N5 | [よく / よく , 気分がよくないんだ。]
+  - meaning_ko: 자주
+  - example_ko: 기분이 좋지 않아.
+- id: 910 | level: N5 | [横 / よこ , 人込みを体を横にして抜けた。]
+  - meaning_ko: 옆에
+  - example_ko: 인입을 몸을 옆으로 빠졌다.
+- id: 912 | level: N5 | [四日 / よっか , 雨は四日間降り続いた。]
+  - meaning_ko: 4일
+  - example_ko: 비는 4일 동안 내려갔다.
+- id: 914 | level: N5 | [四つ / よっつ , 赤ん坊は四つんばいではった。]
+  - meaning_ko: 네 가지
+  - example_ko: 아기는 네 츠바바였다.
+- id: 916 | level: N5 | [呼ぶ / よぶ , 類は友を呼ぶ。]
+  - meaning_ko: (이름을) 부르다
+  - example_ko: 종류는 친구를 부른다.
+- id: 917 | level: N5 | [読む / よむ , これ以上は読む価値がない。]
+  - meaning_ko: 읽기
+  - example_ko: 더 이상 읽을 가치가 없다.
+- id: 919 | level: N5 | [夜 / よる , 今夜教会に行くよ。]
+  - meaning_ko: 저녁
+  - example_ko: 오늘 밤 교회에 갈거야.
+- id: 921 | level: N5 | [弱い / よわい , 彼女は生まれつき弱い。]
+  - meaning_ko: 약한
+  - example_ko: 그녀는 태어나 약하다.
+- id: 924 | level: N5 | [来月 / らいげつ , 来月子供を生みます。]
+  - meaning_ko: 다음 달
+  - example_ko: 다음 달 아이를 낳습니다.
+- id: 926 | level: N5 | [来週 / らいしゅう , 来週連絡いたします。]
+  - meaning_ko: 다음 주
+  - example_ko: 다음 주에 연락 드리겠습니다.
+- id: 927 | level: N5 | [来年 / らいねん , 来年私は大阪で働くつもりです。]
+  - meaning_ko: 내년
+  - example_ko: 내년에 오사카에서 일하겠습니다.
+- id: 929 | level: N5 | [ラジオ / ラジオ , 夕べラジオを消し忘れたでしょう。]
+  - meaning_ko: 라디오
+  - example_ko: 저녁 라디오를 끄는 것을 잊었을 것입니다.
+- id: 932 | level: N5 | [ラジオカセ / ラジオカセ , ]
+  - meaning_ko: 라디오 카세트 플레이어
+- id: 934 | level: N5 | [りっぱ / りっぱ , 彼は成長してりっぱな若者になった。]
+  - meaning_ko: 화려한
+  - example_ko: 그는 자라서 청춘이 되었다.
+- id: 936 | level: N5 | [留学生 / りゅうがくせい , 彼はその交換留学生たちと話した。]
+  - meaning_ko: 유학생
+  - example_ko: 그는 그 교환 유학생들과 이야기했다.
+- id: 937 | level: N5 | [両親 / りょうしん , 両親を飛行機事故でなくしたのだった。]
+  - meaning_ko: 부모님(lit.
+  - example_ko: 부모님을 비행기 사고가 아니었던 것이었다.
+- id: 939 | level: N5 | [料理 / りょうり , 彼は敵を料理した。]
+  - meaning_ko: 요리
+  - example_ko: 그는 적을 요리했다.
+- id: 941 | level: N5 | [旅行 / りょこう , 元気？旅行は良かった？]
+  - meaning_ko: 여행하다
+  - example_ko: 괜찮아? 여행은 좋았어?
+- id: 943 | level: N5 | [零 / れい , 昨晩は零度以下に下がった。]
+  - meaning_ko: 영
+  - example_ko: 어젯밤은 영도 이하로 내려갔다.
+- id: 945 | level: N5 | [冷蔵庫 / れいぞうこ , 冷蔵庫は食品の腐敗を防ぐ。]
+  - meaning_ko: 냉장고
+  - example_ko: 냉장고는 식품의 부패를 방지한다.
+- id: 947 | level: N5 | [レコード / レコード , 彼らは、レコードを買います。]
+  - meaning_ko: 기록
+  - example_ko: 그들은 레코드를 구입합니다.
+- id: 948 | level: N5 | [レストラン / レストラン , これは一押しのレストランなんだ。]
+  - meaning_ko: 식당
+  - example_ko: 이것은 밀어주는 레스토랑이다.
+- id: 951 | level: N5 | [練習 / れんしゅう (する) , 練習は熟達の道。]
+  - meaning_ko: (하다) 연습하다
+  - example_ko: 연습은 숙달의 길.
+- id: 953 | level: N5 | [廊下 / ろうか , 深々と嘆息して、廊下へ向かう。]
+  - meaning_ko: 복도
+  - example_ko: 깊이 탄식하고 복도로 향한다.
+- id: 955 | level: N5 | [六 / ろく , 六十の手習い。]
+  - meaning_ko: 육
+  - example_ko: 60의 수습.
+- id: 957 | level: N5 | [ワイシャツ / ワイシャツ , ワイシャツにボタンをつけて。]
+  - meaning_ko: 셔츠 (점등 : 흰색 셔츠)
+  - example_ko: 셔츠에 버튼을 넣어.
+- id: 959 | level: N5 | [若い / わかい , 老人はしばしば若いころのことを回顧する。]
+  - meaning_ko: 어린
+  - example_ko: 노인은 종종 어린 시절을 회고합니다.
+- id: 961 | level: N5 | [分かる / わかる , 社長は話の分かるタイプの人だ。]
+  - meaning_ko: 이해하다
+  - example_ko: 사장은 이야기를 아는 타입의 사람이다.
+- id: 963 | level: N5 | [忘れる / わすれる , 明日ここに７時にくるのを忘れるな。]
+  - meaning_ko: 잊다
+  - example_ko: 내일 여기에 7시에 오는 것을 잊지 마.
+- id: 965 | level: N5 | [私 / わたし , 私は山にいました。]
+  - meaning_ko: 나
+  - example_ko: 나는 산에 있었다.
+- id: 970 | level: N5 | [渡す / わたす , 必要以上のお金を子供に渡すな。]
+  - meaning_ko: (무엇을) 넘겨주다 (v.t.)
+  - example_ko: 필요 이상의 돈을 아이에게 넘기지 마라.
+- id: 971 | level: N5 | [渡る / わたる , 老婦人が渡るのを助けた。]
+  - meaning_ko: 건너다
+  - example_ko: 노부인이 건너도록 도왔다.
+- id: 974 | level: N5 | [悪い / わるい , こいつは悪いウサギだった。]
+  - meaning_ko: 나쁜
+  - example_ko: 이 녀석은 나쁜 토끼였다.

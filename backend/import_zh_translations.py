@@ -73,13 +73,19 @@ def import_japanese(path: Path, dry_run: bool) -> int:
             if not word:
                 continue
 
+            example_jp = _clean(row.get("example_jp"))
+            example_ko = _clean(row.get("example_ko"))
             meaning_zh = _clean(row.get("meaning_zh"))
             example_zh = _clean(row.get("example_zh"))
+            if example_jp is not None and not word.example_jp:
+                word.example_jp = example_jp
+            if example_ko is not None and not word.example_ko:
+                word.example_ko = example_ko
             if meaning_zh is not None:
                 word.meaning_zh = meaning_zh
             if example_zh is not None:
                 word.example_zh = example_zh
-            if meaning_zh is not None or example_zh is not None:
+            if example_jp is not None or example_ko is not None or meaning_zh is not None or example_zh is not None:
                 updated += 1
 
         if dry_run:
