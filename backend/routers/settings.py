@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
@@ -6,6 +8,7 @@ from typing import Optional
 from database import get_db
 from models import User, UserSettings
 from auth_utils import get_current_user
+from obsidian_sync import sync_all_tasks_for_user
 
 router = APIRouter(prefix="/settings", tags=["settings"])
 
@@ -17,6 +20,8 @@ class SettingsResponse(BaseModel):
     notification_enabled: bool
     theme: str
     language_priority: str
+    obsidian_enabled: bool
+    obsidian_vault_path: Optional[str] = None
 
 
 class SettingsUpdate(BaseModel):
@@ -26,6 +31,13 @@ class SettingsUpdate(BaseModel):
     notification_enabled: Optional[bool] = None
     theme: Optional[str] = None
     language_priority: Optional[str] = None
+    obsidian_enabled: Optional[bool] = None
+    obsidian_vault_path: Optional[str] = None
+
+
+class ObsidianSyncResponse(BaseModel):
+    ok: bool
+    synced_dates: int
 
 
 class NotificationUpdate(BaseModel):
@@ -54,6 +66,8 @@ def get_settings(db: Session = Depends(get_db), user: User = Depends(get_current
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        obsidian_enabled=settings.obsidian_enabled,
+        obsidian_vault_path=settings.obsidian_vault_path,
     )
 
 
@@ -98,8 +112,27 @@ def update_settings(
             raise HTTPException(status_code=400, detail="language_priority must be comma-separated zh,en,ja")
         settings.language_priority = data.language_priority
 
+    if data.obsidian_vault_path is not None:
+        path = data.obsidian_vault_path.strip()
+        if path:
+            vault = Path(path).expanduser().resolve()
+            if not vault.exists() or not vault.is_dir():
+                raise HTTPException(status_code=400, detail="Obsidian vault path must be an existing directory")
+            settings.obsidian_vault_path = str(vault)
+        else:
+            settings.obsidian_vault_path = None
+            settings.obsidian_enabled = False
+
+    if data.obsidian_enabled is not None:
+        if data.obsidian_enabled and not settings.obsidian_vault_path:
+            raise HTTPException(status_code=400, detail="Set obsidian_vault_path before enabling Obsidian sync")
+        settings.obsidian_enabled = data.obsidian_enabled
+
     db.commit()
     db.refresh(settings)
+
+    if settings.obsidian_enabled:
+        sync_all_tasks_for_user(db, user.id)
 
     return SettingsResponse(
         daily_goal_words=settings.daily_goal_words,
@@ -108,6 +141,8 @@ def update_settings(
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        obsidian_enabled=settings.obsidian_enabled,
+        obsidian_vault_path=settings.obsidian_vault_path,
     )
 
 
@@ -138,6 +173,8 @@ def update_notifications(
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        obsidian_enabled=settings.obsidian_enabled,
+        obsidian_vault_path=settings.obsidian_vault_path,
     )
 
 
@@ -170,4 +207,16 @@ def update_goals(
         notification_enabled=settings.notification_enabled,
         theme=settings.theme,
         language_priority=settings.language_priority,
+        obsidian_enabled=settings.obsidian_enabled,
+        obsidian_vault_path=settings.obsidian_vault_path,
     )
+
+
+@router.post("/obsidian/sync", response_model=ObsidianSyncResponse)
+def sync_obsidian(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    settings = db.query(UserSettings).filter(UserSettings.user_id == user.id).first()
+    if not settings or not settings.obsidian_enabled or not settings.obsidian_vault_path:
+        raise HTTPException(status_code=400, detail="Obsidian sync is not enabled")
+
+    synced_dates = sync_all_tasks_for_user(db, user.id)
+    return ObsidianSyncResponse(ok=True, synced_dates=synced_dates)

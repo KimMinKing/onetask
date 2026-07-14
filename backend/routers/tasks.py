@@ -9,6 +9,7 @@ from database import get_db
 from models import Task, Urgency, Status
 from rrule_utils import get_next_occurrence, simplify_rrule, create_daily_rrule, create_weekly_rrule, create_monthly_rrule
 from auth_utils import get_current_user
+from obsidian_sync import sync_dates_for_user, task_note_date
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 
@@ -65,6 +66,7 @@ def create_task(body: TaskCreate, db: Session = Depends(get_db), user = Depends(
     db.add(task)
     db.commit()
     db.refresh(task)
+    sync_dates_for_user(db, user.id, [task_note_date(task)])
     return task
 
 
@@ -74,6 +76,7 @@ def update_task(task_id: int, body: TaskUpdate, db: Session = Depends(get_db), u
     if not task:
         raise HTTPException(status_code=404, detail="Task not found")
 
+    affected_dates = {task_note_date(task)}
     data = body.model_dump(exclude_unset=True)
 
     # 반복 작업 완료 처리
@@ -105,6 +108,18 @@ def update_task(task_id: int, body: TaskUpdate, db: Session = Depends(get_db), u
 
     db.commit()
     db.refresh(task)
+    affected_dates.add(task_note_date(task))
+    if task.rrule and data.get("status") == Status.done:
+        db.flush()
+        newest = (
+            db.query(Task)
+            .filter(Task.user_id == user.id, Task.title == task.title, Task.status == Status.todo)
+            .order_by(Task.created_at.desc())
+            .first()
+        )
+        if newest:
+            affected_dates.add(task_note_date(newest))
+    sync_dates_for_user(db, user.id, affected_dates)
     return task
 
 
@@ -113,8 +128,10 @@ def delete_task(task_id: int, db: Session = Depends(get_db), user = Depends(get_
     task = db.query(Task).filter(Task.id == task_id, Task.user_id == user.id).first()
     if not task:
         raise HTTPException(status_code=404, detail="Task not found")
+    affected_date = task_note_date(task)
     db.delete(task)
     db.commit()
+    sync_dates_for_user(db, user.id, [affected_date])
     return {"ok": True}
 
 
@@ -136,4 +153,6 @@ def reorder_tasks(body: TaskReorder, db: Session = Depends(get_db), user = Depen
     for i, task_id in enumerate(body.ids):
         db.query(Task).filter(Task.id == task_id, Task.user_id == user.id).update({"order": i})
     db.commit()
+    tasks = db.query(Task).filter(Task.id.in_(body.ids), Task.user_id == user.id).all()
+    sync_dates_for_user(db, user.id, [task_note_date(task) for task in tasks])
     return {"ok": True}

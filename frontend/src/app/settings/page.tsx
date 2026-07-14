@@ -11,6 +11,8 @@ type Settings = {
   notification_enabled: boolean;
   theme: string;
   language_priority: string;
+  obsidian_enabled: boolean;
+  obsidian_vault_path: string | null;
 };
 
 export default function SettingsPage() {
@@ -18,6 +20,7 @@ export default function SettingsPage() {
   const [settings, setSettings] = useState<Settings | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [syncingObsidian, setSyncingObsidian] = useState(false);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -49,6 +52,22 @@ export default function SettingsPage() {
       setMessage((e instanceof Error ? e.message : String(e)) || "저장 실패");
     }
     setSaving(false);
+  };
+
+  const handleObsidianSync = async () => {
+    setSyncingObsidian(true);
+    setMessage("");
+    try {
+      if (settings) {
+        await api.settings.update(settings);
+      }
+      const result = await api.settings.syncObsidian();
+      setMessage(`Obsidian 동기화 완료: ${result.synced_dates}개 날짜`);
+      setTimeout(() => setMessage(""), 3000);
+    } catch (e) {
+      setMessage((e instanceof Error ? e.message : String(e)) || "Obsidian 동기화 실패");
+    }
+    setSyncingObsidian(false);
   };
 
   if (loading) {
@@ -195,6 +214,47 @@ export default function SettingsPage() {
             className="w-full bg-dark-100 border border-stone-700 focus:border-jeok-600 rounded-xl px-4 py-3 text-sm text-stone-200 outline-none transition-colors"
             placeholder="zh,en,ja"
           />
+        </div>
+
+        <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4 space-y-4">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="text-sm font-semibold text-stone-200">Obsidian 연결</p>
+              <p className="text-xs text-stone-600 mt-0.5">날짜별 md 파일에 onetask 할 일 목록을 만듭니다.</p>
+            </div>
+            <button
+              onClick={() => setSettings({ ...settings, obsidian_enabled: !settings.obsidian_enabled })}
+              className={`w-12 h-6 rounded-full transition-colors flex-shrink-0 ${
+                settings.obsidian_enabled ? "bg-jeok-600" : "bg-dark-100"
+              }`}
+            >
+              <div
+                className={`w-5 h-5 rounded-full bg-white transition-transform ${
+                  settings.obsidian_enabled ? "translate-x-6" : "translate-x-0.5"
+                }`}
+              />
+            </button>
+          </div>
+
+          <div>
+            <label className="text-xs text-stone-600 block mb-1.5">Vault 폴더 경로</label>
+            <input
+              type="text"
+              value={settings.obsidian_vault_path ?? ""}
+              onChange={(e) => setSettings({ ...settings, obsidian_vault_path: e.target.value })}
+              className="w-full bg-dark-100 border border-stone-700 focus:border-jeok-600 rounded-xl px-4 py-3 text-sm text-stone-200 outline-none transition-colors"
+              placeholder="C:\\Users\\me\\Documents\\ObsidianVault"
+            />
+            <p className="text-xs text-stone-700 mt-2">예: 2026-07-14.md 안에 onetask 관리 구간이 생성됩니다.</p>
+          </div>
+
+          <button
+            onClick={handleObsidianSync}
+            disabled={syncingObsidian || !settings.obsidian_enabled || !settings.obsidian_vault_path}
+            className="w-full py-3 bg-dark-100 hover:bg-dark-100/80 text-stone-300 rounded-xl text-sm font-semibold transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {syncingObsidian ? "동기화 중..." : "지금 전체 동기화"}
+          </button>
         </div>
 
         <button

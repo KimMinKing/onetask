@@ -302,6 +302,8 @@ export const api = {
       notification_enabled: boolean;
       theme: string;
       language_priority: string;
+      obsidian_enabled: boolean;
+      obsidian_vault_path: string | null;
     }>("/settings"),
     update: (data: {
       daily_goal_words?: number;
@@ -310,6 +312,8 @@ export const api = {
       notification_enabled?: boolean;
       theme?: string;
       language_priority?: string;
+      obsidian_enabled?: boolean;
+      obsidian_vault_path?: string | null;
     }) =>
       req<{
         daily_goal_words: number;
@@ -318,7 +322,11 @@ export const api = {
         notification_enabled: boolean;
         theme: string;
         language_priority: string;
+        obsidian_enabled: boolean;
+        obsidian_vault_path: string | null;
       }>("/settings", { method: "PUT", body: JSON.stringify(data) }),
+    syncObsidian: () =>
+      req<{ ok: boolean; synced_dates: number }>("/settings/obsidian/sync", { method: "POST" }),
   },
   quizzes: {
     exampleQuiz: (wordLang: string) =>

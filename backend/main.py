@@ -2,12 +2,14 @@ from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from database import engine, Base
+from migrations_runtime import ensure_runtime_migrations
 from routers import tasks, categories, words, image_test, english_words, calendar_events, stats, japanese_words
 from routers import auth, admin, push, search, settings, achievements, spring_topics
 from auth_utils import get_current_user
 from scheduler import start_scheduler
 
 Base.metadata.create_all(bind=engine)
+ensure_runtime_migrations(engine)
 start_scheduler()
 
 app = FastAPI(title="onetask API")
