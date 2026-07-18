@@ -35,8 +35,8 @@ Rules:
 1. Empty input fields are normal. Fill missing fields instead of treating them as errors.
 2. Most items may only have id, jlpt_level, expression, reading, and meaning_ko.
 3. If example_jp is empty, create one natural Japanese sentence using expression/reading/meaning_ko.
-4. If example_jp is already non-empty, return it exactly unchanged.
-5. If example_ko is already non-empty, return it exactly unchanged.
+4. If example_jp is already non-empty, you may copy it unchanged. The caller will preserve the original value.
+5. If example_ko is already non-empty, you may copy it unchanged. The caller will preserve the original value.
 6. If example_ko is empty, translate example_jp into natural Korean.
 7. Translate meaning_ko into accurate Simplified Chinese as meaning_zh. Use expression as context.
 8. Translate example_jp into natural Simplified Chinese as example_zh.
@@ -305,13 +305,13 @@ def validate_translations(source_rows: Sequence[Any], translated_items: Sequence
         if canonical_id(source.id) != canonical_id(item["id"]):
             raise ValueError(f"id/order mismatch at item {index}: input={source.id!r}, output={item['id']!r}")
 
-        if source.example_jp and item["example_jp"] != source.example_jp:
-            raise ValueError(f"id={source.id!r} changed existing example_jp.")
-        if source.example_ko and item["example_ko"] != source.example_ko:
-            raise ValueError(f"id={source.id!r} changed existing example_ko.")
-
-        for key in ["example_jp", "example_ko", "meaning_zh", "example_zh"]:
-            value = item[key]
+        values_to_check = {
+            "example_jp": source.example_jp or item["example_jp"],
+            "example_ko": source.example_ko or item["example_ko"],
+            "meaning_zh": item["meaning_zh"],
+            "example_zh": item["example_zh"],
+        }
+        for key, value in values_to_check.items():
             if not isinstance(value, str) or not value.strip():
                 raise ValueError(f"id={source.id!r} has empty {key}.")
 
