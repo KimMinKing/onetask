@@ -9,6 +9,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import JapaneseWord, JapaneseWordCard
+from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from translation_utils import translate_ko_to_zh
 
 router = APIRouter(prefix="/japanese-words", tags=["japanese-words"])
@@ -66,7 +67,11 @@ def _word_with_card(word: JapaneseWord, wc: Optional[JapaneseWordCard]) -> dict:
 
 
 @router.get("/daily")
-def get_daily_words(new_count: int = 15, db: Session = Depends(get_db)):
+def get_daily_words(
+    new_count: int = DEFAULT_NEW_LIMIT,
+    review_limit: int = DEFAULT_REVIEW_LIMIT,
+    db: Session = Depends(get_db),
+):
     """오늘의 일본어: 전 레벨 복습 due + 신규 N개 (N5→N4 우선순위)"""
     now = datetime.now(timezone.utc)
     all_words = {w.id: w for w in db.query(JapaneseWord).all()}
@@ -83,16 +88,20 @@ def get_daily_words(new_count: int = 15, db: Session = Depends(get_db)):
         else:
             new_words.append(_word_with_card(word, wc))
 
-    review_words.sort(key=lambda x: x["due"])
     # N5, N4 먼저 (쉬운 것 우선)
     level_order = {"N5": 0, "N4": 1, "N3": 2, "N2": 3, "N1": 4}
     new_words.sort(key=lambda x: level_order.get(x["jlpt_level"] or "N1", 5))
     random.shuffle(new_words[:50])  # 같은 레벨 내에서는 랜덤
-    return review_words + new_words[:new_count]
+    return sort_review_queue(review_words)[:review_limit] + new_words[:new_count]
 
 
 @router.get("/due")
-def get_due_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
+def get_due_words(
+    jlpt_level: Optional[str] = None,
+    new_count: int = DEFAULT_NEW_LIMIT,
+    review_limit: int = DEFAULT_REVIEW_LIMIT,
+    db: Session = Depends(get_db),
+):
     now = datetime.now(timezone.utc)
     q = db.query(JapaneseWord)
     if jlpt_level:
@@ -112,7 +121,7 @@ def get_due_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db
 
     review_words.sort(key=lambda x: x["due"])
     random.shuffle(new_words)
-    return review_words + new_words
+    return build_review_session(review_words, new_words, new_count, review_limit)
 
 
 @router.get("/stats")
@@ -190,6 +199,7 @@ def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db)
 
     lapses_delta = 1 if not body.knew else 0
     _sync_card_to_db(wc, updated_card, lapses_delta)
+    apply_minimum_spacing(wc, body.knew)
     db.commit()
 
     return {"word_id": word_id, "knew": body.knew, "next_due": wc.due, "state": wc.state, "reps": wc.reps}

@@ -9,6 +9,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import EnglishWord, EnglishWordCard
+from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from translation_utils import translate_ko_to_zh
 
 router = APIRouter(prefix="/english-words", tags=["english-words"])
@@ -76,7 +77,12 @@ def get_words(level: Optional[str] = None, db: Session = Depends(get_db)):
 
 
 @router.get("/due")
-def get_due_words(level: Optional[str] = None, db: Session = Depends(get_db)):
+def get_due_words(
+    level: Optional[str] = None,
+    new_count: int = DEFAULT_NEW_LIMIT,
+    review_limit: int = DEFAULT_REVIEW_LIMIT,
+    db: Session = Depends(get_db),
+):
     now = datetime.now(timezone.utc)
     q = db.query(EnglishWord)
     if level:
@@ -96,7 +102,7 @@ def get_due_words(level: Optional[str] = None, db: Session = Depends(get_db)):
 
     review_words.sort(key=lambda x: x["due"])
     random.shuffle(new_words)
-    return review_words + new_words
+    return build_review_session(review_words, new_words, new_count, review_limit)
 
 
 @router.get("/stats")
@@ -134,7 +140,11 @@ def get_today_words(level: Optional[str] = None, db: Session = Depends(get_db)):
 
 
 @router.get("/daily")
-def get_daily_words(new_count: int = 15, db: Session = Depends(get_db)):
+def get_daily_words(
+    new_count: int = DEFAULT_NEW_LIMIT,
+    review_limit: int = DEFAULT_REVIEW_LIMIT,
+    db: Session = Depends(get_db),
+):
     """오늘의 영어: 전 레벨 복습 due 카드 + 신규 N개 랜덤"""
     now = datetime.now(timezone.utc)
     all_words = {w.id: w for w in db.query(EnglishWord).all()}
@@ -151,9 +161,8 @@ def get_daily_words(new_count: int = 15, db: Session = Depends(get_db)):
         else:
             new_words.append(_word_with_card(word, wc))
 
-    review_words.sort(key=lambda x: x["due"])
     random.shuffle(new_words)
-    return review_words + new_words[:new_count]
+    return build_review_session(review_words, new_words, new_count, review_limit)
 
 
 @router.post("/{word_id}/favorite")
@@ -236,6 +245,7 @@ def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db)
 
     lapses_delta = 1 if not body.knew else 0
     _sync_card_to_db(wc, updated_card, lapses_delta)
+    apply_minimum_spacing(wc, body.knew)
     db.commit()
 
     return {

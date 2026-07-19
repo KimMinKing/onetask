@@ -10,6 +10,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import Word, WordCard
+from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 
 router = APIRouter(prefix="/words", tags=["words"])
 scheduler = Scheduler()
@@ -91,7 +92,12 @@ def get_words(hsk_level: Optional[int] = None, db: Session = Depends(get_db)):
 
 
 @router.get("/due")
-def get_due_words(hsk_level: Optional[int] = None, db: Session = Depends(get_db)):
+def get_due_words(
+    hsk_level: Optional[int] = None,
+    new_count: int = DEFAULT_NEW_LIMIT,
+    review_limit: int = DEFAULT_REVIEW_LIMIT,
+    db: Session = Depends(get_db),
+):
     now = datetime.now(timezone.utc)
     q = db.query(Word)
     if hsk_level:
@@ -112,7 +118,7 @@ def get_due_words(hsk_level: Optional[int] = None, db: Session = Depends(get_db)
     review_words.sort(key=lambda x: x["due"])  # 가장 오래 밀린 것 먼저
     random.shuffle(new_words)                   # 신규는 랜덤
 
-    return review_words + new_words
+    return build_review_session(review_words, new_words, new_count, review_limit)
 
 
 @router.get("/stats")
@@ -174,6 +180,7 @@ def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db)
 
     lapses_delta = 1 if not body.knew else 0
     _sync_card_to_db(wc, updated_card, lapses_delta)
+    apply_minimum_spacing(wc, body.knew)
     db.commit()
 
     return {
@@ -189,6 +196,7 @@ def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db)
 def get_daily_words(
     new_35: int = 15,   # HSK 3~5 신규 단어 수
     new_12: int = 2,    # HSK 1~2 신규 단어 수
+    review_limit: int = DEFAULT_REVIEW_LIMIT,
     db: Session = Depends(get_db)
 ):
     """오늘의 중국어: 전 레벨 복습 due 카드 + HSK 3~5 신규 N개 + HSK 1~2 신규 2개"""
@@ -211,7 +219,7 @@ def get_daily_words(
             elif word.hsk_level in (1, 2):
                 new_12_words.append(_word_with_card(word, wc))
 
-    review_words.sort(key=lambda x: x["due"])
+    review_words = sort_review_queue(review_words)[:review_limit]
     random.shuffle(new_35_words)
     random.shuffle(new_12_words)
 
