@@ -20,11 +20,25 @@ body {
 }
 
 #app-frame {
+  width: 100%;
   max-width: 430px;
   min-height: 100dvh;
   margin: 0 auto;
   background: #141110;
   position: relative;
+}
+
+.home-desktop-shell {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.home-main-panel {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
 }
 
 .theme-toggle {
@@ -305,9 +319,77 @@ body {
   margin-top: 0;
 }
 
+@media (min-width: 768px) {
+  body {
+    padding: 24px;
+  }
+
+  #app-frame {
+    width: min(100%, 1120px);
+    max-width: none;
+    min-height: calc(100dvh - 48px);
+    border: 1px solid rgb(255 255 255 / 0.08);
+    border-radius: 24px;
+    box-shadow: 0 26px 80px rgb(0 0 0 / 0.28);
+  }
+
+  .home-desktop-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    gap: 18px;
+    padding: 18px;
+    background: #141110;
+  }
+
+  .home-main-panel {
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 0.06);
+    border-radius: 20px;
+    background: #181412;
+  }
+
+  .home-nav-grid {
+    align-self: start;
+    border: 1px solid rgb(255 255 255 / 0.06);
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .settings-panel {
+    width: min(720px, calc(100% - 48px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-nav-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  #app-frame {
+    width: min(100%, 1240px);
+  }
+
+  .home-desktop-shell {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
+  }
+}
+
 :root[data-theme="light"] #app-frame,
 :root[data-theme="light"] .bg-dark-400 {
   background: #f8f3ea;
+}
+
+:root[data-theme="light"] .home-desktop-shell {
+  background: #f8f3ea;
+}
+
+:root[data-theme="light"] .home-main-panel,
+:root[data-theme="light"] .home-nav-grid {
+  border-color: rgb(122 104 83 / 0.18);
+  background: #fffaf2;
 }
 
 :root[data-theme="light"] .bg-dark-500,

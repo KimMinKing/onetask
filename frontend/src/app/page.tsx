@@ -131,6 +131,8 @@ export default function Home() {
       </div>
 
       {/* 탭 */}
+      <div className="home-desktop-shell">
+        <main className="home-main-panel">
       <div className="px-4 pt-4">
         <div className="flex bg-dark-200 rounded-2xl p-1 gap-1">
           {(["done", "todo"] as Tab[]).map((t) => (
@@ -161,7 +163,9 @@ export default function Home() {
       </div>
 
       {/* 하단 네비 */}
-      <div className="px-4 pb-8 pt-2 border-t border-white/5 bg-dark-300 flex flex-col gap-2">
+        </main>
+
+      <div className="home-nav-grid px-4 pb-8 pt-2 border-t border-white/5 bg-dark-300 flex flex-col gap-2">
         <Link
           href="/calendar"
           className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-jeok-800 rounded-2xl px-5 py-4 transition-all duration-200 group"
@@ -240,6 +244,7 @@ export default function Home() {
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-blue-400 transition-colors">→</span>
         </Link>
+      </div>
       </div>
     </div>
   );
