@@ -20,6 +20,17 @@ type Settings = {
 
 const STORAGE_KEY = "onetask-theme";
 
+const readStoredTheme = (): Theme | null => {
+  if (typeof window === "undefined") return null;
+  const saved = window.localStorage.getItem(STORAGE_KEY);
+  return saved === "light" || saved === "dark" ? saved : null;
+};
+
+const applyDocumentTheme = (nextTheme: Theme) => {
+  document.documentElement.dataset.theme = nextTheme;
+  window.localStorage.setItem(STORAGE_KEY, nextTheme);
+};
+
 const SETTINGS_TEXT = {
   ko: {
     open: "설정",
@@ -81,10 +92,9 @@ export function FloatingSettings() {
   const common = COMMON_TEXT[uiLanguage];
 
   useEffect(() => {
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    const initialTheme: Theme = saved === "light" ? "light" : "dark";
+    const initialTheme = readStoredTheme() ?? "dark";
     setTheme(initialTheme);
-    document.documentElement.dataset.theme = initialTheme;
+    applyDocumentTheme(initialTheme);
   }, []);
 
   useEffect(() => {
@@ -93,20 +103,18 @@ export function FloatingSettings() {
     setLoading(true);
     api.settings.get()
       .then((data) => {
-        setSettings(data);
-        const nextTheme: Theme = data.theme === "light" ? "light" : "dark";
+        const nextTheme = readStoredTheme() ?? (data.theme === "light" ? "light" : "dark");
+        setSettings({ ...data, theme: nextTheme });
         setTheme(nextTheme);
-        document.documentElement.dataset.theme = nextTheme;
-        window.localStorage.setItem(STORAGE_KEY, nextTheme);
+        applyDocumentTheme(nextTheme);
       })
       .catch((error) => setMessage(error instanceof Error ? error.message : text.loadError))
       .finally(() => setLoading(false));
-  }, [open, settings, loading]);
+  }, [open, settings, loading, text.loadError]);
 
   const applyTheme = (nextTheme: Theme) => {
     setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
-    window.localStorage.setItem(STORAGE_KEY, nextTheme);
+    applyDocumentTheme(nextTheme);
     if (settings) setSettings({ ...settings, theme: nextTheme });
   };
 
