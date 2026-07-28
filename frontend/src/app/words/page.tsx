@@ -932,7 +932,7 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
   };
 
   return (
-    <div className="relative w-full select-none" style={{ minHeight: "320px" }}>
+    <div className="relative w-full aspect-square select-none">
       <motion.div style={{ opacity: rightOpacity }}
         className="absolute inset-0 rounded-3xl border-2 border-green-500 bg-green-950/30 flex items-center justify-center z-0 pointer-events-none">
         <span className="text-green-400 text-3xl font-black tracking-widest rotate-[-12deg] border-4 border-green-500 px-4 py-1 rounded-xl">{t.knew}</span>
@@ -943,10 +943,10 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
       </motion.div>
       <motion.div drag="x" dragElastic={0.8} style={{ x, rotate, position: "relative", zIndex: 10 }}
         onDragEnd={handleDragEnd} onClick={onFlip}
-        className="cursor-grab active:cursor-grabbing" whileTap={{ scale: 0.98 }}>
-        <div style={{ perspective: "1200px" }}>
-          <div className="relative w-full transition-transform duration-[380ms]"
-            style={{ transformStyle: "preserve-3d", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", minHeight: "320px" }}>
+        className="h-full cursor-grab active:cursor-grabbing" whileTap={{ scale: 0.98 }}>
+        <div className="h-full" style={{ perspective: "1200px" }}>
+          <div className="relative h-full w-full transition-transform duration-[380ms]"
+            style={{ transformStyle: "preserve-3d", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}>
             {/* 앞면 */}
             <div className="absolute inset-0 bg-dark-200 border border-white/5 rounded-3xl flex flex-col items-center justify-center gap-4 p-8 overflow-hidden"
               style={{ backfaceVisibility: "hidden" }}>
@@ -968,7 +968,7 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
               {word.image_path && (
                 <div className="absolute inset-0 overflow-hidden rounded-3xl">
                   <img src={`${BASE_URL}/images/${word.image_path.replace("test_output/", "")}`} alt=""
-                    className="w-full h-full object-cover opacity-60" />
+                    className="w-full h-full object-contain opacity-60" />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-200 via-dark-200/40 to-transparent" />
                 </div>
               )}
@@ -1002,7 +1002,7 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
               {word.image_path && (
                 <div className="absolute inset-0 overflow-hidden rounded-3xl">
                   <img src={`${BASE_URL}/images/${word.image_path.replace("test_output/", "")}`} alt=""
-                    className="w-full h-full object-cover opacity-20" />
+                    className="w-full h-full object-contain opacity-20" />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-300 via-dark-300/70 to-transparent" />
                 </div>
               )}
@@ -1431,14 +1431,16 @@ function ReviewLayout({ index, total, uiLanguage, onBack, phase, onReveal, onAns
         </div>
       </div>
       <div className="flex-1 flex flex-col items-center justify-center px-5 gap-5">
-        {children}
+        <div className="w-full max-w-[420px] sm:max-w-[440px] lg:max-w-[460px]">
+          {children}
+        </div>
         {phase === "question" ? (
           <button onClick={onReveal}
-            className="w-full py-4 bg-dark-200 border border-white/5 hover:border-stone-700 text-stone-400 hover:text-stone-200 rounded-2xl font-semibold transition-all">
+            className="w-full max-w-[420px] sm:max-w-[440px] lg:max-w-[460px] py-4 bg-dark-200 border border-white/5 hover:border-stone-700 text-stone-400 hover:text-stone-200 rounded-2xl font-semibold transition-all">
             {t.flip}
           </button>
         ) : (
-          <div className="w-full grid grid-cols-2 gap-3">
+          <div className="w-full max-w-[420px] sm:max-w-[440px] lg:max-w-[460px] grid grid-cols-2 gap-3">
             <button onClick={() => !busy && onAnswer(false)}
               className="py-4 bg-dark-200 border border-jeok-800 hover:bg-jeok-950 text-jeok-400 rounded-2xl font-bold transition-all active:scale-95">
               ✕ {t.missed}

@@ -72,13 +72,18 @@ def send_message(token: str, chat_id: str, text: str) -> None:
 
 
 def format_due_tasks_message(tasks: Iterable[Task]) -> str:
-    lines = ["<b>onetask task reminder</b>", ""]
+    lines = [
+        "<b>🔔 onetask 할 일 알림</b>",
+        "",
+        "지금 처리할 시간이 된 할 일이 있어요.",
+        "",
+    ]
     for task in tasks:
         due = task.due_at
-        time_text = ""
+        time_text = "⏰"
         if due:
-            time_text = f" ({due.astimezone(KST).strftime('%H:%M')})"
-        lines.append(f"- {escape(task.title)}{time_text}")
+            time_text = f"⏰ {due.astimezone(KST).strftime('%H:%M')}"
+        lines.append(f"{time_text}  <b>{escape(task.title)}</b>")
     lines.append("")
-    lines.append("It is time to handle these tasks.")
+    lines.append("하나씩 정리해볼까요?")
     return "\n".join(lines)
