@@ -78,6 +78,8 @@ def update_task(task_id: int, body: TaskUpdate, db: Session = Depends(get_db), u
 
     affected_dates = {task_note_date(task)}
     data = body.model_dump(exclude_unset=True)
+    if "due_at" in data or data.get("status") == Status.todo:
+        data["telegram_notified_at"] = None
 
     # 반복 작업 완료 처리
     if data.get("status") == Status.done and task.status != Status.done:

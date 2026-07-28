@@ -9,6 +9,7 @@ from database import get_db
 from models import User, UserSettings
 from auth_utils import get_current_user
 from obsidian_sync import sync_all_tasks_for_user
+from telegram_utils import TelegramError, inspect_connection, send_message
 
 router = APIRouter(prefix="/settings", tags=["settings"])
 
@@ -23,6 +24,9 @@ class SettingsResponse(BaseModel):
     ui_language: str
     obsidian_enabled: bool
     obsidian_vault_path: Optional[str] = None
+    telegram_enabled: bool
+    telegram_bot_token_configured: bool
+    telegram_chat_id: Optional[str] = None
 
 
 class SettingsUpdate(BaseModel):
@@ -35,11 +39,21 @@ class SettingsUpdate(BaseModel):
     ui_language: Optional[str] = None
     obsidian_enabled: Optional[bool] = None
     obsidian_vault_path: Optional[str] = None
+    telegram_enabled: Optional[bool] = None
+    telegram_bot_token: Optional[str] = None
+    telegram_chat_id: Optional[str] = None
 
 
 class ObsidianSyncResponse(BaseModel):
     ok: bool
     synced_dates: int
+
+
+class TelegramTestResponse(BaseModel):
+    ok: bool
+    bot_username: Optional[str] = None
+    chat_id: Optional[str] = None
+    message: str
 
 
 class NotificationUpdate(BaseModel):
@@ -71,6 +85,9 @@ def get_settings(db: Session = Depends(get_db), user: User = Depends(get_current
         ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
+        telegram_enabled=settings.telegram_enabled,
+        telegram_bot_token_configured=bool(settings.telegram_bot_token),
+        telegram_chat_id=settings.telegram_chat_id,
     )
 
 
@@ -136,6 +153,22 @@ def update_settings(
             raise HTTPException(status_code=400, detail="Set obsidian_vault_path before enabling Obsidian sync")
         settings.obsidian_enabled = data.obsidian_enabled
 
+    if data.telegram_bot_token is not None:
+        token = data.telegram_bot_token.strip()
+        settings.telegram_bot_token = token or None
+        if not token:
+            settings.telegram_enabled = False
+            settings.telegram_chat_id = None
+
+    if data.telegram_chat_id is not None:
+        chat_id = data.telegram_chat_id.strip()
+        settings.telegram_chat_id = chat_id or None
+
+    if data.telegram_enabled is not None:
+        if data.telegram_enabled and (not settings.telegram_bot_token or not settings.telegram_chat_id):
+            raise HTTPException(status_code=400, detail="Connect Telegram before enabling Telegram alerts")
+        settings.telegram_enabled = data.telegram_enabled
+
     db.commit()
     db.refresh(settings)
 
@@ -152,6 +185,9 @@ def update_settings(
         ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
+        telegram_enabled=settings.telegram_enabled,
+        telegram_bot_token_configured=bool(settings.telegram_bot_token),
+        telegram_chat_id=settings.telegram_chat_id,
     )
 
 
@@ -185,6 +221,9 @@ def update_notifications(
         ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
+        telegram_enabled=settings.telegram_enabled,
+        telegram_bot_token_configured=bool(settings.telegram_bot_token),
+        telegram_chat_id=settings.telegram_chat_id,
     )
 
 
@@ -220,6 +259,9 @@ def update_goals(
         ui_language=settings.ui_language,
         obsidian_enabled=settings.obsidian_enabled,
         obsidian_vault_path=settings.obsidian_vault_path,
+        telegram_enabled=settings.telegram_enabled,
+        telegram_bot_token_configured=bool(settings.telegram_bot_token),
+        telegram_chat_id=settings.telegram_chat_id,
     )
 
 
@@ -231,3 +273,36 @@ def sync_obsidian(db: Session = Depends(get_db), user: User = Depends(get_curren
 
     synced_dates = sync_all_tasks_for_user(db, user.id)
     return ObsidianSyncResponse(ok=True, synced_dates=synced_dates)
+
+
+@router.post("/telegram/test", response_model=TelegramTestResponse)
+def test_telegram(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    settings = db.query(UserSettings).filter(UserSettings.user_id == user.id).first()
+    if not settings or not settings.telegram_bot_token:
+        raise HTTPException(status_code=400, detail="Telegram bot token is not set")
+
+    try:
+        connection = inspect_connection(settings.telegram_bot_token)
+        if connection.chat_id and not settings.telegram_chat_id:
+            settings.telegram_chat_id = connection.chat_id
+            db.commit()
+            db.refresh(settings)
+
+        chat_id = settings.telegram_chat_id or connection.chat_id
+        if not chat_id:
+            return TelegramTestResponse(
+                ok=False,
+                bot_username=connection.bot_username,
+                chat_id=None,
+                message="Bot token is valid. Send any message to this bot in Telegram, then test again.",
+            )
+
+        send_message(settings.telegram_bot_token, chat_id, "onetask 텔레그램 연결 테스트입니다.")
+        return TelegramTestResponse(
+            ok=True,
+            bot_username=connection.bot_username,
+            chat_id=chat_id,
+            message="Telegram is connected and a test message was sent.",
+        )
+    except TelegramError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc

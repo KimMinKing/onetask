@@ -36,6 +36,7 @@ class Task(Base):
     status = Column(Enum(Status), default=Status.todo, nullable=False)
     done_at = Column(DateTime(timezone=True), nullable=True)
     due_at = Column(DateTime(timezone=True), nullable=True)
+    telegram_notified_at = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     rrule = Column(String, nullable=True)  # 반복 규칙 (RRule format)
     recurring_until = Column(DateTime(timezone=True), nullable=True)  # 반복 종료일
@@ -186,6 +187,9 @@ class UserSettings(Base):
     ui_language = Column(String(5), default="ko", nullable=False, server_default="ko")
     obsidian_enabled = Column(Boolean, default=False, nullable=False, server_default="false")
     obsidian_vault_path = Column(String, nullable=True)
+    telegram_enabled = Column(Boolean, default=False, nullable=False, server_default="false")
+    telegram_bot_token = Column(String, nullable=True)
+    telegram_chat_id = Column(String(100), nullable=True)
 
 
 class Achievement(Base):

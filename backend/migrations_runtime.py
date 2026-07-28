@@ -19,6 +19,20 @@ def ensure_runtime_migrations(engine) -> None:
         statements.append("ALTER TABLE user_settings ADD COLUMN obsidian_vault_path VARCHAR")
     if "ui_language" not in columns:
         statements.append("ALTER TABLE user_settings ADD COLUMN ui_language VARCHAR(5) NOT NULL DEFAULT 'ko'")
+    if "telegram_enabled" not in columns:
+        if dialect == "postgresql":
+            statements.append("ALTER TABLE user_settings ADD COLUMN telegram_enabled BOOLEAN NOT NULL DEFAULT FALSE")
+        else:
+            statements.append("ALTER TABLE user_settings ADD COLUMN telegram_enabled BOOLEAN NOT NULL DEFAULT 0")
+    if "telegram_bot_token" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN telegram_bot_token VARCHAR")
+    if "telegram_chat_id" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN telegram_chat_id VARCHAR(100)")
+
+    if inspector.has_table("tasks"):
+        task_columns = {column["name"] for column in inspector.get_columns("tasks")}
+        if "telegram_notified_at" not in task_columns:
+            statements.append("ALTER TABLE tasks ADD COLUMN telegram_notified_at TIMESTAMP WITH TIME ZONE" if dialect == "postgresql" else "ALTER TABLE tasks ADD COLUMN telegram_notified_at DATETIME")
 
     if inspector.has_table("english_words"):
         english_columns = {column["name"] for column in inspector.get_columns("english_words")}

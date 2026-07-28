@@ -16,6 +16,9 @@ type Settings = {
   ui_language: string;
   obsidian_enabled: boolean;
   obsidian_vault_path: string | null;
+  telegram_enabled: boolean;
+  telegram_bot_token_configured: boolean;
+  telegram_chat_id: string | null;
 };
 
 const STORAGE_KEY = "onetask-theme";
@@ -87,9 +90,31 @@ export function FloatingSettings() {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
+  const [telegramToken, setTelegramToken] = useState("");
   const uiLanguage = settings?.ui_language === "zh" ? "zh" : "ko";
   const text = SETTINGS_TEXT[uiLanguage];
   const common = COMMON_TEXT[uiLanguage];
+  const telegramText = uiLanguage === "zh"
+    ? {
+        title: "Telegram 连接",
+        help: "任务到期时通过 Telegram 发送消息。",
+        token: "Bot token",
+        chatId: "Chat ID",
+        connect: "检查连接",
+        configured: "Token 已保存",
+        ok: "Telegram 已连接。",
+        error: "Telegram 连接失败",
+      }
+    : {
+        title: "Telegram 연동",
+        help: "할 일 시간이 되면 Telegram으로 메시지를 보냅니다.",
+        token: "Bot token",
+        chatId: "Chat ID",
+        connect: "연결 확인",
+        configured: "토큰 저장됨",
+        ok: "Telegram 연결이 확인되었습니다.",
+        error: "Telegram 연결 확인 실패",
+      };
 
   useEffect(() => {
     const initialTheme = readStoredTheme() ?? "dark";
@@ -124,8 +149,12 @@ export function FloatingSettings() {
     setSaving(true);
     setMessage("");
     try {
-      const updated = await api.settings.update({ ...settings, theme });
+      const payload = telegramToken.trim()
+        ? { ...settings, theme, telegram_bot_token: telegramToken.trim() }
+        : { ...settings, theme };
+      const updated = await api.settings.update(payload);
       setSettings(updated);
+      setTelegramToken("");
       window.dispatchEvent(new CustomEvent("onetask-settings-updated", { detail: updated }));
       setMessage(text.saved);
       setTimeout(() => setMessage(""), 2500);
@@ -149,6 +178,28 @@ export function FloatingSettings() {
       setTimeout(() => setMessage(""), 2500);
     } catch (error) {
       setMessage(error instanceof Error ? error.message : text.syncError);
+    }
+    setSaving(false);
+  };
+
+  const testTelegram = async () => {
+    if (!settings) return;
+
+    setSaving(true);
+    setMessage("");
+    try {
+      const payload = telegramToken.trim()
+        ? { ...settings, theme, telegram_bot_token: telegramToken.trim() }
+        : { ...settings, theme };
+      const updated = await api.settings.update(payload);
+      setSettings(updated);
+      setTelegramToken("");
+      const result = await api.settings.testTelegram();
+      setSettings((current) => current ? { ...current, telegram_chat_id: result.chat_id ?? current.telegram_chat_id } : current);
+      setMessage(result.ok ? telegramText.ok : result.message);
+      setTimeout(() => setMessage(""), 3500);
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : telegramText.error);
     }
     setSaving(false);
   };
@@ -253,6 +304,49 @@ export function FloatingSettings() {
                     disabled={saving || !settings.obsidian_enabled || !settings.obsidian_vault_path}
                   >
                     {text.syncNow}
+                  </button>
+                </div>
+
+                <div className="settings-section">
+                  <div className="settings-row">
+                    <div>
+                      <p className="settings-section__title">{telegramText.title}</p>
+                      <p className="settings-help">{telegramText.help}</p>
+                    </div>
+                    <button
+                      className={`settings-switch ${settings.telegram_enabled ? "is-on" : ""}`}
+                      onClick={() => setSettings({ ...settings, telegram_enabled: !settings.telegram_enabled })}
+                      aria-pressed={settings.telegram_enabled}
+                    >
+                      <span />
+                    </button>
+                  </div>
+
+                  <label className="settings-label">
+                    {telegramText.token}
+                    <input
+                      type="password"
+                      value={telegramToken}
+                      onChange={(event) => setTelegramToken(event.target.value)}
+                      placeholder={settings.telegram_bot_token_configured ? telegramText.configured : "123456:ABC-DEF"}
+                    />
+                  </label>
+
+                  <label className="settings-label">
+                    {telegramText.chatId}
+                    <input
+                      value={settings.telegram_chat_id ?? ""}
+                      onChange={(event) => setSettings({ ...settings, telegram_chat_id: event.target.value })}
+                      placeholder="Auto-detected after you message the bot"
+                    />
+                  </label>
+
+                  <button
+                    className="settings-secondary-button"
+                    onClick={testTelegram}
+                    disabled={saving || (!telegramToken.trim() && !settings.telegram_bot_token_configured)}
+                  >
+                    {telegramText.connect}
                   </button>
                 </div>
 

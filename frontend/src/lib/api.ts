@@ -323,6 +323,9 @@ export const api = {
       ui_language: string;
       obsidian_enabled: boolean;
       obsidian_vault_path: string | null;
+      telegram_enabled: boolean;
+      telegram_bot_token_configured: boolean;
+      telegram_chat_id: string | null;
     }>("/settings/"),
     update: (data: {
       daily_goal_words?: number;
@@ -334,6 +337,9 @@ export const api = {
       ui_language?: string;
       obsidian_enabled?: boolean;
       obsidian_vault_path?: string | null;
+      telegram_enabled?: boolean;
+      telegram_bot_token?: string;
+      telegram_chat_id?: string | null;
     }) =>
       req<{
         daily_goal_words: number;
@@ -345,9 +351,14 @@ export const api = {
         ui_language: string;
         obsidian_enabled: boolean;
         obsidian_vault_path: string | null;
+        telegram_enabled: boolean;
+        telegram_bot_token_configured: boolean;
+        telegram_chat_id: string | null;
       }>("/settings/", { method: "PUT", body: JSON.stringify(data) }),
     syncObsidian: () =>
       req<{ ok: boolean; synced_dates: number }>("/settings/obsidian/sync", { method: "POST" }),
+    testTelegram: () =>
+      req<{ ok: boolean; bot_username: string | null; chat_id: string | null; message: string }>("/settings/telegram/test", { method: "POST" }),
   },
   quizzes: {
     exampleQuiz: (wordLang: string) =>

@@ -13,3 +13,4 @@ apscheduler
 fsrs
 python-dateutil
 deep-translator
+requests
