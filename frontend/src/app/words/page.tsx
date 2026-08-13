@@ -18,6 +18,14 @@ const STATE_COLOR: Record<number, string> = {
   0: "text-stone-500", 1: "text-yellow-500", 2: "text-jeok-400", 3: "text-orange-400",
 };
 
+function getWordImageUrl(imagePath?: string | null) {
+  if (!imagePath) return "";
+  const normalizedPath = imagePath
+    .replaceAll("\\", "/")
+    .replace(/^test_output\//, "");
+  return `/images/${normalizedPath}`;
+}
+
 const UI_TEXT = {
   ko: {
     words: "단어장",
@@ -882,7 +890,7 @@ const SWIPE_THRESHOLD = 100;
 function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteChange }: {
   word: Word; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void; uiLanguage: UiLanguage; onFavoriteChange?: (id: number, isFavorite: boolean) => void;
 }) {
-  const BASE_URL = "";  // Use relative path: /images/...
+  const imageUrl = getWordImageUrl(word.image_path);
   const firstRender = useRef(true);
   const [isFavorite, setIsFavorite] = useState(word.is_favorite);
   const [favoriteBusy, setFavoriteBusy] = useState(false);
@@ -965,10 +973,12 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
               {word.hsk_level && (
                 <span className="absolute top-3 right-4 text-xs text-stone-300 font-semibold z-20 bg-black/50 px-2 py-0.5 rounded-full">HSK {word.hsk_level}</span>
               )}
-              {word.image_path && (
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <img src={`${BASE_URL}/images/${word.image_path.replace("test_output/", "")}`} alt=""
-                    className="w-full h-full object-contain opacity-60" />
+              {imageUrl && (
+                <div className="absolute inset-0 overflow-hidden rounded-3xl flex items-center justify-center">
+                  <div className="w-full aspect-square">
+                    <img src={imageUrl} alt=""
+                      className="w-full h-full object-contain opacity-60" />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-200 via-dark-200/40 to-transparent" />
                 </div>
               )}
@@ -999,10 +1009,12 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
                   <path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L2.2 5.7l4-.6z"/>
                 </svg>
               </button>
-              {word.image_path && (
-                <div className="absolute inset-0 overflow-hidden rounded-3xl">
-                  <img src={`${BASE_URL}/images/${word.image_path.replace("test_output/", "")}`} alt=""
-                    className="w-full h-full object-contain opacity-20" />
+              {imageUrl && (
+                <div className="absolute inset-0 overflow-hidden rounded-3xl flex items-center justify-center">
+                  <div className="w-full aspect-square">
+                    <img src={imageUrl} alt=""
+                      className="w-full h-full object-contain opacity-20" />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-300 via-dark-300/70 to-transparent" />
                 </div>
               )}
