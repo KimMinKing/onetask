@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { api } from "@/lib/api";
+import Link from "next/link";
+import { api, EnglishWord, JapaneseWord, Word } from "@/lib/api";
 
 const STATE_LABEL: Record<number, string> = { 0: "신규", 1: "학습중", 2: "복습", 3: "다시학습" };
 const STATE_COLOR: Record<number, string> = {
@@ -19,9 +20,36 @@ function formatDue(due: string): string {
   return `${Math.round(hrs / 24)}일 후`;
 }
 
+type SearchResult = (Word & { type: "chinese"; lang?: "zh" }) |
+  (EnglishWord & { type: "english"; lang?: "en" }) |
+  (JapaneseWord & { type: "japanese"; lang?: "ja" });
+
+function getWordLang(word: SearchResult): "zh" | "en" | "ja" {
+  if (word.lang === "zh" || word.type === "chinese") return "zh";
+  if (word.lang === "en" || word.type === "english") return "en";
+  return "ja";
+}
+
+function getFavKey(word: SearchResult): string {
+  return `${getWordLang(word)}:${word.id}`;
+}
+
+function getPrimaryExample(word: SearchResult): string | null {
+  const wordLang = getWordLang(word);
+  if (wordLang === "zh" && "example_zh" in word) return word.example_zh;
+  if (wordLang === "en" && "example_en" in word) return word.example_en;
+  if (wordLang === "ja" && "example_jp" in word) return word.example_jp;
+  return null;
+}
+
 function StarButton({ isFav, onToggle }: { isFav: boolean; onToggle: () => void }) {
   return (
-    <button onClick={onToggle} className="flex-shrink-0 transition-colors ml-auto">
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-label={isFav ? "즐겨찾기 해제" : "즐겨찾기 추가"}
+      className="flex-shrink-0 transition-colors ml-auto"
+    >
       <svg width="16" height="16" viewBox="0 0 16 16" fill={isFav ? "#e2a444" : "none"} stroke={isFav ? "#e2a444" : "#57534e"} strokeWidth="1.3">
         <path d="M8 1.5l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4L2.2 5.7l4-.6z"/>
       </svg>
@@ -37,15 +65,25 @@ export default function SearchPage() {
   const [state, setState] = useState<number | null>(null);
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [dueOnly, setDueOnly] = useState(false);
-  const [results, setResults] = useState<Array<{ id: number; type: "chinese" | "english" | "japanese"; chinese?: string; pinyin?: string; meaning?: string; word?: string; expression?: string; reading?: string; hsk_level?: number | null; level?: string | null; jlpt_level?: string | null; due?: string; state?: number; reps?: number; lapses?: number; example_zh?: string | null; example_en?: string | null; example_jp?: string | null; example_ko?: string | null; is_favorite?: boolean; lang?: string }>>([]);
+  const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
-  const [favs, setFavs] = useState<Record<number, boolean>>({});
+  const [favs, setFavs] = useState<Record<string, boolean>>({});
+  const [searched, setSearched] = useState(false);
 
-  const handleSearch = async () => {
+  const handleSearch = useCallback(async () => {
+    const trimmedQuery = query.trim();
+    if (!trimmedQuery && !favoritesOnly && !dueOnly && !level && state === null) {
+      setResults([]);
+      setFavs({});
+      setSearched(false);
+      return;
+    }
+
     setLoading(true);
+    setSearched(true);
     try {
       const data = await api.search.global({
-        q: query || undefined,
+        q: trimmedQuery || undefined,
         lang: lang === "all" ? undefined : lang,
         level: level || undefined,
         state: state ?? undefined,
@@ -53,16 +91,28 @@ export default function SearchPage() {
         due_only: dueOnly || undefined,
       });
       setResults(data);
-      setFavs(Object.fromEntries(data.map((w) => [w.id, (w as { is_favorite?: boolean }).is_favorite ?? false])));
+      setFavs(Object.fromEntries(data.map((w) => [getFavKey(w), w.is_favorite])));
     } catch (e) {
       console.error(e);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
-  };
+  }, [dueOnly, favoritesOnly, lang, level, query, state]);
 
-  const toggleFav = async (id: number) => {
-    const result = await api.words.favorite(id);
-    setFavs((f) => ({ ...f, [id]: result.is_favorite }));
+  const toggleFav = async (word: SearchResult) => {
+    const wordLang = getWordLang(word);
+    const result = wordLang === "zh"
+      ? await api.words.favorite(word.id)
+      : wordLang === "en"
+        ? await api.englishWords.favorite(word.id)
+        : await api.japaneseWords.favorite(word.id);
+    const key = getFavKey(word);
+    setFavs((f) => ({ ...f, [key]: result.is_favorite }));
+    setResults((items) =>
+      favoritesOnly && !result.is_favorite
+        ? items.filter((item) => getFavKey(item) !== key)
+        : items.map((item) => getFavKey(item) === key ? { ...item, is_favorite: result.is_favorite } : item)
+    );
   };
 
   useEffect(() => {
@@ -76,23 +126,26 @@ export default function SearchPage() {
   };
 
   const renderWord = (w: typeof results[number]) => {
-    const badge = getLanguageBadge(w.lang || w.type);
+    const wordLang = getWordLang(w);
+    const badge = getLanguageBadge(wordLang);
+    const favKey = getFavKey(w);
+    const primaryExample = getPrimaryExample(w);
 
     return (
-      <div key={`${w.lang}-${w.id}`} className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4">
+      <div key={favKey} className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4">
         <div className="flex items-center gap-2 mb-2">
           <span className={`text-xs px-2 py-0.5 rounded-full ${badge.color}`}>{badge.label}</span>
-          {w.lang === "zh" && w.hsk_level && <span className="text-xs text-stone-600 border border-stone-700 rounded px-1.5 py-0.5">HSK {w.hsk_level}</span>}
-          {w.lang === "en" && w.level && <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.level}</span>}
-          {w.lang === "ja" && w.jlpt_level && <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.jlpt_level}</span>}
-          <StarButton isFav={!!favs[w.id]} onToggle={() => toggleFav(w.id)} />
+          {wordLang === "zh" && "hsk_level" in w && w.hsk_level && <span className="text-xs text-stone-600 border border-stone-700 rounded px-1.5 py-0.5">HSK {w.hsk_level}</span>}
+          {wordLang === "en" && "level" in w && w.level && <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.level}</span>}
+          {wordLang === "ja" && "jlpt_level" in w && w.jlpt_level && <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.jlpt_level}</span>}
+          <StarButton isFav={!!favs[favKey]} onToggle={() => toggleFav(w)} />
         </div>
         <div className="flex items-center gap-2.5">
           <span className="text-xl font-bold text-stone-100">
-            {w.lang === "zh" ? w.chinese : w.lang === "en" ? w.word : w.expression}
+            {wordLang === "zh" && "chinese" in w ? w.chinese : wordLang === "en" && "word" in w ? w.word : "expression" in w ? w.expression : ""}
           </span>
-          {w.lang === "zh" && <span className="text-sm text-stone-500 font-light">{w.pinyin}</span>}
-          {w.lang === "ja" && w.expression !== w.reading && <span className="text-sm text-stone-500 font-light">{w.reading}</span>}
+          {wordLang === "zh" && "pinyin" in w && <span className="text-sm text-stone-500 font-light">{w.pinyin}</span>}
+          {wordLang === "ja" && "expression" in w && w.expression !== w.reading && <span className="text-sm text-stone-500 font-light">{w.reading}</span>}
         </div>
         <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{w.meaning}</p>
         <div className="flex items-center gap-2 mt-2">
@@ -103,10 +156,10 @@ export default function SearchPage() {
           {w.lapses !== undefined && w.lapses > 0 && <span className="text-xs text-jeok-700">· 틀림 {w.lapses}회</span>}
           {w.due && <span className="text-xs text-stone-700 ml-auto">{formatDue(w.due)}</span>}
         </div>
-        {(w.example_zh || w.example_en || w.example_jp) && (
+        {primaryExample && (
           <div className="mt-2.5 pt-2.5 border-t border-white/5 space-y-1">
             <p className="text-xs text-stone-400 leading-relaxed">
-              {w.lang === "zh" ? w.example_zh : w.lang === "en" ? w.example_en : w.example_jp}
+              {primaryExample}
             </p>
             {w.example_ko && <p className="text-xs text-stone-600 leading-relaxed">{w.example_ko}</p>}
           </div>
@@ -122,6 +175,23 @@ export default function SearchPage() {
           ← 돌아가기
         </button>
         <h2 className="text-xl font-bold text-stone-100 mb-3">단어 검색</h2>
+        <div className="flex gap-2 mb-3">
+          <Link href="/words" className="text-xs text-stone-500 hover:text-stone-300 bg-dark-200 border border-white/5 rounded-lg px-3 py-1.5 transition-colors">
+            단어장 보기
+          </Link>
+          <button
+            type="button"
+            onClick={() => {
+              setFavoritesOnly(true);
+              setDueOnly(false);
+              setState(null);
+              setLevel("");
+            }}
+            className="text-xs text-yellow-400 hover:text-yellow-300 bg-dark-200 border border-yellow-900/50 rounded-lg px-3 py-1.5 transition-colors"
+          >
+            즐겨찾기 보기
+          </button>
+        </div>
         <div className="relative">
           <input
             value={query}
@@ -219,6 +289,16 @@ export default function SearchPage() {
 
         <div className="space-y-2 pb-4">
           {results.map(renderWord)}
+          {!loading && searched && results.length === 0 && (
+            <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-8 text-center">
+              <p className="text-sm text-stone-400">검색 결과가 없습니다.</p>
+            </div>
+          )}
+          {!loading && !searched && (
+            <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-8 text-center">
+              <p className="text-sm text-stone-400">단어, 뜻, 예문으로 검색하고 별표를 눌러 다음에 볼 단어로 저장하세요.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

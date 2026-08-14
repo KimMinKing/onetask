@@ -37,6 +37,11 @@ const UI_TEXT = {
     noDaily: "오늘 할 것 없음 ✓",
     ready: (count: number) => `${count}개 준비됨`,
     levelStudy: "레벨별 공부",
+    listSearch: "언어별 목록 검색",
+    chineseSearch: "중국어 목록 검색",
+    englishSearch: "영어 목록 검색",
+    japaneseSearch: "일본어 목록 검색",
+    allLevels: "전체 레벨",
     chineseLevel: "중국어 레벨 선택",
     englishLevel: "영어 레벨 선택",
     japaneseLevel: "일본어 레벨 선택",
@@ -60,7 +65,7 @@ const UI_TEXT = {
     reviewStart: "오늘 복습 시작",
     reviewDone: "오늘 복습 완료 🎉",
     openToday: "오늘 공부한 단어",
-    openWords: "단어 목록 보기",
+    openWords: "단어 목록 검색",
     back: "← 돌아가기",
     searchZh: "한자 · 병음 · 뜻 검색...",
     searchEn: "영어 단어 · 뜻 검색...",
@@ -101,6 +106,11 @@ const UI_TEXT = {
     noDaily: "今天没有待学内容 ✓",
     ready: (count: number) => `已准备 ${count} 个`,
     levelStudy: "按级别学习",
+    listSearch: "按语言搜索列表",
+    chineseSearch: "搜索中文列表",
+    englishSearch: "搜索英语列表",
+    japaneseSearch: "搜索日语列表",
+    allLevels: "全部级别",
     chineseLevel: "选择中文级别",
     englishLevel: "选择英语级别",
     japaneseLevel: "选择日语级别",
@@ -124,7 +134,7 @@ const UI_TEXT = {
     reviewStart: "开始今日复习",
     reviewDone: "今日复习完成 🎉",
     openToday: "今天学过的单词",
-    openWords: "查看单词列表",
+    openWords: "搜索单词列表",
     back: "← 返回",
     searchZh: "搜索汉字 · 拼音 · 含义...",
     searchEn: "搜索英文单词 · 中文含义...",
@@ -336,6 +346,33 @@ export default function WordsPage() {
     setMode("favorites");
   };
 
+  const startBrowseZh = async () => {
+    setLoading(true);
+    const words = await api.words.list();
+    setZhWords(words);
+    setSelectedLang("zh");
+    setLoading(false);
+    setMode("browse");
+  };
+
+  const startBrowseEn = async () => {
+    setLoading(true);
+    const words = await api.englishWords.list();
+    setEnWords(words);
+    setSelectedLang("en");
+    setLoading(false);
+    setMode("browse");
+  };
+
+  const startBrowseJa = async () => {
+    setLoading(true);
+    const words = await api.japaneseWords.list();
+    setJaWords(words);
+    setSelectedLang("ja");
+    setLoading(false);
+    setMode("browse");
+  };
+
   const startDailyZh = async () => {
     setLoading(true);
     const words = await api.words.daily();
@@ -531,6 +568,27 @@ export default function WordsPage() {
             </div>
             <span className="text-stone-700 text-sm">→</span>
           </button>
+
+          {/* 언어별 목록 검색 */}
+          <p className="text-xs text-stone-600 font-medium px-1 mt-2">{t.listSearch}</p>
+
+          {[
+            { icon: "中", label: t.chineseSearch, count: t.allLevels, onClick: startBrowseZh, font: "'LXGW WenKai', serif" },
+            { icon: "En", label: t.englishSearch, count: t.allLevels, onClick: startBrowseEn, font: "'Outfit', sans-serif" },
+            { icon: "日", label: t.japaneseSearch, count: t.allLevels, onClick: startBrowseJa, font: "inherit" },
+          ].map(({ icon, label, count, onClick, font }) => (
+            <button key={label} onClick={onClick} disabled={loading}
+              className="flex items-center gap-4 px-5 py-4 rounded-2xl border bg-dark-200 border-white/5 hover:border-blue-800 hover:bg-dark-100 active:scale-[0.98] transition-all text-left disabled:opacity-40 disabled:cursor-wait">
+              <div className="w-10 h-10 rounded-xl bg-blue-900/30 flex items-center justify-center text-lg font-bold text-blue-400" style={{ fontFamily: font }}>
+                {icon}
+              </div>
+              <div className="flex-1">
+                <p className="text-sm text-stone-300">{label}</p>
+                <p className="text-xs mt-0.5 text-stone-600">{count}</p>
+              </div>
+              <span className="text-stone-700 text-sm">→</span>
+            </button>
+          ))}
 
           {/* 즐겨찾기 */}
           <p className="text-xs text-stone-600 font-medium px-1 mt-2">{t.favorites}</p>

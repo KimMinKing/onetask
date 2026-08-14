@@ -18,6 +18,7 @@ const HOME_TEXT: Record<UiLanguage, {
   nav: {
     calendar: [string, string];
     words: [string, string];
+    search: [string, string];
     hsk5: [string, string];
     stats: [string, string];
     math: [string, string];
@@ -28,6 +29,7 @@ const HOME_TEXT: Record<UiLanguage, {
     nav: {
       calendar: ["캘린더", "날짜별 완료 기록"],
       words: ["단어 암기장", "단어 플래시카드"],
+      search: ["단어 검색", "찾아서 즐겨찾기"],
       hsk5: ["HSK5 한 달 코스", "HSK4 공백 보강부터 모의고사까지"],
       stats: ["학습 통계", "진행률 · 연속일 · 레벨별"],
       math: ["AI 미적분", "중학생도 이해하는 10단계"],
@@ -38,6 +40,7 @@ const HOME_TEXT: Record<UiLanguage, {
     nav: {
       calendar: ["日历", "按日期查看完成记录"],
       words: ["单词记忆本", "单词闪卡"],
+      search: ["搜索单词", "查找并收藏"],
       hsk5: ["HSK5 一个月课程", "从 HSK4 查缺补漏到模拟考试"],
       stats: ["学习统计", "进度 · 连续天数 · 按级别"],
       math: ["AI 微积分", "中学生也能理解的 10 阶段"],
@@ -191,6 +194,19 @@ export default function Home() {
             <p className="text-xs text-stone-500 mt-0.5">{text.nav.words[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-jeok-400 transition-colors">→</span>
+        </Link>
+        <Link
+          href="/search"
+          className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-yellow-800 rounded-2xl px-5 py-4 transition-all duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-yellow-900/40 flex items-center justify-center text-xl">
+            🔎
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.search[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.search[1]}</p>
+          </div>
+          <span className="ml-auto text-stone-600 group-hover:text-yellow-400 transition-colors">→</span>
         </Link>
         <Link
           href="/hsk5"
