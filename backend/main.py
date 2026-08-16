@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from database import engine, Base
 from migrations_runtime import ensure_runtime_migrations
-from routers import tasks, categories, words, image_test, english_words, calendar_events, stats, japanese_words
+from routers import tasks, categories, words, image_test, english_words, english_phrases, calendar_events, stats, japanese_words
 from routers import auth, admin, push, search, settings, achievements, spring_topics
 from auth_utils import get_current_user
 from scheduler import start_scheduler
@@ -37,6 +37,7 @@ app.include_router(categories.router,     dependencies=_auth)
 app.include_router(words.router,          dependencies=_auth)
 app.include_router(image_test.router,     dependencies=_auth)
 app.include_router(english_words.router,  dependencies=_auth)
+app.include_router(english_phrases.router, dependencies=_auth)
 app.include_router(calendar_events.router,dependencies=_auth)
 app.include_router(stats.router,          dependencies=_auth)
 app.include_router(japanese_words.router, dependencies=_auth)

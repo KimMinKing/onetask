@@ -74,6 +74,40 @@ export interface EnglishWord {
   is_favorite: boolean;
 }
 
+export interface EnglishPhrase {
+  id: number;
+  level: number;
+  cefr: string;
+  level_title: string;
+  function: string;
+  pattern_no: number;
+  variation_no: number;
+  expression: string;
+  meaning_ko: string;
+  example_en: string;
+  example_ko: string;
+  dialogue_en: string;
+  dialogue_ko: string;
+  situation_ko: string;
+  note_ko: string;
+  memory_chunk: string;
+  cloze_prompt: string;
+  reverse_prompt_ko: string;
+  memory_tip_ko: string;
+  confusion_note_ko: string;
+  review_steps_ko: string;
+  tags: string;
+  practice_prompt_ko: string;
+}
+
+export interface EnglishPhraseLevel {
+  level: number;
+  cefr: string;
+  level_title: string;
+  count: number;
+  functions: string[];
+}
+
 export interface Word {
   id: number;
   chinese: string;
@@ -222,6 +256,21 @@ export const api = {
       req<{ updated: number; checked: number }>(`/english-words/tools/translate-missing-zh?limit=${limit}${level ? `&level=${level}` : ""}`, { method: "POST" }),
     favorites: (level?: string) =>
       req<EnglishWord[]>(`/english-words/favorites${level ? `?level=${level}` : ""}`),
+  },
+  englishPhrases: {
+    levels: () => req<EnglishPhraseLevel[]>("/english-phrases/levels"),
+    list: (params: { level?: number; q?: string; function?: string; limit?: number; offset?: number } = {}) => {
+      const query = new URLSearchParams();
+      if (params.level) query.set("level", params.level.toString());
+      if (params.q) query.set("q", params.q);
+      if (params.function) query.set("function", params.function);
+      if (params.limit) query.set("limit", params.limit.toString());
+      if (params.offset) query.set("offset", params.offset.toString());
+      return req<{ total: number; limit: number; offset: number; items: EnglishPhrase[] }>(
+        `/english-phrases/${query.toString() ? `?${query.toString()}` : ""}`
+      );
+    },
+    get: (id: number) => req<EnglishPhrase>(`/english-phrases/${id}`),
   },
   push: {
     test: (title?: string, body?: string) =>
