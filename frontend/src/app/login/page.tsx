@@ -20,7 +20,7 @@ export default function LoginPage() {
       return;
     }
     setCheckingAuth(false);
-  }, []);
+  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

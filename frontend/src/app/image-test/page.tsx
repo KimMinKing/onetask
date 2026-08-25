@@ -165,6 +165,8 @@ export default function ImageTestPage() {
 
                 {r.url && !r.loading && (
                   <>
+                    {/* Generated previews can be data/blob URLs and cannot use Next image optimization. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={r.url} alt={r.label} className="w-full aspect-square object-cover" />
                     {r.prompt && (
                       <p className="px-4 py-2 text-xs text-stone-600 leading-relaxed">{r.prompt}</p>

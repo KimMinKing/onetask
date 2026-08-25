@@ -34,7 +34,7 @@ export default function AdminPage() {
       .then(setData)
       .catch(() => router.replace("/"))
       .finally(() => setLoading(false));
-  }, []);
+  }, [router, user?.is_master]);
 
   const logout = () => { clearAuth(); router.replace("/login"); };
 

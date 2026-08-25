@@ -959,12 +959,12 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
     setFavoriteBusy(false);
   }, [word.id, word.is_favorite]);
 
-  useEffect(() => { playAudio(word.chinese); return () => stopAll(); }, []);
+  useEffect(() => { playAudio(word.chinese); return () => stopAll(); }, [word.chinese]);
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }
     if (flipped && word.example_zh) speakSentence(word.example_zh);
     else playAudio(word.chinese);
-  }, [flipped]);
+  }, [flipped, word.chinese, word.example_zh]);
 
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-220, 220], [-18, 18]);
@@ -1034,6 +1034,8 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
               {imageUrl && (
                 <div className="absolute inset-0 overflow-hidden rounded-3xl flex items-center justify-center">
                   <div className="w-full aspect-square">
+                    {/* Dynamic local vocabulary images intentionally use their natural aspect ratio. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={imageUrl} alt=""
                       className="w-full h-full object-contain opacity-60" />
                   </div>
@@ -1070,6 +1072,8 @@ function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteCha
               {imageUrl && (
                 <div className="absolute inset-0 overflow-hidden rounded-3xl flex items-center justify-center">
                   <div className="w-full aspect-square">
+                    {/* Dynamic local vocabulary images intentionally use their natural aspect ratio. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={imageUrl} alt=""
                       className="w-full h-full object-contain opacity-20" />
                   </div>
@@ -1136,6 +1140,8 @@ function ZhReviewSession({ words, uiLanguage, onDone, onBack, onFavoriteChange }
     };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
+    // These handlers intentionally close over the listed session state and are refreshed with it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, index, busy]);
 
   if (done) return <ReviewDoneScreen results={results} uiLanguage={uiLanguage} onDone={onDone} />;
@@ -1239,12 +1245,12 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
   useEffect(() => {
     speakEnglish(word.word);
     return () => window.speechSynthesis.cancel();
-  }, []);
+  }, [word.word]);
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }
     if (flipped && word.example_en) speakEnglish(word.example_en);
     else speakEnglish(word.word);
-  }, [flipped]);
+  }, [flipped, word.example_en, word.word]);
 
   useEffect(() => {
     if (!flipped || uiLanguage !== "zh" || meaningZh) return;
@@ -1352,6 +1358,8 @@ function EnReviewSession({ words, uiLanguage, onDone, onBack }: { words: English
     };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
+    // These handlers intentionally close over the listed session state and are refreshed with it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, index, busy]);
 
   if (done) return <ReviewDoneScreen results={results} uiLanguage={uiLanguage} onDone={onDone} />;
@@ -1600,12 +1608,12 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
   useEffect(() => {
     speakJapanese(word.reading);
     return () => window.speechSynthesis.cancel();
-  }, []);
+  }, [word.reading]);
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }
     if (flipped && word.example_jp) speakJapanese(word.example_jp);
     else speakJapanese(word.reading);
-  }, [flipped]);
+  }, [flipped, word.example_jp, word.reading]);
 
   useEffect(() => {
     if (!flipped || uiLanguage !== "zh" || meaningZh) return;
@@ -1721,6 +1729,8 @@ function JaReviewSession({ words, uiLanguage, onDone, onBack }: { words: Japanes
     };
     window.addEventListener("keydown", h);
     return () => window.removeEventListener("keydown", h);
+    // These handlers intentionally close over the listed session state and are refreshed with it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, index, busy]);
 
   if (done) return <ReviewDoneScreen results={results} uiLanguage={uiLanguage} onDone={onDone} />;

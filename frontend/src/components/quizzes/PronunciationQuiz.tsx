@@ -73,6 +73,8 @@ export function PronunciationQuiz({ wordLang = "zh", onBack, onDone }: {
         recognitionRef.current.abort();
       }
     };
+    // The loader only varies with wordLang; reload and dispose recognition on change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wordLang]);
 
   const loadQuizzes = async () => {

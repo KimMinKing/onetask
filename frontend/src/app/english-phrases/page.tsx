@@ -96,6 +96,8 @@ export default function EnglishPhrasesPage() {
 
   useEffect(() => {
     load();
+    // Search text is submitted explicitly; level/function changes reload automatically.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedLevel, selectedFunction]);
 
   const selectLevel = (level: number) => {

@@ -27,6 +27,8 @@ export function SentenceCompletionQuiz({ wordLang = "zh", onBack, onDone }: {
 
   useEffect(() => {
     loadQuizzes();
+    // The loader only varies with wordLang; reload when the language changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wordLang]);
 
   const loadQuizzes = async () => {

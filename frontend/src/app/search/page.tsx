@@ -117,6 +117,8 @@ export default function SearchPage() {
 
   useEffect(() => {
     handleSearch();
+    // Search text is submitted explicitly; filters refresh the current search automatically.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang, level, state, favoritesOnly, dueOnly]);
 
   const getLanguageBadge = (lang: string) => {
