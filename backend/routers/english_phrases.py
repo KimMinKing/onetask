@@ -68,8 +68,8 @@ def list_phrases(
 ):
     if level is not None and not 1 <= level <= 10:
         raise HTTPException(status_code=422, detail="level must be between 1 and 10")
-    if not 1 <= limit <= 500:
-        raise HTTPException(status_code=422, detail="limit must be between 1 and 500")
+    if not 1 <= limit <= 1000:
+        raise HTTPException(status_code=422, detail="limit must be between 1 and 1000")
     if offset < 0:
         raise HTTPException(status_code=422, detail="offset must be greater than or equal to 0")
 

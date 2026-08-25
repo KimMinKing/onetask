@@ -24,6 +24,7 @@ const HOME_TEXT: Record<UiLanguage, {
     stats: [string, string];
     math: [string, string];
     python: [string, string];
+    sqld: [string, string];
   };
 }> = {
   ko: {
@@ -36,6 +37,7 @@ const HOME_TEXT: Record<UiLanguage, {
       stats: ["학습 통계", "진행률 · 연속일 · 레벨별"],
       math: ["AI 미적분", "중학생도 이해하는 10단계"],
       python: ["Python AI", "변수부터 신경망까지 10단계"],
+      sqld: ["SQLD 합격 100단계", "데이터 모델링 · SQL 기본 및 활용"],
     },
   },
   zh: {
@@ -48,6 +50,7 @@ const HOME_TEXT: Record<UiLanguage, {
       stats: ["学习统计", "进度 · 连续天数 · 按级别"],
       math: ["AI 微积分", "中学生也能理解的 10 阶段"],
       python: ["Python AI", "从变量到神经网络的 10 阶段"],
+      sqld: ["SQLD 合格 100 阶段", "数据建模 · SQL 基础与应用"],
     },
   },
 };
@@ -275,6 +278,19 @@ export default function Home() {
             <p className="text-xs text-stone-500 mt-0.5">{text.nav.python[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-blue-400 transition-colors">→</span>
+        </Link>
+        <Link
+          href="/sqld"
+          className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-violet-800 rounded-2xl px-5 py-4 transition-all duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-violet-900/40 flex items-center justify-center text-sm font-black text-violet-300">
+            SQL
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.sqld[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.sqld[1]}</p>
+          </div>
+          <span className="ml-auto text-stone-600 group-hover:text-violet-400 transition-colors">→</span>
         </Link>
       </div>
       </div>

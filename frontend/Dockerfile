@@ -20,13 +20,10 @@ ENV NODE_ENV=production
 
 RUN addgroup -S onetask && adduser -S onetask -G onetask
 
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
-RUN chown -R onetask:onetask /app
+COPY --from=builder --chown=onetask:onetask /app/public ./public
+COPY --from=builder --chown=onetask:onetask /app/.next/standalone ./
+COPY --from=builder --chown=onetask:onetask /app/.next/static ./.next/static
 USER onetask
 
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["node", "server.js"]

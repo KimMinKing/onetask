@@ -7,8 +7,9 @@ import { api, Word, EnglishWord, JapaneseWord } from "@/lib/api";
 
 type Lang = "zh" | "en" | "ja";
 type UiLanguage = "ko" | "zh";
-type Mode = "lang-select" | "select" | "home" | "review" | "browse" | "today" | "daily" | "favorites" | "fav-review" | "fav-browse";
+type Mode = "lang-select" | "select" | "home" | "review" | "browse" | "today" | "daily" | "favorites" | "fav-review" | "fav-browse" | "kana0";
 type Phase = "question" | "answer";
+type KanaItem = { id: string; kana: string; romaji: string; type: "hiragana" | "katakana"; hint: string; example: string };
 
 const STATE_LABEL: Record<UiLanguage, Record<number, string>> = {
   ko: { 0: "신규", 1: "학습중", 2: "복습", 3: "다시학습" },
@@ -41,6 +42,8 @@ const UI_TEXT = {
     chineseSearch: "중국어 목록 검색",
     englishSearch: "영어 목록 검색",
     japaneseSearch: "일본어 목록 검색",
+    kanaZero: "일본어 0단계",
+    kanaZeroDesc: "히라가나 · 가타카나부터",
     allLevels: "전체 레벨",
     chineseLevel: "중국어 레벨 선택",
     englishLevel: "영어 레벨 선택",
@@ -110,6 +113,8 @@ const UI_TEXT = {
     chineseSearch: "搜索中文列表",
     englishSearch: "搜索英语列表",
     japaneseSearch: "搜索日语列表",
+    kanaZero: "日语 0 阶段",
+    kanaZeroDesc: "从平假名 · 片假名开始",
     allLevels: "全部级别",
     chineseLevel: "选择中文级别",
     englishLevel: "选择英语级别",
@@ -195,6 +200,69 @@ const JA_LEVELS = [
   { value: "N2", label: "JLPT N2", descKey: JA_LEVEL_KEYS[3] },
   { value: "N1", label: "JLPT N1", descKey: JA_LEVEL_KEYS[4] },
 ];
+
+const KANA_BASE = [
+  ["あ", "ア", "a", "아", "あさ / アイス"],
+  ["い", "イ", "i", "이", "いぬ / インク"],
+  ["う", "ウ", "u", "우", "うみ / ウール"],
+  ["え", "エ", "e", "에", "えき / エア"],
+  ["お", "オ", "o", "오", "おかね / オレンジ"],
+  ["か", "カ", "ka", "카", "かさ / カメラ"],
+  ["き", "キ", "ki", "키", "きた / キロ"],
+  ["く", "ク", "ku", "쿠", "くち / クラス"],
+  ["け", "ケ", "ke", "케", "けさ / ケーキ"],
+  ["こ", "コ", "ko", "코", "ここ / コーヒー"],
+  ["さ", "サ", "sa", "사", "さかな / サラダ"],
+  ["し", "シ", "shi", "시", "しお / シャツ"],
+  ["す", "ス", "su", "스", "すし / スープ"],
+  ["せ", "セ", "se", "세", "せんせい / セール"],
+  ["そ", "ソ", "so", "소", "そら / ソファ"],
+  ["た", "タ", "ta", "타", "たべる / タクシー"],
+  ["ち", "チ", "chi", "치", "ちかてつ / チーズ"],
+  ["つ", "ツ", "tsu", "츠", "つき / ツアー"],
+  ["て", "テ", "te", "테", "て / テスト"],
+  ["と", "ト", "to", "토", "とけい / トマト"],
+  ["な", "ナ", "na", "나", "なまえ / ナイフ"],
+  ["に", "ニ", "ni", "니", "にほん / ニュース"],
+  ["ぬ", "ヌ", "nu", "누", "ぬの / ヌードル"],
+  ["ね", "ネ", "ne", "네", "ねこ / ネクタイ"],
+  ["の", "ノ", "no", "노", "のみもの / ノート"],
+  ["は", "ハ", "ha", "하", "はな / ハム"],
+  ["ひ", "ヒ", "hi", "히", "ひと / ヒント"],
+  ["ふ", "フ", "fu", "후", "ふゆ / フルーツ"],
+  ["へ", "ヘ", "he", "헤", "へや / ヘルプ"],
+  ["ほ", "ホ", "ho", "호", "ほん / ホテル"],
+  ["ま", "マ", "ma", "마", "まち / マスク"],
+  ["み", "ミ", "mi", "미", "みず / ミルク"],
+  ["む", "ム", "mu", "무", "むし / ムード"],
+  ["め", "メ", "me", "메", "め / メール"],
+  ["も", "モ", "mo", "모", "もの / モデル"],
+  ["や", "ヤ", "ya", "야", "やま / ヤード"],
+  ["ゆ", "ユ", "yu", "유", "ゆき / ユニット"],
+  ["よ", "ヨ", "yo", "요", "よる / ヨガ"],
+  ["ら", "ラ", "ra", "라", "らいねん / ラジオ"],
+  ["り", "リ", "ri", "리", "りんご / リスト"],
+  ["る", "ル", "ru", "루", "るす / ルール"],
+  ["れ", "レ", "re", "레", "れい / レベル"],
+  ["ろ", "ロ", "ro", "로", "ろく / ロボット"],
+  ["わ", "ワ", "wa", "와", "わたし / ワイン"],
+  ["を", "ヲ", "wo", "오", "を"],
+  ["ん", "ン", "n", "응", "ほん / ペン"],
+] as const;
+
+const KANA_DECK: KanaItem[] = KANA_BASE.flatMap(([hiragana, katakana, romaji, hint, example]) => [
+  { id: `h-${romaji}`, kana: hiragana, romaji, type: "hiragana", hint: `${hint} 소리`, example },
+  { id: `k-${romaji}`, kana: katakana, romaji, type: "katakana", hint: `${hint} 소리`, example },
+]);
+
+function shuffleItems<T>(items: T[]): T[] {
+  const next = [...items];
+  for (let i = next.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [next[i], next[j]] = [next[j], next[i]];
+  }
+  return next;
+}
 
 function formatDue(due: string, uiLanguage: UiLanguage): string {
   const t = UI_TEXT[uiLanguage];
@@ -1456,6 +1524,7 @@ function JaBrowseMode({ words, uiLanguage, onBack, title }: { words: JapaneseWor
               {w.expression !== w.reading && (
                 <span className="text-sm text-stone-500 font-light">{w.reading}</span>
               )}
+              <JapaneseSoundButton text={w.reading || w.expression} />
               {w.jlpt_level && (
                 <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.jlpt_level}</span>
               )}
@@ -1562,11 +1631,25 @@ function ReviewDoneScreen({ results, uiLanguage, onDone }: { results: { knew: nu
 const SWIPE_THRESHOLD_JA = 80;
 
 function speakJapanese(text: string) {
+  if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang = "ja-JP";
   utter.rate = 0.9;
   window.speechSynthesis.speak(utter);
+}
+
+function JapaneseSoundButton({ text }: { text: string }) {
+  return (
+    <button type="button" aria-label="일본어 발음 듣기" title="일본어 발음 듣기"
+      onClick={(event) => { event.stopPropagation(); speakJapanese(text); }}
+      onPointerDown={(event) => event.stopPropagation()}
+      className="shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full border border-jeok-900 bg-jeok-950/40 text-jeok-400 transition-colors hover:border-jeok-700 hover:bg-jeok-900/40 hover:text-jeok-200">
+      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11 5 6 9H3v6h3l5 4V5Zm4.5 4.5a4 4 0 0 1 0 5m2.5-8a8 8 0 0 1 0 11" />
+      </svg>
+    </button>
+  );
 }
 
 function JaSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
@@ -1641,7 +1724,10 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
               {word.jlpt_level && (
                 <span className="absolute top-3 right-4 text-xs text-stone-300 font-semibold z-20 bg-black/50 px-2 py-0.5 rounded-full">{word.jlpt_level}</span>
               )}
-              <p className="text-6xl font-bold text-stone-100 text-center">{word.expression}</p>
+              <div className="flex items-center justify-center gap-3">
+                <p className="text-6xl font-bold text-stone-100 text-center">{word.expression}</p>
+                <JapaneseSoundButton text={word.reading || word.expression} />
+              </div>
               {word.expression !== word.reading && (
                 <p className="text-lg text-stone-400 font-light">{word.reading}</p>
               )}

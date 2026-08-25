@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   // 이미지 요청을 백엔드로 프록시
   async rewrites() {
     return [
