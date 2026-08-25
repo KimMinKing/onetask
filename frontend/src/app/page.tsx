@@ -25,6 +25,7 @@ const HOME_TEXT: Record<UiLanguage, {
     math: [string, string];
     python: [string, string];
     sqld: [string, string];
+    network: [string, string];
   };
 }> = {
   ko: {
@@ -38,6 +39,7 @@ const HOME_TEXT: Record<UiLanguage, {
       math: ["AI 미적분", "중학생도 이해하는 10단계"],
       python: ["Python AI", "변수부터 신경망까지 10단계"],
       sqld: ["SQLD 합격 100단계", "데이터 모델링 · SQL 기본 및 활용"],
+      network: ["네트워크관리사 2급", "필기 · 케이블 · 서버 · 라우터 100단계"],
     },
   },
   zh: {
@@ -51,6 +53,7 @@ const HOME_TEXT: Record<UiLanguage, {
       math: ["AI 微积分", "中学生也能理解的 10 阶段"],
       python: ["Python AI", "从变量到神经网络的 10 阶段"],
       sqld: ["SQLD 合格 100 阶段", "数据建模 · SQL 基础与应用"],
+      network: ["网络管理员 2级", "笔试 · 网线 · 服务器 · 路由器 100阶段"],
     },
   },
 };
@@ -291,6 +294,19 @@ export default function Home() {
             <p className="text-xs text-stone-500 mt-0.5">{text.nav.sqld[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-violet-400 transition-colors">→</span>
+        </Link>
+        <Link
+          href="/network"
+          className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-cyan-800 rounded-2xl px-5 py-4 transition-all duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-cyan-900/40 flex items-center justify-center text-sm font-black text-cyan-300">
+            NET
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.network[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.network[1]}</p>
+          </div>
+          <span className="ml-auto text-stone-600 group-hover:text-cyan-400 transition-colors">→</span>
         </Link>
       </div>
       </div>
