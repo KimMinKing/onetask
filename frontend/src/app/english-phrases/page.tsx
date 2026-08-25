@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { api, EnglishPhrase, EnglishPhraseLevel } from "@/lib/api";
@@ -192,7 +192,7 @@ export default function EnglishPhrasesPage() {
       {loading && <div className="flex-1 flex items-center justify-center text-sm text-stone-500">불러오는 중...</div>}
       {!loading && mode === "done" && <DoneScreen results={results} onRestart={reshuffle} onBrowse={() => setMode("browse")} />}
       {!loading && mode === "study" && current && (
-        <PhraseStudyCard phrase={current} phase={phase} onReveal={() => setPhase("answer")} onAnswer={answer} />
+        <PhraseStudyCard key={current.id} phrase={current} phase={phase} onReveal={() => setPhase("answer")} onAnswer={answer} />
       )}
       {!loading && mode === "browse" && <PhraseBrowse items={items} />}
       {!loading && !current && mode !== "browse" && mode !== "done" && (
@@ -212,16 +212,30 @@ function PhraseStudyCard({ phrase, phase, onReveal, onAnswer }: {
   const rotate = useTransform(x, [-220, 220], [-15, 15]);
   const leftOpacity = useTransform(x, [-100, -25], [1, 0]);
   const rightOpacity = useTransform(x, [25, 100], [0, 1]);
+  const [submitting, setSubmitting] = useState(false);
+  const answerTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => () => window.speechSynthesis.cancel(), []);
+  useEffect(() => () => {
+    window.speechSynthesis.cancel();
+    if (answerTimer.current) clearTimeout(answerTimer.current);
+  }, []);
+
+  const submitAnswer = (knew: boolean, swipeTarget?: number) => {
+    if (submitting) return;
+    setSubmitting(true);
+    if (swipeTarget === undefined) {
+      onAnswer(knew);
+      return;
+    }
+    animate(x, swipeTarget, { duration: 0.2 });
+    answerTimer.current = setTimeout(() => onAnswer(knew), 180);
+  };
 
   const dragEnd = (_: unknown, info: { offset: { x: number } }) => {
     if (info.offset.x < -90) {
-      animate(x, -600, { duration: 0.2 });
-      setTimeout(() => onAnswer(false), 180);
+      submitAnswer(false, -600);
     } else if (info.offset.x > 90) {
-      animate(x, 600, { duration: 0.2 });
-      setTimeout(() => onAnswer(true), 180);
+      submitAnswer(true, 600);
     } else {
       animate(x, 0, { type: "spring", stiffness: 300, damping: 25 });
     }
@@ -241,6 +255,7 @@ function PhraseStudyCard({ phrase, phase, onReveal, onAnswer }: {
           role="button"
           tabIndex={0}
           drag="x"
+          dragListener={!submitting}
           dragElastic={0.75}
           onDragEnd={dragEnd}
           onClick={() => phase === "question" && onReveal()}
@@ -284,10 +299,10 @@ function PhraseStudyCard({ phrase, phase, onReveal, onAnswer }: {
       </div>
 
       <div className="grid grid-cols-2 gap-3 pt-4">
-        <button onClick={() => onAnswer(false)} className="py-4 bg-dark-200 border border-jeok-800 hover:bg-jeok-950 text-jeok-400 rounded-2xl font-bold transition-all active:scale-95">
+        <button disabled={submitting} onClick={() => submitAnswer(false)} className="py-4 bg-dark-200 border border-jeok-800 hover:bg-jeok-950 text-jeok-400 rounded-2xl font-bold transition-all active:scale-95 disabled:opacity-40">
           ← 모름
         </button>
-        <button onClick={() => onAnswer(true)} className="py-4 bg-dark-200 border border-green-900 hover:bg-green-950 text-green-400 rounded-2xl font-bold transition-all active:scale-95">
+        <button disabled={submitting} onClick={() => submitAnswer(true)} className="py-4 bg-dark-200 border border-green-900 hover:bg-green-950 text-green-400 rounded-2xl font-bold transition-all active:scale-95 disabled:opacity-40">
           앎 →
         </button>
       </div>
