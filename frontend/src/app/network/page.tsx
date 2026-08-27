@@ -33,7 +33,7 @@ function Lesson({ lesson, done, move, complete }: { lesson:NetworkLesson; done:b
 
 export default function NetworkPage(){
   const router=useRouter();const [selected,setSelected]=useState(0);const [progress,setProgress]=useState<Record<number,boolean>>({});const [query,setQuery]=useState("");const [section,setSection]=useState("전체");
-  useEffect(()=>setProgress(readProgress()),[]);
+  useEffect(()=>{setProgress(readProgress());const step=Number(new URLSearchParams(window.location.search).get("step"));if(step>=1&&step<=100)setSelected(step);},[]);
   const completed=Object.values(progress).filter(Boolean).length;
   const sections=["전체",...Array.from(new Set(NETWORK_CURRICULUM.map(x=>x.section)))];
   const filtered=useMemo(()=>NETWORK_CURRICULUM.filter(x=>(section==="전체"||x.section===section)&&`${x.title} ${x.points.join(" ")}`.toLowerCase().includes(query.toLowerCase())),[query,section]);

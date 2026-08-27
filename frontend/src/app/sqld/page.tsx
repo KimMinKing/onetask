@@ -72,7 +72,11 @@ export default function SqldPage() {
   const [progress, setProgress] = useState<Record<number, boolean>>({});
   const [query, setQuery] = useState("");
   const [section, setSection] = useState("전체");
-  useEffect(() => setProgress(loadProgress()), []);
+  useEffect(() => {
+    setProgress(loadProgress());
+    const step = Number(new URLSearchParams(window.location.search).get("step"));
+    if (step >= 1 && step <= 100) setSelected(step);
+  }, []);
   const completed = Object.values(progress).filter(Boolean).length;
   const sections = ["전체", ...Array.from(new Set(SQLD_CURRICULUM.map((lesson) => lesson.section)))];
   const lessons = useMemo(() => SQLD_CURRICULUM.filter((lesson) => (section === "전체" || lesson.section === section) && `${lesson.title} ${lesson.subtitle} ${lesson.points.join(" ")}`.toLowerCase().includes(query.toLowerCase())), [query, section]);

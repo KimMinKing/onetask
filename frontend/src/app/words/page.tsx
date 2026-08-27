@@ -289,6 +289,19 @@ export default function WordsPage() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    if (params.get("course") === "kana") {
+      setSelectedLang("ja");
+      setMode("kana");
+      return;
+    }
+    const jaLevel = params.get("ja");
+    if (jaLevel && JA_LEVELS.some((level) => level.value === jaLevel)) {
+      setSelectedLang("ja");
+      setSelectedJaLevel(jaLevel);
+      setMode("home");
+      reloadJa(jaLevel);
+      return;
+    }
     const hskLevel = Number(params.get("hsk"));
     if (hskLevel >= 1 && hskLevel <= 6) {
       setSelectedLang("zh");
@@ -296,7 +309,7 @@ export default function WordsPage() {
       setMode("home");
       reloadZh(hskLevel);
     }
-  }, [reloadZh]);
+  }, [reloadJa, reloadZh]);
 
   useEffect(() => {
     if (uiLanguage !== "zh" || mode !== "browse") return;

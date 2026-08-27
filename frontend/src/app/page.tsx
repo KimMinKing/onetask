@@ -26,6 +26,7 @@ const HOME_TEXT: Record<UiLanguage, {
     python: [string, string];
     sqld: [string, string];
     network: [string, string];
+    dailyCourse: [string, string];
   };
 }> = {
   ko: {
@@ -40,6 +41,7 @@ const HOME_TEXT: Record<UiLanguage, {
       python: ["Python AI", "변수부터 신경망까지 10단계"],
       sqld: ["SQLD 합격 100단계", "데이터 모델링 · SQL 기본 및 활용"],
       network: ["네트워크관리사 2급", "필기 · 케이블 · 서버 · 라우터 100단계"],
+      dailyCourse: ["추천 하루 학습", "HSK4 · 일본어 · SQLD · 네트워크"],
     },
   },
   zh: {
@@ -54,6 +56,7 @@ const HOME_TEXT: Record<UiLanguage, {
       python: ["Python AI", "从变量到神经网络的 10 阶段"],
       sqld: ["SQLD 合格 100 阶段", "数据建模 · SQL 基础与应用"],
       network: ["网络管理员 2级", "笔试 · 网线 · 服务器 · 路由器 100阶段"],
+      dailyCourse: ["每日推荐学习", "HSK4 · 日语 · SQLD · 网络"],
     },
   },
 };
@@ -307,6 +310,17 @@ export default function Home() {
             <p className="text-xs text-stone-500 mt-0.5">{text.nav.network[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-cyan-400 transition-colors">→</span>
+        </Link>
+        <Link
+          href="/daily-course"
+          className="flex items-center gap-4 bg-gradient-to-r from-emerald-950/40 to-dark-200 hover:bg-dark-100 border border-emerald-900/60 hover:border-emerald-700 rounded-2xl px-5 py-4 transition-all duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-xl bg-emerald-900/50 flex items-center justify-center text-lg font-black text-emerald-300">✓</div>
+          <div>
+            <p className="text-sm font-semibold text-stone-200">{text.nav.dailyCourse[0]}</p>
+            <p className="text-xs text-stone-500 mt-0.5">{text.nav.dailyCourse[1]}</p>
+          </div>
+          <span className="ml-auto text-stone-600 group-hover:text-emerald-400 transition-colors">→</span>
         </Link>
       </div>
       </div>
