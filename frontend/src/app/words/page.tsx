@@ -4,10 +4,11 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { api, Word, EnglishWord, JapaneseWord } from "@/lib/api";
+import KanaStudy from "./KanaStudy";
 
 type Lang = "zh" | "en" | "ja";
 type UiLanguage = "ko" | "zh";
-type Mode = "lang-select" | "select" | "home" | "review" | "browse" | "today" | "daily" | "favorites" | "fav-review" | "fav-browse";
+type Mode = "lang-select" | "select" | "home" | "review" | "browse" | "today" | "daily" | "favorites" | "fav-review" | "fav-browse" | "kana";
 type Phase = "question" | "answer";
 
 const STATE_LABEL: Record<UiLanguage, Record<number, string>> = {
@@ -719,6 +720,17 @@ export default function WordsPage() {
           <p className="text-stone-500 text-sm mt-3">{t.chooseLevel}</p>
         </div>
         <div className="flex-1 px-4 py-6 flex flex-col gap-3">
+          <button
+            onClick={() => setMode("kana")}
+            className="flex items-center gap-4 px-5 py-5 rounded-2xl border bg-gradient-to-r from-jeok-950/60 to-dark-200 border-jeok-800 hover:border-jeok-600 active:scale-[0.98] transition-all text-left"
+          >
+            <div className="w-12 h-12 rounded-xl bg-jeok-900 flex items-center justify-center font-bold text-xl text-jeok-300">あ</div>
+            <div className="flex-1">
+              <p className="font-bold text-base text-stone-100">{uiLanguage === "zh" ? "日语 0 阶段" : "일본어 0단계"}</p>
+              <p className="text-xs mt-0.5 text-stone-500">{uiLanguage === "zh" ? "平假名 · 片假名 92张卡片" : "히라가나 · 가타카나 92개 카드"}</p>
+            </div>
+            <span className="text-jeok-400 text-sm">→</span>
+          </button>
           {JA_LEVELS.map(({ value, label, descKey }) => (
             <button
               key={value}
@@ -738,6 +750,10 @@ export default function WordsPage() {
         </div>
       </div>
     );
+  }
+
+  if (mode === "kana") {
+    return <KanaStudy uiLanguage={uiLanguage} onBack={() => setMode("select")} />;
   }
 
   /* ── 오늘의 학습 ── */
