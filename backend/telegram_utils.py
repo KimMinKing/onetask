@@ -71,6 +71,28 @@ def send_message(token: str, chat_id: str, text: str) -> None:
     })
 
 
+def send_quiz_poll(
+    token: str,
+    chat_id: str,
+    question: str,
+    options: list[str],
+    correct_option_id: int,
+    explanation: str | None = None,
+) -> None:
+    """Send a Telegram native quiz poll with immediate answer feedback."""
+    payload = {
+        "chat_id": chat_id,
+        "question": question[:300],
+        "options": [option[:100] for option in options],
+        "type": "quiz",
+        "correct_option_id": correct_option_id,
+        "is_anonymous": True,
+    }
+    if explanation:
+        payload["explanation"] = explanation[:200]
+    _request(token, "sendPoll", payload)
+
+
 def format_due_tasks_message(tasks: Iterable[Task]) -> str:
     lines = [
         "<b>🔔 onetask 할 일 알림</b>",

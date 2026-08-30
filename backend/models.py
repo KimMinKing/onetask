@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, Float, ForeignKey, Enum, Boolean, func
+from sqlalchemy import Column, Integer, String, DateTime, Float, ForeignKey, Enum, Boolean, UniqueConstraint, func
 from database import Base
 import enum
 
@@ -190,6 +190,18 @@ class UserSettings(Base):
     telegram_enabled = Column(Boolean, default=False, nullable=False, server_default="false")
     telegram_bot_token = Column(String, nullable=True)
     telegram_chat_id = Column(String(100), nullable=True)
+
+
+class TelegramQuizDelivery(Base):
+    """Prevents duplicate daily Telegram quizzes after restarts or across workers."""
+    __tablename__ = "telegram_quiz_deliveries"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    quiz_date = Column(String(10), nullable=False)
+    sent_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+    __table_args__ = (UniqueConstraint("user_id", "quiz_date", name="uq_telegram_quiz_user_date"),)
 
 
 class Achievement(Base):

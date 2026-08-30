@@ -102,9 +102,72 @@ def job_telegram_task_reminders():
         db.close()
 
 
+def job_telegram_daily_quiz():
+    """At each user's notification hour, send two quizzes from the previous KST day."""
+    from database import SessionLocal
+    from models import TelegramQuizDelivery, UserSettings
+    from telegram_daily_quiz import KST, build_daily_quizzes
+    from telegram_utils import TelegramError, send_message, send_quiz_poll
+
+    db = SessionLocal()
+    try:
+        now_utc = datetime.now(timezone.utc)
+        now_kst = now_utc.astimezone(KST)
+        quiz_date = now_kst.date().isoformat()
+        settings_rows = db.query(UserSettings).filter(
+            UserSettings.telegram_enabled == True,
+            UserSettings.telegram_bot_token != None,
+            UserSettings.telegram_chat_id != None,
+            UserSettings.notification_enabled == True,
+            UserSettings.notification_hour == now_kst.hour,
+        ).all()
+
+        # Word-card tables are currently shared, so build the same previous-day pool once.
+        quizzes = build_daily_quizzes(db, limit=2)
+        for settings in settings_rows:
+            delivered = db.query(TelegramQuizDelivery).filter(
+                TelegramQuizDelivery.user_id == settings.user_id,
+                TelegramQuizDelivery.quiz_date == quiz_date,
+            ).first()
+            if delivered:
+                continue
+
+            try:
+                if quizzes:
+                    send_message(
+                        settings.telegram_bot_token,
+                        settings.telegram_chat_id,
+                        f"<b>🧠 어제 배운 단어 복습</b>\n\n{len(quizzes)}문제만 가볍게 풀어보세요.",
+                    )
+                    for quiz in quizzes:
+                        send_quiz_poll(
+                            settings.telegram_bot_token,
+                            settings.telegram_chat_id,
+                            quiz.question,
+                            quiz.options,
+                            quiz.correct_option_id,
+                            quiz.explanation,
+                        )
+                else:
+                    send_message(
+                        settings.telegram_bot_token,
+                        settings.telegram_chat_id,
+                        "<b>🧠 어제 배운 단어 복습</b>\n\n어제 학습한 단어가 없어서 오늘은 쉬어가요.",
+                    )
+            except TelegramError as exc:
+                print(f"[scheduler] telegram daily quiz failed for user {settings.user_id}: {exc}")
+                continue
+
+            db.add(TelegramQuizDelivery(user_id=settings.user_id, quiz_date=quiz_date))
+            db.commit()
+    finally:
+        db.close()
+
+
 def start_scheduler():
     scheduler.add_job(job_morning_reminder, CronTrigger(hour=9, minute=0))
     scheduler.add_job(job_evening_reminder, CronTrigger(hour=20, minute=0))
     scheduler.add_job(job_telegram_task_reminders, IntervalTrigger(minutes=1), id="telegram_task_reminders", replace_existing=True)
+    scheduler.add_job(job_telegram_daily_quiz, IntervalTrigger(minutes=5), id="telegram_daily_quiz", replace_existing=True)
     scheduler.start()
     print("[scheduler] 시작 — 오전 9시 / 오후 8시 복습 알림")
