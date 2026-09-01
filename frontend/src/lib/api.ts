@@ -136,6 +136,8 @@ async function req<T>(path: string, options?: RequestInit): Promise<T> {
   if (res.status === 401) {
     localStorage.removeItem("onetask_token");
     localStorage.removeItem("onetask_user");
+    // This shared fetch helper runs outside React and cannot use useRouter.
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.href = "/login";
     throw new Error("Unauthorized");
   }

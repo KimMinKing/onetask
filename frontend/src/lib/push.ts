@@ -57,7 +57,7 @@ export async function subscribePush(): Promise<boolean> {
   }
 
   const json = sub.toJSON();
-  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/push/subscribe`, {
+  const response = await fetch("/api/push/subscribe", {
     method: "POST",
     headers: { "Content-Type": "application/json", ...getAuthHeaders() },
     body: JSON.stringify({
@@ -66,6 +66,7 @@ export async function subscribePush(): Promise<boolean> {
       auth: json.keys?.auth,
     }),
   });
+  if (!response.ok) throw new Error("푸시 구독 저장에 실패했습니다.");
 
   return true;
 }
@@ -78,7 +79,7 @@ export async function unsubscribePush(): Promise<void> {
   const endpoint = sub.endpoint;
   await sub.unsubscribe();
   await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/push/unsubscribe?endpoint=${encodeURIComponent(endpoint)}`,
+    `/api/push/unsubscribe?endpoint=${encodeURIComponent(endpoint)}`,
     { method: "DELETE", headers: getAuthHeaders() }
   );
 }

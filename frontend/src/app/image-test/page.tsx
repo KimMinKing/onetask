@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { getAuthHeaders } from "@/lib/api";
 
-const BASE = "http://localhost:8000";
+const BASE = "/api";
 
 const MODELS = [
   { key: "flux-schnell", label: "FLUX Schnell", desc: "빠름 · 저렴" },
@@ -48,10 +49,13 @@ export default function ImageTestPage() {
     try {
       const res = await fetch(`${BASE}/image-test/generate`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...getAuthHeaders() },
         body: JSON.stringify({ model_key: modelKey, scene_key: scene.key }),
       });
       const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.detail || data.error || "요청 실패");
+      }
 
       setResults((prev) =>
         prev.map((r) =>

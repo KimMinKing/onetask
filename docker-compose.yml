@@ -6,10 +6,21 @@ services:
       - "8001:8000"
     env_file:
       - ./backend/.env
+    environment:
+      # Containers reach PostgreSQL by its Compose service name, not localhost.
+      DATABASE_URL: postgresql://${POSTGRES_USER:-tradediary}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-onetask}
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env}
     volumes:
       - ./backend/test_output:/app/test_output
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
 
   frontend:
     build:
@@ -31,6 +42,11 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tradediary} -d ${POSTGRES_DB:-onetask}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   pgdata:

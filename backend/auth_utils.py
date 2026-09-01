@@ -8,7 +8,9 @@ from database import get_db
 from models import User
 import os
 
-SECRET_KEY = os.getenv("SECRET_KEY", "onetask-change-this-secret-key-in-production")
+SECRET_KEY = os.getenv("SECRET_KEY", "")
+if len(SECRET_KEY) < 32:
+    raise RuntimeError("SECRET_KEY must be set to a random value of at least 32 characters")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_DAYS = 30
 

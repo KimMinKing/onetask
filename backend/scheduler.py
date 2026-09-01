@@ -170,4 +170,4 @@ def start_scheduler():
     scheduler.add_job(job_telegram_task_reminders, IntervalTrigger(minutes=1), id="telegram_task_reminders", replace_existing=True)
     scheduler.add_job(job_telegram_daily_quiz, IntervalTrigger(minutes=5), id="telegram_daily_quiz", replace_existing=True)
     scheduler.start()
-    print("[scheduler] 시작 — 오전 9시 / 오후 8시 복습 알림")
+    print("[scheduler] started - daily review reminders at 09:00 and 20:00 KST")
