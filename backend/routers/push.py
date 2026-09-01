@@ -54,7 +54,7 @@ def test_push(req: PushTestRequest, db: Session = Depends(get_db), user: User = 
 @router.get("/due-count")
 def due_count(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
-    zh = db.query(WordCard).filter(WordCard.due <= now).count()
-    en = db.query(EnglishWordCard).filter(EnglishWordCard.due <= now).count()
-    ja = db.query(JapaneseWordCard).filter(JapaneseWordCard.due <= now).count()
+    zh = db.query(WordCard).filter(WordCard.user_id == user.id, WordCard.due <= now).count()
+    en = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.due <= now).count()
+    ja = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.due <= now).count()
     return {"zh": zh, "en": en, "ja": ja, "total": zh + en + ja}

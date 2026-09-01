@@ -8,7 +8,8 @@ from datetime import datetime, timezone
 from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
-from models import JapaneseWord, JapaneseWordCard
+from models import JapaneseWord, JapaneseWordCard, User
+from auth_utils import get_current_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from translation_utils import translate_ko_to_zh
 
@@ -47,6 +48,8 @@ def _sync_card_to_db(wc: JapaneseWordCard, c: Card, lapses_delta: int = 0):
 def _word_with_card(word: JapaneseWord, wc: Optional[JapaneseWordCard]) -> dict:
     now = datetime.now(timezone.utc)
     due = wc.due if wc else now
+    if due.tzinfo is None:
+        due = due.replace(tzinfo=timezone.utc)
     return {
         "id": word.id,
         "expression": word.expression,
@@ -62,7 +65,7 @@ def _word_with_card(word: JapaneseWord, wc: Optional[JapaneseWordCard]) -> dict:
         "lapses": wc.lapses if wc else 0,
         "due": due,
         "is_due": due <= now,
-        "is_favorite": word.is_favorite,
+        "is_favorite": wc.is_favorite if wc else False,
     }
 
 
@@ -71,11 +74,12 @@ def get_daily_words(
     new_count: int = DEFAULT_NEW_LIMIT,
     review_limit: int = DEFAULT_REVIEW_LIMIT,
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """오늘의 일본어: 전 레벨 복습 due + 신규 N개 (N5→N4 우선순위)"""
     now = datetime.now(timezone.utc)
     all_words = {w.id: w for w in db.query(JapaneseWord).all()}
-    all_cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).all()}
+    all_cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id).all()}
 
     review_words = []
     new_words = []
@@ -101,6 +105,7 @@ def get_due_words(
     new_count: int = DEFAULT_NEW_LIMIT,
     review_limit: int = DEFAULT_REVIEW_LIMIT,
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     now = datetime.now(timezone.utc)
     q = db.query(JapaneseWord)
@@ -109,7 +114,7 @@ def get_due_words(
     words = q.all()
     word_ids = {w.id for w in words}
     cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(
-        JapaneseWordCard.word_id.in_(word_ids)).all()}
+        JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id.in_(word_ids)).all()}
 
     review_words, new_words = [], []
     for w in words:
@@ -125,7 +130,7 @@ def get_due_words(
 
 
 @router.get("/stats")
-def get_stats(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
+def get_stats(jlpt_level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     q = db.query(JapaneseWord)
@@ -133,7 +138,7 @@ def get_stats(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
         q = q.filter(JapaneseWord.jlpt_level == jlpt_level)
     words = q.all()
     word_ids = {w.id for w in words}
-    cards = db.query(JapaneseWordCard).filter(JapaneseWordCard.word_id.in_(word_ids)).all()
+    cards = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id.in_(word_ids)).all()
     reviewed_ids = {wc.word_id for wc in cards}
     total = len(words)
     reviewed = len(reviewed_ids)
@@ -143,7 +148,7 @@ def get_stats(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
 
 
 @router.get("/today")
-def get_today_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
+def get_today_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     q = db.query(JapaneseWord)
@@ -152,44 +157,43 @@ def get_today_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_
     words = q.all()
     word_id_map = {w.id: w for w in words}
     cards = [wc for wc in db.query(JapaneseWordCard).filter(
-        JapaneseWordCard.word_id.in_(word_id_map.keys())).all()
+        JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id.in_(word_id_map.keys())).all()
         if wc.last_review and wc.last_review >= today_start]
     return [_word_with_card(word_id_map[wc.word_id], wc) for wc in cards]
 
 
 @router.get("/favorites")
-def get_favorites(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
-    q = db.query(JapaneseWord).filter(JapaneseWord.is_favorite == True)
+def get_favorites(jlpt_level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    favorite_cards = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.is_favorite == True).all()
+    cards = {wc.word_id: wc for wc in favorite_cards}
+    q = db.query(JapaneseWord).filter(JapaneseWord.id.in_(cards.keys()))
     if jlpt_level:
         q = q.filter(JapaneseWord.jlpt_level == jlpt_level)
     words = q.order_by(JapaneseWord.id).all()
-    word_ids = {w.id for w in words}
-    cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(
-        JapaneseWordCard.word_id.in_(word_ids)).all()}
     return [_word_with_card(w, cards.get(w.id)) for w in words]
 
 
 @router.get("/list")
-def get_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db)):
+def get_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     q = db.query(JapaneseWord)
     if jlpt_level:
         q = q.filter(JapaneseWord.jlpt_level == jlpt_level)
     words = q.order_by(JapaneseWord.id).all()
     word_ids = {w.id for w in words}
     cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(
-        JapaneseWordCard.word_id.in_(word_ids)).all()}
+        JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id.in_(word_ids)).all()}
     return [_word_with_card(w, cards.get(w.id)) for w in words]
 
 
 @router.post("/{word_id}/review")
-def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db)):
+def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     word = db.query(JapaneseWord).filter(JapaneseWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
 
-    wc = db.query(JapaneseWordCard).filter(JapaneseWordCard.word_id == word_id).first()
+    wc = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id == word_id).first()
     if wc is None:
-        wc = JapaneseWordCard(word_id=word_id)
+        wc = JapaneseWordCard(user_id=user.id, word_id=word_id)
         db.add(wc)
         db.flush()
 
@@ -206,13 +210,17 @@ def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db)
 
 
 @router.post("/{word_id}/favorite")
-def toggle_favorite(word_id: int, db: Session = Depends(get_db)):
+def toggle_favorite(word_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     word = db.query(JapaneseWord).filter(JapaneseWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
-    word.is_favorite = not word.is_favorite
+    wc = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id == word_id).first()
+    if wc is None:
+        wc = JapaneseWordCard(user_id=user.id, word_id=word_id)
+        db.add(wc)
+    wc.is_favorite = not wc.is_favorite
     db.commit()
-    return {"word_id": word_id, "is_favorite": word.is_favorite}
+    return {"word_id": word_id, "is_favorite": wc.is_favorite}
 
 
 @router.post("/{word_id}/translate-zh")

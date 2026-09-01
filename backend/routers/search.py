@@ -4,7 +4,8 @@ from typing import Optional
 from datetime import datetime, timezone
 
 from database import get_db
-from models import Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
+from models import User, Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
+from auth_utils import get_current_user
 
 router = APIRouter(prefix="/search", tags=["search"])
 
@@ -12,6 +13,8 @@ router = APIRouter(prefix="/search", tags=["search"])
 def _zh_word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
     now = datetime.now(timezone.utc)
     due = wc.due if wc else now
+    if due.tzinfo is None:
+        due = due.replace(tzinfo=timezone.utc)
     return {
         "id": word.id,
         "chinese": word.chinese,
@@ -26,13 +29,15 @@ def _zh_word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
         "lapses": wc.lapses if wc else 0,
         "due": due,
         "is_due": due <= now,
-        "is_favorite": word.is_favorite,
+        "is_favorite": wc.is_favorite if wc else False,
     }
 
 
 def _en_word_with_card(word: EnglishWord, wc: Optional[EnglishWordCard]) -> dict:
     now = datetime.now(timezone.utc)
     due = wc.due if wc else now
+    if due.tzinfo is None:
+        due = due.replace(tzinfo=timezone.utc)
     return {
         "id": word.id,
         "word": word.word,
@@ -46,13 +51,15 @@ def _en_word_with_card(word: EnglishWord, wc: Optional[EnglishWordCard]) -> dict
         "lapses": wc.lapses if wc else 0,
         "due": due,
         "is_due": due <= now,
-        "is_favorite": word.is_favorite,
+        "is_favorite": wc.is_favorite if wc else False,
     }
 
 
 def _ja_word_with_card(word: JapaneseWord, wc: Optional[JapaneseWordCard]) -> dict:
     now = datetime.now(timezone.utc)
     due = wc.due if wc else now
+    if due.tzinfo is None:
+        due = due.replace(tzinfo=timezone.utc)
     return {
         "id": word.id,
         "expression": word.expression,
@@ -67,7 +74,7 @@ def _ja_word_with_card(word: JapaneseWord, wc: Optional[JapaneseWordCard]) -> di
         "lapses": wc.lapses if wc else 0,
         "due": due,
         "is_due": due <= now,
-        "is_favorite": word.is_favorite,
+        "is_favorite": wc.is_favorite if wc else False,
     }
 
 
@@ -84,6 +91,7 @@ def global_search(
     lapses_min: Optional[int] = None,
     lapses_max: Optional[int] = None,
     db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
 ):
     """전역 검색 - 모든 언어의 단어를 검색하고 필터링"""
     now = datetime.now(timezone.utc)
@@ -102,13 +110,13 @@ def global_search(
             )
         if level:
             zh_query = zh_query.filter(Word.hsk_level == int(level))
-        if favorites_only:
-            zh_query = zh_query.filter(Word.is_favorite == True)
         zh_words = zh_query.all()
         zh_word_ids = {w.id for w in zh_words}
-        zh_cards = {wc.word_id: wc for wc in db.query(WordCard).filter(WordCard.word_id.in_(zh_word_ids)).all()}
+        zh_cards = {wc.word_id: wc for wc in db.query(WordCard).filter(WordCard.user_id == user.id, WordCard.word_id.in_(zh_word_ids)).all()}
         for w in zh_words:
             wc = zh_cards.get(w.id)
+            if favorites_only and (wc is None or not wc.is_favorite):
+                continue
             if due_only and (wc is None or wc.due > now):
                 continue
             if state is not None and (wc is None or wc.state != state):
@@ -135,13 +143,13 @@ def global_search(
             )
         if level:
             en_query = en_query.filter(EnglishWord.level == level)
-        if favorites_only:
-            en_query = en_query.filter(EnglishWord.is_favorite == True)
         en_words = en_query.all()
         en_word_ids = {w.id for w in en_words}
-        en_cards = {wc.word_id: wc for wc in db.query(EnglishWordCard).filter(EnglishWordCard.word_id.in_(en_word_ids)).all()}
+        en_cards = {wc.word_id: wc for wc in db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.word_id.in_(en_word_ids)).all()}
         for w in en_words:
             wc = en_cards.get(w.id)
+            if favorites_only and (wc is None or not wc.is_favorite):
+                continue
             if due_only and (wc is None or wc.due > now):
                 continue
             if state is not None and (wc is None or wc.state != state):
@@ -169,13 +177,13 @@ def global_search(
             )
         if level:
             ja_query = ja_query.filter(JapaneseWord.jlpt_level == level)
-        if favorites_only:
-            ja_query = ja_query.filter(JapaneseWord.is_favorite == True)
         ja_words = ja_query.all()
         ja_word_ids = {w.id for w in ja_words}
-        ja_cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(JapaneseWordCard.word_id.in_(ja_word_ids)).all()}
+        ja_cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id.in_(ja_word_ids)).all()}
         for w in ja_words:
             wc = ja_cards.get(w.id)
+            if favorites_only and (wc is None or not wc.is_favorite):
+                continue
             if due_only and (wc is None or wc.due > now):
                 continue
             if state is not None and (wc is None or wc.state != state):

@@ -40,23 +40,23 @@ def previous_day_bounds_utc(now: datetime | None = None) -> tuple[datetime, date
     return start, end
 
 
-def _load_candidates(db: Session, start: datetime, end: datetime) -> list[Candidate]:
+def _load_candidates(db: Session, user_id: int, start: datetime, end: datetime) -> list[Candidate]:
     candidates: list[Candidate] = []
     zh_rows = db.query(WordCard, Word).join(Word, Word.id == WordCard.word_id).filter(
-        WordCard.last_review >= start, WordCard.last_review < end
+        WordCard.user_id == user_id, WordCard.last_review >= start, WordCard.last_review < end
     ).all()
     for card, word in zh_rows:
         candidates.append(Candidate("중국어", f"{word.chinese} ({word.pinyin})", word.meaning, word.example_zh, card.lapses))
 
     en_rows = db.query(EnglishWordCard, EnglishWord).join(
         EnglishWord, EnglishWord.id == EnglishWordCard.word_id
-    ).filter(EnglishWordCard.last_review >= start, EnglishWordCard.last_review < end).all()
+    ).filter(EnglishWordCard.user_id == user_id, EnglishWordCard.last_review >= start, EnglishWordCard.last_review < end).all()
     for card, word in en_rows:
         candidates.append(Candidate("영어", word.word, word.meaning, word.example_en, card.lapses))
 
     ja_rows = db.query(JapaneseWordCard, JapaneseWord).join(
         JapaneseWord, JapaneseWord.id == JapaneseWordCard.word_id
-    ).filter(JapaneseWordCard.last_review >= start, JapaneseWordCard.last_review < end).all()
+    ).filter(JapaneseWordCard.user_id == user_id, JapaneseWordCard.last_review >= start, JapaneseWordCard.last_review < end).all()
     for card, word in ja_rows:
         reading = f" ({word.reading})" if word.reading != word.expression else ""
         candidates.append(Candidate("일본어", f"{word.expression}{reading}", word.meaning, word.example_jp, card.lapses))
@@ -69,10 +69,10 @@ def _meaning_pool(db: Session, language: str, answer: str) -> list[str]:
     return list(dict.fromkeys(value for (value,) in rows if value and value != answer))
 
 
-def build_daily_quizzes(db: Session, limit: int = 2, rng: random.Random | None = None) -> list[QuizQuestion]:
+def build_daily_quizzes(db: Session, user_id: int, limit: int = 2, rng: random.Random | None = None) -> list[QuizQuestion]:
     rng = rng or random.Random()
     start, end = previous_day_bounds_utc()
-    candidates = _load_candidates(db, start, end)
+    candidates = _load_candidates(db, user_id, start, end)
     if not candidates:
         return []
 

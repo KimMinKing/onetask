@@ -46,7 +46,7 @@ class CalendarEvent(Base):
     __tablename__ = "calendar_events"
 
     id = Column(Integer, primary_key=True, index=True)
-    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     title = Column(String, nullable=False)
     event_date = Column(String(10), nullable=False)   # "YYYY-MM-DD"
     event_time = Column(String(5), nullable=True)     # "HH:MM" optional
@@ -96,6 +96,9 @@ class WordCard(Base):
     last_review = Column(DateTime(timezone=True), nullable=True)
     reps = Column(Integer, default=0, nullable=False)       # 총 복습 횟수
     lapses = Column(Integer, default=0, nullable=False)     # 틀린 횟수
+    is_favorite = Column(Boolean, default=False, nullable=False, server_default="false")
+
+    __table_args__ = (UniqueConstraint("user_id", "word_id", name="uq_word_cards_user_word"),)
 
 
 class JapaneseWord(Base):
@@ -118,7 +121,8 @@ class JapaneseWordCard(Base):
     __tablename__ = "japanese_word_cards"
 
     id = Column(Integer, primary_key=True, index=True)
-    word_id = Column(Integer, ForeignKey("japanese_words.id", ondelete="CASCADE"), unique=True, nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    word_id = Column(Integer, ForeignKey("japanese_words.id", ondelete="CASCADE"), nullable=False)
     state = Column(Integer, default=0, nullable=False)
     step = Column(Integer, default=0, nullable=True)
     stability = Column(Float, default=0.0, nullable=False)
@@ -127,6 +131,9 @@ class JapaneseWordCard(Base):
     last_review = Column(DateTime(timezone=True), nullable=True)
     reps = Column(Integer, default=0, nullable=False)
     lapses = Column(Integer, default=0, nullable=False)
+    is_favorite = Column(Boolean, default=False, nullable=False, server_default="false")
+
+    __table_args__ = (UniqueConstraint("user_id", "word_id", name="uq_japanese_word_cards_user_word"),)
 
 
 class EnglishWord(Base):
@@ -161,7 +168,8 @@ class EnglishWordCard(Base):
     __tablename__ = "english_word_cards"
 
     id = Column(Integer, primary_key=True, index=True)
-    word_id = Column(Integer, ForeignKey("english_words.id", ondelete="CASCADE"), unique=True, nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    word_id = Column(Integer, ForeignKey("english_words.id", ondelete="CASCADE"), nullable=False)
     state = Column(Integer, default=0, nullable=False)
     step = Column(Integer, default=0, nullable=True)
     stability = Column(Float, default=0.0, nullable=False)
@@ -170,6 +178,9 @@ class EnglishWordCard(Base):
     last_review = Column(DateTime(timezone=True), nullable=True)
     reps = Column(Integer, default=0, nullable=False)
     lapses = Column(Integer, default=0, nullable=False)
+    is_favorite = Column(Boolean, default=False, nullable=False, server_default="false")
+
+    __table_args__ = (UniqueConstraint("user_id", "word_id", name="uq_english_word_cards_user_word"),)
 
 
 class UserSettings(Base):

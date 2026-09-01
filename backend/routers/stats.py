@@ -4,7 +4,8 @@ from sqlalchemy import func
 from datetime import datetime, timezone, timedelta
 
 from database import get_db
-from models import Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
+from models import User, Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
+from auth_utils import get_current_user
 
 router = APIRouter(prefix="/stats", tags=["stats"])
 
@@ -30,12 +31,12 @@ def calc_streak(last_reviews: list[datetime]) -> int:
 
 
 @router.get("/overview")
-def get_overview(db: Session = Depends(get_db)):
+def get_overview(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
 
     # ── 중국어 ──
-    zh_cards = db.query(WordCard).all()
+    zh_cards = db.query(WordCard).filter(WordCard.user_id == user.id).all()
     zh_today = sum(1 for c in zh_cards if c.last_review and c.last_review >= today_start)
     zh_streak = calc_streak([c.last_review for c in zh_cards if c.last_review])
 
@@ -54,7 +55,7 @@ def get_overview(db: Session = Depends(get_db)):
         })
 
     # ── 영어 ──
-    en_cards = db.query(EnglishWordCard).all()
+    en_cards = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id).all()
     en_today = sum(1 for c in en_cards if c.last_review and c.last_review >= today_start)
     en_streak = calc_streak([c.last_review for c in en_cards if c.last_review])
 
@@ -73,7 +74,7 @@ def get_overview(db: Session = Depends(get_db)):
         })
 
     # ── 일본어 ──
-    ja_cards = db.query(JapaneseWordCard).all()
+    ja_cards = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id).all()
     ja_today = sum(1 for c in ja_cards if c.last_review and c.last_review >= today_start)
     ja_streak = calc_streak([c.last_review for c in ja_cards if c.last_review])
 
@@ -105,7 +106,7 @@ def get_overview(db: Session = Depends(get_db)):
 
 
 @router.get("/history")
-def get_history(days: int = 90, db: Session = Depends(get_db)):
+def get_history(days: int = 90, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     """최근 N일 일별 복습 단어 수 반환 (히트맵용)"""
     now = datetime.now(timezone.utc)
     start = (now - timedelta(days=days - 1)).replace(hour=0, minute=0, second=0, microsecond=0)
@@ -113,6 +114,7 @@ def get_history(days: int = 90, db: Session = Depends(get_db)):
     counts: dict[str, int] = {}
     for CardModel in [WordCard, EnglishWordCard, JapaneseWordCard]:
         rows = db.query(CardModel.last_review).filter(
+            CardModel.user_id == user.id,
             CardModel.last_review.isnot(None),
             CardModel.last_review >= start,
         ).all()

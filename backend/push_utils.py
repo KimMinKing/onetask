@@ -30,3 +30,10 @@ def send_push_to_all(db, title: str, body: str, url: str = "/"):
     subs = db.query(PushSubscription).all()
     ok = sum(1 for s in subs if send_push(s, title, body, url))
     print(f"[push] {ok}/{len(subs)} 전송 성공")
+
+
+def send_push_to_user(db, user_id: int, title: str, body: str, url: str = "/"):
+    from models import PushSubscription
+    subs = db.query(PushSubscription).filter(PushSubscription.user_id == user_id).all()
+    ok = sum(1 for sub in subs if send_push(sub, title, body, url))
+    print(f"[push] user {user_id}: {ok}/{len(subs)} delivered")

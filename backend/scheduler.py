@@ -9,27 +9,27 @@ scheduler = BackgroundScheduler(timezone="Asia/Seoul")
 def job_morning_reminder():
     """매일 오전 9시: 오늘의 복습 알림"""
     from database import SessionLocal
-    from models import WordCard, EnglishWordCard, JapaneseWordCard
-    from push_utils import send_push_to_all
+    from models import PushSubscription, WordCard, EnglishWordCard, JapaneseWordCard
+    from push_utils import send_push_to_user
 
     db = SessionLocal()
     try:
         now = datetime.now(timezone.utc)
-        zh = db.query(WordCard).filter(WordCard.due <= now).count()
-        en = db.query(EnglishWordCard).filter(EnglishWordCard.due <= now).count()
-        ja = db.query(JapaneseWordCard).filter(JapaneseWordCard.due <= now).count()
-        total = zh + en + ja
-
-        if total == 0:
-            body = "오늘 복습할 단어가 없어요. 잠깐 둘러보고 가세요!"
-        else:
-            parts = []
-            if zh: parts.append(f"중국어 {zh}개")
-            if en: parts.append(f"영어 {en}개")
-            if ja: parts.append(f"일본어 {ja}개")
-            body = " · ".join(parts) + " 복습 준비됐어요"
-
-        send_push_to_all(db, title="오늘의 단어", body=body, url="/words")
+        user_ids = {row[0] for row in db.query(PushSubscription.user_id).distinct().all()}
+        for user_id in user_ids:
+            zh = db.query(WordCard).filter(WordCard.user_id == user_id, WordCard.due <= now).count()
+            en = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user_id, EnglishWordCard.due <= now).count()
+            ja = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user_id, JapaneseWordCard.due <= now).count()
+            total = zh + en + ja
+            if total == 0:
+                body = "오늘 복습할 단어가 없어요. 잠깐 둘러보고 가세요!"
+            else:
+                parts = []
+                if zh: parts.append(f"중국어 {zh}개")
+                if en: parts.append(f"영어 {en}개")
+                if ja: parts.append(f"일본어 {ja}개")
+                body = " · ".join(parts) + " 복습 준비됐어요"
+            send_push_to_user(db, user_id, title="오늘의 단어", body=body, url="/words")
     finally:
         db.close()
 
@@ -37,19 +37,21 @@ def job_morning_reminder():
 def job_evening_reminder():
     """매일 오후 8시: 저녁 복습 알림"""
     from database import SessionLocal
-    from models import WordCard, EnglishWordCard, JapaneseWordCard
-    from push_utils import send_push_to_all
+    from models import PushSubscription, WordCard, EnglishWordCard, JapaneseWordCard
+    from push_utils import send_push_to_user
 
     db = SessionLocal()
     try:
         now = datetime.now(timezone.utc)
-        total = (
-            db.query(WordCard).filter(WordCard.due <= now).count() +
-            db.query(EnglishWordCard).filter(EnglishWordCard.due <= now).count() +
-            db.query(JapaneseWordCard).filter(JapaneseWordCard.due <= now).count()
-        )
-        if total > 0:
-            send_push_to_all(db, title="저녁 복습", body=f"아직 {total}개 남아있어요. 가볍게 해봐요!", url="/words")
+        user_ids = {row[0] for row in db.query(PushSubscription.user_id).distinct().all()}
+        for user_id in user_ids:
+            total = (
+                db.query(WordCard).filter(WordCard.user_id == user_id, WordCard.due <= now).count() +
+                db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user_id, EnglishWordCard.due <= now).count() +
+                db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user_id, JapaneseWordCard.due <= now).count()
+            )
+            if total > 0:
+                send_push_to_user(db, user_id, title="저녁 복습", body=f"아직 {total}개 남아있어요. 가볍게 해봐요!", url="/words")
     finally:
         db.close()
 
@@ -122,8 +124,6 @@ def job_telegram_daily_quiz():
             UserSettings.notification_hour == now_kst.hour,
         ).all()
 
-        # Word-card tables are currently shared, so build the same previous-day pool once.
-        quizzes = build_daily_quizzes(db, limit=2)
         for settings in settings_rows:
             delivered = db.query(TelegramQuizDelivery).filter(
                 TelegramQuizDelivery.user_id == settings.user_id,
@@ -131,6 +131,8 @@ def job_telegram_daily_quiz():
             ).first()
             if delivered:
                 continue
+
+            quizzes = build_daily_quizzes(db, settings.user_id, limit=2)
 
             try:
                 if quizzes:

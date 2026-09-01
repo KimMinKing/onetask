@@ -1,11 +1,15 @@
 import random
+import sys
 import unittest
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from models import Base, Word, WordCard
+from models import Base, User, Word, WordCard
 from telegram_daily_quiz import build_daily_quizzes, previous_day_bounds_utc
 
 
@@ -27,6 +31,9 @@ class TelegramDailyQuizTests(unittest.TestCase):
     def test_builds_quiz_with_correct_answer_and_distractors(self):
         now = datetime.now(timezone.utc)
         start, end = previous_day_bounds_utc(now)
+        user = User(username="quiz-user", hashed_password="unused", is_master=True)
+        self.db.add(user)
+        self.db.flush()
         meanings = ["여행", "회의", "약속", "출근", "운동"]
         words = []
         for index, meaning in enumerate(meanings):
@@ -35,6 +42,7 @@ class TelegramDailyQuizTests(unittest.TestCase):
             words.append(word)
         self.db.flush()
         self.db.add(WordCard(
+            user_id=user.id,
             word_id=words[0].id,
             last_review=start + (end - start) / 2,
             reps=2,
@@ -43,7 +51,7 @@ class TelegramDailyQuizTests(unittest.TestCase):
         ))
         self.db.commit()
 
-        quizzes = build_daily_quizzes(self.db, limit=2, rng=random.Random(7))
+        quizzes = build_daily_quizzes(self.db, user.id, limit=2, rng=random.Random(7))
         self.assertEqual(len(quizzes), 1)
         quiz = quizzes[0]
         self.assertEqual(quiz.options[quiz.correct_option_id], "여행")
