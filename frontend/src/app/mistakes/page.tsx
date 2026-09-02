@@ -7,7 +7,7 @@ import { api, MistakeItem } from "@/lib/api";
 export default function MistakesPage() {
   const router = useRouter();
   const [items, setItems] = useState<MistakeItem[]>([]);
-  const [subject, setSubject] = useState("");
+  const [subject, setSubject] = useState(() => typeof window === "undefined" ? "" : new URLSearchParams(window.location.search).get("subject") || "");
   useEffect(() => { api.learning.mistakes(subject || undefined).then(setItems); }, [subject]);
   const resolve = async (id: number) => { await api.learning.resolveMistake(id); setItems(current => current.filter(item => item.id !== id)); };
   return <div className="min-h-dvh bg-dark-400 px-4 pb-12 pt-8"><main className="mx-auto max-w-3xl">

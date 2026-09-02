@@ -231,6 +231,7 @@ class LearningActivity(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    client_event_id = Column(String(80), nullable=True)
     subject = Column(String(30), nullable=False)
     activity_type = Column(String(30), nullable=False)
     unit_id = Column(String(100), nullable=True)
@@ -240,6 +241,8 @@ class LearningActivity(Base):
     total_count = Column(Integer, nullable=True)
     note = Column(String(1000), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+    __table_args__ = (UniqueConstraint("user_id", "client_event_id", name="uq_learning_activity_user_event"),)
 
 
 class MistakeItem(Base):

@@ -18,6 +18,7 @@ function CodeBlock({ children }: { children: string }) {
 
 function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLesson; done: boolean; onDone: () => void; onMove: (id: number) => void; onWrong: (choice: number) => void }) {
   const [choice, setChoice] = useState<number | null>(null);
+  const [saving, setSaving] = useState(false);
   useEffect(() => { setChoice(null); window.scrollTo({ top: 0, behavior: "smooth" }); }, [lesson.id]);
   const correct = choice === lesson.quiz.answer;
 
@@ -55,9 +56,10 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
         {choice !== null && (
           <div className={`mt-4 rounded-xl px-4 py-3 text-sm leading-6 ${correct ? "bg-emerald-950/30 text-emerald-300" : "bg-red-950/25 text-red-300"}`}>
             {correct ? "정답입니다. " : "다시 기억하세요. "}{lesson.quiz.explanation}
+            {!correct && <button onClick={() => setChoice(null)} className="mt-3 block rounded-lg border border-red-700 px-3 py-1.5 text-xs font-bold">다시 풀기</button>}
           </div>
         )}
-        <button disabled={!correct} onClick={onDone} className="mt-4 w-full rounded-xl bg-violet-600 py-3.5 font-bold text-white transition-colors hover:bg-violet-500 disabled:cursor-not-allowed disabled:opacity-30">{done ? "완료됨 · 다음 단계" : "이 단계 완료하고 다음으로"}</button>
+        <button disabled={!correct || saving} onClick={() => { setSaving(true); onDone(); }} className="mt-4 w-full rounded-xl bg-violet-600 py-3.5 font-bold text-white transition-colors hover:bg-violet-500 disabled:cursor-not-allowed disabled:opacity-30">{saving ? "저장 중..." : done ? "완료됨 · 다음 단계" : "이 단계 완료하고 다음으로"}</button>
       </section>
       <div className="mt-4 grid grid-cols-2 gap-3">
         <button disabled={lesson.id === 1} onClick={() => onMove(lesson.id - 1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">← 이전</button>

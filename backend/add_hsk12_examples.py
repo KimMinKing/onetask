@@ -1,14 +1,14 @@
 """
 HSK 1~2 예문 생성 스크립트
 - Tatoeba 중국어 문장 다운로드 → 단어 포함 문장 매칭
-- deep_translator (GoogleTranslator) zh→ko 번역
+- translation_utils (GoogleTranslator 호환 래퍼) zh→ko 번역
 """
 import io, sys, os, bz2, csv, urllib.request, random, time
 from collections import defaultdict
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 from dotenv import load_dotenv
-from deep_translator import GoogleTranslator
+from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
 
 load_dotenv()

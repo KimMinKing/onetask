@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, Request
+import os
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from database import engine, Base
@@ -14,15 +15,39 @@ ensure_runtime_migrations(engine)
 start_scheduler()
 
 app = FastAPI(title="onetask API")
+ALLOWED_ORIGINS = {
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://192.168.219.104:3000",
+    "https://onetask.tradediary.site",
+    os.getenv("APP_BASE_URL", "").rstrip("/"),
+} - {""}
+
+
+@app.middleware("http")
+async def security_headers(request: Request, call_next):
+    if request.method not in {"GET", "HEAD", "OPTIONS"} and request.cookies.get("onetask_token"):
+        origin = request.headers.get("origin")
+        if origin and origin not in ALLOWED_ORIGINS:
+            from fastapi.responses import JSONResponse
+            return JSONResponse(status_code=403, content={"detail": "Invalid request origin"})
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["Permissions-Policy"] = "camera=(), geolocation=(), microphone=(self)"
+    response.headers["Content-Security-Policy"] = "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    legacy_token = request.cookies.get("onetask_token")
+    if legacy_token and response.status_code == 401:
+        response.delete_cookie("onetask_token", path="/", httponly=True, samesite="lax")
+    elif legacy_token and request.url.path != "/auth/logout":
+        response.set_cookie("onetask_token", legacy_token, max_age=30 * 24 * 60 * 60, httponly=True, secure=os.getenv("COOKIE_SECURE", "true").lower() in {"1", "true", "yes"}, samesite="lax", path="/")
+    return response
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "http://192.168.219.104:3000",
-        "https://onetask.tradediary.site",
-    ],
+    allow_origins=sorted(ALLOWED_ORIGINS),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

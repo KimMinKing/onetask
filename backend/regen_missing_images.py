@@ -18,7 +18,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from dotenv import load_dotenv
 import replicate
-from deep_translator import GoogleTranslator
+from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
 
 load_dotenv()

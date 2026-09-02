@@ -1,12 +1,12 @@
 """
 영어 단어 예문 생성 스크립트
 - Tatoeba 영어 문장 다운로드 → 단어 포함 문장 매칭
-- deep_translator (GoogleTranslator) en->ko 번역
+- translation_utils (GoogleTranslator 호환 래퍼) en->ko 번역
 """
 import os, bz2, csv, urllib.request, time, re
 from collections import defaultdict
 from dotenv import load_dotenv
-from deep_translator import GoogleTranslator
+from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
 
 load_dotenv()

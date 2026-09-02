@@ -154,6 +154,12 @@ def ensure_runtime_migrations(engine) -> None:
                     WHERE user_id IS NULL
                 """)
 
+    if inspector.has_table("learning_activities"):
+        activity_columns = {column["name"] for column in inspector.get_columns("learning_activities")}
+        if "client_event_id" not in activity_columns:
+            statements.append("ALTER TABLE learning_activities ADD COLUMN client_event_id VARCHAR(80)")
+        statements.append("CREATE UNIQUE INDEX IF NOT EXISTS uq_learning_activity_user_event_idx ON learning_activities (user_id, client_event_id)")
+
     if not statements:
         return
 

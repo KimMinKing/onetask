@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
@@ -11,8 +11,8 @@ router = APIRouter(prefix="/admin", tags=["admin"])
 
 
 class CreateUserRequest(BaseModel):
-    username: str
-    password: str
+    username: str = Field(min_length=2, max_length=50)
+    password: str = Field(min_length=10, max_length=72)
     ui_language: str = "ko"
 
 
@@ -83,8 +83,10 @@ def create_user(
     username = body.username.strip()
     if len(username) < 2:
         raise HTTPException(status_code=400, detail="아이디는 2자 이상이어야 합니다")
-    if len(body.password) < 4:
-        raise HTTPException(status_code=400, detail="비밀번호는 4자 이상이어야 합니다")
+    if len(body.password) < 10:
+        raise HTTPException(status_code=400, detail="비밀번호는 10자 이상이어야 합니다")
+    if len(body.password.encode("utf-8")) > 72:
+        raise HTTPException(status_code=400, detail="비밀번호는 UTF-8 기준 72바이트 이하여야 합니다")
     if db.query(User).filter(User.username == username).first():
         raise HTTPException(status_code=409, detail="이미 존재하는 아이디입니다")
 

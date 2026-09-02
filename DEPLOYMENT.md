@@ -9,8 +9,16 @@ cp -n .env.example .env
 python3 -c "import secrets; print(secrets.token_urlsafe(64))"
 ```
 
-Put the generated value in `SECRET_KEY` and set a strong `POSTGRES_PASSWORD`.
+Put the generated value in `SECRET_KEY`, set a strong `POSTGRES_PASSWORD`, and
+set `APP_BASE_URL` to the public HTTPS site URL. Keep `COOKIE_SECURE=true` in
+production. Only one scheduler cluster is needed; PostgreSQL advisory locks
+prevent duplicate jobs if the backend is temporarily started more than once.
 Keep `.env` and `backend/.env` outside Git.
+
+This release removes a compromised historical translation dependency. Rotate
+`SECRET_KEY`, the database password, and any external API credentials before
+the first production rebuild. Changing `SECRET_KEY` invalidates existing login
+cookies and encrypted Telegram tokens, so reconnect Telegram after deployment.
 
 ## 2. Back up PostgreSQL
 

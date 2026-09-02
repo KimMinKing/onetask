@@ -10,6 +10,7 @@ const readProgress = () => { if (typeof window === "undefined") return {}; try {
 
 function Lesson({ lesson, done, move, complete, onWrong }: { lesson:NetworkLesson; done:boolean; move:(id:number)=>void; complete:()=>void; onWrong:(choice:number)=>void }) {
   const [choice,setChoice]=useState<number|null>(null);
+  const [saving,setSaving]=useState(false);
   useEffect(()=>{setChoice(null);window.scrollTo({top:0,behavior:"smooth"});},[lesson.id]);
   const correct=choice===lesson.quiz.answer;
   return <main className="mx-auto w-full max-w-3xl px-4 pb-12 pt-5">
@@ -25,8 +26,8 @@ function Lesson({ lesson, done, move, complete, onWrong }: { lesson:NetworkLesso
     <section className="mt-5 rounded-3xl border border-white/5 bg-dark-200 p-5 sm:p-7">
       <p className="mb-2 text-xs font-bold text-cyan-400">단계 확인 문제</p><h2 className="mb-4 font-bold leading-7 text-stone-100">{lesson.quiz.question}</h2>
       <div className="space-y-2">{lesson.quiz.options.map((o,i)=><button key={o} disabled={choice!==null} onClick={()=>{setChoice(i);if(i!==lesson.quiz.answer)onWrong(i);}} className={`w-full rounded-xl border px-4 py-3 text-left text-sm ${choice===null?"border-white/5 bg-dark-100 text-stone-300 hover:border-cyan-700":i===lesson.quiz.answer?"border-emerald-700 bg-emerald-950/30 text-emerald-300":i===choice?"border-red-800 bg-red-950/30 text-red-300":"border-white/5 bg-dark-100 text-stone-600"}`}>{i+1}. {o}</button>)}</div>
-      {choice!==null&&<div className={`mt-4 rounded-xl px-4 py-3 text-sm leading-6 ${correct?"bg-emerald-950/30 text-emerald-300":"bg-red-950/25 text-red-300"}`}>{correct?"정답입니다. ":"다시 기억하세요. "}{lesson.quiz.explanation}</div>}
-      <button disabled={!correct} onClick={complete} className="mt-4 w-full rounded-xl bg-cyan-600 py-3.5 font-bold text-white hover:bg-cyan-500 disabled:opacity-30">{done?"완료됨 · 다음 단계":"이 단계 완료하고 다음으로"}</button>
+      {choice!==null&&<div className={`mt-4 rounded-xl px-4 py-3 text-sm leading-6 ${correct?"bg-emerald-950/30 text-emerald-300":"bg-red-950/25 text-red-300"}`}>{correct?"정답입니다. ":"다시 기억하세요. "}{lesson.quiz.explanation}{!correct&&<button onClick={()=>setChoice(null)} className="mt-3 block rounded-lg border border-red-700 px-3 py-1.5 text-xs font-bold">다시 풀기</button>}</div>}
+      <button disabled={!correct||saving} onClick={()=>{setSaving(true);complete();}} className="mt-4 w-full rounded-xl bg-cyan-600 py-3.5 font-bold text-white hover:bg-cyan-500 disabled:opacity-30">{saving?"저장 중...":done?"완료됨 · 다음 단계":"이 단계 완료하고 다음으로"}</button>
     </section>
     <div className="mt-4 grid grid-cols-2 gap-3"><button disabled={lesson.id===1} onClick={()=>move(lesson.id-1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">← 이전</button><button disabled={lesson.id===100} onClick={()=>move(lesson.id+1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">다음 →</button></div>
   </main>;

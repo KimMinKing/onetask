@@ -11,6 +11,8 @@ services:
       DATABASE_URL: postgresql://${POSTGRES_USER:-tradediary}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-onetask}
       SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env}
       APP_BASE_URL: ${APP_BASE_URL:-http://localhost:3000}
+      ENABLE_SCHEDULER: ${ENABLE_SCHEDULER:-true}
+      COOKIE_SECURE: ${COOKIE_SECURE:-true}
     volumes:
       - ./backend/test_output:/app/test_output
     depends_on:

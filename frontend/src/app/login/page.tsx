@@ -32,7 +32,7 @@ export default function LoginPage() {
       const res = mode === "login"
         ? await authApi.login(username.trim(), password)
         : await authApi.signup(username.trim(), password, uiLanguage);
-      setAuth(res.access_token, { username: res.username, is_master: res.is_master });
+      setAuth({ username: res.username, is_master: res.is_master });
       router.replace("/");
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : "오류가 발생했습니다");

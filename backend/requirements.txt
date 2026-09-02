@@ -4,7 +4,7 @@ sqlalchemy
 psycopg2-binary
 python-dotenv
 replicate
-python-jose[cryptography]
+PyJWT[crypto]
 passlib[bcrypt]
 bcrypt==4.0.1
 python-multipart
@@ -12,5 +12,4 @@ pywebpush
 apscheduler
 fsrs
 python-dateutil
-deep-translator
 requests

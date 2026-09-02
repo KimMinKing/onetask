@@ -2,9 +2,7 @@
 const BASE = "/api";
 
 export function getAuthHeaders(): Record<string, string> {
-  if (typeof window === "undefined") return {};
-  const token = localStorage.getItem("onetask_token");
-  return token ? { Authorization: `Bearer ${token}` } : {};
+  return {};
 }
 
 export type Urgency = "high" | "normal" | "low";
@@ -175,7 +173,7 @@ export const authApi = {
       body: JSON.stringify({ username, password }),
     }).then(async (r) => {
       if (!r.ok) throw new Error((await r.json()).detail || "로그인 실패");
-      return r.json() as Promise<{ access_token: string; is_master: boolean; username: string }>;
+      return r.json() as Promise<{ is_master: boolean; username: string }>;
     }),
   signup: (username: string, password: string, ui_language?: string) =>
     fetch(`${BASE}/auth/signup`, {
@@ -184,7 +182,7 @@ export const authApi = {
       body: JSON.stringify({ username, password, ui_language }),
     }).then(async (r) => {
       if (!r.ok) throw new Error((await r.json()).detail || "가입 실패");
-      return r.json() as Promise<{ access_token: string; is_master: boolean; username: string }>;
+      return r.json() as Promise<{ is_master: boolean; username: string }>;
     }),
 };
 
@@ -488,7 +486,7 @@ export const api = {
     progress: (subject?: string) => req<LearningProgress[]>(`/learning/progress${subject ? `?subject=${subject}` : ""}`),
     complete: (subject: string, unitId: string, data: { completed?: boolean; score?: number; last_position?: number; duration_minutes?: number; title?: string }) =>
       req<LearningProgress>(`/learning/progress/${subject}/${unitId}`, { method: "PUT", body: JSON.stringify(data) }),
-    activity: (data: { subject: string; activity_type: string; unit_id?: string; title?: string; duration_minutes?: number; correct_count?: number; total_count?: number; note?: string }) =>
+    activity: (data: { client_event_id?: string; subject: string; activity_type: string; unit_id?: string; title?: string; duration_minutes?: number; correct_count?: number; total_count?: number; note?: string }) =>
       req<Record<string, unknown>>("/learning/activities", { method: "POST", body: JSON.stringify(data) }),
     mistakes: (subject?: string) => req<MistakeItem[]>(`/learning/mistakes${subject ? `?subject=${subject}` : ""}`),
     addMistake: (data: { subject: string; item_key: string; question: string; correct_answer: string; user_answer?: string; explanation?: string }) =>

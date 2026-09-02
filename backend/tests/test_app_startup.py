@@ -13,6 +13,7 @@ class AppStartupTests(unittest.TestCase):
         env = os.environ.copy()
         env["DATABASE_URL"] = "sqlite:///:memory:"
         env["SECRET_KEY"] = "release-test-secret-key-that-is-long-enough"
+        env["ENABLE_SCHEDULER"] = "true"
         script = """
 import main
 import scheduler

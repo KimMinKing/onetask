@@ -4,6 +4,7 @@ from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import IntegrityError
 
 from auth_utils import get_current_user
 from database import get_db
@@ -11,6 +12,12 @@ from learning_service import build_today_plan, weekly_report
 from models import LearningActivity, LearningProgress, MistakeItem, User
 
 router = APIRouter(prefix="/learning", tags=["learning"])
+VALID_SUBJECTS = {"zh", "ja", "en", "languages", "sqld", "network", "daily-zh", "daily-ja", "daily-db", "daily-network"}
+
+
+def validate_subject(subject: str) -> None:
+    if subject not in VALID_SUBJECTS:
+        raise HTTPException(status_code=400, detail="Unsupported subject")
 
 
 class ProgressUpdate(BaseModel):
@@ -22,6 +29,7 @@ class ProgressUpdate(BaseModel):
 
 
 class ActivityCreate(BaseModel):
+    client_event_id: Optional[str] = Field(default=None, max_length=80)
     subject: str = Field(min_length=1, max_length=30)
     activity_type: str = Field(min_length=1, max_length=30)
     unit_id: Optional[str] = Field(default=None, max_length=100)
@@ -63,6 +71,7 @@ def progress(subject: Optional[str] = None, db: Session = Depends(get_db), user:
 
 @router.put("/progress/{subject}/{unit_id}")
 def update_progress(subject: str, unit_id: str, data: ProgressUpdate, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    validate_subject(subject)
     row = db.query(LearningProgress).filter(
         LearningProgress.user_id == user.id,
         LearningProgress.subject == subject,
@@ -70,13 +79,22 @@ def update_progress(subject: str, unit_id: str, data: ProgressUpdate, db: Sessio
     ).first()
     if not row:
         row = LearningProgress(user_id=user.id, subject=subject, unit_id=unit_id)
-        db.add(row)
+        try:
+            with db.begin_nested():
+                db.add(row)
+                db.flush()
+        except IntegrityError:
+            row = db.query(LearningProgress).filter(LearningProgress.user_id == user.id, LearningProgress.subject == subject, LearningProgress.unit_id == unit_id).one()
+    was_completed = bool(row.completed)
     row.completed = data.completed
     row.score = data.score
     row.last_position = data.last_position
     row.attempts = (row.attempts or 0) + 1
-    row.completed_at = datetime.now(timezone.utc) if data.completed else None
-    if data.completed:
+    if data.completed and not was_completed:
+        row.completed_at = datetime.now(timezone.utc)
+    elif not data.completed:
+        row.completed_at = None
+    if data.completed and not was_completed:
         db.add(LearningActivity(user_id=user.id, subject=subject, activity_type="lesson", unit_id=unit_id, title=data.title, duration_minutes=data.duration_minutes, correct_count=1, total_count=1))
     db.commit()
     db.refresh(row)
@@ -85,11 +103,26 @@ def update_progress(subject: str, unit_id: str, data: ProgressUpdate, db: Sessio
 
 @router.post("/activities")
 def create_activity(data: ActivityCreate, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    validate_subject(data.subject)
     if data.correct_count is not None and data.total_count is not None and data.correct_count > data.total_count:
         raise HTTPException(status_code=400, detail="correct_count cannot exceed total_count")
+    if data.client_event_id:
+        existing = db.query(LearningActivity).filter(LearningActivity.user_id == user.id, LearningActivity.client_event_id == data.client_event_id).first()
+        if existing:
+            return existing
     row = LearningActivity(user_id=user.id, **data.model_dump())
-    db.add(row)
-    db.commit()
+    try:
+        with db.begin_nested():
+            db.add(row)
+            db.flush()
+        db.commit()
+    except IntegrityError:
+        db.rollback()
+        if data.client_event_id:
+            existing = db.query(LearningActivity).filter(LearningActivity.user_id == user.id, LearningActivity.client_event_id == data.client_event_id).first()
+            if existing:
+                return existing
+        raise
     db.refresh(row)
     return row
 
@@ -106,6 +139,7 @@ def mistakes(subject: Optional[str] = None, include_resolved: bool = False, db: 
 
 @router.post("/mistakes")
 def add_mistake(data: MistakeCreate, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    validate_subject(data.subject)
     row = db.query(MistakeItem).filter(MistakeItem.user_id == user.id, MistakeItem.subject == data.subject, MistakeItem.item_key == data.item_key).first()
     if row:
         for key, value in data.model_dump().items():
@@ -115,7 +149,15 @@ def add_mistake(data: MistakeCreate, db: Session = Depends(get_db), user: User =
         row.resolved_at = None
     else:
         row = MistakeItem(user_id=user.id, **data.model_dump())
-        db.add(row)
+        try:
+            with db.begin_nested():
+                db.add(row)
+                db.flush()
+        except IntegrityError:
+            row = db.query(MistakeItem).filter(MistakeItem.user_id == user.id, MistakeItem.subject == data.subject, MistakeItem.item_key == data.item_key).one()
+            row.mistake_count += 1
+            row.last_mistake_at = datetime.now(timezone.utc)
+            row.resolved_at = None
     db.commit()
     db.refresh(row)
     return row

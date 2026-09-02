@@ -1,8 +1,10 @@
 from datetime import date, datetime, timedelta, timezone
 
+from sqlalchemy import func
 from sqlalchemy.orm import Session
+from zoneinfo import ZoneInfo
 
-from models import LearningActivity, LearningProgress, MistakeItem, UserSettings
+from models import EnglishWordCard, JapaneseWordCard, LearningActivity, LearningProgress, MistakeItem, UserSettings, WordCard
 
 
 SUBJECTS = {
@@ -12,6 +14,13 @@ SUBJECTS = {
     "sqld": ("SQLD", "/sqld"),
     "network": ("네트워크관리사", "/network"),
 }
+LANGUAGE_CARDS = {"zh": WordCard, "en": EnglishWordCard, "ja": JapaneseWordCard}
+KST = ZoneInfo("Asia/Seoul")
+
+
+def _day_start_utc(days_ago: int = 0) -> datetime:
+    local_date = datetime.now(KST).date() - timedelta(days=days_ago)
+    return datetime.combine(local_date, datetime.min.time(), tzinfo=KST).astimezone(timezone.utc)
 
 
 def get_or_create_settings(db: Session, user_id: int) -> UserSettings:
@@ -34,17 +43,17 @@ def next_unit(db: Session, user_id: int, subject: str) -> int:
     for unit in range(1, limit + 1):
         if unit not in completed:
             return unit
-    return limit
+    return limit + 1
 
 
 def priority_subject(settings: UserSettings) -> str:
-    today = date.today()
+    today = datetime.now(KST).date()
     candidates = []
     for subject, raw in (("sqld", settings.sqld_exam_date), ("network", settings.network_exam_date)):
         if raw:
             try:
                 remaining = (date.fromisoformat(raw) - today).days
-                if remaining >= 0:
+                if 0 <= remaining <= 120:
                     candidates.append((remaining, subject))
             except ValueError:
                 pass
@@ -64,7 +73,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
     def course_href(subject: str, href: str, unit: int) -> str:
         return f"{href}?step={unit}" if subject in {"sqld", "network"} else href
 
-    def add(subject: str, title: str, task_minutes: int, href: str, unit_id: str | None = None):
+    def add(subject: str, title: str, task_minutes: int, href: str, unit_id: str | None = None, completed_override: bool = False):
         progress = None
         if unit_id:
             progress = db.query(LearningProgress).filter(
@@ -72,6 +81,10 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
                 LearningProgress.subject == subject,
                 LearningProgress.unit_id == unit_id,
             ).first()
+        reviewed_today = False
+        if subject in LANGUAGE_CARDS:
+            model = LANGUAGE_CARDS[subject]
+            reviewed_today = db.query(model).filter(model.user_id == user_id, model.last_review >= _day_start_utc()).first() is not None
         tasks.append({
             "id": f"{subject}:{unit_id or 'review'}",
             "subject": subject,
@@ -79,31 +92,39 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
             "minutes": task_minutes,
             "href": href,
             "unit_id": unit_id,
-            "completed": bool(progress and progress.completed),
+            "completed": completed_override or reviewed_today or bool(progress and progress.completed),
         })
+
+    def add_course(subject: str, task_minutes: int, unit: int):
+        label, href = SUBJECTS[subject]
+        if subject in {"sqld", "network"} and unit > 100:
+            add(subject, f"{label} 100단계 완료 · 오답 복습", task_minutes, f"/mistakes?subject={subject}", completed_override=True)
+        else:
+            add(subject, f"{label} {unit}단계", task_minutes, course_href(subject, href, unit), str(unit))
 
     if budget == 5:
         add("zh", "HSK 4급 어제 단어 빠른 복습", 5, "/words?hsk=4")
     elif budget == 15:
-        label, href = SUBJECTS[primary]
-        add(primary, f"{label} {primary_unit}단계", 15, course_href(primary, href, primary_unit), str(primary_unit))
+        add_course(primary, 15, primary_unit)
     elif budget == 30:
         add("zh", "HSK 4급 복습", 10, "/words?hsk=4")
-        label, href = SUBJECTS[primary]
-        add(primary, f"{label} {primary_unit}단계", 20, course_href(primary, href, primary_unit), str(primary_unit))
+        add_course(primary, 20, primary_unit)
     else:
         add("zh", "HSK 4급 복습", 15, "/words?hsk=4")
-        label, href = SUBJECTS[primary]
-        add(primary, f"{label} {primary_unit}단계", 25, course_href(primary, href, primary_unit), str(primary_unit))
+        add_course(primary, 25, primary_unit)
         secondary = "network" if primary == "sqld" else "sqld"
         secondary_unit = next_unit(db, user_id, secondary)
-        secondary_label, secondary_href = SUBJECTS[secondary]
-        add(secondary, f"{secondary_label} {secondary_unit}단계", 20, f"{secondary_href}?step={secondary_unit}", str(secondary_unit))
+        add_course(secondary, 20, secondary_unit)
 
     last = db.query(LearningActivity).filter(LearningActivity.user_id == user_id).order_by(LearningActivity.created_at.desc()).first()
+    latest_stamp = last.created_at if last else None
+    for model in LANGUAGE_CARDS.values():
+        stamp = db.query(func.max(model.last_review)).filter(model.user_id == user_id).scalar()
+        if stamp and (not latest_stamp or stamp.replace(tzinfo=stamp.tzinfo or timezone.utc) > latest_stamp.replace(tzinfo=latest_stamp.tzinfo or timezone.utc)):
+            latest_stamp = stamp
     inactive_days = 0
-    if last and last.created_at:
-        stamp = last.created_at if last.created_at.tzinfo else last.created_at.replace(tzinfo=timezone.utc)
+    if latest_stamp:
+        stamp = latest_stamp if latest_stamp.tzinfo else latest_stamp.replace(tzinfo=timezone.utc)
         inactive_days = max(0, (datetime.now(timezone.utc).date() - stamp.date()).days)
     recovery = "오늘 5분만 다시 시작해도 충분해요." if inactive_days >= 3 else None
     unresolved = db.query(MistakeItem).filter(MistakeItem.user_id == user_id, MistakeItem.resolved_at == None).count()
@@ -131,11 +152,25 @@ def weekly_report(db: Session, user_id: int) -> dict:
         item["minutes"] += row.duration_minutes or 0
         item["correct"] += row.correct_count or 0
         item["total"] += row.total_count or 0
-        study_dates.add(row.created_at.date().isoformat())
+        stamp = row.created_at if row.created_at.tzinfo else row.created_at.replace(tzinfo=timezone.utc)
+        study_dates.add(stamp.astimezone(KST).date().isoformat())
+    language_reviews = 0
+    for subject, model in LANGUAGE_CARDS.items():
+        cards = db.query(model).filter(model.user_id == user_id, model.last_review >= since).all()
+        if not cards:
+            continue
+        language_reviews += len(cards)
+        item = by_subject.setdefault(subject, {"activities": 0, "minutes": 0, "correct": 0, "total": 0})
+        item["activities"] += len(cards)
+        item["minutes"] += len(cards)
+        item["total"] += len(cards)
+        for card in cards:
+            stamp = card.last_review if card.last_review.tzinfo else card.last_review.replace(tzinfo=timezone.utc)
+            study_dates.add(stamp.astimezone(KST).date().isoformat())
     return {
         "days": len(study_dates),
-        "activities": len(rows),
-        "minutes": sum(row.duration_minutes or 0 for row in rows),
+        "activities": len(rows) + language_reviews,
+        "minutes": sum(row.duration_minutes or 0 for row in rows) + language_reviews,
         "by_subject": by_subject,
         "unresolved_mistakes": db.query(MistakeItem).filter(MistakeItem.user_id == user_id, MistakeItem.resolved_at == None).count(),
     }
