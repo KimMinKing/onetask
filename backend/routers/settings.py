@@ -27,6 +27,10 @@ class SettingsResponse(BaseModel):
     telegram_enabled: bool
     telegram_bot_token_configured: bool
     telegram_chat_id: Optional[str] = None
+    study_minutes: int
+    focus_subject: str
+    sqld_exam_date: Optional[str] = None
+    network_exam_date: Optional[str] = None
 
 
 class SettingsUpdate(BaseModel):
@@ -42,6 +46,10 @@ class SettingsUpdate(BaseModel):
     telegram_enabled: Optional[bool] = None
     telegram_bot_token: Optional[str] = None
     telegram_chat_id: Optional[str] = None
+    study_minutes: Optional[int] = None
+    focus_subject: Optional[str] = None
+    sqld_exam_date: Optional[str] = None
+    network_exam_date: Optional[str] = None
 
 
 class ObsidianSyncResponse(BaseModel):
@@ -88,6 +96,10 @@ def get_settings(db: Session = Depends(get_db), user: User = Depends(get_current
         telegram_enabled=settings.telegram_enabled,
         telegram_bot_token_configured=bool(settings.telegram_bot_token),
         telegram_chat_id=settings.telegram_chat_id,
+        study_minutes=settings.study_minutes,
+        focus_subject=settings.focus_subject,
+        sqld_exam_date=settings.sqld_exam_date,
+        network_exam_date=settings.network_exam_date,
     )
 
 
@@ -169,6 +181,27 @@ def update_settings(
             raise HTTPException(status_code=400, detail="Connect Telegram before enabling Telegram alerts")
         settings.telegram_enabled = data.telegram_enabled
 
+    if data.study_minutes is not None:
+        if data.study_minutes not in {5, 15, 30, 60}:
+            raise HTTPException(status_code=400, detail="study_minutes must be 5, 15, 30, or 60")
+        settings.study_minutes = data.study_minutes
+
+    if data.focus_subject is not None:
+        if data.focus_subject not in {"zh", "ja", "en", "sqld", "network"}:
+            raise HTTPException(status_code=400, detail="Unsupported focus_subject")
+        settings.focus_subject = data.focus_subject
+
+    for field in ("sqld_exam_date", "network_exam_date"):
+        value = getattr(data, field)
+        if field in data.model_fields_set:
+            if value:
+                try:
+                    from datetime import date
+                    date.fromisoformat(value)
+                except ValueError:
+                    raise HTTPException(status_code=400, detail=f"{field} must be YYYY-MM-DD")
+            setattr(settings, field, value or None)
+
     db.commit()
     db.refresh(settings)
 
@@ -188,6 +221,10 @@ def update_settings(
         telegram_enabled=settings.telegram_enabled,
         telegram_bot_token_configured=bool(settings.telegram_bot_token),
         telegram_chat_id=settings.telegram_chat_id,
+        study_minutes=settings.study_minutes,
+        focus_subject=settings.focus_subject,
+        sqld_exam_date=settings.sqld_exam_date,
+        network_exam_date=settings.network_exam_date,
     )
 
 
@@ -224,6 +261,10 @@ def update_notifications(
         telegram_enabled=settings.telegram_enabled,
         telegram_bot_token_configured=bool(settings.telegram_bot_token),
         telegram_chat_id=settings.telegram_chat_id,
+        study_minutes=settings.study_minutes,
+        focus_subject=settings.focus_subject,
+        sqld_exam_date=settings.sqld_exam_date,
+        network_exam_date=settings.network_exam_date,
     )
 
 
@@ -262,6 +303,10 @@ def update_goals(
         telegram_enabled=settings.telegram_enabled,
         telegram_bot_token_configured=bool(settings.telegram_bot_token),
         telegram_chat_id=settings.telegram_chat_id,
+        study_minutes=settings.study_minutes,
+        focus_subject=settings.focus_subject,
+        sqld_exam_date=settings.sqld_exam_date,
+        network_exam_date=settings.network_exam_date,
     )
 
 

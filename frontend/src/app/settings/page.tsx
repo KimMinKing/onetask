@@ -13,6 +13,10 @@ type Settings = {
   language_priority: string;
   obsidian_enabled: boolean;
   obsidian_vault_path: string | null;
+  study_minutes: 5 | 15 | 30 | 60;
+  focus_subject: string;
+  sqld_exam_date: string | null;
+  network_exam_date: string | null;
 };
 
 export default function SettingsPage() {
@@ -126,6 +130,14 @@ export default function SettingsPage() {
 
         <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4 space-y-4">
           <p className="text-sm font-semibold text-stone-200">일일 목표</p>
+          <div>
+            <label className="text-xs text-stone-600 block mb-1.5">기본 학습 시간</label>
+            <div className="grid grid-cols-4 gap-2">{([5, 15, 30, 60] as const).map(minutes => <button key={minutes} onClick={() => setSettings({ ...settings, study_minutes: minutes })} className={`rounded-xl py-2.5 text-sm font-bold ${settings.study_minutes === minutes ? "bg-emerald-600 text-white" : "bg-dark-100 text-stone-500"}`}>{minutes}분</button>)}</div>
+          </div>
+          <div>
+            <label className="text-xs text-stone-600 block mb-1.5">집중 과목</label>
+            <select value={settings.focus_subject} onChange={e => setSettings({ ...settings, focus_subject: e.target.value })} className="w-full rounded-xl border border-stone-700 bg-dark-100 px-4 py-3 text-sm text-stone-200"><option value="sqld">SQLD</option><option value="network">네트워크관리사</option><option value="zh">중국어 HSK4</option><option value="ja">일본어</option><option value="en">영어</option></select>
+          </div>
           <div>
             <label className="text-xs text-stone-600 block mb-1.5">단어 복습 목표 (1-100개)</label>
             <input
@@ -255,6 +267,12 @@ export default function SettingsPage() {
           >
             {syncingObsidian ? "동기화 중..." : "지금 전체 동기화"}
           </button>
+        </div>
+
+        <div className="bg-dark-200 border border-white/5 rounded-2xl px-5 py-4 space-y-4">
+          <div><p className="text-sm font-semibold text-stone-200">자격증 시험일</p><p className="mt-1 text-xs text-stone-600">가까운 시험을 오늘 학습에 자동으로 우선 배치합니다.</p></div>
+          <div><label className="mb-1.5 block text-xs text-stone-600">SQLD 시험일</label><input type="date" value={settings.sqld_exam_date ?? ""} onChange={e => setSettings({ ...settings, sqld_exam_date: e.target.value || null })} className="w-full rounded-xl border border-stone-700 bg-dark-100 px-4 py-3 text-sm text-stone-200" /></div>
+          <div><label className="mb-1.5 block text-xs text-stone-600">네트워크관리사 시험일</label><input type="date" value={settings.network_exam_date ?? ""} onChange={e => setSettings({ ...settings, network_exam_date: e.target.value || null })} className="w-full rounded-xl border border-stone-700 bg-dark-100 px-4 py-3 text-sm text-stone-200" /></div>
         </div>
 
         <button

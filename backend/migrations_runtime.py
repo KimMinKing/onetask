@@ -101,6 +101,14 @@ def ensure_runtime_migrations(engine) -> None:
         statements.append("ALTER TABLE user_settings ADD COLUMN telegram_bot_token VARCHAR")
     if "telegram_chat_id" not in columns:
         statements.append("ALTER TABLE user_settings ADD COLUMN telegram_chat_id VARCHAR(100)")
+    if "study_minutes" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN study_minutes INTEGER NOT NULL DEFAULT 15")
+    if "focus_subject" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN focus_subject VARCHAR(20) NOT NULL DEFAULT 'sqld'")
+    if "sqld_exam_date" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN sqld_exam_date VARCHAR(10)")
+    if "network_exam_date" not in columns:
+        statements.append("ALTER TABLE user_settings ADD COLUMN network_exam_date VARCHAR(10)")
 
     if inspector.has_table("tasks"):
         task_columns = {column["name"] for column in inspector.get_columns("tasks")}

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { SQLD_CURRICULUM, SqldLesson } from "./curriculum";
+import { api } from "@/lib/api";
 
 const STORAGE_KEY = "sqld_progress_v1";
 
@@ -15,7 +16,7 @@ function CodeBlock({ children }: { children: string }) {
   return <pre className="overflow-x-auto whitespace-pre rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-xs leading-6 text-emerald-300">{children}</pre>;
 }
 
-function LessonView({ lesson, done, onDone, onMove }: { lesson: SqldLesson; done: boolean; onDone: () => void; onMove: (id: number) => void }) {
+function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLesson; done: boolean; onDone: () => void; onMove: (id: number) => void; onWrong: (choice: number) => void }) {
   const [choice, setChoice] = useState<number | null>(null);
   useEffect(() => { setChoice(null); window.scrollTo({ top: 0, behavior: "smooth" }); }, [lesson.id]);
   const correct = choice === lesson.quiz.answer;
@@ -48,7 +49,7 @@ function LessonView({ lesson, done, onDone, onMove }: { lesson: SqldLesson; done
         <h2 className="mb-4 text-base font-bold leading-7 text-stone-100">{lesson.quiz.question}</h2>
         <div className="space-y-2">
           {lesson.quiz.options.map((option, index) => (
-            <button key={option} disabled={choice !== null} onClick={() => setChoice(index)} className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition-colors ${choice === null ? "border-white/5 bg-dark-100 text-stone-300 hover:border-violet-700" : index === lesson.quiz.answer ? "border-emerald-700 bg-emerald-950/30 text-emerald-300" : index === choice ? "border-red-800 bg-red-950/30 text-red-300" : "border-white/5 bg-dark-100 text-stone-600"}`}>{index + 1}. {option}</button>
+            <button key={option} disabled={choice !== null} onClick={() => { setChoice(index); if (index !== lesson.quiz.answer) onWrong(index); }} className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition-colors ${choice === null ? "border-white/5 bg-dark-100 text-stone-300 hover:border-violet-700" : index === lesson.quiz.answer ? "border-emerald-700 bg-emerald-950/30 text-emerald-300" : index === choice ? "border-red-800 bg-red-950/30 text-red-300" : "border-white/5 bg-dark-100 text-stone-600"}`}>{index + 1}. {option}</button>
           ))}
         </div>
         {choice !== null && (
@@ -73,7 +74,9 @@ export default function SqldPage() {
   const [query, setQuery] = useState("");
   const [section, setSection] = useState("전체");
   useEffect(() => {
-    setProgress(loadProgress());
+    const local = loadProgress();
+    setProgress(local);
+    api.learning.progress("sqld").then(rows => setProgress(prev => ({ ...prev, ...Object.fromEntries(rows.filter(row => row.completed).map(row => [Number(row.unit_id), true])) }))).catch(() => {});
     const step = Number(new URLSearchParams(window.location.search).get("step"));
     if (step >= 1 && step <= 100) setSelected(step);
   }, []);
@@ -82,13 +85,14 @@ export default function SqldPage() {
   const lessons = useMemo(() => SQLD_CURRICULUM.filter((lesson) => (section === "전체" || lesson.section === section) && `${lesson.title} ${lesson.subtitle} ${lesson.points.join(" ")}`.toLowerCase().includes(query.toLowerCase())), [query, section]);
   const current = selected ? SQLD_CURRICULUM[selected - 1] : null;
 
-  const complete = (id: number) => {
+  const complete = async (id: number) => {
     const next = { ...progress, [id]: true };
     setProgress(next);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    await api.learning.complete("sqld", String(id), { completed: true, score: 100, duration_minutes: 15, title: SQLD_CURRICULUM[id - 1].title }).catch(() => {});
     setSelected(id < 100 ? id + 1 : 0);
   };
-  if (current) return <LessonView lesson={current} done={!!progress[current.id]} onDone={() => complete(current.id)} onMove={setSelected} />;
+  if (current) return <LessonView lesson={current} done={!!progress[current.id]} onDone={() => complete(current.id)} onMove={setSelected} onWrong={(choice) => api.learning.addMistake({ subject: "sqld", item_key: `lesson-${current.id}`, question: current.quiz.question, correct_answer: current.quiz.options[current.quiz.answer], user_answer: current.quiz.options[choice], explanation: current.quiz.explanation }).catch(() => {})} />;
 
   return (
     <div className="min-h-dvh bg-dark-400">

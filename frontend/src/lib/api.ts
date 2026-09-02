@@ -108,6 +108,27 @@ export interface EnglishPhraseLevel {
   functions: string[];
 }
 
+export interface TodayPlan {
+  minutes: 5 | 15 | 30 | 60;
+  primary_subject: string;
+  total_minutes: number;
+  recovery_message: string | null;
+  unresolved_mistakes: number;
+  tasks: { id: string; subject: string; title: string; minutes: number; href: string; unit_id: string | null; completed: boolean }[];
+}
+
+export interface LearningProgress {
+  id: number; subject: string; unit_id: string; completed: boolean;
+  score: number | null; attempts: number; last_position: number | null;
+  completed_at: string | null; updated_at: string;
+}
+
+export interface MistakeItem {
+  id: number; subject: string; item_key: string; question: string;
+  correct_answer: string; user_answer: string | null; explanation: string | null;
+  mistake_count: number; last_mistake_at: string; resolved_at: string | null;
+}
+
 export interface Word {
   id: number;
   chinese: string;
@@ -377,6 +398,10 @@ export const api = {
       telegram_enabled: boolean;
       telegram_bot_token_configured: boolean;
       telegram_chat_id: string | null;
+      study_minutes: 5 | 15 | 30 | 60;
+      focus_subject: string;
+      sqld_exam_date: string | null;
+      network_exam_date: string | null;
     }>("/settings/"),
     update: (data: {
       daily_goal_words?: number;
@@ -391,6 +416,10 @@ export const api = {
       telegram_enabled?: boolean;
       telegram_bot_token?: string;
       telegram_chat_id?: string | null;
+      study_minutes?: 5 | 15 | 30 | 60;
+      focus_subject?: string;
+      sqld_exam_date?: string | null;
+      network_exam_date?: string | null;
     }) =>
       req<{
         daily_goal_words: number;
@@ -405,6 +434,10 @@ export const api = {
         telegram_enabled: boolean;
         telegram_bot_token_configured: boolean;
         telegram_chat_id: string | null;
+        study_minutes: 5 | 15 | 30 | 60;
+        focus_subject: string;
+        sqld_exam_date: string | null;
+        network_exam_date: string | null;
       }>("/settings/", { method: "PUT", body: JSON.stringify(data) }),
     syncObsidian: () =>
       req<{ ok: boolean; synced_dates: number }>("/settings/obsidian/sync", { method: "POST" }),
@@ -449,5 +482,19 @@ export const api = {
         "/quizzes/answer",
         { method: "POST", body: JSON.stringify(data) }
       ),
+  },
+  learning: {
+    today: (minutes?: 5 | 15 | 30 | 60) => req<TodayPlan>(`/learning/today${minutes ? `?minutes=${minutes}` : ""}`),
+    progress: (subject?: string) => req<LearningProgress[]>(`/learning/progress${subject ? `?subject=${subject}` : ""}`),
+    complete: (subject: string, unitId: string, data: { completed?: boolean; score?: number; last_position?: number; duration_minutes?: number; title?: string }) =>
+      req<LearningProgress>(`/learning/progress/${subject}/${unitId}`, { method: "PUT", body: JSON.stringify(data) }),
+    activity: (data: { subject: string; activity_type: string; unit_id?: string; title?: string; duration_minutes?: number; correct_count?: number; total_count?: number; note?: string }) =>
+      req<Record<string, unknown>>("/learning/activities", { method: "POST", body: JSON.stringify(data) }),
+    mistakes: (subject?: string) => req<MistakeItem[]>(`/learning/mistakes${subject ? `?subject=${subject}` : ""}`),
+    addMistake: (data: { subject: string; item_key: string; question: string; correct_answer: string; user_answer?: string; explanation?: string }) =>
+      req<MistakeItem>("/learning/mistakes", { method: "POST", body: JSON.stringify(data) }),
+    resolveMistake: (id: number) => req<{ ok: boolean }>(`/learning/mistakes/${id}/resolve`, { method: "POST" }),
+    weeklyReport: () => req<{ days: number; activities: number; minutes: number; by_subject: Record<string, { activities: number; minutes: number; correct: number; total: number }>; unresolved_mistakes: number }>("/learning/weekly-report"),
+    migrateLocal: (data: { sqld: Record<string, boolean>; network: Record<string, boolean> }) => req<{ imported: number }>("/learning/migrate-local", { method: "POST", body: JSON.stringify(data) }),
   },
 };

@@ -5,6 +5,7 @@ from database import engine, Base
 from migrations_runtime import ensure_runtime_migrations
 from routers import tasks, categories, words, image_test, english_words, english_phrases, calendar_events, stats, japanese_words
 from routers import auth, admin, push, search, settings, achievements, spring_topics, quizzes
+from routers import learning
 from auth_utils import get_current_user
 from scheduler import start_scheduler
 
@@ -47,6 +48,7 @@ app.include_router(settings.router,      dependencies=_auth)
 app.include_router(achievements.router,  dependencies=_auth)
 app.include_router(spring_topics.router, dependencies=_auth)
 app.include_router(quizzes.router,       dependencies=_auth)
+app.include_router(learning.router,      dependencies=_auth)
 app.include_router(admin.router)
 
 app.mount("/images", StaticFiles(directory="test_output"), name="images")

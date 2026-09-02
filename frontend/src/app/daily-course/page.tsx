@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SQLD_CURRICULUM } from "../sqld/curriculum";
 import { NETWORK_CURRICULUM } from "../network/curriculum";
+import { api } from "@/lib/api";
 
 type Subject="zh"|"ja"|"db"|"network";
 type Progress=Record<number,Partial<Record<Subject,boolean>>>;
@@ -21,10 +22,10 @@ function japanese(day:number){if(day<=25)return {title:KANA_ROWS[day-1],detail:"
 
 export default function DailyCoursePage(){
   const router=useRouter();const [day,setDay]=useState(1);const [progress,setProgress]=useState<Progress>({});
-  useEffect(()=>{try{const saved:Progress=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");setProgress(saved);const next=Array.from({length:100},(_,i)=>i+1).find(d=>!SUBJECTS.every(s=>saved[d]?.[s]));setDay(next||100);}catch{}},[]);
+  useEffect(()=>{try{const saved:Progress=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");setProgress(saved);api.learning.progress().then(rows=>{const server:Progress={...saved};rows.filter(row=>row.subject.startsWith("daily-")&&row.completed).forEach(row=>{const subject=row.subject.slice(6) as Subject;const unit=Number(row.unit_id);if(SUBJECTS.includes(subject)&&unit>=1&&unit<=100)server[unit]={...server[unit],[subject]:true};});setProgress(server);const next=Array.from({length:100},(_,i)=>i+1).find(d=>!SUBJECTS.every(s=>server[d]?.[s]));setDay(next||100);}).catch(()=>{});const next=Array.from({length:100},(_,i)=>i+1).find(d=>!SUBJECTS.every(s=>saved[d]?.[s]));setDay(next||100);}catch{}},[]);
   const completedDays=useMemo(()=>Array.from({length:100},(_,i)=>i+1).filter(d=>SUBJECTS.every(s=>progress[d]?.[s])).length,[progress]);
   const tasks={zh:chinese(day),ja:japanese(day),db:{title:`${day}단계 · ${SQLD_CURRICULUM[day-1].title}`,detail:SQLD_CURRICULUM[day-1].points[0],href:`/sqld?step=${day}`},network:{title:`${day}단계 · ${NETWORK_CURRICULUM[day-1].title}`,detail:NETWORK_CURRICULUM[day-1].points[0],href:`/network?step=${day}`}};
-  const toggle=(subject:Subject)=>{const next={...progress,[day]:{...progress[day],[subject]:!progress[day]?.[subject]}};setProgress(next);localStorage.setItem(STORAGE_KEY,JSON.stringify(next));};
+  const toggle=async(subject:Subject)=>{const completed=!progress[day]?.[subject];const next={...progress,[day]:{...progress[day],[subject]:completed}};setProgress(next);localStorage.setItem(STORAGE_KEY,JSON.stringify(next));await api.learning.complete(`daily-${subject}`,String(day),{completed,duration_minutes:completed?META[subject].minutes:0,title:tasks[subject].title}).catch(()=>{});};
   const todayDone=SUBJECTS.every(s=>progress[day]?.[s]);
   return <div className="min-h-dvh bg-dark-400"><header className="border-b border-white/5 bg-dark-300 px-5 pb-5 pt-10"><div className="mx-auto max-w-4xl"><button onClick={()=>router.back()} className="mb-4 text-sm text-stone-500">← 홈으로</button><div className="flex items-end justify-between gap-4"><div><p className="text-sm font-bold text-emerald-400">매일 약 95분</p><h1 className="mt-1 text-3xl font-black text-stone-100">추천 하루 학습</h1><p className="mt-2 text-sm text-stone-500">HSK 4급 · 일본어 기초 · SQLD · 네트워크관리사</p></div><div className="text-right"><p className="text-2xl font-black text-stone-100">{completedDays}<span className="text-sm text-stone-600">/100일</span></p><p className="text-xs text-stone-600">완료</p></div></div><div className="mt-4 h-2 overflow-hidden rounded-full bg-dark-100"><div className="h-full bg-emerald-500" style={{width:`${completedDays}%`}}/></div></div></header>
     <main className="mx-auto max-w-4xl px-4 py-5"><div className="mb-5 flex items-center justify-between rounded-2xl bg-dark-200 p-3"><button disabled={day===1} onClick={()=>setDay(day-1)} className="rounded-xl px-4 py-2 text-stone-400 disabled:opacity-30">←</button><div className="text-center"><p className="text-xl font-black text-stone-100">{day}일차</p><p className={`text-xs ${todayDone?"text-emerald-400":"text-stone-600"}`}>{todayDone?"오늘 학습 완료 ✓":"네 과목을 하나씩 완료하세요"}</p></div><button disabled={day===100} onClick={()=>setDay(day+1)} className="rounded-xl px-4 py-2 text-stone-400 disabled:opacity-30">→</button></div>

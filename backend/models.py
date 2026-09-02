@@ -201,6 +201,64 @@ class UserSettings(Base):
     telegram_enabled = Column(Boolean, default=False, nullable=False, server_default="false")
     telegram_bot_token = Column(String, nullable=True)
     telegram_chat_id = Column(String(100), nullable=True)
+    study_minutes = Column(Integer, default=15, nullable=False, server_default="15")
+    focus_subject = Column(String(20), default="sqld", nullable=False, server_default="sqld")
+    sqld_exam_date = Column(String(10), nullable=True)
+    network_exam_date = Column(String(10), nullable=True)
+
+
+class LearningProgress(Base):
+    """Cross-device completion and resume position for every course."""
+    __tablename__ = "learning_progress"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    subject = Column(String(30), nullable=False)
+    unit_id = Column(String(100), nullable=False)
+    completed = Column(Boolean, default=False, nullable=False, server_default="false")
+    score = Column(Integer, nullable=True)
+    attempts = Column(Integer, default=0, nullable=False, server_default="0")
+    last_position = Column(Integer, nullable=True)
+    completed_at = Column(DateTime(timezone=True), nullable=True)
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
+
+    __table_args__ = (UniqueConstraint("user_id", "subject", "unit_id", name="uq_learning_progress_user_unit"),)
+
+
+class LearningActivity(Base):
+    """Append-only study log used for streaks, recovery and weekly reports."""
+    __tablename__ = "learning_activities"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    subject = Column(String(30), nullable=False)
+    activity_type = Column(String(30), nullable=False)
+    unit_id = Column(String(100), nullable=True)
+    title = Column(String(300), nullable=True)
+    duration_minutes = Column(Integer, default=0, nullable=False, server_default="0")
+    correct_count = Column(Integer, nullable=True)
+    total_count = Column(Integer, nullable=True)
+    note = Column(String(1000), nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+
+class MistakeItem(Base):
+    """Deduplicated wrong-answer notebook across certifications and languages."""
+    __tablename__ = "mistake_items"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    subject = Column(String(30), nullable=False)
+    item_key = Column(String(120), nullable=False)
+    question = Column(String(1000), nullable=False)
+    correct_answer = Column(String(1000), nullable=False)
+    user_answer = Column(String(1000), nullable=True)
+    explanation = Column(String(2000), nullable=True)
+    mistake_count = Column(Integer, default=1, nullable=False, server_default="1")
+    last_mistake_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    resolved_at = Column(DateTime(timezone=True), nullable=True)
+
+    __table_args__ = (UniqueConstraint("user_id", "subject", "item_key", name="uq_mistake_user_item"),)
 
 
 class TelegramQuizDelivery(Base):
@@ -213,6 +271,17 @@ class TelegramQuizDelivery(Base):
     sent_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
 
     __table_args__ = (UniqueConstraint("user_id", "quiz_date", name="uq_telegram_quiz_user_date"),)
+
+
+class TelegramWeeklyDelivery(Base):
+    __tablename__ = "telegram_weekly_deliveries"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    report_week = Column(String(10), nullable=False)
+    sent_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+
+    __table_args__ = (UniqueConstraint("user_id", "report_week", name="uq_telegram_weekly_user_week"),)
 
 
 class Achievement(Base):

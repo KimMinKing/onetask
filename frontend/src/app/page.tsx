@@ -12,6 +12,7 @@ import { getUser, clearAuth } from "@/lib/auth";
 import { subscribePush } from "@/lib/push";
 import { api } from "@/lib/api";
 import { COMMON_TEXT, useUiLanguage, UiLanguage } from "@/lib/i18n";
+import TodayStudy from "@/components/TodayStudy";
 
 type Tab = "todo" | "done";
 const HOME_TEXT: Record<UiLanguage, {
@@ -148,6 +149,7 @@ export default function Home() {
       {/* 탭 */}
       <div className="home-desktop-shell">
         <main className="home-main-panel">
+      <TodayStudy />
       <div className="px-4 pt-4">
         <div className="flex bg-dark-200 rounded-2xl p-1 gap-1">
           {(["done", "todo"] as Tab[]).map((t) => (
