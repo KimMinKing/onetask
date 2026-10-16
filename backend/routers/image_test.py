@@ -1,4 +1,5 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from auth_utils import get_master_user
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import replicate
@@ -108,7 +109,7 @@ def get_scenes():
 
 
 @router.post("/generate")
-def generate_image(body: GenerateRequest):
+def generate_image(body: GenerateRequest, _ = Depends(get_master_user)):
     model = MODELS.get(body.model_key)
     scene = TEST_PROMPTS.get(body.scene_key, TEST_PROMPTS["friendship"])
 

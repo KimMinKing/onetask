@@ -175,16 +175,27 @@ export const authApi = {
       if (!r.ok) throw new Error((await r.json()).detail || "로그인 실패");
       return r.json() as Promise<{ is_master: boolean; username: string }>;
     }),
-  signup: (username: string, password: string, ui_language?: string) =>
+  signup: (username: string, password: string, bootstrapToken: string, ui_language?: string) =>
     fetch(`${BASE}/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "X-Bootstrap-Token": bootstrapToken },
       body: JSON.stringify({ username, password, ui_language }),
     }).then(async (r) => {
       if (!r.ok) throw new Error((await r.json()).detail || "가입 실패");
       return r.json() as Promise<{ is_master: boolean; username: string }>;
     }),
 };
+
+export interface WordPageParams { limit?: number; offset?: number; q?: string }
+
+function wordListQuery(filterName: string, filterValue: string | number | undefined, page: WordPageParams): string {
+  const params = new URLSearchParams();
+  if (filterValue !== undefined && filterValue !== "") params.set(filterName, String(filterValue));
+  params.set("limit", String(page.limit ?? 100));
+  params.set("offset", String(page.offset ?? 0));
+  if (page.q) params.set("q", page.q);
+  return `?${params}`;
+}
 
 export const api = {
   tasks: {
@@ -211,7 +222,7 @@ export const api = {
       req<CalendarEvent[]>(`/calendar-events/?year=${year}&month=${month}`),
     create: (data: { title: string; event_date: string; event_time?: string; color?: string; rrule?: string }) =>
       req<CalendarEvent>("/calendar-events/", { method: "POST", body: JSON.stringify(data) }),
-    update: (id: number, data: { title?: string; event_date?: string; event_time?: string; color?: string; rrule?: string }) =>
+    update: (id: number, data: { title?: string; event_date?: string; event_time?: string; color?: string; rrule?: string | null }) =>
       req<CalendarEvent>(`/calendar-events/${id}`, { method: "PATCH", body: JSON.stringify(data) }),
     delete: (id: number) =>
       req<{ ok: boolean }>(`/calendar-events/${id}`, { method: "DELETE" }),
@@ -229,7 +240,7 @@ export const api = {
       req<{ ok: boolean }>(`/categories/${id}`, { method: "DELETE" }),
   },
   words: {
-    list: (hsk_level?: number) => req<Word[]>(`/words/${hsk_level ? `?hsk_level=${hsk_level}` : ""}`),
+    list: (hsk_level?: number, page: WordPageParams = {}) => req<Word[]>(`/words/${wordListQuery("hsk_level", hsk_level, page)}`),
     due: (hsk_level?: number) => req<Word[]>(`/words/due${hsk_level ? `?hsk_level=${hsk_level}` : ""}`),
     stats: (hsk_level?: number) => req<{ total: number; reviewed: number; new: number; due: number; today: number }>(`/words/stats${hsk_level ? `?hsk_level=${hsk_level}` : ""}`),
     today: (hsk_level?: number) => req<Word[]>(`/words/today${hsk_level ? `?hsk_level=${hsk_level}` : ""}`),
@@ -259,7 +270,7 @@ export const api = {
     history: (days = 90) => req<{ date: string; count: number }[]>(`/stats/history?days=${days}`),
   },
   englishWords: {
-    list: (level?: string) => req<EnglishWord[]>(`/english-words/${level ? `?level=${level}` : ""}`),
+    list: (level?: string, page: WordPageParams = {}) => req<EnglishWord[]>(`/english-words/${wordListQuery("level", level, page)}`),
     due: (level?: string) => req<EnglishWord[]>(`/english-words/due${level ? `?level=${level}` : ""}`),
     stats: (level?: string) => req<{ total: number; reviewed: number; new: number; due: number; today: number }>(`/english-words/stats${level ? `?level=${level}` : ""}`),
     today: (level?: string) => req<EnglishWord[]>(`/english-words/today${level ? `?level=${level}` : ""}`),
@@ -318,7 +329,7 @@ export const api = {
       }),
   },
   japaneseWords: {
-    list: (jlpt_level?: string) => req<JapaneseWord[]>(`/japanese-words/list${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),
+    list: (jlpt_level?: string, page: WordPageParams = {}) => req<JapaneseWord[]>(`/japanese-words/list${wordListQuery("jlpt_level", jlpt_level, page)}`),
     due: (jlpt_level?: string) => req<JapaneseWord[]>(`/japanese-words/due${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),
     stats: (jlpt_level?: string) => req<{ total: number; reviewed: number; new: number; due: number; today: number }>(`/japanese-words/stats${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),
     today: (jlpt_level?: string) => req<JapaneseWord[]>(`/japanese-words/today${jlpt_level ? `?jlpt_level=${jlpt_level}` : ""}`),

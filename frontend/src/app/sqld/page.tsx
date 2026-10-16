@@ -4,12 +4,13 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { SQLD_CURRICULUM, SqldLesson } from "./curriculum";
 import { api } from "@/lib/api";
+import { readUserStorage, writeUserStorage } from "@/lib/auth";
 
 const STORAGE_KEY = "sqld_progress_v1";
 
 function loadProgress(): Record<number, boolean> {
   if (typeof window === "undefined") return {};
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch { return {}; }
+  try { return JSON.parse(readUserStorage(STORAGE_KEY) || "{}"); } catch { return {}; }
 }
 
 function CodeBlock({ children }: { children: string }) {
@@ -90,7 +91,7 @@ export default function SqldPage() {
   const complete = async (id: number) => {
     const next = { ...progress, [id]: true };
     setProgress(next);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    writeUserStorage(STORAGE_KEY, JSON.stringify(next));
     await api.learning.complete("sqld", String(id), { completed: true, score: 100, duration_minutes: 15, title: SQLD_CURRICULUM[id - 1].title }).catch(() => {});
     setSelected(id < 100 ? id + 1 : 0);
   };

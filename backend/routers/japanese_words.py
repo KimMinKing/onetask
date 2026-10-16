@@ -1,5 +1,6 @@
 import random
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional
@@ -9,7 +10,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import JapaneseWord, JapaneseWordCard, User
-from auth_utils import get_current_user
+from auth_utils import get_current_user, get_master_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from translation_utils import translate_ko_to_zh
 
@@ -174,11 +175,13 @@ def get_favorites(jlpt_level: Optional[str] = None, db: Session = Depends(get_db
 
 
 @router.get("/list")
-def get_words(jlpt_level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    q = db.query(JapaneseWord)
+def get_words(jlpt_level: Optional[str] = None, limit: int = Query(100, ge=1, le=200), offset: int = Query(0, ge=0), q: str = Query("", max_length=100), db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    query = db.query(JapaneseWord)
     if jlpt_level:
-        q = q.filter(JapaneseWord.jlpt_level == jlpt_level)
-    words = q.order_by(JapaneseWord.id).all()
+        query = query.filter(JapaneseWord.jlpt_level == jlpt_level)
+    if search := q.strip():
+        query = query.filter(or_(JapaneseWord.expression.icontains(search, autoescape=True), JapaneseWord.reading.icontains(search, autoescape=True), JapaneseWord.meaning.icontains(search, autoescape=True), JapaneseWord.meaning_zh.icontains(search, autoescape=True), JapaneseWord.example_zh.icontains(search, autoescape=True)))
+    words = query.order_by(JapaneseWord.id).offset(offset).limit(limit).all()
     word_ids = {w.id for w in words}
     cards = {wc.word_id: wc for wc in db.query(JapaneseWordCard).filter(
         JapaneseWordCard.user_id == user.id, JapaneseWordCard.word_id.in_(word_ids)).all()}
@@ -224,7 +227,7 @@ def toggle_favorite(word_id: int, db: Session = Depends(get_db), user: User = De
 
 
 @router.post("/{word_id}/translate-zh")
-def translate_word_to_zh(word_id: int, db: Session = Depends(get_db)):
+def translate_word_to_zh(word_id: int, db: Session = Depends(get_db), _ = Depends(get_master_user)):
     word = db.query(JapaneseWord).filter(JapaneseWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
@@ -240,7 +243,7 @@ def translate_word_to_zh(word_id: int, db: Session = Depends(get_db)):
 
 
 @router.post("/tools/translate-missing-zh")
-def translate_missing_to_zh(jlpt_level: Optional[str] = None, limit: int = 500, db: Session = Depends(get_db)):
+def translate_missing_to_zh(jlpt_level: Optional[str] = None, limit: int = 500, db: Session = Depends(get_db), _ = Depends(get_master_user)):
     q = db.query(JapaneseWord).filter(
         (JapaneseWord.meaning_zh == None) | ((JapaneseWord.example_ko != None) & (JapaneseWord.example_zh == None))
     )

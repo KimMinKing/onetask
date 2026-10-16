@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { playWordSpeech, stopWordPlayback } from "@/lib/wordAudio";
+import { readUserStorage, writeUserStorage } from "@/lib/auth";
 
 type UiLanguage = "ko" | "zh";
 type Script = "all" | "hiragana" | "katakana";
@@ -25,14 +27,14 @@ const CARDS:KanaCard[]=BASE.flatMap(([h,k,romaji,sound,example])=>[
 ]);
 const STORAGE_KEY="kana_study_progress_v1";
 const shuffle=<T,>(items:T[])=>{const next=[...items];for(let i=next.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[next[i],next[j]]=[next[j],next[i]];}return next;};
-const speak=(text:string)=>{if(!("speechSynthesis" in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="ja-JP";u.rate=.8;window.speechSynthesis.speak(u);};
+const speak=(text:string)=>{if(!("speechSynthesis" in window))return;stopWordPlayback();const u=new SpeechSynthesisUtterance(text);u.lang="ja-JP";u.rate=.8;playWordSpeech(u);};
 
 export default function KanaStudy({uiLanguage,onBack}:{uiLanguage:UiLanguage;onBack:()=>void}){
   const zh=uiLanguage==="zh";const [script,setScript]=useState<Script>("hiragana");const [deck,setDeck]=useState<KanaCard[]>(()=>CARDS.filter(x=>x.script==="hiragana"));const [index,setIndex]=useState(0);const [revealed,setRevealed]=useState(false);const [known,setKnown]=useState<Record<string,boolean>>({});
-  useEffect(()=>{try{setKnown(JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}"));}catch{}return()=>window.speechSynthesis.cancel();},[]);
+  useEffect(()=>{try{setKnown(JSON.parse(readUserStorage(STORAGE_KEY)||"{}"));}catch{}return()=>stopWordPlayback();},[]);
   const current=deck[index];const learned=useMemo(()=>CARDS.filter(x=>known[x.id]).length,[known]);
   const changeScript=(value:Script)=>{setScript(value);setDeck(CARDS.filter(x=>value==="all"||x.script===value));setIndex(0);setRevealed(false);};
-  const answer=(right:boolean)=>{if(right){const next={...known,[current.id]:true};setKnown(next);localStorage.setItem(STORAGE_KEY,JSON.stringify(next));}if(index+1>=deck.length){setDeck(shuffle(deck));setIndex(0);}else setIndex(index+1);setRevealed(false);};
+  const answer=(right:boolean)=>{if(right){const next={...known,[current.id]:true};setKnown(next);writeUserStorage(STORAGE_KEY,JSON.stringify(next));}if(index+1>=deck.length){setDeck(shuffle(deck));setIndex(0);}else setIndex(index+1);setRevealed(false);};
   return <div className="flex min-h-dvh flex-col bg-dark-400"><header className="border-b border-white/5 bg-dark-300 px-5 pb-4 pt-10"><div className="flex items-center gap-3"><button onClick={onBack} className="h-9 w-9 rounded-xl bg-dark-200 text-stone-400">←</button><div><h1 className="text-xl font-bold text-stone-100">{zh?"日语 0 阶段":"일본어 0단계"}</h1><p className="mt-0.5 text-xs text-stone-500">{zh?"平假名 · 片假名 92张卡片":"히라가나 · 가타카나 92개 카드"}</p></div><span className="ml-auto text-xs font-bold text-jeok-400">{learned}/92</span></div><div className="mt-4 grid grid-cols-3 gap-2">{(["hiragana","katakana","all"] as Script[]).map(x=><button key={x} onClick={()=>changeScript(x)} className={`rounded-lg py-2 text-xs font-bold ${script===x?"bg-jeok-600 text-white":"bg-dark-200 text-stone-500"}`}>{x==="hiragana"?"ひらがな":x==="katakana"?"カタカナ":zh?"全部":"전체"}</button>)}</div></header>
     <main className="flex flex-1 flex-col items-center justify-center gap-5 px-5 py-6"><div className="text-xs text-stone-600">{index+1}/{deck.length} · {known[current.id]?(zh?"已学习":"학습 완료"):(zh?"新卡片":"새 카드")}</div><button onClick={()=>setRevealed(!revealed)} className="relative flex min-h-[360px] w-full max-w-[430px] flex-col items-center justify-center rounded-3xl border border-white/5 bg-dark-200 p-8 shadow-xl"><span className="absolute right-5 top-4 text-sm text-stone-700">{current.script==="hiragana"?"ひらがな":"カタカナ"}</span><span className="text-8xl font-black text-stone-100">{current.kana}</span>{revealed?<div className="mt-7 text-center"><p className="text-2xl font-bold text-jeok-300">{current.romaji} · {current.sound}</p><p className="mt-3 text-base text-stone-300">{current.example}</p><p className="mt-2 text-xs text-stone-600">{zh?"对应文字":"짝 문자"} {current.pair}</p></div>:<p className="mt-8 text-xs text-stone-600">{zh?"点击查看发音":"탭해서 발음 보기"}</p>}<span onClick={e=>{e.stopPropagation();speak(current.kana);}} className="absolute bottom-5 right-5 flex h-11 w-11 items-center justify-center rounded-full bg-jeok-950 text-xl text-jeok-300">🔊</span></button>
       <div className="grid w-full max-w-[430px] grid-cols-2 gap-3"><button onClick={()=>answer(false)} className="rounded-2xl border border-jeok-800 bg-dark-200 py-4 font-bold text-jeok-400">← {zh?"不认识":"몰랐음"}</button><button onClick={()=>answer(true)} className="rounded-2xl border border-green-900 bg-dark-200 py-4 font-bold text-green-400">{zh?"认识":"알았음"} →</button></div><button onClick={()=>{setDeck(shuffle(deck));setIndex(0);setRevealed(false);}} className="text-xs text-stone-600 hover:text-stone-300">↻ {zh?"随机排序":"카드 섞기"}</button></main></div>;

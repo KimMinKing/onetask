@@ -1,11 +1,14 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from datetime import date, timedelta
+import pytest
+from fastapi import HTTPException
+from pydantic import ValidationError
 
 from database import Base
 from learning_service import build_today_plan, next_unit, weekly_report
 from models import LearningActivity, LearningProgress, User, UserSettings
-from routers.learning import ActivityCreate, ProgressUpdate, create_activity, update_progress
+from routers.learning import ActivityCreate, LocalMigration, ProgressUpdate, create_activity, migrate_local, update_progress
 
 
 def session():
@@ -78,3 +81,57 @@ def test_completed_course_has_no_phantom_101st_lesson():
 
     assert plan["tasks"][0]["completed"] is True
     assert "101단계" not in plan["tasks"][0]["title"]
+
+
+def test_cpp_focus_and_extended_network_steps_have_valid_deep_links():
+    db = session()
+    user = User(username="systems_learner", hashed_password="x")
+    db.add(user)
+    db.flush()
+    settings = UserSettings(user_id=user.id, study_minutes=15, focus_subject="cpp")
+    db.add(settings)
+    db.add_all([LearningProgress(user_id=user.id, subject="network", unit_id=str(unit), completed=True)
+                for unit in range(1, 101)])
+    db.commit()
+
+    cpp_task = build_today_plan(db, user.id)["tasks"][0]
+    assert cpp_task["href"] == "/cpp?step=1"
+    assert next_unit(db, user.id, "network") == 101
+
+    settings.focus_subject = "network"
+    db.commit()
+    network_task = build_today_plan(db, user.id)["tasks"][0]
+    assert network_task["href"] == "/network?step=101"
+
+
+def test_course_progress_rejects_out_of_range_and_noncanonical_units():
+    db = session()
+    user = User(username="bounded_units", hashed_password="x")
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+
+    update_progress("cpp", "26", ProgressUpdate(completed=True), db, user)
+    update_progress("network", "120", ProgressUpdate(completed=True), db, user)
+    for subject, unit_id in (("cpp", "27"), ("network", "121"), ("sqld", "101"),
+                             ("cpp", "00"), ("cpp", "٢"), ("cpp", "9" * 500)):
+        with pytest.raises(HTTPException) as error:
+            update_progress(subject, unit_id, ProgressUpdate(completed=True), db, user)
+        assert error.value.status_code == 400
+    assert db.query(LearningProgress).filter_by(user_id=user.id).count() == 2
+
+
+def test_local_progress_migration_skips_invalid_units_and_limits_payload():
+    db = session()
+    user = User(username="migration_units", hashed_password="x")
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+
+    result = migrate_local(LocalMigration(sqld={"100": True, "101": True, "01": True},
+                                          network={"101": True, "121": True, "9" * 500: True}), db, user)
+    assert result["imported"] == 2
+    assert {(row.subject, row.unit_id) for row in db.query(LearningProgress).all()} == {
+        ("sqld", "100"), ("network", "101")}
+    with pytest.raises(ValidationError):
+        LocalMigration(network={str(unit): True for unit in range(1, 122)})

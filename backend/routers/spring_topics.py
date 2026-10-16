@@ -1,6 +1,7 @@
 import random
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import IntegrityError
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, timezone
@@ -8,10 +9,35 @@ from datetime import datetime, timezone
 from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
-from models import SpringTopic, SpringTopicCard
+from auth_utils import get_current_user, get_master_user
+from models import SpringTopic, SpringTopicUserCard, User
 
 router = APIRouter(prefix="/spring-topics", tags=["spring-topics"])
 scheduler = Scheduler()
+
+
+def _as_utc(value: datetime) -> datetime:
+    return value if value.tzinfo else value.replace(tzinfo=timezone.utc)
+
+
+def _get_or_create_card(db: Session, user_id: int, topic_id: int) -> SpringTopicUserCard:
+    card = db.query(SpringTopicUserCard).filter(
+        SpringTopicUserCard.user_id == user_id,
+        SpringTopicUserCard.topic_id == topic_id,
+    ).first()
+    if card is not None:
+        return card
+    card = SpringTopicUserCard(user_id=user_id, topic_id=topic_id)
+    try:
+        with db.begin_nested():
+            db.add(card)
+            db.flush()
+    except IntegrityError:
+        card = db.query(SpringTopicUserCard).filter(
+            SpringTopicUserCard.user_id == user_id,
+            SpringTopicUserCard.topic_id == topic_id,
+        ).one()
+    return card
 
 
 # Spring 주제 초기 데이터 (시드용)
@@ -193,7 +219,7 @@ class ReviewRequest(BaseModel):
     knew: bool
 
 
-def _card_from_db(tc: SpringTopicCard) -> Card:
+def _card_from_db(tc: SpringTopicUserCard) -> Card:
     c = Card()
     if tc.reps == 0 or tc.state == 0:
         return c
@@ -206,7 +232,7 @@ def _card_from_db(tc: SpringTopicCard) -> Card:
     return c
 
 
-def _sync_card_to_db(tc: SpringTopicCard, c: Card, lapses_delta: int = 0):
+def _sync_card_to_db(tc: SpringTopicUserCard, c: Card, lapses_delta: int = 0):
     tc.state = c.state.value
     tc.step = c.step
     tc.stability = c.stability
@@ -217,9 +243,9 @@ def _sync_card_to_db(tc: SpringTopicCard, c: Card, lapses_delta: int = 0):
     tc.lapses += lapses_delta
 
 
-def _topic_with_card(topic: SpringTopic, tc: Optional[SpringTopicCard]) -> dict:
+def _topic_with_card(topic: SpringTopic, tc: Optional[SpringTopicUserCard]) -> dict:
     now = datetime.now(timezone.utc)
-    due = tc.due if tc else now
+    due = _as_utc(tc.due) if tc else now
     return {
         "id": topic.id,
         "title": topic.title,
@@ -233,30 +259,30 @@ def _topic_with_card(topic: SpringTopic, tc: Optional[SpringTopicCard]) -> dict:
         "lapses": tc.lapses if tc else 0,
         "due": due,
         "is_due": due <= now,
-        "is_favorite": topic.is_favorite,
+        "is_favorite": tc.is_favorite if tc else False,
     }
 
 
 @router.get("/")
-def get_topics(category: Optional[str] = None, db: Session = Depends(get_db)):
+def get_topics(category: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     q = db.query(SpringTopic)
     if category:
         q = q.filter(SpringTopic.category == category)
     topics = q.order_by(SpringTopic.id).all()
     topic_ids = {t.id for t in topics}
-    cards = {tc.topic_id: tc for tc in db.query(SpringTopicCard).filter(SpringTopicCard.topic_id.in_(topic_ids)).all()}
+    cards = {tc.topic_id: tc for tc in db.query(SpringTopicUserCard).filter(SpringTopicUserCard.user_id == user.id, SpringTopicUserCard.topic_id.in_(topic_ids)).all()}
     return [_topic_with_card(t, cards.get(t.id)) for t in topics]
 
 
 @router.get("/due")
-def get_due_topics(category: Optional[str] = None, db: Session = Depends(get_db)):
+def get_due_topics(category: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     q = db.query(SpringTopic)
     if category:
         q = q.filter(SpringTopic.category == category)
     topics = q.all()
     topic_ids = {t.id for t in topics}
-    cards = {tc.topic_id: tc for tc in db.query(SpringTopicCard).filter(SpringTopicCard.topic_id.in_(topic_ids)).all()}
+    cards = {tc.topic_id: tc for tc in db.query(SpringTopicUserCard).filter(SpringTopicUserCard.user_id == user.id, SpringTopicUserCard.topic_id.in_(topic_ids)).all()}
 
     review_topics = []
     new_topics = []
@@ -264,7 +290,7 @@ def get_due_topics(category: Optional[str] = None, db: Session = Depends(get_db)
         tc = cards.get(t.id)
         if tc is None or tc.reps == 0:
             new_topics.append(_topic_with_card(t, tc))
-        elif tc.due <= now:
+        elif _as_utc(tc.due) <= now:
             review_topics.append(_topic_with_card(t, tc))
 
     review_topics.sort(key=lambda x: x["due"])
@@ -273,7 +299,7 @@ def get_due_topics(category: Optional[str] = None, db: Session = Depends(get_db)
 
 
 @router.get("/stats")
-def get_stats(category: Optional[str] = None, db: Session = Depends(get_db)):
+def get_stats(category: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     q = db.query(SpringTopic)
@@ -281,17 +307,17 @@ def get_stats(category: Optional[str] = None, db: Session = Depends(get_db)):
         q = q.filter(SpringTopic.category == category)
     topics = q.all()
     topic_ids = {t.id for t in topics}
-    cards = db.query(SpringTopicCard).filter(SpringTopicCard.topic_id.in_(topic_ids)).all()
-    reviewed_ids = {tc.topic_id for tc in cards}
+    cards = db.query(SpringTopicUserCard).filter(SpringTopicUserCard.user_id == user.id, SpringTopicUserCard.topic_id.in_(topic_ids)).all()
+    reviewed_ids = {tc.topic_id for tc in cards if tc.reps > 0}
     total = len(topics)
     reviewed = len(reviewed_ids)
-    due = sum(1 for c in cards if c.due <= now) + (total - reviewed)
-    today = sum(1 for c in cards if c.last_review and c.last_review >= today_start)
+    due = sum(1 for c in cards if c.reps > 0 and _as_utc(c.due) <= now) + (total - reviewed)
+    today = sum(1 for c in cards if c.last_review and _as_utc(c.last_review) >= today_start)
     return {"total": total, "reviewed": reviewed, "new": total - reviewed, "due": due, "today": today}
 
 
 @router.get("/today")
-def get_today_topics(category: Optional[str] = None, db: Session = Depends(get_db)):
+def get_today_topics(category: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     q = db.query(SpringTopic)
@@ -300,18 +326,18 @@ def get_today_topics(category: Optional[str] = None, db: Session = Depends(get_d
     topics = q.all()
     topic_id_map = {t.id: t for t in topics}
     cards = [
-        tc for tc in db.query(SpringTopicCard).filter(SpringTopicCard.topic_id.in_(topic_id_map.keys())).all()
-        if tc.last_review and tc.last_review >= today_start
+        tc for tc in db.query(SpringTopicUserCard).filter(SpringTopicUserCard.user_id == user.id, SpringTopicUserCard.topic_id.in_(topic_id_map.keys())).all()
+        if tc.last_review and _as_utc(tc.last_review) >= today_start
     ]
     return [_topic_with_card(topic_id_map[tc.topic_id], tc) for tc in cards]
 
 
 @router.get("/daily")
-def get_daily_topics(new_count: int = 5, db: Session = Depends(get_db)):
+def get_daily_topics(new_count: int = 5, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     """오늘의 Spring: 전 카테고리 복습 due 카드 + 신규 N개 랜덤"""
     now = datetime.now(timezone.utc)
     all_topics = {t.id: t for t in db.query(SpringTopic).all()}
-    all_cards = {tc.topic_id: tc for tc in db.query(SpringTopicCard).all()}
+    all_cards = {tc.topic_id: tc for tc in db.query(SpringTopicUserCard).filter(SpringTopicUserCard.user_id == user.id).all()}
 
     review_topics = []
     new_topics = []
@@ -319,7 +345,7 @@ def get_daily_topics(new_count: int = 5, db: Session = Depends(get_db)):
     for topic in all_topics.values():
         tc = all_cards.get(topic.id)
         if tc and tc.reps > 0:
-            if tc.due <= now:
+            if _as_utc(tc.due) <= now:
                 review_topics.append(_topic_with_card(topic, tc))
         else:
             new_topics.append(_topic_with_card(topic, tc))
@@ -330,37 +356,34 @@ def get_daily_topics(new_count: int = 5, db: Session = Depends(get_db)):
 
 
 @router.post("/{topic_id}/favorite")
-def toggle_favorite(topic_id: int, db: Session = Depends(get_db)):
+def toggle_favorite(topic_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     topic = db.query(SpringTopic).filter(SpringTopic.id == topic_id).first()
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
-    topic.is_favorite = not topic.is_favorite
+    card = _get_or_create_card(db, user.id, topic_id)
+    card.is_favorite = not card.is_favorite
     db.commit()
-    return {"topic_id": topic_id, "is_favorite": topic.is_favorite}
+    return {"topic_id": topic_id, "is_favorite": card.is_favorite}
 
 
 @router.get("/favorites")
-def get_favorites(category: Optional[str] = None, db: Session = Depends(get_db)):
-    q = db.query(SpringTopic).filter(SpringTopic.is_favorite == True)
+def get_favorites(category: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    favorite_cards = db.query(SpringTopicUserCard).filter(SpringTopicUserCard.user_id == user.id, SpringTopicUserCard.is_favorite == True).all()
+    cards = {tc.topic_id: tc for tc in favorite_cards}
+    q = db.query(SpringTopic).filter(SpringTopic.id.in_(cards.keys()))
     if category:
         q = q.filter(SpringTopic.category == category)
     topics = q.order_by(SpringTopic.id).all()
-    topic_ids = {t.id for t in topics}
-    cards = {tc.topic_id: tc for tc in db.query(SpringTopicCard).filter(SpringTopicCard.topic_id.in_(topic_ids)).all()}
     return [_topic_with_card(t, cards.get(t.id)) for t in topics]
 
 
 @router.post("/{topic_id}/review")
-def review_topic(topic_id: int, body: ReviewRequest, db: Session = Depends(get_db)):
+def review_topic(topic_id: int, body: ReviewRequest, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     topic = db.query(SpringTopic).filter(SpringTopic.id == topic_id).first()
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
 
-    tc = db.query(SpringTopicCard).filter(SpringTopicCard.topic_id == topic_id).first()
-    if tc is None:
-        tc = SpringTopicCard(topic_id=topic_id)
-        db.add(tc)
-        db.flush()
+    tc = _get_or_create_card(db, user.id, topic_id)
 
     rating = Rating.Good if body.knew else Rating.Again
     card = _card_from_db(tc)
@@ -380,7 +403,7 @@ def review_topic(topic_id: int, body: ReviewRequest, db: Session = Depends(get_d
 
 
 @router.post("/seed")
-def seed_topics(db: Session = Depends(get_db)):
+def seed_topics(db: Session = Depends(get_db), _ = Depends(get_master_user)):
     """Spring 주제 초기 데이터 시드"""
     existing = db.query(SpringTopic).count()
     if existing > 0:

@@ -1,8 +1,11 @@
+import { TRANSPORT_LESSONS } from "./transportCurriculum";
+
 export interface NetworkLesson { id:number; section:string; title:string; summary:string; points:string[]; lab?:string; trap:string; quiz:{question:string;options:string[];answer:number;explanation:string} }
 
 function n(id:number, section:string, title:string, core:string, trap:string, lab=""):NetworkLesson {
   const points=core.split(" | ");
-  return {id,section,title,summary:`${title}은(는) 네트워크관리사 2급에서 개념과 실제 설정을 함께 묻는 주제다. 용어를 암기한 뒤 패킷의 흐름과 장비의 동작을 순서대로 설명해 보자.`,points,lab,trap,quiz:{question:`‘${title}’에 대한 설명으로 옳은 것은?`,options:[points[0],trap],answer:0,explanation:points.join(" ")}};
+  const answer = id % 2;
+  return {id,section,title,summary:`${title}은(는) 네트워크관리사 2급에서 개념과 실제 설정을 함께 묻는 주제다. 용어를 암기한 뒤 패킷의 흐름과 장비의 동작을 순서대로 설명해 보자.`,points,lab,trap,quiz:{question:`‘${title}’에 대한 설명으로 옳은 것은?`,options:answer ? [trap,points[0]] : [points[0],trap],answer,explanation:points.join(" ")}};
 }
 
 export const NETWORK_CURRICULUM:NetworkLesson[]=[
@@ -105,5 +108,6 @@ export const NETWORK_CURRICULUM:NetworkLesson[]=[
  n(97,"실기","장애 진단 순서","전원·링크→IP/마스크→게이트웨이→DNS→포트·서비스→방화벽 순으로 범위를 좁힌다. | localhost와 게이트웨이, IP와 이름 테스트를 분리한다.","도메인 접속 실패 시 원인 확인 없이 운영체제를 먼저 재설치한다."),
  n(98,"실기","패킷·포트 문제","SYN 상태·응답 코드·목적지 포트를 보고 서비스와 장애 지점을 판단한다. | 연결 거부와 시간 초과의 차이를 구분한다.","목적지 포트 53은 항상 HTTP 웹 서비스다."),
  n(99,"실기","80분 운영 전략","케이블 작업과 설정형·단답형 시간을 배분하고 저장 여부를 확인한다. | 막힌 문제는 표시 후 넘어가 확실한 점수를 먼저 확보한다.","한 문제에 시간이 오래 걸려도 끝까지 붙잡고 다른 문제는 보지 않는다."),
- n(100,"실기","최종 합격 체크","필기 50문항 50분과 실기 80분 모두 60점 이상을 목표로 한다. | 서브넷·포트·NOS·케이블·라우터 명령을 손으로 재현한다.","필기에서 60점을 넘으면 실기는 응시만 해도 자동 합격한다.")
+ n(100,"실기","최종 합격 체크","필기 50문항 50분과 실기 80분 모두 60점 이상을 목표로 한다. | 서브넷·포트·NOS·케이블·라우터 명령을 손으로 재현한다.","필기에서 60점을 넘으면 실기는 응시만 해도 자동 합격한다."),
+ ...TRANSPORT_LESSONS,
 ];

@@ -195,7 +195,7 @@ def update_settings(
         settings.study_minutes = data.study_minutes
 
     if data.focus_subject is not None:
-        if data.focus_subject not in {"zh", "ja", "en", "sqld", "network"}:
+        if data.focus_subject not in {"zh", "ja", "en", "sqld", "network", "cpp"}:
             raise HTTPException(status_code=400, detail="Unsupported focus_subject")
         settings.focus_subject = data.focus_subject
 

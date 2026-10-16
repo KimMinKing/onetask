@@ -10,6 +10,7 @@ export default function LoginPage() {
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [bootstrapToken, setBootstrapToken] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [checkingAuth, setCheckingAuth] = useState(true);
@@ -31,7 +32,7 @@ export default function LoginPage() {
       const uiLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "ko";
       const res = mode === "login"
         ? await authApi.login(username.trim(), password)
-        : await authApi.signup(username.trim(), password, uiLanguage);
+        : await authApi.signup(username.trim(), password, bootstrapToken.trim(), uiLanguage);
       setAuth({ username: res.username, is_master: res.is_master });
       router.replace("/");
     } catch (err: unknown) {
@@ -79,6 +80,18 @@ export default function LoginPage() {
               className="w-full bg-dark-200 border border-stone-700 focus:border-jeok-600 rounded-2xl px-5 py-4 text-stone-100 placeholder-stone-600 outline-none transition-colors text-sm"
             />
           </div>
+          {mode === "signup" && (
+            <div>
+              <input
+                type="password"
+                placeholder="초기 등록 코드"
+                value={bootstrapToken}
+                onChange={(e) => setBootstrapToken(e.target.value)}
+                autoComplete="off"
+                className="w-full bg-dark-200 border border-stone-700 focus:border-jeok-600 rounded-2xl px-5 py-4 text-stone-100 placeholder-stone-600 outline-none transition-colors text-sm"
+              />
+            </div>
+          )}
 
           {error && (
             <p className="text-jeok-400 text-xs px-1">{error}</p>
@@ -86,7 +99,7 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            disabled={loading || !username.trim() || !password}
+            disabled={loading || !username.trim() || !password || (mode === "signup" && !bootstrapToken.trim())}
             className="w-full py-4 bg-jeok-600 hover:bg-jeok-500 disabled:bg-dark-200 disabled:text-stone-600 text-white font-bold rounded-2xl transition-all mt-2"
           >
             {loading ? (
@@ -106,7 +119,7 @@ export default function LoginPage() {
             </button>
           ) : (
             <div className="space-y-2">
-              <p className="text-stone-700 text-xs">첫 번째 계정은 자동으로 마스터 계정이 됩니다</p>
+              <p className="text-stone-700 text-xs">서버 설정의 초기 등록 코드가 필요합니다. 첫 계정은 마스터 계정이 됩니다.</p>
               <button onClick={() => { setMode("login"); setError(""); }}
                 className="text-stone-600 hover:text-stone-400 text-xs transition-colors">
                 로그인으로 돌아가기

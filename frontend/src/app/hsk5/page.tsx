@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { readUserStorage, writeUserStorage, removeUserStorage } from "@/lib/auth";
 
 type DailyPlan = {
   day: number;
@@ -371,37 +372,37 @@ const dailyPlans: DailyPlan[] = [
 function loadProgress(): Progress {
   if (typeof window === "undefined") return {};
   try {
-    return JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}");
+    return JSON.parse(readUserStorage(PROGRESS_KEY) || "{}");
   } catch {
     return {};
   }
 }
 
 function saveProgress(progress: Progress) {
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+  writeUserStorage(PROGRESS_KEY, JSON.stringify(progress));
 }
 
 function loadMistakes(): Mistake[] {
   if (typeof window === "undefined") return [];
   try {
-    return JSON.parse(localStorage.getItem(MISTAKES_KEY) || "[]");
+    return JSON.parse(readUserStorage(MISTAKES_KEY) || "[]");
   } catch {
     return [];
   }
 }
 
 function saveMistakes(mistakes: Mistake[]) {
-  localStorage.setItem(MISTAKES_KEY, JSON.stringify(mistakes));
+  writeUserStorage(MISTAKES_KEY, JSON.stringify(mistakes));
 }
 
 function getStartDate(): string | null {
   if (typeof window === "undefined") return null;
-  return localStorage.getItem(START_KEY);
+  return readUserStorage(START_KEY);
 }
 
 function getExamDate(): string | null {
   if (typeof window === "undefined") return null;
-  return localStorage.getItem(EXAM_DATE_KEY);
+  return readUserStorage(EXAM_DATE_KEY);
 }
 
 function getCourseDay(startDate: string | null) {
@@ -472,7 +473,7 @@ export default function Hsk5CoursePage() {
 
   const startToday = () => {
     const today = new Date().toISOString().slice(0, 10);
-    localStorage.setItem(START_KEY, today);
+    writeUserStorage(START_KEY, today);
     setStartDate(today);
     setSelectedDay(1);
   };
@@ -480,8 +481,8 @@ export default function Hsk5CoursePage() {
   const updateExamDate = (value: string) => {
     const next = value || null;
     setExamDate(next);
-    if (next) localStorage.setItem(EXAM_DATE_KEY, next);
-    else localStorage.removeItem(EXAM_DATE_KEY);
+    if (next) writeUserStorage(EXAM_DATE_KEY, next);
+    else removeUserStorage(EXAM_DATE_KEY);
   };
 
   const togglePlanTask = (planDay: number, taskIndex: number) => {

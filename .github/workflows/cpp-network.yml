@@ -1,0 +1,59 @@
+name: C++ network examples
+
+on:
+  push:
+    paths:
+      - "examples/cpp-network/**"
+      - "frontend/public/examples/cpp-network/**"
+      - ".github/workflows/cpp-network.yml"
+  pull_request:
+    paths:
+      - "examples/cpp-network/**"
+      - "frontend/public/examples/cpp-network/**"
+      - ".github/workflows/cpp-network.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  socket-lab:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Verify downloadable sources
+        run: python examples/cpp-network/sync_public.py --check
+      - name: Configure
+        run: cmake -S examples/cpp-network -B build/socket-lab
+      - name: Build
+        run: cmake --build build/socket-lab --config Release
+      - name: Test
+        run: ctest --test-dir build/socket-lab -C Release --output-on-failure
+
+  secure-server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install TLS headers
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+      - name: Configure
+        run: cmake -S examples/cpp-network/secure-server -B build/secure-server
+      - name: Build
+        run: cmake --build build/secure-server
+      - name: Test
+        run: ctest --test-dir build/secure-server --output-on-failure
+      - name: Configure with sanitizers
+        run: cmake -S examples/cpp-network/secure-server -B build/secure-server-sanitized -DCMAKE_CXX_FLAGS=-fsanitize=address,undefined -DCMAKE_EXE_LINKER_FLAGS=-fsanitize=address,undefined
+      - name: Build with sanitizers
+        run: cmake --build build/secure-server-sanitized
+      - name: Test with sanitizers
+        run: ctest --test-dir build/secure-server-sanitized --output-on-failure

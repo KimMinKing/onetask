@@ -13,7 +13,9 @@ SUBJECTS = {
     "en": ("영어 표현", "/english-phrases"),
     "sqld": ("SQLD", "/sqld"),
     "network": ("네트워크관리사", "/network"),
+    "cpp": ("C++ 네트워크", "/cpp"),
 }
+COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 26}
 LANGUAGE_CARDS = {"zh": WordCard, "en": EnglishWordCard, "ja": JapaneseWordCard}
 KST = ZoneInfo("Asia/Seoul")
 
@@ -39,7 +41,7 @@ def next_unit(db: Session, user_id: int, subject: str) -> int:
         LearningProgress.completed == True,
     ).all()
     completed = {int(row.unit_id) for row in rows if row.unit_id.isdigit()}
-    limit = 100 if subject in {"sqld", "network"} else 9999
+    limit = COURSE_LIMITS.get(subject, 9999)
     for unit in range(1, limit + 1):
         if unit not in completed:
             return unit
@@ -71,7 +73,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
     tasks = []
 
     def course_href(subject: str, href: str, unit: int) -> str:
-        return f"{href}?step={unit}" if subject in {"sqld", "network"} else href
+        return f"{href}?step={unit}" if subject in {"sqld", "network", "cpp"} else href
 
     def add(subject: str, title: str, task_minutes: int, href: str, unit_id: str | None = None, completed_override: bool = False):
         progress = None
@@ -97,8 +99,9 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
 
     def add_course(subject: str, task_minutes: int, unit: int):
         label, href = SUBJECTS[subject]
-        if subject in {"sqld", "network"} and unit > 100:
-            add(subject, f"{label} 100단계 완료 · 오답 복습", task_minutes, f"/mistakes?subject={subject}", completed_override=True)
+        limit = COURSE_LIMITS.get(subject)
+        if limit is not None and unit > limit:
+            add(subject, f"{label} {limit}단계 완료 · 오답 복습", task_minutes, f"/mistakes?subject={subject}", completed_override=True)
         else:
             add(subject, f"{label} {unit}단계", task_minutes, course_href(subject, href, unit), str(unit))
 

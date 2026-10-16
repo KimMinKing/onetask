@@ -25,6 +25,7 @@ const HOME_TEXT: Record<UiLanguage, {
     stats: [string, string];
     math: [string, string];
     python: [string, string];
+    cpp: [string, string];
     sqld: [string, string];
     network: [string, string];
     dailyCourse: [string, string];
@@ -40,8 +41,9 @@ const HOME_TEXT: Record<UiLanguage, {
       stats: ["학습 통계", "진행률 · 연속일 · 레벨별"],
       math: ["AI 미적분", "중학생도 이해하는 10단계"],
       python: ["Python AI", "변수부터 신경망까지 10단계"],
+      cpp: ["C++와 TCP/UDP", "메모리 · 소켓 · 프로토콜 26단계"],
       sqld: ["SQLD 합격 100단계", "데이터 모델링 · SQL 기본 및 활용"],
-      network: ["네트워크관리사 2급", "필기 · 케이블 · 서버 · 라우터 100단계"],
+      network: ["네트워크관리사 2급", "기초 100단계 · TCP/UDP 심화 20단계"],
       dailyCourse: ["추천 하루 학습", "HSK4 · 일본어 · SQLD · 네트워크"],
     },
   },
@@ -55,8 +57,9 @@ const HOME_TEXT: Record<UiLanguage, {
       stats: ["学习统计", "进度 · 连续天数 · 按级别"],
       math: ["AI 微积分", "中学生也能理解的 10 阶段"],
       python: ["Python AI", "从变量到神经网络的 10 阶段"],
+      cpp: ["C++ 与 TCP/UDP", "内存 · 套接字 · 协议 26 阶段"],
       sqld: ["SQLD 合格 100 阶段", "数据建模 · SQL 基础与应用"],
-      network: ["网络管理员 2级", "笔试 · 网线 · 服务器 · 路由器 100阶段"],
+      network: ["网络管理员 2级", "基础 100 阶段 · TCP/UDP 进阶 20 阶段"],
       dailyCourse: ["每日推荐学习", "HSK4 · 日语 · SQLD · 网络"],
     },
   },
@@ -66,6 +69,7 @@ export default function Home() {
   const { fetchAll, tasks } = useTaskStore();
   const [tab, setTab] = useState<Tab>("todo");
   const [pushPermission, setPushPermission] = useState<NotificationPermission>("default");
+  const [pushSubscribed, setPushSubscribed] = useState(false);
   const [wordToday, setWordToday] = useState<number | null>(null);
   const uiLanguage = useUiLanguage();
   const router = useRouter();
@@ -75,15 +79,27 @@ export default function Home() {
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
   useEffect(() => {
-    if ("Notification" in window) setPushPermission(Notification.permission);
+    if ("Notification" in window) {
+      setPushPermission(Notification.permission);
+      if (Notification.permission === "granted") {
+        subscribePush().then(setPushSubscribed).catch(() => setPushSubscribed(false));
+      }
+    }
     api.stats.overview()
       .then((s) => setWordToday(s.zh_today + s.en_today + s.ja_today))
       .catch(() => {});
   }, []);
 
   const handleEnablePush = async () => {
-    const ok = await subscribePush();
-    if (ok) setPushPermission("granted");
+    try {
+      const ok = await subscribePush();
+      if (ok) {
+        setPushPermission("granted");
+        setPushSubscribed(true);
+      }
+    } catch {
+      setPushSubscribed(false);
+    }
   };
 
   const doneToday = tasks.filter((t) => {
@@ -108,7 +124,7 @@ export default function Home() {
             <p className="text-stone-600 text-xs mt-1">{dateStr}</p>
           </div>
           <div className="flex items-center gap-2 mt-1">
-            {pushPermission !== "granted" && pushPermission !== "denied" && (
+            {!pushSubscribed && pushPermission !== "denied" && (
               <button onClick={handleEnablePush}
                 className="text-xs text-jeok-500 hover:text-jeok-400 transition-colors">
                 🔔 {common.notifications}
@@ -120,7 +136,7 @@ export default function Home() {
                 admin
               </Link>
             )}
-            <button onClick={() => { clearAuth(); router.replace("/login"); }}
+            <button onClick={async () => { await clearAuth(); router.replace("/login"); }}
               className="text-xs text-stone-700 hover:text-stone-500 transition-colors">
               {common.logout}
             </button>
@@ -286,6 +302,11 @@ export default function Home() {
             <p className="text-xs text-stone-500 mt-0.5">{text.nav.python[1]}</p>
           </div>
           <span className="ml-auto text-stone-600 group-hover:text-blue-400 transition-colors">→</span>
+        </Link>
+        <Link href="/cpp" className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-emerald-800 rounded-2xl px-5 py-4 transition-all duration-200 group">
+          <div className="w-10 h-10 rounded-xl bg-emerald-900/40 flex items-center justify-center text-sm font-black text-emerald-300">C++</div>
+          <div><p className="text-sm font-semibold text-stone-200">{text.nav.cpp[0]}</p><p className="text-xs text-stone-500 mt-0.5">{text.nav.cpp[1]}</p></div>
+          <span className="ml-auto text-stone-600 group-hover:text-emerald-400 transition-colors">→</span>
         </Link>
         <Link
           href="/sqld"

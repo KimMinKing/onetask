@@ -10,7 +10,7 @@ const nextConfig = {
       { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
       { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
       { key: 'Permissions-Policy', value: 'camera=(), geolocation=(), microphone=(self)' },
-      { key: 'Content-Security-Policy', value: "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" },
+      { key: 'Content-Security-Policy', value: "default-src 'self'; img-src 'self' data: blob:; media-src 'self' https://raw.githubusercontent.com/hugolpz/audio-cmn/; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" },
     ] }];
   },
   // Keep browser requests same-origin in development and standalone deployments.

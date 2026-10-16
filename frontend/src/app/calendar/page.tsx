@@ -102,20 +102,20 @@ export default function CalendarPage() {
 
   const addEvent = async () => {
     if (!newTitle.trim() || !selectedDateStr) return;
-    const created = await api.calendarEvents.create({
+    await api.calendarEvents.create({
       title: newTitle.trim(),
       event_date: selectedDateStr,
       event_time: newTime || undefined,
       color: newColor,
       rrule: newRRule || undefined,
     });
-    setEvents((prev) => [...prev, created]);
+    load(year, month);
     setNewTitle(""); setNewTime(""); setNewColor("#3B82F6"); setNewRRule(null); setAddingEvent(false);
   };
 
   const deleteEvent = async (id: number) => {
     await api.calendarEvents.delete(id);
-    setEvents((prev) => prev.filter((e) => e.id !== id));
+    load(year, month);
   };
 
   const startEditEvent = (e: CalendarEvent) => {
@@ -129,7 +129,7 @@ export default function CalendarPage() {
   const handleEventMove = async (eventId: number, newDate: string) => {
     try {
       await api.calendarEvents.move(eventId, newDate);
-      setEvents((prev) => prev.map((e) => e.id === eventId ? { ...e, event_date: newDate } : e));
+      load(year, month);
     } catch {
       // 실패 시 무시
     }
@@ -137,13 +137,13 @@ export default function CalendarPage() {
 
   const saveEditEvent = async () => {
     if (!editTitle.trim() || editingEventId === null) return;
-    const updated = await api.calendarEvents.update(editingEventId, {
+    await api.calendarEvents.update(editingEventId, {
       title: editTitle.trim(),
       event_time: editTime || undefined,
       color: editColor,
-      rrule: editRRule || undefined,
+      rrule: editRRule,
     });
-    setEvents((prev) => prev.map((e) => e.id === editingEventId ? updated : e));
+    load(year, month);
     setEditingEventId(null);
   };
 

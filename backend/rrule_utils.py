@@ -49,7 +49,11 @@ def generate_rrule(
     elif until:
         params["until"] = until
 
-    return rrule(**params)._rrule
+    value = str(rrule(**params))
+    if start_date.tzinfo is not None:
+        utc_start = start_date.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        value = value.replace(value.splitlines()[0], f"DTSTART:{utc_start}", 1)
+    return value
 
 
 def parse_rrule(rrule_str: str, after: Optional[datetime] = None) -> List[datetime]:
@@ -65,12 +69,19 @@ def parse_rrule(rrule_str: str, after: Optional[datetime] = None) -> List[dateti
     if after is None:
         after = datetime.now(timezone.utc)
 
-    rule = rrulestr(rrule_str)
-    return list(rule.after(after))
+    rule = rrulestr(rrule_str, dtstart=after)
+    comparison = after
+    if rule._dtstart.tzinfo is None and after.tzinfo is not None:
+        comparison = after.replace(tzinfo=None)
+    results = list(rule.xafter(comparison, count=365))
+    if comparison is not after:
+        return [date.replace(tzinfo=after.tzinfo) for date in results]
+    return results
 
 
 def get_next_occurrence(
-    rrule_str: str, from_date: Optional[datetime] = None
+    rrule_str: str, from_date: Optional[datetime] = None,
+    start_date: Optional[datetime] = None,
 ) -> Optional[datetime]:
     """다음 발생일 반환
 
@@ -84,8 +95,13 @@ def get_next_occurrence(
     if from_date is None:
         from_date = datetime.now(timezone.utc)
 
-    rule = rrulestr(rrule_str)
-    next_occurrence = rule.after(from_date)
+    rule = rrulestr(rrule_str, dtstart=start_date or from_date)
+    comparison = from_date
+    if rule._dtstart.tzinfo is None and from_date.tzinfo is not None:
+        comparison = from_date.replace(tzinfo=None)
+    next_occurrence = rule.after(comparison)
+    if next_occurrence and comparison is not from_date:
+        next_occurrence = next_occurrence.replace(tzinfo=from_date.tzinfo)
 
     return next_occurrence if next_occurrence else None
 

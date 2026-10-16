@@ -1,5 +1,6 @@
 import random
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional
@@ -9,7 +10,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import EnglishWord, EnglishWordCard, User
-from auth_utils import get_current_user
+from auth_utils import get_current_user, get_master_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from translation_utils import translate_ko_to_zh
 
@@ -69,11 +70,13 @@ def _word_with_card(word: EnglishWord, wc: Optional[EnglishWordCard]) -> dict:
 
 
 @router.get("/")
-def get_words(level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    q = db.query(EnglishWord)
+def get_words(level: Optional[str] = None, limit: int = Query(100, ge=1, le=200), offset: int = Query(0, ge=0), q: str = Query("", max_length=100), db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    query = db.query(EnglishWord)
     if level:
-        q = q.filter(EnglishWord.level == level)
-    words = q.order_by(EnglishWord.id).all()
+        query = query.filter(EnglishWord.level == level)
+    if search := q.strip():
+        query = query.filter(or_(EnglishWord.word.icontains(search, autoescape=True), EnglishWord.meaning.icontains(search, autoescape=True), EnglishWord.meaning_zh.icontains(search, autoescape=True), EnglishWord.example_zh.icontains(search, autoescape=True)))
+    words = query.order_by(EnglishWord.id).offset(offset).limit(limit).all()
     word_ids = {w.id for w in words}
     cards = {wc.word_id: wc for wc in db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.word_id.in_(word_ids)).all()}
     return [_word_with_card(w, cards.get(w.id)) for w in words]
@@ -185,7 +188,7 @@ def toggle_favorite(word_id: int, db: Session = Depends(get_db), user: User = De
 
 
 @router.post("/{word_id}/translate-zh")
-def translate_word_to_zh(word_id: int, db: Session = Depends(get_db)):
+def translate_word_to_zh(word_id: int, db: Session = Depends(get_db), _ = Depends(get_master_user)):
     word = db.query(EnglishWord).filter(EnglishWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
@@ -201,7 +204,7 @@ def translate_word_to_zh(word_id: int, db: Session = Depends(get_db)):
 
 
 @router.post("/tools/translate-missing-zh")
-def translate_missing_to_zh(level: Optional[str] = None, limit: int = 500, db: Session = Depends(get_db)):
+def translate_missing_to_zh(level: Optional[str] = None, limit: int = 500, db: Session = Depends(get_db), _ = Depends(get_master_user)):
     q = db.query(EnglishWord).filter(
         (EnglishWord.meaning_zh == None) | ((EnglishWord.example_ko != None) & (EnglishWord.example_zh == None))
     )

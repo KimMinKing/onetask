@@ -2,10 +2,10 @@
 
 ## Project
 **onetask** — Personal learning + schedule dashboard with AI coach.
-Single user. Self-hosted on Oracle Cloud.
+Multiple accounts with per-user progress. Self-hosted on Oracle Cloud.
 
 ## Stack
-- **Frontend**: Next.js 14 (App Router) + Tailwind CSS + Zustand + Recharts
+- **Frontend**: Next.js 16 (App Router) + Tailwind CSS + Zustand
 - **Backend**: FastAPI (Python) + PostgreSQL + APScheduler
 - **Crawling**: Playwright (run locally → CSV upload, not server-side)
 - **Push**: Web Push via VAPID

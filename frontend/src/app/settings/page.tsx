@@ -136,7 +136,7 @@ export default function SettingsPage() {
           </div>
           <div>
             <label className="text-xs text-stone-600 block mb-1.5">집중 과목</label>
-            <select value={settings.focus_subject} onChange={e => setSettings({ ...settings, focus_subject: e.target.value })} className="w-full rounded-xl border border-stone-700 bg-dark-100 px-4 py-3 text-sm text-stone-200"><option value="sqld">SQLD</option><option value="network">네트워크관리사</option><option value="zh">중국어 HSK4</option><option value="ja">일본어</option><option value="en">영어</option></select>
+            <select value={settings.focus_subject} onChange={e => setSettings({ ...settings, focus_subject: e.target.value })} className="w-full rounded-xl border border-stone-700 bg-dark-100 px-4 py-3 text-sm text-stone-200"><option value="sqld">SQLD</option><option value="network">네트워크관리사</option><option value="cpp">C++ 네트워크</option><option value="zh">중국어 HSK4</option><option value="ja">일본어</option><option value="en">영어</option></select>
           </div>
           <div>
             <label className="text-xs text-stone-600 block mb-1.5">단어 복습 목표 (1-100개)</label>

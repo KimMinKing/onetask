@@ -6,13 +6,6 @@ export async function registerServiceWorker(): Promise<ServiceWorkerRegistration
   if (!("serviceWorker" in navigator)) return null;
 
   try {
-    // 기존 등록된 SW가 있으면 제거
-    const existing = await navigator.serviceWorker.getRegistration();
-    if (existing) {
-      await existing.unregister();
-    }
-
-    // 새로 등록
     const reg = await navigator.serviceWorker.register("/sw.js", {
       scope: "/",
     });
@@ -46,7 +39,8 @@ export async function subscribePush(): Promise<boolean> {
   const permission = await Notification.requestPermission();
   if (permission !== "granted") return false;
 
-  const reg = await navigator.serviceWorker.ready;
+  const reg = await registerServiceWorker();
+  if (!reg) return false;
   let sub = await reg.pushManager.getSubscription();
 
   if (!sub) {
@@ -73,15 +67,19 @@ export async function subscribePush(): Promise<boolean> {
 
 export async function unsubscribePush(): Promise<void> {
   if (!("serviceWorker" in navigator)) return;
-  const reg = await navigator.serviceWorker.ready;
+  const reg = await navigator.serviceWorker.getRegistration();
+  if (!reg) return;
   const sub = await reg.pushManager.getSubscription();
   if (!sub) return;
   const endpoint = sub.endpoint;
-  await sub.unsubscribe();
-  await fetch(
-    `/api/push/unsubscribe?endpoint=${encodeURIComponent(endpoint)}`,
-    { method: "DELETE", headers: getAuthHeaders() }
-  );
+  try {
+    await fetch(
+      `/api/push/unsubscribe?endpoint=${encodeURIComponent(endpoint)}`,
+      { method: "DELETE", headers: getAuthHeaders() }
+    );
+  } finally {
+    await sub.unsubscribe();
+  }
 }
 
 export async function getPushPermission(): Promise<NotificationPermission> {

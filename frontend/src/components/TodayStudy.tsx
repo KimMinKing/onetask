@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api, TodayPlan } from "@/lib/api";
+import { readUserStorage, writeUserStorage } from "@/lib/auth";
 
 const choices = [5, 15, 30, 60] as const;
 
@@ -24,10 +25,10 @@ export default function TodayStudy() {
 
   useEffect(() => {
     const migrate = async () => {
-      if (!localStorage.getItem("learning_progress_migrated_v1")) {
-        const read = (key: string) => { try { return JSON.parse(localStorage.getItem(key) || "{}"); } catch { return {}; } };
+      if (!readUserStorage("learning_progress_migrated_v1")) {
+        const read = (key: string) => { try { return JSON.parse(readUserStorage(key) || "{}"); } catch { return {}; } };
         await api.learning.migrateLocal({ sqld: read("sqld_progress_v1"), network: read("network_manager_progress_v1") });
-        localStorage.setItem("learning_progress_migrated_v1", "1");
+        writeUserStorage("learning_progress_migrated_v1", "1");
       }
       await load();
     };

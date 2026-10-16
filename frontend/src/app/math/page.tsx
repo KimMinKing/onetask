@@ -4,15 +4,16 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { CURRICULUM, Step } from "./curriculum";
 import { CHALLENGE, ChallengeQuiz } from "./challenge";
+import { readUserStorage, writeUserStorage } from "@/lib/auth";
 
 const STORAGE_KEY = "math_progress";
 
 function getProgress(): Record<number, boolean> {
   if (typeof window === "undefined") return {};
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch { return {}; }
+  try { return JSON.parse(readUserStorage(STORAGE_KEY) || "{}"); } catch { return {}; }
 }
 function saveProgress(p: Record<number, boolean>) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(p));
+  writeUserStorage(STORAGE_KEY, JSON.stringify(p));
 }
 
 /* ══════════════════════════════════════════

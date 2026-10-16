@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, Float, ForeignKey, Enum, Boolean, UniqueConstraint, func
+from sqlalchemy import Column, Integer, String, DateTime, Float, ForeignKey, Enum, Boolean, UniqueConstraint, Index, func
 from database import Base
 import enum
 
@@ -40,6 +40,16 @@ class Task(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     rrule = Column(String, nullable=True)  # 반복 규칙 (RRule format)
     recurring_until = Column(DateTime(timezone=True), nullable=True)  # 반복 종료일
+
+
+class LoginFailure(Base):
+    __tablename__ = "login_failures"
+
+    id = Column(Integer, primary_key=True)
+    identifier = Column(String(80), nullable=False)
+    failed_at = Column(DateTime(timezone=True), nullable=False)
+
+    __table_args__ = (Index("ix_login_failures_identifier_time", "identifier", "failed_at"),)
 
 
 class CalendarEvent(Base):
@@ -357,3 +367,29 @@ class SpringTopicCard(Base):
     last_review = Column(DateTime(timezone=True), nullable=True)
     reps = Column(Integer, default=0, nullable=False)
     lapses = Column(Integer, default=0, nullable=False)
+
+
+class SpringTopicUserCard(Base):
+    """Per-user Spring review progress and favorites."""
+    __tablename__ = "spring_topic_user_cards"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
+    topic_id = Column(Integer, ForeignKey("spring_topics.id", ondelete="CASCADE"), nullable=False)
+    state = Column(Integer, default=0, nullable=False)
+    step = Column(Integer, default=0, nullable=True)
+    stability = Column(Float, default=0.0, nullable=False)
+    difficulty = Column(Float, default=0.0, nullable=False)
+    due = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    last_review = Column(DateTime(timezone=True), nullable=True)
+    reps = Column(Integer, default=0, nullable=False)
+    lapses = Column(Integer, default=0, nullable=False)
+    is_favorite = Column(Boolean, default=False, nullable=False, server_default="false")
+
+    __table_args__ = (UniqueConstraint("user_id", "topic_id", name="uq_spring_topic_user_card"),)
+
+
+class MigrationMarker(Base):
+    __tablename__ = "migration_markers"
+
+    name = Column(String(100), primary_key=True)

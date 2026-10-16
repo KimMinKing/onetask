@@ -5,7 +5,7 @@ import Link from "next/link";
 import { api } from "@/lib/api";
 
 type Report = Awaited<ReturnType<typeof api.learning.weeklyReport>>;
-const names: Record<string, string> = { zh: "중국어", ja: "일본어", en: "영어", sqld: "SQLD", network: "네트워크" };
+const names: Record<string, string> = { zh: "중국어", ja: "일본어", en: "영어", sqld: "SQLD", network: "네트워크", cpp: "C++" };
 
 export default function WeeklyReportPage() {
   const [report, setReport] = useState<Report | null>(null);

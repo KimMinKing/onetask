@@ -96,9 +96,9 @@ export default function DayView({
                 {hourEvents.map((e) => (
                   <div
                     key={e.id}
-                    draggable
-                    onDragStart={(ev) => handleDragStart(ev, e.id)}
-                    className={`text-sm p-2 rounded-lg mb-2 cursor-move ${
+                    draggable={!e.rrule}
+                    onDragStart={(ev) => { if (!e.rrule) handleDragStart(ev, e.id); }}
+                    className={`text-sm p-2 rounded-lg mb-2 ${e.rrule ? "" : "cursor-move"} ${
                       e.color
                         ? ""
                         : "bg-blue-900/30 border-l-4 border-blue-500"

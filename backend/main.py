@@ -1,20 +1,25 @@
 from fastapi import FastAPI, Depends, Request
+from contextlib import asynccontextmanager
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from database import engine, Base
-from migrations_runtime import ensure_runtime_migrations
 from routers import tasks, categories, words, image_test, english_words, english_phrases, calendar_events, stats, japanese_words
 from routers import auth, admin, push, search, settings, achievements, spring_topics, quizzes
 from routers import learning
 from auth_utils import get_current_user
-from scheduler import start_scheduler
+from scheduler import scheduler, start_scheduler
+from csrf_utils import allows_cookie_mutation
 
-Base.metadata.create_all(bind=engine)
-ensure_runtime_migrations(engine)
-start_scheduler()
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    start_scheduler()
+    try:
+        yield
+    finally:
+        if scheduler.running:
+            scheduler.shutdown(wait=False)
 
-app = FastAPI(title="onetask API")
+app = FastAPI(title="onetask API", lifespan=lifespan)
 ALLOWED_ORIGINS = {
     "http://localhost:3000",
     "http://localhost:3001",
@@ -26,11 +31,9 @@ ALLOWED_ORIGINS = {
 
 @app.middleware("http")
 async def security_headers(request: Request, call_next):
-    if request.method not in {"GET", "HEAD", "OPTIONS"} and request.cookies.get("onetask_token"):
-        origin = request.headers.get("origin")
-        if origin and origin not in ALLOWED_ORIGINS:
-            from fastapi.responses import JSONResponse
-            return JSONResponse(status_code=403, content={"detail": "Invalid request origin"})
+    if not allows_cookie_mutation(request, ALLOWED_ORIGINS):
+        from fastapi.responses import JSONResponse
+        return JSONResponse(status_code=403, content={"detail": "Invalid request origin"})
     response = await call_next(request)
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
@@ -41,8 +44,6 @@ async def security_headers(request: Request, call_next):
     legacy_token = request.cookies.get("onetask_token")
     if legacy_token and response.status_code == 401:
         response.delete_cookie("onetask_token", path="/", httponly=True, samesite="lax")
-    elif legacy_token and request.url.path != "/auth/logout":
-        response.set_cookie("onetask_token", legacy_token, max_age=30 * 24 * 60 * 60, httponly=True, secure=os.getenv("COOKIE_SECURE", "true").lower() in {"1", "true", "yes"}, samesite="lax", path="/")
     return response
 
 app.add_middleware(

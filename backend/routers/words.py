@@ -1,5 +1,6 @@
 import random
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from pydantic import BaseModel
@@ -10,7 +11,7 @@ from fsrs import Scheduler, Card, Rating, State
 
 from database import get_db
 from models import User, Word, WordCard
-from auth_utils import get_current_user
+from auth_utils import get_current_user, get_master_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 
 router = APIRouter(prefix="/words", tags=["words"])
@@ -85,12 +86,15 @@ def _word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
 
 # ── 엔드포인트 ─────────────────────────────────────────────
 @router.get("/")
-def get_words(hsk_level: Optional[int] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    q = db.query(Word)
+def get_words(hsk_level: Optional[int] = None, limit: int = Query(100, ge=1, le=200), offset: int = Query(0, ge=0), q: str = Query("", max_length=100), db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    query = db.query(Word)
     if hsk_level:
-        q = q.filter(Word.hsk_level == hsk_level)
-    words = q.order_by(Word.id).all()
-    cards = {wc.word_id: wc for wc in db.query(WordCard).filter(WordCard.user_id == user.id).all()}
+        query = query.filter(Word.hsk_level == hsk_level)
+    if search := q.strip():
+        query = query.filter(or_(Word.chinese.icontains(search, autoescape=True), Word.pinyin.icontains(search, autoescape=True), Word.meaning.icontains(search, autoescape=True)))
+    words = query.order_by(Word.id).offset(offset).limit(limit).all()
+    word_ids = [word.id for word in words]
+    cards = {wc.word_id: wc for wc in db.query(WordCard).filter(WordCard.user_id == user.id, WordCard.word_id.in_(word_ids)).all()}
     return [_word_with_card(w, cards.get(w.id)) for w in words]
 
 
@@ -260,7 +264,7 @@ def get_favorites(hsk_level: Optional[int] = None, db: Session = Depends(get_db)
 
 
 @router.delete("/{word_id}")
-def delete_word(word_id: int, db: Session = Depends(get_db)):
+def delete_word(word_id: int, db: Session = Depends(get_db), _ = Depends(get_master_user)):
     word = db.query(Word).filter(Word.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")

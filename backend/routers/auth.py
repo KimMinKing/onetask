@@ -1,39 +1,48 @@
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, Depends, Header, HTTPException, Request, Response
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 from sqlalchemy import text
 from datetime import datetime, timedelta, timezone
-from threading import Lock
+from hashlib import sha256
 
 from database import get_db
-from models import User, UserSettings
+from models import LoginFailure, User, UserSettings
 from auth_utils import ACCESS_TOKEN_EXPIRE_DAYS, verify_password, hash_password, create_access_token, get_current_user
 import os
+import secrets
 
 router = APIRouter(prefix="/auth", tags=["auth"])
-_failed_logins: dict[str, list[datetime]] = {}
-_login_lock = Lock()
 _LOGIN_WINDOW = timedelta(minutes=15)
 _MAX_FAILURES = 5
+_MAX_IP_FAILURES = 100
 
 
-def _check_login_limit(username: str) -> None:
-    now = datetime.now(timezone.utc)
-    with _login_lock:
-        recent = [stamp for stamp in _failed_logins.get(username, []) if now - stamp < _LOGIN_WINDOW]
-        _failed_logins[username] = recent
-        if len(recent) >= _MAX_FAILURES:
+def _failure_key(kind: str, value: str) -> str:
+    return f"{kind}:{sha256(value.encode('utf-8')).hexdigest()}"
+
+
+def _check_login_limit(username: str, client_ip: str, db: Session) -> None:
+    cutoff = datetime.now(timezone.utc) - _LOGIN_WINDOW
+    db.query(LoginFailure).filter(LoginFailure.failed_at < cutoff).delete(synchronize_session=False)
+    db.commit()
+    for key, limit in ((_failure_key("account", username), _MAX_FAILURES),
+                       (_failure_key("ip", client_ip), _MAX_IP_FAILURES)):
+        if db.query(LoginFailure).filter(LoginFailure.identifier == key).count() >= limit:
             raise HTTPException(status_code=429, detail="로그인 시도가 너무 많습니다. 15분 후 다시 시도하세요.")
 
 
-def _record_login_failure(username: str) -> None:
-    with _login_lock:
-        _failed_logins.setdefault(username, []).append(datetime.now(timezone.utc))
+def _record_login_failure(username: str, client_ip: str, db: Session) -> None:
+    now = datetime.now(timezone.utc)
+    db.add_all([
+        LoginFailure(identifier=_failure_key("account", username), failed_at=now),
+        LoginFailure(identifier=_failure_key("ip", client_ip), failed_at=now),
+    ])
+    db.commit()
 
 
-def _clear_login_failures(username: str) -> None:
-    with _login_lock:
-        _failed_logins.pop(username, None)
+def _clear_login_failures(username: str, db: Session) -> None:
+    db.query(LoginFailure).filter(LoginFailure.identifier == _failure_key("account", username)).delete(synchronize_session=False)
+    db.commit()
 
 
 class LoginRequest(BaseModel):
@@ -75,7 +84,10 @@ def auth_status(db: Session = Depends(get_db)):
 
 
 @router.post("/signup")
-def signup(body: SignupRequest, response: Response, db: Session = Depends(get_db)):
+def signup(body: SignupRequest, response: Response, db: Session = Depends(get_db), bootstrap_token: str | None = Header(default=None, alias="X-Bootstrap-Token")):
+    expected_token = os.getenv("BOOTSTRAP_TOKEN", "")
+    if len(expected_token) < 32 or not bootstrap_token or not secrets.compare_digest(bootstrap_token, expected_token):
+        raise HTTPException(status_code=403, detail="초기 등록 코드가 올바르지 않습니다")
     if db.bind.dialect.name == "postgresql":
         db.execute(text("LOCK TABLE users IN EXCLUSIVE MODE"))
     user_count = db.query(User).count()
@@ -104,14 +116,15 @@ def signup(body: SignupRequest, response: Response, db: Session = Depends(get_db
 
 
 @router.post("/login")
-def login(body: LoginRequest, response: Response, db: Session = Depends(get_db)):
+def login(body: LoginRequest, response: Response, request: Request, db: Session = Depends(get_db)):
     username = body.username.strip()
-    _check_login_limit(username.casefold())
+    client_ip = request.client.host if request.client else "unknown"
+    _check_login_limit(username.casefold(), client_ip, db)
     user = db.query(User).filter(User.username == username).first()
     if not user or not verify_password(body.password, user.hashed_password):
-        _record_login_failure(username.casefold())
+        _record_login_failure(username.casefold(), client_ip, db)
         raise HTTPException(status_code=401, detail="아이디 또는 비밀번호가 잘못됐습니다")
-    _clear_login_failures(username.casefold())
+    _clear_login_failures(username.casefold(), db)
     token = create_access_token(user.id, user.is_master)
     _set_auth_cookie(response, token)
     return _user_response(user)

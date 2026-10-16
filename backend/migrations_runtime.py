@@ -36,29 +36,6 @@ def ensure_runtime_migrations(engine) -> None:
             )
             WHERE user_id IS NULL
         """)
-        if inspector.has_table(word_table) and "is_favorite" in {
-            column["name"] for column in inspector.get_columns(word_table)
-        }:
-            statements.append(f"""
-                UPDATE {card_table}
-                SET is_favorite = {"TRUE" if dialect == "postgresql" else "1"}
-                WHERE word_id IN (SELECT id FROM {word_table} WHERE is_favorite = {"TRUE" if dialect == "postgresql" else "1"})
-            """)
-            statements.append(f"""
-                INSERT INTO {card_table}
-                    (user_id, word_id, state, step, stability, difficulty, due, reps, lapses, is_favorite)
-                SELECT
-                    (SELECT id FROM users ORDER BY is_master DESC, id ASC LIMIT 1),
-                    source.id, 0, 0, 0.0, 0.0, CURRENT_TIMESTAMP, 0, 0,
-                    {"TRUE" if dialect == "postgresql" else "1"}
-                FROM {word_table} AS source
-                WHERE source.is_favorite = {"TRUE" if dialect == "postgresql" else "1"}
-                  AND EXISTS (SELECT 1 FROM users)
-                  AND NOT EXISTS (
-                      SELECT 1 FROM {card_table} AS card WHERE card.word_id = source.id
-                  )
-            """)
-
         if dialect == "postgresql":
             statements.append(f"ALTER TABLE {card_table} ALTER COLUMN user_id SET NOT NULL")
             has_user_fk = any(
@@ -160,9 +137,84 @@ def ensure_runtime_migrations(engine) -> None:
             statements.append("ALTER TABLE learning_activities ADD COLUMN client_event_id VARCHAR(80)")
         statements.append("CREATE UNIQUE INDEX IF NOT EXISTS uq_learning_activity_user_event_idx ON learning_activities (user_id, client_event_id)")
 
-    if not statements:
-        return
+    if statements:
+        with engine.begin() as conn:
+            for statement in statements:
+                conn.execute(text(statement))
 
+    # Import shared dictionary favorites only once; replay would undo a user's
+    # later unfavorite action and could set another account's card favorite.
     with engine.begin() as conn:
-        for statement in statements:
-            conn.execute(text(statement))
+        if dialect == "postgresql":
+            conn.execute(text("SELECT pg_advisory_xact_lock(71007)"))
+        migrated = conn.execute(text(
+            "SELECT 1 FROM migration_markers WHERE name = 'word_favorites_v1'"
+        )).scalar()
+        if not migrated:
+            master_id = conn.execute(text(
+                "SELECT id FROM users ORDER BY is_master DESC, id ASC LIMIT 1"
+            )).scalar()
+            if master_id is not None:
+                for card_table, word_table in card_tables:
+                    if not inspector.has_table(card_table) or not inspector.has_table(word_table):
+                        continue
+                    if "is_favorite" not in {column["name"] for column in inspector.get_columns(word_table)}:
+                        continue
+                    conn.execute(text(f"""
+                        UPDATE {card_table}
+                        SET is_favorite = {"TRUE" if dialect == "postgresql" else "1"}
+                        WHERE user_id = :user_id
+                          AND word_id IN (SELECT id FROM {word_table} WHERE is_favorite = {"TRUE" if dialect == "postgresql" else "1"})
+                    """), {"user_id": master_id})
+                    conn.execute(text(f"""
+                        INSERT INTO {card_table}
+                            (user_id, word_id, state, step, stability, difficulty, due, reps, lapses, is_favorite)
+                        SELECT :user_id, source.id, 0, 0, 0.0, 0.0, CURRENT_TIMESTAMP, 0, 0,
+                               {"TRUE" if dialect == "postgresql" else "1"}
+                        FROM {word_table} AS source
+                        WHERE source.is_favorite = {"TRUE" if dialect == "postgresql" else "1"}
+                          AND NOT EXISTS (
+                              SELECT 1 FROM {card_table} AS card
+                              WHERE card.user_id = :user_id AND card.word_id = source.id
+                          )
+                    """), {"user_id": master_id})
+                conn.execute(text(
+                    "INSERT INTO migration_markers (name) VALUES ('word_favorites_v1')"
+                ))
+
+    # Keep legacy Spring reviews and favorites for the first/master account.
+    # The marker prevents an old favorite from being restored after a user clears it.
+    with engine.begin() as conn:
+        if dialect == "postgresql":
+            conn.execute(text("SELECT pg_advisory_xact_lock(71006)"))
+        migrated = conn.execute(text(
+            "SELECT 1 FROM migration_markers WHERE name = 'spring_topic_user_cards_v1'"
+        )).scalar()
+        if migrated:
+            return
+        master_id = conn.execute(text(
+            "SELECT id FROM users ORDER BY is_master DESC, id ASC LIMIT 1"
+        )).scalar()
+        if master_id is None:
+            return
+        conn.execute(text("""
+            INSERT INTO spring_topic_user_cards
+                (user_id, topic_id, state, step, stability, difficulty,
+                 due, last_review, reps, lapses, is_favorite)
+            SELECT :user_id, topic.id,
+                   COALESCE(card.state, 0), card.step,
+                   COALESCE(card.stability, 0), COALESCE(card.difficulty, 0),
+                   COALESCE(card.due, CURRENT_TIMESTAMP), card.last_review,
+                   COALESCE(card.reps, 0), COALESCE(card.lapses, 0),
+                   COALESCE(topic.is_favorite, FALSE)
+            FROM spring_topics AS topic
+            LEFT JOIN spring_topic_cards AS card ON card.topic_id = topic.id
+            WHERE (card.id IS NOT NULL OR topic.is_favorite = TRUE)
+              AND NOT EXISTS (
+                  SELECT 1 FROM spring_topic_user_cards AS current
+                  WHERE current.user_id = :user_id AND current.topic_id = topic.id
+              )
+        """), {"user_id": master_id})
+        conn.execute(text(
+            "INSERT INTO migration_markers (name) VALUES ('spring_topic_user_cards_v1')"
+        ))

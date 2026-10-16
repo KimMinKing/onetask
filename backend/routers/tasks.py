@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import func
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 from datetime import datetime, timezone
 
@@ -12,34 +12,35 @@ from auth_utils import get_current_user
 from obsidian_sync import sync_dates_for_user, task_note_date
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
+RRULE_PATTERN = r"^FREQ=(DAILY|WEEKLY|MONTHLY|YEARLY)(;BYDAY=(MO|TU|WE|TH|FR|SA|SU)(,(MO|TU|WE|TH|FR|SA|SU))*)?$"
 
 
 class TaskCreate(BaseModel):
-    title: str
-    category: Optional[str] = None
+    title: str = Field(min_length=1, max_length=300)
+    category: Optional[str] = Field(default=None, max_length=100)
     urgency: Urgency = Urgency.normal
     due_at: Optional[datetime] = None
-    rrule: Optional[str] = None
+    rrule: Optional[str] = Field(default=None, max_length=100, pattern=RRULE_PATTERN)
     recurring_until: Optional[datetime] = None
 
 
 class TaskUpdate(BaseModel):
-    title: Optional[str] = None
-    category: Optional[str] = None
+    title: Optional[str] = Field(default=None, min_length=1, max_length=300)
+    category: Optional[str] = Field(default=None, max_length=100)
     urgency: Optional[Urgency] = None
     status: Optional[Status] = None
     order: Optional[int] = None
     due_at: Optional[datetime] = None
-    rrule: Optional[str] = None
+    rrule: Optional[str] = Field(default=None, max_length=100, pattern=RRULE_PATTERN)
     recurring_until: Optional[datetime] = None
 
 
 class TaskReorder(BaseModel):
-    ids: list[int]
+    ids: list[int] = Field(max_length=1000)
 
 
 @router.get("/history")
-def get_task_history(year: int, month: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
+def get_task_history(year: int = Query(ge=1, le=9999), month: int = Query(ge=1, le=12), db: Session = Depends(get_db), user = Depends(get_current_user)):
     import calendar as cal
     first_day = datetime(year, month, 1, tzinfo=timezone.utc)
     last_day = datetime(year, month, cal.monthrange(year, month)[1], 23, 59, 59, tzinfo=timezone.utc)
@@ -87,8 +88,15 @@ def update_task(task_id: int, body: TaskUpdate, db: Session = Depends(get_db), u
 
         # 반복 작업이면 다음 날짜 생성
         if task.rrule:
-            next_date = get_next_occurrence(task.rrule)
-            if next_date and (not task.recurring_until or next_date <= task.recurring_until):
+            start_date = task.due_at
+            if start_date and start_date.tzinfo is None:
+                start_date = start_date.replace(tzinfo=timezone.utc)
+            reference = max(datetime.now(timezone.utc), start_date) if start_date else None
+            next_date = get_next_occurrence(task.rrule, from_date=reference, start_date=start_date)
+            recurring_until = task.recurring_until
+            if recurring_until and recurring_until.tzinfo is None:
+                recurring_until = recurring_until.replace(tzinfo=timezone.utc)
+            if next_date and (not recurring_until or next_date <= recurring_until):
                 # 현재 작업은 done으로 유지하고, 새 작업 생성
                 new_task = Task(
                     user_id=user.id,
@@ -138,7 +146,7 @@ def delete_task(task_id: int, db: Session = Depends(get_db), user = Depends(get_
 
 
 @router.get("/scheduled")
-def get_scheduled_tasks(year: int, month: int, db: Session = Depends(get_db), user = Depends(get_current_user)):
+def get_scheduled_tasks(year: int = Query(ge=1, le=9999), month: int = Query(ge=1, le=12), db: Session = Depends(get_db), user = Depends(get_current_user)):
     import calendar as cal
     first_day = datetime(year, month, 1, tzinfo=timezone.utc)
     last_day = datetime(year, month, cal.monthrange(year, month)[1], 23, 59, 59, tzinfo=timezone.utc)

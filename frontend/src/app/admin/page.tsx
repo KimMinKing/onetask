@@ -36,7 +36,7 @@ export default function AdminPage() {
       .finally(() => setLoading(false));
   }, [router, user?.is_master]);
 
-  const logout = () => { clearAuth(); router.replace("/login"); };
+  const logout = async () => { await clearAuth(); router.replace("/login"); };
 
   const createUser = async () => {
     setCreateStatus(null);

@@ -15,14 +15,19 @@ class AppStartupTests(unittest.TestCase):
         env["SECRET_KEY"] = "release-test-secret-key-that-is-long-enough"
         env["ENABLE_SCHEDULER"] = "true"
         script = """
+from fastapi.testclient import TestClient
+from migrate import migrate
 import main
 import scheduler
 
+migrate()
 paths = {getattr(route, 'path', '') for route in main.app.routes}
 assert '/health' in paths
 assert '/quizzes/example-quiz' in paths
-assert main.health() == {'status': 'ok'}
-scheduler.scheduler.shutdown()
+with TestClient(main.app) as client:
+    assert scheduler.scheduler.running
+    assert client.get('/health').json() == {'status': 'ok'}
+assert not scheduler.scheduler.running
 """
 
         result = subprocess.run(

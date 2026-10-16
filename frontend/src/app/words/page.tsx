@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { api, Word, EnglishWord, JapaneseWord } from "@/lib/api";
 import KanaStudy from "./KanaStudy";
+import { WordVolumeControl } from "@/components/WordVolumeControl";
+import { playWordAudio, playWordSpeech, stopWordPlayback } from "@/lib/wordAudio";
 
 type Lang = "zh" | "en" | "ja";
 type UiLanguage = "ko" | "zh";
@@ -212,17 +214,27 @@ function formatDue(due: string, uiLanguage: UiLanguage): string {
    메인 페이지
 ══════════════════════════════════════════════════════════════ */
 export default function WordsPage() {
+  const [uiLanguage, setUiLanguage] = useState<UiLanguage>("ko");
+  return (
+    <div className="relative">
+      <WordVolumeControl uiLanguage={uiLanguage} />
+      <WordsContent uiLanguage={uiLanguage} setUiLanguage={setUiLanguage} />
+    </div>
+  );
+}
+
+function WordsContent({ uiLanguage, setUiLanguage }: {
+  uiLanguage: UiLanguage;
+  setUiLanguage: (language: UiLanguage) => void;
+}) {
   const router = useRouter();
   const [mode, setMode] = useState<Mode>("lang-select");
   const [selectedLang, setSelectedLang] = useState<Lang>("zh");
   const [selectedZhLevel, setSelectedZhLevel] = useState<number>(3);
   const [selectedEnLevel, setSelectedEnLevel] = useState<string>("B1");
   const [selectedJaLevel, setSelectedJaLevel] = useState<string>("N5");
-  const [uiLanguage, setUiLanguage] = useState<UiLanguage>("ko");
   const [stats, setStats] = useState({ total: 0, reviewed: 0, new: 0, due: 0, today: 0 });
-  const [zhWords, setZhWords] = useState<Word[]>([]);
-  const [enWords, setEnWords] = useState<EnglishWord[]>([]);
-  const [jaWords, setJaWords] = useState<JapaneseWord[]>([]);
+  const [browseRevision, setBrowseRevision] = useState(0);
   const [dueZhWords, setDueZhWords] = useState<Word[]>([]);
   const [dueEnWords, setDueEnWords] = useState<EnglishWord[]>([]);
   const [dueJaWords, setDueJaWords] = useState<JapaneseWord[]>([]);
@@ -247,25 +259,22 @@ export default function WordsPage() {
 
   const reloadZh = useCallback(async (level: number) => {
     setLoading(true);
-    const [s, w] = await Promise.all([api.words.stats(level), api.words.list(level)]);
+    const s = await api.words.stats(level);
     setStats(s);
-    setZhWords(w);
     setLoading(false);
   }, []);
 
   const reloadEn = useCallback(async (level: string) => {
     setLoading(true);
-    const [s, w] = await Promise.all([api.englishWords.stats(level), api.englishWords.list(level)]);
+    const s = await api.englishWords.stats(level);
     setStats(s);
-    setEnWords(w);
     setLoading(false);
   }, []);
 
   const reloadJa = useCallback(async (level: string) => {
     setLoading(true);
-    const [s, w] = await Promise.all([api.japaneseWords.stats(level), api.japaneseWords.list(level)]);
+    const s = await api.japaneseWords.stats(level);
     setStats(s);
-    setJaWords(w);
     setLoading(false);
   }, []);
 
@@ -285,7 +294,7 @@ export default function WordsPage() {
     };
     window.addEventListener("onetask-settings-updated", handleSettingsUpdate);
     return () => window.removeEventListener("onetask-settings-updated", handleSettingsUpdate);
-  }, []);
+  }, [setUiLanguage]);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -319,8 +328,7 @@ export default function WordsPage() {
       if (translatedListKeys.current.has(key)) return;
       translatedListKeys.current.add(key);
       api.englishWords.translateMissingZh(selectedEnLevel, 2000)
-        .then(() => api.englishWords.list(selectedEnLevel))
-        .then(setEnWords)
+        .then(() => setBrowseRevision((revision) => revision + 1))
         .catch(() => {});
     }
 
@@ -329,8 +337,7 @@ export default function WordsPage() {
       if (translatedListKeys.current.has(key)) return;
       translatedListKeys.current.add(key);
       api.japaneseWords.translateMissingZh(selectedJaLevel, 2000)
-        .then(() => api.japaneseWords.list(selectedJaLevel))
-        .then(setJaWords)
+        .then(() => setBrowseRevision((revision) => revision + 1))
         .catch(() => {});
     }
   }, [mode, selectedLang, selectedEnLevel, selectedJaLevel, uiLanguage]);
@@ -361,29 +368,17 @@ export default function WordsPage() {
   };
 
   const startBrowseZh = async () => {
-    setLoading(true);
-    const words = await api.words.list();
-    setZhWords(words);
     setSelectedLang("zh");
-    setLoading(false);
     setMode("browse");
   };
 
   const startBrowseEn = async () => {
-    setLoading(true);
-    const words = await api.englishWords.list();
-    setEnWords(words);
     setSelectedLang("en");
-    setLoading(false);
     setMode("browse");
   };
 
   const startBrowseJa = async () => {
-    setLoading(true);
-    const words = await api.japaneseWords.list();
-    setJaWords(words);
     setSelectedLang("ja");
-    setLoading(false);
     setMode("browse");
   };
 
@@ -801,12 +796,12 @@ export default function WordsPage() {
   }
   if (mode === "browse") {
     if (selectedLang === "zh") {
-      return <ZhBrowseMode words={zhWords} uiLanguage={uiLanguage} onBack={() => setMode("home")} />;
+      return <ZhBrowseMode words={[]} uiLanguage={uiLanguage} onBack={() => setMode("home")} paged revision={browseRevision} />;
     }
     if (selectedLang === "ja") {
-      return <JaBrowseMode words={jaWords} uiLanguage={uiLanguage} onBack={() => setMode("home")} />;
+      return <JaBrowseMode words={[]} uiLanguage={uiLanguage} onBack={() => setMode("home")} paged revision={browseRevision} />;
     }
-    return <EnBrowseMode words={enWords} uiLanguage={uiLanguage} onBack={() => setMode("home")} />;
+    return <EnBrowseMode words={[]} uiLanguage={uiLanguage} onBack={() => setMode("home")} paged revision={browseRevision} />;
   }
   if (mode === "today") {
     if (selectedLang === "zh") {
@@ -936,23 +931,21 @@ export default function WordsPage() {
    중국어 컴포넌트
 ══════════════════════════════════════════════════════════════ */
 
-let _audio: HTMLAudioElement | null = null;
 function stopAll() {
-  if (_audio) { _audio.pause(); _audio = null; }
-  window.speechSynthesis.cancel();
+  stopWordPlayback();
 }
 function playAudio(chinese: string) {
   stopAll();
   const url = `https://raw.githubusercontent.com/hugolpz/audio-cmn/master/96k/hsk/cmn-${chinese}.mp3`;
-  _audio = new Audio(url);
-  _audio.play().catch(() => {});
+  playWordAudio(new Audio(url), () => speakSentence(chinese));
 }
 function speakSentence(text: string) {
   stopAll();
+  if (!("speechSynthesis" in window)) return;
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang = "zh-CN";
   utter.rate = 0.85;
-  window.speechSynthesis.speak(utter);
+  playWordSpeech(utter);
 }
 
 function HighlightedSentence({ sentence, word }: { sentence: string; word: string }) {
@@ -1191,8 +1184,77 @@ function StarButton({ isFav, onToggle }: { isFav: boolean; onToggle: () => void 
   );
 }
 
-function ZhBrowseMode({ words, uiLanguage, onBack, title }: { words: Word[]; uiLanguage: UiLanguage; onBack: () => void; title?: string }) {
+const WORD_PAGE_SIZE = 100;
+const fetchZhPage = (q: string, offset: number) => api.words.list(undefined, { q, offset, limit: WORD_PAGE_SIZE });
+const fetchEnPage = (q: string, offset: number) => api.englishWords.list(undefined, { q, offset, limit: WORD_PAGE_SIZE });
+const fetchJaPage = (q: string, offset: number) => api.japaneseWords.list(undefined, { q, offset, limit: WORD_PAGE_SIZE });
+
+function usePagedWords<T>(paged: boolean, query: string, revision: number, fetchPage: (query: string, offset: number) => Promise<T[]>) {
+  const [items, setItems] = useState<T[]>([]);
+  const [hasMore, setHasMore] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [retry, setRetry] = useState(0);
+  const requestId = useRef(0);
+
+  useEffect(() => {
+    if (!paged) return;
+    const id = ++requestId.current;
+    let canceled = false;
+    setItems([]);
+    setHasMore(false);
+    setError(false);
+    const timer = window.setTimeout(async () => {
+      setLoading(true);
+      try {
+        const next = await fetchPage(query, 0);
+        if (!canceled && id === requestId.current) {
+          setItems(next);
+          setHasMore(next.length === WORD_PAGE_SIZE);
+        }
+      } catch {
+        if (!canceled && id === requestId.current) setError(true);
+      } finally {
+        if (!canceled && id === requestId.current) setLoading(false);
+      }
+    }, query ? 250 : 0);
+    return () => { canceled = true; window.clearTimeout(timer); };
+  }, [paged, query, revision, retry, fetchPage]);
+
+  const loadMore = async () => {
+    if (loading || !hasMore) return;
+    const id = ++requestId.current;
+    setLoading(true);
+    try {
+      const next = await fetchPage(query, items.length);
+      if (id === requestId.current) {
+        setItems((current) => [...current, ...next]);
+        setHasMore(next.length === WORD_PAGE_SIZE);
+      }
+    } catch {
+      if (id === requestId.current) setError(true);
+    } finally {
+      if (id === requestId.current) setLoading(false);
+    }
+  };
+
+  return { items, hasMore, loading, error, loadMore, retry: () => setRetry((value) => value + 1) };
+}
+
+function BrowseMoreButton({ paged, hasMore, loading, error, onMore, onRetry, uiLanguage }: {
+  paged?: boolean; hasMore: boolean; loading: boolean; error: boolean;
+  onMore: () => void; onRetry: () => void; uiLanguage: UiLanguage;
+}) {
+  if (!paged || (!hasMore && !loading && !error)) return null;
+  return <button type="button" disabled={loading} onClick={error ? onRetry : onMore}
+    className="w-full rounded-xl bg-dark-200 px-4 py-3 text-sm text-stone-300 disabled:opacity-50">
+    {error ? (uiLanguage === "zh" ? "重试" : "다시 시도") : loading ? (uiLanguage === "zh" ? "加载中…" : "불러오는 중…") : (uiLanguage === "zh" ? "加载更多" : "더 보기")}
+  </button>;
+}
+
+function ZhBrowseMode({ words, uiLanguage, onBack, title, paged = false, revision = 0 }: { words: Word[]; uiLanguage: UiLanguage; onBack: () => void; title?: string; paged?: boolean; revision?: number }) {
   const [query, setQuery] = useState("");
+  const page = usePagedWords(paged, query, revision, fetchZhPage);
   const t = UI_TEXT[uiLanguage];
   const [favs, setFavs] = useState<Record<number, boolean>>(() =>
     Object.fromEntries(words.map((w) => [w.id, w.is_favorite]))
@@ -1203,12 +1265,13 @@ function ZhBrowseMode({ words, uiLanguage, onBack, title }: { words: Word[]; uiL
     setFavs((f) => ({ ...f, [id]: result.is_favorite }));
   };
 
-  const filtered = query
-    ? words.filter((w) =>
+  const source = paged ? page.items : words;
+  const filtered = !paged && query
+    ? source.filter((w) =>
         w.chinese.includes(query) ||
         w.pinyin.toLowerCase().includes(query.toLowerCase()) ||
         w.meaning.includes(query))
-    : words;
+    : source;
   return (
     <div className="flex flex-col min-h-dvh bg-dark-400">
       <div className="px-6 pt-14 pb-4 bg-dark-300 border-b border-white/5">
@@ -1224,7 +1287,7 @@ function ZhBrowseMode({ words, uiLanguage, onBack, title }: { words: Word[]; uiL
             <div className="flex items-center gap-2.5">
               <span className="text-2xl font-bold text-stone-100">{w.chinese}</span>
               <span className="text-sm text-stone-500 font-light">{w.pinyin}</span>
-              <StarButton isFav={!!favs[w.id]} onToggle={() => toggleFav(w.id)} />
+              <StarButton isFav={favs[w.id] ?? w.is_favorite} onToggle={() => toggleFav(w.id)} />
             </div>
             <p className="text-sm text-stone-300 font-medium mt-0.5 leading-snug">{w.meaning}</p>
             <div className="flex items-center gap-2 mt-2">
@@ -1241,6 +1304,7 @@ function ZhBrowseMode({ words, uiLanguage, onBack, title }: { words: Word[]; uiL
             )}
           </div>
         ))}
+        <BrowseMoreButton paged={paged} hasMore={page.hasMore} loading={page.loading} error={page.error} onMore={page.loadMore} onRetry={page.retry} uiLanguage={uiLanguage} />
       </div>
     </div>
   );
@@ -1251,11 +1315,12 @@ function ZhBrowseMode({ words, uiLanguage, onBack, title }: { words: Word[]; uiL
 ══════════════════════════════════════════════════════════════ */
 
 function speakEnglish(word: string) {
-  window.speechSynthesis.cancel();
+  if (!("speechSynthesis" in window)) return;
+  stopWordPlayback();
   const utter = new SpeechSynthesisUtterance(word);
   utter.lang = "en-US";
   utter.rate = 0.9;
-  window.speechSynthesis.speak(utter);
+  playWordSpeech(utter);
 }
 
 function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
@@ -1273,7 +1338,7 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
 
   useEffect(() => {
     speakEnglish(word.word);
-    return () => window.speechSynthesis.cancel();
+    return () => stopWordPlayback();
   }, [word.word]);
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }
@@ -1399,8 +1464,9 @@ function EnReviewSession({ words, uiLanguage, onDone, onBack }: { words: English
   );
 }
 
-function EnBrowseMode({ words, uiLanguage, onBack, title }: { words: EnglishWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string }) {
+function EnBrowseMode({ words, uiLanguage, onBack, title, paged = false, revision = 0 }: { words: EnglishWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string; paged?: boolean; revision?: number }) {
   const [query, setQuery] = useState("");
+  const page = usePagedWords(paged, query, revision, fetchEnPage);
   const t = UI_TEXT[uiLanguage];
   const [favs, setFavs] = useState<Record<number, boolean>>(() =>
     Object.fromEntries(words.map((w) => [w.id, w.is_favorite]))
@@ -1411,13 +1477,14 @@ function EnBrowseMode({ words, uiLanguage, onBack, title }: { words: EnglishWord
     setFavs((f) => ({ ...f, [id]: result.is_favorite }));
   };
 
-  const filtered = query
-    ? words.filter((w) =>
+  const source = paged ? page.items : words;
+  const filtered = !paged && query
+    ? source.filter((w) =>
         w.word.toLowerCase().includes(query.toLowerCase()) ||
         w.meaning.includes(query) ||
         (w.meaning_zh?.includes(query) ?? false) ||
         (w.example_zh?.includes(query) ?? false))
-    : words;
+    : source;
   return (
     <div className="flex flex-col min-h-dvh bg-dark-400">
       <div className="px-6 pt-14 pb-4 bg-dark-300 border-b border-white/5">
@@ -1433,7 +1500,7 @@ function EnBrowseMode({ words, uiLanguage, onBack, title }: { words: EnglishWord
             <div className="flex items-center gap-2.5">
               <span className="text-xl font-bold text-stone-100" style={{ fontFamily: "'Outfit', sans-serif" }}>{w.word}</span>
               {w.level && <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.level}</span>}
-              <StarButton isFav={!!favs[w.id]} onToggle={() => toggleFav(w.id)} />
+              <StarButton isFav={favs[w.id] ?? w.is_favorite} onToggle={() => toggleFav(w.id)} />
             </div>
             <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{uiLanguage === "zh" ? (w.meaning_zh || w.meaning) : w.meaning}</p>
             <div className="flex items-center gap-2 mt-2">
@@ -1450,13 +1517,15 @@ function EnBrowseMode({ words, uiLanguage, onBack, title }: { words: EnglishWord
             )}
           </div>
         ))}
+        <BrowseMoreButton paged={paged} hasMore={page.hasMore} loading={page.loading} error={page.error} onMore={page.loadMore} onRetry={page.retry} uiLanguage={uiLanguage} />
       </div>
     </div>
   );
 }
 
-function JaBrowseMode({ words, uiLanguage, onBack, title }: { words: JapaneseWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string }) {
+function JaBrowseMode({ words, uiLanguage, onBack, title, paged = false, revision = 0 }: { words: JapaneseWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string; paged?: boolean; revision?: number }) {
   const [query, setQuery] = useState("");
+  const page = usePagedWords(paged, query, revision, fetchJaPage);
   const t = UI_TEXT[uiLanguage];
   const [favs, setFavs] = useState<Record<number, boolean>>(() =>
     Object.fromEntries(words.map((w) => [w.id, w.is_favorite]))
@@ -1467,14 +1536,15 @@ function JaBrowseMode({ words, uiLanguage, onBack, title }: { words: JapaneseWor
     setFavs((f) => ({ ...f, [id]: result.is_favorite }));
   };
 
-  const filtered = query
-    ? words.filter((w) =>
+  const source = paged ? page.items : words;
+  const filtered = !paged && query
+    ? source.filter((w) =>
         w.expression.includes(query) ||
         w.reading.includes(query) ||
         w.meaning.includes(query) ||
         (w.meaning_zh?.includes(query) ?? false) ||
         (w.example_zh?.includes(query) ?? false))
-    : words;
+    : source;
 
   return (
     <div className="flex flex-col min-h-dvh bg-dark-400">
@@ -1497,7 +1567,7 @@ function JaBrowseMode({ words, uiLanguage, onBack, title }: { words: JapaneseWor
               {w.jlpt_level && (
                 <span className="text-xs text-jeok-600 border border-jeok-900 rounded px-1.5 py-0.5">{w.jlpt_level}</span>
               )}
-              <StarButton isFav={!!favs[w.id]} onToggle={() => toggleFav(w.id)} />
+              <StarButton isFav={favs[w.id] ?? w.is_favorite} onToggle={() => toggleFav(w.id)} />
             </div>
             <p className="text-sm text-stone-300 font-medium mt-1 leading-snug">{uiLanguage === "zh" ? (w.meaning_zh || w.meaning) : w.meaning}</p>
             <div className="flex items-center gap-2 mt-2">
@@ -1514,6 +1584,7 @@ function JaBrowseMode({ words, uiLanguage, onBack, title }: { words: JapaneseWor
             )}
           </div>
         ))}
+        <BrowseMoreButton paged={paged} hasMore={page.hasMore} loading={page.loading} error={page.error} onMore={page.loadMore} onRetry={page.retry} uiLanguage={uiLanguage} />
       </div>
     </div>
   );
@@ -1601,11 +1672,11 @@ const SWIPE_THRESHOLD_JA = 80;
 
 function speakJapanese(text: string) {
   if (!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
+  stopWordPlayback();
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang = "ja-JP";
   utter.rate = 0.9;
-  window.speechSynthesis.speak(utter);
+  playWordSpeech(utter);
 }
 
 function JapaneseSoundButton({ text }: { text: string }) {
@@ -1636,7 +1707,7 @@ function JaSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
 
   useEffect(() => {
     speakJapanese(word.reading);
-    return () => window.speechSynthesis.cancel();
+    return () => stopWordPlayback();
   }, [word.reading]);
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }

@@ -8,16 +8,22 @@ from sqlalchemy.exc import IntegrityError
 
 from auth_utils import get_current_user
 from database import get_db
-from learning_service import build_today_plan, weekly_report
+from learning_service import COURSE_LIMITS, build_today_plan, weekly_report
 from models import LearningActivity, LearningProgress, MistakeItem, User
 
 router = APIRouter(prefix="/learning", tags=["learning"])
-VALID_SUBJECTS = {"zh", "ja", "en", "languages", "sqld", "network", "daily-zh", "daily-ja", "daily-db", "daily-network"}
+VALID_SUBJECTS = {"zh", "ja", "en", "languages", "sqld", "network", "cpp", "daily-zh", "daily-ja", "daily-db", "daily-network"}
 
 
 def validate_subject(subject: str) -> None:
     if subject not in VALID_SUBJECTS:
         raise HTTPException(status_code=400, detail="Unsupported subject")
+
+
+def valid_course_unit(subject: str, unit_id: str) -> bool:
+    limit = COURSE_LIMITS[subject]
+    return (1 <= len(unit_id) <= len(str(limit)) and unit_id.isascii() and
+            unit_id.isdecimal() and str(int(unit_id)) == unit_id and 1 <= int(unit_id) <= limit)
 
 
 class ProgressUpdate(BaseModel):
@@ -50,8 +56,8 @@ class MistakeCreate(BaseModel):
 
 
 class LocalMigration(BaseModel):
-    sqld: dict[str, bool] = Field(default_factory=dict)
-    network: dict[str, bool] = Field(default_factory=dict)
+    sqld: dict[str, bool] = Field(default_factory=dict, max_length=100)
+    network: dict[str, bool] = Field(default_factory=dict, max_length=120)
 
 
 @router.get("/today")
@@ -72,6 +78,10 @@ def progress(subject: Optional[str] = None, db: Session = Depends(get_db), user:
 @router.put("/progress/{subject}/{unit_id}")
 def update_progress(subject: str, unit_id: str, data: ProgressUpdate, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     validate_subject(subject)
+    if len(unit_id) > 100:
+        raise HTTPException(status_code=400, detail="unit_id is too long")
+    if subject in COURSE_LIMITS and not valid_course_unit(subject, unit_id):
+        raise HTTPException(status_code=400, detail="Invalid course unit_id")
     row = db.query(LearningProgress).filter(
         LearningProgress.user_id == user.id,
         LearningProgress.subject == subject,
@@ -183,7 +193,7 @@ def migrate_local(data: LocalMigration, db: Session = Depends(get_db), user: Use
     imported = 0
     for subject, values in (("sqld", data.sqld), ("network", data.network)):
         for unit_id, completed in values.items():
-            if not completed or not unit_id.isdigit():
+            if not completed or not valid_course_unit(subject, unit_id):
                 continue
             row = db.query(LearningProgress).filter(LearningProgress.user_id == user.id, LearningProgress.subject == subject, LearningProgress.unit_id == unit_id).first()
             if not row:

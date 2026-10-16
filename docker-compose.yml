@@ -3,13 +3,14 @@ services:
     build: ./backend
     restart: unless-stopped
     ports:
-      - "8001:8000"
+      - "127.0.0.1:8001:8000"
     env_file:
       - ./backend/.env
     environment:
       # Containers reach PostgreSQL by its Compose service name, not localhost.
       DATABASE_URL: postgresql://${POSTGRES_USER:-tradediary}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-onetask}
       SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env}
+      BOOTSTRAP_TOKEN: ${BOOTSTRAP_TOKEN:-}
       APP_BASE_URL: ${APP_BASE_URL:-http://localhost:3000}
       ENABLE_SCHEDULER: ${ENABLE_SCHEDULER:-true}
       COOKIE_SECURE: ${COOKIE_SECURE:-true}
@@ -29,7 +30,7 @@ services:
     build:
       context: ./frontend
       args:
-        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://152.69.206.56:8001}
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://backend:8000}
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -39,12 +40,10 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-tradediary}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tradediary}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
       POSTGRES_DB: ${POSTGRES_DB:-onetask}
     volumes:
       - pgdata:/var/lib/postgresql/data
-    ports:
-      - "5433:5432"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tradediary} -d ${POSTGRES_DB:-onetask}"]
       interval: 10s

@@ -117,9 +117,9 @@ export default function WeekView({
                   {hourEvents.map((e) => (
                     <div
                       key={e.id}
-                      draggable
-                      onDragStart={(ev) => handleDragStart(ev, e.id)}
-                      className={`text-xs p-1 rounded mb-1 truncate cursor-move ${
+                      draggable={!e.rrule}
+                      onDragStart={(ev) => { if (!e.rrule) handleDragStart(ev, e.id); }}
+                      className={`text-xs p-1 rounded mb-1 truncate ${e.rrule ? "" : "cursor-move"} ${
                         e.color
                           ? `border-l-2 bg-opacity-20`
                           : "bg-blue-900/30 border-l-2 border-blue-500"

@@ -25,6 +25,7 @@ class PushTestRequest(BaseModel):
 def subscribe(req: SubscribeRequest, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     existing = db.query(PushSubscription).filter_by(endpoint=req.endpoint).first()
     if existing:
+        existing.user_id = user.id
         existing.p256dh = req.p256dh
         existing.auth = req.auth
     else:
