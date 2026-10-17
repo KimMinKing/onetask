@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 import replicate
 from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
+from word_images import image_path_for
 
 load_dotenv()
 
@@ -32,7 +33,7 @@ BATCH = 300
 def fetch_words():
     with engine.connect() as conn:
         rows = conn.execute(text(
-            "SELECT id, chinese, example_zh FROM words "
+            "SELECT id, chinese, pinyin, meaning, example_zh FROM words "
             "WHERE hsk_level = 5 AND example_zh IS NOT NULL "
             "AND (image_path IS NULL OR image_path = '') "
             "ORDER BY id "
@@ -41,7 +42,7 @@ def fetch_words():
     return rows
 
 
-def generate_image(word_id: int, chinese: str, example_zh: str) -> str | None:
+def generate_image(chinese: str, example_zh: str, path: str) -> str | None:
     try:
         en_scene = translator.translate(example_zh)
         print(f"  번역: {example_zh[:30]} → {en_scene[:40]}", flush=True)
@@ -50,9 +51,6 @@ def generate_image(word_id: int, chinese: str, example_zh: str) -> str | None:
         en_scene = f"a scene depicting {chinese}"
 
     prompt = f"watercolor painting style, {en_scene}, soft brushstrokes, pastel tones"
-    filename = f"word_{word_id}.webp"
-    path = os.path.join(OUTPUT_DIR, filename)
-
     try:
         output = client.run(
             "black-forest-labs/flux-schnell",
@@ -88,9 +86,10 @@ def run():
     print(f"HSK 5 이미지 생성: {total}개\n", flush=True)
 
     success = 0
-    for i, (word_id, chinese, example_zh) in enumerate(words, 1):
+    for i, (word_id, chinese, pinyin, meaning, example_zh) in enumerate(words, 1):
         print(f"[{i}/{total}] {chinese} (id={word_id})", flush=True)
-        path = generate_image(word_id, chinese, example_zh)
+        image_path = image_path_for(5, word_id, chinese, pinyin, meaning, example_zh)
+        path = generate_image(chinese, example_zh, image_path)
         if path:
             update_image_path(word_id, path)
             success += 1

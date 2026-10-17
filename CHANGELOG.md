@@ -1,5 +1,22 @@
 # CHANGELOG — onetask
 
+## 2026-10-17
+### 완료
+- SQLD에서 첫 단계 저장 후 다음 단계의 `저장 중` 상태가 계속 남던 문제를 수정했다. 서버 저장 성공 후에만 완료·다음 단계로 이동하며, 실패 또는 15초 시간 초과 시 오류를 표시하고 재시도할 수 있다. 학습 기록에는 고정 15분 대신 해당 단계에서 실제 경과한 분을 보낸다.
+- SQLD 100단계의 동일한 안내 문장을 제거하고, 확인 문제를 정답 위치가 단계마다 다른 4지선다로 변경했다.
+- 추천 학습에서 들어간 페이지에 목표 시간과 남은 시간을 표시한다. 시간이 끝나도 자동 이동하지 않는다는 안내를 함께 표시한다.
+- HSK4의 수정 전·후 예문을 대조해 밀린 이미지 466개를 포함한 기존 이미지 4,664개의 연결을 검증했다. 확인 불가능한 HSK4 그림 35개와 예문 이력이 다른 HSK3 그림 1개는 숨기고, 향후 생성 이미지는 단어 내용 지문을 파일명에 넣어 데이터 수정 후 잘못된 그림이 재사용되지 않도록 했다. 이미지 URL 버전도 추가했다.
+- 백엔드 전체 검사 30개·하위 검사 3개, 프런트엔드 린트·오디오 검사 7개·프로덕션 빌드, 백엔드 Docker 이미지 빌드를 통과했다. SQLD 문제 100개의 보기 수·중복·정답 위치를 점검했다.
+
+### 변경된 파일
+- `frontend/src/app/sqld/` — 진도 저장 상태·문제 구성·반복 안내 수정.
+- `frontend/src/components/StudyTimer.tsx`, `frontend/src/components/TodayStudy.tsx`, `frontend/src/app/layout.tsx` — 추천 학습 시간 표시.
+- `backend/word_images.py`, `backend/word_image_manifest.json`, `backend/routers/words.py`, `backend/gen_hsk*_images.py`, `backend/regen_missing_images.py`, `backend/audit_word_images.py` — 이미지 연결 검증과 재생성 경로.
+- `backend/WORD_IMAGES.md`, `backend/tests/test_word_images.py` — 운영 점검 방법과 회귀 검사.
+
+### 다음 세션
+- 실제 운영 DB에서 `audit_word_images.py` 결과를 확인하고 숨겨진 이미지를 검토한다. 원본 대응이 불가능한 그림은 비용 확인 후 재생성한다.
+
 ## 2026-10-16
 ### 완료
 - 누적된 보안·계정 분리·학습·C++ TCP/UDP 및 TLS 서버 변경을 푸시하기 전 점검했다. 생성된 테스트 SQLite 파일은 Git 추적에서 제외하고, 과거 SQL 덤프 두 파일의 추적 제거를 유지했다.

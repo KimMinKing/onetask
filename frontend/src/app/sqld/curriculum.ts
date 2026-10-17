@@ -1,17 +1,16 @@
 export interface SqldQuiz { question: string; options: string[]; answer: number; explanation: string }
-export interface SqldLesson { id: number; section: string; title: string; subtitle: string; summary: string; points: string[]; sql?: string; trap: string; quiz: SqldQuiz }
+export interface SqldLesson { id: number; section: string; title: string; subtitle: string; points: string[]; sql?: string; trap: string; quiz: SqldQuiz }
 
 function lesson(id: number, section: string, title: string, subtitle: string, core: string, trap: string, sql = ""): SqldLesson {
   const points = core.split(" | ");
   return {
     id, section, title, subtitle,
-    summary: `${subtitle}\n\n이 단계에서는 정의를 외우는 데서 끝내지 않고, 보기의 조건과 SQL 실행 결과를 연결해 판단한다. 핵심 문장을 자기 말로 설명하고 예시의 결과를 손으로 먼저 계산해 보자.`,
     points, sql, trap,
     quiz: { question: `다음 중 ‘${title}’에 대한 설명으로 옳은 것은?`, options: [points[0], trap], answer: 0, explanation: points.join(" ") },
   };
 }
 
-export const SQLD_CURRICULUM: SqldLesson[] = [
+const LESSONS: SqldLesson[] = [
   lesson(1,"데이터 모델링","모델링의 목적","현실 업무를 데이터 구조로 추상화한다.","데이터 모델은 업무 규칙과 데이터 관계를 명확히 표현한다. | 좋은 모델은 중복을 줄이고 일관성·유연성·소통 가능성을 높인다. | 모델링은 시스템 구현 전에 업무를 정확히 이해하는 과정이다.","모델링은 단순히 테이블을 그리는 작업이며 업무 규칙과 무관하다."),
   lesson(2,"데이터 모델링","모델링의 3대 특징","추상화·단순화·명확화를 구분한다.","추상화는 공통 특성을 뽑아 일정한 형식으로 표현하는 것이다. | 단순화는 복잡한 현실을 약속된 표기법으로 쉽게 이해하게 한다. | 명확화는 애매함 없이 정확하게 현상을 기술하는 것이다.","추상화는 상세 정보를 하나도 생략하지 않고 현실을 그대로 복제하는 것이다."),
   lesson(3,"데이터 모델링","관점별 데이터 모델","데이터·프로세스·상관 관점을 구별한다.","데이터 관점은 업무가 어떤 데이터와 구조로 이루어졌는지 본다. | 프로세스 관점은 업무가 실제로 무엇을 하는지 본다. | 상관 관점은 업무 처리와 데이터 변화의 관계를 본다.","프로세스 관점은 데이터 사이의 정적 관계만을 표현한다."),
@@ -113,3 +112,17 @@ export const SQLD_CURRICULUM: SqldLesson[] = [
   lesson(99,"관리·실전","SQL 손풀이 절차","문법이 아니라 중간 결과 테이블을 그린다.","FROM과 JOIN 결과를 먼저 그리고 WHERE 통과 행만 남긴다. | 그룹별 집계와 HAVING을 계산한 뒤 SELECT 표현식을 만든다. | 집합·윈도우·정렬·Top-N 단계가 있으면 마지막에 각각 적용한다.","SQL은 작성 순서대로 SELECT부터 계산하면 가장 정확하다."),
   lesson(100,"관리·실전","최종 합격 체크","공식 범위 전체를 약점 중심으로 회독한다.","모델링에서는 엔터티·속성·관계·식별자·정규화를 설명할 수 있어야 한다. | SQL에서는 NULL·조인·서브쿼리·집계·윈도우·관리 구문 결과를 손으로 계산해야 한다. | 오답은 개념 부족, 실행 순서, NULL, 행 수, DBMS 차이 중 원인을 태깅해 재학습한다.","문제 수가 적은 데이터 모델링 과목은 과락 위험이 없으므로 버려도 된다.")
 ];
+
+export const SQLD_CURRICULUM: SqldLesson[] = LESSONS.map((item) => {
+  const nearby = LESSONS.filter((other) => other.id !== item.id).sort((a, b) =>
+    Number(b.section === item.section) - Number(a.section === item.section) ||
+    Math.abs(a.id - item.id) - Math.abs(b.id - item.id) || a.id - b.id
+  );
+  const distractors = [item.trap, ...nearby.map((other) => other.trap)].filter((option, index, all) =>
+    option !== item.points[0] && all.indexOf(option) === index
+  ).slice(0, 3);
+  const answer = (item.id * 7 + Math.floor(item.id / 4)) % 4;
+  const options = distractors.slice();
+  options.splice(answer, 0, item.points[0]);
+  return { ...item, quiz: { ...item.quiz, options, answer } };
+});

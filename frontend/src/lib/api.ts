@@ -137,6 +137,7 @@ export interface Word {
   example_pinyin: string | null;
   audio_path: string | null;
   image_path: string | null;
+  image_version: string | null;
   hsk_level: number | null;
   created_at: string;
   state: number;       // 0=New 1=Learning 2=Review 3=Relearning
@@ -495,8 +496,8 @@ export const api = {
   learning: {
     today: (minutes?: 5 | 15 | 30 | 60) => req<TodayPlan>(`/learning/today${minutes ? `?minutes=${minutes}` : ""}`),
     progress: (subject?: string) => req<LearningProgress[]>(`/learning/progress${subject ? `?subject=${subject}` : ""}`),
-    complete: (subject: string, unitId: string, data: { completed?: boolean; score?: number; last_position?: number; duration_minutes?: number; title?: string }) =>
-      req<LearningProgress>(`/learning/progress/${subject}/${unitId}`, { method: "PUT", body: JSON.stringify(data) }),
+    complete: (subject: string, unitId: string, data: { completed?: boolean; score?: number; last_position?: number; duration_minutes?: number; title?: string }, signal?: AbortSignal) =>
+      req<LearningProgress>(`/learning/progress/${subject}/${unitId}`, { method: "PUT", body: JSON.stringify(data), signal }),
     activity: (data: { client_event_id?: string; subject: string; activity_type: string; unit_id?: string; title?: string; duration_minutes?: number; correct_count?: number; total_count?: number; note?: string }) =>
       req<Record<string, unknown>>("/learning/activities", { method: "POST", body: JSON.stringify(data) }),
     mistakes: (subject?: string) => req<MistakeItem[]>(`/learning/mistakes${subject ? `?subject=${subject}` : ""}`),

@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 import replicate
 from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
+from word_images import image_path_for
 
 load_dotenv()
 
@@ -33,7 +34,7 @@ tr_ko = GoogleTranslator(source="ko",    target="en")
 def fetch_words():
     with engine.connect() as conn:
         return conn.execute(text(
-            "SELECT id, chinese, meaning, example_zh FROM words "
+            "SELECT id, chinese, pinyin, meaning, example_zh FROM words "
             "WHERE hsk_level = 6 AND example_zh IS NOT NULL "
             "AND (image_path IS NULL OR image_path = '') "
             "ORDER BY id LIMIT :lim"
@@ -54,9 +55,8 @@ def make_prompt(meaning: str, example_zh: str) -> str:
     return ", ".join(parts)
 
 
-def generate_image(word_id: int, chinese: str, scene: str) -> str | None:
+def generate_image(scene: str, path: str) -> str | None:
     prompt = f"watercolor painting style, {scene}, soft brushstrokes, pastel tones"
-    path = os.path.join(OUTPUT_DIR, f"word_{word_id}.webp")
     try:
         output = rep.run(
             "black-forest-labs/flux-schnell",
@@ -88,13 +88,14 @@ def run():
     print(f"HSK 6 이미지 생성: {total}개\n", flush=True)
     success = 0
 
-    for i, (word_id, chinese, meaning, example_zh) in enumerate(words, 1):
+    for i, (word_id, chinese, pinyin, meaning, example_zh) in enumerate(words, 1):
         print(f"[{i}/{total}] {chinese} — {meaning[:20]}", flush=True)
 
         scene = make_prompt(meaning, example_zh)
         print(f"  프롬프트: {scene[:80]}", flush=True)
 
-        path = generate_image(word_id, chinese, scene)
+        image_path = image_path_for(6, word_id, chinese, pinyin, meaning, example_zh)
+        path = generate_image(scene, image_path)
         if path:
             update_image_path(word_id, path)
             success += 1

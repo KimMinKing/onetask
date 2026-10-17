@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { SQLD_CURRICULUM, SqldLesson } from "./curriculum";
 import { api } from "@/lib/api";
@@ -17,11 +17,32 @@ function CodeBlock({ children }: { children: string }) {
   return <pre className="overflow-x-auto whitespace-pre rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-xs leading-6 text-emerald-300">{children}</pre>;
 }
 
-function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLesson; done: boolean; onDone: () => void; onMove: (id: number) => void; onWrong: (choice: number) => void }) {
+function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLesson; done: boolean; onDone: (durationMinutes: number) => Promise<void>; onMove: (id: number) => void; onWrong: (choice: number) => void }) {
   const [choice, setChoice] = useState<number | null>(null);
   const [saving, setSaving] = useState(false);
-  useEffect(() => { setChoice(null); window.scrollTo({ top: 0, behavior: "smooth" }); }, [lesson.id]);
+  const [saveError, setSaveError] = useState(false);
+  const startedAt = useRef(0);
+  useEffect(() => {
+    setChoice(null);
+    setSaving(false);
+    setSaveError(false);
+    startedAt.current = Date.now();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [lesson.id]);
   const correct = choice === lesson.quiz.answer;
+
+  const finish = async () => {
+    if (!correct || saving) return;
+    setSaving(true);
+    setSaveError(false);
+    try {
+      await onDone(Math.floor((Date.now() - startedAt.current) / 60_000));
+    } catch {
+      setSaveError(true);
+    } finally {
+      setSaving(false);
+    }
+  };
 
   return (
     <main className="mx-auto w-full max-w-3xl px-4 pb-12 pt-5">
@@ -35,7 +56,6 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
           <p className="mb-1 text-sm font-semibold text-violet-400">{lesson.subtitle}</p>
           <h1 className="text-2xl font-black text-stone-100 sm:text-3xl">{lesson.title}</h1>
         </div>
-        <p className="whitespace-pre-line text-sm leading-7 text-stone-300">{lesson.summary}</p>
         <section>
           <h2 className="mb-3 text-sm font-bold text-stone-100">시험에 나오는 핵심</h2>
           <ul className="space-y-2">
@@ -60,11 +80,12 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
             {!correct && <button onClick={() => setChoice(null)} className="mt-3 block rounded-lg border border-red-700 px-3 py-1.5 text-xs font-bold">다시 풀기</button>}
           </div>
         )}
-        <button disabled={!correct || saving} onClick={() => { setSaving(true); onDone(); }} className="mt-4 w-full rounded-xl bg-violet-600 py-3.5 font-bold text-white transition-colors hover:bg-violet-500 disabled:cursor-not-allowed disabled:opacity-30">{saving ? "저장 중..." : done ? "완료됨 · 다음 단계" : "이 단계 완료하고 다음으로"}</button>
+        {saveError && <p role="alert" className="mt-4 text-sm text-red-300">진도가 저장되지 않았습니다. 연결을 확인한 뒤 다시 눌러 주세요.</p>}
+        <button disabled={!correct || saving} onClick={finish} className="mt-4 w-full rounded-xl bg-violet-600 py-3.5 font-bold text-white transition-colors hover:bg-violet-500 disabled:cursor-not-allowed disabled:opacity-30">{saving ? "저장 중..." : saveError ? "저장 다시 시도" : done ? "완료됨 · 다음 단계" : "이 단계 완료하고 다음으로"}</button>
       </section>
       <div className="mt-4 grid grid-cols-2 gap-3">
-        <button disabled={lesson.id === 1} onClick={() => onMove(lesson.id - 1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">← 이전</button>
-        <button disabled={lesson.id === 100} onClick={() => onMove(lesson.id + 1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">다음 →</button>
+        <button disabled={lesson.id === 1 || saving} onClick={() => onMove(lesson.id - 1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">← 이전</button>
+        <button disabled={lesson.id === 100 || saving} onClick={() => onMove(lesson.id + 1)} className="rounded-xl bg-dark-200 py-3 text-sm text-stone-400 disabled:opacity-30">다음 →</button>
       </div>
     </main>
   );
@@ -88,14 +109,20 @@ export default function SqldPage() {
   const lessons = useMemo(() => SQLD_CURRICULUM.filter((lesson) => (section === "전체" || lesson.section === section) && `${lesson.title} ${lesson.subtitle} ${lesson.points.join(" ")}`.toLowerCase().includes(query.toLowerCase())), [query, section]);
   const current = selected ? SQLD_CURRICULUM[selected - 1] : null;
 
-  const complete = async (id: number) => {
-    const next = { ...progress, [id]: true };
-    setProgress(next);
-    writeUserStorage(STORAGE_KEY, JSON.stringify(next));
-    await api.learning.complete("sqld", String(id), { completed: true, score: 100, duration_minutes: 15, title: SQLD_CURRICULUM[id - 1].title }).catch(() => {});
+  const complete = async (id: number, durationMinutes: number) => {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15_000);
+    try {
+      await api.learning.complete("sqld", String(id), { completed: true, score: 100, duration_minutes: durationMinutes, title: SQLD_CURRICULUM[id - 1].title }, controller.signal);
+    } finally {
+      window.clearTimeout(timeout);
+    }
+    const next = { ...loadProgress(), ...progress, [id]: true };
+    try { writeUserStorage(STORAGE_KEY, JSON.stringify(next)); } catch { /* Server progress is authoritative. */ }
+    setProgress(previous => ({ ...previous, [id]: true }));
     setSelected(id < 100 ? id + 1 : 0);
   };
-  if (current) return <LessonView lesson={current} done={!!progress[current.id]} onDone={() => complete(current.id)} onMove={setSelected} onWrong={(choice) => api.learning.addMistake({ subject: "sqld", item_key: `lesson-${current.id}`, question: current.quiz.question, correct_answer: current.quiz.options[current.quiz.answer], user_answer: current.quiz.options[choice], explanation: current.quiz.explanation }).catch(() => {})} />;
+  if (current) return <LessonView lesson={current} done={!!progress[current.id]} onDone={(durationMinutes) => complete(current.id, durationMinutes)} onMove={setSelected} onWrong={(choice) => api.learning.addMistake({ subject: "sqld", item_key: `lesson-${current.id}`, question: current.quiz.question, correct_answer: current.quiz.options[current.quiz.answer], user_answer: current.quiz.options[choice], explanation: current.quiz.explanation }).catch(() => {})} />;
 
   return (
     <div className="min-h-dvh bg-dark-400">

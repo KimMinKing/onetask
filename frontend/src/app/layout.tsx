@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ServiceWorkerInit } from "@/components/ServiceWorkerInit";
+import { StudyTimer } from "@/components/StudyTimer";
 
 const a2g = localFont({
   src: [
@@ -42,6 +44,7 @@ export default function RootLayout({
       </head>
       <body className={`${a2g.variable} antialiased`}>
         <ServiceWorkerInit />
+        <Suspense fallback={null}><StudyTimer /></Suspense>
         <div id="app-frame">
           {children}
         </div>

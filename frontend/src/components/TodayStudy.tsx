@@ -56,7 +56,7 @@ export default function TodayStudy() {
       <div className="mt-4 space-y-2">
         {loading && <div className="rounded-2xl bg-dark-100 p-4 text-sm text-stone-500">오늘 학습을 구성하는 중...</div>}
         {!loading && plan?.tasks.map((task, index) => (
-          <Link key={task.id} href={task.href} className="flex items-center gap-3 rounded-2xl border border-white/5 bg-dark-100/80 p-4 transition hover:border-emerald-700">
+          <Link key={task.id} href={`${task.href}${task.href.includes("?") ? "&" : "?"}study_minutes=${task.minutes}`} className="flex items-center gap-3 rounded-2xl border border-white/5 bg-dark-100/80 p-4 transition hover:border-emerald-700">
             <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-black ${task.completed ? "bg-emerald-900 text-emerald-300" : "bg-stone-800 text-stone-300"}`}>{task.completed ? "✓" : index + 1}</span>
             <div className="min-w-0 flex-1"><p className="truncate text-sm font-bold text-stone-100">{task.title}</p><p className="mt-0.5 text-xs text-stone-500">약 {task.minutes}분</p></div>
             <span className="text-emerald-400">→</span>

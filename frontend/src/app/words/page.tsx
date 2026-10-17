@@ -21,12 +21,12 @@ const STATE_COLOR: Record<number, string> = {
   0: "text-stone-500", 1: "text-yellow-500", 2: "text-jeok-400", 3: "text-orange-400",
 };
 
-function getWordImageUrl(imagePath?: string | null) {
+function getWordImageUrl(imagePath?: string | null, imageVersion?: string | null) {
   if (!imagePath) return "";
   const normalizedPath = imagePath
     .replaceAll("\\", "/")
     .replace(/^test_output\//, "");
-  return `/images/${normalizedPath}`;
+  return `/images/${normalizedPath}${imageVersion ? `?v=${encodeURIComponent(imageVersion)}` : ""}`;
 }
 
 const UI_TEXT = {
@@ -970,7 +970,7 @@ const SWIPE_THRESHOLD = 100;
 function ZhSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage, onFavoriteChange }: {
   word: Word; flipped: boolean; onFlip: () => void; onSwipe: (knew: boolean) => void; uiLanguage: UiLanguage; onFavoriteChange?: (id: number, isFavorite: boolean) => void;
 }) {
-  const imageUrl = getWordImageUrl(word.image_path);
+  const imageUrl = getWordImageUrl(word.image_path, word.image_version);
   const firstRender = useRef(true);
   const [isFavorite, setIsFavorite] = useState(word.is_favorite);
   const [favoriteBusy, setFavoriteBusy] = useState(false);

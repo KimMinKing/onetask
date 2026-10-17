@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 import replicate
 from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
+from word_images import image_path_for
 
 load_dotenv()
 
@@ -34,7 +35,7 @@ SLEEP_SEC = 16  # rate limit: 6 req/min when credit < $5
 def fetch_hsk3_words():
     with engine.connect() as conn:
         rows = conn.execute(text(
-            "SELECT id, chinese, example_zh FROM words "
+            "SELECT id, chinese, pinyin, meaning, example_zh FROM words "
             "WHERE hsk_level = 3 AND example_zh IS NOT NULL "
             "AND (image_path IS NULL OR image_path = '') "
             "ORDER BY id"
@@ -42,7 +43,7 @@ def fetch_hsk3_words():
     return rows
 
 
-def generate_image(word_id: int, chinese: str, example_zh: str) -> str | None:
+def generate_image(chinese: str, example_zh: str, path: str) -> str | None:
     try:
         en_scene = translator.translate(example_zh)
         print(f"  번역: {example_zh} → {en_scene}")
@@ -51,9 +52,6 @@ def generate_image(word_id: int, chinese: str, example_zh: str) -> str | None:
         en_scene = f"a scene depicting {chinese}"
 
     prompt = f"watercolor painting style, {en_scene}, soft brushstrokes, pastel tones"
-    filename = f"word_{word_id}.webp"
-    path = os.path.join(OUTPUT_DIR, filename)
-
     try:
         output = client.run(
             "black-forest-labs/flux-schnell",
@@ -87,9 +85,10 @@ def run():
     total = len(words)
     print(f"HSK 3 이미지 생성 시작: {total}개\n")
 
-    for i, (word_id, chinese, example_zh) in enumerate(words, 1):
+    for i, (word_id, chinese, pinyin, meaning, example_zh) in enumerate(words, 1):
         print(f"[{i}/{total}] {chinese} (id={word_id})")
-        image_path = generate_image(word_id, chinese, example_zh)
+        path = image_path_for(3, word_id, chinese, pinyin, meaning, example_zh)
+        image_path = generate_image(chinese, example_zh, path)
         if image_path:
             update_image_path(word_id, image_path)
 

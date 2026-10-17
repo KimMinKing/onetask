@@ -1,7 +1,7 @@
 """
 HSK 누락 이미지 재생성 스크립트 (HSK3~6 통합)
 
-- DB에 image_path 있지만 실제 파일 없는 경우 + image_path 없는 경우 모두 처리
+- 파일이 없거나 현재 단어의 뜻·예문과 이미지 연결을 확인할 수 없는 경우 처리
 - 스타일: 선명한 디지털 일러스트 (파스텔 제거, 채도 높은 색감)
 - 배치: 기본 100개씩 처리 (--limit N으로 조정)
 
@@ -12,6 +12,7 @@ HSK 누락 이미지 재생성 스크립트 (HSK3~6 통합)
   python regen_missing_images.py --dry-run    # 목록만 확인
 """
 import io, os, sys, time, argparse, urllib.request
+from functools import lru_cache
 from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
@@ -20,17 +21,24 @@ from dotenv import load_dotenv
 import replicate
 from translation_utils import GoogleTranslator
 from sqlalchemy import create_engine, text
+from word_images import image_path_for, verified_image
 
 load_dotenv()
 
-client = replicate.Client(api_token=os.getenv("REPLICATE_API_TOKEN"))
-engine = create_engine(os.getenv("DATABASE_URL", "postgresql://tradediary:tradediary@localhost:5432/onetask"))
+database_url = os.getenv("DATABASE_URL")
+if not database_url:
+    raise SystemExit("DATABASE_URL is required")
+engine = create_engine(database_url)
 
-FOLDERS = {3: "test_output/hsk3", 4: "test_output/hsk4", 5: "test_output/hsk5", 6: "test_output/hsk6"}
 SLEEP_SEC = 17  # ~3.5 req/min (보수적 rate limit)
 
 tr_zh = GoogleTranslator(source="zh-CN", target="en")
 tr_ko = GoogleTranslator(source="ko", target="en")
+
+
+@lru_cache(maxsize=1)
+def image_client():
+    return replicate.Client(api_token=os.environ["REPLICATE_API_TOKEN"])
 
 
 def fetch_missing(level: int | None, limit: int) -> list[tuple]:
@@ -40,18 +48,17 @@ def fetch_missing(level: int | None, limit: int) -> list[tuple]:
 
     with engine.connect() as conn:
         for lvl in levels:
-            folder = FOLDERS[lvl]
             rows = conn.execute(text("""
-                SELECT id, chinese, meaning, example_zh
+                SELECT id, chinese, pinyin, meaning, example_zh, image_path, hsk_level
                 FROM words WHERE hsk_level = :l
                 AND example_zh IS NOT NULL
                 ORDER BY id
             """), {"l": lvl}).fetchall()
 
             for r in rows:
-                img_path = f"{folder}/word_{r[0]}.webp"
-                if not Path(img_path).exists():
-                    results.append((lvl, r[0], r[1], r[2], r[3], img_path))
+                if verified_image(r)[0] is None:
+                    img_path = image_path_for(lvl, r.id, r.chinese, r.pinyin, r.meaning, r.example_zh)
+                    results.append((lvl, r.id, r.chinese, r.meaning, r.example_zh, img_path))
 
     results.sort(key=lambda x: (x[0], x[1]))  # level, id 순
     return results[:limit]
@@ -89,7 +96,7 @@ def generate_image(word_id: int, lvl: int, chinese: str, meaning: str,
     print(f"  프롬프트: {prompt[:90]}", flush=True)
 
     try:
-        output = client.run(
+        output = image_client().run(
             "black-forest-labs/flux-schnell",
             input={
                 "prompt": prompt,
