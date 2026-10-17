@@ -37,13 +37,15 @@ def test_cpp_course_over_authenticated_http_routes():
                 assert settings_response.status_code == 200, settings_response.text
                 assert settings_response.json()["focus_subject"] == "cpp"
                 plan = client.get("/learning/today").json()
-                assert plan["tasks"][0]["href"] == "/cpp?step=1"
+                assert next(task for task in plan["tasks"] if task["subject"] == "cpp")["href"] == "/cpp?step=1"
+                assert {task["subject"] for task in plan["tasks"]} == {"zh", "en", "cpp"}
 
                 completed = client.put("/learning/progress/cpp/1", json={"completed": True, "score": 100,
                                                                              "duration_minutes": 15, "title": "빌드와 실행"})
                 assert completed.status_code == 200, completed.text
                 assert completed.json()["completed"] is True
-                assert client.get("/learning/today").json()["tasks"][0]["href"] == "/cpp?step=2"
+                next_plan = client.get("/learning/today").json()
+                assert next(task for task in next_plan["tasks"] if task["subject"] == "cpp")["href"] == "/cpp?step=2"
                 assert any(row["unit_id"] == "1" for row in client.get("/learning/progress?subject=cpp").json())
 
                 invalid = client.put("/learning/progress/cpp/27", json={"completed": True})

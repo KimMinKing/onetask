@@ -7,18 +7,19 @@ export function StudyTimer() {
   const pathname = usePathname();
   const params = useSearchParams();
   const minutes = Number(params.get("study_minutes"));
+  const validMinutes = Number.isInteger(minutes) && minutes >= 1 && minutes <= 60;
   const [remaining, setRemaining] = useState<number | null>(null);
 
   useEffect(() => {
-    if (![5, 10, 15, 20, 25, 30, 60].includes(minutes)) return;
+    if (!validMinutes) return;
     const deadline = Date.now() + minutes * 60_000;
     const tick = () => setRemaining(Math.max(0, Math.ceil((deadline - Date.now()) / 1000)));
     tick();
     const interval = window.setInterval(tick, 1000);
     return () => window.clearInterval(interval);
-  }, [pathname, minutes]);
+  }, [pathname, minutes, validMinutes]);
 
-  if (![5, 10, 15, 20, 25, 30, 60].includes(minutes) || remaining === null) return null;
+  if (!validMinutes || remaining === null) return null;
   const clock = `${String(Math.floor(remaining / 60)).padStart(2, "0")}:${String(remaining % 60).padStart(2, "0")}`;
 
   return <aside aria-label="학습 목표 시간" className="fixed bottom-4 right-4 z-50 max-w-[min(19rem,calc(100vw-2rem))] rounded-2xl border border-emerald-700 bg-dark-300/95 px-4 py-3 text-stone-100 shadow-xl backdrop-blur">

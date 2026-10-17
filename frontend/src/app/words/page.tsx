@@ -303,6 +303,14 @@ function WordsContent({ uiLanguage, setUiLanguage }: {
       setMode("kana");
       return;
     }
+    const enLevel = params.get("en");
+    if (enLevel && EN_LEVELS.some((level) => level.value === enLevel)) {
+      setSelectedLang("en");
+      setSelectedEnLevel(enLevel);
+      setMode("home");
+      reloadEn(enLevel);
+      return;
+    }
     const jaLevel = params.get("ja");
     if (jaLevel && JA_LEVELS.some((level) => level.value === jaLevel)) {
       setSelectedLang("ja");
@@ -318,7 +326,7 @@ function WordsContent({ uiLanguage, setUiLanguage }: {
       setMode("home");
       reloadZh(hskLevel);
     }
-  }, [reloadJa, reloadZh]);
+  }, [reloadEn, reloadJa, reloadZh]);
 
   useEffect(() => {
     if (uiLanguage !== "zh" || mode !== "browse") return;

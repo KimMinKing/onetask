@@ -1,13 +1,13 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 import pytest
 from fastapi import HTTPException
 from pydantic import ValidationError
 
 from database import Base
 from learning_service import build_today_plan, next_unit, weekly_report
-from models import LearningActivity, LearningProgress, User, UserSettings
+from models import EnglishWord, EnglishWordCard, LearningActivity, LearningProgress, User, UserSettings
 from routers.learning import ActivityCreate, LocalMigration, ProgressUpdate, create_activity, migrate_local, update_progress
 
 
@@ -32,6 +32,52 @@ def test_plan_uses_exam_priority_and_completed_unit():
     assert plan["primary_subject"] == "sqld"
     assert any(task["unit_id"] == "2" for task in plan["tasks"])
     assert sum(task["minutes"] for task in plan["tasks"]) == 30
+
+
+@pytest.mark.parametrize("minutes,expected", [
+    (5, {"zh": 2, "en": 3}),
+    (15, {"zh": 3, "en": 4, "sqld": 8}),
+    (30, {"zh": 7, "en": 8, "sqld": 15}),
+    (60, {"zh": 10, "en": 10, "sqld": 25, "network": 15}),
+])
+def test_daily_plan_includes_chinese_and_english_within_budget(minutes, expected):
+    db = session()
+    user = User(username=f"daily_{minutes}", hashed_password="x")
+    db.add(user)
+    db.commit()
+
+    plan = build_today_plan(db, user.id, minutes)
+
+    assert {task["subject"]: task["minutes"] for task in plan["tasks"]} == expected
+    assert plan["total_minutes"] == minutes
+    english = next(task for task in plan["tasks"] if task["subject"] == "en")
+    assert english["href"] == "/words?en=B1"
+    assert english["unit_id"] is None
+
+
+def test_english_focus_merges_task_and_review_marks_it_complete():
+    db = session()
+    user = User(username="english_focus", hashed_password="x")
+    db.add(user)
+    db.flush()
+    db.add(UserSettings(user_id=user.id, study_minutes=15, focus_subject="en"))
+    other_level = EnglishWord(word="first", meaning="첫 번째", level="A1")
+    word = EnglishWord(word="example", meaning="예시", level="B1")
+    db.add_all([other_level, word])
+    db.flush()
+    db.add(EnglishWordCard(user_id=user.id, word_id=other_level.id, last_review=datetime.now(timezone.utc)))
+    db.commit()
+
+    before = build_today_plan(db, user.id)
+    assert before["tasks"][1]["completed"] is False
+
+    db.add(EnglishWordCard(user_id=user.id, word_id=word.id, last_review=datetime.now(timezone.utc)))
+    db.commit()
+    plan = build_today_plan(db, user.id)
+
+    assert [(task["subject"], task["minutes"]) for task in plan["tasks"]] == [("zh", 3), ("en", 12)]
+    assert plan["tasks"][1]["completed"] is True
+    assert plan["tasks"][1]["unit_id"] is None
 
 
 def test_progress_and_report_are_isolated_by_user():
@@ -79,8 +125,9 @@ def test_completed_course_has_no_phantom_101st_lesson():
 
     plan = build_today_plan(db, user.id)
 
-    assert plan["tasks"][0]["completed"] is True
-    assert "101단계" not in plan["tasks"][0]["title"]
+    sqld_task = next(task for task in plan["tasks"] if task["subject"] == "sqld")
+    assert sqld_task["completed"] is True
+    assert "101단계" not in sqld_task["title"]
 
 
 def test_cpp_focus_and_extended_network_steps_have_valid_deep_links():
@@ -94,13 +141,13 @@ def test_cpp_focus_and_extended_network_steps_have_valid_deep_links():
                 for unit in range(1, 101)])
     db.commit()
 
-    cpp_task = build_today_plan(db, user.id)["tasks"][0]
+    cpp_task = next(task for task in build_today_plan(db, user.id)["tasks"] if task["subject"] == "cpp")
     assert cpp_task["href"] == "/cpp?step=1"
     assert next_unit(db, user.id, "network") == 101
 
     settings.focus_subject = "network"
     db.commit()
-    network_task = build_today_plan(db, user.id)["tasks"][0]
+    network_task = next(task for task in build_today_plan(db, user.id)["tasks"] if task["subject"] == "network")
     assert network_task["href"] == "/network?step=101"
 
 

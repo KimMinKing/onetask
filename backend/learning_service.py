@@ -4,13 +4,13 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 from zoneinfo import ZoneInfo
 
-from models import EnglishWordCard, JapaneseWordCard, LearningActivity, LearningProgress, MistakeItem, UserSettings, WordCard
+from models import EnglishWord, EnglishWordCard, JapaneseWordCard, LearningActivity, LearningProgress, MistakeItem, UserSettings, Word, WordCard
 
 
 SUBJECTS = {
     "zh": ("중국어 HSK 4급", "/words?hsk=4"),
     "ja": ("일본어 히라가나", "/words?course=kana"),
-    "en": ("영어 표현", "/english-phrases"),
+    "en": ("영어 B1 단어 복습", "/words?en=B1"),
     "sqld": ("SQLD", "/sqld"),
     "network": ("네트워크관리사", "/network"),
     "cpp": ("C++ 네트워크", "/cpp"),
@@ -69,7 +69,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
     budget = minutes or settings.study_minutes or 15
     budget = min((5, 15, 30, 60), key=lambda value: abs(value - budget))
     primary = priority_subject(settings)
-    primary_unit = next_unit(db, user_id, primary)
+    primary_unit = next_unit(db, user_id, primary) if primary in COURSE_LIMITS else None
     tasks = []
 
     def course_href(subject: str, href: str, unit: int) -> str:
@@ -86,7 +86,12 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
         reviewed_today = False
         if subject in LANGUAGE_CARDS:
             model = LANGUAGE_CARDS[subject]
-            reviewed_today = db.query(model).filter(model.user_id == user_id, model.last_review >= _day_start_utc()).first() is not None
+            review_query = db.query(model).filter(model.user_id == user_id, model.last_review >= _day_start_utc())
+            if subject == "zh":
+                review_query = review_query.join(Word, Word.id == WordCard.word_id).filter(Word.hsk_level == 4)
+            elif subject == "en":
+                review_query = review_query.join(EnglishWord, EnglishWord.id == EnglishWordCard.word_id).filter(EnglishWord.level == "B1")
+            reviewed_today = review_query.first() is not None
         tasks.append({
             "id": f"{subject}:{unit_id or 'review'}",
             "subject": subject,
@@ -97,27 +102,37 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
             "completed": completed_override or reviewed_today or bool(progress and progress.completed),
         })
 
-    def add_course(subject: str, task_minutes: int, unit: int):
+    def add_course(subject: str, task_minutes: int, unit: int | None):
         label, href = SUBJECTS[subject]
+        if subject in LANGUAGE_CARDS:
+            existing = next((task for task in tasks if task["subject"] == subject), None)
+            if existing:
+                existing["minutes"] += task_minutes
+            else:
+                add(subject, label, task_minutes, href)
+            return
+        if unit is None:
+            raise ValueError(f"Missing course unit for {subject}")
         limit = COURSE_LIMITS.get(subject)
         if limit is not None and unit > limit:
             add(subject, f"{label} {limit}단계 완료 · 오답 복습", task_minutes, f"/mistakes?subject={subject}", completed_override=True)
         else:
             add(subject, f"{label} {unit}단계", task_minutes, course_href(subject, href, unit), str(unit))
 
-    if budget == 5:
-        add("zh", "HSK 4급 어제 단어 빠른 복습", 5, "/words?hsk=4")
-    elif budget == 15:
-        add_course(primary, 15, primary_unit)
-    elif budget == 30:
-        add("zh", "HSK 4급 복습", 10, "/words?hsk=4")
-        add_course(primary, 20, primary_unit)
-    else:
-        add("zh", "HSK 4급 복습", 15, "/words?hsk=4")
-        add_course(primary, 25, primary_unit)
+    zh_minutes, en_minutes, primary_minutes, secondary_minutes = {
+        5: (2, 3, 0, 0),
+        15: (3, 4, 8, 0),
+        30: (7, 8, 15, 0),
+        60: (10, 10, 25, 15),
+    }[budget]
+    add("zh", "중국어 HSK 4급 단어 복습", zh_minutes, "/words?hsk=4")
+    add("en", "영어 B1 단어 복습", en_minutes, "/words?en=B1")
+    if primary_minutes:
+        add_course(primary, primary_minutes, primary_unit)
+    if secondary_minutes:
         secondary = "network" if primary == "sqld" else "sqld"
         secondary_unit = next_unit(db, user_id, secondary)
-        add_course(secondary, 20, secondary_unit)
+        add_course(secondary, secondary_minutes, secondary_unit)
 
     last = db.query(LearningActivity).filter(LearningActivity.user_id == user_id).order_by(LearningActivity.created_at.desc()).first()
     latest_stamp = last.created_at if last else None
