@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { CPP_CURRICULUM } from "./curriculum";
+import { CPP_STORY, CPP_STORY_CHAPTERS } from "./story";
 import { api } from "@/lib/api";
 import { readUserStorage, writeUserStorage } from "@/lib/auth";
 
@@ -57,6 +58,8 @@ export default function CppPage() {
   }, []);
 
   const current = CPP_CURRICULUM.find(lesson => lesson.id === selected);
+  const scene = current ? CPP_STORY[current.id - 1] : undefined;
+  const chapter = current ? CPP_STORY_CHAPTERS.find(({ start, end }) => current.id >= start && current.id <= end) : undefined;
   const sections = ["전체", ...new Set(CPP_CURRICULUM.map(lesson => lesson.section))];
   const filtered = useMemo(() => CPP_CURRICULUM.filter(lesson =>
     (section === "전체" || lesson.section === section) &&
@@ -120,12 +123,12 @@ export default function CppPage() {
   return <div className="min-h-dvh bg-dark-400 text-stone-100">
     <header className="border-b border-white/5 bg-dark-300 px-4 py-6">
       <div className="mx-auto max-w-5xl">
-        <Link href="/" className="text-sm text-stone-400 hover:text-stone-100">← 홈</Link>
+        <Link href="/learn" className="text-sm text-stone-400 hover:text-stone-100">← 학습 선택</Link>
         <div className="mt-4 flex items-end justify-between gap-4">
           <div>
             <p className="text-xs font-bold text-cyan-400">C++ · 시스템 · 네트워크</p>
             <h1 className="mt-1 text-3xl font-black">C++와 TCP/UDP {total}단계</h1>
-            <p className="mt-2 text-sm text-stone-400">언어와 메모리부터 소켓, 패킷 경계, 타임아웃과 테스트까지</p>
+            <p className="mt-2 text-sm text-stone-400">민재의 해안 통신소 복구 이야기 · 언어와 메모리부터 TCP/UDP 실습까지</p>
           </div>
           <p className="shrink-0 text-lg font-bold">{completed}/{total}</p>
         </div>
@@ -139,7 +142,8 @@ export default function CppPage() {
       <button onClick={() => openLesson(0)} className="text-sm text-stone-400 hover:text-stone-100">← 전체 목록</button>
       <article className="space-y-5 rounded-3xl bg-dark-200 p-5 sm:p-7">
         <div><p className="text-xs font-bold text-cyan-400">{current.section} · {current.id}/{total}</p><h2 className="mt-2 text-2xl font-black">{current.title}</h2></div>
-        <p className="leading-7 text-stone-300">{current.summary}</p>
+        {scene && <section className="rounded-2xl border border-cyan-900/40 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 해안 통신소 · {chapter?.title}</p>{chapter?.start === current.id && <p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}<p className="mt-3 text-sm leading-8 text-stone-100">{scene.story}</p></section>}
+        <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 text-sm leading-7 text-stone-100">{current.summary}</p>{scene && <p className="mt-3 text-sm leading-7 text-stone-300">{scene.bridge}</p>}<p className="mt-3 text-xs leading-6 text-stone-500">통신소 사건은 가상입니다. C++의 실제 동작은 아래 코드와 실습 결과로 확인하세요.</p></section>
         <ul className="space-y-2">{current.points.map(point => <li key={point} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {point}</li>)}</ul>
         <section><h3 className="mb-2 font-bold">핵심 코드 조각</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
         <section><h3 className="mb-2 font-bold">직접 해보기</h3><p className="text-sm leading-6 text-stone-300">{current.exercise}</p></section>

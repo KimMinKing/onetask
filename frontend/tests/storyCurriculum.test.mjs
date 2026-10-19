@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { registerHooks } from "node:module";
+import { readFileSync } from "node:fs";
 import { ENGLISH_CHAPTERS, reviewWords } from "../src/app/english-basics/curriculum.ts";
 import { RUST_CURRICULUM } from "../src/app/rust/curriculum.ts";
 import { RUST_STORY } from "../src/app/rust/story.ts";
@@ -10,6 +11,8 @@ import { PYTHON_BRIDGES } from "../src/app/rust/pythonBridges.ts";
 import { SQLD_CHAPTERS, SQLD_STORY } from "../src/app/sqld/story.ts";
 import { NETWORK_CHAPTERS, NETWORK_STORY } from "../src/app/network/story.ts";
 import { SQLD_CURRICULUM } from "../src/app/sqld/curriculum.ts";
+import { CPP_CURRICULUM } from "../src/app/cpp/curriculum.ts";
+import { CPP_STORY, CPP_STORY_CHAPTERS } from "../src/app/cpp/story.ts";
 
 test("each Rust lesson has a connected scene and a concrete bridge", () => {
   assert.equal(RUST_CURRICULUM.length, 54);
@@ -81,4 +84,40 @@ test("SQLD and network quizzes have four distinct choices with varied answers", 
     }
     assert.ok(new Set(lessons.map(lesson => lesson.quiz.answer)).size === 4);
   }
+});
+
+test("C++ repair story covers the language-to-network course in order", () => {
+  assert.equal(CPP_CURRICULUM.length, 26);
+  assert.equal(CPP_STORY.length, CPP_CURRICULUM.length);
+  assert.equal(new Set(CPP_STORY.map(scene => scene.story)).size, CPP_STORY.length);
+  for (const lesson of CPP_CURRICULUM) {
+    const scene = CPP_STORY[lesson.id - 1];
+    assert.equal(scene.id, lesson.id);
+    assert.ok(scene.story.length > 90, `C++ ${lesson.id} story`);
+    assert.ok(scene.bridge.length > 45, `C++ ${lesson.id} bridge`);
+    assert.equal(CPP_STORY_CHAPTERS.filter(chapter => lesson.id >= chapter.start && lesson.id <= chapter.end).length, 1);
+  }
+});
+
+test("home has one learning entry and the hub retains every course route", () => {
+  const home = readFileSync(new URL("../src/app/page.tsx", import.meta.url), "utf8");
+  const hub = readFileSync(new URL("../src/app/learn/page.tsx", import.meta.url), "utf8");
+  const nav = home.slice(home.indexOf('className="home-nav-grid'));
+  assert.deepEqual([...nav.matchAll(/<Link href="([^"]+)"/g)].map(match => match[1]), ["/calendar", "/learn"]);
+  const routes = [...hub.matchAll(/href: "([^"]+)"/g)].map(match => match[1]);
+  assert.equal(new Set(routes).size, routes.length);
+  assert.deepEqual(new Set(routes), new Set([
+    "/daily-course", "/words", "/english-basics", "/english-phrases", "/hsk5",
+    "/rust", "/cpp", "/python", "/math", "/sqld", "/network", "/search", "/stats",
+  ]));
+});
+
+test("independent stories use distinct protagonists", () => {
+  const english = readFileSync(new URL("../src/app/english-basics/curriculum.ts", import.meta.url), "utf8");
+  assert.match(english, /하린/);
+  assert.doesNotMatch(english, /서윤|연우|Rust 여정/);
+  assert.match(RUST_STORY[0].story, /서윤/);
+  assert.match(SQLD_STORY[0].scene, /지안/);
+  assert.match(NETWORK_STORY[0].scene, /도윤/);
+  assert.match(CPP_STORY[0].story, /민재/);
 });

@@ -72,8 +72,8 @@ export default function EnglishBasicsPage() {
 
   return <div className="min-h-dvh bg-dark-400 text-stone-100">
     <header className="border-b border-white/5 bg-dark-300 px-4 py-6"><div className="mx-auto max-w-4xl">
-      <Link href="/" className="text-sm text-stone-400 hover:text-white">← 홈</Link>
-      <h1 className="mt-3 text-3xl font-black">서윤의 영어 교역문</h1>
+      <Link href="/learn" className="text-sm text-stone-400 hover:text-white">← 학습 선택</Link>
+      <h1 className="mt-3 text-3xl font-black">하린의 영어 교역문</h1>
       <p className="mt-2 text-sm leading-6 text-stone-400">영어를 처음부터 배우는 25장 연속 이야기 · 새 단어와 이전 장의 단어를 간격을 두고 뜻만 보고 다시 씁니다.</p>
       <p className="mt-2 text-sm font-bold text-blue-300">완료 {completed.size}/{ENGLISH_CHAPTERS.length}장</p>
       <div className="mt-2 h-2 overflow-hidden rounded-full bg-dark-100"><div className="h-full bg-blue-500" style={{width: `${completed.size / ENGLISH_CHAPTERS.length * 100}%`}} /></div>
@@ -83,7 +83,7 @@ export default function EnglishBasicsPage() {
       <article className="space-y-5 rounded-3xl bg-dark-200 p-5 sm:p-7">
         <div><p className="text-xs font-bold text-blue-300">{chapter.id}/{ENGLISH_CHAPTERS.length}장 · 가상의 선협 이야기</p><h2 className="mt-2 text-2xl font-black">{chapter.title}</h2></div>
         <p className="whitespace-pre-line leading-8">{chapter.story}</p>
-        <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-blue-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 leading-7">{chapter.concept}</p><p className="mt-2 leading-7 text-stone-300">{chapter.sceneLink}</p><p className="mt-3 text-xs text-stone-500">서윤과 교역문은 가상의 이야기입니다. 아래 영어 문장과 문법 설명은 실제 영어 학습 내용입니다.</p></section>
+        <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-blue-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 leading-7">{chapter.concept}</p><p className="mt-2 leading-7 text-stone-300">{chapter.sceneLink}</p><p className="mt-3 text-xs text-stone-500">하린과 교역문은 가상의 이야기입니다. 아래 영어 문장과 문법 설명은 실제 영어 학습 내용입니다.</p></section>
         {extra && <section className="space-y-4 rounded-2xl border border-white/10 bg-dark-100 p-5"><h3 className="font-bold text-blue-300">한 단어씩 차근차근 풀어 읽기</h3><StudyProse text={extra.walkthrough} className="leading-8"/><div className="border-t border-white/10 pt-4"><h4 className="text-sm font-bold text-blue-200">한 번 더, 다른 문장으로</h4><StudyProse text={extra.anotherLook} className="mt-2 leading-8 text-stone-300"/></div></section>}
         <section><h3 className="font-bold">입으로 세 번 읽기</h3><p className="mt-2 text-lg font-semibold text-blue-200">{chapter.example}</p><p className="mt-1 text-sm text-stone-400">{chapter.translation}</p></section>
         {!practicing && <section><h3 className="font-bold">오늘 외울 단어 · 소리 내어 읽고 뜻을 가려 보세요</h3><div className="mt-3 grid gap-2 sm:grid-cols-2">{chapter.words.map(([english, korean]) => <div key={english} className="rounded-xl bg-dark-100 px-3 py-2"><strong className="text-blue-200">{english}</strong><span className="ml-3 text-sm text-stone-400">{korean}</span></div>)}</div>{review.length > 0 && <p className="mt-3 text-xs text-stone-400">입력 연습에는 이전 장의 단어도 간격을 두고 다시 나옵니다.</p>}<button onClick={start} className="mt-4 rounded-xl bg-blue-600 px-5 py-3 font-bold">단어 가리고 직접 쓰기</button></section>}

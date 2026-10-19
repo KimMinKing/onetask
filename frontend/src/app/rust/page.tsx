@@ -68,7 +68,7 @@ export default function RustPage() {
   return <div className="min-h-dvh bg-dark-400 text-stone-100">
     <header className="border-b border-white/5 bg-dark-300 px-4 py-6">
       <div className="mx-auto max-w-5xl">
-        <Link href="/" className="text-sm text-stone-400 hover:text-stone-100">← 홈</Link>
+        <Link href="/learn" className="text-sm text-stone-400 hover:text-stone-100">← 학습 선택</Link>
         <div className="mt-4 flex flex-wrap items-end justify-between gap-3">
           <div><p className="text-xs font-bold text-orange-400">Rust · 기초부터 시스템 실습까지</p><h1 className="mt-1 text-3xl font-black">Rust {total}단계</h1><p className="mt-2 text-sm text-stone-400">한 개념씩 읽고, 코드 실행, 직접 설명, 다음 단계</p></div>
           <p className="text-lg font-bold">{loading ? "불러오는 중" : `${completed.size}/${total}`}</p>

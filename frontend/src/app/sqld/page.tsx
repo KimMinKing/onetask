@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { SQLD_CURRICULUM, SqldLesson } from "./curriculum";
 import { SQLD_CHAPTERS, SQLD_STORY } from "./story";
 import { api } from "@/lib/api";
@@ -105,7 +105,6 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
 }
 
 export default function SqldPage() {
-  const router = useRouter();
   const [selected, setSelected] = useState(0);
   const [progress, setProgress] = useState<Record<number, boolean>>({});
   const [query, setQuery] = useState("");
@@ -141,7 +140,7 @@ export default function SqldPage() {
     <div className="min-h-dvh bg-dark-400">
       <header className="border-b border-white/5 bg-dark-300 px-5 pb-5 pt-10">
         <div className="mx-auto max-w-5xl">
-          <button onClick={() => router.back()} className="mb-4 text-sm text-stone-500 hover:text-stone-200">← 홈으로</button>
+          <Link href="/learn" className="mb-4 inline-block text-sm text-stone-500 hover:text-stone-200">← 학습 선택</Link>
           <div className="flex items-end justify-between gap-4">
           <div><p className="text-sm font-bold text-violet-400">SQL Developer</p><h1 className="mt-1 text-3xl font-black text-stone-100">SQLD 합격 100단계</h1><p className="mt-2 text-sm text-stone-500">기록학교의 이어지는 이야기 → 실제 개념 → SQL 해석 → 확인 문제</p></div>
             <div className="text-right"><p className="text-2xl font-black text-stone-100">{completed}<span className="text-sm text-stone-500">/100</span></p><p className="text-xs text-stone-600">완료</p></div>
