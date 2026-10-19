@@ -5,11 +5,12 @@
 - HSK 4급 601개 단어의 뜻·중국어 예문·한국어 예문·예문 병음을 원본 문장 기준으로 다시 짝지었다. `厉害`의 `说得`·`厉害`·`一样` 병음을 직접 교정하고, `扩大`·`冷静`·`以`·`座`·`而` 등 잘못 연결되거나 뜻이 틀린 항목을 정리했다. HSK 3·5급의 목표 단어가 예문에 없는 10개도 수정했다. 시작 시 단어 식별자가 맞는 DB에 한 번만 적용하는 마이그레이션과 회귀 검사를 추가했다.
 - Rust 기초부터 소유권·오류·도구·스레드·TCP/UDP·작은 서버까지 54단계를 추가했다. 서윤의 결계 수리 사건이 전 단계에 걸쳐 이어지고, 매 단계에 가상 장면과 실제 개념의 연결, 코드 실습, 자기 설명을 넣었다.
 - 같은 주인공의 교역문 이야기로 영어 완전 기초 25장을 추가했다. 주어·동사 순서에서 질문·시제·조언까지 이어지며, 장마다 새 단어 6개와 여러 이전 장 단어를 뜻만 보고 입력하고 틀리면 다시 쓰도록 했다. 영어 카드 복습도 뜻에서 철자를 회상하도록 바꾸고 하루 추천 복습을 A1로 낮췄다.
+- Rust 54단계와 영어 25장 **모두**에 이야기 다음의 초보자용 긴 풀이와 다른 예·헷갈리는 부분을 추가했다. Rust의 표현식·변수·소유권·Option/Result·이터레이터·TCP 등 9곳에는 Python 코드와 Rust 코드를 나란히 보여 주고 두 언어의 규칙이 달라지는 지점도 설명한다. 영어 초반 질문 예문과 `want to` 단어 설명도 기초 문법에 맞게 다듬었다.
 - 백엔드 검사 39개·하위 검사 3개, 프런트엔드 린트·프로덕션 빌드·영어 회상 검사 2개·이야기 구성 검사 2개를 통과했다.
 
 ### 변경된 파일
 - `backend/build_hsk4_pair_catalog.py`, `backend/data/hsk4_word_pairs.json`, `backend/word_pair_migration.py`, `backend/migrate.py`, `backend/WORD_PAIRS.md`, `backend/tests/test_hsk4_word_pairs.py` — 중국어 예문 복구, 배포 시 적용, 남은 이미지 점검 범위.
-- `frontend/src/app/rust/`, `frontend/src/app/english-basics/`, `frontend/src/app/words/page.tsx`, `frontend/src/lib/englishRecall.ts`, `frontend/tests/englishRecall.test.mjs`, `frontend/tests/storyCurriculum.test.mjs` — 연결된 이야기 학습과 단어 회상.
+- `frontend/src/app/rust/`, `frontend/src/app/english-basics/`, `frontend/src/components/StudyProse.tsx`, `frontend/src/app/words/page.tsx`, `frontend/src/lib/englishRecall.ts`, `frontend/tests/englishRecall.test.mjs`, `frontend/tests/storyCurriculum.test.mjs` — 연결된 이야기, 단계별 부연 풀이, Python 비교와 단어 회상.
 - `backend/learning_service.py`, `backend/routers/learning.py`, `backend/routers/settings.py`, `backend/tests/test_learning_service.py`, `frontend/src/app/page.tsx`, `frontend/src/app/settings/page.tsx`, `frontend/package.json` — 신규 과목 진도·하루 추천·이동 경로.
 
 ### 다음 세션

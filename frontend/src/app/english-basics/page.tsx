@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { ENGLISH_CHAPTERS, reviewWords } from "./curriculum";
+import { ENGLISH_EXPLANATIONS } from "./explanations";
+import StudyProse from "@/components/StudyProse";
 
 const same = (a: string, b: string) => a.trim().replace(/\s+/g, " ").toLowerCase().replace(/[.!?]$/, "") === b.trim().replace(/\s+/g, " ").toLowerCase().replace(/[.!?]$/, "");
 
@@ -29,6 +31,7 @@ export default function EnglishBasicsPage() {
   }, []);
 
   const chapter = selected ? ENGLISH_CHAPTERS[selected - 1] : undefined;
+  const extra = selected ? ENGLISH_EXPLANATIONS[selected - 1] : undefined;
   const review = chapter ? reviewWords(selected) : [];
   const words = chapter ? [...review, ...chapter.words] : [];
   const active = queue[cursor];
@@ -81,6 +84,7 @@ export default function EnglishBasicsPage() {
         <div><p className="text-xs font-bold text-blue-300">{chapter.id}/{ENGLISH_CHAPTERS.length}장 · 가상의 선협 이야기</p><h2 className="mt-2 text-2xl font-black">{chapter.title}</h2></div>
         <p className="whitespace-pre-line leading-8">{chapter.story}</p>
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-blue-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 leading-7">{chapter.concept}</p><p className="mt-2 leading-7 text-stone-300">{chapter.sceneLink}</p><p className="mt-3 text-xs text-stone-500">서윤과 교역문은 가상의 이야기입니다. 아래 영어 문장과 문법 설명은 실제 영어 학습 내용입니다.</p></section>
+        {extra && <section className="space-y-4 rounded-2xl border border-white/10 bg-dark-100 p-5"><h3 className="font-bold text-blue-300">한 단어씩 차근차근 풀어 읽기</h3><StudyProse text={extra.walkthrough} className="leading-8"/><div className="border-t border-white/10 pt-4"><h4 className="text-sm font-bold text-blue-200">한 번 더, 다른 문장으로</h4><StudyProse text={extra.anotherLook} className="mt-2 leading-8 text-stone-300"/></div></section>}
         <section><h3 className="font-bold">입으로 세 번 읽기</h3><p className="mt-2 text-lg font-semibold text-blue-200">{chapter.example}</p><p className="mt-1 text-sm text-stone-400">{chapter.translation}</p></section>
         {!practicing && <section><h3 className="font-bold">오늘 외울 단어 · 소리 내어 읽고 뜻을 가려 보세요</h3><div className="mt-3 grid gap-2 sm:grid-cols-2">{chapter.words.map(([english, korean]) => <div key={english} className="rounded-xl bg-dark-100 px-3 py-2"><strong className="text-blue-200">{english}</strong><span className="ml-3 text-sm text-stone-400">{korean}</span></div>)}</div>{review.length > 0 && <p className="mt-3 text-xs text-stone-400">입력 연습에는 이전 장의 단어도 간격을 두고 다시 나옵니다.</p>}<button onClick={start} className="mt-4 rounded-xl bg-blue-600 px-5 py-3 font-bold">단어 가리고 직접 쓰기</button></section>}
       </article>
