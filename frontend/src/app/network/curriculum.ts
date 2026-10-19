@@ -4,11 +4,10 @@ export interface NetworkLesson { id:number; section:string; title:string; summar
 
 function n(id:number, section:string, title:string, core:string, trap:string, lab=""):NetworkLesson {
   const points=core.split(" | ");
-  const answer = id % 2;
-  return {id,section,title,summary:`${title}은(는) 네트워크관리사 2급에서 개념과 실제 설정을 함께 묻는 주제다. 용어를 암기한 뒤 패킷의 흐름과 장비의 동작을 순서대로 설명해 보자.`,points,lab,trap,quiz:{question:`‘${title}’에 대한 설명으로 옳은 것은?`,options:answer ? [trap,points[0]] : [points[0],trap],answer,explanation:points.join(" ")}};
+  return {id,section,title,summary:"",points,lab,trap,quiz:{question:`‘${title}’에 대한 설명으로 옳은 것은?`,options:[points[0],trap],answer:0,explanation:points.join(" ")}};
 }
 
-export const NETWORK_CURRICULUM:NetworkLesson[]=[
+const LESSONS:NetworkLesson[]=[
  n(1,"네트워크 일반","네트워크의 목적","네트워크는 자원 공유와 정보 교환을 위해 장치를 연결한다. | 신뢰성·확장성·보안·성능을 함께 고려해야 한다.","네트워크는 인터넷에 연결된 장치만을 의미한다."),
  n(2,"네트워크 일반","LAN·MAN·WAN","LAN은 제한된 지역, MAN은 도시권, WAN은 광범위한 지역을 연결한다. | 범위가 넓을수록 통신사업자 회선을 이용하는 경우가 많다.","WAN은 한 건물 안에서만 사용하는 망이다."),
  n(3,"네트워크 일반","OSI 7계층","OSI는 물리·데이터링크·네트워크·전송·세션·표현·응용 계층이다. | 장애 진단 시 계층별로 원인을 분리할 수 있다.","IP는 전송 계층, TCP는 네트워크 계층 프로토콜이다."),
@@ -111,3 +110,18 @@ export const NETWORK_CURRICULUM:NetworkLesson[]=[
  n(100,"실기","최종 합격 체크","필기 50문항 50분과 실기 80분 모두 60점 이상을 목표로 한다. | 서브넷·포트·NOS·케이블·라우터 명령을 손으로 재현한다.","필기에서 60점을 넘으면 실기는 응시만 해도 자동 합격한다."),
  ...TRANSPORT_LESSONS,
 ];
+
+export const NETWORK_CURRICULUM:NetworkLesson[]=LESSONS.map((item)=>{
+  if(item.id>100)return item;
+  const nearby=LESSONS.slice(0,100).filter(other=>other.id!==item.id).sort((a,b)=>
+    Number(b.section===item.section)-Number(a.section===item.section)||
+    Math.abs(a.id-item.id)-Math.abs(b.id-item.id)||a.id-b.id
+  );
+  const distractors=[item.trap,...nearby.map(other=>other.trap)].filter((option,index,all)=>
+    option!==item.points[0]&&all.indexOf(option)===index
+  ).slice(0,3);
+  const answer=(item.id*7+Math.floor(item.id/4))%4;
+  const options=distractors.slice();
+  options.splice(answer,0,item.points[0]);
+  return {...item,quiz:{...item.quiz,options,answer}};
+});

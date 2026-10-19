@@ -1,11 +1,15 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { registerHooks } from "node:module";
 import { ENGLISH_CHAPTERS, reviewWords } from "../src/app/english-basics/curriculum.ts";
 import { RUST_CURRICULUM } from "../src/app/rust/curriculum.ts";
 import { RUST_STORY } from "../src/app/rust/story.ts";
 import { RUST_EXPLANATIONS } from "../src/app/rust/explanations.ts";
 import { ENGLISH_EXPLANATIONS } from "../src/app/english-basics/explanations.ts";
 import { PYTHON_BRIDGES } from "../src/app/rust/pythonBridges.ts";
+import { SQLD_CHAPTERS, SQLD_STORY } from "../src/app/sqld/story.ts";
+import { NETWORK_CHAPTERS, NETWORK_STORY } from "../src/app/network/story.ts";
+import { SQLD_CURRICULUM } from "../src/app/sqld/curriculum.ts";
 
 test("each Rust lesson has a connected scene and a concrete bridge", () => {
   assert.equal(RUST_CURRICULUM.length, 54);
@@ -42,4 +46,39 @@ test("English chapters begin at basics and revisit earlier vocabulary", () => {
   assert.deepEqual(reviewWords(2), ENGLISH_CHAPTERS[0].words.slice(0, 2));
   const farReview = reviewWords(15).map(([english]) => english);
   for (const [english] of ENGLISH_CHAPTERS[0].words) assert.ok(farReview.includes(english));
+});
+
+test("SQLD and network stories cover every lesson without a repeated scene", () => {
+  for (const [story, chapters, count] of [
+    [SQLD_STORY, SQLD_CHAPTERS, 100],
+    [NETWORK_STORY, NETWORK_CHAPTERS, 120],
+  ]) {
+    assert.equal(story.length, count);
+    assert.equal(new Set(story.map(step => step.scene)).size, count);
+    assert.equal(chapters[0].start, 1);
+    assert.equal(chapters.at(-1).end, count);
+    for (let id = 1; id <= count; id++) {
+      const step = story[id - 1];
+      assert.ok(step.scene.length >= 35, `lesson ${id} scene`);
+      assert.ok(step.bridge.length >= 20, `lesson ${id} bridge`);
+      assert.equal(chapters.filter(chapter => id >= chapter.start && id <= chapter.end).length, 1);
+    }
+  }
+});
+
+test("SQLD and network quizzes have four distinct choices with varied answers", async () => {
+  registerHooks({ resolve(specifier, context, nextResolve) {
+    return nextResolve(specifier === "./transportCurriculum" ? "./transportCurriculum.ts" : specifier, context);
+  } });
+  const { NETWORK_CURRICULUM } = await import("../src/app/network/curriculum.ts");
+  for (const [lessons, expected] of [[SQLD_CURRICULUM, 100], [NETWORK_CURRICULUM, 120]]) {
+    assert.equal(lessons.length, expected);
+    assert.deepEqual(lessons.map(lesson => lesson.id), Array.from({ length: expected }, (_, index) => index + 1));
+    for (const lesson of lessons) {
+      assert.equal(lesson.quiz.options.length, 4, `lesson ${lesson.id} choices`);
+      assert.equal(new Set(lesson.quiz.options).size, 4, `lesson ${lesson.id} unique choices`);
+      assert.ok(lesson.quiz.answer >= 0 && lesson.quiz.answer < 4);
+    }
+    assert.ok(new Set(lessons.map(lesson => lesson.quiz.answer)).size === 4);
+  }
 });

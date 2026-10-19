@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { SQLD_CURRICULUM, SqldLesson } from "./curriculum";
+import { SQLD_CHAPTERS, SQLD_STORY } from "./story";
 import { api } from "@/lib/api";
 import { readUserStorage, writeUserStorage } from "@/lib/auth";
 
@@ -18,6 +19,8 @@ function CodeBlock({ children }: { children: string }) {
 }
 
 function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLesson; done: boolean; onDone: (durationMinutes: number) => Promise<void>; onMove: (id: number) => void; onWrong: (choice: number) => void }) {
+  const scene = SQLD_STORY[lesson.id - 1];
+  const chapter = SQLD_CHAPTERS.find(({ start, end }) => lesson.id >= start && lesson.id <= end);
   const [choice, setChoice] = useState<number | null>(null);
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState(false);
@@ -56,6 +59,16 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
           <p className="mb-1 text-sm font-semibold text-violet-400">{lesson.subtitle}</p>
           <h1 className="text-2xl font-black text-stone-100 sm:text-3xl">{lesson.title}</h1>
         </div>
+        <section className="rounded-2xl border border-violet-900/50 bg-violet-950/20 p-5">
+          <p className="text-xs font-bold text-violet-300">이어지는 이야기 · 가상의 기록학교 · {chapter?.title}</p>
+          {chapter?.start === lesson.id && <p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}
+          <p className="mt-3 text-sm leading-8 text-stone-100">{scene.scene}</p>
+        </section>
+        <section className="rounded-2xl bg-dark-100 p-5">
+          <h2 className="font-bold text-violet-300">이 장면을 실제 개념으로 풀어 읽기</h2>
+          <p className="mt-3 text-sm leading-7 text-stone-100">{scene.bridge}</p>
+          <p className="mt-3 text-xs leading-6 text-stone-500">학교와 장부는 이해를 돕는 가상 사건입니다. 아래의 정의와 SQL 실행 규칙을 실제 개념으로 익히세요.</p>
+        </section>
         <section>
           <h2 className="mb-3 text-sm font-bold text-stone-100">시험에 나오는 핵심</h2>
           <ul className="space-y-2">
@@ -130,7 +143,7 @@ export default function SqldPage() {
         <div className="mx-auto max-w-5xl">
           <button onClick={() => router.back()} className="mb-4 text-sm text-stone-500 hover:text-stone-200">← 홈으로</button>
           <div className="flex items-end justify-between gap-4">
-            <div><p className="text-sm font-bold text-violet-400">SQL Developer</p><h1 className="mt-1 text-3xl font-black text-stone-100">SQLD 합격 100단계</h1><p className="mt-2 text-sm text-stone-500">개념 → SQL 해석 → 함정 → 확인 문제로 끝내는 시험 대비 코스</p></div>
+          <div><p className="text-sm font-bold text-violet-400">SQL Developer</p><h1 className="mt-1 text-3xl font-black text-stone-100">SQLD 합격 100단계</h1><p className="mt-2 text-sm text-stone-500">기록학교의 이어지는 이야기 → 실제 개념 → SQL 해석 → 확인 문제</p></div>
             <div className="text-right"><p className="text-2xl font-black text-stone-100">{completed}<span className="text-sm text-stone-500">/100</span></p><p className="text-xs text-stone-600">완료</p></div>
           </div>
           <div className="mt-4 h-2 overflow-hidden rounded-full bg-dark-100"><div className="h-full rounded-full bg-violet-500 transition-all" style={{ width: `${completed}%` }} /></div>
