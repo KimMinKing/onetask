@@ -6,6 +6,9 @@ import { CPP_CURRICULUM } from "./curriculum";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "./story";
 import { api } from "@/lib/api";
 import { readUserStorage, writeUserStorage } from "@/lib/auth";
+import StudyFlowBar from "@/components/StudyFlowBar";
+import { useStudyFlow } from "@/lib/useStudyFlow";
+import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 
 const STORAGE_KEY = "cpp_progress_v1";
 const total = CPP_CURRICULUM.length;
@@ -40,7 +43,6 @@ async function reconcileProgress(): Promise<{ completed: Record<number, boolean>
 export default function CppPage() {
   const [selected, setSelected] = useState(0);
   const [progress, setProgress] = useState<Record<number, boolean>>({});
-  const [choice, setChoice] = useState<number | null>(null);
   const [saving, setSaving] = useState(false);
   const [syncFailed, setSyncFailed] = useState(false);
   const [syncing, setSyncing] = useState(false);
@@ -58,6 +60,9 @@ export default function CppPage() {
   }, []);
 
   const current = CPP_CURRICULUM.find(lesson => lesson.id === selected);
+  const flow = useStudyFlow("cpp", selected, current?.title ?? "", { choice: null as number | null });
+  const choice = flow.draft.choice;
+  const setChoice = (value: number | null) => flow.setDraft({ choice: value });
   const scene = current ? CPP_STORY[current.id - 1] : undefined;
   const chapter = current ? CPP_STORY_CHAPTERS.find(({ start, end }) => current.id >= start && current.id <= end) : undefined;
   const sections = ["전체", ...new Set(CPP_CURRICULUM.map(lesson => lesson.section))];
@@ -83,7 +88,6 @@ export default function CppPage() {
 
   function openLesson(id: number) {
     setSelected(id);
-    setChoice(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -116,6 +120,7 @@ export default function CppPage() {
       setSyncFailed(true);
     } finally {
       setSaving(false);
+      if (current.id === total) clearStudyCheckpoint("cpp");
       openLesson(current.id < total ? current.id + 1 : 0);
     }
   }
@@ -140,22 +145,28 @@ export default function CppPage() {
 
     {current ? <main className="mx-auto max-w-3xl space-y-5 px-4 py-6">
       <button onClick={() => openLesson(0)} className="text-sm text-stone-400 hover:text-stone-100">← 전체 목록</button>
+      <StudyFlowBar phase={flow.phase} paused={flow.paused} onPause={flow.setPaused} onPhase={flow.changePhase}/>
+      {!flow.paused && <>
       <article className="space-y-5 rounded-3xl bg-dark-200 p-5 sm:p-7">
         <div><p className="text-xs font-bold text-cyan-400">{current.section} · {current.id}/{total}</p><h2 className="mt-2 text-2xl font-black">{current.title}</h2></div>
-        {scene && <section className="rounded-2xl border border-cyan-900/40 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 해안 통신소 · {chapter?.title}</p>{chapter?.start === current.id && <p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}<p className="mt-3 text-sm leading-8 text-stone-100">{scene.story}</p></section>}
+        {flow.phase === "story" && scene && <section className="rounded-2xl border border-cyan-900/40 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 해안 통신소 · {chapter?.title}</p>{chapter?.start === current.id && <p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}<p className="mt-3 text-sm leading-8 text-stone-100">{scene.story}</p></section>}
+        {flow.phase === "concept" && <>
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 text-sm leading-7 text-stone-100">{current.summary}</p>{scene && <p className="mt-3 text-sm leading-7 text-stone-300">{scene.bridge}</p>}<p className="mt-3 text-xs leading-6 text-stone-500">통신소 사건은 가상입니다. C++의 실제 동작은 아래 코드와 실습 결과로 확인하세요.</p></section>
         <ul className="space-y-2">{current.points.map(point => <li key={point} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {point}</li>)}</ul>
         <section><h3 className="mb-2 font-bold">핵심 코드 조각</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
         <section><h3 className="mb-2 font-bold">직접 해보기</h3><p className="text-sm leading-6 text-stone-300">{current.exercise}</p></section>
         <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 p-4 text-sm leading-6 text-amber-200"><strong>주의:</strong> {current.pitfall}</aside>
+        </>}
+        {flow.phase !== "practice" && <button onClick={() => flow.changePhase(flow.phase === "story" ? "concept" : "practice")} className="w-full rounded-xl bg-cyan-600 py-3 font-bold">{flow.phase === "story" ? "실제 개념 보기 →" : "확인 문제 풀기 →"}</button>}
       </article>
-      <section className="rounded-3xl bg-dark-200 p-5 sm:p-7">
+      {flow.phase === "practice" && <section className="rounded-3xl bg-dark-200 p-5 sm:p-7">
         <p className="text-xs font-bold text-cyan-400">확인 문제</p><h3 className="my-3 font-bold leading-7">{current.quiz.question}</h3>
         <div className="space-y-2">{current.quiz.options.map((option, index) => <button key={index} disabled={choice !== null} onClick={() => selectAnswer(index)} className={`block w-full rounded-xl border p-3 text-left text-sm ${choice === null ? "border-white/10 bg-dark-100 hover:border-cyan-700" : index === current.quiz.answer ? "border-emerald-700 bg-emerald-950/30 text-emerald-300" : index === choice ? "border-red-700 bg-red-950/30 text-red-300" : "border-white/5 text-stone-500"}`}>{index + 1}. {option}</button>)}</div>
         {choice !== null && <div className={`mt-4 rounded-xl p-4 text-sm leading-6 ${choice === current.quiz.answer ? "bg-emerald-950/30 text-emerald-300" : "bg-red-950/30 text-red-300"}`}>{choice === current.quiz.answer ? "정답입니다. " : "다시 풀어보세요. "}{current.quiz.explanation}{choice !== current.quiz.answer && <button className="mt-3 block rounded-lg border border-red-700 px-3 py-1" onClick={() => setChoice(null)}>다시 풀기</button>}</div>}
         <button disabled={choice !== current.quiz.answer || saving} onClick={finish} className="mt-4 w-full rounded-xl bg-cyan-600 py-3 font-bold disabled:opacity-30">{saving ? "저장 중..." : current.id === total ? "완료하고 목록으로" : "완료하고 다음 단계로"}</button>
-      </section>
+      </section>}
       <div className="grid grid-cols-2 gap-3"><button disabled={current.id === 1} onClick={() => openLesson(current.id - 1)} className="rounded-xl bg-dark-200 py-3 disabled:opacity-30">← 이전</button><button disabled={current.id === total} onClick={() => openLesson(current.id + 1)} className="rounded-xl bg-dark-200 py-3 disabled:opacity-30">다음 →</button></div>
+      </>}
     </main> : <main className="mx-auto max-w-5xl px-4 py-6">
       <div className="mb-5 grid gap-2 sm:grid-cols-[1fr_auto]"><input value={query} onChange={event => setQuery(event.target.value)} placeholder="C++, TCP, UDP, 소켓 검색" className="rounded-xl border border-stone-700 bg-dark-200 px-4 py-3 text-sm outline-none focus:border-cyan-600"/><select value={section} onChange={event => setSection(event.target.value)} className="rounded-xl border border-stone-700 bg-dark-200 px-4 py-3 text-sm">{sections.map(name => <option key={name}>{name}</option>)}</select></div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{filtered.map(lesson => <button key={lesson.id} onClick={() => openLesson(lesson.id)} className={`rounded-2xl border p-4 text-left hover:border-cyan-700 ${progress[lesson.id] ? "border-emerald-900 bg-emerald-950/15" : "border-white/5 bg-dark-200"}`}><p className={`text-xs font-bold ${progress[lesson.id] ? "text-emerald-400" : "text-cyan-400"}`}>{progress[lesson.id] ? "✓ " : ""}{lesson.id}단계 · {lesson.section}</p><h2 className="mt-2 font-bold">{lesson.title}</h2><p className="mt-2 line-clamp-2 text-xs leading-5 text-stone-400">{lesson.summary}</p></button>)}</div>

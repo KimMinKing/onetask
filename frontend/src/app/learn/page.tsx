@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useUiLanguage, type UiLanguage } from "@/lib/i18n";
+import { latestStudyCheckpoint, STORY_COURSES, type StudyCheckpoint } from "@/lib/studyCheckpoint";
 
 type LearningLink = {
   href: string;
@@ -53,12 +55,19 @@ const sections: { title: Record<UiLanguage, string>; links: LearningLink[] }[] =
 
 export default function LearnPage() {
   const language = useUiLanguage();
+  const [recent, setRecent] = useState<StudyCheckpoint | null>(null);
+  useEffect(() => setRecent(latestStudyCheckpoint()), []);
 
   return <main className="min-h-dvh bg-dark-400 px-4 pb-12 pt-8 text-stone-100">
     <div className="mx-auto max-w-5xl">
       <Link href="/" className="text-sm text-stone-400 hover:text-stone-100">← {language === "ko" ? "홈" : "首页"}</Link>
       <h1 className="mt-5 text-3xl font-black">{language === "ko" ? "학습하기" : "开始学习"}</h1>
       <p className="mt-2 text-sm leading-6 text-stone-400">{language === "ko" ? "오늘 하고 싶은 과목을 하나 골라 시작하세요. 기존 진도는 각 과목에 그대로 있습니다." : "选择今天想学的一门科目。各科目原有进度会保留。"}</p>
+      {recent && <Link href={`${STORY_COURSES[recent.subject].path}?step=${recent.step}`} className="mt-7 block rounded-2xl border border-emerald-700/60 bg-emerald-950/30 p-5 hover:border-emerald-400">
+        <p className="text-xs font-bold text-emerald-300">{language === "ko" ? "지난 지점 이어하기" : "继续上次学习"}</p>
+        <p className="mt-2 font-bold text-stone-100">{STORY_COURSES[recent.subject].label} · {recent.step}단계 · {recent.title}</p>
+        <p className="mt-1 text-sm text-stone-400">{recent.phase === "story" ? "이야기" : recent.phase === "concept" ? "개념" : "확인"}부터 이어집니다. 입력 중인 답도 이 기기에 저장돼 있습니다.</p>
+      </Link>}
       <div className="mt-8 space-y-9">
         {sections.map(section => <section key={section.title.ko}>
           <h2 className="mb-3 text-lg font-bold">{section.title[language]}</h2>

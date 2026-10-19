@@ -2,6 +2,9 @@
 
 ## 2026-10-20
 ### 완료
+- 이야기형 5과목(영어·Rust·C++·SQLD·네트워크)을 `이야기 → 실제 개념 → 직접 확인`의 짧은 화면으로 나눴다. 단계 안에서는 세 화면을 다시 오갈 수 있고, 쉬기·다시 시작·오늘은 여기까지 동선을 추가했다.
+- 현재 과목·단계·화면과 입력 중인 답을 사용자별 브라우저 저장소에 자동 저장한다. 학습 선택 화면에서 최근 단계로 바로 이어 가며, 과목의 마지막 단계를 완료하면 이어하기 기록을 지운다. 손상된 저장 데이터는 무시하고 새 단계로 안전하게 시작한다.
+- 저장·복원·사용자 분리·손상 데이터 회귀 검사 2개와 기존 이야기 구성 검사 7개·영어 회상 검사 2개, 프런트엔드 린트와 프로덕션 빌드가 통과했다.
 - 첫 화면의 개별 학습 바로가기를 `학습하기` 하나로 모았다. 새 학습 선택 화면에서 기존 13개 학습·복습·통계 경로를 과목별로 찾을 수 있고, Rust·영어·C++·SQLD·네트워크에서는 선택 화면으로 돌아갈 수 있다. 기존 과목 경로와 진도 데이터는 유지한다.
 - 서로 독립된 이야기의 주인공을 영어 하린, Rust 서윤, SQLD 지안, 네트워크 도윤, C++ 민재로 구분했다. 영어 이야기에서 Rust 여정과 등장인물로 직접 연결되던 문장을 정리했다.
 - C++ 26단계 전체를 민재의 해안 통신소 복구 이야기로 연결했다. 앞 단계의 포인터·자원·버퍼 실수가 동시성·TCP/UDP·보안 문제로 이어지며, 장마다 실제 C++ 개념과 가상 장면의 차이를 설명한다.
@@ -16,6 +19,9 @@
 - 백엔드 검사 39개·하위 검사 3개, 프런트엔드 린트·프로덕션 빌드·영어 회상 검사 2개·이야기 구성 검사 2개를 통과했다.
 
 ### 변경된 파일
+- `frontend/src/lib/studyCheckpoint.ts`, `frontend/src/lib/useStudyFlow.ts`, `frontend/src/components/StudyFlowBar.tsx`, `frontend/src/app/learn/page.tsx` — 최근 학습 이어하기, 사용자별 자동 저장, 짧은 장면과 쉬기 화면.
+- `frontend/src/app/english-basics/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx` — 과목별 세 화면과 답안 복원.
+- `frontend/tests/studyCheckpoint.test.mjs`, `frontend/package.json` — 체크포인트 회귀 검사.
 - `frontend/src/app/page.tsx`, `frontend/src/app/learn/page.tsx` — 첫 화면 학습 링크 정리와 과목 선택 화면.
 - `frontend/src/app/english-basics/`, `frontend/src/app/sqld/story.ts`, `frontend/src/app/network/story.ts` — 독립된 이야기의 주인공·설정 정리.
 - `frontend/src/app/cpp/story.ts`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx`, `frontend/tests/storyCurriculum.test.mjs` — C++ 이야기 연결, 학습 선택 복귀, 구성 검사.
