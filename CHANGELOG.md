@@ -1,5 +1,21 @@
 # CHANGELOG — onetask
 
+## 2026-10-20
+### 완료
+- HSK 4급 601개 단어의 뜻·중국어 예문·한국어 예문·예문 병음을 원본 문장 기준으로 다시 짝지었다. `厉害`의 `说得`·`厉害`·`一样` 병음을 직접 교정하고, `扩大`·`冷静`·`以`·`座`·`而` 등 잘못 연결되거나 뜻이 틀린 항목을 정리했다. HSK 3·5급의 목표 단어가 예문에 없는 10개도 수정했다. 시작 시 단어 식별자가 맞는 DB에 한 번만 적용하는 마이그레이션과 회귀 검사를 추가했다.
+- Rust 기초부터 소유권·오류·도구·스레드·TCP/UDP·작은 서버까지 54단계를 추가했다. 서윤의 결계 수리 사건이 전 단계에 걸쳐 이어지고, 매 단계에 가상 장면과 실제 개념의 연결, 코드 실습, 자기 설명을 넣었다.
+- 같은 주인공의 교역문 이야기로 영어 완전 기초 25장을 추가했다. 주어·동사 순서에서 질문·시제·조언까지 이어지며, 장마다 새 단어 6개와 여러 이전 장 단어를 뜻만 보고 입력하고 틀리면 다시 쓰도록 했다. 영어 카드 복습도 뜻에서 철자를 회상하도록 바꾸고 하루 추천 복습을 A1로 낮췄다.
+- 백엔드 검사 39개·하위 검사 3개, 프런트엔드 린트·프로덕션 빌드·영어 회상 검사 2개·이야기 구성 검사 2개를 통과했다.
+
+### 변경된 파일
+- `backend/build_hsk4_pair_catalog.py`, `backend/data/hsk4_word_pairs.json`, `backend/word_pair_migration.py`, `backend/migrate.py`, `backend/WORD_PAIRS.md`, `backend/tests/test_hsk4_word_pairs.py` — 중국어 예문 복구, 배포 시 적용, 남은 이미지 점검 범위.
+- `frontend/src/app/rust/`, `frontend/src/app/english-basics/`, `frontend/src/app/words/page.tsx`, `frontend/src/lib/englishRecall.ts`, `frontend/tests/englishRecall.test.mjs`, `frontend/tests/storyCurriculum.test.mjs` — 연결된 이야기 학습과 단어 회상.
+- `backend/learning_service.py`, `backend/routers/learning.py`, `backend/routers/settings.py`, `backend/tests/test_learning_service.py`, `frontend/src/app/page.tsx`, `frontend/src/app/settings/page.tsx`, `frontend/package.json` — 신규 과목 진도·하루 추천·이동 경로.
+
+### 다음 세션
+- 운영 DB에 마이그레이션을 적용하고 `厉害`·`扩大`·HSK 3·5급 수정 항목을 실제 카드 화면에서 확인한다. 수정 후 지문이 맞지 않는 HSK 4급 이미지 121개와 HSK 3·5급 이미지 10개는 검토·재생성한다. HSK 6급의 빈 예문 2,500개는 신뢰할 수 있는 자료를 마련해 별도로 작성한다.
+- Rust 예제를 실제 Cargo 프로젝트에서 단계별로 실행하고, 영어 25장 학습 흐름을 실제 모바일 화면에서 점검한다.
+
 ## 2026-10-18
 ### 완료
 - 오늘의 5·15·30·60분 학습 계획에 중국어 HSK 4급과 영어 B1 단어 복습을 모두 배정했다. 선택한 집중 과목과 중복되면 하나의 과제로 합치고, 전체 시간이 선택한 시간과 일치하도록 조정했다.

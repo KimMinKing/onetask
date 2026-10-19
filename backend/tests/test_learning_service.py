@@ -51,7 +51,7 @@ def test_daily_plan_includes_chinese_and_english_within_budget(minutes, expected
     assert {task["subject"]: task["minutes"] for task in plan["tasks"]} == expected
     assert plan["total_minutes"] == minutes
     english = next(task for task in plan["tasks"] if task["subject"] == "en")
-    assert english["href"] == "/words?en=B1"
+    assert english["href"] == "/words?en=A1"
     assert english["unit_id"] is None
 
 
@@ -61,8 +61,8 @@ def test_english_focus_merges_task_and_review_marks_it_complete():
     db.add(user)
     db.flush()
     db.add(UserSettings(user_id=user.id, study_minutes=15, focus_subject="en"))
-    other_level = EnglishWord(word="first", meaning="첫 번째", level="A1")
-    word = EnglishWord(word="example", meaning="예시", level="B1")
+    other_level = EnglishWord(word="example", meaning="예시", level="B1")
+    word = EnglishWord(word="first", meaning="첫 번째", level="A1")
     db.add_all([other_level, word])
     db.flush()
     db.add(EnglishWordCard(user_id=user.id, word_id=other_level.id, last_review=datetime.now(timezone.utc)))
@@ -149,6 +149,44 @@ def test_cpp_focus_and_extended_network_steps_have_valid_deep_links():
     db.commit()
     network_task = next(task for task in build_today_plan(db, user.id)["tasks"] if task["subject"] == "network")
     assert network_task["href"] == "/network?step=101"
+
+
+def test_rust_focus_has_valid_steps_and_bounded_progress():
+    db = session()
+    user = User(username="rust_learner", hashed_password="x")
+    db.add(user)
+    db.flush()
+    db.add(UserSettings(user_id=user.id, study_minutes=30, focus_subject="rust"))
+    db.commit()
+
+    plan = build_today_plan(db, user.id)
+    rust_task = next(task for task in plan["tasks"] if task["subject"] == "rust")
+    assert rust_task["href"] == "/rust?step=1"
+    assert plan["total_minutes"] == 30
+
+    update_progress("rust", "54", ProgressUpdate(completed=True), db, user)
+    assert next_unit(db, user.id, "rust") == 1
+    with pytest.raises(HTTPException) as error:
+        update_progress("rust", "55", ProgressUpdate(completed=True), db, user)
+    assert error.value.status_code == 400
+
+
+def test_english_basics_focus_opens_first_chapter_and_rejects_extra_step():
+    db = session()
+    user = User(username="english_story_learner", hashed_password="x")
+    db.add(user)
+    db.flush()
+    db.add(UserSettings(user_id=user.id, study_minutes=15, focus_subject="english-basics"))
+    db.commit()
+
+    plan = build_today_plan(db, user.id)
+    story = next(task for task in plan["tasks"] if task["subject"] == "english-basics")
+    assert story["href"] == "/english-basics?step=1"
+    assert plan["total_minutes"] == 15
+    update_progress("english-basics", "25", ProgressUpdate(completed=True), db, user)
+    with pytest.raises(HTTPException) as error:
+        update_progress("english-basics", "26", ProgressUpdate(completed=True), db, user)
+    assert error.value.status_code == 400
 
 
 def test_course_progress_rejects_out_of_range_and_noncanonical_units():

@@ -12,7 +12,7 @@ from learning_service import COURSE_LIMITS, build_today_plan, weekly_report
 from models import LearningActivity, LearningProgress, MistakeItem, User
 
 router = APIRouter(prefix="/learning", tags=["learning"])
-VALID_SUBJECTS = {"zh", "ja", "en", "languages", "sqld", "network", "cpp", "daily-zh", "daily-ja", "daily-db", "daily-network"}
+VALID_SUBJECTS = {"zh", "ja", "en", "languages", "sqld", "network", "cpp", "rust", "english-basics", "daily-zh", "daily-ja", "daily-db", "daily-network"}
 
 
 def validate_subject(subject: str) -> None:

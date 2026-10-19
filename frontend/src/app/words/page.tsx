@@ -7,6 +7,7 @@ import { api, Word, EnglishWord, JapaneseWord } from "@/lib/api";
 import KanaStudy from "./KanaStudy";
 import { WordVolumeControl } from "@/components/WordVolumeControl";
 import { playWordAudio, playWordSpeech, stopWordPlayback } from "@/lib/wordAudio";
+import { advanceEnglishRecall, matchesEnglishSpelling } from "@/lib/englishRecall";
 
 type Lang = "zh" | "en" | "ja";
 type UiLanguage = "ko" | "zh";
@@ -231,7 +232,7 @@ function WordsContent({ uiLanguage, setUiLanguage }: {
   const [mode, setMode] = useState<Mode>("lang-select");
   const [selectedLang, setSelectedLang] = useState<Lang>("zh");
   const [selectedZhLevel, setSelectedZhLevel] = useState<number>(3);
-  const [selectedEnLevel, setSelectedEnLevel] = useState<string>("B1");
+  const [selectedEnLevel, setSelectedEnLevel] = useState<string>("A1");
   const [selectedJaLevel, setSelectedJaLevel] = useState<string>("N5");
   const [stats, setStats] = useState({ total: 0, reviewed: 0, new: 0, due: 0, today: 0 });
   const [browseRevision, setBrowseRevision] = useState(0);
@@ -1430,46 +1431,64 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
 }
 
 function EnReviewSession({ words, uiLanguage, onDone, onBack }: { words: EnglishWord[]; uiLanguage: UiLanguage; onDone: () => void; onBack: () => void }) {
+  const [queue, setQueue] = useState(words);
   const [index, setIndex] = useState(0);
-  const [phase, setPhase] = useState<Phase>("question");
   const [results, setResults] = useState({ knew: 0, missed: 0 });
   const [done, setDone] = useState(false);
   const [flipped, setFlipped] = useState(false);
   const [busy, setBusy] = useState(false);
-  const [cardKey, setCardKey] = useState(0);
-  const current = words[index];
+  const [spelling, setSpelling] = useState("");
+  const [checked, setChecked] = useState(false);
+  const [error, setError] = useState("");
+  const current = queue[index];
+  const correct = current && matchesEnglishSpelling(spelling, current.word);
 
-  const reveal = () => { setFlipped((f) => !f); if (phase === "question") setPhase("answer"); };
   const answer = async (knew: boolean) => {
-    if (busy) return;
+    if (busy || !checked || !current) return;
+    const mastered = knew && correct;
     setBusy(true);
-    await api.englishWords.review(current.id, knew);
-    setResults((r) => ({ knew: r.knew + (knew ? 1 : 0), missed: r.missed + (knew ? 0 : 1) }));
-    const next = index + 1;
-    if (next >= words.length) { setDone(true); setBusy(false); return; }
-    setTimeout(() => { setIndex(next); setPhase("question"); setFlipped(false); setCardKey((k) => k + 1); setBusy(false); }, 280);
+    setError("");
+    try {
+      await api.englishWords.review(current.id, mastered);
+      setResults((r) => ({ knew: r.knew + (mastered ? 1 : 0), missed: r.missed + (mastered ? 0 : 1) }));
+      const next = advanceEnglishRecall(queue, index, mastered);
+      setQueue(next.queue);
+      if (next.done) setDone(true);
+      else {
+        setIndex(next.nextIndex);
+        setSpelling("");
+        setChecked(false);
+        setFlipped(false);
+      }
+    } catch {
+      setError("단어 복습을 저장하지 못했습니다. 다시 시도하세요.");
+    } finally {
+      setBusy(false);
+    }
   };
 
-  useEffect(() => {
-    const h = (e: KeyboardEvent) => {
-      if (phase === "question" && e.key === " ") { e.preventDefault(); reveal(); }
-      if (!busy) {
-        if (e.key === "ArrowRight" || e.key === "o") answer(true);
-        if (e.key === "ArrowLeft"  || e.key === "x") answer(false);
-      }
-    };
-    window.addEventListener("keydown", h);
-    return () => window.removeEventListener("keydown", h);
-    // These handlers intentionally close over the listed session state and are refreshed with it.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, index, busy]);
-
   if (done) return <ReviewDoneScreen results={results} uiLanguage={uiLanguage} onDone={onDone} />;
-  return (
-    <ReviewLayout index={index} total={words.length} uiLanguage={uiLanguage} onBack={onBack} phase={phase} onReveal={reveal} onAnswer={answer} busy={busy}>
-      <EnSwipeCard key={cardKey} word={current} flipped={flipped} onFlip={reveal} onSwipe={answer} uiLanguage={uiLanguage} />
-    </ReviewLayout>
-  );
+  if (!current) return <div className="min-h-dvh bg-dark-400 p-6 text-stone-200"><button onClick={onBack}>← 돌아가기</button><p className="mt-8">지금 복습할 영어 단어가 없습니다.</p></div>;
+  return <div className="min-h-dvh bg-dark-400 px-5 pb-8 pt-12 text-stone-100">
+    <div className="mx-auto max-w-md">
+      <div className="flex items-center gap-3"><button onClick={onBack} className="text-stone-400">✕</button><div className="h-2 flex-1 overflow-hidden rounded-full bg-dark-200"><div className="h-full bg-blue-500" style={{ width: `${index / queue.length * 100}%` }} /></div><span className="text-xs text-stone-400">{index + 1}/{queue.length}</span></div>
+      <p className="mt-6 text-xs font-bold text-blue-300">영어 단어 · 뜻에서 철자 떠올리기</p>
+      <h2 className="mt-3 rounded-2xl bg-dark-200 p-6 text-center text-2xl font-bold leading-9">{uiLanguage === "zh" ? current.meaning_zh || current.meaning : current.meaning}</h2>
+      <form onSubmit={(event) => { event.preventDefault(); if (spelling.trim()) setChecked(true); }} className="mt-4 space-y-2">
+        <label htmlFor="english-spelling" className="block text-sm text-stone-300">영어 단어를 직접 입력하세요</label>
+        <input id="english-spelling" value={spelling} onChange={(event) => { setSpelling(event.target.value); setChecked(false); }} autoComplete="off" autoCapitalize="off" spellCheck={false} className="w-full rounded-xl border border-stone-700 bg-dark-200 px-4 py-3 text-lg outline-none focus:border-blue-500" />
+        <button type="submit" disabled={!spelling.trim() || busy} className="w-full rounded-xl bg-blue-600 py-3 font-bold disabled:opacity-40">철자 확인</button>
+      </form>
+      {checked && <div className="mt-4 space-y-3">
+        <p role="status" className={`rounded-xl p-3 text-sm ${correct ? "bg-emerald-950/40 text-emerald-300" : "bg-red-950/40 text-red-300"}`}>{correct ? "정확합니다. 예문을 읽고 뜻을 다시 떠올려 보세요." : `정답은 ${current.word}입니다. 이번 단어는 뒤에서 다시 나옵니다.`}</p>
+        <EnSwipeCard key={`${current.id}-${index}`} word={current} flipped={flipped} onFlip={() => setFlipped((before) => !before)} onSwipe={(knew) => answer(knew)} uiLanguage={uiLanguage} />
+        {current.example_en && <div className="rounded-xl bg-dark-200 p-4 text-sm leading-6"><p>{current.example_en}</p>{current.example_ko && <p className="mt-1 text-stone-400">{current.example_ko}</p>}</div>}
+        <div className="grid grid-cols-2 gap-3"><button disabled={busy} onClick={() => answer(false)} className="rounded-xl border border-red-800 py-3 font-bold text-red-300 disabled:opacity-40">아직 모름 · 다시 보기</button><button disabled={!correct || busy} onClick={() => answer(true)} className="rounded-xl border border-emerald-800 py-3 font-bold text-emerald-300 disabled:opacity-40">철자·뜻 기억함</button></div>
+      </div>}
+      {error && <p role="alert" className="mt-4 text-sm text-amber-300">{error}</p>}
+      <p className="mt-5 text-xs text-stone-500">틀리거나 모른 단어는 이 세션 끝에 다시 나옵니다. 복습 기록은 서버에 저장됩니다.</p>
+    </div>
+  </div>;
 }
 
 function EnBrowseMode({ words, uiLanguage, onBack, title, paged = false, revision = 0 }: { words: EnglishWord[]; uiLanguage: UiLanguage; onBack: () => void; title?: string; paged?: boolean; revision?: number }) {

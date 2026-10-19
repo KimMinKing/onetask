@@ -10,12 +10,14 @@ from models import EnglishWord, EnglishWordCard, JapaneseWordCard, LearningActiv
 SUBJECTS = {
     "zh": ("중국어 HSK 4급", "/words?hsk=4"),
     "ja": ("일본어 히라가나", "/words?course=kana"),
-    "en": ("영어 B1 단어 복습", "/words?en=B1"),
+    "en": ("영어 A1 단어 복습", "/words?en=A1"),
+    "english-basics": ("영어 기초 이야기", "/english-basics"),
     "sqld": ("SQLD", "/sqld"),
     "network": ("네트워크관리사", "/network"),
     "cpp": ("C++ 네트워크", "/cpp"),
+    "rust": ("Rust", "/rust"),
 }
-COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 26}
+COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 26, "rust": 54, "english-basics": 25}
 LANGUAGE_CARDS = {"zh": WordCard, "en": EnglishWordCard, "ja": JapaneseWordCard}
 KST = ZoneInfo("Asia/Seoul")
 
@@ -73,7 +75,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
     tasks = []
 
     def course_href(subject: str, href: str, unit: int) -> str:
-        return f"{href}?step={unit}" if subject in {"sqld", "network", "cpp"} else href
+        return f"{href}?step={unit}" if subject in COURSE_LIMITS else href
 
     def add(subject: str, title: str, task_minutes: int, href: str, unit_id: str | None = None, completed_override: bool = False):
         progress = None
@@ -90,7 +92,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
             if subject == "zh":
                 review_query = review_query.join(Word, Word.id == WordCard.word_id).filter(Word.hsk_level == 4)
             elif subject == "en":
-                review_query = review_query.join(EnglishWord, EnglishWord.id == EnglishWordCard.word_id).filter(EnglishWord.level == "B1")
+                review_query = review_query.join(EnglishWord, EnglishWord.id == EnglishWordCard.word_id).filter(EnglishWord.level == "A1")
             reviewed_today = review_query.first() is not None
         tasks.append({
             "id": f"{subject}:{unit_id or 'review'}",
@@ -126,7 +128,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
         60: (10, 10, 25, 15),
     }[budget]
     add("zh", "중국어 HSK 4급 단어 복습", zh_minutes, "/words?hsk=4")
-    add("en", "영어 B1 단어 복습", en_minutes, "/words?en=B1")
+    add("en", "영어 A1 단어 복습", en_minutes, "/words?en=A1")
     if primary_minutes:
         add_course(primary, primary_minutes, primary_unit)
     if secondary_minutes:

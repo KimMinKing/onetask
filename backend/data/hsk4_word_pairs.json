@@ -1,0 +1,5411 @@
+[
+  {
+    "id": 310,
+    "chinese": "爱情",
+    "pinyin": "ài qíng",
+    "meaning": "사랑, 연애감정",
+    "example_zh": "他们的爱情经历了很多困难，但还是走在一起了。",
+    "example_ko": "그들의 사랑은 많은 어려움을 겪었지만 결국 함께하게 됐어.",
+    "example_pinyin": "tā men de ài qíng jīng lì le hěn duō kùn nán ， dàn hái shì zǒu zài yì qǐ le 。"
+  },
+  {
+    "id": 311,
+    "chinese": "安排",
+    "pinyin": "ān pái",
+    "meaning": "준비하다, 배치하다",
+    "example_zh": "这次旅行都由他来安排，大家放心就好。",
+    "example_ko": "이번 여행은 다 그가 준비할 테니 모두 안심해도 돼.",
+    "example_pinyin": "zhè cì lǚ xíng dōu yóu tā lái ān pái ， dà jiā fàng xīn jiù hǎo 。"
+  },
+  {
+    "id": 312,
+    "chinese": "安全",
+    "pinyin": "ān quán",
+    "meaning": "안전하다, 안전",
+    "example_zh": "过马路一定要注意安全。",
+    "example_ko": "횡단보도 건널 때 꼭 안전에 주의해야 해.",
+    "example_pinyin": "guò mǎ lù yí dìng yào zhù yì ān quán 。"
+  },
+  {
+    "id": 313,
+    "chinese": "暗",
+    "pinyin": "àn",
+    "meaning": "어둡다",
+    "example_zh": "路灯坏了，这条路很暗，走路要小心。",
+    "example_ko": "가로등이 고장 났어서 이 길이 많이 어두우니 걸을 때 조심해.",
+    "example_pinyin": "lù dēng huài le ， zhè tiáo lù hěn àn ， zǒu lù yào xiǎo xīn 。"
+  },
+  {
+    "id": 314,
+    "chinese": "按时",
+    "pinyin": "àn shí",
+    "meaning": "제때에, 시간 맞춰",
+    "example_zh": "请大家按时完成作业，不要迟交。",
+    "example_ko": "모두 제때에 숙제를 완성해주세요, 늦게 내지 마세요.",
+    "example_pinyin": "qǐng dà jiā àn shí wán chéng zuò yè ， bú yào chí jiāo 。"
+  },
+  {
+    "id": 315,
+    "chinese": "按照",
+    "pinyin": "àn zhào",
+    "meaning": "~에 따라, ~에 의거하여",
+    "example_zh": "请按照说明书上的步骤来操作。",
+    "example_ko": "설명서의 단계에 따라 조작해주세요.",
+    "example_pinyin": "qǐng àn zhào shuō míng shū shàng de bù zhòu lái cāo zuò 。"
+  },
+  {
+    "id": 316,
+    "chinese": "包括",
+    "pinyin": "bāo kuò",
+    "meaning": "포함하다",
+    "example_zh": "这个套餐包括早餐和晚餐。",
+    "example_ko": "이 패키지는 아침과 저녁 식사가 포함돼 있어.",
+    "example_pinyin": "zhè ge tào cān bāo kuò zǎo cān hé wǎn cān 。"
+  },
+  {
+    "id": 317,
+    "chinese": "保护",
+    "pinyin": "bǎo hù",
+    "meaning": "보호하다",
+    "example_zh": "我们要保护好自己的个人信息。",
+    "example_ko": "개인 정보를 잘 보호해야 해.",
+    "example_pinyin": "wǒ men yào bǎo hù hǎo zì jǐ de gè rén xìn xī 。"
+  },
+  {
+    "id": 318,
+    "chinese": "保证",
+    "pinyin": "bǎo zhèng",
+    "meaning": "보장하다, 보증하다",
+    "example_zh": "我保证这件事一定会做好。",
+    "example_ko": "이 일을 반드시 잘 해내겠다고 보장해.",
+    "example_pinyin": "wǒ bǎo zhèng zhè jiàn shì yí dìng huì zuò hǎo 。"
+  },
+  {
+    "id": 319,
+    "chinese": "抱",
+    "pinyin": "bào",
+    "meaning": "안다, 포옹하다",
+    "example_zh": "见到久违的朋友，他高兴地抱了上去。",
+    "example_ko": "오랫동안 못 봤던 친구를 만나자 기쁘게 달려가 안았어.",
+    "example_pinyin": "jiàn dào jiǔ wéi de péng yǒu ， tā gāo xìng dì bào le shàng qù 。"
+  },
+  {
+    "id": 320,
+    "chinese": "抱歉",
+    "pinyin": "bào qiàn",
+    "meaning": "미안하다, 죄송하다",
+    "example_zh": "抱歉，我来晚了，让你久等了。",
+    "example_ko": "죄송해요, 늦었어요, 오래 기다리게 했네요.",
+    "example_pinyin": "bào qiàn ， wǒ lái wǎn le ， ràng nǐ jiǔ děng le 。"
+  },
+  {
+    "id": 321,
+    "chinese": "报道",
+    "pinyin": "bào dào",
+    "meaning": "보도하다, 보도",
+    "example_zh": "新闻报道说今天会下大雨。",
+    "example_ko": "뉴스 보도에 따르면 오늘 폭우가 온다고 해.",
+    "example_pinyin": "xīn wén bào dào shuō jīn tiān huì xià dà yǔ 。"
+  },
+  {
+    "id": 322,
+    "chinese": "报名",
+    "pinyin": "bào míng",
+    "meaning": "신청하다, 등록하다",
+    "example_zh": "我已经报名参加这次比赛了。",
+    "example_ko": "이번 대회에 이미 신청했어.",
+    "example_pinyin": "wǒ yǐ jīng bào míng cān jiā zhè cì bǐ sài le 。"
+  },
+  {
+    "id": 323,
+    "chinese": "倍",
+    "pinyin": "bèi",
+    "meaning": "배, ~배",
+    "example_zh": "这家店的价格是其他店的两倍。",
+    "example_ko": "이 가게 가격은 다른 가게의 두 배야.",
+    "example_pinyin": "zhè jiā diàn de jià gé shì qí tā diàn de liǎng bèi 。"
+  },
+  {
+    "id": 324,
+    "chinese": "本来",
+    "pinyin": "běn lái",
+    "meaning": "원래, 처음에는",
+    "example_zh": "他本来不想去，但被朋友说服了。",
+    "example_ko": "그는 원래 가기 싫었는데 친구한테 설득당했어.",
+    "example_pinyin": "tā běn lái bù xiǎng qù ， dàn bèi péng yǒu shuō fú le 。"
+  },
+  {
+    "id": 325,
+    "chinese": "笨",
+    "pinyin": "bèn",
+    "meaning": "멍청하다, 둔하다",
+    "example_zh": "别说自己笨，只是需要多练习而已。",
+    "example_ko": "자기가 멍청하다고 하지 마, 그냥 연습이 더 필요할 뿐이야.",
+    "example_pinyin": "bié shuō zì jǐ bèn ， zhǐ shì xū yào duō liàn xí ér yǐ 。"
+  },
+  {
+    "id": 326,
+    "chinese": "笔记本",
+    "pinyin": "bǐ jì běn",
+    "meaning": "노트, 노트북 컴퓨터",
+    "example_zh": "我用笔记本记下了今天会议的重点。",
+    "example_ko": "오늘 회의 핵심 내용을 노트에 적었어.",
+    "example_pinyin": "wǒ yòng bǐ jì běn jì xià le jīn tiān huì yì de zhòng diǎn 。"
+  },
+  {
+    "id": 327,
+    "chinese": "毕业",
+    "pinyin": "bì yè",
+    "meaning": "졸업하다",
+    "example_zh": "她去年大学毕业，现在在一家公司工作。",
+    "example_ko": "그녀는 작년에 대학을 졸업하고 지금은 회사에 다니고 있어.",
+    "example_pinyin": "tā qù nián dà xué bì yè ， xiàn zài zài yī jiā gōng sī gōng zuò 。"
+  },
+  {
+    "id": 328,
+    "chinese": "遍",
+    "pinyin": "biàn",
+    "meaning": "번 (동작 횟수)",
+    "example_zh": "这首歌我已经听了不下十遍了。",
+    "example_ko": "이 노래 벌써 열 번도 넘게 들었어.",
+    "example_pinyin": "zhè shǒu gē wǒ yǐ jīng tīng le bù xià shí biàn le 。"
+  },
+  {
+    "id": 329,
+    "chinese": "标准",
+    "pinyin": "biāo zhǔn",
+    "meaning": "기준, 표준",
+    "example_zh": "这家餐厅的服务达到了国际标准。",
+    "example_ko": "이 식당 서비스는 국제 기준에 달했어.",
+    "example_pinyin": "zhè jiā cān tīng de fú wù dá dào le guó jì biāo zhǔn 。"
+  },
+  {
+    "id": 330,
+    "chinese": "表达",
+    "pinyin": "biǎo dá",
+    "meaning": "표현하다, 전달하다",
+    "example_zh": "他很难用语言来表达自己的感受。",
+    "example_ko": "그는 말로 자신의 감정을 표현하는 게 어려워.",
+    "example_pinyin": "tā hěn nán yòng yǔ yán lái biǎo dá zì jǐ de gǎn shòu 。"
+  },
+  {
+    "id": 331,
+    "chinese": "表格",
+    "pinyin": "biǎo gé",
+    "meaning": "양식, 표",
+    "example_zh": "请填写这张表格，然后交给前台。",
+    "example_ko": "이 양식을 작성한 후 프런트에 제출해주세요.",
+    "example_pinyin": "qǐng tián xiě zhè zhāng biǎo gé ， rán hòu jiāo gěi qián tái 。"
+  },
+  {
+    "id": 332,
+    "chinese": "表扬",
+    "pinyin": "biǎo yáng",
+    "meaning": "칭찬하다",
+    "example_zh": "老师表扬了他在课堂上的积极表现。",
+    "example_ko": "선생님이 수업 시간에 그의 적극적인 태도를 칭찬했어.",
+    "example_pinyin": "lǎo shī biǎo yáng le tā zài kè táng shàng de jī jí biǎo xiàn 。"
+  },
+  {
+    "id": 333,
+    "chinese": "饼干",
+    "pinyin": "bǐng gān",
+    "meaning": "과자, 크래커",
+    "example_zh": "我喜欢边看电影边吃饼干。",
+    "example_ko": "나는 영화 보면서 과자 먹는 걸 좋아해.",
+    "example_pinyin": "wǒ xǐ huān biān kàn diàn yǐng biān chī bǐng gān 。"
+  },
+  {
+    "id": 334,
+    "chinese": "并且",
+    "pinyin": "bìng qiě",
+    "meaning": "게다가, 또한",
+    "example_zh": "他学习好，并且非常有礼貌。",
+    "example_ko": "그는 공부도 잘하고 게다가 예의도 바르다.",
+    "example_pinyin": "tā xué xí hǎo ， bìng qiě fēi cháng yǒu lǐ mào 。"
+  },
+  {
+    "id": 335,
+    "chinese": "博士",
+    "pinyin": "bó shì",
+    "meaning": "박사",
+    "example_zh": "她花了五年时间拿到了博士学位。",
+    "example_ko": "그녀는 5년 걸려 박사 학위를 받았어.",
+    "example_pinyin": "tā huā le wǔ nián shí jiān ná dào le bó shì xué wèi 。"
+  },
+  {
+    "id": 336,
+    "chinese": "不但",
+    "pinyin": "bù dàn",
+    "meaning": "~뿐만 아니라",
+    "example_zh": "他不但会说中文，还会说日语。",
+    "example_ko": "그는 중국어를 할 줄 알 뿐만 아니라 일본어도 할 줄 알아.",
+    "example_pinyin": "tā bù dàn huì shuō zhōng wén ， hái huì shuō rì yǔ 。"
+  },
+  {
+    "id": 337,
+    "chinese": "不过",
+    "pinyin": "bù guò",
+    "meaning": "하지만, 그런데",
+    "example_zh": "这件衣服很好看，不过有点贵。",
+    "example_ko": "이 옷 예쁘긴 한데 좀 비싸네.",
+    "example_pinyin": "zhè jiàn yī fú hěn hǎo kàn ， bù guò yǒu diǎn guì 。"
+  },
+  {
+    "id": 338,
+    "chinese": "不得不",
+    "pinyin": "bù dé bù",
+    "meaning": "어쩔 수 없이 ~해야 하다",
+    "example_zh": "因为堵车，我不得不走路上班。",
+    "example_ko": "차가 막혀서 어쩔 수 없이 걸어서 출근해야 했어.",
+    "example_pinyin": "yīn wèi dǔ chē ， wǒ bù dé bù zǒu lù shàng bān 。"
+  },
+  {
+    "id": 339,
+    "chinese": "不管",
+    "pinyin": "bù guǎn",
+    "meaning": "~에 상관없이",
+    "example_zh": "不管多忙，他都会每天给家人打电话。",
+    "example_ko": "아무리 바빠도 그는 매일 가족에게 전화해.",
+    "example_pinyin": "bù guǎn duō máng ， tā dū huì měi tiān gěi jiā rén dǎ diàn huà 。"
+  },
+  {
+    "id": 340,
+    "chinese": "不仅",
+    "pinyin": "bù jǐn",
+    "meaning": "~뿐만 아니라",
+    "example_zh": "这里不仅风景美，而且物价也低。",
+    "example_ko": "여기는 경치도 아름다울 뿐만 아니라 물가도 낮아.",
+    "example_pinyin": "zhè lǐ bù jǐn fēng jǐng měi ， ér qiě wù jià yě dī 。"
+  },
+  {
+    "id": 341,
+    "chinese": "部分",
+    "pinyin": "bù fèn",
+    "meaning": "부분, 일부",
+    "example_zh": "大部分学生已经完成了作业。",
+    "example_ko": "대부분의 학생들이 이미 숙제를 끝냈어.",
+    "example_pinyin": "dà bù fèn xué shēng yǐ jīng wán chéng le zuò yè 。"
+  },
+  {
+    "id": 342,
+    "chinese": "擦",
+    "pinyin": "cā",
+    "meaning": "닦다, 지우다",
+    "example_zh": "吃完饭记得用纸巾擦一下嘴。",
+    "example_ko": "밥 먹고 나서 휴지로 입 닦는 거 잊지 마.",
+    "example_pinyin": "chī wán fàn jì de yòng zhǐ jīn cā yī xià zuǐ 。"
+  },
+  {
+    "id": 343,
+    "chinese": "猜",
+    "pinyin": "cāi",
+    "meaning": "추측하다, 맞혀보다",
+    "example_zh": "你猜今天谁来了？",
+    "example_ko": "오늘 누가 왔는지 맞혀봐봐?",
+    "example_pinyin": "nǐ cāi jīn tiān shuí lái le ？"
+  },
+  {
+    "id": 344,
+    "chinese": "材料",
+    "pinyin": "cái liào",
+    "meaning": "재료, 자료",
+    "example_zh": "做这道菜需要哪些材料？",
+    "example_ko": "이 요리를 만들려면 어떤 재료가 필요해?",
+    "example_pinyin": "zuò zhè dào cài xū yào nǎ xiē cái liào ？"
+  },
+  {
+    "id": 345,
+    "chinese": "参观",
+    "pinyin": "cān guān",
+    "meaning": "견학하다, 방문하다",
+    "example_zh": "我们学校组织学生去博物馆参观。",
+    "example_ko": "우리 학교에서 학생들을 데리고 박물관 견학을 갔어.",
+    "example_pinyin": "wǒ men xué xiào zǔ zhī xué shēng qù bó wù guǎn cān guān 。"
+  },
+  {
+    "id": 346,
+    "chinese": "差不多",
+    "pinyin": "chà bu duō",
+    "meaning": "거의 비슷하다, 대충",
+    "example_zh": "这两个手机的价格差不多。",
+    "example_ko": "이 두 핸드폰 가격이 거의 비슷해.",
+    "example_pinyin": "zhè liǎng gè shǒu jī de jià gé chà bu duō 。"
+  },
+  {
+    "id": 347,
+    "chinese": "长城",
+    "pinyin": "Cháng chéng",
+    "meaning": "만리장성",
+    "example_zh": "长城是中国最著名的历史景点之一。",
+    "example_ko": "만리장성은 중국에서 가장 유명한 역사 명소 중 하나야.",
+    "example_pinyin": "cháng chéng shì zhōng guó zuì zhù míng de lì shǐ jǐng diǎn zhī yī 。"
+  },
+  {
+    "id": 348,
+    "chinese": "长江",
+    "pinyin": "Cháng Jiāng",
+    "meaning": "양쯔강, 장강",
+    "example_zh": "长江是中国最长的河流。",
+    "example_ko": "양쯔강은 중국에서 가장 긴 강이야.",
+    "example_pinyin": "cháng jiāng shì zhōng guó zuì zhǎng de hé liú 。"
+  },
+  {
+    "id": 349,
+    "chinese": "尝",
+    "pinyin": "cháng",
+    "meaning": "맛보다",
+    "example_zh": "来，尝一下这个新口味的蛋糕。",
+    "example_ko": "자, 이 새 맛 케이크 한번 맛봐봐.",
+    "example_pinyin": "lái ， cháng yī xià zhè ge xīn kǒu wèi de dàn gāo 。"
+  },
+  {
+    "id": 350,
+    "chinese": "场",
+    "pinyin": "chǎng",
+    "meaning": "장소, 판, 경기 (양사)",
+    "example_zh": "昨晚的那场比赛真的太精彩了！",
+    "example_ko": "어젯밤 그 경기 정말 너무 대단했어!",
+    "example_pinyin": "zuó wǎn de nà chǎng bǐ sài zhēn de tài jīng cǎi le ！"
+  },
+  {
+    "id": 351,
+    "chinese": "超过",
+    "pinyin": "chāo guò",
+    "meaning": "초과하다, 넘다",
+    "example_zh": "今天来的人数超过了预期。",
+    "example_ko": "오늘 온 인원수가 예상을 넘었어.",
+    "example_pinyin": "jīn tiān lái de rén shù chāo guò le yù qī 。"
+  },
+  {
+    "id": 352,
+    "chinese": "吵",
+    "pinyin": "chǎo",
+    "meaning": "다투다, 시끄럽다",
+    "example_zh": "邻居每天晚上都在吵，吵得我睡不着。",
+    "example_ko": "이웃이 매일 밤 싸워서 시끄러워 잠을 못 자겠어.",
+    "example_pinyin": "lín jū měi tiān wǎn shàng dōu zài chǎo ， chǎo dé wǒ shuì bù zhe 。"
+  },
+  {
+    "id": 353,
+    "chinese": "乘坐",
+    "pinyin": "chéng zuò",
+    "meaning": "(교통수단을) 타다",
+    "example_zh": "你乘坐几号线地铁？",
+    "example_ko": "몇 호선 지하철 타?",
+    "example_pinyin": "nǐ chéng zuò jǐ hào xiàn dì tiě ？"
+  },
+  {
+    "id": 354,
+    "chinese": "成功",
+    "pinyin": "chéng gōng",
+    "meaning": "성공하다",
+    "example_zh": "只要努力，就一定能成功。",
+    "example_ko": "열심히 하기만 하면 반드시 성공할 수 있어.",
+    "example_pinyin": "zhǐ yào nǔ lì ， jiù yí dìng néng chéng gōng 。"
+  },
+  {
+    "id": 355,
+    "chinese": "成熟",
+    "pinyin": "chéng shú",
+    "meaning": "성숙하다",
+    "example_zh": "经历了很多事情之后，他变得成熟多了。",
+    "example_ko": "많은 일을 겪고 나서 그는 훨씬 성숙해졌어.",
+    "example_pinyin": "jīng lì le hěn duō shì qíng zhī hòu ， tā biàn dé chéng shú duō le 。"
+  },
+  {
+    "id": 356,
+    "chinese": "成为",
+    "pinyin": "chéng wéi",
+    "meaning": "~이 되다, 변하다",
+    "example_zh": "他的梦想是成为一名优秀的医生。",
+    "example_ko": "그의 꿈은 훌륭한 의사가 되는 것이야.",
+    "example_pinyin": "tā de mèng xiǎng shì chéng wéi yī míng yōu xiù de yī shēng 。"
+  },
+  {
+    "id": 357,
+    "chinese": "诚实",
+    "pinyin": "chéng shí",
+    "meaning": "성실하다, 정직하다",
+    "example_zh": "做人要诚实，不能说谎。",
+    "example_ko": "사람은 정직해야 해, 거짓말하면 안 돼.",
+    "example_pinyin": "zuò rén yào chéng shí ， bù néng shuō huǎng 。"
+  },
+  {
+    "id": 358,
+    "chinese": "吃惊",
+    "pinyin": "chī jīng",
+    "meaning": "놀라다",
+    "example_zh": "听到这个消息我很吃惊。",
+    "example_ko": "이 소식을 듣고 나는 매우 놀랐어.",
+    "example_pinyin": "tīng dào zhè ge xiāo xī wǒ hěn chī jīng 。"
+  },
+  {
+    "id": 359,
+    "chinese": "重新",
+    "pinyin": "chóng xīn",
+    "meaning": "다시, 새로",
+    "example_zh": "文件丢失了，我只好重新写一遍。",
+    "example_ko": "파일이 없어져서 어쩔 수 없이 다시 처음부터 써야 했어.",
+    "example_pinyin": "wén jiàn diū shī le ， wǒ zhǐ hǎo chóng xīn xiě yī biàn 。"
+  },
+  {
+    "id": 360,
+    "chinese": "抽烟",
+    "pinyin": "chōu yān",
+    "meaning": "담배 피우다",
+    "example_zh": "这里禁止抽烟，请去室外。",
+    "example_ko": "여기는 금연 구역이니 밖으로 나가주세요.",
+    "example_pinyin": "zhè lǐ jìn zhǐ chōu yān ， qǐng qù shì wài 。"
+  },
+  {
+    "id": 361,
+    "chinese": "出差",
+    "pinyin": "chū chāi",
+    "meaning": "출장 가다",
+    "example_zh": "他这周在上海出差，下周才回来。",
+    "example_ko": "그는 이번 주에 상하이로 출장 가서 다음 주에야 돌아와.",
+    "example_pinyin": "tā zhè zhōu zài shàng hǎi chū chāi ， xià zhōu cái huí lái 。"
+  },
+  {
+    "id": 362,
+    "chinese": "出发",
+    "pinyin": "chū fā",
+    "meaning": "출발하다",
+    "example_zh": "我们明天早上八点出发，不要迟到。",
+    "example_ko": "내일 아침 8시에 출발하니까 늦지 마.",
+    "example_pinyin": "wǒ men míng tiān zǎo shàng bā diǎn chū fā ， bú yào chí dào 。"
+  },
+  {
+    "id": 363,
+    "chinese": "出生",
+    "pinyin": "chū shēng",
+    "meaning": "태어나다",
+    "example_zh": "她是在北京出生的，但从小在上海长大。",
+    "example_ko": "그녀는 베이징에서 태어났지만 어릴 때부터 상하이에서 자랐어.",
+    "example_pinyin": "tā shì zài běi jīng chū shēng de ， dàn cóng xiǎo zài shàng hǎi zhǎng dà 。"
+  },
+  {
+    "id": 364,
+    "chinese": "传真",
+    "pinyin": "chuán zhēn",
+    "meaning": "팩스",
+    "example_zh": "能把合同通过传真发给我吗？",
+    "example_ko": "계약서를 팩스로 보내줄 수 있어요?",
+    "example_pinyin": "néng bǎ hé tóng tōng guò chuán zhēn fā gěi wǒ ma ？"
+  },
+  {
+    "id": 365,
+    "chinese": "窗户",
+    "pinyin": "chuāng hu",
+    "meaning": "창문",
+    "example_zh": "天气太热了，开一下窗户透透气吧。",
+    "example_ko": "날씨가 너무 더우니까 창문 열어서 환기시키자.",
+    "example_pinyin": "tiān qì tài rè le ， kāi yī xià chuāng hù tòu tòu qì ba 。"
+  },
+  {
+    "id": 366,
+    "chinese": "词典",
+    "pinyin": "cí diǎn",
+    "meaning": "사전",
+    "example_zh": "不认识的字可以查词典。",
+    "example_ko": "모르는 글자는 사전을 찾아보면 돼.",
+    "example_pinyin": "bù rèn shí de zì kě yǐ chá cí diǎn 。"
+  },
+  {
+    "id": 367,
+    "chinese": "从来",
+    "pinyin": "cóng lái",
+    "meaning": "여태껏, 한 번도 (부정문)",
+    "example_zh": "我从来没有去过那么远的地方。",
+    "example_ko": "나는 그렇게 먼 곳에 가본 적이 한 번도 없어.",
+    "example_pinyin": "wǒ cóng lái méi yǒu qù guò nà me yuǎn de dì fāng 。"
+  },
+  {
+    "id": 368,
+    "chinese": "粗心",
+    "pinyin": "cū xīn",
+    "meaning": "부주의하다, 덜렁거리다",
+    "example_zh": "他太粗心了，经常把钥匙忘在家里。",
+    "example_ko": "그는 너무 덜렁거려서 열쇠를 집에 두고 나오기 일쑤야.",
+    "example_pinyin": "tā tài cū xīn le ， jīng cháng bǎ yào shi wàng zài jiā lǐ 。"
+  },
+  {
+    "id": 369,
+    "chinese": "答案",
+    "pinyin": "dá àn",
+    "meaning": "정답, 답안",
+    "example_zh": "这道题的答案是什么？",
+    "example_ko": "이 문제 답이 뭐야?",
+    "example_pinyin": "zhè dào tí de dá àn shì shén me ？"
+  },
+  {
+    "id": 370,
+    "chinese": "打扮",
+    "pinyin": "dǎ ban",
+    "meaning": "꾸미다, 차려입다",
+    "example_zh": "她今天打扮得很漂亮，去参加同学聚会。",
+    "example_ko": "그녀는 오늘 예쁘게 차려입고 동창 모임에 갔어.",
+    "example_pinyin": "tā jīn tiān dǎ bàn dé hěn piào liàng ， qù cān jiā tóng xué jù huì 。"
+  },
+  {
+    "id": 371,
+    "chinese": "打扰",
+    "pinyin": "dǎ rǎo",
+    "meaning": "방해하다, 폐를 끼치다",
+    "example_zh": "抱歉打扰你了，我问一下路。",
+    "example_ko": "방해해서 미안한데, 길 좀 여쭤볼게요.",
+    "example_pinyin": "bào qiàn dǎ rǎo nǐ le ， wǒ wèn yī xià lù 。"
+  },
+  {
+    "id": 372,
+    "chinese": "打印",
+    "pinyin": "dǎ yìn",
+    "meaning": "인쇄하다",
+    "example_zh": "请帮我把这份文件打印出来。",
+    "example_ko": "이 서류 인쇄해줄 수 있어?",
+    "example_pinyin": "qǐng bāng wǒ bǎ zhè fèn wén jiàn dǎ yìn chū lái 。"
+  },
+  {
+    "id": 373,
+    "chinese": "打折",
+    "pinyin": "dǎ zhé",
+    "meaning": "할인하다",
+    "example_zh": "这家店周末打折，东西很便宜。",
+    "example_ko": "이 가게는 주말에 할인해서 물건이 싸.",
+    "example_pinyin": "zhè jiā diàn zhōu mò dǎ zhé ， dōng xī hěn pián yi 。"
+  },
+  {
+    "id": 374,
+    "chinese": "打针",
+    "pinyin": "dǎ zhēn",
+    "meaning": "주사 맞다",
+    "example_zh": "孩子怕打针，哭了好久。",
+    "example_ko": "아이가 주사를 무서워해서 한참 울었어.",
+    "example_pinyin": "hái zi pà dǎ zhēn ， kū le hǎo jiǔ 。"
+  },
+  {
+    "id": 375,
+    "chinese": "大概",
+    "pinyin": "dà gài",
+    "meaning": "대략, 아마도",
+    "example_zh": "他大概还需要半个小时才能到。",
+    "example_ko": "그는 아마 30분 정도 더 있어야 도착할 것 같아.",
+    "example_pinyin": "tā dà gài hái xū yào bàn gè xiǎo shí cái néng dào 。"
+  },
+  {
+    "id": 376,
+    "chinese": "大使馆",
+    "pinyin": "dà shǐ guǎn",
+    "meaning": "대사관",
+    "example_zh": "申请签证需要去大使馆。",
+    "example_ko": "비자 신청하려면 대사관에 가야 해.",
+    "example_pinyin": "shēn qǐng qiān zhèng xū yào qù dà shǐ guǎn 。"
+  },
+  {
+    "id": 377,
+    "chinese": "大约",
+    "pinyin": "dà yuē",
+    "meaning": "대략, 약",
+    "example_zh": "从这里到机场大约需要四十分钟。",
+    "example_ko": "여기서 공항까지 대략 40분 걸려.",
+    "example_pinyin": "cóng zhè lǐ dào jī chǎng dà yuē xū yào sì shí fēn zhōng 。"
+  },
+  {
+    "id": 378,
+    "chinese": "戴",
+    "pinyin": "dài",
+    "meaning": "착용하다 (안경·모자·장갑 등)",
+    "example_zh": "天气很冷，记得戴帽子和手套出门。",
+    "example_ko": "날씨가 추우니까 모자랑 장갑 끼고 나가는 거 잊지 마.",
+    "example_pinyin": "tiān qì hěn lěng ， jì de dài mào zi hé shǒu tào chū mén 。"
+  },
+  {
+    "id": 379,
+    "chinese": "代表",
+    "pinyin": "dài biǎo",
+    "meaning": "대표, 대표하다",
+    "example_zh": "他代表我们公司去参加国际会议。",
+    "example_ko": "그가 우리 회사를 대표해서 국제 회의에 참가했어.",
+    "example_pinyin": "tā dài biǎo wǒ men gōng sī qù cān jiā guó jì huì yì 。"
+  },
+  {
+    "id": 380,
+    "chinese": "代替",
+    "pinyin": "dài tì",
+    "meaning": "대신하다, 교체하다",
+    "example_zh": "今天经理不在，由我代替他主持会议。",
+    "example_ko": "오늘 매니저가 없어서 내가 그를 대신해서 회의를 진행해.",
+    "example_pinyin": "jīn tiān jīng lǐ bù zài ， yóu wǒ dài tì tā zhǔ chí huì yì 。"
+  },
+  {
+    "id": 381,
+    "chinese": "大夫",
+    "pinyin": "dài fu",
+    "meaning": "의사 (구어)",
+    "example_zh": "肚子疼得厉害，得去看大夫。",
+    "example_ko": "배가 너무 아파서 의사한테 가봐야겠어.",
+    "example_pinyin": "dǔ zi téng dé lì hài ， dé qù kàn dà fū 。"
+  },
+  {
+    "id": 382,
+    "chinese": "当",
+    "pinyin": "dāng",
+    "meaning": "~가 되다, ~할 때",
+    "example_zh": "当老师是他从小的梦想。",
+    "example_ko": "선생님이 되는 게 어릴 때부터의 꿈이었어.",
+    "example_pinyin": "dāng lǎo shī shì tā cóng xiǎo de mèng xiǎng 。"
+  },
+  {
+    "id": 383,
+    "chinese": "当地",
+    "pinyin": "dāng dì",
+    "meaning": "현지의, 그 지역",
+    "example_zh": "去旅游时，我喜欢吃当地的特色美食。",
+    "example_ko": "여행 갈 때 나는 현지 특색 음식을 먹는 걸 좋아해.",
+    "example_pinyin": "qù lǚ yóu shí ， wǒ xǐ huān chī dāng dì de tè sè měi shí 。"
+  },
+  {
+    "id": 384,
+    "chinese": "当时",
+    "pinyin": "dāng shí",
+    "meaning": "그 당시, 그때",
+    "example_zh": "当时我没有想到事情会变成这样。",
+    "example_ko": "그때는 일이 이렇게 될 줄 몰랐어.",
+    "example_pinyin": "dāng shí wǒ méi yǒu xiǎng dào shì qíng huì biàn chéng zhè yàng 。"
+  },
+  {
+    "id": 385,
+    "chinese": "刀",
+    "pinyin": "dāo",
+    "meaning": "칼",
+    "example_zh": "厨房里有一把锋利的刀，小心别切到手。",
+    "example_ko": "부엌에 날카로운 칼이 있으니 손 베지 않게 조심해.",
+    "example_pinyin": "chú fáng lǐ yǒu yī bǎ fēng lì de dāo ， xiǎo xīn bié qiè dào shǒu 。"
+  },
+  {
+    "id": 386,
+    "chinese": "导游",
+    "pinyin": "dǎo yóu",
+    "meaning": "여행 가이드, 안내원",
+    "example_zh": "导游带我们参观了故宫的每一个角落。",
+    "example_ko": "가이드가 우리를 데리고 자금성 구석구석을 안내해줬어.",
+    "example_pinyin": "dǎo yóu dài wǒ men cān guān le gù gōng de měi yí gè jiǎo luò 。"
+  },
+  {
+    "id": 387,
+    "chinese": "到处",
+    "pinyin": "dào chù",
+    "meaning": "도처에, 곳곳에",
+    "example_zh": "节假日到处都是游客，人山人海。",
+    "example_ko": "명절에는 곳곳에 관광객들로 가득해.",
+    "example_pinyin": "jié jià rì dào chù dōu shì yóu kè ， rén shān rén hǎi 。"
+  },
+  {
+    "id": 388,
+    "chinese": "到底",
+    "pinyin": "dào dǐ",
+    "meaning": "도대체, 결국",
+    "example_zh": "你到底想说什么，直接说吧。",
+    "example_ko": "도대체 하고 싶은 말이 뭐야, 직접 말해봐.",
+    "example_pinyin": "nǐ dào dǐ xiǎng shuō shén me ， zhí jiē shuō ba 。"
+  },
+  {
+    "id": 389,
+    "chinese": "道歉",
+    "pinyin": "dào qiàn",
+    "meaning": "사과하다",
+    "example_zh": "他主动去向对方道歉，勇气可嘉。",
+    "example_ko": "그가 먼저 상대방에게 사과하러 갔는데 용기 있다.",
+    "example_pinyin": "tā zhǔ dòng qù xiàng duì fāng dào qiàn ， yǒng qì kě jiā 。"
+  },
+  {
+    "id": 390,
+    "chinese": "得意",
+    "pinyin": "dé yì",
+    "meaning": "뿌듯하다, 의기양양하다",
+    "example_zh": "考了第一名，他得意地笑了。",
+    "example_ko": "1등을 하고 그는 뿌듯하게 웃었어.",
+    "example_pinyin": "kǎo le dì yì míng ， tā dé yì dì xiào le 。"
+  },
+  {
+    "id": 391,
+    "chinese": "等",
+    "pinyin": "děng",
+    "meaning": "기다리다",
+    "example_zh": "我在咖啡店等你，你快点来吧。",
+    "example_ko": "카페에서 기다리고 있을게, 빨리 와.",
+    "example_pinyin": "wǒ zài kā fēi diàn děng nǐ ， nǐ kuài diǎn lái ba 。"
+  },
+  {
+    "id": 392,
+    "chinese": "等",
+    "pinyin": "děng",
+    "meaning": "기다리다",
+    "example_zh": "我在门口等你。",
+    "example_ko": "문 앞에서 너를 기다릴게.",
+    "example_pinyin": "wǒ zài mén kǒu děng nǐ 。"
+  },
+  {
+    "id": 393,
+    "chinese": "底",
+    "pinyin": "dǐ",
+    "meaning": "바닥, 밑",
+    "example_zh": "行李箱放在床底下了。",
+    "example_ko": "캐리어를 침대 밑에 뒀어.",
+    "example_pinyin": "xíng lǐ xiāng fàng zài chuáng dǐ xià le 。"
+  },
+  {
+    "id": 394,
+    "chinese": "地球",
+    "pinyin": "dì qiú",
+    "meaning": "지구",
+    "example_zh": "我们要保护地球，减少污染。",
+    "example_ko": "지구를 보호하고 오염을 줄여야 해.",
+    "example_pinyin": "wǒ men yào bǎo hù dì qiú ， jiǎn shǎo wū rǎn 。"
+  },
+  {
+    "id": 395,
+    "chinese": "地址",
+    "pinyin": "dì zhǐ",
+    "meaning": "주소",
+    "example_zh": "请把你家的地址发给我，我去接你。",
+    "example_ko": "집 주소 나한테 보내줘, 내가 데리러 갈게.",
+    "example_pinyin": "qǐng bǎ nǐ jiā de dì zhǐ fā gěi wǒ ， wǒ qù jiē nǐ 。"
+  },
+  {
+    "id": 396,
+    "chinese": "掉",
+    "pinyin": "diào",
+    "meaning": "떨어지다, 잃어버리다",
+    "example_zh": "手机从桌上掉下来，屏幕碎了。",
+    "example_ko": "핸드폰이 책상에서 떨어져서 화면이 깨졌어.",
+    "example_pinyin": "shǒu jī cóng zhuō shàng diào xià lái ， píng mù suì le 。"
+  },
+  {
+    "id": 397,
+    "chinese": "调查",
+    "pinyin": "diào chá",
+    "meaning": "조사하다",
+    "example_zh": "警察正在调查这起交通事故。",
+    "example_ko": "경찰이 이번 교통사고를 조사하고 있어.",
+    "example_pinyin": "jǐng chá zhèng zài diào chá zhè qǐ jiāo tōng shì gù 。"
+  },
+  {
+    "id": 398,
+    "chinese": "丢",
+    "pinyin": "diū",
+    "meaning": "잃어버리다, 버리다",
+    "example_zh": "我把钱包丢了，里面有很多证件。",
+    "example_ko": "지갑을 잃어버렸는데 그 안에 중요한 신분증이 많았어.",
+    "example_pinyin": "wǒ bǎ qián bāo diū le ， lǐ miàn yǒu hěn duō zhèng jiàn 。"
+  },
+  {
+    "id": 399,
+    "chinese": "动作",
+    "pinyin": "dòng zuò",
+    "meaning": "동작, 행동",
+    "example_zh": "他的动作很灵活，跳舞跳得很好。",
+    "example_ko": "그의 동작이 유연해서 춤을 정말 잘 춰.",
+    "example_pinyin": "tā de dòng zuò hěn líng huó ， tiào wǔ tiào dé hěn hǎo 。"
+  },
+  {
+    "id": 400,
+    "chinese": "堵车",
+    "pinyin": "dǔ chē",
+    "meaning": "교통 체증",
+    "example_zh": "今天早高峰堵车严重，我迟到了三十分钟。",
+    "example_ko": "오늘 아침 출근 시간에 교통 체증이 심해서 30분 늦었어.",
+    "example_pinyin": "jīn tiān zǎo gāo fēng dǔ chē yán zhòng ， wǒ chí dào le sān shí fēn zhōng 。"
+  },
+  {
+    "id": 401,
+    "chinese": "肚子",
+    "pinyin": "dù zi",
+    "meaning": "배, 복부",
+    "example_zh": "吃太多了，肚子都撑了。",
+    "example_ko": "너무 많이 먹어서 배가 터질 것 같아.",
+    "example_pinyin": "chī tài duō le ， dǔ zi dōu chēng le 。"
+  },
+  {
+    "id": 402,
+    "chinese": "断",
+    "pinyin": "duàn",
+    "meaning": "끊어지다, 부러지다",
+    "example_zh": "手机信号断了，打电话打不通。",
+    "example_ko": "핸드폰 신호가 끊겼어서 전화가 안 돼.",
+    "example_pinyin": "shǒu jī xìn hào duàn le ， dǎ diàn huà dǎ bù tōng 。"
+  },
+  {
+    "id": 403,
+    "chinese": "对",
+    "pinyin": "duì",
+    "meaning": "맞다, 옳다",
+    "example_zh": "你的答案是对的。",
+    "example_ko": "네 답은 맞아.",
+    "example_pinyin": "nǐ de dá àn shì duì de 。"
+  },
+  {
+    "id": 404,
+    "chinese": "对",
+    "pinyin": "duì",
+    "meaning": "~에게, ~에 대해",
+    "example_zh": "老师对我们很好。",
+    "example_ko": "선생님은 우리에게 잘해 주셔.",
+    "example_pinyin": "lǎo shī duì wǒ men hěn hǎo 。"
+  },
+  {
+    "id": 405,
+    "chinese": "对话",
+    "pinyin": "duì huà",
+    "meaning": "대화",
+    "example_zh": "多和中国人对话，口语会进步得很快。",
+    "example_ko": "중국인이랑 대화를 많이 하면 회화 실력이 빨리 늘어.",
+    "example_pinyin": "duō hé zhōng guó rén duì huà ， kǒu yǔ huì jìn bù dé hěn kuài 。"
+  },
+  {
+    "id": 406,
+    "chinese": "对面",
+    "pinyin": "duì miàn",
+    "meaning": "맞은편, 건너편",
+    "example_zh": "超市就在银行对面，很好找。",
+    "example_ko": "슈퍼마켓이 은행 맞은편에 있어서 찾기 쉬워.",
+    "example_pinyin": "chāo shì jiù zài yín háng duì miàn ， hěn hǎo zhǎo 。"
+  },
+  {
+    "id": 407,
+    "chinese": "顿",
+    "pinyin": "dùn",
+    "meaning": "끼니 (양사), 잠시 멈추다",
+    "example_zh": "我今天只吃了两顿饭，有点饿。",
+    "example_ko": "나 오늘 두 끼밖에 못 먹어서 좀 배고파.",
+    "example_pinyin": "wǒ jīn tiān zhǐ chī le liǎng dùn fàn ， yǒu diǎn è 。"
+  },
+  {
+    "id": 408,
+    "chinese": "朵",
+    "pinyin": "duǒ",
+    "meaning": "송이 (꽃 양사)",
+    "example_zh": "他送了她一朵玫瑰花。",
+    "example_ko": "그는 그녀에게 장미꽃 한 송이를 선물했어.",
+    "example_pinyin": "tā sòng le tā yī duǒ méi guī huā 。"
+  },
+  {
+    "id": 409,
+    "chinese": "而",
+    "pinyin": "ér",
+    "meaning": "그리고, ~이면서",
+    "example_zh": "她聪明而勤奋。",
+    "example_ko": "그녀는 똑똑하고 부지런해.",
+    "example_pinyin": "tā cōng míng ér qín fèn 。"
+  },
+  {
+    "id": 410,
+    "chinese": "儿童",
+    "pinyin": "ér tóng",
+    "meaning": "어린이, 아동",
+    "example_zh": "这个博物馆专门为儿童设计，很有趣。",
+    "example_ko": "이 박물관은 아이들을 위해 특별히 설계되어 있어서 재밌어.",
+    "example_pinyin": "zhè ge bó wù guǎn zhuān mén wèi ér tóng shè jì ， hěn yǒu qù 。"
+  },
+  {
+    "id": 411,
+    "chinese": "发",
+    "pinyin": "fā",
+    "meaning": "보내다, 발송하다",
+    "example_zh": "我刚发了一封邮件给你，看到了吗？",
+    "example_ko": "방금 이메일 보냈는데 봤어?",
+    "example_pinyin": "wǒ gāng fā le yī fēng yóu jiàn gěi nǐ ， kàn dào le ma ？"
+  },
+  {
+    "id": 412,
+    "chinese": "发生",
+    "pinyin": "fā shēng",
+    "meaning": "발생하다, 일어나다",
+    "example_zh": "路上发生了交通事故，所以堵车了。",
+    "example_ko": "도로에서 교통사고가 나서 차가 막혔어.",
+    "example_pinyin": "lù shàng fā shēng le jiāo tōng shì gù ， suǒ yǐ dǔ chē le 。"
+  },
+  {
+    "id": 413,
+    "chinese": "发展",
+    "pinyin": "fā zhǎn",
+    "meaning": "발전하다, 성장하다",
+    "example_zh": "这个城市近年来发展得非常快。",
+    "example_ko": "이 도시는 최근 몇 년간 엄청나게 빠르게 발전했어.",
+    "example_pinyin": "zhè ge chéng shì jìn nián lái fā zhǎn dé fēi cháng kuài 。"
+  },
+  {
+    "id": 414,
+    "chinese": "法律",
+    "pinyin": "fǎ lǜ",
+    "meaning": "법률, 법",
+    "example_zh": "每个公民都应该遵守法律。",
+    "example_ko": "모든 시민은 법을 지켜야 해.",
+    "example_pinyin": "měi gè gōng mín dōu yīng gāi zūn shǒu fǎ lǜ 。"
+  },
+  {
+    "id": 415,
+    "chinese": "翻译",
+    "pinyin": "fān yì",
+    "meaning": "번역하다, 통역하다",
+    "example_zh": "他的中文很好，可以帮我翻译这封信吗？",
+    "example_ko": "그는 중국어를 잘 하는데, 이 편지를 번역해줄 수 있어?",
+    "example_pinyin": "tā de zhōng wén hěn hǎo ， kě yǐ bāng wǒ fān yì zhè fēng xìn ma ？"
+  },
+  {
+    "id": 416,
+    "chinese": "烦恼",
+    "pinyin": "fán nǎo",
+    "meaning": "걱정, 고민",
+    "example_zh": "工作和生活的烦恼，找朋友聊聊就好多了。",
+    "example_ko": "일과 생활의 고민은 친구한테 털어놓으면 훨씬 나아져.",
+    "example_pinyin": "gōng zuò hé shēng huó de fán nǎo ， zhǎo péng yǒu liáo liáo jiù hǎo duō le 。"
+  },
+  {
+    "id": 417,
+    "chinese": "反对",
+    "pinyin": "fǎn duì",
+    "meaning": "반대하다",
+    "example_zh": "他反对这个计划，认为风险太大。",
+    "example_ko": "그는 이 계획에 반대하는데, 위험이 너무 크다고 생각해.",
+    "example_pinyin": "tā fǎn duì zhè ge jì huà ， rèn wéi fēng xiǎn tài dà 。"
+  },
+  {
+    "id": 418,
+    "chinese": "反映",
+    "pinyin": "fǎn yìng",
+    "meaning": "반영하다, 전달하다",
+    "example_zh": "这部电影真实地反映了现代人的生活压力。",
+    "example_ko": "이 영화는 현대인의 생활 스트레스를 사실적으로 반영해.",
+    "example_pinyin": "zhè bù diàn yǐng zhēn shí dì fǎn yìng le xiàn dài rén de shēng huó yā lì 。"
+  },
+  {
+    "id": 419,
+    "chinese": "范围",
+    "pinyin": "fàn wéi",
+    "meaning": "범위",
+    "example_zh": "这次考试的范围很广，要多复习。",
+    "example_ko": "이번 시험 범위가 넓으니까 복습을 많이 해야 해.",
+    "example_pinyin": "zhè cì kǎo shì de fàn wéi hěn guǎng ， yào duō fù xí 。"
+  },
+  {
+    "id": 420,
+    "chinese": "方法",
+    "pinyin": "fāng fǎ",
+    "meaning": "방법",
+    "example_zh": "你有什么好的学习方法吗？",
+    "example_ko": "좋은 공부 방법 있어?",
+    "example_pinyin": "nǐ yǒu shén me hǎo de xué xí fāng fǎ ma ？"
+  },
+  {
+    "id": 421,
+    "chinese": "方面",
+    "pinyin": "fāng miàn",
+    "meaning": "방면, 측면",
+    "example_zh": "在工作方面，他很有经验。",
+    "example_ko": "업무 방면에서 그는 경험이 많아.",
+    "example_pinyin": "zài gōng zuò fāng miàn ， tā hěn yǒu jīng yàn 。"
+  },
+  {
+    "id": 422,
+    "chinese": "方向",
+    "pinyin": "fāng xiàng",
+    "meaning": "방향",
+    "example_zh": "往北走就是地铁站，方向没有错。",
+    "example_ko": "북쪽으로 가면 지하철역이야, 방향 맞아.",
+    "example_pinyin": "wǎng běi zǒu jiù shì dì tiě zhàn ， fāng xiàng méi yǒu cuò 。"
+  },
+  {
+    "id": 423,
+    "chinese": "访问",
+    "pinyin": "fǎng wèn",
+    "meaning": "방문하다, 인터뷰하다",
+    "example_zh": "记者访问了这位著名的演员。",
+    "example_ko": "기자가 그 유명한 배우를 인터뷰했어.",
+    "example_pinyin": "jì zhě fǎng wèn le zhè wèi zhù míng de yǎn yuán 。"
+  },
+  {
+    "id": 424,
+    "chinese": "放弃",
+    "pinyin": "fàng qì",
+    "meaning": "포기하다",
+    "example_zh": "不管多难，都不要轻易放弃。",
+    "example_ko": "아무리 어려워도 쉽게 포기하지 마.",
+    "example_pinyin": "bù guǎn duō nán ， dōu bú yào qīng yì fàng qì 。"
+  },
+  {
+    "id": 425,
+    "chinese": "放暑假",
+    "pinyin": "fàng shǔ jià",
+    "meaning": "여름방학을 하다",
+    "example_zh": "学校放暑假了，孩子们都很开心。",
+    "example_ko": "학교가 여름방학에 들어가서 아이들이 다 기뻐해.",
+    "example_pinyin": "xué xiào fàng shǔ jià le ， hái zi men dōu hěn kāi xīn 。"
+  },
+  {
+    "id": 426,
+    "chinese": "分之",
+    "pinyin": "fēn zhī",
+    "meaning": "~분의 (분수 표현)",
+    "example_zh": "三分之一的学生选择了理科。",
+    "example_ko": "학생의 3분의 1이 이과를 선택했어.",
+    "example_pinyin": "sān fēn zhī yī de xué shēng xuǎn zé le lǐ kē 。"
+  },
+  {
+    "id": 427,
+    "chinese": "份",
+    "pinyin": "fèn",
+    "meaning": "부, 개 (양사)",
+    "example_zh": "请给我来两份炒饭。",
+    "example_ko": "볶음밥 두 개 주세요.",
+    "example_pinyin": "qǐng gěi wǒ lái liǎng fèn chǎo fàn 。"
+  },
+  {
+    "id": 428,
+    "chinese": "风景",
+    "pinyin": "fēng jǐng",
+    "meaning": "경치, 풍경",
+    "example_zh": "这里的风景真美，难怪这么多人来旅游。",
+    "example_ko": "여기 경치가 정말 아름다워서 이렇게 많은 사람들이 여행 오는구나.",
+    "example_pinyin": "zhè lǐ de fēng jǐng zhēn měi ， nán guài zhè me duō rén lái lǚ yóu 。"
+  },
+  {
+    "id": 429,
+    "chinese": "丰富",
+    "pinyin": "fēng fù",
+    "meaning": "풍부하다",
+    "example_zh": "这本书内容丰富，读完受益匪浅。",
+    "example_ko": "이 책은 내용이 풍부해서 다 읽고 나면 얻는 게 많아.",
+    "example_pinyin": "zhè běn shū nèi róng fēng fù ， dú wán shòu yì fěi qiǎn 。"
+  },
+  {
+    "id": 430,
+    "chinese": "否则",
+    "pinyin": "fǒu zé",
+    "meaning": "그렇지 않으면",
+    "example_zh": "快点走，否则要赶不上公共汽车了。",
+    "example_ko": "빨리 가, 그렇지 않으면 버스 못 탈 것 같아.",
+    "example_pinyin": "kuài diǎn zǒu ， fǒu zé yào gǎn bù shàng gōng gòng qì chē le 。"
+  },
+  {
+    "id": 431,
+    "chinese": "符合",
+    "pinyin": "fú hé",
+    "meaning": "부합하다, 맞다",
+    "example_zh": "这份简历符合我们的招聘要求。",
+    "example_ko": "이 이력서는 우리의 채용 조건에 부합해.",
+    "example_pinyin": "zhè fèn jiǎn lì fú hé wǒ men de zhāo pìn yāo qiú 。"
+  },
+  {
+    "id": 432,
+    "chinese": "富",
+    "pinyin": "fù",
+    "meaning": "부유하다",
+    "example_zh": "他家很富，但他从不炫耀。",
+    "example_ko": "그 집은 부유한데 그는 절대 자랑하지 않아.",
+    "example_pinyin": "tā jiā hěn fù ， dàn tā cóng bù xuàn yào 。"
+  },
+  {
+    "id": 433,
+    "chinese": "负责",
+    "pinyin": "fù zé",
+    "meaning": "책임지다",
+    "example_zh": "每个人都要对自己的行为负责。",
+    "example_ko": "모든 사람은 자신의 행동에 책임을 져야 해.",
+    "example_pinyin": "měi gè rén dōu yào duì zì jǐ de xíng wéi fù zé 。"
+  },
+  {
+    "id": 434,
+    "chinese": "复印",
+    "pinyin": "fù yìn",
+    "meaning": "복사하다",
+    "example_zh": "请帮我把这份合同复印三份。",
+    "example_ko": "이 계약서를 세 부 복사해줄 수 있어?",
+    "example_pinyin": "qǐng bāng wǒ bǎ zhè fèn hé tóng fù yìn sān fèn 。"
+  },
+  {
+    "id": 435,
+    "chinese": "复杂",
+    "pinyin": "fù zá",
+    "meaning": "복잡하다",
+    "example_zh": "这道题看起来复杂，其实不难。",
+    "example_ko": "이 문제는 복잡해 보이지만 사실 어렵지 않아.",
+    "example_pinyin": "zhè dào tí kàn qǐ lái fù zá ， qí shí bù nán 。"
+  },
+  {
+    "id": 436,
+    "chinese": "父亲",
+    "pinyin": "fù qīn",
+    "meaning": "아버지 (격식체)",
+    "example_zh": "他的父亲是一位退休的工程师。",
+    "example_ko": "그의 아버지는 은퇴한 엔지니어야.",
+    "example_pinyin": "tā de fù qīn shì yī wèi tuì xiū de gōng chéng shī 。"
+  },
+  {
+    "id": 437,
+    "chinese": "改变",
+    "pinyin": "gǎi biàn",
+    "meaning": "바꾸다, 변하다",
+    "example_zh": "换了工作之后，他整个人都改变了。",
+    "example_ko": "직장을 바꾸고 나서 그 사람이 완전히 변했어.",
+    "example_pinyin": "huàn le gōng zuò zhī hòu ， tā zhěng gè rén dōu gǎi biàn le 。"
+  },
+  {
+    "id": 438,
+    "chinese": "干杯",
+    "pinyin": "gān bēi",
+    "meaning": "건배하다",
+    "example_zh": "大家举起杯子，干杯！",
+    "example_ko": "모두 잔 들어, 건배!",
+    "example_pinyin": "dà jiā jǔ qǐ bēi zi ， gān bēi ！"
+  },
+  {
+    "id": 439,
+    "chinese": "干燥",
+    "pinyin": "gān zào",
+    "meaning": "건조하다",
+    "example_zh": "北方的冬天又冷又干燥，记得多喝水。",
+    "example_ko": "북방의 겨울은 춥고 건조하니까 물 많이 마셔.",
+    "example_pinyin": "běi fāng de dōng tiān yòu lěng yòu gān zào ， jì de duō hē shuǐ 。"
+  },
+  {
+    "id": 440,
+    "chinese": "感动",
+    "pinyin": "gǎn dòng",
+    "meaning": "감동하다",
+    "example_zh": "这个故事让我很感动。",
+    "example_ko": "이 이야기는 나를 아주 감동시켰어.",
+    "example_pinyin": "zhè ge gù shì ràng wǒ hěn gǎn dòng 。"
+  },
+  {
+    "id": 441,
+    "chinese": "感觉",
+    "pinyin": "gǎn jué",
+    "meaning": "느끼다, 느낌",
+    "example_zh": "我感觉今天的会议开得很有意义。",
+    "example_ko": "오늘 회의가 매우 의미 있었다는 느낌이 들어.",
+    "example_pinyin": "wǒ gǎn jué jīn tiān de huì yì kāi dé hěn yǒu yì yì 。"
+  },
+  {
+    "id": 442,
+    "chinese": "感情",
+    "pinyin": "gǎn qíng",
+    "meaning": "감정, 정",
+    "example_zh": "多年的感情，真的不容易放下。",
+    "example_ko": "수년간의 감정은 쉽게 내려놓기 어려워.",
+    "example_pinyin": "duō nián de gǎn qíng ， zhēn de bù róng yì fàng xià 。"
+  },
+  {
+    "id": 443,
+    "chinese": "感谢",
+    "pinyin": "gǎn xiè",
+    "meaning": "감사하다",
+    "example_zh": "感谢你一直以来对我的帮助。",
+    "example_ko": "항상 도와줘서 정말 감사해.",
+    "example_pinyin": "gǎn xiè nǐ yì zhí yǐ lái duì wǒ de bāng zhù 。"
+  },
+  {
+    "id": 444,
+    "chinese": "干",
+    "pinyin": "gàn",
+    "meaning": "하다, 일하다 (구어)",
+    "example_zh": "你干什么呢？要帮忙吗？",
+    "example_ko": "뭐 하고 있어? 도와줄까?",
+    "example_pinyin": "nǐ gàn shén me ne ？ yào bāng máng ma ？"
+  },
+  {
+    "id": 445,
+    "chinese": "刚刚",
+    "pinyin": "gāng gang",
+    "meaning": "방금, 막",
+    "example_zh": "他刚刚离开，你再等一下可能还能追上。",
+    "example_ko": "그 방금 떠났어, 조금만 더 기다리면 따라잡을 수 있을지도 몰라.",
+    "example_pinyin": "tā gāng gāng lí kāi ， nǐ zài děng yí xià kě néng hái néng zhuī shàng 。"
+  },
+  {
+    "id": 446,
+    "chinese": "高级",
+    "pinyin": "gāo jí",
+    "meaning": "고급의, 수준 높은",
+    "example_zh": "这家餐厅是高级餐厅，价格比较贵。",
+    "example_ko": "이 식당은 고급 레스토랑이라 가격이 좀 비싸.",
+    "example_pinyin": "zhè jiā cān tīng shì gāo jí cān tīng ， jià gé bǐ jiào guì 。"
+  },
+  {
+    "id": 447,
+    "chinese": "个子",
+    "pinyin": "gè zi",
+    "meaning": "키, 체격",
+    "example_zh": "他个子很高，在人群中一眼就能看到。",
+    "example_ko": "그는 키가 커서 사람들 사이에서 한눈에 보여.",
+    "example_pinyin": "tā gè zi hěn gāo ， zài rén qún zhōng yī yǎn jiù néng kàn dào 。"
+  },
+  {
+    "id": 448,
+    "chinese": "各",
+    "pinyin": "gè",
+    "meaning": "각각, 각자",
+    "example_zh": "各位同学，请各自完成这道题。",
+    "example_ko": "여러분, 각자 이 문제를 풀어주세요.",
+    "example_pinyin": "gè wèi tóng xué ， qǐng gè zì wán chéng zhè dào tí 。"
+  },
+  {
+    "id": 449,
+    "chinese": "公里",
+    "pinyin": "gōng lǐ",
+    "meaning": "킬로미터",
+    "example_zh": "从这里到市中心大概有十公里。",
+    "example_ko": "여기서 시내까지 약 10킬로미터야.",
+    "example_pinyin": "cóng zhè lǐ dào shì zhōng xīn dà gài yǒu shí gōng lǐ 。"
+  },
+  {
+    "id": 450,
+    "chinese": "工具",
+    "pinyin": "gōng jù",
+    "meaning": "도구, 공구",
+    "example_zh": "修电脑需要专业的工具。",
+    "example_ko": "컴퓨터 수리하려면 전문 도구가 필요해.",
+    "example_pinyin": "xiū diàn nǎo xū yào zhuān yè de gōng jù 。"
+  },
+  {
+    "id": 451,
+    "chinese": "工资",
+    "pinyin": "gōng zī",
+    "meaning": "월급, 임금",
+    "example_zh": "他跳槽是因为新公司给的工资更高。",
+    "example_ko": "그가 이직한 건 새 회사 월급이 더 높아서야.",
+    "example_pinyin": "tā tiào cáo shì yīn wèi xīn gōng sī gěi de gōng zī gèng gāo 。"
+  },
+  {
+    "id": 452,
+    "chinese": "共同",
+    "pinyin": "gòng tóng",
+    "meaning": "공동으로, 함께",
+    "example_zh": "这个项目是由两家公司共同完成的。",
+    "example_ko": "이 프로젝트는 두 회사가 공동으로 완성한 거야.",
+    "example_pinyin": "zhè ge xiàng mù shì yóu liǎng jiā gōng sī gòng tóng wán chéng de 。"
+  },
+  {
+    "id": 453,
+    "chinese": "够",
+    "pinyin": "gòu",
+    "meaning": "충분하다, 족하다",
+    "example_zh": "食材够了，不用再买了。",
+    "example_ko": "재료가 충분해, 더 사지 않아도 돼.",
+    "example_pinyin": "shí cái gòu le ， bù yòng zài mǎi le 。"
+  },
+  {
+    "id": 454,
+    "chinese": "购物",
+    "pinyin": "gòu wù",
+    "meaning": "쇼핑",
+    "example_zh": "她每到周末就喜欢去商场购物。",
+    "example_ko": "그녀는 주말마다 쇼핑몰에 가서 쇼핑하는 걸 좋아해.",
+    "example_pinyin": "tā měi dào zhōu mò jiù xǐ huān qù shāng chǎng gòu wù 。"
+  },
+  {
+    "id": 455,
+    "chinese": "孤单",
+    "pinyin": "gū dān",
+    "meaning": "외롭다, 쓸쓸하다",
+    "example_zh": "一个人在外地生活，有时候会感到很孤单。",
+    "example_ko": "혼자 타지에서 생활하다 보면 가끔 너무 외로워.",
+    "example_pinyin": "yí gè rén zài wài dì shēng huó ， yǒu shí hòu huì gǎn dào hěn gū dān 。"
+  },
+  {
+    "id": 456,
+    "chinese": "估计",
+    "pinyin": "gū jì",
+    "meaning": "추정하다, 예상하다",
+    "example_zh": "我估计他今天不会来了。",
+    "example_ko": "오늘 그가 안 올 것 같아.",
+    "example_pinyin": "wǒ gū jì tā jīn tiān bú huì lái le 。"
+  },
+  {
+    "id": 457,
+    "chinese": "鼓励",
+    "pinyin": "gǔ lì",
+    "meaning": "격려하다",
+    "example_zh": "老师一直在鼓励我，让我有了自信。",
+    "example_ko": "선생님이 계속 격려해줘서 자신감이 생겼어.",
+    "example_pinyin": "lǎo shī yì zhí zài gǔ lì wǒ ， ràng wǒ yǒu le zì xìn 。"
+  },
+  {
+    "id": 458,
+    "chinese": "鼓掌",
+    "pinyin": "gǔ zhǎng",
+    "meaning": "박수치다",
+    "example_zh": "演出结束后，观众热烈鼓掌。",
+    "example_ko": "공연이 끝나고 관중들이 열렬하게 박수를 쳤어.",
+    "example_pinyin": "yǎn chū jié shù hòu ， guān zhòng rè liè gǔ zhǎng 。"
+  },
+  {
+    "id": 459,
+    "chinese": "顾客",
+    "pinyin": "gù kè",
+    "meaning": "고객, 손님",
+    "example_zh": "顾客就是上帝，要认真对待每一位顾客。",
+    "example_ko": "고객은 왕이야, 모든 고객을 성실하게 대해야 해.",
+    "example_pinyin": "gù kè jiù shì shàng dì ， yào rèn zhēn duì dài měi yī wèi gù kè 。"
+  },
+  {
+    "id": 460,
+    "chinese": "故意",
+    "pinyin": "gù yì",
+    "meaning": "일부러, 의도적으로",
+    "example_zh": "他故意没有接我的电话，肯定在生气。",
+    "example_ko": "그가 일부러 내 전화를 안 받은 거야, 분명 화난 거야.",
+    "example_pinyin": "tā gù yì méi yǒu jiē wǒ de diàn huà ， kěn dìng zài shēng qì 。"
+  },
+  {
+    "id": 461,
+    "chinese": "挂",
+    "pinyin": "guà",
+    "meaning": "걸다, (전화를) 끊다",
+    "example_zh": "把外套挂在门口的衣架上。",
+    "example_ko": "외투를 문 앞 옷걸이에 걸어.",
+    "example_pinyin": "bǎ wài tào guà zài mén kǒu de yī jià shàng 。"
+  },
+  {
+    "id": 462,
+    "chinese": "关键",
+    "pinyin": "guān jiàn",
+    "meaning": "핵심, 관건",
+    "example_zh": "学好中文的关键是每天坚持练习。",
+    "example_ko": "중국어를 잘 배우는 핵심은 매일 꾸준히 연습하는 거야.",
+    "example_pinyin": "xué hǎo zhōng wén de guān jiàn shì měi tiān jiān chí liàn xí 。"
+  },
+  {
+    "id": 463,
+    "chinese": "观众",
+    "pinyin": "guān zhòng",
+    "meaning": "관중, 시청자",
+    "example_zh": "这场演唱会吸引了几万名观众。",
+    "example_ko": "이 콘서트에 수만 명의 관중이 모였어.",
+    "example_pinyin": "zhè chǎng yǎn chàng huì xī yǐn le jǐ wàn míng guān zhòng 。"
+  },
+  {
+    "id": 464,
+    "chinese": "管理",
+    "pinyin": "guǎn lǐ",
+    "meaning": "관리하다",
+    "example_zh": "他负责管理公司的财务工作。",
+    "example_ko": "그는 회사 재무 업무 관리를 담당하고 있어.",
+    "example_pinyin": "tā fù zé guǎn lǐ gōng sī de cái wù gōng zuò 。"
+  },
+  {
+    "id": 465,
+    "chinese": "光",
+    "pinyin": "guāng",
+    "meaning": "빛, 빛나다",
+    "example_zh": "阳光很强，出门记得戴墨镜。",
+    "example_ko": "햇빛이 강하니까 나갈 때 선글라스 쓰는 거 잊지 마.",
+    "example_pinyin": "yáng guāng hěn qiáng ， chū mén jì de dài mò jìng 。"
+  },
+  {
+    "id": 466,
+    "chinese": "广播",
+    "pinyin": "guǎng bō",
+    "meaning": "방송하다, 방송",
+    "example_zh": "这首歌在广播里一直播，到处都能听到。",
+    "example_ko": "이 노래가 라디오에서 계속 나와서 어디서든 들려.",
+    "example_pinyin": "zhè shǒu gē zài guǎng bō lǐ yì zhí bō ， dào chù dōu néng tīng dào 。"
+  },
+  {
+    "id": 467,
+    "chinese": "广告",
+    "pinyin": "guǎng gào",
+    "meaning": "광고",
+    "example_zh": "这款手机的广告拍得很有创意。",
+    "example_ko": "이 핸드폰 광고 정말 창의적으로 만들었네.",
+    "example_pinyin": "zhè kuǎn shǒu jī de guǎng gào pāi dé hěn yǒu chuàng yì 。"
+  },
+  {
+    "id": 468,
+    "chinese": "逛",
+    "pinyin": "guàng",
+    "meaning": "돌아다니다, 구경하다",
+    "example_zh": "周末我们去街上逛了一下午。",
+    "example_ko": "주말에 거리를 오후 내내 돌아다녔어.",
+    "example_pinyin": "zhōu mò wǒ men qù jiē shàng guàng le yī xià wǔ 。"
+  },
+  {
+    "id": 469,
+    "chinese": "规定",
+    "pinyin": "guī dìng",
+    "meaning": "규정하다, 규정",
+    "example_zh": "公司规定上班时间是早上九点。",
+    "example_ko": "회사 규정상 출근 시간은 오전 9시야.",
+    "example_pinyin": "gōng sī guī dìng shàng bān shí jiān shì zǎo shàng jiǔ diǎn 。"
+  },
+  {
+    "id": 470,
+    "chinese": "国际",
+    "pinyin": "guó jì",
+    "meaning": "국제적",
+    "example_zh": "他去参加了一个国际学术会议。",
+    "example_ko": "그는 국제 학술 회의에 참가했어.",
+    "example_pinyin": "tā qù cān jiā le yí gè guó jì xué shù huì yì 。"
+  },
+  {
+    "id": 471,
+    "chinese": "果然",
+    "pinyin": "guǒ rán",
+    "meaning": "역시, 과연",
+    "example_zh": "果然不出我所料，他果然迟到了。",
+    "example_ko": "역시 예상대로 그가 지각했어.",
+    "example_pinyin": "guǒ rán bù chū wǒ suǒ liào ， tā guǒ rán chí dào le 。"
+  },
+  {
+    "id": 472,
+    "chinese": "过",
+    "pinyin": "guò",
+    "meaning": "지나가다, 건너다",
+    "example_zh": "过马路时要小心。",
+    "example_ko": "길을 건널 때 조심해야 해.",
+    "example_pinyin": "guò mǎ lù shí yào xiǎo xīn 。"
+  },
+  {
+    "id": 473,
+    "chinese": "过",
+    "pinyin": "guò",
+    "meaning": "~한 적이 있다",
+    "example_zh": "我去过北京。",
+    "example_ko": "나는 베이징에 가 본 적이 있어.",
+    "example_pinyin": "wǒ qù guò běi jīng 。"
+  },
+  {
+    "id": 474,
+    "chinese": "过程",
+    "pinyin": "guò chéng",
+    "meaning": "과정",
+    "example_zh": "学习的过程比结果更重要。",
+    "example_ko": "배우는 과정이 결과보다 더 중요해.",
+    "example_pinyin": "xué xí de guò chéng bǐ jié guǒ gèng zhòng yào 。"
+  },
+  {
+    "id": 475,
+    "chinese": "海洋",
+    "pinyin": "hǎi yáng",
+    "meaning": "바다, 해양",
+    "example_zh": "地球表面的大部分都是海洋。",
+    "example_ko": "지구 표면의 대부분은 바다야.",
+    "example_pinyin": "dì qiú biǎo miàn de dà bù fèn dōu shì hǎi yáng 。"
+  },
+  {
+    "id": 476,
+    "chinese": "害羞",
+    "pinyin": "hài xiū",
+    "meaning": "부끄러워하다, 수줍어하다",
+    "example_zh": "她很害羞，在陌生人面前不太说话。",
+    "example_ko": "그녀는 수줍음이 많아서 낯선 사람 앞에서는 말을 잘 안 해.",
+    "example_pinyin": "tā hěn hài xiū ， zài mò shēng rén miàn qián bù tài shuō huà 。"
+  },
+  {
+    "id": 477,
+    "chinese": "寒假",
+    "pinyin": "hán jià",
+    "meaning": "겨울방학",
+    "example_zh": "寒假期间，我打算去滑雪。",
+    "example_ko": "겨울방학 동안 스키 타러 갈 계획이야.",
+    "example_pinyin": "hán jià qī jiān ， wǒ dǎ suàn qù huá xuě 。"
+  },
+  {
+    "id": 478,
+    "chinese": "汗",
+    "pinyin": "hàn",
+    "meaning": "땀",
+    "example_zh": "运动了半个小时，出了很多汗。",
+    "example_ko": "30분 운동했더니 땀이 엄청 났어.",
+    "example_pinyin": "yùn dòng le bàn gè xiǎo shí ， chū le hěn duō hàn 。"
+  },
+  {
+    "id": 479,
+    "chinese": "航班",
+    "pinyin": "háng bān",
+    "meaning": "항공편",
+    "example_zh": "我的航班明天早上七点起飞。",
+    "example_ko": "내 항공편은 내일 아침 7시에 출발해.",
+    "example_pinyin": "wǒ de háng bān míng tiān zǎo shàng qī diǎn qǐ fēi 。"
+  },
+  {
+    "id": 480,
+    "chinese": "好处",
+    "pinyin": "hǎo chu",
+    "meaning": "장점, 이점",
+    "example_zh": "早睡早起对健康有很多好处。",
+    "example_ko": "일찍 자고 일찍 일어나는 게 건강에 좋은 점이 많아.",
+    "example_pinyin": "zǎo shuì zǎo qǐ duì jiàn kāng yǒu hěn duō hǎo chù 。"
+  },
+  {
+    "id": 481,
+    "chinese": "好像",
+    "pinyin": "hǎo xiàng",
+    "meaning": "~인 것 같다, ~처럼 보이다",
+    "example_zh": "他好像知道这件事，你看他的表情。",
+    "example_ko": "그가 이 일을 아는 것 같아, 그의 표정을 봐봐.",
+    "example_pinyin": "tā hǎo xiàng zhī dào zhè jiàn shì ， nǐ kàn tā de biǎo qíng 。"
+  },
+  {
+    "id": 482,
+    "chinese": "号码",
+    "pinyin": "hào mǎ",
+    "meaning": "번호",
+    "example_zh": "请告诉我你的手机号码。",
+    "example_ko": "핸드폰 번호 알려줘.",
+    "example_pinyin": "qǐng gào sù wǒ nǐ de shǒu jī hào mǎ 。"
+  },
+  {
+    "id": 483,
+    "chinese": "合格",
+    "pinyin": "hé gé",
+    "meaning": "합격하다, 기준에 맞다",
+    "example_zh": "产品经过检查，质量合格，可以出售。",
+    "example_ko": "제품이 검사를 통과해 품질이 합격 기준에 맞아서 판매할 수 있어.",
+    "example_pinyin": "chǎn pǐn jīng guò jiǎn chá ， zhì liàng hé gé ， kě yǐ chū shòu 。"
+  },
+  {
+    "id": 484,
+    "chinese": "合适",
+    "pinyin": "hé shì",
+    "meaning": "적합하다, 알맞다",
+    "example_zh": "这件衣服很合适，价格也不贵。",
+    "example_ko": "이 옷 잘 맞고 가격도 비싸지 않아.",
+    "example_pinyin": "zhè jiàn yī fú hěn hé shì ， jià gé yě bù guì 。"
+  },
+  {
+    "id": 485,
+    "chinese": "盒子",
+    "pinyin": "hé zi",
+    "meaning": "상자, 갑",
+    "example_zh": "把这些小东西放进盒子里保管好。",
+    "example_ko": "이 작은 물건들을 상자 안에 잘 보관해.",
+    "example_pinyin": "bǎ zhè xiē xiǎo dōng xī fàng jìn hé zi lǐ bǎo guǎn hǎo 。"
+  },
+  {
+    "id": 486,
+    "chinese": "猴子",
+    "pinyin": "hóu zi",
+    "meaning": "원숭이",
+    "example_zh": "动物园里的猴子很调皮，总爱抢东西。",
+    "example_ko": "동물원 원숭이는 장난꾸러기라 항상 물건을 빼앗으려 해.",
+    "example_pinyin": "dòng wù yuán lǐ de hóu zi hěn tiáo pí ， zǒng ài qiǎng dōng xī 。"
+  },
+  {
+    "id": 487,
+    "chinese": "厚",
+    "pinyin": "hòu",
+    "meaning": "두껍다",
+    "example_zh": "这本书很厚，要读很长时间。",
+    "example_ko": "이 책 두꺼워서 읽는 데 시간이 오래 걸려.",
+    "example_pinyin": "zhè běn shū hěn hòu ， yào dú hěn zhǎng shí jiān 。"
+  },
+  {
+    "id": 488,
+    "chinese": "后悔",
+    "pinyin": "hòu huǐ",
+    "meaning": "후회하다",
+    "example_zh": "当时没有好好学习，现在后悔了。",
+    "example_ko": "그때 열심히 공부 안 한 걸 지금 후회해.",
+    "example_pinyin": "dāng shí méi yǒu hǎo hǎo xué xí ， xiàn zài hòu huǐ le 。"
+  },
+  {
+    "id": 489,
+    "chinese": "后来",
+    "pinyin": "hòu lái",
+    "meaning": "나중에, 그 후에",
+    "example_zh": "他刚开始不适应，后来慢慢就习惯了。",
+    "example_ko": "처음에는 적응 못 했는데 나중에 천천히 익숙해졌어.",
+    "example_pinyin": "tā gāng kāi shǐ bù shì yīng ， hòu lái màn màn jiù xí guàn le 。"
+  },
+  {
+    "id": 490,
+    "chinese": "忽然",
+    "pinyin": "hū rán",
+    "meaning": "갑자기",
+    "example_zh": "忽然下起了大雨，我没带伞，全身都湿透了。",
+    "example_ko": "갑자기 폭우가 쏟아졌는데 우산을 안 챙겼더니 온몸이 다 젖었어.",
+    "example_pinyin": "hū rán xià qǐ le dà yǔ ， wǒ méi dài sǎn ， quán shēn dōu shī tòu le 。"
+  },
+  {
+    "id": 491,
+    "chinese": "互相",
+    "pinyin": "hù xiāng",
+    "meaning": "서로",
+    "example_zh": "好的团队成员会互相帮助、互相支持。",
+    "example_ko": "좋은 팀원들은 서로 돕고 서로 지지해.",
+    "example_pinyin": "hǎo de tuán duì chéng yuán huì hù xiāng bāng zhù 、 hù xiāng zhī chí 。"
+  },
+  {
+    "id": 492,
+    "chinese": "护士",
+    "pinyin": "hù shi",
+    "meaning": "간호사",
+    "example_zh": "护士每隔两个小时来检查一次病人的情况。",
+    "example_ko": "간호사가 두 시간마다 와서 환자 상태를 확인해.",
+    "example_pinyin": "hù shì měi gé liǎng gè xiǎo shí lái jiǎn chá yī cì bìng rén de qíng kuàng 。"
+  },
+  {
+    "id": 493,
+    "chinese": "怀疑",
+    "pinyin": "huái yí",
+    "meaning": "의심하다",
+    "example_zh": "我开始怀疑这件事不像表面看起来那么简单。",
+    "example_ko": "이 일이 겉보기처럼 그렇게 단순하지 않다는 의심이 들기 시작했어.",
+    "example_pinyin": "wǒ kāi shǐ huái yí zhè jiàn shì bù xiàng biǎo miàn kàn qǐ lái nà me jiǎn dān 。"
+  },
+  {
+    "id": 494,
+    "chinese": "回忆",
+    "pinyin": "huí yì",
+    "meaning": "회상하다, 추억",
+    "example_zh": "翻看老照片，回忆起了很多童年的事情。",
+    "example_ko": "옛날 사진을 보다가 어린 시절의 일들이 많이 떠올랐어.",
+    "example_pinyin": "fān kàn lǎo zhào piān ， huí yì qǐ le hěn duō tóng nián de shì qíng 。"
+  },
+  {
+    "id": 495,
+    "chinese": "活动",
+    "pinyin": "huó dòng",
+    "meaning": "활동하다, 행사",
+    "example_zh": "学校组织了一次户外活动，大家玩得很开心。",
+    "example_ko": "학교에서 야외 활동을 기획해서 다들 즐겁게 놀았어.",
+    "example_pinyin": "xué xiào zǔ zhī le yī cì hù wài huó dòng ， dà jiā wán dé hěn kāi xīn 。"
+  },
+  {
+    "id": 496,
+    "chinese": "活泼",
+    "pinyin": "huó po",
+    "meaning": "활발하다, 생기있다",
+    "example_zh": "她性格活泼，到哪都能交到朋友。",
+    "example_ko": "그녀는 성격이 활발해서 어디서든 친구를 사귀어.",
+    "example_pinyin": "tā xìng gé huó pō ， dào nǎ dōu néng jiāo dào péng yǒu 。"
+  },
+  {
+    "id": 497,
+    "chinese": "火",
+    "pinyin": "huǒ",
+    "meaning": "불, 화나다",
+    "example_zh": "炉子上的火还没关，快去关一下。",
+    "example_ko": "가스레인지 불 아직 안 껐어, 빨리 꺼.",
+    "example_pinyin": "lú zi shàng de huǒ hái méi guān ， kuài qù guān yī xià 。"
+  },
+  {
+    "id": 498,
+    "chinese": "获得",
+    "pinyin": "huò dé",
+    "meaning": "얻다, 획득하다",
+    "example_zh": "他通过自己的努力获得了奖学金。",
+    "example_ko": "그는 자신의 노력으로 장학금을 받았어.",
+    "example_pinyin": "tā tōng guò zì jǐ de nǔ lì huò dé le jiǎng xué jīn 。"
+  },
+  {
+    "id": 499,
+    "chinese": "基础",
+    "pinyin": "jī chǔ",
+    "meaning": "기초, 기반",
+    "example_zh": "打好语言基础很重要，别急着跳过基础阶段。",
+    "example_ko": "언어 기초를 탄탄히 다지는 게 중요해, 기초 단계를 서둘러 건너뛰지 마.",
+    "example_pinyin": "dǎ hǎo yǔ yán jī chǔ hěn zhòng yào ， bié jí zhe tiào guò jī chǔ jiē duàn 。"
+  },
+  {
+    "id": 500,
+    "chinese": "激动",
+    "pinyin": "jī dòng",
+    "meaning": "흥분하다, 격양되다",
+    "example_zh": "收到录取通知书的那一刻，他激动得说不出话来。",
+    "example_ko": "합격 통지서를 받은 그 순간 그는 너무 흥분해서 말을 못 했어.",
+    "example_pinyin": "shōu dào lù qǔ tōng zhī shū de nà yī kè ， tā jī dòng dé shuō bù chū huà lái 。"
+  },
+  {
+    "id": 501,
+    "chinese": "积极",
+    "pinyin": "jī jí",
+    "meaning": "적극적이다",
+    "example_zh": "他在课堂上非常积极，经常主动回答问题。",
+    "example_ko": "그는 수업 시간에 정말 적극적이어서 자주 먼저 나서서 질문에 대답해.",
+    "example_pinyin": "tā zài kè táng shàng fēi cháng jī jí ， jīng cháng zhǔ dòng huí dá wèn tí 。"
+  },
+  {
+    "id": 502,
+    "chinese": "积累",
+    "pinyin": "jī lěi",
+    "meaning": "쌓다, 축적하다",
+    "example_zh": "经验需要慢慢积累，不能急于求成。",
+    "example_ko": "경험은 천천히 쌓아야 해, 서두르면 안 돼.",
+    "example_pinyin": "jīng yàn xū yào màn màn jī lěi ， bù néng jí yú qiú chéng 。"
+  },
+  {
+    "id": 503,
+    "chinese": "极其",
+    "pinyin": "jí qí",
+    "meaning": "극도로, 대단히",
+    "example_zh": "这道题极其复杂，我花了两个小时才解出来。",
+    "example_ko": "이 문제가 극도로 복잡해서 두 시간이나 걸려서야 풀었어.",
+    "example_pinyin": "zhè dào tí jí qí fù zá ， wǒ huā le liǎng gè xiǎo shí cái jiě chū lái 。"
+  },
+  {
+    "id": 504,
+    "chinese": "即使",
+    "pinyin": "jí shǐ",
+    "meaning": "설령 ~이라 해도",
+    "example_zh": "即使失败了，也不要气馁，重新来过。",
+    "example_ko": "설령 실패하더라도 낙심하지 말고 다시 시작해.",
+    "example_pinyin": "jí shǐ shī bài le ， yě bú yào qì něi ， chóng xīn lái guò 。"
+  },
+  {
+    "id": 505,
+    "chinese": "及时",
+    "pinyin": "jí shí",
+    "meaning": "제때에, 즉시",
+    "example_zh": "发现问题要及时解决，不要拖延。",
+    "example_ko": "문제를 발견하면 제때 해결해야 해, 미루지 마.",
+    "example_pinyin": "fā xiàn wèn tí yào jí shí jiě jué ， bú yào tuō yán 。"
+  },
+  {
+    "id": 506,
+    "chinese": "集合",
+    "pinyin": "jí hé",
+    "meaning": "집합하다, 모이다",
+    "example_zh": "全体同学早上八点在学校门口集合。",
+    "example_ko": "전체 학생 아침 8시에 학교 입구에 집합해.",
+    "example_pinyin": "quán tǐ tóng xué zǎo shàng bā diǎn zài xué xiào mén kǒu jí hé 。"
+  },
+  {
+    "id": 507,
+    "chinese": "寄",
+    "pinyin": "jì",
+    "meaning": "부치다, 보내다",
+    "example_zh": "我给奶奶寄了一些家乡的特产。",
+    "example_ko": "할머니한테 고향 특산품을 좀 보냈어.",
+    "example_pinyin": "wǒ gěi nǎi nǎi jì le yī xiē jiā xiāng de tè chǎn 。"
+  },
+  {
+    "id": 508,
+    "chinese": "继续",
+    "pinyin": "jì xù",
+    "meaning": "계속하다",
+    "example_zh": "下雨了，但他继续跑步，没有停下来。",
+    "example_ko": "비가 왔지만 그는 달리기를 멈추지 않고 계속했어.",
+    "example_pinyin": "xià yǔ le ， dàn tā jì xù pǎo bù ， méi yǒu tíng xià lái 。"
+  },
+  {
+    "id": 509,
+    "chinese": "记者",
+    "pinyin": "jì zhě",
+    "meaning": "기자",
+    "example_zh": "记者采访了这位新当选的市长。",
+    "example_ko": "기자가 새로 당선된 시장을 인터뷰했어.",
+    "example_pinyin": "jì zhě cǎi fǎng le zhè wèi xīn dāng xuǎn de shì zhǎng 。"
+  },
+  {
+    "id": 510,
+    "chinese": "计划",
+    "pinyin": "jì huà",
+    "meaning": "계획하다, 계획",
+    "example_zh": "这次旅行我提前做好了详细的计划。",
+    "example_ko": "이번 여행은 미리 자세한 계획을 잘 세워뒀어.",
+    "example_pinyin": "zhè cì lǚ xíng wǒ tí qián zuò hǎo le xiáng xì de jì huà 。"
+  },
+  {
+    "id": 511,
+    "chinese": "技术",
+    "pinyin": "jì shù",
+    "meaning": "기술",
+    "example_zh": "他有丰富的工作经验和专业技术。",
+    "example_ko": "그는 풍부한 업무 경험과 전문 기술을 갖추고 있어.",
+    "example_pinyin": "tā yǒu fēng fù de gōng zuò jīng yàn hé zhuān yè jì shù 。"
+  },
+  {
+    "id": 512,
+    "chinese": "既然",
+    "pinyin": "jì rán",
+    "meaning": "이왕 ~인 이상",
+    "example_zh": "既然来了，就好好玩吧，别想那么多。",
+    "example_ko": "이왕 왔으니 신나게 놀자, 너무 많이 생각하지 마.",
+    "example_pinyin": "jì rán lái le ， jiù hǎo hǎo wán ba ， bié xiǎng nà me duō 。"
+  },
+  {
+    "id": 513,
+    "chinese": "家具",
+    "pinyin": "jiā jù",
+    "meaning": "가구",
+    "example_zh": "搬进新家后，我们买了很多新家具。",
+    "example_ko": "새집에 이사하고 나서 새 가구를 많이 샀어.",
+    "example_pinyin": "bān jìn xīn jiā hòu ， wǒ men mǎi le hěn duō xīn jiā jù 。"
+  },
+  {
+    "id": 514,
+    "chinese": "加班",
+    "pinyin": "jiā bān",
+    "meaning": "야근하다",
+    "example_zh": "这个月项目赶，他几乎每天都在加班。",
+    "example_ko": "이번 달 프로젝트가 급해서 그는 거의 매일 야근해.",
+    "example_pinyin": "zhè ge yuè xiàng mù gǎn ， tā jī hū měi tiān dōu zài jiā bān 。"
+  },
+  {
+    "id": 515,
+    "chinese": "加油站",
+    "pinyin": "jiā yóu zhàn",
+    "meaning": "주유소",
+    "example_zh": "油快没了，找个加油站加油吧。",
+    "example_ko": "기름이 거의 없어, 주유소 찾아서 넣자.",
+    "example_pinyin": "yóu kuài méi le ， zhǎo gè jiā yóu zhàn jiā yóu ba 。"
+  },
+  {
+    "id": 516,
+    "chinese": "假",
+    "pinyin": "jiǎ",
+    "meaning": "가짜, 거짓",
+    "example_zh": "网上有很多假新闻，要学会辨别真假。",
+    "example_ko": "인터넷에 가짜 뉴스가 많아서 진짜와 가짜를 구별하는 법을 배워야 해.",
+    "example_pinyin": "wǎng shàng yǒu hěn duō jiǎ xīn wén ， yào xué huì biàn bié zhēn jiǎ 。"
+  },
+  {
+    "id": 517,
+    "chinese": "价格",
+    "pinyin": "jià gé",
+    "meaning": "낮추다, 줄이다",
+    "example_zh": "商家节假日降低价格，吸引顾客购物。",
+    "example_ko": "상인들이 명절에 가격을 낮춰서 고객의 쇼핑을 유도해.",
+    "example_pinyin": "shāng jiā jié jià rì jiàng dī jià gé ， xī yǐn gù kè gòu wù 。"
+  },
+  {
+    "id": 518,
+    "chinese": "坚持",
+    "pinyin": "jiān chí",
+    "meaning": "다이어트하다",
+    "example_zh": "她最近在减肥，每天控制饮食，也坚持运动。",
+    "example_ko": "그녀는 요즘 다이어트 중이라 매일 식단 조절하고 운동도 꾸준히 해.",
+    "example_pinyin": "tā zuì jìn zài jiǎn féi ， měi tiān kòng zhì yǐn shí ， yě jiān chí yùn dòng 。"
+  },
+  {
+    "id": 519,
+    "chinese": "减肥",
+    "pinyin": "jiǎn féi",
+    "meaning": "살을 빼다, 다이어트하다",
+    "example_zh": "他每天跑步减肥。",
+    "example_ko": "그는 살을 빼려고 매일 달려.",
+    "example_pinyin": "tā měi tiān pǎo bù jiǎn féi 。"
+  },
+  {
+    "id": 520,
+    "chinese": "减少",
+    "pinyin": "jiǎn shǎo",
+    "meaning": "줄이다, 감소하다",
+    "example_zh": "为了环保，我们应该减少使用一次性塑料。",
+    "example_ko": "환경 보호를 위해 일회용 플라스틱 사용을 줄여야 해.",
+    "example_pinyin": "wèi le huán bǎo ， wǒ men yīng gāi jiǎn shǎo shǐ yòng yí cì xìng sù liào 。"
+  },
+  {
+    "id": 521,
+    "chinese": "将来",
+    "pinyin": "jiāng lái",
+    "meaning": "앞으로, 미래에",
+    "example_zh": "你将来有什么打算？想做什么工作？",
+    "example_ko": "앞으로 어떤 계획 있어? 어떤 일을 하고 싶어?",
+    "example_pinyin": "nǐ jiāng lái yǒu shén me dǎ suàn ？ xiǎng zuò shén me gōng zuò ？"
+  },
+  {
+    "id": 522,
+    "chinese": "奖金",
+    "pinyin": "jiǎng jīn",
+    "meaning": "보너스, 상금",
+    "example_zh": "这个月业绩不错，大家都拿到了奖金。",
+    "example_ko": "이번 달 실적이 좋아서 모두 보너스를 받았어.",
+    "example_pinyin": "zhè ge yuè yè jì bù cuò ， dà jiā dōu ná dào le jiǎng jīn 。"
+  },
+  {
+    "id": 523,
+    "chinese": "降低",
+    "pinyin": "jiàng dī",
+    "meaning": "낮추다",
+    "example_zh": "请把声音降低一点。",
+    "example_ko": "소리를 조금 낮춰 주세요.",
+    "example_pinyin": "qǐng bǎ shēng yīn jiàng dī yì diǎn 。"
+  },
+  {
+    "id": 524,
+    "chinese": "交",
+    "pinyin": "jiāo",
+    "meaning": "내다, 제출하다, 교류하다",
+    "example_zh": "作业要在截止日期前交给老师。",
+    "example_ko": "숙제는 마감일 전에 선생님께 제출해야 해.",
+    "example_pinyin": "zuò yè yào zài jié zhǐ rì qī qián jiāo gěi lǎo shī 。"
+  },
+  {
+    "id": 525,
+    "chinese": "交流",
+    "pinyin": "jiāo liú",
+    "meaning": "교류하다, 소통하다",
+    "example_zh": "多和外国朋友交流，对提高语言能力很有帮助。",
+    "example_ko": "외국 친구들과 많이 교류하면 언어 능력 향상에 도움이 많이 돼.",
+    "example_pinyin": "duō hé wài guó péng yǒu jiāo liú ， duì tí gāo yǔ yán néng lì hěn yǒu bāng zhù 。"
+  },
+  {
+    "id": 526,
+    "chinese": "交通",
+    "pinyin": "jiāo tōng",
+    "meaning": "교통",
+    "example_zh": "北京的交通很发达，出行很方便。",
+    "example_ko": "베이징은 교통이 잘 발달되어 있어서 이동이 편해.",
+    "example_pinyin": "běi jīng de jiāo tōng hěn fā dá ， chū xíng hěn fāng biàn 。"
+  },
+  {
+    "id": 527,
+    "chinese": "骄傲",
+    "pinyin": "jiāo ào",
+    "meaning": "자랑스럽다, 거만하다",
+    "example_zh": "父母为孩子取得的成绩感到骄傲。",
+    "example_ko": "부모님이 아이가 거둔 성과를 자랑스러워해.",
+    "example_pinyin": "fù mǔ wèi hái zi qǔ dé de chéng jì gǎn dào jiāo ào 。"
+  },
+  {
+    "id": 528,
+    "chinese": "饺子",
+    "pinyin": "jiǎo zi",
+    "meaning": "만두, 교자",
+    "example_zh": "春节的时候，全家人一起包饺子。",
+    "example_ko": "춘절에 온 가족이 함께 만두를 빚어.",
+    "example_pinyin": "chūn jié de shí hòu ， quán jiā rén yì qǐ bāo jiǎo zi 。"
+  },
+  {
+    "id": 529,
+    "chinese": "教授",
+    "pinyin": "jiào shòu",
+    "meaning": "교수",
+    "example_zh": "他是一位著名的大学教授，研究历史很有成就。",
+    "example_ko": "그는 유명한 대학 교수로 역사 연구에 많은 업적을 남겼어.",
+    "example_pinyin": "tā shì yī wèi zhù míng de dà xué jiào shòu ， yán jiū lì shǐ hěn yǒu chéng jiù 。"
+  },
+  {
+    "id": 530,
+    "chinese": "教育",
+    "pinyin": "jiào yù",
+    "meaning": "교육하다, 교육",
+    "example_zh": "良好的家庭教育对孩子的成长非常重要。",
+    "example_ko": "좋은 가정교육은 아이의 성장에 정말 중요해.",
+    "example_pinyin": "liáng hǎo de jiā tíng jiào yù duì hái zi de chéng zhǎng fēi cháng zhòng yào 。"
+  },
+  {
+    "id": 531,
+    "chinese": "接受",
+    "pinyin": "jiē shòu",
+    "meaning": "받아들이다",
+    "example_zh": "他虚心接受了批评，并努力改正。",
+    "example_ko": "그는 겸손하게 비판을 받아들이고 열심히 고치려 했어.",
+    "example_pinyin": "tā xū xīn jiē shòu le pī píng ， bìng nǔ lì gǎi zhèng 。"
+  },
+  {
+    "id": 532,
+    "chinese": "节约",
+    "pinyin": "jié yuē",
+    "meaning": "절약하다",
+    "example_zh": "节约用水是每个人的责任。",
+    "example_ko": "물을 절약하는 건 모든 사람의 책임이야.",
+    "example_pinyin": "jié yuē yòng shuǐ shì měi gè rén de zé rèn 。"
+  },
+  {
+    "id": 533,
+    "chinese": "结果",
+    "pinyin": "jié guǒ",
+    "meaning": "결과",
+    "example_zh": "不管结果如何，重要的是你尽力了。",
+    "example_ko": "결과가 어떻든 중요한 건 최선을 다했다는 거야.",
+    "example_pinyin": "bù guǎn jié guǒ rú hé ， zhòng yào de shì nǐ jìn lì le 。"
+  },
+  {
+    "id": 534,
+    "chinese": "解释",
+    "pinyin": "jiě shì",
+    "meaning": "설명하다",
+    "example_zh": "能解释一下这个词是什么意思吗？",
+    "example_ko": "이 단어가 무슨 뜻인지 설명해줄 수 있어?",
+    "example_pinyin": "néng jiě shì yī xià zhè ge cí shì shén me yì si ma ？"
+  },
+  {
+    "id": 535,
+    "chinese": "紧张",
+    "pinyin": "jǐn zhāng",
+    "meaning": "긴장하다",
+    "example_zh": "第一次上台演讲，我紧张得手心都在出汗。",
+    "example_ko": "처음으로 무대에서 발표하니까 너무 긴장해서 손바닥에 땀이 났어.",
+    "example_pinyin": "dì yī cì shàng tái yǎn jiǎng ， wǒ jǐn zhāng dé shǒu xīn dōu zài chū hàn 。"
+  },
+  {
+    "id": 536,
+    "chinese": "尽管",
+    "pinyin": "jǐn guǎn",
+    "meaning": "비록 ~이지만",
+    "example_zh": "尽管他没有专业背景，还是通过了面试。",
+    "example_ko": "비록 전문적인 배경은 없지만 면접을 통과했어.",
+    "example_pinyin": "jǐn guǎn tā méi yǒu zhuān yè bèi jǐng ， hái shì tōng guò le miàn shì 。"
+  },
+  {
+    "id": 537,
+    "chinese": "进行",
+    "pinyin": "jìn xíng",
+    "meaning": "진행하다",
+    "example_zh": "会议正在进行中，请大家保持安静。",
+    "example_ko": "회의가 진행 중이니 모두 조용히 해주세요.",
+    "example_pinyin": "huì yì zhèng zài jìn xíng zhōng ， qǐng dà jiā bǎo chí ān jìng 。"
+  },
+  {
+    "id": 538,
+    "chinese": "禁止",
+    "pinyin": "jìn zhǐ",
+    "meaning": "금지하다",
+    "example_zh": "医生说他的病情很严重，禁止他喝酒。",
+    "example_ko": "의사가 그의 상태가 심각하다며 술을 금지했어.",
+    "example_pinyin": "yī shēng shuō tā de bìng qíng hěn yán zhòng ， jìn zhǐ tā hē jiǔ 。"
+  },
+  {
+    "id": 539,
+    "chinese": "精彩",
+    "pinyin": "jīng cǎi",
+    "meaning": "훌륭하다, 멋지다",
+    "example_zh": "这场演出太精彩了，观众都起立鼓掌。",
+    "example_ko": "이 공연 너무 훌륭해서 관중들이 다 일어나서 박수를 쳤어.",
+    "example_pinyin": "zhè chǎng yǎn chū tài jīng cǎi le ， guān zhòng dōu qǐ lì gǔ zhǎng 。"
+  },
+  {
+    "id": 540,
+    "chinese": "精神",
+    "pinyin": "jīng shén",
+    "meaning": "정신, 기운",
+    "example_zh": "今天睡眠不足，整个人都没有精神。",
+    "example_ko": "오늘 잠이 부족해서 기운이 하나도 없어.",
+    "example_pinyin": "jīn tiān shuì mián bù zú ， zhěng gè rén dōu méi yǒu jīng shén 。"
+  },
+  {
+    "id": 541,
+    "chinese": "经济",
+    "pinyin": "jīng jì",
+    "meaning": "경제",
+    "example_zh": "近年来，中国的经济发展非常迅速。",
+    "example_ko": "최근 몇 년간 중국의 경제 발전이 매우 빠르게 이루어졌어.",
+    "example_pinyin": "jìn nián lái ， zhōng guó de jīng jì fā zhǎn fēi cháng xùn sù 。"
+  },
+  {
+    "id": 542,
+    "chinese": "经历",
+    "pinyin": "jīng lì",
+    "meaning": "경험, 겪다",
+    "example_zh": "他有丰富的海外生活经历，非常开阔眼界。",
+    "example_ko": "그는 해외 생활 경험이 풍부해서 시야가 많이 넓어졌어.",
+    "example_pinyin": "tā yǒu fēng fù de hǎi wài shēng huó jīng lì ， fēi cháng kāi kuò yǎn jiè 。"
+  },
+  {
+    "id": 543,
+    "chinese": "经验",
+    "pinyin": "jīng yàn",
+    "meaning": "경험, 노하우",
+    "example_zh": "工作了十年，他积累了丰富的工作经验。",
+    "example_ko": "10년 일하면서 풍부한 업무 경험을 쌓았어.",
+    "example_pinyin": "gōng zuò le shí nián ， tā jī lěi le fēng fù de gōng zuò jīng yàn 。"
+  },
+  {
+    "id": 544,
+    "chinese": "京剧",
+    "pinyin": "Jīng jù",
+    "meaning": "경극",
+    "example_zh": "京剧是中国传统艺术的代表之一。",
+    "example_ko": "경극은 중국 전통 예술의 대표 중 하나야.",
+    "example_pinyin": "jīng jù shì zhōng guó chuán tǒng yì shù de dài biǎo zhī yī 。"
+  },
+  {
+    "id": 545,
+    "chinese": "警察",
+    "pinyin": "jǐng chá",
+    "meaning": "경찰",
+    "example_zh": "发现可疑人物，要立刻联系警察。",
+    "example_ko": "수상한 사람을 발견하면 즉시 경찰에 연락해야 해.",
+    "example_pinyin": "fā xiàn kě yí rén wù ， yào lì kè lián xì jǐng chá 。"
+  },
+  {
+    "id": 546,
+    "chinese": "竟然",
+    "pinyin": "jìng rán",
+    "meaning": "뜻밖에, 놀랍게도",
+    "example_zh": "他竟然一次就通过了最难的考试！",
+    "example_ko": "그가 뜻밖에도 한 번에 가장 어려운 시험을 통과했어!",
+    "example_pinyin": "tā jìng rán yī cì jiù tōng guò le zuì nán de kǎo shì ！"
+  },
+  {
+    "id": 547,
+    "chinese": "竞争",
+    "pinyin": "jìng zhēng",
+    "meaning": "경쟁하다",
+    "example_zh": "市场竞争越来越激烈，企业必须不断创新。",
+    "example_ko": "시장 경쟁이 갈수록 치열해져서 기업들은 끊임없이 혁신해야 해.",
+    "example_pinyin": "shì chǎng jìng zhēng yuè lái yuè jī liè ， qǐ yè bì xū bù duàn chuàng xīn 。"
+  },
+  {
+    "id": 548,
+    "chinese": "镜子",
+    "pinyin": "jìng zi",
+    "meaning": "거울",
+    "example_zh": "每天出门前照一下镜子，检查一下仪容。",
+    "example_ko": "매일 나가기 전에 거울로 모습을 확인해.",
+    "example_pinyin": "měi tiān chū mén qián zhào yī xià jìng zi ， jiǎn chá yī xià yí róng 。"
+  },
+  {
+    "id": 549,
+    "chinese": "究竟",
+    "pinyin": "jiū jìng",
+    "meaning": "도대체, 결국",
+    "example_zh": "这件事究竟是怎么发生的？",
+    "example_ko": "이 일이 도대체 어떻게 된 거야?",
+    "example_pinyin": "zhè jiàn shì jiū jìng shì zěn me fā shēng de ？"
+  },
+  {
+    "id": 550,
+    "chinese": "举办",
+    "pinyin": "jǔ bàn",
+    "meaning": "개최하다, 열다",
+    "example_zh": "学校每年都会举办一次运动会。",
+    "example_ko": "학교에서 매년 한 번씩 운동회를 개최해.",
+    "example_pinyin": "xué xiào měi nián dū huì jǔ bàn yī cì yùn dòng huì 。"
+  },
+  {
+    "id": 551,
+    "chinese": "拒绝",
+    "pinyin": "jù jué",
+    "meaning": "거절하다",
+    "example_zh": "他拒绝了那份高薪工作，因为要照顾家人。",
+    "example_ko": "그는 가족을 돌봐야 해서 그 고액 연봉 일을 거절했어.",
+    "example_pinyin": "tā jù jué le nà fèn gāo xīn gōng zuò ， yīn wèi yào zhào gù jiā rén 。"
+  },
+  {
+    "id": 552,
+    "chinese": "距离",
+    "pinyin": "jù lí",
+    "meaning": "거리, 간격",
+    "example_zh": "这两个城市之间的距离大约是三百公里。",
+    "example_ko": "이 두 도시 사이의 거리는 약 300킬로미터야.",
+    "example_pinyin": "zhè liǎng gè chéng shì zhī jiān de jù lí dà yuē shì sān bǎi gōng lǐ 。"
+  },
+  {
+    "id": 553,
+    "chinese": "开玩笑",
+    "pinyin": "kāi wán xiào",
+    "meaning": "농담하다",
+    "example_zh": "他爱开玩笑，经常把大家逗得哈哈大笑。",
+    "example_ko": "그는 농담하는 걸 좋아해서 자주 모두를 배꼽 잡게 해.",
+    "example_pinyin": "tā ài kāi wán xiào ， jīng cháng bǎ dà jiā dòu dé hā hā dà xiào 。"
+  },
+  {
+    "id": 554,
+    "chinese": "看法",
+    "pinyin": "kàn fǎ",
+    "meaning": "견해, 생각",
+    "example_zh": "大家对这件事的看法不同，讨论得很热烈。",
+    "example_ko": "이 일에 대한 모두의 견해가 달라서 토론이 아주 활발해.",
+    "example_pinyin": "dà jiā duì zhè jiàn shì de kàn fǎ bù tóng ， tǎo lùn dé hěn rè liè 。"
+  },
+  {
+    "id": 555,
+    "chinese": "考虑",
+    "pinyin": "kǎo lǜ",
+    "meaning": "고려하다",
+    "example_zh": "换工作之前要仔细考虑清楚。",
+    "example_ko": "이직하기 전에 신중하게 잘 고려해야 해.",
+    "example_pinyin": "huàn gōng zuò zhī qián yào zǐ xì kǎo lǜ qīng chǔ 。"
+  },
+  {
+    "id": 556,
+    "chinese": "棵",
+    "pinyin": "kē",
+    "meaning": "그루 (나무 양사)",
+    "example_zh": "公园里种了一棵很大的樱花树。",
+    "example_ko": "공원에 큰 벚나무 한 그루를 심었어.",
+    "example_pinyin": "gōng yuán lǐ zhǒng le yī kē hěn dà de yīng huā shù 。"
+  },
+  {
+    "id": 557,
+    "chinese": "科学",
+    "pinyin": "kē xué",
+    "meaning": "과학",
+    "example_zh": "他从小就对科学很感兴趣，长大后成了科学家。",
+    "example_ko": "그는 어릴 때부터 과학에 관심이 많아서 커서 과학자가 됐어.",
+    "example_pinyin": "tā cóng xiǎo jiù duì kē xué hěn gǎn xìng qù ， zhǎng dà hòu chéng le kē xué jiā 。"
+  },
+  {
+    "id": 558,
+    "chinese": "咳嗽",
+    "pinyin": "ké sou",
+    "meaning": "기침하다",
+    "example_zh": "我最近感冒了，一直在咳嗽。",
+    "example_ko": "요즘 감기에 걸려서 계속 기침을 해.",
+    "example_pinyin": "wǒ zuì jìn gǎn mào le ， yì zhí zài ké sòu 。"
+  },
+  {
+    "id": 559,
+    "chinese": "可怜",
+    "pinyin": "kě lián",
+    "meaning": "불쌍하다",
+    "example_zh": "那只流浪狗太可怜了，我给了它一些食物。",
+    "example_ko": "그 유기견이 너무 불쌍해서 먹을 것을 좀 줬어.",
+    "example_pinyin": "nà zhǐ liú làng gǒu tài kě lián le ， wǒ gěi le tā yī xiē shí wù 。"
+  },
+  {
+    "id": 560,
+    "chinese": "可是",
+    "pinyin": "kě shì",
+    "meaning": "하지만, 그러나",
+    "example_zh": "他很努力，可是成绩还是不理想。",
+    "example_ko": "그는 열심히 하는데 성적이 여전히 만족스럽지 않아.",
+    "example_pinyin": "tā hěn nǔ lì ， kě shì chéng jì hái shì bù lǐ xiǎng 。"
+  },
+  {
+    "id": 561,
+    "chinese": "可惜",
+    "pinyin": "kě xī",
+    "meaning": "아쉽다, 안타깝다",
+    "example_zh": "可惜他没有参加这次比赛，不然肯定能赢。",
+    "example_ko": "안타깝게도 그가 이번 대회에 참가하지 않았어, 아니었으면 틀림없이 이겼을 텐데.",
+    "example_pinyin": "kě xī tā méi yǒu cān jiā zhè cì bǐ sài ， bù rán kěn dìng néng yíng 。"
+  },
+  {
+    "id": 562,
+    "chinese": "肯定",
+    "pinyin": "kěn dìng",
+    "meaning": "확실히, 틀림없이",
+    "example_zh": "我肯定昨天把钥匙放在桌上了，怎么找不到？",
+    "example_ko": "어제 분명히 열쇠를 책상 위에 뒀는데 왜 없지?",
+    "example_pinyin": "wǒ kěn dìng zuó tiān bǎ yào shi fàng zài zhuō shàng le ， zěn me zhǎo bú dào ？"
+  },
+  {
+    "id": 563,
+    "chinese": "空气",
+    "pinyin": "kōng qì",
+    "meaning": "공기",
+    "example_zh": "这里的空气很清新，让人感觉心情舒畅。",
+    "example_ko": "여기 공기가 맑아서 기분이 상쾌해.",
+    "example_pinyin": "zhè lǐ de kōng qì hěn qīng xīn ， ràng rén gǎn jué xīn qíng shū chàng 。"
+  },
+  {
+    "id": 564,
+    "chinese": "恐怕",
+    "pinyin": "kǒng pà",
+    "meaning": "아마도 ~일 것 같다 (우려)",
+    "example_zh": "恐怕今天来不了，我临时有事。",
+    "example_ko": "아마 오늘 못 올 것 같아, 갑자기 일이 생겼어.",
+    "example_pinyin": "kǒng pà jīn tiān lái bù liǎo ， wǒ lín shí yǒu shì 。"
+  },
+  {
+    "id": 565,
+    "chinese": "苦",
+    "pinyin": "kǔ",
+    "meaning": "쓰다, 고생스럽다",
+    "example_zh": "这段时间工作太苦了，但撑过去就好了。",
+    "example_ko": "요즘 일이 너무 힘들지만 버티면 괜찮아질 거야.",
+    "example_pinyin": "zhè duàn shí jiān gōng zuò tài kǔ le ， dàn chēng guò qù jiù hǎo le 。"
+  },
+  {
+    "id": 566,
+    "chinese": "宽",
+    "pinyin": "kuān",
+    "meaning": "넓다",
+    "example_zh": "这条路很宽，两辆大卡车可以同时通过。",
+    "example_ko": "이 도로 폭이 넓어서 큰 트럭 두 대가 동시에 지나갈 수 있어.",
+    "example_pinyin": "zhè tiáo lù hěn kuān ， liǎng liàng dà kǎ chē kě yǐ tóng shí tōng guò 。"
+  },
+  {
+    "id": 567,
+    "chinese": "困",
+    "pinyin": "kùn",
+    "meaning": "졸리다",
+    "example_zh": "开会时他太困了，差点睡着了。",
+    "example_ko": "회의할 때 너무 졸려서 하마터면 잠들 뻔했어.",
+    "example_pinyin": "kāi huì shí tā tài kùn le ， chà diǎn shuì zháo le 。"
+  },
+  {
+    "id": 568,
+    "chinese": "困难",
+    "pinyin": "kùn nan",
+    "meaning": "어렵다, 힘들다",
+    "example_zh": "创业初期非常困难，但他坚持下来了。",
+    "example_ko": "창업 초기에는 정말 힘들었지만 그는 버텨냈어.",
+    "example_pinyin": "chuàng yè chū qī fēi cháng kùn nán ， dàn tā jiān chí xià lái le 。"
+  },
+  {
+    "id": 569,
+    "chinese": "扩大",
+    "pinyin": "kuò dà",
+    "meaning": "확대하다",
+    "example_zh": "公司计划扩大规模，增加招聘人数。",
+    "example_ko": "회사가 규모를 확대하고 채용 인원을 늘릴 계획이야.",
+    "example_pinyin": "gōng sī jì huà kuò dà guī mó ， zēng jiā zhāo pìn rén shù 。"
+  },
+  {
+    "id": 570,
+    "chinese": "拉",
+    "pinyin": "lā",
+    "meaning": "당기다, (악기를) 켜다",
+    "example_zh": "拉一下这根绳子，门就开了。",
+    "example_ko": "이 줄을 당기면 문이 열려.",
+    "example_pinyin": "lā yī xià zhè gēn shéng zi ， mén jiù kāi le 。"
+  },
+  {
+    "id": 571,
+    "chinese": "垃圾桶",
+    "pinyin": "lā jī tǒng",
+    "meaning": "쓰레기통",
+    "example_zh": "垃圾要扔进垃圾桶，不能随地乱扔。",
+    "example_ko": "쓰레기는 쓰레기통에 버려야 해, 아무 데나 버리면 안 돼.",
+    "example_pinyin": "lā jī yào rēng jìn lā jī tǒng ， bù néng suí dì luàn rēng 。"
+  },
+  {
+    "id": 572,
+    "chinese": "辣",
+    "pinyin": "là",
+    "meaning": "맵다",
+    "example_zh": "四川菜非常辣，你能吃辣吗？",
+    "example_ko": "쓰촨 요리는 정말 매워, 매운 거 먹을 수 있어?",
+    "example_pinyin": "sì chuān cài fēi cháng là ， nǐ néng chī là ma ？"
+  },
+  {
+    "id": 573,
+    "chinese": "来不及",
+    "pinyin": "lái bu jí",
+    "meaning": "시간이 없다, 미처 ~못하다",
+    "example_zh": "来不及解释了，跟我走吧！",
+    "example_ko": "설명할 시간 없어, 나랑 같이 가!",
+    "example_pinyin": "lái bù jí jiě shì le ， gēn wǒ zǒu ba ！"
+  },
+  {
+    "id": 574,
+    "chinese": "来得及",
+    "pinyin": "lái de jí",
+    "meaning": "시간이 충분하다, 늦지 않았다",
+    "example_zh": "离开车还有二十分钟，来得及的，别慌。",
+    "example_ko": "기차 출발까지 20분 남았어, 시간 충분해, 당황하지 마.",
+    "example_pinyin": "lí kāi chē hái yǒu èr shí fēn zhōng ， lái de jí de ， bié huāng 。"
+  },
+  {
+    "id": 575,
+    "chinese": "懒",
+    "pinyin": "lǎn",
+    "meaning": "게으르다",
+    "example_zh": "他太懒了，周末整天躺在床上刷手机。",
+    "example_ko": "그는 너무 게을러서 주말에 하루 종일 침대에 누워 핸드폰만 봐.",
+    "example_pinyin": "tā tài lǎn le ， zhōu mò zhěng tiān tǎng zài chuáng shàng shuā shǒu jī 。"
+  },
+  {
+    "id": 576,
+    "chinese": "浪费",
+    "pinyin": "làng fèi",
+    "meaning": "낭비하다",
+    "example_zh": "不要浪费食物，吃多少拿多少。",
+    "example_ko": "음식 낭비하지 마, 먹을 만큼만 가져가.",
+    "example_pinyin": "bú yào làng fèi shí wù ， chī duō shǎo ná duō shǎo 。"
+  },
+  {
+    "id": 577,
+    "chinese": "浪漫",
+    "pinyin": "làng màn",
+    "meaning": "낭만적이다, 로맨틱하다",
+    "example_zh": "他用烛光晚餐庆祝结婚纪念日，很浪漫。",
+    "example_ko": "그는 결혼 기념일을 촛불 만찬으로 기념했는데 정말 로맨틱했어.",
+    "example_pinyin": "tā yòng zhú guāng wǎn cān qìng zhù jié hūn jì niàn rì ， hěn làng màn 。"
+  },
+  {
+    "id": 578,
+    "chinese": "老虎",
+    "pinyin": "lǎo hǔ",
+    "meaning": "호랑이",
+    "example_zh": "老虎是森林中的王者，是最危险的动物之一。",
+    "example_ko": "호랑이는 숲의 왕으로 가장 위험한 동물 중 하나야.",
+    "example_pinyin": "lǎo hǔ shì sēn lín zhōng de wáng zhě ， shì zuì wēi xiǎn de dòng wù zhī yī 。"
+  },
+  {
+    "id": 579,
+    "chinese": "冷静",
+    "pinyin": "lěng jìng",
+    "meaning": "침착하다, 냉정하다",
+    "example_zh": "遇到危险要冷静处理，不要慌乱。",
+    "example_ko": "위험한 상황을 만나면 침착하게 대처해야 해, 당황하지 마.",
+    "example_pinyin": "yù dào wēi xiǎn yào lěng jìng chǔ lǐ ， bú yào huāng luàn 。"
+  },
+  {
+    "id": 580,
+    "chinese": "礼貌",
+    "pinyin": "lǐ mào",
+    "meaning": "예의, 예절",
+    "example_zh": "他很有礼貌，每次见到长辈都会主动打招呼。",
+    "example_ko": "그는 예의가 바르고 어른을 만날 때마다 먼저 인사를 해.",
+    "example_pinyin": "tā hěn yǒu lǐ mào ， měi cì jiàn dào zhǎng bèi dū huì zhǔ dòng dǎ zhāo hū 。"
+  },
+  {
+    "id": 581,
+    "chinese": "理发",
+    "pinyin": "lǐ fà",
+    "meaning": "이발하다",
+    "example_zh": "我头发长了，该去理发了。",
+    "example_ko": "머리카락이 길어졌어, 이발하러 가야겠다.",
+    "example_pinyin": "wǒ tóu fà zhǎng le ， gāi qù lǐ fà le 。"
+  },
+  {
+    "id": 582,
+    "chinese": "理解",
+    "pinyin": "lǐ jiě",
+    "meaning": "이해하다",
+    "example_zh": "这道题的解题思路我终于理解了。",
+    "example_ko": "이 문제의 풀이 방법을 드디어 이해했어.",
+    "example_pinyin": "zhè dào tí de jiě tí sī lù wǒ zhōng yú lǐ jiě le 。"
+  },
+  {
+    "id": 583,
+    "chinese": "理想",
+    "pinyin": "lǐ xiǎng",
+    "meaning": "이상, 꿈",
+    "example_zh": "他的理想是去国外深造，成为一名学者。",
+    "example_ko": "그의 꿈은 해외에서 공부를 더 하고 학자가 되는 거야.",
+    "example_pinyin": "tā de lǐ xiǎng shì qù guó wài shēn zào ， chéng wéi yī míng xué zhě 。"
+  },
+  {
+    "id": 584,
+    "chinese": "厉害",
+    "pinyin": "lì hai",
+    "meaning": "대단하다, 굉장하다",
+    "example_zh": "他中文说得太厉害了，跟母语者一样流利。",
+    "example_ko": "그는 중국어를 엄청 잘해서 원어민만큼 유창해.",
+    "example_pinyin": "tā zhōng wén shuō de tài lì hai le，gēn mǔ yǔ zhě yí yàng liú lì。"
+  },
+  {
+    "id": 585,
+    "chinese": "力气",
+    "pinyin": "lì qi",
+    "meaning": "힘, 기력",
+    "example_zh": "搬了一天的东西，力气用完了，累极了。",
+    "example_ko": "하루 종일 짐을 옮겼더니 기력이 다 빠져서 너무 피곤해.",
+    "example_pinyin": "bān le yī tiān de dōng xī ， lì qì yòng wán le ， lèi jí le 。"
+  },
+  {
+    "id": 586,
+    "chinese": "例如",
+    "pinyin": "lì rú",
+    "meaning": "예를 들면",
+    "example_zh": "你可以多做一些体育运动，例如跑步、游泳等。",
+    "example_ko": "체육 운동을 좀 더 해도 좋아, 예를 들면 달리기, 수영 같은 거.",
+    "example_pinyin": "nǐ kě yǐ duō zuò yī xiē tǐ yù yùn dòng ， lì rú pǎo bù 、 yóu yǒng děng 。"
+  },
+  {
+    "id": 587,
+    "chinese": "俩",
+    "pinyin": "liǎ",
+    "meaning": "둘 (두 사람)",
+    "example_zh": "我们俩一起去。",
+    "example_ko": "우리 둘이 함께 가자.",
+    "example_pinyin": "wǒ men liǎ yì qǐ qù 。"
+  },
+  {
+    "id": 588,
+    "chinese": "连",
+    "pinyin": "lián",
+    "meaning": "~조차도",
+    "example_zh": "他忙得连吃饭的时间都没有。",
+    "example_ko": "그는 밥 먹을 시간조차 없을 만큼 바빠.",
+    "example_pinyin": "tā máng dé lián chī fàn de shí jiān dōu méi yǒu 。"
+  },
+  {
+    "id": 589,
+    "chinese": "联系",
+    "pinyin": "lián xì",
+    "meaning": "남기다, 머물다",
+    "example_zh": "走之前在留言板上留下你的联系方式。",
+    "example_ko": "떠나기 전에 게시판에 연락처를 남겨줘.",
+    "example_pinyin": "zǒu zhī qián zài liú yán bǎn shàng liú xià nǐ de lián xì fāng shì 。"
+  },
+  {
+    "id": 590,
+    "chinese": "凉快",
+    "pinyin": "liáng kuai",
+    "meaning": "시원하다 (기온)",
+    "example_zh": "傍晚风吹来，凉快多了，可以出去散步了。",
+    "example_ko": "저녁에 바람이 부니까 시원해져서 산책하러 나갈 수 있겠다.",
+    "example_pinyin": "bàng wǎn fēng chuī lái ， liáng kuài duō le ， kě yǐ chū qù sàn bù le 。"
+  },
+  {
+    "id": 591,
+    "chinese": "亮",
+    "pinyin": "liàng",
+    "meaning": "밝다",
+    "example_zh": "换了新灯泡，房间顿时亮了很多。",
+    "example_ko": "전구를 새로 갈았더니 방이 갑자기 훨씬 밝아졌어.",
+    "example_pinyin": "huàn le xīn dēng pào ， fáng jiān dùn shí liàng le hěn duō 。"
+  },
+  {
+    "id": 592,
+    "chinese": "聊天",
+    "pinyin": "liáo tiān",
+    "meaning": "수다 떨다, 채팅하다",
+    "example_zh": "我们在咖啡店聊天聊了三个小时。",
+    "example_ko": "우리 카페에서 세 시간 동안 수다 떨었어.",
+    "example_pinyin": "wǒ men zài kā fēi diàn liáo tiān liáo le sān gè xiǎo shí 。"
+  },
+  {
+    "id": 593,
+    "chinese": "另外",
+    "pinyin": "lìng wài",
+    "meaning": "그 외에, 따로",
+    "example_zh": "除了中文，他另外还会说英语和日语。",
+    "example_ko": "중국어 외에 그는 영어랑 일본어도 할 줄 알아.",
+    "example_pinyin": "chú le zhōng wén ， tā lìng wài hái huì shuō yīng yǔ hé rì yǔ 。"
+  },
+  {
+    "id": 594,
+    "chinese": "留",
+    "pinyin": "liú",
+    "meaning": "남기다",
+    "example_zh": "请把地址留给我。",
+    "example_ko": "주소를 나에게 남겨 줘.",
+    "example_pinyin": "qǐng bǎ dì zhǐ liú gěi wǒ 。"
+  },
+  {
+    "id": 595,
+    "chinese": "留学",
+    "pinyin": "liú xué",
+    "meaning": "유학하다",
+    "example_zh": "她毕业后打算去日本留学，学习设计。",
+    "example_ko": "그녀는 졸업하고 일본에 유학 가서 디자인을 공부할 계획이야.",
+    "example_pinyin": "tā bì yè hòu dǎ suàn qù rì běn liú xué ， xué xí shè jì 。"
+  },
+  {
+    "id": 596,
+    "chinese": "流泪",
+    "pinyin": "liú lèi",
+    "meaning": "눈물을 흘리다",
+    "example_zh": "电影结尾太感人了，我忍不住流泪了。",
+    "example_ko": "영화 결말이 너무 감동적이어서 나 참지 못하고 눈물을 흘렸어.",
+    "example_pinyin": "diàn yǐng jié wěi tài gǎn rén le ， wǒ rěn bú zhù liú lèi le 。"
+  },
+  {
+    "id": 597,
+    "chinese": "流利",
+    "pinyin": "liú lì",
+    "meaning": "유창하다",
+    "example_zh": "她英语说得非常流利，在外企工作没问题。",
+    "example_ko": "그녀는 영어를 너무 유창하게 해서 외국계 기업에서 일하는 데 문제없어.",
+    "example_pinyin": "tā yīng yǔ shuō dé fēi cháng liú lì ， zài wài qǐ gōng zuò méi wèn tí 。"
+  },
+  {
+    "id": 598,
+    "chinese": "流行",
+    "pinyin": "liú xíng",
+    "meaning": "유행하다",
+    "example_zh": "这首歌最近很流行，到处都能听到。",
+    "example_ko": "이 노래가 요즘 정말 유행해서 어디서든 들려.",
+    "example_pinyin": "zhè shǒu gē zuì jìn hěn liú xíng ， dào chù dōu néng tīng dào 。"
+  },
+  {
+    "id": 599,
+    "chinese": "乱",
+    "pinyin": "luàn",
+    "meaning": "어지럽다, 혼란스럽다",
+    "example_zh": "搬家之后，家里还很乱，需要慢慢整理。",
+    "example_ko": "이사하고 나서 집이 아직 너무 어지러워서 천천히 정리해야 해.",
+    "example_pinyin": "bān jiā zhī hòu ， jiā lǐ hái hěn luàn ， xū yào màn màn zhěng lǐ 。"
+  },
+  {
+    "id": 600,
+    "chinese": "律师",
+    "pinyin": "lǜ shī",
+    "meaning": "변호사",
+    "example_zh": "他遇到了法律问题，找了一位律师帮忙处理。",
+    "example_ko": "그는 법률 문제가 생겨서 변호사를 찾아서 처리를 부탁했어.",
+    "example_pinyin": "tā yù dào le fǎ lǜ wèn tí ， zhǎo le yī wèi lǜ shī bāng máng chǔ lǐ 。"
+  },
+  {
+    "id": 601,
+    "chinese": "麻烦",
+    "pinyin": "má fan",
+    "meaning": "번거롭다, 귀찮다",
+    "example_zh": "这件事很麻烦，处理起来需要花很多时间。",
+    "example_ko": "이 일은 번거로워서 처리하는 데 시간이 많이 걸려.",
+    "example_pinyin": "zhè jiàn shì hěn má fán ， chǔ lǐ qǐ lái xū yào huā hěn duō shí jiān 。"
+  },
+  {
+    "id": 602,
+    "chinese": "马虎",
+    "pinyin": "mǎ hu",
+    "meaning": "대충하다, 허술하다",
+    "example_zh": "做事不能马虎，要认真对待每一个细节。",
+    "example_ko": "일을 대충 하면 안 돼, 모든 세부 사항을 성실하게 대해야 해.",
+    "example_pinyin": "zuò shì bù néng mǎ hǔ ， yào rèn zhēn duì dài měi yí gè xì jié 。"
+  },
+  {
+    "id": 603,
+    "chinese": "满",
+    "pinyin": "mǎn",
+    "meaning": "가득하다",
+    "example_zh": "今天商场里满满的都是人，购物的好时机。",
+    "example_ko": "오늘 쇼핑몰이 사람들로 가득해, 쇼핑하기 좋은 타이밍이네.",
+    "example_pinyin": "jīn tiān shāng chǎng lǐ mǎn mǎn de dōu shì rén ， gòu wù de hǎo shí jī 。"
+  },
+  {
+    "id": 604,
+    "chinese": "毛巾",
+    "pinyin": "máo jīn",
+    "meaning": "수건",
+    "example_zh": "洗完澡记得用干净的毛巾擦干身体。",
+    "example_ko": "샤워하고 나서 깨끗한 수건으로 몸을 닦는 거 잊지 마.",
+    "example_pinyin": "xǐ wán zǎo jì de yòng gān jìng de máo jīn cā gàn shēn tǐ 。"
+  },
+  {
+    "id": 605,
+    "chinese": "美丽",
+    "pinyin": "měi lì",
+    "meaning": "아름답다",
+    "example_zh": "秋天的树叶变成红色，风景非常美丽。",
+    "example_ko": "가을에 나뭇잎이 빨개져서 경치가 정말 아름다워.",
+    "example_pinyin": "qiū tiān de shù yè biàn chéng hóng sè ， fēng jǐng fēi cháng měi lì 。"
+  },
+  {
+    "id": 606,
+    "chinese": "梦",
+    "pinyin": "mèng",
+    "meaning": "꿈",
+    "example_zh": "我昨晚做了一个很奇怪的梦，都记不清楚了。",
+    "example_ko": "어젯밤에 이상한 꿈을 꿨는데 내용이 잘 생각 안 나.",
+    "example_pinyin": "wǒ zuó wǎn zuò le yí gè hěn qí guài de mèng ， dōu jì bù qīng chǔ le 。"
+  },
+  {
+    "id": 607,
+    "chinese": "密码",
+    "pinyin": "mì mǎ",
+    "meaning": "비밀번호",
+    "example_zh": "手机的密码要设置得复杂一些，保护个人信息。",
+    "example_ko": "핸드폰 비밀번호는 좀 복잡하게 설정해서 개인정보를 보호해야 해.",
+    "example_pinyin": "shǒu jī de mì mǎ yào shè zhì dé fù zá yī xiē ， bǎo hù gè rén xìn xī 。"
+  },
+  {
+    "id": 608,
+    "chinese": "免费",
+    "pinyin": "miǎn fèi",
+    "meaning": "무료",
+    "example_zh": "这个APP免费下载，不需要付费。",
+    "example_ko": "이 앱은 무료로 다운로드할 수 있어, 돈 안 내도 돼.",
+    "example_pinyin": "zhè ge APP miǎn fèi xià zài ， bù xū yào fù fèi 。"
+  },
+  {
+    "id": 609,
+    "chinese": "民族",
+    "pinyin": "mín zú",
+    "meaning": "민족",
+    "example_zh": "中国是一个多民族的国家，有五十六个民族。",
+    "example_ko": "중국은 다민족 국가로 56개 민족이 있어.",
+    "example_pinyin": "zhōng guó shì yí gè duō mín zú de guó jiā ， yǒu wǔ shí liù gè mín zú 。"
+  },
+  {
+    "id": 610,
+    "chinese": "母亲",
+    "pinyin": "mǔ qīn",
+    "meaning": "어머니 (격식체)",
+    "example_zh": "母亲节那天，我给妈妈买了一束花。",
+    "example_ko": "어버이날에 엄마한테 꽃 한 다발을 선물했어.",
+    "example_pinyin": "mǔ qīn jié nà tiān ， wǒ gěi mā mā mǎi le yī shù huā 。"
+  },
+  {
+    "id": 611,
+    "chinese": "目的",
+    "pinyin": "mù dì",
+    "meaning": "목적",
+    "example_zh": "这次来中国的目的是学习中文和了解文化。",
+    "example_ko": "이번에 중국에 온 목적은 중국어를 배우고 문화를 이해하는 거야.",
+    "example_pinyin": "zhè cì lái zhōng guó de mù dì shì xué xí zhōng wén hú le jiě wén huà 。"
+  },
+  {
+    "id": 612,
+    "chinese": "耐心",
+    "pinyin": "nài xīn",
+    "meaning": "인내심, 참을성",
+    "example_zh": "学外语需要耐心，不能着急求快。",
+    "example_ko": "외국어를 배우려면 인내심이 필요해, 서두르면 안 돼.",
+    "example_pinyin": "xué wài yǔ xū yào nài xīn ， bù néng zháo jí qiú kuài 。"
+  },
+  {
+    "id": 613,
+    "chinese": "难道",
+    "pinyin": "nán dào",
+    "meaning": "설마 ~이란 말이야?",
+    "example_zh": "难道你不知道今天是她的生日吗？",
+    "example_ko": "설마 오늘이 그녀의 생일인 줄 몰랐던 거야?",
+    "example_pinyin": "nán dào nǐ bù zhī dào jīn tiān shì tā de shēng rì ma ？"
+  },
+  {
+    "id": 614,
+    "chinese": "难受",
+    "pinyin": "nán shòu",
+    "meaning": "힘들다, 불쾌하다",
+    "example_zh": "最近工作压力太大，感觉很难受。",
+    "example_ko": "요즘 업무 스트레스가 너무 커서 너무 힘들어.",
+    "example_pinyin": "zuì jìn gōng zuò yā lì tài dà ， gǎn jué hěn nán shòu 。"
+  },
+  {
+    "id": 615,
+    "chinese": "内",
+    "pinyin": "nèi",
+    "meaning": "안, 내부",
+    "example_zh": "箱子内有几件衣服和一些零食。",
+    "example_ko": "상자 안에 옷 몇 벌이랑 간식이 좀 있어.",
+    "example_pinyin": "xiāng zi nèi yǒu jǐ jiàn yī fú hé yī xiē líng shí 。"
+  },
+  {
+    "id": 616,
+    "chinese": "内容",
+    "pinyin": "nèi róng",
+    "meaning": "내용",
+    "example_zh": "这篇文章的内容很有意思，值得一读。",
+    "example_ko": "이 글의 내용이 정말 재미있어서 읽어볼 만해.",
+    "example_pinyin": "zhè piān wén zhāng de nèi róng hěn yǒu yì si ， zhí de yī dú 。"
+  },
+  {
+    "id": 617,
+    "chinese": "能力",
+    "pinyin": "néng lì",
+    "meaning": "능력",
+    "example_zh": "他解决问题的能力很强，大家都很佩服。",
+    "example_ko": "그는 문제 해결 능력이 뛰어나서 모두 감탄해.",
+    "example_pinyin": "tā jiě jué wèn tí de néng lì hěn qiáng ， dà jiā dōu hěn pèi fú 。"
+  },
+  {
+    "id": 618,
+    "chinese": "年龄",
+    "pinyin": "nián líng",
+    "meaning": "나이",
+    "example_zh": "你多大年龄了？看起来很年轻啊。",
+    "example_ko": "나이가 어떻게 돼? 굉장히 젊어 보이는데.",
+    "example_pinyin": "nǐ duō dà nián líng le ？ kàn qǐ lái hěn nián qīng a 。"
+  },
+  {
+    "id": 619,
+    "chinese": "农村",
+    "pinyin": "nóng cūn",
+    "meaning": "농촌",
+    "example_zh": "他出生在农村，来城市工作已经十年了。",
+    "example_ko": "그는 농촌에서 태어나서 도시에 일하러 온 지 벌써 10년이 됐어.",
+    "example_pinyin": "tā chū shēng zài nóng cūn ， lái chéng shì gōng zuò yǐ jīng shí nián le 。"
+  },
+  {
+    "id": 620,
+    "chinese": "弄",
+    "pinyin": "nòng",
+    "meaning": "하다, 만들다 (구어)",
+    "example_zh": "你把这道题弄错了，重新做一下。",
+    "example_ko": "이 문제 틀렸어, 다시 해봐.",
+    "example_pinyin": "nǐ bǎ zhè dào tí nòng cuò le ， chóng xīn zuò yī xià 。"
+  },
+  {
+    "id": 621,
+    "chinese": "暖和",
+    "pinyin": "nuǎn huo",
+    "meaning": "따뜻하다",
+    "example_zh": "今天天气暖和，适合出去走走。",
+    "example_ko": "오늘 날씨가 따뜻해서 나가서 걷기 좋아.",
+    "example_pinyin": "jīn tiān tiān qì nuǎn huo ， shì hé chū qù zǒu zǒu 。"
+  },
+  {
+    "id": 622,
+    "chinese": "偶尔",
+    "pinyin": "ǒu ěr",
+    "meaning": "가끔, 간혹",
+    "example_zh": "我偶尔会去健身房锻炼一下。",
+    "example_ko": "나 가끔 헬스장 가서 운동해.",
+    "example_pinyin": "wǒ ǒu ěr huì qù jiàn shēn fáng duàn liàn yī xià 。"
+  },
+  {
+    "id": 623,
+    "chinese": "排列",
+    "pinyin": "pái liè",
+    "meaning": "배열하다, 나열하다",
+    "example_zh": "请把这些数字从小到大排列。",
+    "example_ko": "이 숫자들을 작은 것부터 큰 것 순으로 나열해줘.",
+    "example_pinyin": "qǐng bǎ zhè xiē shù zì cóng xiǎo dào dà pái liè 。"
+  },
+  {
+    "id": 624,
+    "chinese": "判断",
+    "pinyin": "pàn duàn",
+    "meaning": "판단하다",
+    "example_zh": "不要根据外表判断一个人。",
+    "example_ko": "외모로 사람을 판단하면 안 돼.",
+    "example_pinyin": "bú yào gēn jù wài biǎo pàn duàn yí gè rén 。"
+  },
+  {
+    "id": 625,
+    "chinese": "陪",
+    "pinyin": "péi",
+    "meaning": "동행하다, 함께 있어주다",
+    "example_zh": "他陪女朋友去医院检查，等了两个小时。",
+    "example_ko": "그는 여자친구의 병원 검사에 함께 가서 두 시간을 기다렸어.",
+    "example_pinyin": "tā péi nǚ péng yǒu qù yī yuàn jiǎn chá ， děng le liǎng gè xiǎo shí 。"
+  },
+  {
+    "id": 626,
+    "chinese": "批评",
+    "pinyin": "pī píng",
+    "meaning": "비판하다, 꾸짖다",
+    "example_zh": "老师批评了那几个上课睡觉的学生。",
+    "example_ko": "선생님이 수업 시간에 잠든 학생 몇 명을 혼냈어.",
+    "example_pinyin": "lǎo shī pī píng le nà jǐ gè shàng kè shuì jiào de xué shēng 。"
+  },
+  {
+    "id": 627,
+    "chinese": "皮肤",
+    "pinyin": "pí fū",
+    "meaning": "피부",
+    "example_zh": "她皮肤很好，从不化妆也很好看。",
+    "example_ko": "그녀는 피부가 좋아서 화장을 안 해도 예뻐.",
+    "example_pinyin": "tā pí fū hěn hǎo ， cóng bù huà zhuāng yě hěn hǎo kàn 。"
+  },
+  {
+    "id": 628,
+    "chinese": "脾气",
+    "pinyin": "pí qi",
+    "meaning": "성격, 성질",
+    "example_zh": "他脾气好，从来不轻易发火。",
+    "example_ko": "그는 성격이 좋아서 쉽게 화를 내지 않아.",
+    "example_pinyin": "tā pí qì hǎo ， cóng lái bù qīng yì fā huǒ 。"
+  },
+  {
+    "id": 629,
+    "chinese": "篇",
+    "pinyin": "piān",
+    "meaning": "편, 글 (양사)",
+    "example_zh": "他每周写一篇日记，记录生活点滴。",
+    "example_ko": "그는 매주 일기를 한 편씩 써서 일상의 순간들을 기록해.",
+    "example_pinyin": "tā měi zhōu xiě yī piān rì jì ， jì lù shēng huó diǎn dī 。"
+  },
+  {
+    "id": 630,
+    "chinese": "骗",
+    "pinyin": "piàn",
+    "meaning": "속이다",
+    "example_zh": "网上有人骗说免费送礼物，其实是诈骗。",
+    "example_ko": "인터넷에서 누가 무료로 선물을 준다고 속이는데 사실 사기야.",
+    "example_pinyin": "wǎng shàng yǒu rén piàn shuō miǎn fèi sòng lǐ wù ， qí shí shì zhà piàn 。"
+  },
+  {
+    "id": 631,
+    "chinese": "乒乓球",
+    "pinyin": "pīng pāng qiú",
+    "meaning": "탁구",
+    "example_zh": "中国的乒乓球运动员在世界上排名很靠前。",
+    "example_ko": "중국의 탁구 선수들은 세계 랭킹에서 아주 높은 편이야.",
+    "example_pinyin": "zhōng guó de pīng pāng qiú yùn dòng yuán zài shì jiè shàng pái míng hěn kào qián 。"
+  },
+  {
+    "id": 632,
+    "chinese": "平时",
+    "pinyin": "píng shí",
+    "meaning": "평소에, 보통",
+    "example_zh": "他平时不怎么说话，但开会时很有想法。",
+    "example_ko": "그는 평소에 말을 별로 안 하는데 회의할 때는 생각이 많아.",
+    "example_pinyin": "tā píng shí bù zěn me shuō huà ， dàn kāi huì shí hěn yǒu xiǎng fǎ 。"
+  },
+  {
+    "id": 633,
+    "chinese": "瓶子",
+    "pinyin": "píng zi",
+    "meaning": "병",
+    "example_zh": "把矿泉水倒进瓶子里，方便携带。",
+    "example_ko": "생수를 병에 따라놓으면 들고 다니기 편해.",
+    "example_pinyin": "bǎ kuàng quán shuǐ dào jìn píng zi lǐ ， fāng biàn xié dài 。"
+  },
+  {
+    "id": 634,
+    "chinese": "破",
+    "pinyin": "pò",
+    "meaning": "부서지다, 낡다",
+    "example_zh": "这双鞋已经破了，该换新的了。",
+    "example_ko": "이 신발 이미 해져서 새 거로 바꿔야겠어.",
+    "example_pinyin": "zhè shuāng xié yǐ jīng pò le ， gāi huàn xīn de le 。"
+  },
+  {
+    "id": 635,
+    "chinese": "普遍",
+    "pinyin": "pǔ biàn",
+    "meaning": "보편적이다, 일반적이다",
+    "example_zh": "使用手机支付已经普遍，现金用得越来越少了。",
+    "example_ko": "핸드폰 결제가 이미 보편화되어서 현금은 갈수록 덜 쓰게 됐어.",
+    "example_pinyin": "shǐ yòng shǒu jī zhī fù yǐ jīng pǔ biàn ， xiàn jīn yòng dé yuè lái yuè shǎo le 。"
+  },
+  {
+    "id": 636,
+    "chinese": "其次",
+    "pinyin": "qí cì",
+    "meaning": "그 다음으로, 둘째로",
+    "example_zh": "首先要有目标，其次才是行动。",
+    "example_ko": "먼저 목표가 있어야 하고 그 다음이 행동이야.",
+    "example_pinyin": "shǒu xiān yào yǒu mù biāo ， qí cì cái shì xíng dòng 。"
+  },
+  {
+    "id": 637,
+    "chinese": "其中",
+    "pinyin": "qí zhōng",
+    "meaning": "그 중에",
+    "example_zh": "这次活动有五十人参加，其中有十个是外国人。",
+    "example_ko": "이번 행사에 50명이 참가했는데 그 중 10명은 외국인이야.",
+    "example_pinyin": "zhè cì huó dòng yǒu wǔ shí rén shēn jiā ， qí zhōng yǒu shí gè shì wài guó rén 。"
+  },
+  {
+    "id": 638,
+    "chinese": "起飞",
+    "pinyin": "qǐ fēi",
+    "meaning": "이륙하다",
+    "example_zh": "飞机准时起飞，预计两小时后到达目的地。",
+    "example_ko": "비행기가 정시에 이륙해서 약 두 시간 후에 목적지에 도착할 예정이야.",
+    "example_pinyin": "fēi jī zhǔn shí qǐ fēi ， yù jì liǎng xiǎo shí hòu dào dá mù dì dì 。"
+  },
+  {
+    "id": 639,
+    "chinese": "起来",
+    "pinyin": "qi lai",
+    "meaning": "하지만, 오히려",
+    "example_zh": "他看起来很严肃，说话却很幽默。",
+    "example_ko": "그는 겉보기엔 엄격해 보이는데 말하는 건 오히려 유머러스해.",
+    "example_pinyin": "tā kàn qǐ lái hěn yán sù ， shuō huà què hěn yōu mò 。"
+  },
+  {
+    "id": 640,
+    "chinese": "气候",
+    "pinyin": "qì hòu",
+    "meaning": "기후",
+    "example_zh": "这里的气候很适合种蔬菜和水果。",
+    "example_ko": "여기 기후는 채소랑 과일 재배에 적합해.",
+    "example_pinyin": "zhè lǐ de qì hòu hěn shì hé zhǒng shū cài hé shuǐ guǒ 。"
+  },
+  {
+    "id": 641,
+    "chinese": "千万",
+    "pinyin": "qiān wàn",
+    "meaning": "절대로, 반드시 (강조)",
+    "example_zh": "千万不要在驾驶时玩手机，非常危险！",
+    "example_ko": "운전할 때 절대로 핸드폰 하면 안 돼, 정말 위험해!",
+    "example_pinyin": "qiān wàn bú yào zài jià shǐ shí wán shǒu jī ， fēi cháng wēi xiǎn ！"
+  },
+  {
+    "id": 642,
+    "chinese": "签证",
+    "pinyin": "qiān zhèng",
+    "meaning": "비자",
+    "example_zh": "去很多国家旅游需要提前申请签证。",
+    "example_ko": "많은 나라를 여행하려면 미리 비자를 신청해야 해.",
+    "example_pinyin": "qù hěn duō guó jiā lǚ yóu xū yào tí qián shēn qǐng qiān zhèng 。"
+  },
+  {
+    "id": 643,
+    "chinese": "墙",
+    "pinyin": "qiáng",
+    "meaning": "벽",
+    "example_zh": "墙上挂着全家福，看着很温馨。",
+    "example_ko": "벽에 가족사진이 걸려 있어서 보기만 해도 따뜻해.",
+    "example_pinyin": "qiáng shàng guà zhe quán jiā fú ， kàn zhe hěn wēn xīn 。"
+  },
+  {
+    "id": 644,
+    "chinese": "敲",
+    "pinyin": "qiāo",
+    "meaning": "두드리다, 노크하다",
+    "example_zh": "进别人房间前要先敲门，这是礼貌。",
+    "example_ko": "다른 사람 방에 들어가기 전에 먼저 노크해야 해, 이게 예의야.",
+    "example_pinyin": "jìn bié rén fáng jiān qián yào xiān qiāo mén ， zhè shì lǐ mào 。"
+  },
+  {
+    "id": 645,
+    "chinese": "桥",
+    "pinyin": "qiáo",
+    "meaning": "다리",
+    "example_zh": "这座桥是一百年前建的，但至今还很坚固。",
+    "example_ko": "이 다리는 100년 전에 지어졌지만 아직도 견고해.",
+    "example_pinyin": "zhè zuò qiáo shì yì bǎi nián qián jiàn de ， dàn zhì jīn hái hěn jiān gù 。"
+  },
+  {
+    "id": 646,
+    "chinese": "巧克力",
+    "pinyin": "qiǎo kè lì",
+    "meaning": "초콜릿",
+    "example_zh": "情人节他送了她一盒巧克力，她很开心。",
+    "example_ko": "발렌타인데이에 그가 초콜릿 한 상자를 선물해서 그녀가 기뻐했어.",
+    "example_pinyin": "qíng rén jié tā sòng le tā yī hé qiǎo kè lì ， tā hěn kāi xīn 。"
+  },
+  {
+    "id": 647,
+    "chinese": "亲戚",
+    "pinyin": "qīn qi",
+    "meaning": "친척",
+    "example_zh": "春节期间，亲戚们聚在一起吃饭聊天。",
+    "example_ko": "춘절에 친척들이 모여서 밥 먹고 수다를 떨어.",
+    "example_pinyin": "chūn jié qī jiān ， qīn qī men jù zài yì qǐ chī fàn liáo tiān 。"
+  },
+  {
+    "id": 648,
+    "chinese": "轻",
+    "pinyin": "qīng",
+    "meaning": "가볍다",
+    "example_zh": "这个新款背包很轻，背一天也不累。",
+    "example_ko": "이 새 배낭은 가벼워서 하루 종일 메도 안 피곤해.",
+    "example_pinyin": "zhè ge xīn kuǎn bēi bāo hěn qīng ， bèi yī tiān yě bù lèi 。"
+  },
+  {
+    "id": 649,
+    "chinese": "轻松",
+    "pinyin": "qīng sōng",
+    "meaning": "느긋하다, 편하다",
+    "example_zh": "假期里，我喜欢轻松地在家看书、喝茶。",
+    "example_ko": "휴가 때 나는 집에서 느긋하게 책 읽고 차 마시는 걸 좋아해.",
+    "example_pinyin": "jià qī lǐ ， wǒ xǐ huān qīng sōng dì zài jiā kàn shū 、 hē chá 。"
+  },
+  {
+    "id": 650,
+    "chinese": "情况",
+    "pinyin": "qíng kuàng",
+    "meaning": "상황, 형편",
+    "example_zh": "目前的情况还不明朗，我们再等等看。",
+    "example_ko": "현재 상황이 아직 불분명해서 좀 더 기다려보자.",
+    "example_pinyin": "mù qián de qíng kuàng hái bù míng lǎng ， wǒ men zài děng děng kàn 。"
+  },
+  {
+    "id": 651,
+    "chinese": "请假",
+    "pinyin": "qǐng jià",
+    "meaning": "휴가를 신청하다",
+    "example_zh": "我需要请假三天，去处理家里的事情。",
+    "example_ko": "집안일을 처리하러 3일 휴가를 신청해야 해.",
+    "example_pinyin": "wǒ xū yào qǐng jià sān tiān ， qù chù lǐ jiā lǐ de shì qíng 。"
+  },
+  {
+    "id": 652,
+    "chinese": "请客",
+    "pinyin": "qǐng kè",
+    "meaning": "한턱내다, 대접하다",
+    "example_zh": "我升职了，今天请客，大家随便点！",
+    "example_ko": "나 승진했어, 오늘 내가 쏠게, 마음껏 시켜!",
+    "example_pinyin": "wǒ shēng zhí le ， jīn tiān qǐng kè ， dà jiā suí biàn diǎn ！"
+  },
+  {
+    "id": 653,
+    "chinese": "穷",
+    "pinyin": "qióng",
+    "meaning": "가난하다",
+    "example_zh": "他家境很穷，但靠自己努力考上了大学。",
+    "example_ko": "그는 가난한 집안 출신이지만 스스로 노력해서 대학에 합격했어.",
+    "example_pinyin": "tā jiā jìng hěn qióng ， dàn kào zì jǐ nǔ lì kǎo shàng le dà xué 。"
+  },
+  {
+    "id": 654,
+    "chinese": "区别",
+    "pinyin": "qū bié",
+    "meaning": "차이, 구별",
+    "example_zh": "这两个词的意思很接近，但用法有区别。",
+    "example_ko": "이 두 단어의 뜻은 비슷한데 사용법에 차이가 있어.",
+    "example_pinyin": "zhè liǎng gè cí de yì si hěn jiē jìn ， dàn yòng fǎ yǒu qū bié 。"
+  },
+  {
+    "id": 655,
+    "chinese": "取",
+    "pinyin": "qǔ",
+    "meaning": "가져가다, 찾다",
+    "example_zh": "快递到了，你去快递点取一下包裹。",
+    "example_ko": "택배가 왔어, 택배 픽업 장소 가서 소포 찾아와.",
+    "example_pinyin": "kuài dì dào le ， nǐ qù kuài dì diǎn qǔ yī xià bāo guǒ 。"
+  },
+  {
+    "id": 656,
+    "chinese": "全部",
+    "pinyin": "quán bù",
+    "meaning": "전부, 모두",
+    "example_zh": "作业全部做完了，可以去玩了！",
+    "example_ko": "숙제 전부 다 했어, 이제 놀아도 돼!",
+    "example_pinyin": "zuò yè quán bù zuò wán le ， kě yǐ qù wán le ！"
+  },
+  {
+    "id": 657,
+    "chinese": "缺点",
+    "pinyin": "quē diǎn",
+    "meaning": "단점",
+    "example_zh": "他的缺点是有时候太冲动，不够冷静。",
+    "example_ko": "그의 단점은 가끔 너무 충동적이고 충분히 침착하지 않다는 거야.",
+    "example_pinyin": "tā de quē diǎn shì yǒu shí hòu tài chòng dòng ， bù gòu lěng jìng 。"
+  },
+  {
+    "id": 658,
+    "chinese": "缺少",
+    "pinyin": "quē shǎo",
+    "meaning": "부족하다",
+    "example_zh": "这道菜缺少盐，再加一点。",
+    "example_ko": "이 요리에 소금이 부족해, 좀 더 넣어.",
+    "example_pinyin": "zhè dào cài quē shǎo yán ， zài jiā yì diǎn 。"
+  },
+  {
+    "id": 659,
+    "chinese": "却",
+    "pinyin": "què",
+    "meaning": "하지만, 그런데",
+    "example_zh": "他很累，却没有停下来。",
+    "example_ko": "그는 매우 피곤했지만 멈추지 않았어.",
+    "example_pinyin": "tā hěn lèi ， què méi yǒu tíng xià lái 。"
+  },
+  {
+    "id": 660,
+    "chinese": "确实",
+    "pinyin": "què shí",
+    "meaning": "확실히, 정말로",
+    "example_zh": "这件事确实是我的错，我向你道歉。",
+    "example_ko": "이 일은 확실히 내 잘못이야, 사과할게.",
+    "example_pinyin": "zhè jiàn shì què shí shì wǒ de cuò ， wǒ xiàng nǐ dào qiàn 。"
+  },
+  {
+    "id": 661,
+    "chinese": "群",
+    "pinyin": "qún",
+    "meaning": "무리, 떼, 그룹",
+    "example_zh": "一群学生在操场上踢足球。",
+    "example_ko": "운동장에서 학생들이 무리지어 축구를 하고 있어.",
+    "example_pinyin": "yī qún xué shēng zài cāo chǎng shàng tī zú qiú 。"
+  },
+  {
+    "id": 662,
+    "chinese": "然而",
+    "pinyin": "rán ér",
+    "meaning": "그러나, 하지만",
+    "example_zh": "他很努力，然而成绩还是不如理想。",
+    "example_ko": "그는 열심히 하지만 성적은 여전히 기대에 못 미쳐.",
+    "example_pinyin": "tā hěn nǔ lì ， rán ér chéng jì hái shì bù rú lǐ xiǎng 。"
+  },
+  {
+    "id": 663,
+    "chinese": "热闹",
+    "pinyin": "rè nao",
+    "meaning": "시끌벅적하다, 활기차다",
+    "example_zh": "过年的时候，街上很热闹，到处放鞭炮。",
+    "example_ko": "설날에 거리가 시끌벅적하고 곳곳에서 폭죽을 터뜨려.",
+    "example_pinyin": "guò nián de shí hòu ， jiē shàng hěn rè nào ， dào chù fàng biān pào 。"
+  },
+  {
+    "id": 664,
+    "chinese": "人民币",
+    "pinyin": "rén mín bì",
+    "meaning": "위안화, 인민폐",
+    "example_zh": "在中国用人民币，换好外币再来比较方便。",
+    "example_ko": "중국에서는 위안화를 써야 하니까 외화를 미리 환전해 오는 게 편해.",
+    "example_pinyin": "zài zhōng guó yòng rén mín bì ， huàn hǎo wài bì zài lái bǐ jiào fāng biàn 。"
+  },
+  {
+    "id": 665,
+    "chinese": "任何",
+    "pinyin": "rèn hé",
+    "meaning": "어떤, 모든",
+    "example_zh": "任何问题都可以来问我，我尽力帮你解决。",
+    "example_ko": "어떤 문제든 나한테 와서 물어봐, 최대한 해결해줄게.",
+    "example_pinyin": "rèn hé wèn tí dōu kě yǐ lái wèn wǒ ， wǒ jìn lì bāng nǐ jiě jué 。"
+  },
+  {
+    "id": 666,
+    "chinese": "任务",
+    "pinyin": "rèn wu",
+    "meaning": "임무, 과제",
+    "example_zh": "这次任务很艰巨，需要全队合作完成。",
+    "example_ko": "이번 임무가 매우 힘든데 팀 전체가 협력해야 완성할 수 있어.",
+    "example_pinyin": "zhè cì rèn wù hěn jiān jù ， xū yào quán duì hé zuò wán chéng 。"
+  },
+  {
+    "id": 667,
+    "chinese": "扔",
+    "pinyin": "rēng",
+    "meaning": "던지다, 버리다",
+    "example_zh": "请不要在公共场所乱扔垃圾。",
+    "example_ko": "공공장소에서 쓰레기 함부로 버리지 마세요.",
+    "example_pinyin": "qǐng bú yào zài gōng gòng chǎng suǒ luàn rēng lā jī 。"
+  },
+  {
+    "id": 668,
+    "chinese": "仍然",
+    "pinyin": "réng rán",
+    "meaning": "여전히, 아직도",
+    "example_zh": "虽然毕业多年，他仍然保持着阅读的习惯。",
+    "example_ko": "졸업한 지 여러 해가 됐지만 그는 여전히 독서 습관을 유지하고 있어.",
+    "example_pinyin": "suī rán bì yè duō nián ， tā réng rán bǎo chí zhe yuè dú de xí guàn 。"
+  },
+  {
+    "id": 669,
+    "chinese": "日记",
+    "pinyin": "rì jì",
+    "meaning": "일기",
+    "example_zh": "她从中学开始坚持写日记，记录每天发生的事。",
+    "example_ko": "그녀는 중학교 때부터 꾸준히 일기를 써서 매일 일어난 일을 기록해.",
+    "example_pinyin": "tā cóng zhōng xué kāi shǐ jiān chí xiě rì jì ， jì lù měi tiān fā shēng de shì 。"
+  },
+  {
+    "id": 670,
+    "chinese": "入口",
+    "pinyin": "rù kǒu",
+    "meaning": "부드럽다, 연하다",
+    "example_zh": "这块蛋糕口感很软，入口即化。",
+    "example_ko": "이 케이크 식감이 정말 부드러워서 입에 넣자마자 녹아.",
+    "example_pinyin": "zhè kuài dàn gāo kǒu gǎn hěn ruǎn ， rù kǒu jí huà 。"
+  },
+  {
+    "id": 671,
+    "chinese": "软",
+    "pinyin": "ruǎn",
+    "meaning": "부드럽다",
+    "example_zh": "这张床很软。",
+    "example_ko": "이 침대는 매우 푹신해.",
+    "example_pinyin": "zhè zhāng chuáng hěn ruǎn 。"
+  },
+  {
+    "id": 672,
+    "chinese": "散步",
+    "pinyin": "sàn bù",
+    "meaning": "산책하다",
+    "example_zh": "每天饭后散散步，对消化很有好处。",
+    "example_ko": "매일 식후에 산책하면 소화에 정말 좋아.",
+    "example_pinyin": "měi tiān fàn hòu sàn sàn bù ， duì xiāo huà hěn yǒu hǎo chù 。"
+  },
+  {
+    "id": 673,
+    "chinese": "森林",
+    "pinyin": "sēn lín",
+    "meaning": "숲, 삼림",
+    "example_zh": "这片森林里有很多珍稀动植物。",
+    "example_ko": "이 숲에는 희귀한 동식물이 많아.",
+    "example_pinyin": "zhè piàn sēn lín lǐ yǒu hěn duō zhēn xī dòng zhí wù 。"
+  },
+  {
+    "id": 674,
+    "chinese": "沙发",
+    "pinyin": "shā fā",
+    "meaning": "소파",
+    "example_zh": "下班回家，我喜欢躺在沙发上看电视。",
+    "example_ko": "퇴근하고 집에 오면 소파에 누워 TV 보는 걸 좋아해.",
+    "example_pinyin": "xià bān huí jiā ， wǒ xǐ huān tǎng zài shā fā shàng kàn diàn shì 。"
+  },
+  {
+    "id": 675,
+    "chinese": "商量",
+    "pinyin": "shāng liang",
+    "meaning": "의논하다, 상의하다",
+    "example_zh": "这件事比较重要，我们商量一下再做决定。",
+    "example_ko": "이 일이 꽤 중요하니 상의해보고 나서 결정하자.",
+    "example_pinyin": "zhè jiàn shì bǐ jiào zhòng yào ， wǒ men shāng liáng yī xià zài zuò jué dìng 。"
+  },
+  {
+    "id": 676,
+    "chinese": "伤心",
+    "pinyin": "shāng xīn",
+    "meaning": "슬프다, 마음이 아프다",
+    "example_zh": "听到老朋友去世的消息，她伤心地哭了很久。",
+    "example_ko": "오랜 친구가 세상을 떠났다는 소식을 듣고 그녀는 슬피 한참 울었어.",
+    "example_pinyin": "tīng dào lǎo péng yǒu qù shì de xiāo xī ， tā shāng xīn dì kū le hěn jiǔ 。"
+  },
+  {
+    "id": 677,
+    "chinese": "稍微",
+    "pinyin": "shāo wēi",
+    "meaning": "약간, 조금",
+    "example_zh": "你说话的声音稍微大一点，我听不太清楚。",
+    "example_ko": "말할 때 목소리를 약간 크게 해줘, 잘 안 들려.",
+    "example_pinyin": "nǐ shuō huà de shēng yīn shāo wēi dà yī diǎn ， wǒ tīng bù tài qīng chǔ 。"
+  },
+  {
+    "id": 678,
+    "chinese": "社会",
+    "pinyin": "shè huì",
+    "meaning": "사회",
+    "example_zh": "进入社会之后，才发现生活并不容易。",
+    "example_ko": "사회에 나오고 나서야 생활이 쉽지 않다는 걸 알았어.",
+    "example_pinyin": "jìn rù shè huì zhī hòu ， cái fā xiàn shēng huó bìng bù róng yì 。"
+  },
+  {
+    "id": 679,
+    "chinese": "深",
+    "pinyin": "shēn",
+    "meaning": "깊다, 진하다",
+    "example_zh": "这里的河很深，不适合游泳。",
+    "example_ko": "여기 강이 깊어서 수영하기 적합하지 않아.",
+    "example_pinyin": "zhè lǐ de hé hěn shēn ， bú shì hé yóu yǒng 。"
+  },
+  {
+    "id": 680,
+    "chinese": "申请",
+    "pinyin": "shēn qǐng",
+    "meaning": "신청하다",
+    "example_zh": "我要申请一个学生签证，需要准备哪些材料？",
+    "example_ko": "학생 비자 신청하려는데 어떤 서류를 준비해야 해요?",
+    "example_pinyin": "wǒ yào shēn qǐng yí gè xué shēng qiān zhèng ， xū yào zhǔn bèi nǎ xiē cái liào ？"
+  },
+  {
+    "id": 681,
+    "chinese": "甚至",
+    "pinyin": "shèn zhì",
+    "meaning": "심지어",
+    "example_zh": "他太忙了，甚至连吃饭的时间都没有。",
+    "example_ko": "그는 너무 바빠서 심지어 밥 먹을 시간도 없어.",
+    "example_pinyin": "tā tài máng le ， shèn zhì lián chī fàn de shí jiān dōu méi yǒu 。"
+  },
+  {
+    "id": 682,
+    "chinese": "生活",
+    "pinyin": "shēng huó",
+    "meaning": "생활하다, 생활",
+    "example_zh": "来到异乡生活，需要一段时间适应。",
+    "example_ko": "타향에서 생활하려면 적응하는 데 시간이 좀 걸려.",
+    "example_pinyin": "lái dào yì xiāng shēng huó ， xū yào yī duàn shí jiān shì yìng 。"
+  },
+  {
+    "id": 683,
+    "chinese": "生命",
+    "pinyin": "shēng mìng",
+    "meaning": "생명",
+    "example_zh": "生命只有一次，要好好珍惜。",
+    "example_ko": "생명은 하나밖에 없으니 소중히 여겨야 해.",
+    "example_pinyin": "shēng mìng zhǐ yǒu yī cì ， yào hǎo hǎo zhēn xī 。"
+  },
+  {
+    "id": 684,
+    "chinese": "省",
+    "pinyin": "shěng",
+    "meaning": "아끼다, 절약하다",
+    "example_zh": "买火车票提前买可以省不少钱。",
+    "example_ko": "기차표는 미리 사면 돈을 꽤 아낄 수 있어.",
+    "example_pinyin": "mǎi huǒ chē piào tí qián mǎi kě yǐ shěng bù shǎo qián 。"
+  },
+  {
+    "id": 685,
+    "chinese": "剩",
+    "pinyin": "shèng",
+    "meaning": "남다, 남아있다",
+    "example_zh": "饭剩了一些，放冰箱里明天吃吧。",
+    "example_ko": "밥이 좀 남았어, 냉장고에 넣어뒀다가 내일 먹자.",
+    "example_pinyin": "fàn shèng le yī xiē ， fàng bīng xiāng lǐ míng tiān chī ba 。"
+  },
+  {
+    "id": 686,
+    "chinese": "失败",
+    "pinyin": "shī bài",
+    "meaning": "실패하다",
+    "example_zh": "这次创业失败了，但他没有放弃，决定再试一次。",
+    "example_ko": "이번 창업은 실패했지만 그는 포기하지 않고 다시 한 번 시도하기로 했어.",
+    "example_pinyin": "zhè cì chuàng yè shī bài le ， dàn tā méi yǒu fàng qì ， jué dìng zài shì yī cì 。"
+  },
+  {
+    "id": 687,
+    "chinese": "失望",
+    "pinyin": "shī wàng",
+    "meaning": "실망하다",
+    "example_zh": "考试结果出来了，他对成绩感到失望。",
+    "example_ko": "시험 결과가 나왔는데 그는 성적에 실망했어.",
+    "example_pinyin": "kǎo shì jié guǒ chū lái le ， tā duì chéng jì gǎn dào shī wàng 。"
+  },
+  {
+    "id": 688,
+    "chinese": "师傅",
+    "pinyin": "shī fu",
+    "meaning": "기사님 (호칭), 스승",
+    "example_zh": "师傅，去火车站多少钱？",
+    "example_ko": "기사님, 기차역까지 얼마예요?",
+    "example_pinyin": "shī fù ， qù huǒ chē zhàn duō shǎo qián ？"
+  },
+  {
+    "id": 689,
+    "chinese": "湿润",
+    "pinyin": "shī rùn",
+    "meaning": "촉촉하다, 습하다",
+    "example_zh": "南方的气候比较湿润，皮肤不容易干燥。",
+    "example_ko": "남방은 기후가 비교적 습해서 피부가 잘 건조해지지 않아.",
+    "example_pinyin": "nán fāng de qì hòu bǐ jiào shī rùn ， pí fū bù róng yì gān zào 。"
+  },
+  {
+    "id": 690,
+    "chinese": "狮子",
+    "pinyin": "shī zi",
+    "meaning": "사자",
+    "example_zh": "狮子是非洲草原上的顶级猎食者。",
+    "example_ko": "사자는 아프리카 초원의 최상위 포식자야.",
+    "example_pinyin": "shī zi shì fēi zhōu cǎo yuán shàng de dǐng jí liè shí zhě 。"
+  },
+  {
+    "id": 691,
+    "chinese": "十分",
+    "pinyin": "shí fēn",
+    "meaning": "매우, 아주",
+    "example_zh": "今天的表演十分精彩，观众都很满意。",
+    "example_ko": "오늘 공연이 매우 훌륭해서 관중들이 모두 만족했어.",
+    "example_pinyin": "jīn tiān de biǎo yǎn shí fēn jīng cǎi ， guān zhòng dōu hěn mǎn yì 。"
+  },
+  {
+    "id": 692,
+    "chinese": "实际",
+    "pinyin": "shí jì",
+    "meaning": "실제, 현실",
+    "example_zh": "理想很美好，但实际情况可能不一样。",
+    "example_ko": "이상은 아름답지만 실제 상황은 다를 수 있어.",
+    "example_pinyin": "lǐ xiǎng hěn měi hǎo ， dàn shí jì qíng kuàng kě néng bù yí yàng 。"
+  },
+  {
+    "id": 693,
+    "chinese": "实在",
+    "pinyin": "shí zài",
+    "meaning": "정말로, 솔직히",
+    "example_zh": "这件事实在太难了，我一个人做不来。",
+    "example_ko": "이 일은 정말로 너무 어려워서 혼자서는 못 하겠어.",
+    "example_pinyin": "zhè jiàn shì shí zài tài nán le ， wǒ yí gè rén zuò bù lái 。"
+  },
+  {
+    "id": 694,
+    "chinese": "食品",
+    "pinyin": "shí pǐn",
+    "meaning": "식품, 식료품",
+    "example_zh": "超市里有各种各样的食品，价格也很实惠。",
+    "example_ko": "슈퍼마켓에 여러 종류의 식품이 있고 가격도 합리적이야.",
+    "example_pinyin": "chāo shì lǐ yǒu gè zhǒng gè yàng de shí pǐn ， jià gé yě hěn shí huì 。"
+  },
+  {
+    "id": 695,
+    "chinese": "使用",
+    "pinyin": "shǐ yòng",
+    "meaning": "사용하다",
+    "example_zh": "这款软件很容易使用，初学者也没有问题。",
+    "example_ko": "이 소프트웨어는 사용하기 쉬워서 초보자도 문제없어.",
+    "example_pinyin": "zhè kuǎn ruǎn jiàn hěn róng yì shǐ yòng ， chū xué zhě yě méi yǒu wèn tí 。"
+  },
+  {
+    "id": 696,
+    "chinese": "试",
+    "pinyin": "shì",
+    "meaning": "해보다, 시도해보다",
+    "example_zh": "先试一试，不行的话再换别的方法。",
+    "example_ko": "먼저 해봐, 안 되면 다른 방법으로 바꾸면 돼.",
+    "example_pinyin": "xiān shì yī shì ， bù xíng de huà zài huàn bié de fāng fǎ 。"
+  },
+  {
+    "id": 697,
+    "chinese": "市场",
+    "pinyin": "shì chǎng",
+    "meaning": "시장",
+    "example_zh": "周末去市场买了很多新鲜的蔬菜和水果。",
+    "example_ko": "주말에 시장 가서 신선한 채소랑 과일을 많이 샀어.",
+    "example_pinyin": "zhōu mò qù shì chǎng mǎi le hěn duō xīn xiān de shū cài hé shuǐ guǒ 。"
+  },
+  {
+    "id": 698,
+    "chinese": "世纪",
+    "pinyin": "shì jì",
+    "meaning": "세기",
+    "example_zh": "二十一世纪是信息技术高速发展的时代。",
+    "example_ko": "21세기는 정보 기술이 빠르게 발전하는 시대야.",
+    "example_pinyin": "èr shí yī shì jì shì xìn xī jì shù gāo sù fā zhǎn de shí dài 。"
+  },
+  {
+    "id": 699,
+    "chinese": "适合",
+    "pinyin": "shì hé",
+    "meaning": "어울리다, 적합하다",
+    "example_zh": "这种颜色很适合你，穿起来很好看。",
+    "example_ko": "이 색이 너한테 잘 어울려, 입으면 예뻐.",
+    "example_pinyin": "zhè zhǒng yán sè hěn shì hé nǐ ， chuān qǐ lái hěn hǎo kàn 。"
+  },
+  {
+    "id": 700,
+    "chinese": "适应",
+    "pinyin": "shì yìng",
+    "meaning": "적응하다",
+    "example_zh": "刚来新公司时，需要一段时间适应工作环境。",
+    "example_ko": "새 회사에 처음 왔을 때 업무 환경에 적응하는 데 시간이 좀 걸려.",
+    "example_pinyin": "gāng lái xīn gōng sī shí ， xū yào yī duàn shí jiān shì yìng gōng zuò huán jìng 。"
+  },
+  {
+    "id": 701,
+    "chinese": "收",
+    "pinyin": "shōu",
+    "meaning": "받다, 수거하다",
+    "example_zh": "快递员来了，你去门口收一下包裹。",
+    "example_ko": "택배 기사가 왔어, 문 앞에 나가서 소포 받아와.",
+    "example_pinyin": "kuài dì yuán lái le ， nǐ qù mén kǒu shōu yī xià bāo guǒ 。"
+  },
+  {
+    "id": 702,
+    "chinese": "收入",
+    "pinyin": "shōu rù",
+    "meaning": "수입, 소득",
+    "example_zh": "他换了新工作，收入比以前高了很多。",
+    "example_ko": "그가 새 직장으로 바꾸고 나서 수입이 예전보다 많이 올랐어.",
+    "example_pinyin": "tā huàn le xīn gōng zuò ， shōu rù bǐ yǐ qián gāo le hěn duō 。"
+  },
+  {
+    "id": 703,
+    "chinese": "收拾",
+    "pinyin": "shōu shi",
+    "meaning": "정리하다, 치우다",
+    "example_zh": "出发前把行李收拾好，不要落下什么东西。",
+    "example_ko": "출발 전에 짐을 잘 정리해, 빠뜨리는 거 없게.",
+    "example_pinyin": "chū fā qián bǎ xíng lǐ shōu shí hǎo ， bú yào là xià shén me dōng xī 。"
+  },
+  {
+    "id": 704,
+    "chinese": "首都",
+    "pinyin": "shǒu dū",
+    "meaning": "수도",
+    "example_zh": "北京是中国的首都，也是文化和政治中心。",
+    "example_ko": "베이징은 중국의 수도이자 문화와 정치의 중심이야.",
+    "example_pinyin": "běi jīng shì zhōng guó de shǒu dū ， yě shì wén huà hé zhèng zhì zhōng xīn 。"
+  },
+  {
+    "id": 705,
+    "chinese": "首先",
+    "pinyin": "shǒu xiān",
+    "meaning": "우선, 먼저",
+    "example_zh": "首先感谢大家的参与，接下来我来介绍一下今天的活动内容。",
+    "example_ko": "우선 모두의 참여에 감사드리고, 이제 오늘 활동 내용을 소개할게요.",
+    "example_pinyin": "shǒu xiān gǎn xiè dà jiā de cān yù ， jiē xià lái wǒ lái jiè shào yī xià jīn tiān de huó dòng nèi róng 。"
+  },
+  {
+    "id": 706,
+    "chinese": "受不了",
+    "pinyin": "shòu bù liǎo",
+    "meaning": "견딜 수 없다",
+    "example_zh": "这里夏天太热了，真的受不了。",
+    "example_ko": "여기 여름이 너무 더워서 정말 못 버티겠어.",
+    "example_pinyin": "zhè lǐ xià tiān tài rè le ， zhēn de shòu bù liǎo 。"
+  },
+  {
+    "id": 707,
+    "chinese": "受到",
+    "pinyin": "shòu dào",
+    "meaning": "받다, 당하다",
+    "example_zh": "这次他受到了严厉的批评，以后肯定会注意。",
+    "example_ko": "이번에 그가 심한 비판을 받아서 앞으로 분명 조심할 거야.",
+    "example_pinyin": "zhè cì tā shòu dào le yán lì de pī píng ， yǐ hòu kěn dìng huì zhù yì 。"
+  },
+  {
+    "id": 708,
+    "chinese": "售货员",
+    "pinyin": "shòu huò yuán",
+    "meaning": "판매원",
+    "example_zh": "售货员热情地向我介绍了这款手机的特点。",
+    "example_ko": "판매원이 친절하게 이 핸드폰의 특징을 소개해줬어.",
+    "example_pinyin": "shòu huò yuán rè qíng dì xiàng wǒ jiè shào le zhè kuǎn shǒu jī de tè diǎn 。"
+  },
+  {
+    "id": 709,
+    "chinese": "输",
+    "pinyin": "shū",
+    "meaning": "지다, 패하다",
+    "example_zh": "这场比赛我们队输了，但大家都尽力了。",
+    "example_ko": "이번 경기에서 우리 팀이 졌지만 모두 최선을 다했어.",
+    "example_pinyin": "zhè chǎng bǐ sài wǒ men duì shū le ， dàn dà jiā dōu jìn lì le 。"
+  },
+  {
+    "id": 710,
+    "chinese": "熟悉",
+    "pinyin": "shú xī",
+    "meaning": "잘 알다, 익숙하다",
+    "example_zh": "他对这个城市非常熟悉，不需要地图。",
+    "example_ko": "그는 이 도시를 잘 알아서 지도가 필요 없어.",
+    "example_pinyin": "tā duì zhè ge chéng shì fēi cháng shú xī ， bù xū yào dì tú 。"
+  },
+  {
+    "id": 711,
+    "chinese": "数量",
+    "pinyin": "shù liàng",
+    "meaning": "수량",
+    "example_zh": "请确认一下订单中商品的数量是否正确。",
+    "example_ko": "주문서의 상품 수량이 맞는지 확인해줘.",
+    "example_pinyin": "qǐng què rèn yī xià dìng dān zhōng shāng pǐn de shù liàng shì fǒu zhèng què 。"
+  },
+  {
+    "id": 712,
+    "chinese": "数字",
+    "pinyin": "shù zì",
+    "meaning": "숫자",
+    "example_zh": "这道题的答案是一个数字，好好算一下。",
+    "example_ko": "이 문제의 답은 숫자야, 잘 계산해봐.",
+    "example_pinyin": "zhè dào tí de dá àn shì yí gè shù zì ， hǎo hǎo suàn yī xià 。"
+  },
+  {
+    "id": 713,
+    "chinese": "帅",
+    "pinyin": "shuài",
+    "meaning": "잘생기다, 멋있다",
+    "example_zh": "他不仅帅，而且很有才华，很受欢迎。",
+    "example_ko": "그는 잘생겼을 뿐만 아니라 재능도 있어서 인기가 많아.",
+    "example_pinyin": "tā bù jǐn shuài ， ér qiě hěn yǒu cái huá ， hěn shòu huān yíng 。"
+  },
+  {
+    "id": 714,
+    "chinese": "顺便",
+    "pinyin": "shùn biàn",
+    "meaning": "겸사겸사, 하는 김에",
+    "example_zh": "顺便帮我买一瓶水，谢谢！",
+    "example_ko": "하는 김에 물 한 병도 사다줘, 고마워!",
+    "example_pinyin": "shùn biàn bāng wǒ mǎi yī píng shuǐ ， xiè xiè ！"
+  },
+  {
+    "id": 715,
+    "chinese": "顺利",
+    "pinyin": "shùn lì",
+    "meaning": "순조롭다, 순탄하다",
+    "example_zh": "希望这次出行一切顺利，平安回来。",
+    "example_ko": "이번 여행이 모든 게 순조롭기 바라고, 무사히 돌아와.",
+    "example_pinyin": "xī wàng zhè cì chū xíng yī qiè shùn lì ， píng ān huí lái 。"
+  },
+  {
+    "id": 716,
+    "chinese": "顺序",
+    "pinyin": "shùn xù",
+    "meaning": "순서",
+    "example_zh": "做事情要按照一定的顺序来，不能乱来。",
+    "example_ko": "일을 할 때는 정해진 순서에 따라야 해, 함부로 하면 안 돼.",
+    "example_pinyin": "zuò shì qíng yào àn zhào yí dìng de shùn xù lái ， bù néng luàn lái 。"
+  },
+  {
+    "id": 717,
+    "chinese": "说明",
+    "pinyin": "shuō míng",
+    "meaning": "설명하다",
+    "example_zh": "请说明一下这个产品的使用方法。",
+    "example_ko": "이 제품의 사용 방법을 설명해주세요.",
+    "example_pinyin": "qǐng shuō míng yī xià zhè ge chǎn pǐn de shǐ yòng fāng fǎ 。"
+  },
+  {
+    "id": 718,
+    "chinese": "硕士",
+    "pinyin": "shuò shì",
+    "meaning": "석사",
+    "example_zh": "她拿到了硕士学位，准备继续读博士。",
+    "example_ko": "그녀는 석사 학위를 받고 박사 과정을 계속할 준비를 하고 있어.",
+    "example_pinyin": "tā ná dào le shuò shì xué wèi ， zhǔn bèi jì xù dú bó shì 。"
+  },
+  {
+    "id": 719,
+    "chinese": "死",
+    "pinyin": "sǐ",
+    "meaning": "죽다, 극도로 (강조)",
+    "example_zh": "我今天累死了，一回家就想睡觉。",
+    "example_ko": "나 오늘 너무 지쳤어, 집에 오자마자 자고 싶어.",
+    "example_pinyin": "wǒ jīn tiān lèi sǐ le ， yī huí jiā jiù xiǎng shuì jiào 。"
+  },
+  {
+    "id": 720,
+    "chinese": "速度",
+    "pinyin": "sù dù",
+    "meaning": "속도",
+    "example_zh": "高铁的速度很快，两个城市之间只需要两小时。",
+    "example_ko": "고속철도 속도가 빨라서 두 도시 사이가 두 시간밖에 안 걸려.",
+    "example_pinyin": "gāo tiě de sù dù hěn kuài ， liǎng gè chéng shì zhī jiān zhǐ xū yào liǎng xiǎo shí 。"
+  },
+  {
+    "id": 721,
+    "chinese": "塑料袋",
+    "pinyin": "sù liào dài",
+    "meaning": "비닐봉투",
+    "example_zh": "超市开始收费使用塑料袋，要自备购物袋。",
+    "example_ko": "슈퍼마켓에서 비닐봉투를 유료로 사용하게 됐어, 장바구니를 직접 챙겨야 해.",
+    "example_pinyin": "chāo shì kāi shǐ shōu fèi shǐ yòng sù liào dài ， yào zì bèi gòu wù dài 。"
+  },
+  {
+    "id": 722,
+    "chinese": "酸",
+    "pinyin": "suān",
+    "meaning": "시다, 쑤시다",
+    "example_zh": "这个柠檬汁太酸了，我有点喝不下去。",
+    "example_ko": "이 레몬 주스 너무 셔서 좀 마시기 힘들어.",
+    "example_pinyin": "zhè ge níng méng zhī tài suān le ， wǒ yǒu diǎn hē bù xià qù 。"
+  },
+  {
+    "id": 723,
+    "chinese": "算",
+    "pinyin": "suàn",
+    "meaning": "계산하다, ~로 치다",
+    "example_zh": "这道题算出来的答案是二十。",
+    "example_ko": "이 문제를 계산하면 답이 20이야.",
+    "example_pinyin": "zhè dào tí suàn chū lái de dá àn shì èr shí 。"
+  },
+  {
+    "id": 724,
+    "chinese": "随便",
+    "pinyin": "suí biàn",
+    "meaning": "마음대로, 아무거나",
+    "example_zh": "今天我请客，大家随便点，不用客气。",
+    "example_ko": "오늘 내가 쏠게, 다들 마음대로 시켜, 사양하지 마.",
+    "example_pinyin": "jīn tiān wǒ qǐng kè ， dà jiā suí biàn diǎn ， bù yòng kè qì 。"
+  },
+  {
+    "id": 725,
+    "chinese": "随着",
+    "pinyin": "suí zhe",
+    "meaning": "~에 따라, ~와 함께",
+    "example_zh": "随着年龄增长，他对事情的看法也变了。",
+    "example_ko": "나이가 들면서 그는 사물을 바라보는 시각도 변했어.",
+    "example_pinyin": "suí zhe nián líng zēng zhǎng ， tā duì shì qíng de kàn fǎ yě biàn le 。"
+  },
+  {
+    "id": 726,
+    "chinese": "孙子",
+    "pinyin": "sūn zi",
+    "meaning": "손자",
+    "example_zh": "爷爷奶奶最喜欢和孙子一起玩。",
+    "example_ko": "할아버지 할머니는 손자랑 놀 때가 제일 좋대.",
+    "example_pinyin": "yé yé nǎi nǎi zuì xǐ huān hé sūn zi yì qǐ wán 。"
+  },
+  {
+    "id": 727,
+    "chinese": "所有",
+    "pinyin": "suǒ yǒu",
+    "meaning": "모든, 소유하다",
+    "example_zh": "所有的努力都会有回报，不要放弃。",
+    "example_ko": "모든 노력은 보답이 있을 거야, 포기하지 마.",
+    "example_pinyin": "suǒ yǒu de nǔ lì dū huì yǒu huí bào ， bú yào fàng qì 。"
+  },
+  {
+    "id": 728,
+    "chinese": "抬",
+    "pinyin": "tái",
+    "meaning": "들어올리다",
+    "example_zh": "帮我把这个箱子抬到楼上去，谢谢。",
+    "example_ko": "이 상자를 위층으로 들어 올려줄 수 있어? 고마워.",
+    "example_pinyin": "bāng wǒ bǎ zhè ge xiāng zi tái dào lóu shàng qù ， xiè xiè 。"
+  },
+  {
+    "id": 729,
+    "chinese": "台",
+    "pinyin": "tái",
+    "meaning": "대 (기계 양사)",
+    "example_zh": "桌上有一台电脑。",
+    "example_ko": "책상 위에 컴퓨터 한 대가 있어.",
+    "example_pinyin": "zhuō shàng yǒu yī tái diàn nǎo 。"
+  },
+  {
+    "id": 730,
+    "chinese": "态度",
+    "pinyin": "tài du",
+    "meaning": "태도",
+    "example_zh": "他对客户的服务态度非常好，客户都很满意。",
+    "example_ko": "그의 고객 서비스 태도가 정말 좋아서 고객들이 모두 만족해.",
+    "example_pinyin": "tā duì kè hù de fú wù tài dù fēi cháng hǎo ， kè hù dōu hěn mǎn yì 。"
+  },
+  {
+    "id": 731,
+    "chinese": "谈",
+    "pinyin": "tán",
+    "meaning": "이야기하다, 담화",
+    "example_zh": "他们在咖啡店谈了两个小时，讨论了很多问题。",
+    "example_ko": "그들은 카페에서 두 시간 동안 이야기하면서 많은 문제를 논의했어.",
+    "example_pinyin": "tā men zài kā fēi diàn tán le liǎng gè xiǎo shí ， tǎo lùn le hěn duō wèn tí 。"
+  },
+  {
+    "id": 732,
+    "chinese": "弹",
+    "pinyin": "tán",
+    "meaning": "(악기를) 연주하다",
+    "example_zh": "她从小学习弹钢琴，现在弹得非常好。",
+    "example_ko": "그녀는 어릴 때부터 피아노를 배워서 지금은 정말 잘 쳐.",
+    "example_pinyin": "tā cóng xiǎo xué xí tán gāng qín ， xiàn zài dàn dé fēi cháng hǎo 。"
+  },
+  {
+    "id": 733,
+    "chinese": "汤",
+    "pinyin": "tāng",
+    "meaning": "국, 탕",
+    "example_zh": "妈妈做的鸡汤真鲜，喝了心里暖暖的。",
+    "example_ko": "엄마가 끓인 닭백숙이 정말 시원해서 마시면 마음까지 따뜻해져.",
+    "example_pinyin": "mā mā zuò de jī tāng zhēn xiān ， hē le xīn lǐ nuǎn nuǎn de 。"
+  },
+  {
+    "id": 734,
+    "chinese": "躺",
+    "pinyin": "tǎng",
+    "meaning": "눕다",
+    "example_zh": "工作了一天，回来就想躺在床上休息一下。",
+    "example_ko": "하루 종일 일하고 오니 침대에 누워서 쉬고 싶어.",
+    "example_pinyin": "gōng zuò le yī tiān ， huí lái jiù xiǎng tǎng zài chuáng shàng xiū xī yī xià 。"
+  },
+  {
+    "id": 735,
+    "chinese": "趟",
+    "pinyin": "tàng",
+    "meaning": "번, 차례 (왕복 양사)",
+    "example_zh": "我去年去了两趟北京，每次都觉得不够看。",
+    "example_ko": "작년에 베이징을 두 번 갔는데 매번 다 못 볼 것 같았어.",
+    "example_pinyin": "wǒ qù nián qù le liǎng tàng běi jīng ， měi cì dōu jué de bù gòu kàn 。"
+  },
+  {
+    "id": 736,
+    "chinese": "讨论",
+    "pinyin": "tǎo lùn",
+    "meaning": "토론하다",
+    "example_zh": "课后大家讨论了这个话题，提出了很多好的建议。",
+    "example_ko": "수업 후 모두가 이 주제를 토론하면서 좋은 의견들을 많이 내놨어.",
+    "example_pinyin": "kè hòu dà jiā tǎo lùn le zhè ge huà tí ， tí chū le hěn duō hǎo de jiàn yì 。"
+  },
+  {
+    "id": 737,
+    "chinese": "讨厌",
+    "pinyin": "tǎo yàn",
+    "meaning": "싫다, 귀찮다",
+    "example_zh": "我最讨厌的就是堵车，真的很浪费时间。",
+    "example_ko": "내가 제일 싫은 건 교통 체증이야, 시간 낭비가 심해.",
+    "example_pinyin": "wǒ zuì tǎo yàn de jiù shì dǔ chē ， zhēn de hěn làng fèi shí jiān 。"
+  },
+  {
+    "id": 738,
+    "chinese": "特点",
+    "pinyin": "tè diǎn",
+    "meaning": "특징, 특점",
+    "example_zh": "这个品牌的特点是价格实惠、质量好。",
+    "example_ko": "이 브랜드의 특징은 가격이 합리적이고 품질이 좋다는 거야.",
+    "example_pinyin": "zhè ge pǐn pái de tè diǎn shì jià gé shí huì 、 zhì liàng hǎo 。"
+  },
+  {
+    "id": 739,
+    "chinese": "提供",
+    "pinyin": "tí gōng",
+    "meaning": "제공하다",
+    "example_zh": "公司为员工提供免费的午餐。",
+    "example_ko": "회사에서 직원들에게 무료 점심을 제공해.",
+    "example_pinyin": "gōng sī wèi yuán gōng tí gōng miǎn fèi de wǔ cān 。"
+  },
+  {
+    "id": 740,
+    "chinese": "提前",
+    "pinyin": "tí qián",
+    "meaning": "앞당기다, 미리",
+    "example_zh": "会议提前到了周五，大家注意一下时间。",
+    "example_ko": "회의가 금요일로 앞당겨졌으니 모두 시간 확인해.",
+    "example_pinyin": "huì yì tí qián dào le zhōu wǔ ， dà jiā zhù yì yī xià shí jiān 。"
+  },
+  {
+    "id": 741,
+    "chinese": "提醒",
+    "pinyin": "tí xǐng",
+    "meaning": "상기시키다, 일깨우다",
+    "example_zh": "谢谢你提醒我，要不然我差点忘了。",
+    "example_ko": "일깨워줘서 고마워, 아니었으면 까먹을 뻔했어.",
+    "example_pinyin": "xiè xiè nǐ tí xǐng wǒ ， yào bù rán wǒ chà diǎn wàng le 。"
+  },
+  {
+    "id": 742,
+    "chinese": "填空",
+    "pinyin": "tián kòng",
+    "meaning": "빈칸 채우기",
+    "example_zh": "这道填空题很难，我不知道应该填什么。",
+    "example_ko": "이 빈칸 채우기 문제 너무 어려워서 뭘 써야 할지 모르겠어.",
+    "example_pinyin": "zhè dào tián kòng tí hěn nán ， wǒ bù zhī dào yīng gāi tián shén me 。"
+  },
+  {
+    "id": 743,
+    "chinese": "条件",
+    "pinyin": "tiáo jiàn",
+    "meaning": "조건, 상황",
+    "example_zh": "这份工作的条件很好，薪资高、福利也好。",
+    "example_ko": "이 직장 조건이 좋아, 연봉도 높고 복지도 좋아.",
+    "example_pinyin": "zhè fèn gōng zuò de tiáo jiàn hěn hǎo ， xīn zī gāo 、 fú lì yě hǎo 。"
+  },
+  {
+    "id": 744,
+    "chinese": "停止",
+    "pinyin": "tíng zhǐ",
+    "meaning": "멈추다, 중단하다",
+    "example_zh": "下雨了，他停止了跑步，回家了。",
+    "example_ko": "비가 오자 그는 달리기를 멈추고 집으로 돌아갔어.",
+    "example_pinyin": "xià yǔ le ， tā tíng zhǐ le pǎo bù ， huí jiā le 。"
+  },
+  {
+    "id": 745,
+    "chinese": "挺",
+    "pinyin": "tǐng",
+    "meaning": "꽤, 상당히",
+    "example_zh": "这家餐厅的菜挺好吃的，下次再来。",
+    "example_ko": "이 식당 음식이 꽤 맛있어, 다음에 또 오자.",
+    "example_pinyin": "zhè jiā cān tīng de cài tǐng hǎo chī de ， xià cì zài lái 。"
+  },
+  {
+    "id": 746,
+    "chinese": "通过",
+    "pinyin": "tōng guò",
+    "meaning": "통과하다, ~를 통해",
+    "example_zh": "他通过努力学习，最终考上了名牌大学。",
+    "example_ko": "그는 열심히 공부해서 결국 명문대에 합격했어.",
+    "example_pinyin": "tā tōng guò nǔ lì xué xí ， zuì zhōng kǎo shàng le míng pái dà xué 。"
+  },
+  {
+    "id": 747,
+    "chinese": "通知",
+    "pinyin": "tōng zhī",
+    "meaning": "알리다, 통지",
+    "example_zh": "公司通知大家，明天下午两点开会。",
+    "example_ko": "회사에서 내일 오후 2시에 회의한다고 모두에게 알렸어.",
+    "example_pinyin": "gōng sī tōng zhī dà jiā ， míng tiān xià wǔ liǎng diǎn kāi huì 。"
+  },
+  {
+    "id": 748,
+    "chinese": "同情",
+    "pinyin": "tóng qíng",
+    "meaning": "동정하다, 불쌍히 여기다",
+    "example_zh": "大家都很同情他的遭遇，纷纷伸出援手。",
+    "example_ko": "다들 그의 처지를 동정해서 너나 할 것 없이 도움의 손을 내밀었어.",
+    "example_pinyin": "dà jiā dōu hěn tóng qíng tā de zāo yù ， fēn fēn shēn chū yuán shǒu 。"
+  },
+  {
+    "id": 749,
+    "chinese": "推",
+    "pinyin": "tuī",
+    "meaning": "밀다",
+    "example_zh": "门是推开的，不是拉开的，注意一下。",
+    "example_ko": "문은 미는 거야, 당기는 게 아니야, 주의해.",
+    "example_pinyin": "mén shì tuī kāi de ， bú shì lā kāi de ， zhù yì yī xià 。"
+  },
+  {
+    "id": 750,
+    "chinese": "推迟",
+    "pinyin": "tuī chí",
+    "meaning": "미루다, 연기하다",
+    "example_zh": "由于下雨，运动会推迟到下周举行。",
+    "example_ko": "비 때문에 운동회가 다음 주로 미뤄졌어.",
+    "example_pinyin": "yóu yú xià yǔ ， yùn dòng huì tuī chí dào xià zhōu jǔ xíng 。"
+  },
+  {
+    "id": 751,
+    "chinese": "脱",
+    "pinyin": "tuō",
+    "meaning": "벗다",
+    "example_zh": "进门前请脱鞋，谢谢配合。",
+    "example_ko": "들어오기 전에 신발 벗어주세요, 협조 감사합니다.",
+    "example_pinyin": "jìn mén qián qǐng tuō xié ， xiè xiè pèi hé 。"
+  },
+  {
+    "id": 752,
+    "chinese": "袜子",
+    "pinyin": "wà zi",
+    "meaning": "양말",
+    "example_zh": "出门前检查一下，袜子有没有穿反。",
+    "example_ko": "나가기 전에 양말 뒤집어 신지 않았는지 확인해봐.",
+    "example_pinyin": "chū mén qián jiǎn chá yī xià ， wà zi yǒu méi yǒu chuān fǎn 。"
+  },
+  {
+    "id": 753,
+    "chinese": "完全",
+    "pinyin": "wán quán",
+    "meaning": "완전히, 전혀",
+    "example_zh": "他说的话我完全听不懂，可能是方言。",
+    "example_ko": "그가 하는 말을 전혀 못 알아들었어, 아마 사투리인 것 같아.",
+    "example_pinyin": "tā shuō de huà wǒ wán quán tīng bù dǒng ， kě néng shì fāng yán 。"
+  },
+  {
+    "id": 754,
+    "chinese": "往",
+    "pinyin": "wǎng",
+    "meaning": "~쪽으로, ~를 향해",
+    "example_zh": "一直往前走，到了红绿灯往左转。",
+    "example_ko": "쭉 앞으로 가다가 신호등에서 왼쪽으로 꺾어.",
+    "example_pinyin": "yì zhí wǎng qián zǒu ， dào le hóng lǜ dēng wǎng zuǒ zhuǎn 。"
+  },
+  {
+    "id": 755,
+    "chinese": "往往",
+    "pinyin": "wǎng wǎng",
+    "meaning": "종종, 자주",
+    "example_zh": "他往往在深夜才开始工作，这是他的习惯。",
+    "example_ko": "그는 종종 한밤중이 되어서야 일을 시작하는데, 그게 그의 습관이야.",
+    "example_pinyin": "tā wǎng wǎng zài shēn yè cái kāi shǐ gōng zuò ， zhè shì tā de xí guàn 。"
+  },
+  {
+    "id": 756,
+    "chinese": "网球",
+    "pinyin": "wǎng qiú",
+    "meaning": "테니스",
+    "example_zh": "她每周打两次网球，身材一直保持得很好。",
+    "example_ko": "그녀는 매주 두 번 테니스를 쳐서 몸매를 항상 잘 유지해.",
+    "example_pinyin": "tā měi zhōu dǎ liǎng cì wǎng qiú ， shēn cái yì zhí bǎo chí dé hěn hǎo 。"
+  },
+  {
+    "id": 757,
+    "chinese": "网站",
+    "pinyin": "wǎng zhàn",
+    "meaning": "웹사이트",
+    "example_zh": "这个网站提供很多免费的学习资料。",
+    "example_ko": "이 웹사이트는 무료 학습 자료를 많이 제공해.",
+    "example_pinyin": "zhè ge wǎng zhàn tí gōng hěn duō miǎn fèi de xué xí zī liào 。"
+  },
+  {
+    "id": 758,
+    "chinese": "危险",
+    "pinyin": "wēi xiǎn",
+    "meaning": "위험하다",
+    "example_zh": "雨天路滑，骑车要特别注意，很危险。",
+    "example_ko": "비 오는 날은 길이 미끄러워서 자전거 탈 때 특히 조심해야 해, 위험해.",
+    "example_pinyin": "yǔ tiān lù huá ， qí chē yào tè bié zhù yì ， hěn wēi xiǎn 。"
+  },
+  {
+    "id": 759,
+    "chinese": "味道",
+    "pinyin": "wèi dao",
+    "meaning": "맛, 냄새",
+    "example_zh": "这道菜味道很特别，我以前没有吃过。",
+    "example_ko": "이 요리 맛이 정말 독특해서 전에 먹어본 적이 없어.",
+    "example_pinyin": "zhè dào cài wèi dào hěn tè bié ， wǒ yǐ qián méi yǒu chī guò 。"
+  },
+  {
+    "id": 760,
+    "chinese": "温度",
+    "pinyin": "wēn dù",
+    "meaning": "온도",
+    "example_zh": "今天温度比昨天低了五度，记得多穿点。",
+    "example_ko": "오늘 온도가 어제보다 5도 낮아졌으니 옷 더 입는 거 잊지 마.",
+    "example_pinyin": "jīn tiān wēn dù bǐ zuó tiān dī le wǔ dù ， jì de duō chuān diǎn 。"
+  },
+  {
+    "id": 761,
+    "chinese": "文章",
+    "pinyin": "wén zhāng",
+    "meaning": "글, 문장",
+    "example_zh": "他的文章写得很流畅，读起来很舒服。",
+    "example_ko": "그의 글은 유창하게 잘 써서 읽기 편해.",
+    "example_pinyin": "tā de wén zhāng xiě dé hěn liú chàng ， dú qǐ lái hěn shū fú 。"
+  },
+  {
+    "id": 762,
+    "chinese": "握手",
+    "pinyin": "wò shǒu",
+    "meaning": "악수하다",
+    "example_zh": "两国领导人握手，表示友好合作。",
+    "example_ko": "두 나라 지도자가 악수하면서 우호적인 협력을 표시했어.",
+    "example_pinyin": "liǎng guó lǐng dǎo rén wò shǒu ， biǎo shì yǒu hǎo hé zuò 。"
+  },
+  {
+    "id": 763,
+    "chinese": "污染",
+    "pinyin": "wū rǎn",
+    "meaning": "오염하다",
+    "example_zh": "工厂排出的废水污染了附近的河流。",
+    "example_ko": "공장에서 방류한 폐수가 근처 강을 오염시켰어.",
+    "example_pinyin": "gōng chǎng pái chū de fèi shuǐ wū rǎn le fù jìn de hé liú 。"
+  },
+  {
+    "id": 764,
+    "chinese": "无",
+    "pinyin": "wú",
+    "meaning": "없다, ~이 없다",
+    "example_zh": "这里空无一人。",
+    "example_ko": "여기에는 아무도 없어.",
+    "example_pinyin": "zhè lǐ kōng wú yì rén 。"
+  },
+  {
+    "id": 765,
+    "chinese": "无聊",
+    "pinyin": "wú liáo",
+    "meaning": "심심하다, 지루하다",
+    "example_zh": "没有手机的时候，感觉特别无聊。",
+    "example_ko": "핸드폰이 없을 때 너무 심심해.",
+    "example_pinyin": "méi yǒu shǒu jī de shí hòu ， gǎn jué tè bié wú liáo 。"
+  },
+  {
+    "id": 766,
+    "chinese": "无论",
+    "pinyin": "wú lùn",
+    "meaning": "~에 상관없이, ~을 막론하고",
+    "example_zh": "无论遇到什么困难，都要坚持下去。",
+    "example_ko": "어떤 어려움을 만나더라도 꿋꿋이 버텨야 해.",
+    "example_pinyin": "wú lùn yù dào shén me kùn nán ， dōu yào jiān chí xià qù 。"
+  },
+  {
+    "id": 767,
+    "chinese": "误会",
+    "pinyin": "wù huì",
+    "meaning": "오해하다",
+    "example_zh": "他误会了我的意思，其实我不是那个意思。",
+    "example_ko": "그가 내 말을 오해했는데 사실 나는 그런 뜻이 아니었어.",
+    "example_pinyin": "tā wù huì le wǒ de yì si ， qí shí wǒ bú shì nà ge yì si 。"
+  },
+  {
+    "id": 768,
+    "chinese": "西红柿",
+    "pinyin": "xī hóng shì",
+    "meaning": "토마토",
+    "example_zh": "西红柿炒鸡蛋是中国家常菜里最常见的一道。",
+    "example_ko": "토마토 달걀볶음은 중국 가정 요리에서 가장 흔한 요리 중 하나야.",
+    "example_pinyin": "xī hóng shì chǎo jī dàn shì zhōng guó jiā cháng cài lǐ zuì cháng jiàn de yī dào 。"
+  },
+  {
+    "id": 769,
+    "chinese": "吸引",
+    "pinyin": "xī yǐn",
+    "meaning": "끌다, 매혹하다",
+    "example_zh": "这个展览吸引了很多来自全国各地的游客。",
+    "example_ko": "이 전시회는 전국 각지에서 많은 관광객들을 끌어들였어.",
+    "example_pinyin": "zhè ge zhǎn lǎn xī yǐn le hěn duō lái zì quán guó gè dì de yóu kè 。"
+  },
+  {
+    "id": 770,
+    "chinese": "洗衣机",
+    "pinyin": "xǐ yī jī",
+    "meaning": "세탁기",
+    "example_zh": "洗衣机坏了，我得去洗衣店洗衣服了。",
+    "example_ko": "세탁기가 고장 났어, 세탁소에 빨래를 맡겨야겠어.",
+    "example_pinyin": "xǐ yī jī huài le ， wǒ dé qù xǐ yī diàn xǐ yī fú le 。"
+  },
+  {
+    "id": 771,
+    "chinese": "咸",
+    "pinyin": "xián",
+    "meaning": "짜다 (맛)",
+    "example_zh": "这道菜太咸了，下次少放一点盐。",
+    "example_ko": "이 요리 너무 짜, 다음에는 소금을 좀 덜 넣어.",
+    "example_pinyin": "zhè dào cài tài xián le ， xià cì shǎo fàng yì diǎn yán 。"
+  },
+  {
+    "id": 772,
+    "chinese": "现代",
+    "pinyin": "xiàn dài",
+    "meaning": "현대",
+    "example_zh": "现代社会，没有手机真的很不方便。",
+    "example_ko": "현대 사회에서 핸드폰 없이는 정말 불편해.",
+    "example_pinyin": "xiàn dài shè huì ， méi yǒu shǒu jī zhēn de hěn bù fāng biàn 。"
+  },
+  {
+    "id": 773,
+    "chinese": "羡慕",
+    "pinyin": "xiàn mù",
+    "meaning": "부러워하다",
+    "example_zh": "大家都羡慕他能出国留学。",
+    "example_ko": "다들 그가 해외 유학을 갈 수 있어서 부러워해.",
+    "example_pinyin": "dà jiā dōu xiàn mù tā néng chū guó liú xué 。"
+  },
+  {
+    "id": 774,
+    "chinese": "限制",
+    "pinyin": "xiàn zhì",
+    "meaning": "제한하다",
+    "example_zh": "这个停车场限制每天只能停八小时。",
+    "example_ko": "이 주차장은 하루에 8시간만 주차할 수 있도록 제한하고 있어.",
+    "example_pinyin": "zhè ge tíng chē chǎng xiàn zhì měi tiān zhǐ néng tíng bā xiǎo shí 。"
+  },
+  {
+    "id": 775,
+    "chinese": "香",
+    "pinyin": "xiāng",
+    "meaning": "향기롭다",
+    "example_zh": "这朵花很香，闻起来心情都好了。",
+    "example_ko": "이 꽃이 향기로워서 냄새 맡으니까 기분이 좋아졌어.",
+    "example_pinyin": "zhè duǒ huā hěn xiāng ， wén qǐ lái xīn qíng dōu hǎo le 。"
+  },
+  {
+    "id": 776,
+    "chinese": "相反",
+    "pinyin": "xiāng fǎn",
+    "meaning": "반대이다",
+    "example_zh": "他的想法和我的完全相反，我们总是争论。",
+    "example_ko": "그의 생각이 나와 완전히 반대라서 우리는 항상 논쟁해.",
+    "example_pinyin": "tā de xiǎng fǎ hé wǒ de wán quán xiāng fǎn ， wǒ men zǒng shì zhēng lùn 。"
+  },
+  {
+    "id": 777,
+    "chinese": "详细",
+    "pinyin": "xiáng xì",
+    "meaning": "자세하다, 상세하다",
+    "example_zh": "请详细说明一下这个项目的具体内容。",
+    "example_ko": "이 프로젝트의 구체적인 내용을 자세히 설명해줘.",
+    "example_pinyin": "qǐng xiáng xì shuō míng yī xià zhè ge xiàng mù dì jù tǐ nèi róng 。"
+  },
+  {
+    "id": 778,
+    "chinese": "响",
+    "pinyin": "xiǎng",
+    "meaning": "소리가 나다, (소리가) 크다",
+    "example_zh": "手机响了，你快去接一下。",
+    "example_ko": "핸드폰이 울리는데 빨리 받아봐.",
+    "example_pinyin": "shǒu jī xiǎng le ， nǐ kuài qù jiē yī xià 。"
+  },
+  {
+    "id": 779,
+    "chinese": "消息",
+    "pinyin": "xiāo xi",
+    "meaning": "소식, 정보",
+    "example_zh": "你有没有收到关于这次活动的消息？",
+    "example_ko": "이번 행사에 대한 소식 받았어?",
+    "example_pinyin": "nǐ yǒu méi yǒu shōu dào guān yú zhè cì huó dòng de xiāo xī ？"
+  },
+  {
+    "id": 780,
+    "chinese": "小说",
+    "pinyin": "xiǎo shuō",
+    "meaning": "소설",
+    "example_zh": "他最喜欢看推理小说，经常看到深夜。",
+    "example_ko": "그는 추리 소설을 제일 좋아해서 밤새 읽기 일쑤야.",
+    "example_pinyin": "tā zuì xǐ huān kàn tuī lǐ xiǎo shuō ， jīng cháng kàn dào shēn yè 。"
+  },
+  {
+    "id": 781,
+    "chinese": "笑话",
+    "pinyin": "xiào huà",
+    "meaning": "농담, 웃기다",
+    "example_zh": "他讲的笑话很好笑，把大家都逗乐了。",
+    "example_ko": "그가 한 농담이 너무 웃겨서 모두를 웃겼어.",
+    "example_pinyin": "tā jiǎng de xiào huà hěn hǎo xiào ， bǎ dà jiā dōu dòu lè le 。"
+  },
+  {
+    "id": 782,
+    "chinese": "效果",
+    "pinyin": "xiào guǒ",
+    "meaning": "효과",
+    "example_zh": "这种方法效果很好，我用了一个月就瘦了。",
+    "example_ko": "이 방법 효과가 너무 좋아, 한 달 썼더니 살이 빠졌어.",
+    "example_pinyin": "zhè zhǒng fāng fǎ xiào guǒ hěn hǎo ， wǒ yòng le yí gè yuè jiù shòu le 。"
+  },
+  {
+    "id": 783,
+    "chinese": "心情",
+    "pinyin": "xīn qíng",
+    "meaning": "기분, 마음",
+    "example_zh": "今天心情不好，什么都不想做。",
+    "example_ko": "오늘 기분이 안 좋아서 아무것도 하기 싫어.",
+    "example_pinyin": "jīn tiān xīn qíng bù hǎo ， shén me dōu bù xiǎng zuò 。"
+  },
+  {
+    "id": 784,
+    "chinese": "辛苦",
+    "pinyin": "xīn kǔ",
+    "meaning": "고생하다, 수고하다",
+    "example_zh": "你辛苦了，好好休息一下吧。",
+    "example_ko": "수고했어, 푹 쉬어.",
+    "example_pinyin": "nǐ xīn kǔ le ， hǎo hǎo xiū xī yī xià ba 。"
+  },
+  {
+    "id": 785,
+    "chinese": "信任",
+    "pinyin": "xìn rèn",
+    "meaning": "신뢰하다, 믿다",
+    "example_zh": "我非常信任他，所以把重要的事交给他去处理。",
+    "example_ko": "나는 그를 매우 신뢰해서 중요한 일을 그에게 맡겨 처리해.",
+    "example_pinyin": "wǒ fēi cháng xìn rèn tā ， suǒ yǐ bǎ zhòng yào de shì jiāo gěi tā qù chù lǐ 。"
+  },
+  {
+    "id": 786,
+    "chinese": "信心",
+    "pinyin": "xìn xīn",
+    "meaning": "자신감",
+    "example_zh": "经过多次练习，他的信心越来越足了。",
+    "example_ko": "여러 번 연습하고 나서 그의 자신감이 갈수록 강해졌어.",
+    "example_pinyin": "jīng guò duō cì liàn xí ， tā de xìn xīn yuè lái yuè zú le 。"
+  },
+  {
+    "id": 787,
+    "chinese": "信用卡",
+    "pinyin": "xìn yòng kǎ",
+    "meaning": "신용카드",
+    "example_zh": "现在很多地方都可以用信用卡付款，很方便。",
+    "example_ko": "요즘 많은 곳에서 신용카드로 결제할 수 있어서 편해.",
+    "example_pinyin": "xiàn zài hěn duō dì fāng dōu kě yǐ yòng xìn yòng kǎ fù kuǎn ， hěn fāng biàn 。"
+  },
+  {
+    "id": 788,
+    "chinese": "兴奋",
+    "pinyin": "xīng fèn",
+    "meaning": "흥분하다, 설레다",
+    "example_zh": "听说要去旅行，孩子们都兴奋地睡不着觉了。",
+    "example_ko": "여행 간다는 말을 듣고 아이들이 흥분해서 잠을 못 잔대.",
+    "example_pinyin": "tīng shuō yào qù lǚ xíng ， hái zi men dōu xīng fèn dì shuì bù zhe jué le 。"
+  },
+  {
+    "id": 789,
+    "chinese": "行",
+    "pinyin": "xíng",
+    "meaning": "괜찮다, 가능하다",
+    "example_zh": "这样做行吗？",
+    "example_ko": "이렇게 해도 될까?",
+    "example_pinyin": "zhè yàng zuò xíng ma ？"
+  },
+  {
+    "id": 790,
+    "chinese": "醒",
+    "pinyin": "xǐng",
+    "meaning": "깨다, 일어나다",
+    "example_zh": "我今天七点就醒了，睡得很好。",
+    "example_ko": "나 오늘 7시에 일어났어, 잘 잤어.",
+    "example_pinyin": "wǒ jīn tiān qī diǎn jiù xǐng le ， shuì dé hěn hǎo 。"
+  },
+  {
+    "id": 791,
+    "chinese": "性别",
+    "pinyin": "xìng bié",
+    "meaning": "성별",
+    "example_zh": "这份表格需要填写姓名、年龄和性别。",
+    "example_ko": "이 양식에는 이름, 나이, 성별을 기입해야 해.",
+    "example_pinyin": "zhè fèn biǎo gé xū yào tián xiě xìng míng 、 nián líng hé xìng bié 。"
+  },
+  {
+    "id": 792,
+    "chinese": "性格",
+    "pinyin": "xìng gé",
+    "meaning": "성격",
+    "example_zh": "她性格开朗，很容易和别人成为朋友。",
+    "example_ko": "그녀는 성격이 활달해서 다른 사람들과 친구가 되기 쉬워.",
+    "example_pinyin": "tā xìng gé kāi lǎng ， hěn róng yì hé bié rén chéng wéi péng yǒu 。"
+  },
+  {
+    "id": 793,
+    "chinese": "幸福",
+    "pinyin": "xìng fú",
+    "meaning": "행복하다",
+    "example_zh": "家人健康平安，就是最大的幸福。",
+    "example_ko": "가족이 건강하고 평안한 것이 가장 큰 행복이야.",
+    "example_pinyin": "jiā rén jiàn kāng píng ān ， jiù shì zuì dà de xìng fú 。"
+  },
+  {
+    "id": 794,
+    "chinese": "修",
+    "pinyin": "xiū",
+    "meaning": "수리하다, 고치다",
+    "example_zh": "手机屏幕裂了，需要拿去修一下。",
+    "example_ko": "핸드폰 화면이 갈라졌어, 수리하러 가야 해.",
+    "example_pinyin": "shǒu jī píng mù liè le ， xū yào ná qù xiū yī xià 。"
+  },
+  {
+    "id": 795,
+    "chinese": "许多",
+    "pinyin": "xǔ duō",
+    "meaning": "많은",
+    "example_zh": "图书馆里有许多关于历史的书籍。",
+    "example_ko": "도서관에 역사 관련 서적이 많아.",
+    "example_pinyin": "tú shū guǎn lǐ yǒu xǔ duō guān yú lì shǐ de shū jí 。"
+  },
+  {
+    "id": 796,
+    "chinese": "血",
+    "pinyin": "xuè",
+    "meaning": "피",
+    "example_zh": "他受伤了，流了很多血，需要立刻就医。",
+    "example_ko": "그가 다쳐서 피를 많이 흘렸어, 즉시 치료받아야 해.",
+    "example_pinyin": "tā shòu shāng le ， liú le hěn duō xuè ， xū yào lì kè jiù yī 。"
+  },
+  {
+    "id": 797,
+    "chinese": "压力",
+    "pinyin": "yā lì",
+    "meaning": "압박감, 스트레스",
+    "example_zh": "工作压力太大的时候，要找方法放松一下。",
+    "example_ko": "업무 스트레스가 너무 클 때는 긴장을 풀 방법을 찾아야 해.",
+    "example_pinyin": "gōng zuò yā lì tài dà de shí hòu ， yào zhǎo fāng fǎ fàng sōng yī xià 。"
+  },
+  {
+    "id": 798,
+    "chinese": "牙膏",
+    "pinyin": "yá gāo",
+    "meaning": "치약",
+    "example_zh": "牙膏用完了，出门记得买一支。",
+    "example_ko": "치약 다 썼어, 나갈 때 사오는 거 잊지 마.",
+    "example_pinyin": "yá gāo yòng wán le ， chū mén jì de mǎi yī zhī 。"
+  },
+  {
+    "id": 799,
+    "chinese": "亚洲",
+    "pinyin": "Yà zhōu",
+    "meaning": "아시아",
+    "example_zh": "亚洲是世界上面积最大的洲，人口也最多。",
+    "example_ko": "아시아는 세계에서 면적이 가장 크고 인구도 가장 많은 대륙이야.",
+    "example_pinyin": "yà zhōu shì shì jiè shàng miàn jī zuì dà de zhōu ， rén kǒu yě zuì duō 。"
+  },
+  {
+    "id": 800,
+    "chinese": "呀",
+    "pinyin": "ya",
+    "meaning": "(감탄사) 야, 어",
+    "example_zh": "呀，你的头发剪了！好看多了！",
+    "example_ko": "어, 머리 잘랐어! 훨씬 예쁘다!",
+    "example_pinyin": "ya ， nǐ de tóu fà jiǎn le ！ hǎo kàn duō le ！"
+  },
+  {
+    "id": 801,
+    "chinese": "盐",
+    "pinyin": "yán",
+    "meaning": "소금",
+    "example_zh": "做菜的时候要适量放盐，太咸不好。",
+    "example_ko": "요리할 때 소금은 적당량 넣어야 해, 너무 짜면 안 좋아.",
+    "example_pinyin": "zuò cài de shí hòu yào shì liàng fàng yán ， tài xián bù hǎo 。"
+  },
+  {
+    "id": 802,
+    "chinese": "严格",
+    "pinyin": "yán gé",
+    "meaning": "엄격하다",
+    "example_zh": "他的老师要求很严格，但教出来的学生都很优秀。",
+    "example_ko": "그의 선생님은 요구가 엄격한데 가르친 학생들은 다 우수해.",
+    "example_pinyin": "tā de lǎo shī yāo qiú hěn yán gé ， dàn jiào chū lái de xué shēng dōu hěn yōu xiù 。"
+  },
+  {
+    "id": 803,
+    "chinese": "严重",
+    "pinyin": "yán zhòng",
+    "meaning": "심각하다",
+    "example_zh": "这次洪水造成了严重的财产损失。",
+    "example_ko": "이번 홍수로 심각한 재산 손실이 발생했어.",
+    "example_pinyin": "zhè cì hóng shuǐ zào chéng le yán zhòng de cái chǎn sǔn shī 。"
+  },
+  {
+    "id": 804,
+    "chinese": "研究生",
+    "pinyin": "yán jiū shēng",
+    "meaning": "대학원생",
+    "example_zh": "他考上了北京大学的研究生，家人都很高兴。",
+    "example_ko": "그가 베이징대학교 대학원에 합격해서 가족들이 모두 기뻐했어.",
+    "example_pinyin": "tā kǎo shàng le běi jīng dà xué de yán jiū shēng ， jiā rén dōu hěn gāo xìng 。"
+  },
+  {
+    "id": 805,
+    "chinese": "演出",
+    "pinyin": "yǎn chū",
+    "meaning": "공연하다",
+    "example_zh": "这个乐队每周末都会在广场上演出。",
+    "example_ko": "이 밴드는 매주 주말에 광장에서 공연해.",
+    "example_pinyin": "zhè ge yuè duì měi zhōu mò dū huì zài guǎng chǎng shàng yǎn chū 。"
+  },
+  {
+    "id": 806,
+    "chinese": "演员",
+    "pinyin": "yǎn yuán",
+    "meaning": "배우, 연기자",
+    "example_zh": "她是一位非常有才华的演员，主演过很多电影。",
+    "example_ko": "그녀는 굉장히 재능 있는 배우로 많은 영화에 주연을 맡았어.",
+    "example_pinyin": "tā shì yī wèi fēi cháng yǒu cái huá de yǎn yuán ， zhǔ yǎn guò hěn duō diàn yǐng 。"
+  },
+  {
+    "id": 807,
+    "chinese": "阳光",
+    "pinyin": "yáng guāng",
+    "meaning": "햇빛",
+    "example_zh": "今天阳光很好，适合在公园里散步。",
+    "example_ko": "오늘 햇빛이 좋아서 공원에서 산책하기 좋아.",
+    "example_pinyin": "jīn tiān yáng guāng hěn hǎo ， shì hé zài gōng yuán lǐ sàn bù 。"
+  },
+  {
+    "id": 808,
+    "chinese": "养成",
+    "pinyin": "yǎng chéng",
+    "meaning": "기르다, (습관을) 형성하다",
+    "example_zh": "从小养成良好的习惯，对一生都很有益处。",
+    "example_ko": "어릴 때부터 좋은 습관을 기르면 평생 도움이 돼.",
+    "example_pinyin": "cóng xiǎo yǎng chéng liáng hǎo de xí guàn ， duì yī shēng dōu hěn yǒu yì chù 。"
+  },
+  {
+    "id": 809,
+    "chinese": "样子",
+    "pinyin": "yàng zi",
+    "meaning": "모습, 모양",
+    "example_zh": "他说话时候的样子很认真，让人印象深刻。",
+    "example_ko": "그가 말할 때의 모습이 성실해서 인상에 많이 남아.",
+    "example_pinyin": "tā shuō huà shí hòu de yàng zi hěn rèn zhēn ， ràng rén yìn xiàng shēn kè 。"
+  },
+  {
+    "id": 810,
+    "chinese": "邀请",
+    "pinyin": "yāo qǐng",
+    "meaning": "초대하다",
+    "example_zh": "她邀请了所有好朋友来参加自己的生日派对。",
+    "example_ko": "그녀는 모든 친한 친구들을 자신의 생일 파티에 초대했어.",
+    "example_pinyin": "tā yāo qǐng le suǒ yǒu hǎo péng yǒu lái cān jiā zì jǐ de shēng rì pài duì 。"
+  },
+  {
+    "id": 811,
+    "chinese": "钥匙",
+    "pinyin": "yào shi",
+    "meaning": "열쇠",
+    "example_zh": "我把钥匙忘在公司了，今晚出不了门了。",
+    "example_ko": "열쇠를 회사에 두고 왔어, 오늘 밤에 못 나가겠어.",
+    "example_pinyin": "wǒ bǎ yào shi wàng zài gōng sī le ， jīn wǎn chū bù liǎo mén le 。"
+  },
+  {
+    "id": 812,
+    "chinese": "也许",
+    "pinyin": "yě xǔ",
+    "meaning": "아마, 혹시",
+    "example_zh": "他还没到，也许路上堵车了吧。",
+    "example_ko": "그가 아직 안 왔는데, 아마 길이 막혔겠지.",
+    "example_pinyin": "tā hái méi dào ， yě xǔ lù shàng dǔ chē le ba 。"
+  },
+  {
+    "id": 813,
+    "chinese": "页",
+    "pinyin": "yè",
+    "meaning": "쪽, 페이지",
+    "example_zh": "请看第五页。",
+    "example_ko": "5쪽을 봐 주세요.",
+    "example_pinyin": "qǐng kàn dì wǔ yè 。"
+  },
+  {
+    "id": 814,
+    "chinese": "叶子",
+    "pinyin": "yè zi",
+    "meaning": "잎",
+    "example_zh": "树上的叶子变黄了。",
+    "example_ko": "나무의 잎이 노랗게 변했어.",
+    "example_pinyin": "shù shàng de yè zi biàn huáng le 。"
+  },
+  {
+    "id": 815,
+    "chinese": "一切",
+    "pinyin": "yī qiè",
+    "meaning": "모든 것",
+    "example_zh": "为了孩子，她愿意放弃一切。",
+    "example_ko": "아이를 위해 그녀는 모든 것을 포기할 마음이 있어.",
+    "example_pinyin": "wèi le hái zi ， tā yuàn yì fàng qì yī qiè 。"
+  },
+  {
+    "id": 816,
+    "chinese": "以",
+    "pinyin": "yǐ",
+    "meaning": "~으로, ~을 가지고",
+    "example_zh": "我们以这种方法解决问题。",
+    "example_ko": "우리는 이 방법으로 문제를 해결해.",
+    "example_pinyin": "wǒ men yǐ zhè zhǒng fāng fǎ jiě jué wèn tí 。"
+  },
+  {
+    "id": 817,
+    "chinese": "亿",
+    "pinyin": "yì",
+    "meaning": "억 (1억)",
+    "example_zh": "这个城市有一亿人口。",
+    "example_ko": "이 도시에는 인구가 1억 명 있어.",
+    "example_pinyin": "zhè ge chéng shì yǒu yī yì rén kǒu 。"
+  },
+  {
+    "id": 818,
+    "chinese": "意见",
+    "pinyin": "yì jiàn",
+    "meaning": "의견, 제안",
+    "example_zh": "对这个计划，大家有什么意见和建议？",
+    "example_ko": "이 계획에 대해서 모두 의견이나 제안 있어?",
+    "example_pinyin": "duì zhè ge jì huà ， dà jiā yǒu shén me yì jiàn hé jiàn yì ？"
+  },
+  {
+    "id": 819,
+    "chinese": "艺术",
+    "pinyin": "yì shù",
+    "meaning": "예술",
+    "example_zh": "他对艺术很有热情，学过绘画和音乐。",
+    "example_ko": "그는 예술에 대한 열정이 많아서 그림이랑 음악을 배웠어.",
+    "example_pinyin": "tā duì yì shù hěn yǒu rè qíng ， xué guò huì huà hé yīn yuè 。"
+  },
+  {
+    "id": 820,
+    "chinese": "因此",
+    "pinyin": "yīn cǐ",
+    "meaning": "그래서, 따라서",
+    "example_zh": "天气预报说明天下雨，因此今天先把衣服洗了。",
+    "example_ko": "일기예보에서 내일 비가 온다고 해서 오늘 미리 빨래를 했어.",
+    "example_pinyin": "tiān qì yù bào shuō míng tiān xià yǔ ， yīn cǐ jīn tiān xiān bǎ yī fú xǐ le 。"
+  },
+  {
+    "id": 821,
+    "chinese": "引起",
+    "pinyin": "yǐn qǐ",
+    "meaning": "일으키다, 유발하다",
+    "example_zh": "他的发言引起了大家的激烈讨论。",
+    "example_ko": "그의 발언이 모두의 격렬한 토론을 유발했어.",
+    "example_pinyin": "tā de fā yán yǐn qǐ le dà jiā de jī liè tǎo lùn 。"
+  },
+  {
+    "id": 822,
+    "chinese": "饮料",
+    "pinyin": "yǐn liào",
+    "meaning": "음료",
+    "example_zh": "运动后要多喝水或者运动饮料，补充体力。",
+    "example_ko": "운동 후에 물이나 스포츠 음료를 많이 마셔서 체력을 보충해야 해.",
+    "example_pinyin": "yùn dòng hòu yào duō hē shuǐ huò zhě yùn dòng yǐn liào ， bǔ chōng tǐ lì 。"
+  },
+  {
+    "id": 823,
+    "chinese": "印象",
+    "pinyin": "yìn xiàng",
+    "meaning": "인상",
+    "example_zh": "她给我留下了非常好的第一印象。",
+    "example_ko": "그녀는 나한테 정말 좋은 첫인상을 남겼어.",
+    "example_pinyin": "tā gěi wǒ liú xià le fēi cháng hǎo de dì yī yìn xiàng 。"
+  },
+  {
+    "id": 824,
+    "chinese": "赢",
+    "pinyin": "yíng",
+    "meaning": "이기다",
+    "example_zh": "我们队赢了比赛。",
+    "example_ko": "우리 팀이 경기에서 이겼어.",
+    "example_pinyin": "wǒ men duì yíng le bǐ sài 。"
+  },
+  {
+    "id": 825,
+    "chinese": "硬",
+    "pinyin": "yìng",
+    "meaning": "딱딱하다",
+    "example_zh": "这块面包太硬了。",
+    "example_ko": "이 빵은 너무 딱딱해.",
+    "example_pinyin": "zhè kuài miàn bāo tài yìng le 。"
+  },
+  {
+    "id": 826,
+    "chinese": "勇敢",
+    "pinyin": "yǒng gǎn",
+    "meaning": "용감하다",
+    "example_zh": "他非常勇敢，在危险的情况下救了很多人。",
+    "example_ko": "그는 정말 용감해서 위험한 상황에서 많은 사람을 구했어.",
+    "example_pinyin": "tā fēi cháng yǒng gǎn ， zài wēi xiǎn de qíng kuàng xià jiù le hěn duō rén 。"
+  },
+  {
+    "id": 827,
+    "chinese": "永远",
+    "pinyin": "yǒng yuǎn",
+    "meaning": "영원히",
+    "example_zh": "我会永远记住你对我的帮助，谢谢你。",
+    "example_ko": "나는 네가 도와준 걸 영원히 기억할 거야, 고마워.",
+    "example_pinyin": "wǒ huì yǒng yuǎn jì zhù nǐ duì wǒ de bāng zhù ， xiè xiè nǐ 。"
+  },
+  {
+    "id": 828,
+    "chinese": "优点",
+    "pinyin": "yōu diǎn",
+    "meaning": "장점",
+    "example_zh": "每个人都有自己的优点和缺点。",
+    "example_ko": "모든 사람은 자신만의 장점과 단점이 있어.",
+    "example_pinyin": "měi gè rén dōu yǒu zì jǐ de yōu diǎn hé quē diǎn 。"
+  },
+  {
+    "id": 829,
+    "chinese": "优秀",
+    "pinyin": "yōu xiù",
+    "meaning": "우수하다, 뛰어나다",
+    "example_zh": "她是班里最优秀的学生，成绩一直名列前茅。",
+    "example_ko": "그녀는 반에서 가장 우수한 학생으로 성적이 항상 상위권이야.",
+    "example_pinyin": "tā shì bān lǐ zuì yōu xiù de xué shēng ， chéng jì yì zhí míng liè qián máo 。"
+  },
+  {
+    "id": 830,
+    "chinese": "幽默",
+    "pinyin": "yōu mò",
+    "meaning": "유머가 있다",
+    "example_zh": "他很幽默，每次聚会都能把大家逗得很开心。",
+    "example_ko": "그는 유머 감각이 있어서 모임 때마다 모두를 즐겁게 해줘.",
+    "example_pinyin": "tā hěn yōu mò ， měi cì jù huì dōu néng bǎ dà jiā dòu dé hěn kāi xīn 。"
+  },
+  {
+    "id": 831,
+    "chinese": "由",
+    "pinyin": "yóu",
+    "meaning": "~에 의해, ~이 담당하다",
+    "example_zh": "这件事由我负责。",
+    "example_ko": "이 일은 내가 담당해.",
+    "example_pinyin": "zhè jiàn shì yóu wǒ fù zé 。"
+  },
+  {
+    "id": 832,
+    "chinese": "由于",
+    "pinyin": "yóu yú",
+    "meaning": "~때문에",
+    "example_zh": "由于天气原因，比赛延期举行。",
+    "example_ko": "날씨 때문에 경기가 연기됐어.",
+    "example_pinyin": "yóu yú tiān qì yuán yīn ， bǐ sài yán qī jǔ xíng 。"
+  },
+  {
+    "id": 833,
+    "chinese": "尤其",
+    "pinyin": "yóu qí",
+    "meaning": "특히, 특별히",
+    "example_zh": "我尤其喜欢冬天，因为可以滑雪。",
+    "example_ko": "나는 특히 겨울을 좋아해, 스키를 탈 수 있거든.",
+    "example_pinyin": "wǒ yóu qí xǐ huān dōng tiān ， yīn wèi kě yǐ huá xuě 。"
+  },
+  {
+    "id": 834,
+    "chinese": "有趣",
+    "pinyin": "yǒu qù",
+    "meaning": "재미있다",
+    "example_zh": "这本书内容很有趣，看了就停不下来。",
+    "example_ko": "이 책 내용이 재밌어서 읽기 시작하면 멈출 수가 없어.",
+    "example_pinyin": "zhè běn shū nèi róng hěn yǒu qù ， kàn le jiù tíng bù xià lái 。"
+  },
+  {
+    "id": 835,
+    "chinese": "友好",
+    "pinyin": "yǒu hǎo",
+    "meaning": "우호적이다, 친근하다",
+    "example_zh": "他待人友好，所以在公司里人缘很好。",
+    "example_ko": "그는 사람들에게 친근하게 대해서 회사에서 인간관계가 좋아.",
+    "example_pinyin": "tā dài rén yǒu hǎo ， suǒ yǐ zài gōng sī lǐ rén yuán hěn hǎo 。"
+  },
+  {
+    "id": 836,
+    "chinese": "友谊",
+    "pinyin": "yǒu yì",
+    "meaning": "우정",
+    "example_zh": "真正的友谊经得起时间的考验。",
+    "example_ko": "진정한 우정은 시간의 시험을 견뎌낼 수 있어.",
+    "example_pinyin": "zhēn zhèng de yǒu yì jīng dé qǐ shí jiān de kǎo yàn 。"
+  },
+  {
+    "id": 837,
+    "chinese": "愉快",
+    "pinyin": "yú kuài",
+    "meaning": "즐겁다",
+    "example_zh": "这次旅行非常愉快，希望下次还能一起去。",
+    "example_ko": "이번 여행이 정말 즐거웠어, 다음에도 같이 갔으면 좋겠어.",
+    "example_pinyin": "zhè cì lǚ xíng fēi cháng yú kuài ， xī wàng xià cì hái néng yì qǐ qù 。"
+  },
+  {
+    "id": 838,
+    "chinese": "于是",
+    "pinyin": "yú shì",
+    "meaning": "그래서, 그리하여",
+    "example_zh": "他迟到了，于是错过了开场。",
+    "example_ko": "그가 지각해서 시작을 놓쳤어.",
+    "example_pinyin": "tā chí dào le ， yú shì cuò guò le kāi chǎng 。"
+  },
+  {
+    "id": 839,
+    "chinese": "与",
+    "pinyin": "yǔ",
+    "meaning": "~와, ~과",
+    "example_zh": "他与朋友一起学习。",
+    "example_ko": "그는 친구와 함께 공부해.",
+    "example_pinyin": "tā yǔ péng yǒu yì qǐ xué xí 。"
+  },
+  {
+    "id": 840,
+    "chinese": "语法",
+    "pinyin": "yǔ fǎ",
+    "meaning": "문법",
+    "example_zh": "学好语法对提高写作能力很有帮助。",
+    "example_ko": "문법을 잘 익히면 글쓰기 능력 향상에 도움이 돼.",
+    "example_pinyin": "xué hǎo yǔ fǎ duì tí gāo xiě zuò néng lì hěn yǒu bāng zhù 。"
+  },
+  {
+    "id": 841,
+    "chinese": "语言",
+    "pinyin": "yǔ yán",
+    "meaning": "언어",
+    "example_zh": "学一门新语言需要时间，但坚持就会有收获。",
+    "example_ko": "새로운 언어를 배우려면 시간이 필요하지만 꾸준히 하면 성과가 있어.",
+    "example_pinyin": "xué yī mén xīn yǔ yán xū yào shí jiān ， dàn jiān chí jiù huì yǒu shōu huò 。"
+  },
+  {
+    "id": 842,
+    "chinese": "羽毛球",
+    "pinyin": "yǔ máo qiú",
+    "meaning": "배드민턴",
+    "example_zh": "公园里有很多人在打羽毛球，运动气氛很好。",
+    "example_ko": "공원에 배드민턴 치는 사람이 많아서 운동 분위기가 좋아.",
+    "example_pinyin": "gōng yuán lǐ yǒu hěn duō rén zài dǎ yǔ máo qiú ， yùn dòng qì fēn hěn hǎo 。"
+  },
+  {
+    "id": 843,
+    "chinese": "预习",
+    "pinyin": "yù xí",
+    "meaning": "예습하다",
+    "example_zh": "提前预习新课的内容，上课会更容易理解。",
+    "example_ko": "미리 새 수업 내용을 예습하면 수업 시간에 이해하기 더 쉬워.",
+    "example_pinyin": "tí qián yù xí xīn kè de nèi róng ， shàng kè huì gèng róng yì lǐ jiě 。"
+  },
+  {
+    "id": 844,
+    "chinese": "圆",
+    "pinyin": "yuán",
+    "meaning": "둥글다",
+    "example_zh": "月亮圆圆的，今晚是满月。",
+    "example_ko": "달이 둥글고, 오늘 밤은 보름달이야.",
+    "example_pinyin": "yuè liàng yuán yuán de ， jīn wǎn shì mǎn yuè 。"
+  },
+  {
+    "id": 845,
+    "chinese": "原来",
+    "pinyin": "yuán lái",
+    "meaning": "원래, 알고 보니",
+    "example_zh": "原来你也在这里！真巧，我刚刚还在想你。",
+    "example_ko": "너도 여기 있었구나! 진짜 우연이다, 방금도 네 생각 했는데.",
+    "example_pinyin": "yuán lái nǐ yě zài zhè lǐ ！ zhēn qiǎo ， wǒ gāng gāng hái zài xiǎng nǐ 。"
+  },
+  {
+    "id": 846,
+    "chinese": "原谅",
+    "pinyin": "yuán liàng",
+    "meaning": "용서하다",
+    "example_zh": "他真诚地道了歉，对方最终原谅了他。",
+    "example_ko": "그가 진심으로 사과하자 상대방이 결국 용서했어.",
+    "example_pinyin": "tā zhēn chéng dì dào le qiàn ， duì fāng zuì zhōng yuán liàng le tā 。"
+  },
+  {
+    "id": 847,
+    "chinese": "原因",
+    "pinyin": "yuán yīn",
+    "meaning": "이유, 원인",
+    "example_zh": "你能告诉我这件事发生的原因吗？",
+    "example_ko": "이 일이 발생한 이유를 나한테 말해줄 수 있어?",
+    "example_pinyin": "nǐ néng gào sù wǒ zhè jiàn shì fā shēng de yuán yīn ma ？"
+  },
+  {
+    "id": 848,
+    "chinese": "约会",
+    "pinyin": "yuē huì",
+    "meaning": "약속, 데이트",
+    "example_zh": "今天下午我有个约会，不能陪你了，抱歉。",
+    "example_ko": "오늘 오후에 약속이 있어서 같이 있을 수가 없어, 미안해.",
+    "example_pinyin": "jīn tiān xià wǔ wǒ yǒu gè yuē huì ， bù néng péi nǐ le ， bào qiàn 。"
+  },
+  {
+    "id": 849,
+    "chinese": "阅读",
+    "pinyin": "yuè dú",
+    "meaning": "읽다, 독서하다",
+    "example_zh": "他养成了每天阅读半小时的好习惯。",
+    "example_ko": "그는 매일 30분 독서하는 좋은 습관을 길렀어.",
+    "example_pinyin": "tā yǎng chéng le měi tiān yuè dú bàn xiǎo shí de hǎo xí guàn 。"
+  },
+  {
+    "id": 850,
+    "chinese": "允许",
+    "pinyin": "yǔn xǔ",
+    "meaning": "허락하다, 허가하다",
+    "example_zh": "父母允许她一个人去旅行，她非常高兴。",
+    "example_ko": "부모님이 혼자 여행 가는 걸 허락해서 그녀가 매우 기뻐했어.",
+    "example_pinyin": "fù mǔ yǔn xǔ tā yí gè rén qù lǚ xíng ， tā fēi cháng gāo xìng 。"
+  },
+  {
+    "id": 851,
+    "chinese": "杂志",
+    "pinyin": "zá zhì",
+    "meaning": "잡지",
+    "example_zh": "这本杂志每月出版一期，内容很丰富。",
+    "example_ko": "이 잡지는 매달 한 권씩 발행되는데 내용이 풍부해.",
+    "example_pinyin": "zhè běn zá zhì měi yuè chū bǎn yī qī ， nèi róng hěn fēng fù 。"
+  },
+  {
+    "id": 852,
+    "chinese": "咱们",
+    "pinyin": "zán men",
+    "meaning": "우리 (화자 포함)",
+    "example_zh": "咱们一起去吃饭吧，我请客！",
+    "example_ko": "우리 같이 밥 먹으러 가자, 내가 쏠게!",
+    "example_pinyin": "zán men yì qǐ qù chī fàn ba ， wǒ qǐng kè ！"
+  },
+  {
+    "id": 853,
+    "chinese": "暂时",
+    "pinyin": "zàn shí",
+    "meaning": "잠시, 임시로",
+    "example_zh": "我暂时住在朋友家，等找到房子再搬过去。",
+    "example_ko": "나는 집을 구할 때까지 잠시 친구 집에 있을 거야.",
+    "example_pinyin": "wǒ zàn shí zhù zài péng yǒu jiā ， děng zhǎo dào fáng zi zài bān guò qù 。"
+  },
+  {
+    "id": 854,
+    "chinese": "脏",
+    "pinyin": "zāng",
+    "meaning": "더럽다",
+    "example_zh": "衣服脏了，需要马上洗一下。",
+    "example_ko": "옷이 더러워졌어, 바로 빨아야 해.",
+    "example_pinyin": "yī fú zāng le ， xū yào mǎ shàng xǐ yī xià 。"
+  },
+  {
+    "id": 855,
+    "chinese": "责任",
+    "pinyin": "zé rèn",
+    "meaning": "책임",
+    "example_zh": "作为父母，照顾好孩子是最重要的责任。",
+    "example_ko": "부모로서 아이를 잘 돌보는 것이 가장 중요한 책임이야.",
+    "example_pinyin": "zuò wéi fù mǔ ， zhào gù hǎo hái zi shì zuì zhòng yào de zé rèn 。"
+  },
+  {
+    "id": 856,
+    "chinese": "增加",
+    "pinyin": "zēng jiā",
+    "meaning": "늘리다, 증가하다",
+    "example_zh": "公司决定增加员工的工资，大家都很开心。",
+    "example_ko": "회사가 직원 월급을 올리기로 결정해서 모두 기뻐했어.",
+    "example_pinyin": "gōng sī jué dìng zēng jiā yuán gōng de gōng zī ， dà jiā dōu hěn kāi xīn 。"
+  },
+  {
+    "id": 857,
+    "chinese": "增长",
+    "pinyin": "zēng zhǎng",
+    "meaning": "성장하다, 늘어나다",
+    "example_zh": "他的中文水平增长得很快，让老师很惊喜。",
+    "example_ko": "그의 중국어 실력이 빠르게 성장해서 선생님이 깜짝 놀랐어.",
+    "example_pinyin": "tā de zhōng wén shuǐ píng zēng zhǎng dé hěn kuài ， ràng lǎo shī hěn jīng xǐ 。"
+  },
+  {
+    "id": 858,
+    "chinese": "窄",
+    "pinyin": "zhǎi",
+    "meaning": "좁다",
+    "example_zh": "这条小路很窄，只能一个人通过。",
+    "example_ko": "이 좁은 길은 한 사람만 겨우 지나갈 수 있어.",
+    "example_pinyin": "zhè tiáo xiǎo lù hěn zhǎi ， zhǐ néng yí gè rén tōng guò 。"
+  },
+  {
+    "id": 859,
+    "chinese": "招聘",
+    "pinyin": "zhāo pìn",
+    "meaning": "채용하다, 모집하다",
+    "example_zh": "公司正在招聘优秀的销售人员，有意者请联系。",
+    "example_ko": "회사에서 우수한 영업 사원을 채용 중이에요, 관심 있으신 분은 연락 주세요.",
+    "example_pinyin": "gōng sī zhèng zài zhāo pìn yōu xiù de xiāo shòu rén yuán ， yǒu yì zhě qǐng lián xì 。"
+  },
+  {
+    "id": 860,
+    "chinese": "真正",
+    "pinyin": "zhēn zhèng",
+    "meaning": "진정한, 진짜",
+    "example_zh": "他才是真正了解我的朋友。",
+    "example_ko": "그가 진정으로 나를 이해하는 친구야.",
+    "example_pinyin": "tā cái shì zhēn zhèng liǎo jiě wǒ de péng yǒu 。"
+  },
+  {
+    "id": 861,
+    "chinese": "整理",
+    "pinyin": "zhěng lǐ",
+    "meaning": "정리하다, 치우다",
+    "example_zh": "考试结束后，老师让大家整理一下书包再离开。",
+    "example_ko": "시험이 끝난 후 선생님이 모두 책가방을 정리하고 나가라고 했어.",
+    "example_pinyin": "kǎo shì jié shù hòu ， lǎo shī ràng dà jiā zhěng lǐ yī xià shū bāo zài lí kāi 。"
+  },
+  {
+    "id": 862,
+    "chinese": "整齐",
+    "pinyin": "zhěng qí",
+    "meaning": "가지런하다, 깔끔하다",
+    "example_zh": "他的房间总是整整齐齐的，非常干净。",
+    "example_ko": "그의 방은 항상 가지런하고 깨끗해.",
+    "example_pinyin": "tā de fáng jiān zǒng shì zhěng zhěng qí qí de ， fēi cháng gān jìng 。"
+  },
+  {
+    "id": 863,
+    "chinese": "正常",
+    "pinyin": "zhèng cháng",
+    "meaning": "정상적이다",
+    "example_zh": "这种情况很正常，不需要担心。",
+    "example_ko": "이런 상황은 지극히 정상이야, 걱정 안 해도 돼.",
+    "example_pinyin": "zhè zhǒng qíng kuàng hěn zhèng cháng ， bù xū yào dān xīn 。"
+  },
+  {
+    "id": 864,
+    "chinese": "正好",
+    "pinyin": "zhèng hǎo",
+    "meaning": "마침, 딱",
+    "example_zh": "我正好有时间，可以帮你。",
+    "example_ko": "내가 마침 시간이 있어서 도와줄 수 있어.",
+    "example_pinyin": "wǒ zhèng hǎo yǒu shí jiān ， kě yǐ bāng nǐ 。"
+  },
+  {
+    "id": 865,
+    "chinese": "正确",
+    "pinyin": "zhèng què",
+    "meaning": "정확하다, 맞다",
+    "example_zh": "他的回答完全正确，没有任何错误。",
+    "example_ko": "그의 답변이 완전히 정확해서 틀린 것이 하나도 없어.",
+    "example_pinyin": "tā de huí dá wán quán zhèng què ， méi yǒu rèn hé cuò wù 。"
+  },
+  {
+    "id": 866,
+    "chinese": "正式",
+    "pinyin": "zhèng shì",
+    "meaning": "정식의, 공식적인",
+    "example_zh": "他收到了公司正式的录用通知书。",
+    "example_ko": "그는 회사의 공식 합격 통지서를 받았어.",
+    "example_pinyin": "tā shōu dào le gōng sī zhèng shì de lù yòng tōng zhī shū 。"
+  },
+  {
+    "id": 867,
+    "chinese": "证明",
+    "pinyin": "zhèng míng",
+    "meaning": "증명하다",
+    "example_zh": "他用行动证明了自己的实力。",
+    "example_ko": "그는 행동으로 자신의 실력을 증명했어.",
+    "example_pinyin": "tā yòng xíng dòng zhèng míng liǎo zì jǐ de shí lì 。"
+  },
+  {
+    "id": 868,
+    "chinese": "之",
+    "pinyin": "zhī",
+    "meaning": "~의, 그것",
+    "example_zh": "这是其中之一。",
+    "example_ko": "이것은 그중 하나야.",
+    "example_pinyin": "zhè shì qí zhōng zhī yī 。"
+  },
+  {
+    "id": 869,
+    "chinese": "支持",
+    "pinyin": "zhī chí",
+    "meaning": "마지막으로, 마지막",
+    "example_zh": "最后，感谢大家的参与和支持！",
+    "example_ko": "마지막으로 모두의 참여와 지지에 감사드립니다!",
+    "example_pinyin": "zuì hòu ， gǎn xiè dà jiā de cān yù hé zhī chí ！"
+  },
+  {
+    "id": 870,
+    "chinese": "知识",
+    "pinyin": "zhī shi",
+    "meaning": "지식",
+    "example_zh": "读书是获取知识最有效的方法之一。",
+    "example_ko": "독서는 지식을 얻는 가장 효과적인 방법 중 하나야.",
+    "example_pinyin": "dú shū shì huò qǔ zhī shí zuì yǒu xiào de fāng fǎ zhī yī 。"
+  },
+  {
+    "id": 871,
+    "chinese": "直接",
+    "pinyin": "zhí jiē",
+    "meaning": "직접적으로",
+    "example_zh": "有问题直接问我，不需要绕弯子。",
+    "example_ko": "문제 있으면 직접 나한테 물어봐, 돌려서 말할 필요 없어.",
+    "example_pinyin": "yǒu wèn tí zhí jiē wèn wǒ ， bù xū yào rào wān zi 。"
+  },
+  {
+    "id": 872,
+    "chinese": "值得",
+    "pinyin": "zhí de",
+    "meaning": "~할 가치가 있다",
+    "example_zh": "这本书值得一读，里面有很多有用的内容。",
+    "example_ko": "이 책은 읽어볼 가치가 있어, 유용한 내용이 많이 담겨 있어.",
+    "example_pinyin": "zhè běn shū zhí de yī dú ， lǐ miàn yǒu hěn duō yǒu yòng de nèi róng 。"
+  },
+  {
+    "id": 873,
+    "chinese": "职业",
+    "pinyin": "zhí yè",
+    "meaning": "직업",
+    "example_zh": "选择一份自己喜欢的职业非常重要。",
+    "example_ko": "자신이 좋아하는 직업을 선택하는 게 정말 중요해.",
+    "example_pinyin": "xuǎn zé yī fèn zì jǐ xǐ huān de zhí yè fēi cháng zhòng yào 。"
+  },
+  {
+    "id": 874,
+    "chinese": "植物",
+    "pinyin": "zhí wù",
+    "meaning": "식물",
+    "example_zh": "她喜欢在家里养各种植物，让室内充满绿意。",
+    "example_ko": "그녀는 집에서 여러 식물을 키워서 실내에 초록빛이 가득해.",
+    "example_pinyin": "tā xǐ huān zài jiā lǐ yǎng gè zhǒng zhí wù ， ràng shì nèi chōng mǎn lǜ yì 。"
+  },
+  {
+    "id": 875,
+    "chinese": "指",
+    "pinyin": "zhǐ",
+    "meaning": "가리키다",
+    "example_zh": "他指着门说话。",
+    "example_ko": "그는 문을 가리키며 말했어.",
+    "example_pinyin": "tā zhǐ zhe mén shuō huà 。"
+  },
+  {
+    "id": 876,
+    "chinese": "只好",
+    "pinyin": "zhǐ hǎo",
+    "meaning": "할 수 없이, 어쩔 수 없이",
+    "example_zh": "班车已经走了，我只好打车回去了。",
+    "example_ko": "셔틀버스가 이미 떠났어, 어쩔 수 없이 택시 타고 가야겠어.",
+    "example_pinyin": "bān chē yǐ jīng zǒu le ， wǒ zhǐ hǎo dǎ chē huí qù le 。"
+  },
+  {
+    "id": 877,
+    "chinese": "只要",
+    "pinyin": "zhǐ yào",
+    "meaning": "~하기만 하면",
+    "example_zh": "只要你努力，什么困难都能克服。",
+    "example_ko": "노력하기만 하면 어떤 어려움도 극복할 수 있어.",
+    "example_pinyin": "zhǐ yào nǐ nǔ lì ， shén me kùn nán dōu néng kè fú 。"
+  },
+  {
+    "id": 878,
+    "chinese": "制造",
+    "pinyin": "zhì zào",
+    "meaning": "제조하다, 만들다",
+    "example_zh": "这款手机是在中国制造的。",
+    "example_ko": "이 핸드폰은 중국에서 제조된 거야.",
+    "example_pinyin": "zhè kuǎn shǒu jī shì zài zhōng guó zhì zào de 。"
+  },
+  {
+    "id": 879,
+    "chinese": "至少",
+    "pinyin": "zhì shǎo",
+    "meaning": "적어도, 최소한",
+    "example_zh": "这项工作至少需要三天才能完成。",
+    "example_ko": "이 작업은 적어도 3일은 있어야 완성할 수 있어.",
+    "example_pinyin": "zhè xiàng gōng zuò zhì shǎo xū yào sān tiān cái néng wán chéng 。"
+  },
+  {
+    "id": 880,
+    "chinese": "质量",
+    "pinyin": "zhì liàng",
+    "meaning": "품질",
+    "example_zh": "这家店的产品质量很好，价格也合理。",
+    "example_ko": "이 가게 제품은 품질이 좋고 가격도 합리적이야.",
+    "example_pinyin": "zhè jiā diàn de chǎn pǐn zhì liàng hěn hǎo ， jià gé yě hé lǐ 。"
+  },
+  {
+    "id": 881,
+    "chinese": "中文",
+    "pinyin": "Zhōng wén",
+    "meaning": "중국어",
+    "example_zh": "我正在学中文。",
+    "example_ko": "나는 지금 중국어를 배우고 있어.",
+    "example_pinyin": "wǒ zhèng zài xué zhōng wén 。"
+  },
+  {
+    "id": 882,
+    "chinese": "重点",
+    "pinyin": "zhòng diǎn",
+    "meaning": "중점, 핵심",
+    "example_zh": "学习的重点是理解，不是死记硬背。",
+    "example_ko": "공부의 중점은 이해하는 거야, 무조건 외우는 게 아니야.",
+    "example_pinyin": "xué xí de zhòng diǎn shì lǐ jiě ， bú shì sǐ jì yìng bèi 。"
+  },
+  {
+    "id": 883,
+    "chinese": "重视",
+    "pinyin": "zhòng shì",
+    "meaning": "중시하다, 중요하게 여기다",
+    "example_zh": "公司非常重视员工的身体健康。",
+    "example_ko": "회사는 직원들의 건강을 매우 중시해.",
+    "example_pinyin": "gōng sī fēi cháng zhòng shì yuán gōng de shēn tǐ jiàn kāng 。"
+  },
+  {
+    "id": 884,
+    "chinese": "周围",
+    "pinyin": "zhōu wéi",
+    "meaning": "주변, 주위",
+    "example_zh": "他周围的朋友都是很有能力的人。",
+    "example_ko": "그의 주변 친구들은 모두 능력 있는 사람들이야.",
+    "example_pinyin": "tā zhōu wéi de péng yǒu dōu shì hěn yǒu néng lì de rén 。"
+  },
+  {
+    "id": 885,
+    "chinese": "猪",
+    "pinyin": "zhū",
+    "meaning": "돼지",
+    "example_zh": "农场里有一头猪。",
+    "example_ko": "농장에 돼지 한 마리가 있어.",
+    "example_pinyin": "nóng chǎng lǐ yǒu yī tóu zhū 。"
+  },
+  {
+    "id": 886,
+    "chinese": "逐渐",
+    "pinyin": "zhú jiàn",
+    "meaning": "점차, 서서히",
+    "example_zh": "他的身体逐渐好转，很快就能出院了。",
+    "example_ko": "그의 몸 상태가 점차 좋아져서 곧 퇴원할 수 있을 것 같아.",
+    "example_pinyin": "tā de shēn tǐ zhú jiàn hǎo zhuǎn ， hěn kuài jiù néng chū yuàn le 。"
+  },
+  {
+    "id": 887,
+    "chinese": "主动",
+    "pinyin": "zhǔ dòng",
+    "meaning": "자발적으로, 먼저",
+    "example_zh": "他很主动，总是第一个来帮忙。",
+    "example_ko": "그는 아주 적극적이어서 항상 제일 먼저 나서서 도와줘.",
+    "example_pinyin": "tā hěn zhǔ dòng ， zǒng shì dì yí gè lái bāng máng 。"
+  },
+  {
+    "id": 888,
+    "chinese": "主意",
+    "pinyin": "zhǔ yi",
+    "meaning": "아이디어, 생각",
+    "example_zh": "你有什么好主意，说来听听。",
+    "example_ko": "좋은 아이디어 있으면 말해봐.",
+    "example_pinyin": "nǐ yǒu shén me hǎo zhǔ yì ， shuō lái tīng tīng 。"
+  },
+  {
+    "id": 889,
+    "chinese": "祝贺",
+    "pinyin": "zhù hè",
+    "meaning": "축하하다",
+    "example_zh": "大家一起来祝贺她顺利完成论文！",
+    "example_ko": "다 같이 그녀의 논문 완성을 축하해요!",
+    "example_pinyin": "dà jiā yì qǐ lái zhù hè tā shùn lì wán chéng lùn wén ！"
+  },
+  {
+    "id": 890,
+    "chinese": "著名",
+    "pinyin": "zhù míng",
+    "meaning": "유명하다",
+    "example_zh": "这位著名的画家的作品在世界各地展出。",
+    "example_ko": "이 유명한 화가의 작품이 세계 각지에서 전시되고 있어.",
+    "example_pinyin": "zhè wèi zhù míng de huà jiā de zuò pǐn zài shì jiè gè dì zhǎn chū 。"
+  },
+  {
+    "id": 891,
+    "chinese": "专门",
+    "pinyin": "zhuān mén",
+    "meaning": "전문적으로, 특별히",
+    "example_zh": "他专门学过厨艺，做的菜特别好吃。",
+    "example_ko": "그는 요리를 전문적으로 배워서 음식이 정말 맛있어.",
+    "example_pinyin": "tā zhuān mén xué guò chú yì ， zuò de cài tè bié hǎo chī 。"
+  },
+  {
+    "id": 892,
+    "chinese": "专业",
+    "pinyin": "zhuān yè",
+    "meaning": "전공, 전문적이다",
+    "example_zh": "她的专业是计算机，毕业后很容易找工作。",
+    "example_ko": "그녀의 전공은 컴퓨터라서 졸업 후에 취업이 쉬워.",
+    "example_pinyin": "tā de zhuān yè shì jì suàn jī ， bì yè hòu hěn róng yì zhǎo gōng zuò 。"
+  },
+  {
+    "id": 893,
+    "chinese": "赚",
+    "pinyin": "zhuàn",
+    "meaning": "돈을 벌다",
+    "example_zh": "他在上海做生意，赚了不少钱。",
+    "example_ko": "그는 상하이에서 사업을 해서 돈을 꽤 벌었어.",
+    "example_pinyin": "tā zài shàng hǎi zuò shēng yì ， zhuàn le bù shǎo qián 。"
+  },
+  {
+    "id": 894,
+    "chinese": "撞",
+    "pinyin": "zhuàng",
+    "meaning": "부딪히다, 충돌하다",
+    "example_zh": "他走路不看路，撞到了前面的人。",
+    "example_ko": "그가 길을 안 보고 걷다가 앞사람한테 부딪혔어.",
+    "example_pinyin": "tā zǒu lù bù kàn lù ， zhuàng dào le qián miàn de rén 。"
+  },
+  {
+    "id": 895,
+    "chinese": "准确",
+    "pinyin": "zhǔn què",
+    "meaning": "정확하다, 정확히",
+    "example_zh": "他说的时间非常准确，一点都没错。",
+    "example_ko": "그가 말한 시간이 정말 정확해서 하나도 틀리지 않았어.",
+    "example_pinyin": "tā shuō de shí jiān fēi cháng zhǔn què ， yì diǎn dōu méi cuò 。"
+  },
+  {
+    "id": 896,
+    "chinese": "准时",
+    "pinyin": "zhǔn shí",
+    "meaning": "시간을 지키다, 정시에",
+    "example_zh": "他每次开会都准时到，从不迟到。",
+    "example_ko": "그는 매번 회의에 정시에 와서 지각한 적이 없어.",
+    "example_pinyin": "tā měi cì kāi huì dōu zhǔn shí dào ， cóng bù chí dào 。"
+  },
+  {
+    "id": 897,
+    "chinese": "仔细",
+    "pinyin": "zǐ xì",
+    "meaning": "꼼꼼하다, 자세히",
+    "example_zh": "做题的时候要仔细，不要粗心大意。",
+    "example_ko": "문제 풀 때 꼼꼼하게 해야 해, 실수하면 안 돼.",
+    "example_pinyin": "zuò tí de shí hòu yào zǐ xì ， bú yào cū xīn dà yì 。"
+  },
+  {
+    "id": 898,
+    "chinese": "自然",
+    "pinyin": "zì rán",
+    "meaning": "자연, 자연스럽다",
+    "example_zh": "这里的自然环境很好，空气非常清新。",
+    "example_ko": "이곳의 자연환경이 좋아서 공기가 정말 맑아.",
+    "example_pinyin": "zhè lǐ de zì rán huán jìng hěn hǎo ， kōng qì fēi cháng qīng xīn 。"
+  },
+  {
+    "id": 899,
+    "chinese": "总结",
+    "pinyin": "zǒng jié",
+    "meaning": "정리하다, 요약하다",
+    "example_zh": "老师让我们总结今天学到的内容。",
+    "example_ko": "선생님이 오늘 배운 내용을 정리해보라고 했어.",
+    "example_pinyin": "lǎo shī ràng wǒ men zǒng jié jīn tiān xué dào de nèi róng 。"
+  },
+  {
+    "id": 900,
+    "chinese": "租",
+    "pinyin": "zū",
+    "meaning": "빌리다, 임대하다",
+    "example_zh": "我在公司附近租了一间小房子。",
+    "example_ko": "나는 회사 근처에 작은 방 하나를 빌렸어.",
+    "example_pinyin": "wǒ zài gōng sī fù jìn zū le yī jiān xiǎo fáng zi 。"
+  },
+  {
+    "id": 901,
+    "chinese": "组成",
+    "pinyin": "zǔ chéng",
+    "meaning": "구성하다, 이루다",
+    "example_zh": "这个团队由五个人组成，各有分工。",
+    "example_ko": "이 팀은 다섯 명으로 구성되어 있고 각자 역할이 있어.",
+    "example_pinyin": "zhè ge tuán duì yóu wǔ gè rén zǔ chéng ， gè yǒu fēn gōng 。"
+  },
+  {
+    "id": 902,
+    "chinese": "组织",
+    "pinyin": "zǔ zhī",
+    "meaning": "조직하다, 구성하다",
+    "example_zh": "她负责组织这次活动，安排得井井有条。",
+    "example_ko": "그녀가 이번 행사를 조직 담당인데 아주 체계적으로 준비했어.",
+    "example_pinyin": "tā fù zé zǔ zhī zhè cì huó dòng ， ān pái dé jǐng jǐng yǒu tiáo 。"
+  },
+  {
+    "id": 903,
+    "chinese": "嘴",
+    "pinyin": "zuǐ",
+    "meaning": "입",
+    "example_zh": "他嘴上说没事，但表情看起来不太好。",
+    "example_ko": "그는 입으로는 괜찮다고 했지만 표정은 별로 안 좋아 보였어.",
+    "example_pinyin": "tā zuǐ shàng shuō méi shì ， dàn biǎo qíng kàn qǐ lái bù tài hǎo 。"
+  },
+  {
+    "id": 904,
+    "chinese": "最好",
+    "pinyin": "zuì hǎo",
+    "meaning": "가장 좋다, ~하는 게 낫다",
+    "example_zh": "你最好早点去，不然没有位置了。",
+    "example_ko": "너 일찍 가는 게 낫겠어, 안 그러면 자리가 없을 거야.",
+    "example_pinyin": "nǐ zuì hǎo zǎo diǎn qù ， bù rán méi yǒu wèi zhì le 。"
+  },
+  {
+    "id": 905,
+    "chinese": "最后",
+    "pinyin": "zuì hòu",
+    "meaning": "마지막으로, 결국",
+    "example_zh": "最后他还是决定留下来，没有离开。",
+    "example_ko": "결국 그는 떠나지 않고 남기로 결정했어.",
+    "example_pinyin": "zuì hòu tā hái shì jué dìng liú xià lái ， méi yǒu lí kāi 。"
+  },
+  {
+    "id": 906,
+    "chinese": "尊重",
+    "pinyin": "zūn zhòng",
+    "meaning": "존중하다",
+    "example_zh": "我们应该尊重每个人的选择和想法。",
+    "example_ko": "우리는 모든 사람의 선택과 생각을 존중해야 해.",
+    "example_pinyin": "wǒ men yīng gāi zūn zhòng měi gè rén de xuǎn zé hé xiǎng fǎ 。"
+  },
+  {
+    "id": 907,
+    "chinese": "做生意",
+    "pinyin": "zuò shēng yì",
+    "meaning": "장사하다, 사업하다",
+    "example_zh": "他辞职以后开始做生意，现在过得不错。",
+    "example_ko": "그는 퇴직한 후 사업을 시작했는데 지금은 잘 지내고 있어.",
+    "example_pinyin": "tā cí zhí yǐ hòu kāi shǐ zuò shēng yì ， xiàn zài guò dé bù cuò 。"
+  },
+  {
+    "id": 908,
+    "chinese": "座",
+    "pinyin": "zuò",
+    "meaning": "산·건물 등을 세는 양사, 좌석",
+    "example_zh": "窗外那座山看起来特别美。",
+    "example_ko": "창밖의 저 산은 정말 아름다워 보여.",
+    "example_pinyin": "chuāng wài nà zuò shān kàn qǐ lái tè bié měi 。"
+  },
+  {
+    "id": 909,
+    "chinese": "座位",
+    "pinyin": "zuò wèi",
+    "meaning": "자리, 좌석",
+    "example_zh": "这列火车的座位很宽，坐着很舒服。",
+    "example_ko": "이 기차 좌석이 넓어서 앉아 있기 편해.",
+    "example_pinyin": "zhè liè huǒ chē de zuò wèi hěn kuān ， zuò zhe hěn shū fú 。"
+  },
+  {
+    "id": 910,
+    "chinese": "作者",
+    "pinyin": "zuò zhě",
+    "meaning": "작가, 저자",
+    "example_zh": "这本书的作者很有名，他写过很多小说。",
+    "example_ko": "이 책의 작가는 유명한데 소설을 많이 썼어.",
+    "example_pinyin": "zhè běn shū de zuò zhě hěn yǒu míng ， tā xiě guò hěn duō xiǎo shuō 。"
+  }
+]
