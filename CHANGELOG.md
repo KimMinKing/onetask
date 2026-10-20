@@ -2,6 +2,7 @@
 
 ## 2026-10-20
 ### 완료
+- HSK 4급 예문·병음 교정 목록 601개를 다시 검사해 예문에 목표 단어가 없는 항목, 예문과 병음의 음절 순서 불일치, 중복 예문이 모두 0개임을 확인했다. 서버 DB 전체 601개와 교정 목록을 읽기 전용으로 비교하는 명령을 추가해, 배포 미반영·단어 ID 불일치·적용 기록만 남은 상태를 구분할 수 있게 했다. 기존 V1 적용 기록이 있어도 단어 식별자가 모두 맞으면 교정 목록을 한 번 더 적용하는 V2 마이그레이션을 추가했다.
 - 이야기형 5과목(영어·Rust·C++·SQLD·네트워크)을 `이야기 → 실제 개념 → 직접 확인`의 짧은 화면으로 나눴다. 단계 안에서는 세 화면을 다시 오갈 수 있고, 쉬기·다시 시작·오늘은 여기까지 동선을 추가했다.
 - 현재 과목·단계·화면과 입력 중인 답을 사용자별 브라우저 저장소에 자동 저장한다. 학습 선택 화면에서 최근 단계로 바로 이어 가며, 과목의 마지막 단계를 완료하면 이어하기 기록을 지운다. 손상된 저장 데이터는 무시하고 새 단계로 안전하게 시작한다.
 - 저장·복원·사용자 분리·손상 데이터 회귀 검사 2개와 기존 이야기 구성 검사 7개·영어 회상 검사 2개, 프런트엔드 린트와 프로덕션 빌드가 통과했다.
@@ -19,6 +20,7 @@
 - 백엔드 검사 39개·하위 검사 3개, 프런트엔드 린트·프로덕션 빌드·영어 회상 검사 2개·이야기 구성 검사 2개를 통과했다.
 
 ### 변경된 파일
+- `backend/hsk4_pair_audit.py`, `backend/word_pair_migration.py`, `backend/tests/test_hsk4_word_pairs.py`, `backend/WORD_PAIRS.md`, `DEPLOYMENT.md` — HSK 4급 전체 DB 적용 여부 점검, V1 기록이 남은 DB의 V2 복구, 서버 배포 절차 안내.
 - `frontend/src/lib/studyCheckpoint.ts`, `frontend/src/lib/useStudyFlow.ts`, `frontend/src/components/StudyFlowBar.tsx`, `frontend/src/app/learn/page.tsx` — 최근 학습 이어하기, 사용자별 자동 저장, 짧은 장면과 쉬기 화면.
 - `frontend/src/app/english-basics/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx` — 과목별 세 화면과 답안 복원.
 - `frontend/tests/studyCheckpoint.test.mjs`, `frontend/package.json` — 체크포인트 회귀 검사.

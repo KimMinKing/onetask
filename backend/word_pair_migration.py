@@ -8,7 +8,9 @@ from sqlalchemy import inspect, text
 
 
 CATALOG = Path(__file__).resolve().parent / "data" / "hsk4_word_pairs.json"
-MARKER = "hsk4_word_pairs_v1"
+# V2 re-applies the reviewed catalog once even when a server recorded V1;
+# a V1 marker alone does not prove the current rows still match the catalog.
+MARKER = "hsk4_word_pairs_v2"
 logger = logging.getLogger(__name__)
 
 # These ten legacy HSK3/5 examples used a synonym or sub-word instead of the

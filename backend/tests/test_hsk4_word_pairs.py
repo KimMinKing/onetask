@@ -4,6 +4,7 @@ from pathlib import Path
 from sqlalchemy import create_engine, text
 
 from word_pair_migration import CATALOG, HSK35_EXAMPLES, apply_hsk4_word_pairs, apply_hsk35_examples
+from hsk4_pair_audit import audit_hsk4_pairs
 
 
 def test_hsk4_catalog_and_idempotent_migration():
@@ -27,12 +28,19 @@ def test_hsk4_catalog_and_idempotent_migration():
             )
         """))
         connection.execute(text("CREATE TABLE migration_markers (name TEXT PRIMARY KEY)"))
+        connection.execute(text("INSERT INTO migration_markers (name) VALUES ('hsk4_word_pairs_v1')"))
         connection.execute(text("""
             INSERT INTO words (id, chinese, pinyin, hsk_level, meaning)
             VALUES (:id, :chinese, :pinyin, 4, 'wrong')
         """), pairs)
+    before = audit_hsk4_pairs(engine)
+    assert not before.marker_present
+    assert len(before.content_mismatches) == 601
     assert apply_hsk4_word_pairs(engine) == 601
     assert apply_hsk4_word_pairs(engine) == 0
+    after = audit_hsk4_pairs(engine)
+    assert after.marker_present
+    assert not after.missing_ids and not after.identity_mismatches and not after.content_mismatches
     with engine.connect() as connection:
         actual = connection.execute(text(
             "SELECT meaning, example_zh, example_ko, example_pinyin FROM words WHERE id=:id"
@@ -40,6 +48,11 @@ def test_hsk4_catalog_and_idempotent_migration():
     assert tuple(actual) == tuple(lihai[key] for key in (
         "meaning", "example_zh", "example_ko", "example_pinyin"
     ))
+    with engine.begin() as connection:
+        connection.execute(text("UPDATE words SET example_pinyin = 'wrong' WHERE id = :id"), {"id": lihai["id"]})
+    drift = audit_hsk4_pairs(engine)
+    assert drift.marker_present
+    assert drift.content_mismatches == [(lihai["id"], "厉害", ("example_pinyin",))]
 
 
 def test_hsk35_replacements_name_the_taught_word_and_apply_once():

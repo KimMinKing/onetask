@@ -69,6 +69,12 @@ SHA-256 hashed in `backend/requirements.lock` with `--require-hashes`. When
 direct dependencies in `backend/requirements.txt` change, regenerate the lock
 with Python 3.11 and `pip-compile --generate-hashes`, review it, and rebuild.
 
+For the HSK 4 sentence/pinyin correction, rebuilding the backend is required:
+`git pull` alone leaves the old container running. Check the complete 601-word
+database state with `docker compose exec -T backend python hsk4_pair_audit.py`.
+The audit is read-only and prints the migration marker and mismatch counts.
+Do not reapply `hsk4_data.sql` or `hsk4_data_fix.sql`; their IDs were shifted.
+
 ## 4. Inspect failures
 
 ```bash

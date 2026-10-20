@@ -16,11 +16,23 @@ word occurs in its example. The `厉害` example is transcribed explicitly so
 `python migrate.py` applies the HSK 4 catalog only when all 601 word IDs,
 Chinese words, pinyin and levels match the expected identities. It updates
 meaning and example fields, leaving word IDs and review cards untouched, and
-records `hsk4_word_pairs_v1` after success. A separate migration corrects ten
+records `hsk4_word_pairs_v2` after success. V2 also repairs databases that
+recorded the earlier V1 marker but whose current rows differ. A
+separate migration corrects ten
 HSK 3/5 examples whose target word was absent. Both are transactional and
 idempotent. If an operating database has a different import or partial word
 set, the migration skips the catalog; compare that database against the
 catalog before changing IDs by hand.
+
+After rebuilding the backend image, run
+`docker compose exec -T backend python hsk4_pair_audit.py` from the repository
+root to compare **all 601** production
+rows with the catalog. This command is read-only. It reports missing/extra IDs,
+word-identity mismatches, and counts of mismatched meanings, Chinese/Korean
+examples, and example pinyin. If the migration marker is present but content
+still differs, or identities do not match, keep the audit output and investigate
+before changing markers or running old SQL update files. `git pull` alone does
+not replace the running backend image; use `docker compose up -d --build backend`.
 
 After the HSK 4 correction, 480 of 601 catalog entries match existing legacy
 image fingerprints in the repository. The remaining images are deliberately
