@@ -9,6 +9,7 @@ import random
 from database import get_db
 from models import Word, EnglishWord, JapaneseWord, WordCard, EnglishWordCard, JapaneseWordCard, QuizAttempt, User
 from auth_utils import get_current_user
+from english_beginner_words import REVIEWED_WORDS
 
 router = APIRouter(prefix="/quizzes", tags=["quizzes"])
 
@@ -74,6 +75,7 @@ def _get_sentence_completion_quiz(db: Session, word_lang: str) -> Optional[QuizR
     elif word_lang == "en":
         # 영어: 예문에서 단어를 빈칸으로 만들기
         words_with_examples = db.query(EnglishWord).filter(
+            EnglishWord.word.in_(REVIEWED_WORDS),
             EnglishWord.example_en.isnot(None),
             EnglishWord.example_en != ""
         ).all()
@@ -175,6 +177,7 @@ def _get_example_quiz(db: Session, word_lang: str) -> Optional[QuizResponse]:
 
     elif word_lang == "en":
         words_with_examples = db.query(EnglishWord).filter(
+            EnglishWord.word.in_(REVIEWED_WORDS),
             EnglishWord.example_en.isnot(None),
             EnglishWord.example_en != ""
         ).limit(10).all()
@@ -294,7 +297,7 @@ def check_pronunciation(
         target_word = word.chinese
         word_id = word.id
     elif word_lang == "en":
-        word = db.query(EnglishWord).order_by(func.random()).first()
+        word = db.query(EnglishWord).filter(EnglishWord.word.in_(REVIEWED_WORDS)).order_by(func.random()).first()
         if not word:
             raise HTTPException(status_code=404, detail="No word available")
         target_word = word.word

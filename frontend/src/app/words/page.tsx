@@ -50,7 +50,7 @@ const UI_TEXT = {
     englishLevel: "영어 레벨 선택",
     japaneseLevel: "일본어 레벨 선택",
     hskRange: "HSK 1~6급",
-    enRange: "A1~C1 · 15,868개",
+    enRange: "뜻을 확인한 A1~A2 · 768개",
     jaRange: "JLPT N5~N1 · 8,131개",
     favorites: "즐겨찾기",
     chineseFavorites: "중국어 즐겨찾기",
@@ -119,7 +119,7 @@ const UI_TEXT = {
     englishLevel: "选择英语级别",
     japaneseLevel: "选择日语级别",
     hskRange: "HSK 1~6 级",
-    enRange: "A1~C1 · 15,868 个",
+    enRange: "已核对释义的 A1~A2 · 768 个",
     jaRange: "JLPT N5~N1 · 8,131 个",
     favorites: "收藏",
     chineseFavorites: "中文收藏",
@@ -187,9 +187,6 @@ const HSK_LEVELS = [
 const EN_LEVELS = [
   { value: "A1", label: "A1", descKey: EN_LEVEL_KEYS[0] },
   { value: "A2", label: "A2", descKey: EN_LEVEL_KEYS[1] },
-  { value: "B1", label: "B1", descKey: EN_LEVEL_KEYS[2] },
-  { value: "B2", label: "B2", descKey: EN_LEVEL_KEYS[3] },
-  { value: "C1", label: "C1", descKey: EN_LEVEL_KEYS[4] },
 ];
 
 const JA_LEVELS = [
@@ -717,6 +714,7 @@ function WordsContent({ uiLanguage, setUiLanguage }: {
               <span className="text-stone-600 text-sm">→</span>
             </button>
           ))}
+          <p className="px-2 text-xs leading-5 text-stone-500">{uiLanguage === "ko" ? "기존 B1~C1 단어는 뜻·예문이 검수되지 않아 학습 목록에서 제외했습니다." : "原有 B1~C1 词义和例句尚未核对，暂不显示在学习列表中。"}</p>
         </div>
       </div>
     );

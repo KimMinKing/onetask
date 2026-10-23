@@ -77,7 +77,9 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
         {flow.phase === "story" && <section className="rounded-2xl border border-violet-900/50 bg-violet-950/20 p-5">
           <p className="text-xs font-bold text-violet-300">이어지는 이야기 · 가상의 기록학교 · {chapter?.title}</p>
           {chapter?.start === lesson.id && <p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}
-          <p className="mt-3 text-sm leading-8 text-stone-100">{scene.scene}</p>
+          <div className="mt-3 space-y-4 text-sm leading-8 text-stone-100">
+            {scene.scene.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
         </section>}
         {flow.phase === "concept" && <><section className="rounded-2xl bg-dark-100 p-5">
           <h2 className="font-bold text-violet-300">이 장면을 실제 개념으로 풀어 읽기</h2>

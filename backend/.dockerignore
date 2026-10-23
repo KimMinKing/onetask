@@ -15,5 +15,6 @@ Dockerfile
 *.log
 *.sql
 *.tsv
+!data/english_a2_reviewed.tsv
 *.tsv.bz2
 *.tar.bz2

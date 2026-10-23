@@ -2,6 +2,25 @@
 
 ## 2026-10-24
 ### 완료
+- 기존 영어 SQL 15,868건을 수준별로 전수 대조했다. `way = 웨이팅`, `about = 소개`처럼 단어 뜻이 틀리거나 예문과 맞지 않는 자동 번역을 확인하고, A1 46개와 A2 722개의 한국어 뜻을 각각 다시 적었다. 다의어와 활용형은 한 뜻으로 오해하지 않도록 여러 뜻 또는 원형 정보를 표시한다.
+- 검수되지 않은 A2 예문은 영어 문장과 한국어 문장의 짝을 보장할 수 없어 노출하지 않게 하고, 다의어 등 43개에는 짝을 확인한 쉬운 예문을 새로 넣었다. 서버 시작 시 검수된 768개 단어의 뜻·예문을 재대조하여 이전 SQL이 다시 적용돼도 교정한다. 옛 뜻을 바탕으로 만들어진 중국어 번역도 교정 시 비운다.
+- 검수되지 않은 B1~C1 15,100개는 DB와 기존 카드 진도를 보존하면서 학습·복습·검색·즐겨찾기·퀴즈·알림·통계에서 제외했다. 영어 레벨 화면은 검수된 A1·A2만 보여 주고 상위 레벨 제외 이유를 안내한다. 오늘의 신규 단어는 A1부터 보여 주고 이후 A2로 넘어간다. 서버 DB를 읽기 전용으로 확인하는 영어 단어 감사 명령과 검수 범위 문서를 추가했다.
+- SQLD 100단계의 한 문장 장면을 지안과 민서가 같은 졸업 장부를 계속 복구하는 두 문단 이상의 장면으로 확장했다. 앞 단계의 설계·조회·NULL·조인 실패가 다음 선택의 이유가 되며, 각 장면 뒤의 실제 개념·쉬운 예·문제 흐름은 유지했다.
+- 백엔드 검사 44개와 하위 검사 3개, 프런트엔드 이야기 검사 9개, 린트와 프로덕션 빌드가 통과했다. 백엔드 Docker 이미지를 실제로 빌드해 컨테이너 안에서 A2 722개·전체 검수 768개가 로드되는 것도 확인했다.
+
+### 변경된 파일
+- `backend/data/english_a2_reviewed.tsv`, `backend/.dockerignore`, `backend/english_beginner_words.py`, `backend/migrate.py`, `backend/english_word_audit.py`, `backend/ENGLISH_WORDS.md` — A2 뜻 722개 교정, 컨테이너에 검수 목록 포함, 서버 재대조와 감사.
+- `backend/routers/english_words.py`, `backend/routers/search.py`, `backend/routers/quizzes.py`, `backend/routers/stats.py`, `backend/routers/push.py`, `backend/telegram_daily_quiz.py` — 검수되지 않은 영어 항목의 학습 노출 차단.
+- `frontend/src/app/words/page.tsx`, `frontend/src/app/sqld/story.ts`, `frontend/src/app/sqld/page.tsx` — 영어 학습 범위 안내와 연결된 SQLD 이야기.
+- `backend/tests/test_english_beginner_words.py`, `backend/tests/test_word_pagination.py`, `backend/tests/test_learning_isolation.py`, `frontend/tests/storyCurriculum.test.mjs` — 검수 범위·DB 복구·노출 차단·이야기 회귀 검사.
+- `fix_english_production.sql`, `DEPLOYMENT.md`, `CHANGELOG.md` — 이전 SQL 주의와 서버 적용 절차.
+
+### 다음 세션
+- 서버에서 백엔드를 다시 빌드하고 시작한 뒤 `docker compose exec -T backend python english_word_audit.py`로 실제 DB의 768개 교정 상태를 확인한다.
+- B1 4,294개, B2 7,407개, C1 3,399개는 뜻과 예문을 차례로 검수한 뒤에만 학습 목록으로 되돌린다.
+
+## 2026-10-24
+### 완료
 - 영어 단어장에 `about = 소개`가 들어간 원본을 확인하고, 자주 보는 A1 단어 46개의 한국어 뜻을 문맥별 여러 의미로 교정했다. 각 단어에 짧은 영어 예문과 짝이 맞는 한국어 번역을 넣었다. `about` 카드에는 `~에 대해`, `약`, `막 ~하려고`의 용법을 따로 보여 준다.
 - 백엔드 시작 시 기존 영어 단어 DB를 한 번 교정하는 마이그레이션과 재실행 방지 기록을 추가했다. 예전 SQL 파일의 잘못된 데이터를 다시 적용하지 않도록 표시하고, 서버 재빌드 절차를 배포 문서에 적었다.
 - SQLD 100단계마다 쉬운 상황 예시를 추가했다. 확인 문제는 다른 단원의 틀린 문장을 섞던 방식에서 같은 단계의 맞는 설명 3개와 틀린 설명 1개를 비교하는 방식으로 바꿨다. 정답 위치를 단계별로 분산하고, 문제 전에 오답 문장을 노출하던 함정 노트를 제거했다.

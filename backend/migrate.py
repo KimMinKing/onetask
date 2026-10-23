@@ -6,7 +6,7 @@ from database import Base, engine
 import models  # noqa: F401 - registers metadata before create_all
 from migrations_runtime import ensure_runtime_migrations
 from word_pair_migration import apply_hsk4_word_pairs, apply_hsk35_examples
-from english_beginner_words import apply_english_beginner_words
+from english_beginner_words import apply_english_reviewed_words
 
 
 def migrate() -> None:
@@ -15,7 +15,7 @@ def migrate() -> None:
         ensure_runtime_migrations(engine)
         apply_hsk4_word_pairs(engine)
         apply_hsk35_examples(engine)
-        apply_english_beginner_words(engine)
+        apply_english_reviewed_words(engine)
         return
 
     # A session-level lock covers both create_all and the legacy DDL. Keeping
@@ -28,7 +28,7 @@ def migrate() -> None:
             ensure_runtime_migrations(engine)
             apply_hsk4_word_pairs(engine)
             apply_hsk35_examples(engine)
-            apply_english_beginner_words(engine)
+            apply_english_reviewed_words(engine)
         finally:
             lock_connection.execute(text("SELECT pg_advisory_unlock(71005)"))
             lock_connection.commit()

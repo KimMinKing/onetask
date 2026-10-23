@@ -1,5 +1,5 @@
 -- Legacy import data. Do not rerun: some glosses/examples are wrong (for example about = 소개).
--- Reviewed corrections for 46 common A1 words are applied on startup by backend/english_beginner_words.py.
+-- Reviewed corrections for 768 A1/A2 words are applied on startup by backend/english_beginner_words.py.
 UPDATE english_words SET meaning='그리고', example_en='Everyone has strengths and weaknesses.', example_ko='모든 사람에게는 강점과 약점이 있습니다.' WHERE word='and' AND level='A1';
 UPDATE english_words SET meaning='함께', example_en='You''re so impatient with me.', example_ko='당신은 나에게 너무 참을성이 없습니다.' WHERE word='with' AND level='A1';
 UPDATE english_words SET meaning='출신', example_en='People from Madrid are weird.', example_ko='마드리드 사람들은 이상해요.' WHERE word='from' AND level='A1';

@@ -13,9 +13,14 @@ from models import EnglishWord, EnglishWordCard, User
 from auth_utils import get_current_user, get_master_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from translation_utils import translate_ko_to_zh
+from english_beginner_words import REVIEWED_WORDS
 
 router = APIRouter(prefix="/english-words", tags=["english-words"])
 scheduler = Scheduler()
+
+
+def _reviewed_words(db: Session):
+    return db.query(EnglishWord).filter(EnglishWord.word.in_(REVIEWED_WORDS))
 
 
 class ReviewRequest(BaseModel):
@@ -71,7 +76,7 @@ def _word_with_card(word: EnglishWord, wc: Optional[EnglishWordCard]) -> dict:
 
 @router.get("/")
 def get_words(level: Optional[str] = None, limit: int = Query(100, ge=1, le=200), offset: int = Query(0, ge=0), q: str = Query("", max_length=100), db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    query = db.query(EnglishWord)
+    query = _reviewed_words(db)
     if level:
         query = query.filter(EnglishWord.level == level)
     if search := q.strip():
@@ -91,7 +96,7 @@ def get_due_words(
     user: User = Depends(get_current_user),
 ):
     now = datetime.now(timezone.utc)
-    q = db.query(EnglishWord)
+    q = _reviewed_words(db)
     if level:
         q = q.filter(EnglishWord.level == level)
     words = q.all()
@@ -99,24 +104,26 @@ def get_due_words(
     cards = {wc.word_id: wc for wc in db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.word_id.in_(word_ids)).all()}
 
     review_words = []
-    new_words = []
+    new_a1 = []
+    new_a2 = []
     for w in words:
         wc = cards.get(w.id)
         if wc is None or wc.reps == 0:
-            new_words.append(_word_with_card(w, wc))
+            (new_a1 if w.level == "A1" else new_a2).append(_word_with_card(w, wc))
         elif wc.due <= now:
             review_words.append(_word_with_card(w, wc))
 
     review_words.sort(key=lambda x: x["due"])
-    random.shuffle(new_words)
-    return build_review_session(review_words, new_words, new_count, review_limit)
+    random.shuffle(new_a1)
+    random.shuffle(new_a2)
+    return build_review_session(review_words, new_a1 + new_a2, new_count, review_limit)
 
 
 @router.get("/stats")
 def get_stats(level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    q = db.query(EnglishWord)
+    q = _reviewed_words(db)
     if level:
         q = q.filter(EnglishWord.level == level)
     words = q.all()
@@ -134,7 +141,7 @@ def get_stats(level: Optional[str] = None, db: Session = Depends(get_db), user: 
 def get_today_words(level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    q = db.query(EnglishWord)
+    q = _reviewed_words(db)
     if level:
         q = q.filter(EnglishWord.level == level)
     words = q.all()
@@ -155,11 +162,12 @@ def get_daily_words(
 ):
     """오늘의 영어: 전 레벨 복습 due 카드 + 신규 N개 랜덤"""
     now = datetime.now(timezone.utc)
-    all_words = {w.id: w for w in db.query(EnglishWord).all()}
+    all_words = {w.id: w for w in _reviewed_words(db).all()}
     all_cards = {wc.word_id: wc for wc in db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id).all()}
 
     review_words = []
-    new_words = []
+    new_a1 = []
+    new_a2 = []
 
     for word in all_words.values():
         wc = all_cards.get(word.id)
@@ -167,15 +175,16 @@ def get_daily_words(
             if wc.due <= now:
                 review_words.append(_word_with_card(word, wc))
         else:
-            new_words.append(_word_with_card(word, wc))
+            (new_a1 if word.level == "A1" else new_a2).append(_word_with_card(word, wc))
 
-    random.shuffle(new_words)
-    return build_review_session(review_words, new_words, new_count, review_limit)
+    random.shuffle(new_a1)
+    random.shuffle(new_a2)
+    return build_review_session(review_words, new_a1 + new_a2, new_count, review_limit)
 
 
 @router.post("/{word_id}/favorite")
 def toggle_favorite(word_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    word = db.query(EnglishWord).filter(EnglishWord.id == word_id).first()
+    word = _reviewed_words(db).filter(EnglishWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
     wc = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.word_id == word_id).first()
@@ -189,7 +198,7 @@ def toggle_favorite(word_id: int, db: Session = Depends(get_db), user: User = De
 
 @router.post("/{word_id}/translate-zh")
 def translate_word_to_zh(word_id: int, db: Session = Depends(get_db), _ = Depends(get_master_user)):
-    word = db.query(EnglishWord).filter(EnglishWord.id == word_id).first()
+    word = _reviewed_words(db).filter(EnglishWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
 
@@ -205,7 +214,7 @@ def translate_word_to_zh(word_id: int, db: Session = Depends(get_db), _ = Depend
 
 @router.post("/tools/translate-missing-zh")
 def translate_missing_to_zh(level: Optional[str] = None, limit: int = 500, db: Session = Depends(get_db), _ = Depends(get_master_user)):
-    q = db.query(EnglishWord).filter(
+    q = _reviewed_words(db).filter(
         (EnglishWord.meaning_zh == None) | ((EnglishWord.example_ko != None) & (EnglishWord.example_zh == None))
     )
     if level:
@@ -232,7 +241,7 @@ def translate_missing_to_zh(level: Optional[str] = None, limit: int = 500, db: S
 def get_favorites(level: Optional[str] = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     favorite_cards = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.is_favorite == True).all()
     cards = {wc.word_id: wc for wc in favorite_cards}
-    q = db.query(EnglishWord).filter(EnglishWord.id.in_(cards.keys()))
+    q = _reviewed_words(db).filter(EnglishWord.id.in_(cards.keys()))
     if level:
         q = q.filter(EnglishWord.level == level)
     words = q.order_by(EnglishWord.id).all()
@@ -241,7 +250,7 @@ def get_favorites(level: Optional[str] = None, db: Session = Depends(get_db), us
 
 @router.post("/{word_id}/review")
 def review_word(word_id: int, body: ReviewRequest, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    word = db.query(EnglishWord).filter(EnglishWord.id == word_id).first()
+    word = _reviewed_words(db).filter(EnglishWord.id == word_id).first()
     if not word:
         raise HTTPException(status_code=404, detail="Word not found")
 

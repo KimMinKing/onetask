@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from database import get_db
 from models import User, Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
 from auth_utils import get_current_user
+from english_beginner_words import REVIEWED_WORDS
 
 router = APIRouter(prefix="/search", tags=["search"])
 
@@ -133,7 +134,7 @@ def global_search(
 
     # 영어 검색
     if lang is None or lang == "en":
-        en_query = db.query(EnglishWord)
+        en_query = db.query(EnglishWord).filter(EnglishWord.word.in_(REVIEWED_WORDS))
         if q:
             en_query = en_query.filter(
                 EnglishWord.word.ilike(f"%{q}%") |

@@ -2,7 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import get_db
-from models import PushSubscription, User, WordCard, EnglishWordCard, JapaneseWordCard
+from models import PushSubscription, User, WordCard, EnglishWord, EnglishWordCard, JapaneseWordCard
+from english_beginner_words import REVIEWED_WORDS
 from auth_utils import get_current_user
 from push_utils import send_push
 from datetime import datetime, timezone
@@ -56,6 +57,6 @@ def test_push(req: PushTestRequest, db: Session = Depends(get_db), user: User = 
 def due_count(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     now = datetime.now(timezone.utc)
     zh = db.query(WordCard).filter(WordCard.user_id == user.id, WordCard.due <= now).count()
-    en = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id, EnglishWordCard.due <= now).count()
+    en = db.query(EnglishWordCard).join(EnglishWord, EnglishWord.id == EnglishWordCard.word_id).filter(EnglishWord.word.in_(REVIEWED_WORDS), EnglishWordCard.user_id == user.id, EnglishWordCard.due <= now).count()
     ja = db.query(JapaneseWordCard).filter(JapaneseWordCard.user_id == user.id, JapaneseWordCard.due <= now).count()
     return {"zh": zh, "en": en, "ja": ja, "total": zh + en + ja}

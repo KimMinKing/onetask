@@ -6,11 +6,12 @@ from datetime import datetime, timezone, timedelta
 from database import get_db
 from models import User, Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
 from auth_utils import get_current_user
+from english_beginner_words import REVIEWED_WORDS
 
 router = APIRouter(prefix="/stats", tags=["stats"])
 
 HSK_LEVELS = [3, 4, 5, 6]
-EN_LEVELS  = ["A1", "A2", "B1", "B2", "C1"]
+EN_LEVELS  = ["A1", "A2"]
 JA_LEVELS  = ["N5", "N4", "N3", "N2", "N1"]
 
 
@@ -55,13 +56,15 @@ def get_overview(db: Session = Depends(get_db), user: User = Depends(get_current
         })
 
     # ── 영어 ──
-    en_cards = db.query(EnglishWordCard).filter(EnglishWordCard.user_id == user.id).all()
+    en_cards = db.query(EnglishWordCard).join(
+        EnglishWord, EnglishWord.id == EnglishWordCard.word_id
+    ).filter(EnglishWord.word.in_(REVIEWED_WORDS), EnglishWordCard.user_id == user.id).all()
     en_today = sum(1 for c in en_cards if c.last_review and c.last_review >= today_start)
     en_streak = calc_streak([c.last_review for c in en_cards if c.last_review])
 
     en_levels = []
     for lvl in EN_LEVELS:
-        words = db.query(EnglishWord).filter(EnglishWord.level == lvl).all()
+        words = db.query(EnglishWord).filter(EnglishWord.word.in_(REVIEWED_WORDS), EnglishWord.level == lvl).all()
         wids = {w.id for w in words}
         cards = [c for c in en_cards if c.word_id in wids]
         reviewed = len({c.word_id for c in cards if c.reps > 0})

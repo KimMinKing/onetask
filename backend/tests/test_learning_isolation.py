@@ -28,7 +28,7 @@ class LearningIsolationTests(unittest.TestCase):
         self.db.close()
 
     def test_review_progress_is_separate_for_each_user(self):
-        word = EnglishWord(word="isolation", meaning="격리", level="B1")
+        word = EnglishWord(word="way", meaning="길", level="A1")
         self.db.add(word)
         self.db.commit()
 

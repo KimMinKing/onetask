@@ -70,6 +70,19 @@ test("SQLD and network stories cover every lesson without a repeated scene", () 
   }
 });
 
+test("SQLD chapters keep the same characters and give each step a full scene", () => {
+  assert.equal(SQLD_STORY.length, 100);
+  for (const [index, step] of SQLD_STORY.entries()) {
+    assert.ok(step.scene.includes("\n\n"), `SQLD ${index + 1} paragraph break`);
+    assert.ok(step.scene.length >= 120, `SQLD ${index + 1} scene depth`);
+  }
+  for (const [start, end] of [[0, 24], [25, 54], [55, 84], [85, 99]]) {
+    const chapter = SQLD_STORY.slice(start, end + 1).map(step => step.scene).join(" ");
+    assert.match(chapter, /지안/);
+    assert.match(chapter, /민서/);
+  }
+});
+
 test("SQLD and network quizzes have four distinct choices with varied answers", async () => {
   registerHooks({ resolve(specifier, context, nextResolve) {
     return nextResolve(specifier === "./transportCurriculum" ? "./transportCurriculum.ts" : specifier, context);

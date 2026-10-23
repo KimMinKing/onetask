@@ -4,6 +4,8 @@ The old import used one machine-selected Korean gloss per word. These entries
 keep common meanings together and give a short sentence for the primary use.
 """
 
+from pathlib import Path
+
 from sqlalchemy import bindparam, inspect, text
 
 
@@ -60,6 +62,67 @@ BEGINNER_WORDS = {
 MARKER = "english_beginner_meanings_v1"
 
 
+def _load_a2_words() -> dict[str, str]:
+    catalog = Path(__file__).resolve().parent / "data" / "english_a2_reviewed.tsv"
+    entries = {}
+    for line in catalog.read_text(encoding="utf-8").splitlines():
+        word, meaning = line.split("\t", 1)
+        if not word or not meaning or word in entries:
+            raise ValueError(f"Invalid reviewed English entry: {word!r}")
+        entries[word] = meaning
+    return entries
+
+
+A2_WORDS = _load_a2_words()
+A2_EXAMPLES = {
+    "page": ("Please turn to page five.", "5쪽을 펴 주세요."),
+    "article": ("I read an article about birds.", "나는 새에 관한 글을 읽었어."),
+    "made": ("She made a small box.", "그녀는 작은 상자를 만들었어."),
+    "state": ("The water is in a liquid state.", "그 물은 액체 상태야."),
+    "used": ("This is a used book.", "이것은 중고 책이야."),
+    "march": ("My birthday is in March.", "내 생일은 3월이야."),
+    "use": ("You can use my pen.", "내 펜을 써도 돼."),
+    "part": ("This is my favorite part.", "이 부분이 내가 가장 좋아하는 부분이야."),
+    "work": ("I work at a school.", "나는 학교에서 일해."),
+    "since": ("I have lived here since May.", "나는 5월부터 여기에 살았어."),
+    "however": ("I was tired. However, I kept walking.", "나는 피곤했어. 하지만 계속 걸었어."),
+    "title": ("What is the title of this book?", "이 책 제목이 뭐야?"),
+    "number": ("What is your phone number?", "네 전화번호가 뭐야?"),
+    "area": ("This area is quiet.", "이 지역은 조용해."),
+    "left": ("Turn left at the bank.", "은행에서 왼쪽으로 돌아."),
+    "general": ("In general, cats like to sleep.", "일반적으로 고양이는 자는 것을 좋아해."),
+    "set": ("Set the cup on the table.", "컵을 탁자 위에 놓아 줘."),
+    "light": ("This bag is light.", "이 가방은 가벼워."),
+    "present": ("This is a present for you.", "이것은 너에게 주는 선물이야."),
+    "run": ("I run every morning.", "나는 매일 아침 달려."),
+    "free": ("The tickets are free.", "표는 무료야."),
+    "order": ("I ordered a bowl of soup.", "나는 수프 한 그릇을 주문했어."),
+    "right": ("Turn right at the next street.", "다음 길에서 오른쪽으로 돌아."),
+    "second": ("This is my second try.", "이것은 내 두 번째 시도야."),
+    "bill": ("Please bring me the bill.", "계산서를 가져다주세요."),
+    "account": ("I opened a bank account.", "나는 은행 계좌를 열었어."),
+    "bank": ("I put my money in the bank.", "나는 돈을 은행에 넣었어."),
+    "found": ("I found my lost key.", "나는 잃어버린 열쇠를 찾았어."),
+    "full": ("The cup is full of water.", "컵에 물이 가득 차 있어."),
+    "close": ("Please close the door.", "문을 닫아 줘."),
+    "race": ("She won the race.", "그녀는 경주에서 이겼어."),
+    "sound": ("That sounds good.", "그거 좋게 들려."),
+    "mean": ("What does this word mean?", "이 단어는 무슨 뜻이야?"),
+    "current": ("What is your current address?", "지금 주소가 뭐야?"),
+    "case": ("In this case, we should wait.", "이 경우에는 기다려야 해."),
+    "lead": ("Please lead the way.", "길을 안내해 줘."),
+    "note": ("I wrote a short note.", "나는 짧은 메모를 썼어."),
+    "cover": ("Cover the pot with a lid.", "냄비를 뚜껑으로 덮어."),
+    "date": ("What is the date today?", "오늘 날짜가 며칠이야?"),
+    "fine": ("I feel fine now.", "나는 이제 괜찮아."),
+    "charge": ("I need to charge my phone.", "휴대전화를 충전해야 해."),
+    "save": ("Save your work before you leave.", "나가기 전에 작업을 저장해."),
+    "waiting": ("I am waiting for you.", "나는 너를 기다리고 있어."),
+}
+REVIEWED_WORDS = frozenset(BEGINNER_WORDS) | frozenset(A2_WORDS)
+REVIEW_MARKER = "english_reviewed_a1_a2_v2"
+
+
 def apply_english_beginner_words(engine) -> int:
     inspector = inspect(engine)
     if not inspector.has_table("english_words") or not inspector.has_table("migration_markers"):
@@ -81,3 +144,43 @@ def apply_english_beginner_words(engine) -> int:
         """), rows)
         connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": MARKER})
     return len(rows)
+
+
+def apply_english_reviewed_words(engine) -> int:
+    """Reconcile reviewed meanings on startup, including after a legacy SQL rerun."""
+    inspector = inspect(engine)
+    if not inspector.has_table("english_words") or not inspector.has_table("migration_markers"):
+        return 0
+    expected = {
+        **{word: values for word, values in BEGINNER_WORDS.items()},
+        **{word: (meaning, *(A2_EXAMPLES.get(word) or (None, None))) for word, meaning in A2_WORDS.items()},
+    }
+    columns = {column["name"] for column in inspector.get_columns("english_words")}
+    has_zh = {"meaning_zh", "example_zh"} <= columns
+    query = text("""
+        SELECT word, meaning, example_en, example_ko
+        FROM english_words WHERE lower(word) IN :words
+    """).bindparams(bindparam("words", expanding=True))
+    with engine.begin() as connection:
+        marker = connection.execute(
+            text("SELECT 1 FROM migration_markers WHERE name=:name"), {"name": REVIEW_MARKER}
+        ).first()
+        updates = []
+        for word, meaning, example_en, example_ko in connection.execute(
+            query, {"words": tuple(expected)}
+        ):
+            canonical = expected[word.lower()]
+            if (meaning, example_en, example_ko) != canonical or (has_zh and not marker):
+                updates.append(dict(word=word, meaning=canonical[0], example_en=canonical[1], example_ko=canonical[2]))
+        if updates:
+            clear_zh = ", meaning_zh=NULL, example_zh=NULL" if has_zh else ""
+            connection.execute(text(f"""
+                UPDATE english_words
+                SET meaning=:meaning, example_en=:example_en, example_ko=:example_ko{clear_zh}
+                WHERE word=:word
+            """), updates)
+        if not marker:
+            connection.execute(
+                text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": REVIEW_MARKER}
+            )
+    return len(updates)

@@ -9,6 +9,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from models import EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard, Word, WordCard
+from english_beginner_words import REVIEWED_WORDS
 
 
 KST = ZoneInfo("Asia/Seoul")
@@ -50,7 +51,7 @@ def _load_candidates(db: Session, user_id: int, start: datetime, end: datetime) 
 
     en_rows = db.query(EnglishWordCard, EnglishWord).join(
         EnglishWord, EnglishWord.id == EnglishWordCard.word_id
-    ).filter(EnglishWordCard.user_id == user_id, EnglishWordCard.last_review >= start, EnglishWordCard.last_review < end).all()
+    ).filter(EnglishWord.word.in_(REVIEWED_WORDS), EnglishWordCard.user_id == user_id, EnglishWordCard.last_review >= start, EnglishWordCard.last_review < end).all()
     for card, word in en_rows:
         candidates.append(Candidate("영어", word.word, word.meaning, word.example_en, card.lapses))
 
@@ -65,7 +66,10 @@ def _load_candidates(db: Session, user_id: int, start: datetime, end: datetime) 
 
 def _meaning_pool(db: Session, language: str, answer: str) -> list[str]:
     model = {"중국어": Word, "영어": EnglishWord, "일본어": JapaneseWord}[language]
-    rows = db.query(model.meaning).filter(model.meaning != answer).order_by(func.random()).limit(30).all()
+    query = db.query(model.meaning).filter(model.meaning != answer)
+    if language == "영어":
+        query = query.filter(EnglishWord.word.in_(REVIEWED_WORDS))
+    rows = query.order_by(func.random()).limit(30).all()
     return list(dict.fromkeys(value for (value,) in rows if value and value != answer))
 
 
