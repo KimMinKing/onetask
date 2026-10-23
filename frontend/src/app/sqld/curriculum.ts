@@ -6,7 +6,7 @@ function lesson(id: number, section: string, title: string, subtitle: string, co
   return {
     id, section, title, subtitle,
     points, sql, trap,
-    quiz: { question: `다음 중 ‘${title}’에 대한 설명으로 옳은 것은?`, options: [points[0], trap], answer: 0, explanation: points.join(" ") },
+    quiz: { question: `‘${title}’에 관해 잘못된 설명은?`, options: [...points, trap], answer: 3, explanation: `잘못된 설명: ${trap} 실제 규칙: ${points.join(" ")}` },
   };
 }
 
@@ -114,15 +114,8 @@ const LESSONS: SqldLesson[] = [
 ];
 
 export const SQLD_CURRICULUM: SqldLesson[] = LESSONS.map((item) => {
-  const nearby = LESSONS.filter((other) => other.id !== item.id).sort((a, b) =>
-    Number(b.section === item.section) - Number(a.section === item.section) ||
-    Math.abs(a.id - item.id) - Math.abs(b.id - item.id) || a.id - b.id
-  );
-  const distractors = [item.trap, ...nearby.map((other) => other.trap)].filter((option, index, all) =>
-    option !== item.points[0] && all.indexOf(option) === index
-  ).slice(0, 3);
   const answer = (item.id * 7 + Math.floor(item.id / 4)) % 4;
-  const options = distractors.slice();
-  options.splice(answer, 0, item.points[0]);
+  const options = item.points.slice();
+  options.splice(answer, 0, item.trap);
   return { ...item, quiz: { ...item.quiz, options, answer } };
 });

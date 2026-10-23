@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { SQLD_CURRICULUM, SqldLesson } from "./curriculum";
 import { SQLD_CHAPTERS, SQLD_STORY } from "./story";
+import { SQLD_EASY_EXAMPLES } from "./easyExamples";
 import { api } from "@/lib/api";
 import { readUserStorage, writeUserStorage } from "@/lib/auth";
 import StudyFlowBar from "@/components/StudyFlowBar";
@@ -24,9 +25,17 @@ function CodeBlock({ children }: { children: string }) {
 function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLesson; done: boolean; onDone: (durationMinutes: number) => Promise<void>; onMove: (id: number) => void; onWrong: (choice: number) => void }) {
   const scene = SQLD_STORY[lesson.id - 1];
   const chapter = SQLD_CHAPTERS.find(({ start, end }) => lesson.id >= start && lesson.id <= end);
-  const flow = useStudyFlow("sqld", lesson.id, lesson.title, { choice: null as number | null });
+  const flow = useStudyFlow("sqld", lesson.id, lesson.title, { choice: null as number | null, wrongChoices: [] as number[] });
   const choice = flow.draft.choice;
-  const setChoice = (value: number | null) => flow.setDraft({ choice: value });
+  const wrongChoices = flow.draft.wrongChoices ?? [];
+  const chooseAnswer = (index: number) => {
+    if (index === lesson.quiz.answer) {
+      flow.setDraft((previous) => ({ ...previous, choice: index }));
+    } else {
+      flow.setDraft((previous) => ({ ...previous, wrongChoices: [...(previous.wrongChoices ?? []), index] }));
+      onWrong(index);
+    }
+  };
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState(false);
   const startedAt = useRef(0);
@@ -75,6 +84,10 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
           <p className="mt-3 text-sm leading-7 text-stone-100">{scene.bridge}</p>
           <p className="mt-3 text-xs leading-6 text-stone-500">학교와 장부는 이해를 돕는 가상 사건입니다. 아래의 정의와 SQL 실행 규칙을 실제 개념으로 익히세요.</p>
         </section>
+        <section className="rounded-2xl border border-sky-900/50 bg-sky-950/20 p-5">
+          <h2 className="font-bold text-sky-300">아주 쉬운 예로 다시 보기</h2>
+          <p className="mt-3 text-sm leading-7 text-stone-100">{SQLD_EASY_EXAMPLES[lesson.id]}</p>
+        </section>
         <section>
           <h2 className="mb-3 text-sm font-bold text-stone-100">시험에 나오는 핵심</h2>
           <ul className="space-y-2">
@@ -82,7 +95,7 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
           </ul>
         </section>
         {lesson.sql && <section><h2 className="mb-3 text-sm font-bold text-stone-100">직접 읽어 보기</h2><CodeBlock>{lesson.sql}</CodeBlock></section>}
-        <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 px-4 py-3 text-sm leading-6 text-amber-200"><strong>함정 노트:</strong> {lesson.trap}</aside></>}
+        <p className="text-sm leading-6 text-stone-400">보기 네 개를 읽고 실제 규칙과 어긋나는 설명을 하나 찾아보세요. 틀려도 다른 보기를 계속 고를 수 있습니다.</p></>}
         {flow.phase !== "practice" && <button onClick={() => flow.changePhase(flow.phase === "story" ? "concept" : "practice")} className="w-full rounded-xl bg-violet-600 py-3 font-bold">{flow.phase === "story" ? "실제 개념 보기 →" : "확인 문제 풀기 →"}</button>}
       </article>
 
@@ -91,15 +104,13 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
         <h2 className="mb-4 text-base font-bold leading-7 text-stone-100">{lesson.quiz.question}</h2>
         <div className="space-y-2">
           {lesson.quiz.options.map((option, index) => (
-            <button key={option} disabled={choice !== null} onClick={() => { setChoice(index); if (index !== lesson.quiz.answer) onWrong(index); }} className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition-colors ${choice === null ? "border-white/5 bg-dark-100 text-stone-300 hover:border-violet-700" : index === lesson.quiz.answer ? "border-emerald-700 bg-emerald-950/30 text-emerald-300" : index === choice ? "border-red-800 bg-red-950/30 text-red-300" : "border-white/5 bg-dark-100 text-stone-600"}`}>{index + 1}. {option}</button>
+            <button key={option} disabled={correct || wrongChoices.includes(index)} onClick={() => chooseAnswer(index)} className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition-colors ${correct && index === choice ? "border-emerald-700 bg-emerald-950/30 text-emerald-300" : wrongChoices.includes(index) ? "border-amber-800 bg-amber-950/30 text-amber-300" : "border-white/5 bg-dark-100 text-stone-300 hover:border-violet-700"}`}>{index + 1}. {option}</button>
           ))}
         </div>
-        {choice !== null && (
-          <div className={`mt-4 rounded-xl px-4 py-3 text-sm leading-6 ${correct ? "bg-emerald-950/30 text-emerald-300" : "bg-red-950/25 text-red-300"}`}>
-            {correct ? "정답입니다. " : "다시 기억하세요. "}{lesson.quiz.explanation}
-            {!correct && <button onClick={() => setChoice(null)} className="mt-3 block rounded-lg border border-red-700 px-3 py-1.5 text-xs font-bold">다시 풀기</button>}
-          </div>
-        )}
+        {correct ? <div className="mt-4 rounded-xl bg-emerald-950/30 px-4 py-3 text-sm leading-6 text-emerald-300">정답입니다. {lesson.quiz.explanation}</div>
+          : wrongChoices.length > 0 && <div className="mt-4 rounded-xl bg-amber-950/25 px-4 py-3 text-sm leading-6 text-amber-300">이 설명은 실제로 맞아요. 다른 보기를 비교해 보세요.
+            <button onClick={() => flow.changePhase("concept")} className="mt-3 block rounded-lg border border-amber-700 px-3 py-1.5 text-xs font-bold">개념 다시 보기</button>
+          </div>}
         {saveError && <p role="alert" className="mt-4 text-sm text-red-300">진도가 저장되지 않았습니다. 연결을 확인한 뒤 다시 눌러 주세요.</p>}
         <button disabled={!correct || saving} onClick={finish} className="mt-4 w-full rounded-xl bg-violet-600 py-3.5 font-bold text-white transition-colors hover:bg-violet-500 disabled:cursor-not-allowed disabled:opacity-30">{saving ? "저장 중..." : saveError ? "저장 다시 시도" : done ? "완료됨 · 다음 단계" : "이 단계 완료하고 다음으로"}</button>
       </section>}

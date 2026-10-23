@@ -50,3 +50,13 @@ test("rejects damaged or out-of-range checkpoint data", () => {
   values.set(key, JSON.stringify({ subject: "english-basics", step: 1, title: "bad", phase: "practice", paused: false, draft: { practicing: true, queue: [999], cursor: 0, typed: "", feedback: "", sentence: "", sentenceChecked: false }, updatedAt: 1 }));
   assert.equal(readStudyCheckpoint("english-basics"), null);
 });
+
+test("SQLD keeps tried choices for another attempt and rejects damaged choice lists", () => {
+  values.clear();
+  setAuth({ username: "first", is_master: false });
+  const base = { subject: "sqld", step: 1, title: "모델링", phase: "practice", paused: false };
+  saveStudyCheckpoint({ ...base, draft: { choice: null, wrongChoices: [0, 2] } });
+  assert.deepEqual(readStudyCheckpoint("sqld")?.draft.wrongChoices, [0, 2]);
+  saveStudyCheckpoint({ ...base, draft: { choice: null, wrongChoices: [0, 0] } });
+  assert.equal(readStudyCheckpoint("sqld"), null);
+});

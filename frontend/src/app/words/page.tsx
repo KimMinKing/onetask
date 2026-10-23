@@ -1383,7 +1383,7 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
   };
 
   return (
-    <div className="relative w-full select-none" style={{ minHeight: "300px" }}>
+    <div className="relative w-full select-none" style={{ minHeight: word.word.toLowerCase() === "about" && uiLanguage === "ko" ? "400px" : "300px" }}>
       <motion.div style={{ opacity: rightOpacity }}
         className="absolute inset-0 rounded-3xl border-2 border-green-500 bg-green-950/30 flex items-center justify-center z-0 pointer-events-none">
         <span className="text-green-400 text-3xl font-black tracking-widest rotate-[-12deg] border-4 border-green-500 px-4 py-1 rounded-xl">{t.knew}</span>
@@ -1397,7 +1397,7 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
         className="cursor-grab active:cursor-grabbing" whileTap={{ scale: 0.98 }}>
         <div style={{ perspective: "1200px" }}>
           <div className="relative w-full transition-transform duration-[380ms]"
-            style={{ transformStyle: "preserve-3d", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", minHeight: "300px" }}>
+            style={{ transformStyle: "preserve-3d", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)", minHeight: word.word.toLowerCase() === "about" && uiLanguage === "ko" ? "400px" : "300px" }}>
             {/* 앞면: 영어 단어 */}
             <div className="absolute inset-0 bg-dark-200 border border-white/5 rounded-3xl flex flex-col items-center justify-center gap-4 p-8"
               style={{ backfaceVisibility: "hidden" }}>
@@ -1422,6 +1422,11 @@ function EnSwipeCard({ word, flipped, onFlip, onSwipe, uiLanguage }: {
                   )}
                 </div>
               )}
+              {uiLanguage === "ko" && word.word.toLowerCase() === "about" && <div className="w-full text-xs leading-6 text-stone-300">
+                <p><strong>talk about school</strong> → 학교에 대해 이야기하다</p>
+                <p><strong>about ten minutes</strong> → 약 10분</p>
+                <p><strong>be about to leave</strong> → 막 떠나려 하다</p>
+              </div>}
             </div>
           </div>
         </div>

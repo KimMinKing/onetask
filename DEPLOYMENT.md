@@ -75,6 +75,11 @@ database state with `docker compose exec -T backend python hsk4_pair_audit.py`.
 The audit is read-only and prints the migration marker and mismatch counts.
 Do not reapply `hsk4_data.sql` or `hsk4_data_fix.sql`; their IDs were shifted.
 
+The A1 English meaning/example correction also runs from `migrate.py` when the
+rebuilt backend starts. `git pull` alone does not update the running container;
+follow the build and `up -d` steps above. Do not rerun the historical
+`fix_english_production.sql`, which contains the incorrect `about = 소개` row.
+
 ## 4. Inspect failures
 
 ```bash

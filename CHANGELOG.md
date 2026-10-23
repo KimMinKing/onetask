@@ -1,5 +1,24 @@
 # CHANGELOG — onetask
 
+## 2026-10-24
+### 완료
+- 영어 단어장에 `about = 소개`가 들어간 원본을 확인하고, 자주 보는 A1 단어 46개의 한국어 뜻을 문맥별 여러 의미로 교정했다. 각 단어에 짧은 영어 예문과 짝이 맞는 한국어 번역을 넣었다. `about` 카드에는 `~에 대해`, `약`, `막 ~하려고`의 용법을 따로 보여 준다.
+- 백엔드 시작 시 기존 영어 단어 DB를 한 번 교정하는 마이그레이션과 재실행 방지 기록을 추가했다. 예전 SQL 파일의 잘못된 데이터를 다시 적용하지 않도록 표시하고, 서버 재빌드 절차를 배포 문서에 적었다.
+- SQLD 100단계마다 쉬운 상황 예시를 추가했다. 확인 문제는 다른 단원의 틀린 문장을 섞던 방식에서 같은 단계의 맞는 설명 3개와 틀린 설명 1개를 비교하는 방식으로 바꿨다. 정답 위치를 단계별로 분산하고, 문제 전에 오답 문장을 노출하던 함정 노트를 제거했다.
+- SQLD 오답을 눌러도 정답을 즉시 공개하지 않고 남은 보기를 계속 선택할 수 있게 했다. 시도한 보기의 이어하기 저장과 검증을 추가했다.
+- 프런트엔드 린트·프로덕션 빌드, 이야기 구성 검사 8개, 이어하기 검사 3개, 백엔드 영어·HSK 마이그레이션 검사 4개가 통과했다.
+
+### 변경된 파일
+- `backend/english_beginner_words.py`, `backend/migrate.py`, `backend/tests/test_english_beginner_words.py` — 영어 기초 단어 뜻·예문 교정과 DB 반영 검사.
+- `frontend/src/app/words/page.tsx` — `about`의 문맥별 쓰임 설명.
+- `frontend/src/app/sqld/easyExamples.ts`, `frontend/src/app/sqld/curriculum.ts`, `frontend/src/app/sqld/page.tsx` — 쉬운 예와 같은 단계의 4지선다, 오답 재선택.
+- `frontend/src/lib/studyCheckpoint.ts`, `frontend/tests/studyCheckpoint.test.mjs`, `frontend/tests/storyCurriculum.test.mjs` — 선택 기록과 문제 구성 검사.
+- `fix_english_production.sql`, `DEPLOYMENT.md`, `CHANGELOG.md` — 이전 SQL 사용 주의, 배포 절차와 변경 기록.
+
+### 다음 세션
+- 서버에서 `git pull --ff-only` 후 `docker compose build`와 `docker compose up -d`를 실행하고, 실제 단어장 API의 `about` 뜻과 SQLD 모바일 문제 화면을 확인한다.
+- 자동 생성된 전체 영어 단어장에는 이번 46개 외에도 뜻·예문 검수가 필요할 수 있으므로, 이용 빈도가 높은 단어부터 범위를 정해 단계적으로 점검한다.
+
 ## 2026-10-20
 ### 완료
 - HSK 4급 예문·병음 교정 목록 601개를 다시 검사해 예문에 목표 단어가 없는 항목, 예문과 병음의 음절 순서 불일치, 중복 예문이 모두 0개임을 확인했다. 서버 DB 전체 601개와 교정 목록을 읽기 전용으로 비교하는 명령을 추가해, 배포 미반영·단어 ID 불일치·적용 기록만 남은 상태를 구분할 수 있게 했다. 기존 V1 적용 기록이 있어도 단어 식별자가 모두 맞으면 교정 목록을 한 번 더 적용하는 V2 마이그레이션을 추가했다.

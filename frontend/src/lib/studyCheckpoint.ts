@@ -34,6 +34,10 @@ function validDraft(subject: StoryCourse, value: unknown): boolean {
     && Number.isInteger(draft.cursor) && (draft.cursor as number) >= 0 && (draft.cursor as number) <= draft.queue.length
     && typeof draft.typed === "string" && typeof draft.feedback === "string"
     && typeof draft.sentence === "string" && typeof draft.sentenceChecked === "boolean";
+  if (subject === "sqld" && draft.wrongChoices !== undefined && (!Array.isArray(draft.wrongChoices)
+    || draft.wrongChoices.length > 3
+    || new Set(draft.wrongChoices).size !== draft.wrongChoices.length
+    || !draft.wrongChoices.every(index => Number.isInteger(index) && index >= 0 && index < 4))) return false;
   return draft.choice === null || (Number.isInteger(draft.choice) && (draft.choice as number) >= 0 && (draft.choice as number) < 4);
 }
 

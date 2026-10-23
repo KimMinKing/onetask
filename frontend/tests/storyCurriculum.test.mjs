@@ -11,6 +11,7 @@ import { PYTHON_BRIDGES } from "../src/app/rust/pythonBridges.ts";
 import { SQLD_CHAPTERS, SQLD_STORY } from "../src/app/sqld/story.ts";
 import { NETWORK_CHAPTERS, NETWORK_STORY } from "../src/app/network/story.ts";
 import { SQLD_CURRICULUM } from "../src/app/sqld/curriculum.ts";
+import { SQLD_EASY_EXAMPLES } from "../src/app/sqld/easyExamples.ts";
 import { CPP_CURRICULUM } from "../src/app/cpp/curriculum.ts";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "../src/app/cpp/story.ts";
 
@@ -83,6 +84,17 @@ test("SQLD and network quizzes have four distinct choices with varied answers", 
       assert.ok(lesson.quiz.answer >= 0 && lesson.quiz.answer < 4);
     }
     assert.ok(new Set(lessons.map(lesson => lesson.quiz.answer)).size === 4);
+  }
+});
+
+test("every SQLD lesson explains one concrete example and tests its own concept", () => {
+  assert.equal(Object.keys(SQLD_EASY_EXAMPLES).length, 100);
+  for (const lesson of SQLD_CURRICULUM) {
+    assert.ok(SQLD_EASY_EXAMPLES[lesson.id]?.length >= 45, `lesson ${lesson.id} easy example`);
+    assert.equal(lesson.points.length, 3, `lesson ${lesson.id} core points`);
+    assert.equal(lesson.quiz.options[lesson.quiz.answer], lesson.trap);
+    assert.deepEqual(lesson.quiz.options.filter((_, index) => index !== lesson.quiz.answer), lesson.points);
+    assert.match(lesson.quiz.question, /잘못된 설명/);
   }
 });
 
