@@ -14,6 +14,7 @@ import { SQLD_CURRICULUM } from "../src/app/sqld/curriculum.ts";
 import { SQLD_EASY_EXAMPLES } from "../src/app/sqld/easyExamples.ts";
 import { CPP_CURRICULUM } from "../src/app/cpp/curriculum.ts";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "../src/app/cpp/story.ts";
+import { CPP_EXPLANATIONS } from "../src/app/cpp/explanations.ts";
 
 test("each Rust lesson has a connected scene and a concrete bridge", () => {
   assert.equal(RUST_CURRICULUM.length, 54);
@@ -115,11 +116,14 @@ test("C++ repair story covers the language-to-network course in order", () => {
   assert.equal(CPP_CURRICULUM.length, 26);
   assert.equal(CPP_STORY.length, CPP_CURRICULUM.length);
   assert.equal(new Set(CPP_STORY.map(scene => scene.story)).size, CPP_STORY.length);
+  assert.equal(Object.keys(CPP_EXPLANATIONS).length, CPP_CURRICULUM.length);
   for (const lesson of CPP_CURRICULUM) {
     const scene = CPP_STORY[lesson.id - 1];
     assert.equal(scene.id, lesson.id);
     assert.ok(scene.story.length > 90, `C++ ${lesson.id} story`);
     assert.ok(scene.bridge.length > 45, `C++ ${lesson.id} bridge`);
+    assert.equal(CPP_EXPLANATIONS[lesson.id].length, 2, `C++ ${lesson.id} explanation sections`);
+    assert.ok(CPP_EXPLANATIONS[lesson.id].every(paragraph => paragraph.length >= 70), `C++ ${lesson.id} explanation depth`);
     assert.equal(CPP_STORY_CHAPTERS.filter(chapter => lesson.id >= chapter.start && lesson.id <= chapter.end).length, 1);
   }
 });
