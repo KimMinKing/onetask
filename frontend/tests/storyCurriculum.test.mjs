@@ -132,7 +132,8 @@ test("home has one learning entry and the hub retains every course route", () =>
   const home = readFileSync(new URL("../src/app/page.tsx", import.meta.url), "utf8");
   const hub = readFileSync(new URL("../src/app/learn/page.tsx", import.meta.url), "utf8");
   const nav = home.slice(home.indexOf('className="home-nav-grid'));
-  assert.deepEqual([...nav.matchAll(/<Link href="([^"]+)"/g)].map(match => match[1]), ["/calendar", "/learn"]);
+  assert.deepEqual([...nav.matchAll(/<Link href="([^"]+)"/g)].map(match => match[1]), ["/learn"]);
+  assert.match(nav, /<HomeCalendar tasks=\{tasks\}/);
   const routes = [...hub.matchAll(/href: "([^"]+)"/g)].map(match => match[1]);
   assert.equal(new Set(routes).size, routes.length);
   assert.deepEqual(new Set(routes), new Set([

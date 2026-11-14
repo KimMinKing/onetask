@@ -13,23 +13,21 @@ import { subscribePush } from "@/lib/push";
 import { api } from "@/lib/api";
 import { COMMON_TEXT, useUiLanguage, UiLanguage } from "@/lib/i18n";
 import TodayStudy from "@/components/TodayStudy";
+import HomeCalendar from "@/components/HomeCalendar";
 
 type Tab = "todo" | "done";
 const HOME_TEXT: Record<UiLanguage, {
   nav: {
-    calendar: [string, string];
     learn: [string, string];
   };
 }> = {
   ko: {
     nav: {
-      calendar: ["캘린더", "날짜별 완료 기록"],
       learn: ["학습하기", "과목과 복습 방법 고르기"],
     },
   },
   zh: {
     nav: {
-      calendar: ["日历", "按日期查看完成记录"],
       learn: ["开始学习", "选择科目与复习方式"],
     },
   },
@@ -169,11 +167,7 @@ export default function Home() {
         </main>
 
       <div className="home-nav-grid px-4 pb-8 pt-2 border-t border-white/5 bg-dark-300 flex flex-col gap-2">
-        <Link href="/calendar" className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-jeok-800 rounded-2xl px-5 py-4 transition-all group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-dark-100 text-xl">📅</div>
-          <div><p className="text-sm font-semibold text-stone-200">{text.nav.calendar[0]}</p><p className="mt-0.5 text-xs text-stone-500">{text.nav.calendar[1]}</p></div>
-          <span className="ml-auto text-stone-600 group-hover:text-jeok-400">→</span>
-        </Link>
+        <HomeCalendar tasks={tasks} />
         <Link href="/learn" className="flex items-center gap-4 bg-dark-200 hover:bg-dark-100 border border-white/5 hover:border-emerald-800 rounded-2xl px-5 py-4 transition-all group">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-900/40 text-xl">📚</div>
           <div><p className="text-sm font-semibold text-stone-200">{text.nav.learn[0]}</p><p className="mt-0.5 text-xs text-stone-500">{text.nav.learn[1]}</p></div>
