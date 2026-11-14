@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CPP_CURRICULUM } from "./curriculum";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "./story";
 import { CPP_EXPLANATIONS } from "./explanations";
+import FirstCppSteps from "./FirstCppSteps";
 import { api } from "@/lib/api";
 import { readUserStorage, writeUserStorage } from "@/lib/auth";
 import StudyFlowBar from "@/components/StudyFlowBar";
@@ -167,7 +168,8 @@ export default function CppPage() {
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 text-sm leading-7 text-stone-100">{current.summary}</p>{scene && <p className="mt-3 text-sm leading-7 text-stone-300">{scene.bridge}</p>}<p className="mt-3 text-xs leading-6 text-stone-500">통신소 사건은 가상입니다. C++의 실제 동작은 아래 코드와 실습 결과로 확인하세요.</p></section>
         <section className="rounded-2xl border border-sky-900/50 bg-sky-950/20 p-5"><h3 className="font-bold text-sky-300">처음 배우는 사람을 위한 풀이</h3><div className="mt-3 space-y-3 text-sm leading-7 text-stone-200">{CPP_EXPLANATIONS[current.id].map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div></section>
         <ul className="space-y-2">{current.points.map(point => <li key={point} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {point}</li>)}</ul>
-        <section><h3 className="mb-2 font-bold">핵심 코드 조각</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
+        <section><h3 className="mb-2 font-bold">{current.id === 1 ? "첫 프로그램 전체 코드" : "핵심 코드 조각"}</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
+        {current.id === 1 && <FirstCppSteps />}
         <section><h3 className="mb-2 font-bold">직접 해보기</h3><p className="text-sm leading-6 text-stone-300">{current.exercise}</p></section>
         <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 p-4 text-sm leading-6 text-amber-200"><strong>주의:</strong> {current.pitfall}</aside>
         </>}

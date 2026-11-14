@@ -2,15 +2,19 @@
 
 ## 2026-11-14
 ### 완료
+- C++ 1단계를 완전 초보자 기준으로 다시 구성했다. 실행 가능한 `main.cpp` 전체 코드와 파일 저장, 터미널 열기, 컴파일러 확인, Windows PowerShell 및 Linux/macOS 실행, 명령어 각 옵션의 뜻과 흔한 오류 해결 순서를 넣었다. 첫 퀴즈도 링크 오류 대신 `-o`의 의미를 확인하도록 바꿨다.
+- C++ 이야기 1~2단계와 쉬운 풀이를 새 첫 수업에 맞게 연결했다. 예제 코드를 실제 `g++ -std=c++20 -Wall -Wextra -Wpedantic` 명령으로 컴파일·실행했고, 이야기 검사 9개와 프런트엔드 린트·프로덕션 빌드를 통과했다.
 - 메인 오른쪽의 캘린더 바로가기를 누르지 않아도 보이는 월간 캘린더로 교체했다. 월 이동과 날짜 선택, 해당 날짜의 일정·예정된 할 일·완료 기록 확인, 간단한 일정 추가를 메인에서 할 수 있다. 기존 캘린더 페이지의 주·일 보기와 상세 관리는 연결해 두었다.
 - 메인 학습 바로가기 구성 검사를 새 캘린더 배치에 맞게 갱신했다. 이야기 구성 검사 9개, 프런트엔드 린트와 프로덕션 빌드가 통과했다.
 
 ### 변경된 파일
+- `frontend/src/app/cpp/FirstCppSteps.tsx`, `frontend/src/app/cpp/curriculum.ts`, `frontend/src/app/cpp/explanations.ts`, `frontend/src/app/cpp/story.ts`, `frontend/src/app/cpp/page.tsx` — 첫 C++ 수업의 전체 실습 안내와 설명·이야기 연결.
 - `frontend/src/components/HomeCalendar.tsx`, `frontend/src/app/page.tsx` — 메인 월간 캘린더와 일정 데이터 표시·추가.
 - `frontend/tests/storyCurriculum.test.mjs` — 메인 화면 구성 검사.
 - `CHANGELOG.md` — 변경 기록.
 
 ### 다음 세션
+- 배포 후 Windows에서 C++ 첫 단계의 파일 저장부터 실행까지 처음 보는 학습자 시선으로 따라가며 막히는 지점을 확인한다.
 - 배포 후 PC와 모바일에서 달력 크기, 일정 추가, 날짜별 완료 기록을 실제 계정 데이터로 확인한다.
 
 ## 2026-11-12
