@@ -33,6 +33,7 @@ const sections: { title: Record<UiLanguage, string>; links: LearningLink[] }[] =
     links: [
       { href: "/rust", symbol: "Rs", title: { ko: "Rust 완전 기초", zh: "Rust 系统学习" }, description: { ko: "서윤의 결계 이야기·소유권부터 TCP까지", zh: "徐允的结界故事：从所有权到 TCP" } },
       { href: "/cpp", symbol: "C++", title: { ko: "C++와 TCP/UDP", zh: "C++ 与 TCP/UDP" }, description: { ko: "민재의 통신소 복구·메모리부터 소켓까지", zh: "珉在修复通信站：从内存到套接字" } },
+      { href: "/csharp", symbol: "C#", title: { ko: "C# · C++ 다음 과정", zh: "C# · C++ 后续课程" }, description: { ko: "유나의 기록관·.NET 기초부터 웹 API까지", zh: "有娜的记录馆：从 .NET 基础到 Web API" } },
       { href: "/python", symbol: "Py", title: { ko: "Python AI", zh: "Python AI" }, description: { ko: "변수부터 신경망까지 10단계", zh: "从变量到神经网络的 10 阶段" } },
       { href: "/math", symbol: "∫", title: { ko: "AI 미적분", zh: "AI 微积分" }, description: { ko: "중학생도 이해하는 10단계", zh: "容易理解的 10 阶段" } },
     ],

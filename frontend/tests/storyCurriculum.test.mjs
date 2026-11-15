@@ -16,6 +16,7 @@ import { CPP_CURRICULUM } from "../src/app/cpp/curriculum.ts";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "../src/app/cpp/story.ts";
 import { CPP_EXPLANATIONS } from "../src/app/cpp/explanations.ts";
 import { CPP_CHECK_ANSWERS, CPP_DEEP_LESSONS } from "../src/app/cpp/deepLessons.ts";
+import { CSHARP_CURRICULUM } from "../src/app/csharp/curriculum.ts";
 
 test("each Rust lesson has a connected scene and a concrete bridge", () => {
   assert.equal(RUST_CURRICULUM.length, 54);
@@ -140,6 +141,19 @@ test("C++ repair story covers the language-to-network course in order", () => {
   }
 });
 
+test("C# follow-on course connects basics to web APIs with varied answers", () => {
+  assert.equal(CSHARP_CURRICULUM.length, 20);
+  assert.deepEqual(CSHARP_CURRICULUM.map(lesson => lesson.id), Array.from({ length: 20 }, (_, index) => index + 1));
+  assert.ok(CSHARP_CURRICULUM[0].concept.includes("dotnet new console"));
+  assert.ok(CSHARP_CURRICULUM.at(-1).concept.includes("테스트"));
+  assert.ok(new Set(CSHARP_CURRICULUM.map(lesson => lesson.quiz.answer)).size >= 3);
+  for (const lesson of CSHARP_CURRICULUM) {
+    assert.ok(lesson.story.length >= 65, `C# ${lesson.id} story`);
+    assert.ok(lesson.concept.length >= 120, `C# ${lesson.id} concept`);
+    assert.equal(new Set(lesson.quiz.options).size, 4, `C# ${lesson.id} choices`);
+  }
+});
+
 test("home has one learning entry and the hub retains every course route", () => {
   const home = readFileSync(new URL("../src/app/page.tsx", import.meta.url), "utf8");
   const hub = readFileSync(new URL("../src/app/learn/page.tsx", import.meta.url), "utf8");
@@ -150,7 +164,7 @@ test("home has one learning entry and the hub retains every course route", () =>
   assert.equal(new Set(routes).size, routes.length);
   assert.deepEqual(new Set(routes), new Set([
     "/daily-course", "/words", "/english-basics", "/english-phrases", "/hsk5",
-    "/rust", "/cpp", "/python", "/math", "/sqld", "/network", "/search", "/stats",
+    "/rust", "/cpp", "/csharp", "/python", "/math", "/sqld", "/network", "/search", "/stats",
   ]));
 });
 

@@ -54,6 +54,23 @@ def test_cpp_course_over_authenticated_http_routes():
                                                                    "question": "test?", "correct_answer": "A", "user_answer": "B"})
                 assert mistake.status_code == 200, mistake.text
                 assert len(client.get("/learning/mistakes?subject=cpp").json()) == 1
+
+                csharp_settings = client.put("/settings/", json={"focus_subject": "csharp", "study_minutes": 15})
+                assert csharp_settings.status_code == 200, csharp_settings.text
+                csharp_plan = client.get("/learning/today").json()
+                assert next(task for task in csharp_plan["tasks"] if task["subject"] == "csharp")["href"] == "/csharp?step=1"
+                csharp_done = client.put("/learning/progress/csharp/1", json={"completed": True, "score": 100,
+                                                                               "title": "첫 C# 프로젝트 실행"})
+                assert csharp_done.status_code == 200, csharp_done.text
+                assert next(task for task in client.get("/learning/today").json()["tasks"] if task["subject"] == "csharp")["href"] == "/csharp?step=2"
+                assert client.put("/learning/progress/csharp/21", json={"completed": True}).status_code == 400
+
+                for unit in range(2, 27):
+                    assert client.put(f"/learning/progress/cpp/{unit}", json={"completed": True}).status_code == 200
+                assert client.put("/settings/", json={"focus_subject": "cpp", "study_minutes": 15}).status_code == 200
+                after_cpp = client.get("/learning/today").json()
+                assert after_cpp["primary_subject"] == "csharp"
+                assert next(task for task in after_cpp["tasks"] if task["subject"] == "csharp")["href"] == "/csharp?step=2"
     finally:
         database.close()
         engine.dispose()

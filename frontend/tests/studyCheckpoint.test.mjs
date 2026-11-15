@@ -60,3 +60,12 @@ test("SQLD keeps tried choices for another attempt and rejects damaged choice li
   saveStudyCheckpoint({ ...base, draft: { choice: null, wrongChoices: [0, 0] } });
   assert.equal(readStudyCheckpoint("sqld"), null);
 });
+
+test("C# resumes a valid answer and rejects a step beyond the course", () => {
+  values.clear();
+  setAuth({ username: "first", is_master: false });
+  saveStudyCheckpoint({ subject: "csharp", step: 20, title: "테스트", phase: "practice", paused: false, draft: { choice: 2 } });
+  assert.equal(readStudyCheckpoint("csharp")?.draft.choice, 2);
+  saveStudyCheckpoint({ subject: "csharp", step: 21, title: "잘못된 단계", phase: "story", paused: false, draft: { choice: null } });
+  assert.equal(readStudyCheckpoint("csharp"), null);
+});

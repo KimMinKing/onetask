@@ -2,16 +2,23 @@
 
 ## 2026-11-15
 ### 완료
+- C++ 26단계를 마치면 C# 첫 단계로 이어지는 버튼을 추가했다. 학습 선택 화면에 유나의 기록관 이야기로 진행하는 C# 20단계 과정을 넣었다. .NET SDK와 첫 실행부터 타입·컬렉션·클래스·예외·자원 정리·비동기·HTTP·ASP.NET Core API·테스트까지 순서대로 다룬다.
+- C#의 단계별 문제, 오답 기록, 서버 진도 저장, 이어하기 체크포인트와 오늘의 집중 과목 선택을 연결했다. C++ 26단계를 마친 계정의 오늘 학습은 C# 다음 단계로 이어지게 했다. 서버에서 허용 과목과 20단계 범위 검증을 추가했다. 프런트엔드 이야기 검사 10개·체크포인트 검사 4개·린트·프로덕션 빌드와 Docker의 백엔드 HTTP 검사를 통과했다.
 - C++ 2~26단계에 이어지는 통신소 이야기의 선택과 결과, 쉬운 실제 개념 풀이, 개발 시 판단 기준, 스스로 설명할 문제와 펼쳐 보는 해설을 추가했다. 타입·수명·소유권·동시성에서 TCP/UDP·TLS·테스트까지 앞 단계의 결과가 다음 단계에 연결되도록 작성했다.
 - C++ 단계의 짧은 코드가 전체 실행 프로그램이 아님을 명시했다. 15~26단계에서 플랫폼별 전체 TCP/UDP 실습 프로젝트로 바로 이동할 수 있게 했다.
 - 25개 추가 단계와 문제 해설의 누락을 검사하는 테스트를 보강했다.
 
 ### 변경된 파일
+- `frontend/src/app/csharp/curriculum.ts`, `frontend/src/app/csharp/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/learn/page.tsx`, `frontend/src/app/settings/page.tsx`, `frontend/src/lib/studyCheckpoint.ts` — C# 과정과 C++ 후속 연결·학습 목록·진도.
+- `frontend/src/app/weekly-report/page.tsx` — C# 학습 기록의 과목 이름 표시.
+- `frontend/tests/studyCheckpoint.test.mjs`, `frontend/tests/storyCurriculum.test.mjs` — C# 과정 구성과 이어하기 검사.
+- `backend/learning_service.py`, `backend/routers/learning.py`, `backend/routers/settings.py`, `backend/tests/test_cpp_http.py` — C# 과목 허용·오늘 학습·진도 범위·HTTP 검사.
 - `frontend/src/app/cpp/deepLessons.ts`, `frontend/src/app/cpp/page.tsx` — 단계별 장면·개념·개발 설명·확인 문제와 해설.
 - `frontend/tests/storyCurriculum.test.mjs` — 추가 학습 내용의 단계별 완전성 검사.
 - `CHANGELOG.md` — 변경 기록.
 
 ### 다음 세션
+- .NET SDK가 설치된 환경에서 C# 콘솔·웹 단계의 예제를 직접 실행한다.
 - 실제 학습 화면에서 긴 설명의 모바일 가독성과 단계별 이해 난도를 확인한다.
 
 ## 2026-11-14

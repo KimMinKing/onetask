@@ -15,9 +15,10 @@ SUBJECTS = {
     "sqld": ("SQLD", "/sqld"),
     "network": ("네트워크관리사", "/network"),
     "cpp": ("C++ 네트워크", "/cpp"),
+    "csharp": ("C# 기초와 웹 API", "/csharp"),
     "rust": ("Rust", "/rust"),
 }
-COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 26, "rust": 54, "english-basics": 25}
+COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 26, "csharp": 20, "rust": 54, "english-basics": 25}
 LANGUAGE_CARDS = {"zh": WordCard, "en": EnglishWordCard, "ja": JapaneseWordCard}
 KST = ZoneInfo("Asia/Seoul")
 
@@ -72,6 +73,9 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
     budget = min((5, 15, 30, 60), key=lambda value: abs(value - budget))
     primary = priority_subject(settings)
     primary_unit = next_unit(db, user_id, primary) if primary in COURSE_LIMITS else None
+    if primary == "cpp" and primary_unit is not None and primary_unit > COURSE_LIMITS["cpp"]:
+        primary = "csharp"
+        primary_unit = next_unit(db, user_id, primary)
     tasks = []
 
     def course_href(subject: str, href: str, unit: int) -> str:

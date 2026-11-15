@@ -4,6 +4,7 @@ export const STORY_COURSES = {
   "english-basics": { path: "/english-basics", label: "영어 완전 기초", total: 25 },
   rust: { path: "/rust", label: "Rust", total: 54 },
   cpp: { path: "/cpp", label: "C++와 TCP/UDP", total: 26 },
+  csharp: { path: "/csharp", label: "C# 기초와 웹 API", total: 20 },
   sqld: { path: "/sqld", label: "SQLD", total: 100 },
   network: { path: "/network", label: "네트워크", total: 120 },
 } as const;
