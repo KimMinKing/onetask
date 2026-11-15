@@ -2,6 +2,7 @@
 
 ## 2026-11-15
 ### 완료
+- 학습 선택 화면을 학습 서가 형태로 다시 디자인했다. 오늘의 추천 학습과 최근 이어하기를 상단에 분리하고, 과목 분류·검색·각 과정의 저장된 진도를 카드에서 확인할 수 있게 했다. 모바일에서는 한 열 카드와 줄바꿈 가능한 분류 버튼을 사용하고 키보드 포커스·검색 이름을 보강했다.
 - C++ 과정을 26단계에서 40단계로 확장했다. 27~40단계에 디버거·CMake·Sanitizer·단위 테스트, 파서 상태·프로토콜 버전·UDP 크기·중복 처리, 로그·정상 종료·스레드 중지·연결별 자원 제한, 퍼징·통합 프로젝트를 통신소 이야기와 함께 추가했다. 각 단계에 쉬운 풀이·개발 판단·확인 문제 해설을 넣고 새 문제의 정답 위치를 분산했다.
 - 터미널 명령, 설계 도식, C++ 코드 조각을 학습 화면에서 구분한다. 백엔드 진도 상한과 이어하기 범위를 40으로 바꾸고 C# 다음 과정 및 오늘 학습 전환 조건도 40단계 완료로 맞췄다.
 - C++ 26단계를 마치면 C# 첫 단계로 이어지는 버튼을 추가했다. 학습 선택 화면에 유나의 기록관 이야기로 진행하는 C# 20단계 과정을 넣었다. .NET SDK와 첫 실행부터 타입·컬렉션·클래스·예외·자원 정리·비동기·HTTP·ASP.NET Core API·테스트까지 순서대로 다룬다.
@@ -11,6 +12,7 @@
 - 25개 추가 단계와 문제 해설의 누락을 검사하는 테스트를 보강했다.
 
 ### 변경된 파일
+- `frontend/src/app/learn/page.tsx`, `frontend/src/app/learn/page.module.css` — 학습 선택 화면의 탐색 구조·반응형 디자인·진도 표시.
 - `frontend/src/app/cpp/curriculum.ts`, `frontend/src/app/cpp/story.ts`, `frontend/src/app/cpp/explanations.ts`, `frontend/src/app/cpp/deepLessons.ts`, `frontend/src/app/cpp/page.tsx` — C++ 27~40단계와 화면 설명.
 - `backend/learning_service.py`, `backend/tests/test_cpp_http.py`, `backend/tests/test_learning_service.py`, `frontend/src/lib/studyCheckpoint.ts`, `frontend/src/app/csharp/page.tsx`, `frontend/tests/storyCurriculum.test.mjs` — 40단계 진도와 C# 연결 조건.
 - `frontend/src/app/csharp/curriculum.ts`, `frontend/src/app/csharp/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/learn/page.tsx`, `frontend/src/app/settings/page.tsx`, `frontend/src/lib/studyCheckpoint.ts` — C# 과정과 C++ 후속 연결·학습 목록·진도.
@@ -22,6 +24,7 @@
 - `CHANGELOG.md` — 변경 기록.
 
 ### 다음 세션
+- 학습 서가를 실제 계정의 PC·모바일 화면에서 열어 대비와 줄바꿈, 분류·검색, 진도 표시를 확인한다.
 - .NET SDK가 설치된 환경에서 C# 콘솔·웹 단계의 예제를 직접 실행한다.
 - 실제 학습 화면에서 긴 설명의 모바일 가독성과 단계별 이해 난도를 확인한다.
 
