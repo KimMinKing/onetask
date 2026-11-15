@@ -26,7 +26,7 @@ export default function CSharpPage() {
     if (Number.isInteger(step) && step >= 1 && step <= total) setSelected(step);
     Promise.all([api.learning.progress("csharp"), api.learning.progress("cpp")]).then(([csharp, cpp]) => {
       setCompleted(new Set(csharp.filter(row => row.completed).map(row => Number(row.unit_id))));
-      setCppCompleted(new Set(cpp.filter(row => row.completed).map(row => Number(row.unit_id))).size >= 26);
+      setCppCompleted(new Set(cpp.filter(row => row.completed).map(row => Number(row.unit_id))).size >= 40);
     }).catch(() => setError("진도를 불러오지 못했습니다. 새로고침하여 다시 시도하세요.")).finally(() => setLoading(false));
   }, []);
 
@@ -85,7 +85,7 @@ export default function CSharpPage() {
       <Link href="/learn" className="text-sm text-stone-400 hover:text-stone-100">← 학습 선택</Link>
       <div className="mt-4 flex items-end justify-between gap-3"><div><p className="text-xs font-bold text-violet-300">C++ 다음 과정 · 유나의 기록관</p><h1 className="mt-1 text-3xl font-black">C# {total}단계</h1><p className="mt-2 text-sm leading-6 text-stone-400">C++에서 배운 타입·수명·네트워크를 발판으로 .NET과 웹 API까지 이어갑니다.</p></div><span className="font-bold">{loading ? "불러오는 중" : `${completed.size}/${total}`}</span></div>
       <div className="mt-4 h-2 overflow-hidden rounded-full bg-dark-100"><div className="h-full bg-violet-500" style={{ width: `${completed.size / total * 100}%` }}/></div>
-      {!loading && !cppCompleted && <p className="mt-3 text-xs text-amber-300">C++ 26단계를 마친 뒤 시작하도록 구성했습니다. 먼저 둘러볼 수도 있습니다.</p>}
+      {!loading && !cppCompleted && <p className="mt-3 text-xs text-amber-300">C++ 40단계를 마친 뒤 시작하도록 구성했습니다. 먼저 둘러볼 수도 있습니다.</p>}
     </div></header>
     {current ? <main className="mx-auto max-w-3xl space-y-5 px-4 py-6">
       <button onClick={() => open(0)} className="text-sm text-stone-400 hover:text-stone-100">← 전체 목록</button>

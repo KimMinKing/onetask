@@ -69,3 +69,12 @@ test("C# resumes a valid answer and rejects a step beyond the course", () => {
   saveStudyCheckpoint({ subject: "csharp", step: 21, title: "잘못된 단계", phase: "story", paused: false, draft: { choice: null } });
   assert.equal(readStudyCheckpoint("csharp"), null);
 });
+
+test("C++ checkpoint accepts the expanded final step", () => {
+  values.clear();
+  setAuth({ username: "first", is_master: false });
+  saveStudyCheckpoint({ subject: "cpp", step: 40, title: "통신소 통합 프로젝트", phase: "concept", paused: false, draft: { choice: null } });
+  assert.equal(readStudyCheckpoint("cpp")?.step, 40);
+  saveStudyCheckpoint({ subject: "cpp", step: 41, title: "범위 밖", phase: "story", paused: false, draft: { choice: null } });
+  assert.equal(readStudyCheckpoint("cpp"), null);
+});

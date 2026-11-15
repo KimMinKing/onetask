@@ -48,7 +48,7 @@ def test_cpp_course_over_authenticated_http_routes():
                 assert next(task for task in next_plan["tasks"] if task["subject"] == "cpp")["href"] == "/cpp?step=2"
                 assert any(row["unit_id"] == "1" for row in client.get("/learning/progress?subject=cpp").json())
 
-                invalid = client.put("/learning/progress/cpp/27", json={"completed": True})
+                invalid = client.put("/learning/progress/cpp/41", json={"completed": True})
                 assert invalid.status_code == 400
                 mistake = client.post("/learning/mistakes", json={"subject": "cpp", "item_key": "lesson-1",
                                                                    "question": "test?", "correct_answer": "A", "user_answer": "B"})
@@ -65,7 +65,7 @@ def test_cpp_course_over_authenticated_http_routes():
                 assert next(task for task in client.get("/learning/today").json()["tasks"] if task["subject"] == "csharp")["href"] == "/csharp?step=2"
                 assert client.put("/learning/progress/csharp/21", json={"completed": True}).status_code == 400
 
-                for unit in range(2, 27):
+                for unit in range(2, 41):
                     assert client.put(f"/learning/progress/cpp/{unit}", json={"completed": True}).status_code == 200
                 assert client.put("/settings/", json={"focus_subject": "cpp", "study_minutes": 15}).status_code == 200
                 after_cpp = client.get("/learning/today").json()

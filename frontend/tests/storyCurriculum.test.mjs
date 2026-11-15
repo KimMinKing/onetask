@@ -115,12 +115,13 @@ test("every SQLD lesson explains one concrete example and tests its own concept"
 });
 
 test("C++ repair story covers the language-to-network course in order", () => {
-  assert.equal(CPP_CURRICULUM.length, 26);
+  assert.equal(CPP_CURRICULUM.length, 40);
   assert.equal(CPP_STORY.length, CPP_CURRICULUM.length);
   assert.equal(new Set(CPP_STORY.map(scene => scene.story)).size, CPP_STORY.length);
   assert.equal(Object.keys(CPP_EXPLANATIONS).length, CPP_CURRICULUM.length);
   assert.equal(Object.keys(CPP_DEEP_LESSONS).length, CPP_CURRICULUM.length - 1);
   assert.equal(Object.keys(CPP_CHECK_ANSWERS).length, CPP_CURRICULUM.length - 1);
+  assert.ok(new Set(CPP_CURRICULUM.slice(26).map(lesson => lesson.quiz.answer)).size >= 3);
   for (const lesson of CPP_CURRICULUM) {
     const scene = CPP_STORY[lesson.id - 1];
     assert.equal(scene.id, lesson.id);

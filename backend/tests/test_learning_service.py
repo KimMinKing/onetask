@@ -196,9 +196,9 @@ def test_course_progress_rejects_out_of_range_and_noncanonical_units():
     db.commit()
     db.refresh(user)
 
-    update_progress("cpp", "26", ProgressUpdate(completed=True), db, user)
+    update_progress("cpp", "40", ProgressUpdate(completed=True), db, user)
     update_progress("network", "120", ProgressUpdate(completed=True), db, user)
-    for subject, unit_id in (("cpp", "27"), ("network", "121"), ("sqld", "101"),
+    for subject, unit_id in (("cpp", "41"), ("network", "121"), ("sqld", "101"),
                              ("cpp", "00"), ("cpp", "٢"), ("cpp", "9" * 500)):
         with pytest.raises(HTTPException) as error:
             update_progress(subject, unit_id, ProgressUpdate(completed=True), db, user)

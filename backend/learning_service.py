@@ -18,7 +18,7 @@ SUBJECTS = {
     "csharp": ("C# 기초와 웹 API", "/csharp"),
     "rust": ("Rust", "/rust"),
 }
-COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 26, "csharp": 20, "rust": 54, "english-basics": 25}
+COURSE_LIMITS = {"sqld": 100, "network": 120, "cpp": 40, "csharp": 20, "rust": 54, "english-basics": 25}
 LANGUAGE_CARDS = {"zh": WordCard, "en": EnglishWordCard, "ja": JapaneseWordCard}
 KST = ZoneInfo("Asia/Seoul")
 

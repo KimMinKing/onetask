@@ -15,6 +15,8 @@ import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 
 const STORAGE_KEY = "cpp_progress_v1";
 const total = CPP_CURRICULUM.length;
+const shellLessonIds = new Set([26, 28, 29, 40]);
+const diagramLessonIds = new Set([20, 22, 25, 34, 35, 36, 39]);
 
 function savedProgress(): Record<number, boolean> {
   try {
@@ -176,8 +178,8 @@ export default function CppPage() {
           {current.id >= 15 && <Link href="/cpp/lab" className="inline-block font-bold text-cyan-300 hover:underline">TCP/UDP 전체 실행 프로젝트 보기 →</Link>}
         </section>}
         <ul className="space-y-2">{current.points.map(point => <li key={point} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {point}</li>)}</ul>
-        <section><h3 className="mb-2 font-bold">{current.id === 1 ? "첫 프로그램 전체 코드" : "핵심 코드 조각"}</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
-        {current.id > 1 && <p className="text-xs leading-6 text-stone-400">이 코드는 개념을 보여 주는 일부입니다. 선언·헤더·main 함수 또는 플랫폼별 처리가 빠질 수 있어 그대로 붙여 넣어 실행하는 전체 프로그램은 아닙니다.</p>}
+        <section><h3 className="mb-2 font-bold">{current.id === 1 ? "첫 프로그램 전체 코드" : shellLessonIds.has(current.id) ? "터미널 명령 예시" : diagramLessonIds.has(current.id) ? "설계 흐름 예시" : "핵심 코드 조각"}</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
+        {current.id > 1 && <p className="text-xs leading-6 text-stone-400">{shellLessonIds.has(current.id) ? "이 명령은 C++ 코드 파일에 붙여 넣지 않고 해당 실습 프로젝트 폴더의 터미널에서 실행합니다. 운영체제별 지원 여부와 실행 파일 위치를 확인하세요." : diagramLessonIds.has(current.id) ? "이 표기는 처리 순서를 보여 주는 설계 예시입니다. 그대로 붙여 넣어 컴파일하는 전체 C++ 프로그램이 아닙니다." : "이 코드는 개념을 보여 주는 일부입니다. 선언·헤더·main 함수 또는 플랫폼별 처리가 빠질 수 있어 그대로 붙여 넣어 실행하는 전체 프로그램은 아닙니다."}</p>}
         {current.id === 1 && <FirstCppSteps />}
         <section><h3 className="mb-2 font-bold">직접 해보기</h3><p className="text-sm leading-6 text-stone-300">{current.exercise}</p></section>
         <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 p-4 text-sm leading-6 text-amber-200"><strong>주의:</strong> {current.pitfall}</aside>
