@@ -6,6 +6,7 @@ import { CPP_CURRICULUM } from "./curriculum";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "./story";
 import { CPP_EXPLANATIONS } from "./explanations";
 import FirstCppSteps from "./FirstCppSteps";
+import { CPP_CHECK_ANSWERS, CPP_DEEP_LESSONS } from "./deepLessons";
 import { api } from "@/lib/api";
 import { readUserStorage, writeUserStorage } from "@/lib/auth";
 import StudyFlowBar from "@/components/StudyFlowBar";
@@ -167,8 +168,15 @@ export default function CppPage() {
         {flow.phase === "concept" && <>
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 text-sm leading-7 text-stone-100">{current.summary}</p>{scene && <p className="mt-3 text-sm leading-7 text-stone-300">{scene.bridge}</p>}<p className="mt-3 text-xs leading-6 text-stone-500">통신소 사건은 가상입니다. C++의 실제 동작은 아래 코드와 실습 결과로 확인하세요.</p></section>
         <section className="rounded-2xl border border-sky-900/50 bg-sky-950/20 p-5"><h3 className="font-bold text-sky-300">처음 배우는 사람을 위한 풀이</h3><div className="mt-3 space-y-3 text-sm leading-7 text-stone-200">{CPP_EXPLANATIONS[current.id].map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div></section>
+        {CPP_DEEP_LESSONS[current.id] && <section className="space-y-5 rounded-2xl border border-cyan-900/50 bg-cyan-950/10 p-5 text-sm leading-8 text-stone-200">
+          <h3 className="text-lg font-bold text-cyan-200">이야기를 따라 더 깊게 이해하기</h3>
+          {([['장면을 다시 따라가기', 'scene'], ['이 장면을 실제 개념으로 풀어 읽기', 'concept'], ['개발할 때는 이렇게 판단하기', 'development'], ['혼자 설명하고 확인하기', 'check']] as const).map(([title, key]) => <div key={key}><h4 className="font-bold text-stone-100">{title}</h4><p className="mt-1">{CPP_DEEP_LESSONS[current.id][key]}</p></div>)}
+          <details className="rounded-xl border border-cyan-900/50 bg-black/20 p-4"><summary className="cursor-pointer font-bold text-cyan-200">내 답을 생각한 뒤 해설 보기</summary><p className="mt-3">{CPP_CHECK_ANSWERS[current.id]}</p></details>
+          {current.id >= 15 && <Link href="/cpp/lab" className="inline-block font-bold text-cyan-300 hover:underline">TCP/UDP 전체 실행 프로젝트 보기 →</Link>}
+        </section>}
         <ul className="space-y-2">{current.points.map(point => <li key={point} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {point}</li>)}</ul>
         <section><h3 className="mb-2 font-bold">{current.id === 1 ? "첫 프로그램 전체 코드" : "핵심 코드 조각"}</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre></section>
+        {current.id > 1 && <p className="text-xs leading-6 text-stone-400">이 코드는 개념을 보여 주는 일부입니다. 선언·헤더·main 함수 또는 플랫폼별 처리가 빠질 수 있어 그대로 붙여 넣어 실행하는 전체 프로그램은 아닙니다.</p>}
         {current.id === 1 && <FirstCppSteps />}
         <section><h3 className="mb-2 font-bold">직접 해보기</h3><p className="text-sm leading-6 text-stone-300">{current.exercise}</p></section>
         <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 p-4 text-sm leading-6 text-amber-200"><strong>주의:</strong> {current.pitfall}</aside>

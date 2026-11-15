@@ -15,6 +15,7 @@ import { SQLD_EASY_EXAMPLES } from "../src/app/sqld/easyExamples.ts";
 import { CPP_CURRICULUM } from "../src/app/cpp/curriculum.ts";
 import { CPP_STORY, CPP_STORY_CHAPTERS } from "../src/app/cpp/story.ts";
 import { CPP_EXPLANATIONS } from "../src/app/cpp/explanations.ts";
+import { CPP_CHECK_ANSWERS, CPP_DEEP_LESSONS } from "../src/app/cpp/deepLessons.ts";
 
 test("each Rust lesson has a connected scene and a concrete bridge", () => {
   assert.equal(RUST_CURRICULUM.length, 54);
@@ -117,6 +118,8 @@ test("C++ repair story covers the language-to-network course in order", () => {
   assert.equal(CPP_STORY.length, CPP_CURRICULUM.length);
   assert.equal(new Set(CPP_STORY.map(scene => scene.story)).size, CPP_STORY.length);
   assert.equal(Object.keys(CPP_EXPLANATIONS).length, CPP_CURRICULUM.length);
+  assert.equal(Object.keys(CPP_DEEP_LESSONS).length, CPP_CURRICULUM.length - 1);
+  assert.equal(Object.keys(CPP_CHECK_ANSWERS).length, CPP_CURRICULUM.length - 1);
   for (const lesson of CPP_CURRICULUM) {
     const scene = CPP_STORY[lesson.id - 1];
     assert.equal(scene.id, lesson.id);
@@ -124,6 +127,15 @@ test("C++ repair story covers the language-to-network course in order", () => {
     assert.ok(scene.bridge.length > 45, `C++ ${lesson.id} bridge`);
     assert.equal(CPP_EXPLANATIONS[lesson.id].length, 2, `C++ ${lesson.id} explanation sections`);
     assert.ok(CPP_EXPLANATIONS[lesson.id].every(paragraph => paragraph.length >= 70), `C++ ${lesson.id} explanation depth`);
+    if (lesson.id > 1) {
+      const deep = CPP_DEEP_LESSONS[lesson.id];
+      assert.ok(deep, `C++ ${lesson.id} deep lesson`);
+      for (const key of ["scene", "concept", "development"]) {
+        assert.ok(deep[key].length >= 90, `C++ ${lesson.id} ${key}`);
+      }
+      assert.ok(deep.check.length >= 45, `C++ ${lesson.id} check`);
+      assert.ok(CPP_CHECK_ANSWERS[lesson.id].length >= 40, `C++ ${lesson.id} check answer`);
+    }
     assert.equal(CPP_STORY_CHAPTERS.filter(chapter => lesson.id >= chapter.start && lesson.id <= chapter.end).length, 1);
   }
 });
