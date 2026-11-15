@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { api } from "@/lib/api";
 import { useUiLanguage, type UiLanguage } from "@/lib/i18n";
 import { latestStudyCheckpoint, STORY_COURSES, type StoryCourse, type StudyCheckpoint } from "@/lib/studyCheckpoint";
+import { latestServerContinuation, summarizeCourseProgress, type CourseSummary } from "./courseProgress";
 import styles from "./page.module.css";
 
 type Category = "all" | "language" | "build" | "exam" | "tools";
@@ -52,24 +53,22 @@ export default function LearnPage() {
   const [recent, setRecent] = useState<StudyCheckpoint | null>(null);
   const [category, setCategory] = useState<Category>("all");
   const [query, setQuery] = useState("");
-  const [courseProgress, setCourseProgress] = useState<Record<string, number>>({});
+  const [courseProgress, setCourseProgress] = useState<Record<StoryCourse, CourseSummary> | null>(null);
+  const [serverContinue, setServerContinue] = useState<{ subject: StoryCourse; step: number; updatedAt: number } | null>(null);
 
   useEffect(() => {
     setRecent(latestStudyCheckpoint());
     api.learning.progress().then(rows => {
-      const bySubject: Record<string, Set<string>> = {};
-      for (const row of rows) {
-        if (!row.completed || !Object.hasOwn(STORY_COURSES, row.subject)) continue;
-        (bySubject[row.subject] ??= new Set()).add(row.unit_id);
-      }
-      setCourseProgress(Object.fromEntries(Object.entries(bySubject).map(([subject, units]) => [subject, units.size])));
+      const summaries = summarizeCourseProgress(rows);
+      setCourseProgress(summaries);
+      setServerContinue(latestServerContinuation(rows, summaries));
     }).catch(() => { /* Course links work even if progress is unavailable. */ });
   }, []);
 
   const visibleSections = useMemo(() => sections
     .filter(section => category === "all" || category === section.id)
     .map(section => ({ ...section, links: section.links.filter(item =>
-      `${item.title.ko} ${item.title.zh} ${item.description.ko} ${item.description.zh}`.toLowerCase().includes(query.trim().toLowerCase())
+      `${section.title.ko} ${section.title.zh} ${section.subtitle.ko} ${section.subtitle.zh} ${item.title.ko} ${item.title.zh} ${item.description.ko} ${item.description.zh}`.toLowerCase().includes(query.trim().toLowerCase())
     ) }))
     .filter(section => section.links.length > 0), [category, query]);
 
@@ -77,6 +76,8 @@ export default function LearnPage() {
     all: { ko: "전체", zh: "全部" }, language: { ko: "언어", zh: "语言" },
     build: { ko: "개발·수학", zh: "编程·数学" }, exam: { ko: "자격증", zh: "资格考试" }, tools: { ko: "찾아보기", zh: "查找" },
   };
+  const localIsNewest = recent && (!serverContinue || recent.updatedAt >= serverContinue.updatedAt);
+  const continuation = localIsNewest ? { subject: recent.subject, step: recent.step, phase: recent.phase, title: recent.title } : serverContinue ? { subject: serverContinue.subject, step: serverContinue.step, phase: null, title: null } : null;
 
   return <main className={styles.page}>
     <div className={styles.shell}>
@@ -91,16 +92,16 @@ export default function LearnPage() {
         <div className={styles.heroArt} aria-hidden="true"><div className={styles.orbitOne}/><div className={styles.orbitTwo}/><div className={styles.orbitThree}/><span className={styles.heroArtCenter}>01</span><span className={styles.heroArtNote}>START<br/>HERE</span></div>
       </header>
 
-      {recent && <Link href={`${STORY_COURSES[recent.subject].path}?step=${recent.step}`} className={styles.resume}>
+      {continuation && <Link href={`${STORY_COURSES[continuation.subject].path}?step=${continuation.step}`} className={styles.resume}>
         <div className={styles.resumeMarker} aria-hidden="true">↗</div>
-        <div className={styles.resumeBody}><p className={styles.resumeLabel}>{language === "ko" ? "이어서 읽기" : "继续学习"} <span>· {phaseNames[recent.phase][language]} {language === "ko" ? "부터" : "开始"}</span></p><h2>{STORY_COURSES[recent.subject].label}</h2><p>{recent.step}{language === "ko" ? "단계" : "阶段"} · {recent.title}</p></div>
+        <div className={styles.resumeBody}><p className={styles.resumeLabel}>{language === "ko" ? "이어서 읽기" : "继续学习"} <span>· {continuation.phase ? `${phaseNames[continuation.phase][language]} ${language === "ko" ? "부터" : "开始"}` : language === "ko" ? "서버에 저장된 다음 단계" : "服务器保存的下一阶段"}</span></p><h2>{STORY_COURSES[continuation.subject].label}</h2><p>{continuation.step}{language === "ko" ? "단계" : "阶段"}{continuation.title ? ` · ${continuation.title}` : language === "ko" ? "부터 시작" : "开始"}</p></div>
         <span className={styles.resumeArrow} aria-hidden="true">→</span>
       </Link>}
 
       <section className={styles.library} aria-labelledby="learn-library-heading">
         <div className={styles.libraryHeading}><div><p className={styles.sectionEyebrow}>EXPLORE THE LIBRARY</p><h2 id="learn-library-heading">{language === "ko" ? "배우고 싶은 길 고르기" : "选择想学的方向"}</h2><p>{language === "ko" ? "한 번에 하나만 골라도 충분해요. 언제든 다른 과목으로 옮길 수 있습니다." : "一次选择一门即可，随时可以切换。"}</p></div><span className={styles.libraryCount}>{sections.reduce((sum, section) => sum + section.links.length, 0)} {language === "ko" ? "개의 길" : "门课程"}</span></div>
         <div className={styles.controls}>
-          <div className={styles.filters} aria-label={language === "ko" ? "과목 분류" : "课程分类"}>
+          <div className={styles.filters} role="group" aria-label={language === "ko" ? "과목 분류" : "课程分类"}>
             {(Object.keys(labels) as Category[]).map(id => <button key={id} type="button" onClick={() => setCategory(id)} aria-pressed={category === id} className={category === id ? styles.filterActive : styles.filter}>{labels[id][language]}</button>)}
           </div>
           <div className={styles.search}>
@@ -114,11 +115,12 @@ export default function LearnPage() {
           <div className={styles.sectionHeading}><div className={styles.sectionTitle}><span className={styles.sectionLine}/><div><h3>{section.title[language]}</h3><p>{section.subtitle[language]}</p></div></div><span className={styles.sectionCount}>{String(section.links.length).padStart(2, "0")}</span></div>
           <div className={styles.cards}>{section.links.map((item, index) => {
             const subject = courseForPath[item.href];
-            const progress = subject ? courseProgress[subject] : undefined;
+            const progress = subject ? courseProgress?.[subject] : undefined;
             const total = subject ? STORY_COURSES[subject].total : undefined;
-            return <Link key={item.href} href={item.href} className={styles.card}>
+            const href = subject && progress && progress.completed > 0 && progress.next !== null ? `${item.href}?step=${progress.next}` : item.href;
+            return <Link key={item.href} href={href} className={styles.card}>
               <span className={styles.cardIndex}>{String(index + 1).padStart(2, "0")}</span><span className={styles.symbol} aria-hidden="true">{item.symbol}</span>
-              <span className={styles.cardCopy}><strong>{item.title[language]}</strong><span>{item.description[language]}</span>{progress !== undefined && total !== undefined && <span className={styles.progress}><span className={styles.progressTrack}><span style={{ width: `${Math.min(100, progress / total * 100)}%` }}/></span><small>{progress}/{total}</small></span>}</span>
+              <span className={styles.cardCopy}><strong>{item.title[language]}</strong><span>{item.description[language]}</span>{progress && total !== undefined && <span className={styles.progress}><span className={styles.progressTrack}><span style={{ width: `${Math.min(100, progress.completed / total * 100)}%` }}/></span><small>{progress.completed}/{total}{progress.completed > 0 && progress.next !== null ? ` · ${language === "ko" ? "다음" : "下一步"} ${progress.next}` : ""}</small></span>}</span>
               <span className={styles.cardArrow} aria-hidden="true">↗</span>
             </Link>;
           })}</div>

@@ -10,6 +10,7 @@
     "test:word-audio": "node --test tests/wordAudio.test.mjs",
     "test:english-recall": "node --test tests/englishRecall.test.mjs",
     "test:story-curriculum": "node --test tests/storyCurriculum.test.mjs",
+    "test:learning-hub": "node --test tests/learningHub.test.mjs",
     "test:study-checkpoint": "node --test tests/studyCheckpoint.test.mjs"
   },
   "dependencies": {

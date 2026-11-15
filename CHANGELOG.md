@@ -2,6 +2,8 @@
 
 ## 2026-11-15
 ### 완료
+- 학습 서가의 탐색 흐름을 검증하고 끊기는 지점을 고쳤다. 다른 기기에는 임시 체크포인트가 없어도 서버 진도에서 마지막 학습 과목의 첫 미완료 단계로 바로 이어지고, 저장된 완료 단계에 빈칸이 있어도 단순 완료 개수로 다음 단계를 잘못 계산하지 않는다. 과정 카드에서도 저장된 다음 단계로 이동한다.
+- 기기 안의 체크포인트와 서버 진도가 다르면 더 최근 기록을 상단 이어하기에 사용한다. 완료 시각이 없는 이전 서버 기록도 수정 시각으로 이어갈 수 있다. 과목 분류 이름도 검색 대상으로 포함하고, C++ 화면의 네트워크 과정 안내를 실제 120단계와 맞췄다. 학습 서가 검사 4개, 이야기 구성 검사 10개, 체크포인트 검사 5개, 린트와 프로덕션 빌드를 통과했다.
 - 학습 선택 화면을 학습 서가 형태로 다시 디자인했다. 오늘의 추천 학습과 최근 이어하기를 상단에 분리하고, 과목 분류·검색·각 과정의 저장된 진도를 카드에서 확인할 수 있게 했다. 모바일에서는 한 열 카드와 줄바꿈 가능한 분류 버튼을 사용하고 키보드 포커스·검색 이름을 보강했다.
 - C++ 과정을 26단계에서 40단계로 확장했다. 27~40단계에 디버거·CMake·Sanitizer·단위 테스트, 파서 상태·프로토콜 버전·UDP 크기·중복 처리, 로그·정상 종료·스레드 중지·연결별 자원 제한, 퍼징·통합 프로젝트를 통신소 이야기와 함께 추가했다. 각 단계에 쉬운 풀이·개발 판단·확인 문제 해설을 넣고 새 문제의 정답 위치를 분산했다.
 - 터미널 명령, 설계 도식, C++ 코드 조각을 학습 화면에서 구분한다. 백엔드 진도 상한과 이어하기 범위를 40으로 바꾸고 C# 다음 과정 및 오늘 학습 전환 조건도 40단계 완료로 맞췄다.
@@ -12,6 +14,9 @@
 - 25개 추가 단계와 문제 해설의 누락을 검사하는 테스트를 보강했다.
 
 ### 변경된 파일
+- `frontend/src/app/learn/courseProgress.ts`, `frontend/src/app/learn/page.tsx` — 서버 진도 요약, 첫 미완료 단계와 최근 학습 선택, 이어하기 연결.
+- `frontend/tests/learningHub.test.mjs`, `frontend/package.json` — 학습 서가 진도·이어하기 회귀 검사.
+- `frontend/src/app/cpp/page.tsx` — 네트워크 과정 단계 수 안내 수정.
 - `frontend/src/app/learn/page.tsx`, `frontend/src/app/learn/page.module.css` — 학습 선택 화면의 탐색 구조·반응형 디자인·진도 표시.
 - `frontend/src/app/cpp/curriculum.ts`, `frontend/src/app/cpp/story.ts`, `frontend/src/app/cpp/explanations.ts`, `frontend/src/app/cpp/deepLessons.ts`, `frontend/src/app/cpp/page.tsx` — C++ 27~40단계와 화면 설명.
 - `backend/learning_service.py`, `backend/tests/test_cpp_http.py`, `backend/tests/test_learning_service.py`, `frontend/src/lib/studyCheckpoint.ts`, `frontend/src/app/csharp/page.tsx`, `frontend/tests/storyCurriculum.test.mjs` — 40단계 진도와 C# 연결 조건.

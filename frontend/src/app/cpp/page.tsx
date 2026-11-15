@@ -156,7 +156,7 @@ export default function CppPage() {
         </div>
         <div className="mt-4 h-2 overflow-hidden rounded-full bg-dark-100"><div className="h-full bg-cyan-500" style={{ width: `${completed / total * 100}%` }} /></div>
         {completed === total && <Link href="/csharp?step=1" className="mt-4 block rounded-xl border border-violet-700 bg-violet-950/30 px-4 py-3 text-sm font-bold text-violet-200 hover:border-violet-400">C++ 완료! 다음 과정 C# 시작하기 →</Link>}
-        <div className="mt-4 flex flex-wrap gap-4 text-sm"><Link href="/cpp/lab" className="font-bold text-emerald-300 hover:underline">실행 가능한 TCP/UDP 실습 →</Link><Link href="/network" className="text-cyan-300 hover:underline">네트워크 심화 20단계 →</Link></div>
+        <div className="mt-4 flex flex-wrap gap-4 text-sm"><Link href="/cpp/lab" className="font-bold text-emerald-300 hover:underline">실행 가능한 TCP/UDP 실습 →</Link><Link href="/network" className="text-cyan-300 hover:underline">네트워크 심화 120단계 →</Link></div>
         {syncFailed && <div role="status" className="mt-4 flex flex-wrap items-center gap-3 rounded-xl border border-amber-800 bg-amber-950/20 px-4 py-3 text-sm text-amber-200"><span>서버 진도를 확인하거나 저장하지 못했습니다. 이 기기의 완료 기록은 유지됩니다.</span><button disabled={syncing} onClick={retrySync} className="rounded-lg border border-amber-700 px-3 py-1 disabled:opacity-50">{syncing ? "재시도 중..." : "다시 동기화"}</button></div>}
       </div>
     </header>
