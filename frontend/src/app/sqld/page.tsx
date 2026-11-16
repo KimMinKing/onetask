@@ -10,6 +10,7 @@ import { readUserStorage, writeUserStorage } from "@/lib/auth";
 import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
+import StudyText from "@/components/StudyText";
 
 const STORAGE_KEY = "sqld_progress_v1";
 
@@ -61,7 +62,7 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
   };
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 pb-12 pt-5">
+    <main className="study-lesson mx-auto w-full max-w-3xl px-4 pb-12 pt-5" data-study="sqld">
       <button onClick={() => onMove(0)} className="mb-4 text-sm text-stone-500 hover:text-stone-200">← 100단계 목록</button>
       <div className="mb-4 flex items-center gap-2 text-xs">
         <span className="rounded-full bg-violet-950 px-3 py-1 font-bold text-violet-300">{lesson.id}/100</span>
@@ -76,19 +77,19 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
         </div>
         {flow.phase === "story" && <section className="rounded-2xl border border-violet-900/50 bg-violet-950/20 p-5">
           <p className="text-xs font-bold text-violet-300">이어지는 이야기 · 가상의 기록학교 · {chapter?.title}</p>
-          {chapter?.start === lesson.id && <p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}
-          <div className="mt-3 space-y-4 text-sm leading-8 text-stone-100">
-            {scene.scene.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {chapter?.start === lesson.id && <p className="study-reading mt-3 text-stone-300">{chapter.introduction}</p>}
+          <div className="mt-3 space-y-4 text-stone-100">
+            {scene.scene.split("\n\n").map((paragraph) => <p className="study-reading" key={paragraph}><StudyText subject="sqld" text={paragraph}/></p>)}
           </div>
         </section>}
         {flow.phase === "concept" && <><section className="rounded-2xl bg-dark-100 p-5">
           <h2 className="font-bold text-violet-300">이 장면을 실제 개념으로 풀어 읽기</h2>
-          <p className="mt-3 text-sm leading-7 text-stone-100">{scene.bridge}</p>
+          <p className="study-reading mt-3 text-stone-100"><StudyText subject="sqld" text={scene.bridge}/></p>
           <p className="mt-3 text-xs leading-6 text-stone-500">학교와 장부는 이해를 돕는 가상 사건입니다. 아래의 정의와 SQL 실행 규칙을 실제 개념으로 익히세요.</p>
         </section>
         <section className="rounded-2xl border border-sky-900/50 bg-sky-950/20 p-5">
           <h2 className="font-bold text-sky-300">아주 쉬운 예로 다시 보기</h2>
-          <p className="mt-3 text-sm leading-7 text-stone-100">{SQLD_EASY_EXAMPLES[lesson.id]}</p>
+          <p className="study-reading mt-3 text-stone-100"><StudyText subject="sqld" text={SQLD_EASY_EXAMPLES[lesson.id]}/></p>
         </section>
         <section>
           <h2 className="mb-3 text-sm font-bold text-stone-100">시험에 나오는 핵심</h2>

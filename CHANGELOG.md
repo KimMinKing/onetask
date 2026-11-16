@@ -1,5 +1,19 @@
 # CHANGELOG — onetask
 
+## 2026-11-17
+### 완료
+- 영어·Rust·C++·C#·SQLD·네트워크의 학습 본문에서 과목별 핵심 용어를 밑줄과 은은한 형광펜으로 표시했다. 문단당 최대 네 용어의 첫 등장만 강조하고, 영어·코드 용어가 다른 단어의 일부일 때는 표시하지 않는다.
+- 이야기와 개념 설명의 글자 크기·줄 간격·문단 너비·한글 줄바꿈을 공통으로 조정했다. Rust·영어의 자세한 풀이에서는 인라인 코드를 코드 모양으로 유지하면서 일반 설명의 핵심 용어만 강조한다. 코드 블록과 문제 답안의 내용은 바꾸지 않았다.
+- 프런트엔드 이야기 구성 검사 10개, 린트, 프로덕션 빌드를 통과했다.
+
+### 변경된 파일
+- `frontend/src/components/StudyText.tsx`, `frontend/src/components/StudyProse.tsx`, `frontend/src/app/globals.css` — 핵심 용어 강조와 공통 읽기 스타일.
+- `frontend/src/app/english-basics/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/csharp/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx` — 여섯 학습 과정에 가독성 스타일 적용.
+- `CHANGELOG.md` — 변경 기록.
+
+### 다음 세션
+- 실제 PC·모바일 화면에서 긴 문단의 줄바꿈, 강조 빈도, 색 대비를 확인한다.
+
 ## 2026-11-15
 ### 완료
 - 학습 서가의 탐색 흐름을 검증하고 끊기는 지점을 고쳤다. 다른 기기에는 임시 체크포인트가 없어도 서버 진도에서 마지막 학습 과목의 첫 미완료 단계로 바로 이어지고, 저장된 완료 단계에 빈칸이 있어도 단순 완료 개수로 다음 단계를 잘못 계산하지 않는다. 과정 카드에서도 저장된 다음 단계로 이동한다.

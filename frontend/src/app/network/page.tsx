@@ -9,6 +9,7 @@ import { readUserStorage, writeUserStorage } from "@/lib/auth";
 import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
+import StudyText from "@/components/StudyText";
 
 const STORAGE_KEY = "network_manager_progress_v1";
 const TOTAL_LESSONS = NETWORK_CURRICULUM.length;
@@ -26,16 +27,16 @@ function Lesson({ lesson, done, move, complete, onWrong }: { lesson:NetworkLesso
   useEffect(()=>{setSaving(false);setSaveError(false);startedAt.current=Date.now();window.scrollTo({top:0,behavior:"smooth"});},[lesson.id]);
   const correct=choice===lesson.quiz.answer;
   const finish=async()=>{if(!correct||saving)return;setSaving(true);setSaveError(false);try{await complete(Math.floor((Date.now()-startedAt.current)/60_000));}catch{setSaveError(true);}finally{setSaving(false);}};
-  return <main className="mx-auto w-full max-w-3xl px-4 pb-12 pt-5">
+  return <main className="study-lesson mx-auto w-full max-w-3xl px-4 pb-12 pt-5" data-study="network">
     <button onClick={()=>move(0)} className="mb-4 text-sm text-stone-500 hover:text-stone-200">← {TOTAL_LESSONS}단계 목록</button>
     <div className="mb-4 flex items-center gap-2"><span className="rounded-full bg-cyan-950 px-3 py-1 text-xs font-bold text-cyan-300">{lesson.id}/{TOTAL_LESSONS}</span><span className="rounded-full bg-dark-200 px-3 py-1 text-xs text-stone-400">{lesson.section}</span></div>
     <StudyFlowBar phase={flow.phase} paused={flow.paused} onPause={flow.setPaused} onPhase={flow.changePhase}/>
     {!flow.paused&&<>
     <article className="space-y-5 rounded-3xl border border-white/5 bg-dark-200 p-5 sm:p-7">
       <div><p className="mb-1 text-xs font-bold text-cyan-400">네트워크관리사 2급</p><h1 className="text-2xl font-black text-stone-100 sm:text-3xl">{lesson.title}</h1></div>
-      {flow.phase==="story"&&<section className="rounded-2xl border border-cyan-900/50 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 운무학당 · {chapter?.title}</p>{chapter?.start===lesson.id&&<p className="mt-3 text-sm leading-8 text-stone-300">{chapter.introduction}</p>}<p className="mt-3 text-sm leading-8 text-stone-100">{scene.scene}</p></section>}
+      {flow.phase==="story"&&<section className="rounded-2xl border border-cyan-900/50 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 운무학당 · {chapter?.title}</p>{chapter?.start===lesson.id&&<p className="study-reading mt-3 text-stone-300">{chapter.introduction}</p>}<p className="study-reading mt-3 text-stone-100"><StudyText subject="network" text={scene.scene}/></p></section>}
       {flow.phase==="concept"&&<>
-      <section className="rounded-2xl bg-dark-100 p-5"><h2 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h2><p className="mt-3 text-sm leading-7 text-stone-100">{scene.bridge}</p>{lesson.summary&&<p className="mt-3 text-sm leading-7 text-stone-300">{lesson.summary}</p>}<p className="mt-3 text-xs leading-6 text-stone-500">학당과 구조 요청은 이해를 돕는 가상 사건입니다. 실제 장비와 프로토콜은 아래 정의·명령·패킷 규칙으로 판단하세요.</p></section>
+      <section className="rounded-2xl bg-dark-100 p-5"><h2 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h2><p className="study-reading mt-3 text-stone-100"><StudyText subject="network" text={scene.bridge}/></p>{lesson.summary&&<p className="study-reading mt-3 text-stone-300"><StudyText subject="network" text={lesson.summary}/></p>}<p className="mt-3 text-xs leading-6 text-stone-500">학당과 구조 요청은 이해를 돕는 가상 사건입니다. 실제 장비와 프로토콜은 아래 정의·명령·패킷 규칙으로 판단하세요.</p></section>
       <section><h2 className="mb-3 text-sm font-bold text-stone-100">필기·실기 핵심</h2><ul className="space-y-2">{lesson.points.map(p=><li key={p} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {p}</li>)}</ul></section>
       {lesson.lab&&<section><h2 className="mb-3 text-sm font-bold text-stone-100">실습·계산</h2><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-xs leading-6 text-emerald-300">{lesson.lab}</pre></section>}
       <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 px-4 py-3 text-sm leading-6 text-amber-200"><strong>시험 함정:</strong> {lesson.trap}</aside>

@@ -7,6 +7,7 @@ import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import { CSHARP_CURRICULUM } from "./curriculum";
+import StudyText from "@/components/StudyText";
 
 const total = CSHARP_CURRICULUM.length;
 
@@ -87,18 +88,18 @@ export default function CSharpPage() {
       <div className="mt-4 h-2 overflow-hidden rounded-full bg-dark-100"><div className="h-full bg-violet-500" style={{ width: `${completed.size / total * 100}%` }}/></div>
       {!loading && !cppCompleted && <p className="mt-3 text-xs text-amber-300">C++ 40단계를 마친 뒤 시작하도록 구성했습니다. 먼저 둘러볼 수도 있습니다.</p>}
     </div></header>
-    {current ? <main className="mx-auto max-w-3xl space-y-5 px-4 py-6">
+    {current ? <main className="study-lesson mx-auto max-w-3xl space-y-5 px-4 py-6" data-study="csharp">
       <button onClick={() => open(0)} className="text-sm text-stone-400 hover:text-stone-100">← 전체 목록</button>
       <StudyFlowBar phase={flow.phase} paused={flow.paused} onPause={flow.setPaused} onPhase={flow.changePhase}/>
       {!flow.paused && <>
         <article className="space-y-5 rounded-3xl bg-dark-200 p-5 sm:p-7">
           <div><p className="text-xs font-bold text-violet-300">{current.section} · {current.id}/{total}</p><h2 className="mt-2 text-2xl font-black">{current.title}</h2></div>
-          {flow.phase === "story" && <section className="rounded-2xl border border-violet-900/50 bg-violet-950/20 p-5"><h3 className="font-bold text-violet-200">이어지는 이야기 · 유나의 기록관</h3>{current.id > 1 && <p className="mt-3 text-xs leading-6 text-violet-300">앞 단계: {CSHARP_CURRICULUM[current.id - 2].title}</p>}<p className="mt-3 leading-8">{current.story}</p><p className="mt-3 text-xs leading-6 text-stone-400">기록관은 가상 배경입니다. 실제 C# 규칙은 다음 화면에서 코드와 함께 확인하세요.</p></section>}
+          {flow.phase === "story" && <section className="rounded-2xl border border-violet-900/50 bg-violet-950/20 p-5"><h3 className="font-bold text-violet-200">이어지는 이야기 · 유나의 기록관</h3>{current.id > 1 && <p className="mt-3 text-xs leading-6 text-violet-300">앞 단계: {CSHARP_CURRICULUM[current.id - 2].title}</p>}<p className="study-reading mt-3"><StudyText subject="csharp" text={current.story}/></p><p className="mt-3 text-xs leading-6 text-stone-400">기록관은 가상 배경입니다. 실제 C# 규칙은 다음 화면에서 코드와 함께 확인하세요.</p></section>}
           {flow.phase === "concept" && <>
-            <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-violet-200">이 장면을 실제 개념으로 풀어 읽기</h3><p className="mt-3 leading-8 text-stone-200">{current.concept}</p></section>
+            <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-violet-200">이 장면을 실제 개념으로 풀어 읽기</h3><p className="study-reading mt-3 text-stone-200"><StudyText subject="csharp" text={current.concept}/></p></section>
             {current.id === 1 && <section className="rounded-2xl border border-violet-900/50 bg-violet-950/20 p-5 text-sm leading-7"><h3 className="font-bold text-violet-200">정말 처음이라면: 실행 순서</h3><p className="mt-2">먼저 <a href="https://dotnet.microsoft.com/download" target="_blank" rel="noopener noreferrer" className="text-violet-300 underline">공식 .NET SDK</a>를 설치하고 터미널을 새로 여세요. 아래 명령은 Windows PowerShell이나 macOS/Linux 터미널에서 한 줄씩 입력합니다. C++의 g++는 사용하지 않습니다.</p><pre className="mt-3 overflow-x-auto rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{"dotnet --version\nmkdir csharp-first\ncd csharp-first\ndotnet new console"}</pre><p className="mt-3"><code>dotnet --version</code>은 SDK 확인, <code>mkdir</code>은 폴더 만들기, <code>cd</code>는 그 폴더로 이동, <code>dotnet new console</code>은 콘솔 프로젝트 만들기입니다. 만들어진 <code>Program.cs</code>를 아래 코드로 바꾸고 저장한 뒤 실행하세요.</p><pre className="mt-3 rounded-xl bg-black/40 p-4 text-xs text-emerald-300">dotnet run</pre><p className="mt-3">명령을 찾을 수 없다면 SDK 설치 또는 터미널 경로를 확인하세요. <code>Program.cs</code>가 있는 프로젝트 폴더에서 <code>dotnet run</code>을 실행해야 합니다. C# 공식 <a href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/tutorials/hello-world" target="_blank" rel="noopener noreferrer" className="text-violet-300 underline">첫 프로그램 설명</a>도 참고할 수 있습니다.</p></section>}
             <section><h3 className="mb-2 font-bold">{current.id === 1 ? "Program.cs 전체 내용" : "코드로 확인하기"}</h3><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-xs leading-6 text-emerald-300">{current.code}</pre>{current.id > 1 && <p className="mt-2 text-xs leading-6 text-stone-400">앞 단계의 콘솔 프로젝트 Program.cs에 넣어 보는 예제입니다. 일부 단계는 별도 프로젝트나 추가 맥락이 필요하므로 아래 실습 안내를 먼저 읽으세요.</p>}</section>
-            <section className="rounded-xl border border-white/10 p-4"><h3 className="font-bold">직접 해 보기</h3><p className="mt-2 text-sm leading-7 text-stone-300">{current.practice}</p></section>
+            <section className="rounded-xl border border-white/10 p-4"><h3 className="font-bold">직접 해 보기</h3><p className="study-reading mt-2 text-stone-300"><StudyText subject="csharp" text={current.practice}/></p></section>
           </>}
           {flow.phase !== "practice" && <button onClick={() => flow.changePhase(flow.phase === "story" ? "concept" : "practice")} className="w-full rounded-xl bg-violet-600 py-3 font-bold">{flow.phase === "story" ? "개념과 코드 보기 →" : "확인 문제 풀기 →"}</button>}
         </article>
