@@ -12,6 +12,7 @@ import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
+import StudyDiagram from "@/components/StudyDiagram";
 
 const total = RUST_CURRICULUM.length;
 
@@ -92,6 +93,7 @@ export default function RustPage() {
         {flow.phase === "story" && scene && <section className="rounded-2xl border border-orange-900/40 bg-orange-950/20 p-5"><p className="text-xs font-bold text-orange-300">이어지는 이야기 · 가상의 선협 세계</p><p className="study-reading mt-3 whitespace-pre-line text-stone-100"><StudyText subject="rust" text={scene.story}/></p></section>}
         {flow.phase === "concept" && <>
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-orange-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="study-reading mt-3 text-stone-100"><StudyText subject="rust" text={current.idea}/></p><p className="study-reading mt-2 text-stone-300"><StudyText subject="rust" text={current.detail}/></p>{scene && <p className="study-reading mt-3 text-stone-300"><StudyText subject="rust" text={scene.bridge}/></p>}<p className="mt-3 text-xs leading-6 text-stone-500">이야기 속 부적과 결계는 기억을 돕는 비유입니다. 실제 Rust의 동작은 아래 코드와 컴파일 결과로 확인하세요.</p></section>
+        <StudyDiagram subject="rust" step={current.id}/>
         {extra && <section className="space-y-4 rounded-2xl border border-white/10 bg-dark-100 p-5"><h3 className="font-bold text-orange-300">처음 배우는 사람을 위한 자세한 풀이</h3><StudyProse text={extra.walkthrough} subject="rust" className="study-reading text-stone-100"/><div className="border-t border-white/10 pt-4"><h4 className="text-sm font-bold text-orange-200">다른 예와 헷갈리는 부분</h4><StudyProse text={extra.anotherLook} subject="rust" className="study-reading mt-2 text-stone-300"/></div></section>}
         {pythonBridge && <section className="rounded-2xl border border-white/10 bg-dark-100 p-5"><h3 className="font-bold text-orange-300">Python으로 본 적이 있다면</h3><p className="mt-1 text-xs text-stone-500">두 언어의 모양을 비교하는 코드 조각입니다. 동작 규칙까지 같다는 뜻은 아닙니다.</p><div className="mt-4 grid gap-3 sm:grid-cols-2"><div><p className="mb-2 text-xs font-bold text-blue-300">Python</p><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-3 text-xs leading-6 text-stone-200">{pythonBridge.python}</pre></div><div><p className="mb-2 text-xs font-bold text-orange-300">Rust</p><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-3 text-xs leading-6 text-stone-200">{pythonBridge.rust}</pre></div></div><StudyProse text={pythonBridge.explanation} subject="rust" className="study-reading mt-3 text-stone-300"/></section>}
         <section><h3 className="font-bold">직접 실행할 코드</h3><pre className="mt-2 overflow-x-auto whitespace-pre-wrap rounded-xl bg-black/40 p-4 text-sm leading-6 text-emerald-300">{current.code}</pre></section>

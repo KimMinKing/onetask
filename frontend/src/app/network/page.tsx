@@ -10,6 +10,7 @@ import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
+import StudyDiagram from "@/components/StudyDiagram";
 
 const STORAGE_KEY = "network_manager_progress_v1";
 const TOTAL_LESSONS = NETWORK_CURRICULUM.length;
@@ -37,6 +38,7 @@ function Lesson({ lesson, done, move, complete, onWrong }: { lesson:NetworkLesso
       {flow.phase==="story"&&<section className="rounded-2xl border border-cyan-900/50 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 운무학당 · {chapter?.title}</p>{chapter?.start===lesson.id&&<p className="study-reading mt-3 text-stone-300">{chapter.introduction}</p>}<p className="study-reading mt-3 text-stone-100"><StudyText subject="network" text={scene.scene}/></p></section>}
       {flow.phase==="concept"&&<>
       <section className="rounded-2xl bg-dark-100 p-5"><h2 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h2><p className="study-reading mt-3 text-stone-100"><StudyText subject="network" text={scene.bridge}/></p>{lesson.summary&&<p className="study-reading mt-3 text-stone-300"><StudyText subject="network" text={lesson.summary}/></p>}<p className="mt-3 text-xs leading-6 text-stone-500">학당과 구조 요청은 이해를 돕는 가상 사건입니다. 실제 장비와 프로토콜은 아래 정의·명령·패킷 규칙으로 판단하세요.</p></section>
+      <StudyDiagram subject="network" step={lesson.id}/>
       <section><h2 className="mb-3 text-sm font-bold text-stone-100">필기·실기 핵심</h2><ul className="space-y-2">{lesson.points.map(p=><li key={p} className="rounded-xl bg-dark-100 px-4 py-3 text-sm leading-6 text-stone-300">• {p}</li>)}</ul></section>
       {lesson.lab&&<section><h2 className="mb-3 text-sm font-bold text-stone-100">실습·계산</h2><pre className="overflow-x-auto whitespace-pre-wrap rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-xs leading-6 text-emerald-300">{lesson.lab}</pre></section>}
       <aside className="rounded-xl border border-amber-900/60 bg-amber-950/20 px-4 py-3 text-sm leading-6 text-amber-200"><strong>시험 함정:</strong> {lesson.trap}</aside>

@@ -7,6 +7,7 @@ import { ENGLISH_CHAPTERS, reviewWords } from "./curriculum";
 import { ENGLISH_EXPLANATIONS } from "./explanations";
 import StudyProse from "@/components/StudyProse";
 import StudyText from "@/components/StudyText";
+import StudyDiagram from "@/components/StudyDiagram";
 import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
@@ -87,6 +88,7 @@ export default function EnglishBasicsPage() {
         {flow.phase === "story" && <p className="study-reading whitespace-pre-line"><StudyText subject="english-basics" text={chapter.story}/></p>}
         {flow.phase === "concept" && <>
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-blue-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="study-reading mt-3"><StudyText subject="english-basics" text={chapter.concept}/></p><p className="study-reading mt-2 text-stone-300"><StudyText subject="english-basics" text={chapter.sceneLink}/></p><p className="mt-3 text-xs text-stone-500">하린과 교역문은 가상의 이야기입니다. 아래 영어 문장과 문법 설명은 실제 영어 학습 내용입니다.</p></section>
+        <StudyDiagram subject="english-basics" step={chapter.id}/>
         {extra && <section className="space-y-4 rounded-2xl border border-white/10 bg-dark-100 p-5"><h3 className="font-bold text-blue-300">한 단어씩 차근차근 풀어 읽기</h3><StudyProse text={extra.walkthrough} subject="english-basics" className="study-reading"/><div className="border-t border-white/10 pt-4"><h4 className="text-sm font-bold text-blue-200">한 번 더, 다른 문장으로</h4><StudyProse text={extra.anotherLook} subject="english-basics" className="study-reading mt-2 text-stone-300"/></div></section>}
         <section><h3 className="font-bold">입으로 세 번 읽기</h3><p className="mt-2 text-lg font-semibold text-blue-200">{chapter.example}</p><p className="mt-1 text-sm text-stone-400">{chapter.translation}</p></section>
         <section><h3 className="font-bold">오늘 외울 단어 · 소리 내어 읽고 뜻을 가려 보세요</h3><div className="mt-3 grid gap-2 sm:grid-cols-2">{chapter.words.map(([english, korean]) => <div key={english} className="rounded-xl bg-dark-100 px-3 py-2"><strong className="text-blue-200">{english}</strong><span className="ml-3 text-sm text-stone-400">{korean}</span></div>)}</div>{review.length > 0 && <p className="mt-3 text-xs text-stone-400">입력 연습에는 이전 장의 단어도 간격을 두고 다시 나옵니다.</p>}</section>

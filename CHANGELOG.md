@@ -2,11 +2,16 @@
 
 ## 2026-11-17
 ### 완료
+- 여섯 과정의 헷갈리기 쉬운 17개 단계에 반응형 개념 그림을 넣었다. 영어 어순·관사, Rust의 스택/힙·소유권·빌림, C++의 첫 빌드·TCP 분할·메시지 경계, C#의 첫 프로젝트·await, SQLD의 모델링·LEFT JOIN·NULL, 네트워크의 캡슐화·TCP 연결·UDP를 단계별로 보여 준다. 그림마다 실제 규칙의 예외나 비유의 한계를 짧게 적었다.
+- 영어 이야기에서 인물 이름 뒤 조사가 잘못 붙은 문장을 바로잡았다. 이야기 구성 검사 10개, 린트, 프로덕션 빌드가 통과했다.
 - 영어·Rust·C++·C#·SQLD·네트워크의 학습 본문에서 과목별 핵심 용어를 밑줄과 은은한 형광펜으로 표시했다. 문단당 최대 네 용어의 첫 등장만 강조하고, 영어·코드 용어가 다른 단어의 일부일 때는 표시하지 않는다.
 - 이야기와 개념 설명의 글자 크기·줄 간격·문단 너비·한글 줄바꿈을 공통으로 조정했다. Rust·영어의 자세한 풀이에서는 인라인 코드를 코드 모양으로 유지하면서 일반 설명의 핵심 용어만 강조한다. 코드 블록과 문제 답안의 내용은 바꾸지 않았다.
 - 프런트엔드 이야기 구성 검사 10개, 린트, 프로덕션 빌드를 통과했다.
 
 ### 변경된 파일
+- `frontend/src/components/StudyDiagram.tsx`, `frontend/src/app/globals.css` — 단계별 개념 그림과 모바일 세로 배치.
+- `frontend/src/app/english-basics/curriculum.ts` — 이야기 속 인물 이름의 조사 수정.
+- `frontend/src/app/english-basics/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/csharp/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx` — 해당 단계의 개념 화면에 그림 연결.
 - `frontend/src/components/StudyText.tsx`, `frontend/src/components/StudyProse.tsx`, `frontend/src/app/globals.css` — 핵심 용어 강조와 공통 읽기 스타일.
 - `frontend/src/app/english-basics/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/csharp/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx` — 여섯 학습 과정에 가독성 스타일 적용.
 - `CHANGELOG.md` — 변경 기록.

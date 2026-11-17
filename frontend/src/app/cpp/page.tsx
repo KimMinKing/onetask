@@ -13,6 +13,7 @@ import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
+import StudyDiagram from "@/components/StudyDiagram";
 
 const STORAGE_KEY = "cpp_progress_v1";
 const total = CPP_CURRICULUM.length;
@@ -171,6 +172,7 @@ export default function CppPage() {
         {flow.phase === "story" && scene && <section className="rounded-2xl border border-cyan-900/40 bg-cyan-950/20 p-5"><p className="text-xs font-bold text-cyan-300">이어지는 이야기 · 가상의 해안 통신소 · {chapter?.title}</p>{chapter?.start === current.id && <p className="study-reading mt-3 text-stone-300">{chapter.introduction}</p>}{current.id > 1 && <p className="mt-3 rounded-xl bg-black/20 px-4 py-2 text-xs leading-6 text-cyan-200">앞 단계에서 민재가 배운 것: {CPP_CURRICULUM[current.id - 2].summary}</p>}<p className="study-reading mt-3 text-stone-100"><StudyText subject="cpp" text={scene.story}/></p></section>}
         {flow.phase === "concept" && <>
         <section className="rounded-2xl bg-dark-100 p-5"><h3 className="font-bold text-cyan-300">이 장면을 실제 개념으로 풀어 읽기</h3><p className="study-reading mt-3 text-stone-100"><StudyText subject="cpp" text={current.summary}/></p>{scene && <p className="study-reading mt-3 text-stone-300"><StudyText subject="cpp" text={scene.bridge}/></p>}<p className="mt-3 text-xs leading-6 text-stone-500">통신소 사건은 가상입니다. C++의 실제 동작은 아래 코드와 실습 결과로 확인하세요.</p></section>
+        <StudyDiagram subject="cpp" step={current.id}/>
         <section className="rounded-2xl border border-sky-900/50 bg-sky-950/20 p-5"><h3 className="font-bold text-sky-300">처음 배우는 사람을 위한 풀이</h3><div className="mt-3 space-y-3 text-stone-200">{CPP_EXPLANATIONS[current.id].map(paragraph => <p className="study-reading" key={paragraph}><StudyText subject="cpp" text={paragraph}/></p>)}</div></section>
         {CPP_DEEP_LESSONS[current.id] && <section className="space-y-5 rounded-2xl border border-cyan-900/50 bg-cyan-950/10 p-5 text-sm leading-8 text-stone-200">
           <h3 className="text-lg font-bold text-cyan-200">이야기를 따라 더 깊게 이해하기</h3>

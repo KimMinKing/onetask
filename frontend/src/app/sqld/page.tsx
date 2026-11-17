@@ -11,6 +11,7 @@ import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
+import StudyDiagram from "@/components/StudyDiagram";
 
 const STORAGE_KEY = "sqld_progress_v1";
 
@@ -87,6 +88,7 @@ function LessonView({ lesson, done, onDone, onMove, onWrong }: { lesson: SqldLes
           <p className="study-reading mt-3 text-stone-100"><StudyText subject="sqld" text={scene.bridge}/></p>
           <p className="mt-3 text-xs leading-6 text-stone-500">학교와 장부는 이해를 돕는 가상 사건입니다. 아래의 정의와 SQL 실행 규칙을 실제 개념으로 익히세요.</p>
         </section>
+        <StudyDiagram subject="sqld" step={lesson.id}/>
         <section className="rounded-2xl border border-sky-900/50 bg-sky-950/20 p-5">
           <h2 className="font-bold text-sky-300">아주 쉬운 예로 다시 보기</h2>
           <p className="study-reading mt-3 text-stone-100"><StudyText subject="sqld" text={SQLD_EASY_EXAMPLES[lesson.id]}/></p>
