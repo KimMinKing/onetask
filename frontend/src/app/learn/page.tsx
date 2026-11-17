@@ -13,7 +13,7 @@ type Copy = Record<UiLanguage, string>;
 type LearningLink = { href: string; symbol: string; title: Copy; description: Copy };
 type LearningSection = { id: Exclude<Category, "all">; title: Copy; subtitle: Copy; links: LearningLink[] };
 
-const daily: LearningLink = { href: "/daily-course", symbol: "✓", title: { ko: "추천 하루 학습", zh: "每日推荐学习" }, description: { ko: "중국어·영어·집중 과목을 오늘 가능한 시간에 맞춰", zh: "按今天的时间安排中文、英语与重点科目" } };
+const daily: LearningLink = { href: "/daily-course", symbol: "✓", title: { ko: "오늘 한 걸음 바로 시작", zh: "开始今天的一小步" }, description: { ko: "지금 할 수 있는 한 단계만 먼저", zh: "先完成现在能做的一小节" } };
 
 const sections: LearningSection[] = [
   { id: "language", title: { ko: "언어", zh: "语言" }, subtitle: { ko: "소리와 문장을 익히는 길", zh: "从声音到句子的学习路线" }, links: [

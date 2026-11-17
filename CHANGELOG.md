@@ -2,6 +2,9 @@
 
 ## 2026-11-17
 ### 완료
+- 홈의 ‘오늘의 한 가지’와 추천 하루 학습을 한 단계 시작 화면으로 통일했다. 주력 과목의 다음 단계 하나만 크게 보여 주며 5분 설정에서는 중국어·영어 짧은 복습을 날짜별로 번갈아 제안한다. 시간 선택과 다른 과목은 접어서 필요할 때만 연다.
+- 서버에서 한국 시간 기준 오늘의 학습 활동 또는 언어 카드 복습을 확인해 한 번 공부한 날은 ‘오늘 한 걸음 완료’로 표시한다. 이전의 네 과목·약 95분·100일 체크판은 학습 진도를 지우지 않고 화면에서 제거했다. 오늘 학습 로딩 실패 시 재시도할 수 있게 했다.
+- 백엔드 학습 검사 15개, 오늘 한 단계 선택 검사 4개, 이야기 구성 검사 10개, 프런트엔드 린트와 프로덕션 빌드를 통과했다.
 - 여섯 과정의 헷갈리기 쉬운 17개 단계에 반응형 개념 그림을 넣었다. 영어 어순·관사, Rust의 스택/힙·소유권·빌림, C++의 첫 빌드·TCP 분할·메시지 경계, C#의 첫 프로젝트·await, SQLD의 모델링·LEFT JOIN·NULL, 네트워크의 캡슐화·TCP 연결·UDP를 단계별로 보여 준다. 그림마다 실제 규칙의 예외나 비유의 한계를 짧게 적었다.
 - 영어 이야기에서 인물 이름 뒤 조사가 잘못 붙은 문장을 바로잡았다. 이야기 구성 검사 10개, 린트, 프로덕션 빌드가 통과했다.
 - 영어·Rust·C++·C#·SQLD·네트워크의 학습 본문에서 과목별 핵심 용어를 밑줄과 은은한 형광펜으로 표시했다. 문단당 최대 네 용어의 첫 등장만 강조하고, 영어·코드 용어가 다른 단어의 일부일 때는 표시하지 않는다.
@@ -9,6 +12,9 @@
 - 프런트엔드 이야기 구성 검사 10개, 린트, 프로덕션 빌드를 통과했다.
 
 ### 변경된 파일
+- `frontend/src/components/TodayStudy.tsx`, `frontend/src/lib/dailyFocus.ts`, `frontend/src/app/daily-course/page.tsx`, `frontend/src/app/learn/page.tsx` — 한 단계 시작 화면, 5분 언어 복습, 학습 진입 동선.
+- `backend/learning_service.py`, `frontend/src/lib/api.ts` — 한국 시간 기준 오늘 학습 완료 여부 제공.
+- `backend/tests/test_learning_service.py`, `frontend/tests/dailyFocus.test.mjs`, `frontend/package.json` — 하루 한 단계와 완료 판정 검사.
 - `frontend/src/components/StudyDiagram.tsx`, `frontend/src/app/globals.css` — 단계별 개념 그림과 모바일 세로 배치.
 - `frontend/src/app/english-basics/curriculum.ts` — 이야기 속 인물 이름의 조사 수정.
 - `frontend/src/app/english-basics/page.tsx`, `frontend/src/app/rust/page.tsx`, `frontend/src/app/cpp/page.tsx`, `frontend/src/app/csharp/page.tsx`, `frontend/src/app/sqld/page.tsx`, `frontend/src/app/network/page.tsx` — 해당 단계의 개념 화면에 그림 연결.

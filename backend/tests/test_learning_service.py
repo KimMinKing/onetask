@@ -50,6 +50,7 @@ def test_daily_plan_includes_chinese_and_english_within_budget(minutes, expected
 
     assert {task["subject"]: task["minutes"] for task in plan["tasks"]} == expected
     assert plan["total_minutes"] == minutes
+    assert plan["studied_today"] is False
     english = next(task for task in plan["tasks"] if task["subject"] == "en")
     assert english["href"] == "/words?en=A1"
     assert english["unit_id"] is None
@@ -77,7 +78,22 @@ def test_english_focus_merges_task_and_review_marks_it_complete():
 
     assert [(task["subject"], task["minutes"]) for task in plan["tasks"]] == [("zh", 3), ("en", 12)]
     assert plan["tasks"][1]["completed"] is True
+    assert plan["studied_today"] is True
     assert plan["tasks"][1]["unit_id"] is None
+
+
+def test_one_completed_lesson_finishes_today_without_requiring_every_subject():
+    db = session()
+    user = User(username="one_step", hashed_password="x")
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+
+    assert build_today_plan(db, user.id, 15)["studied_today"] is False
+    update_progress("sqld", "1", ProgressUpdate(completed=True), db, user)
+    plan = build_today_plan(db, user.id, 15)
+    assert plan["studied_today"] is True
+    assert any(task["subject"] == "zh" and not task["completed"] for task in plan["tasks"])
 
 
 def test_progress_and_report_are_isolated_by_user():

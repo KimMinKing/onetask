@@ -110,6 +110,7 @@ export interface TodayPlan {
   minutes: 5 | 15 | 30 | 60;
   primary_subject: string;
   total_minutes: number;
+  studied_today: boolean;
   recovery_message: string | null;
   unresolved_mistakes: number;
   tasks: { id: string; subject: string; title: string; minutes: number; href: string; unit_id: string | null; completed: boolean }[];

@@ -151,12 +151,17 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
         stamp = latest_stamp if latest_stamp.tzinfo else latest_stamp.replace(tzinfo=timezone.utc)
         inactive_days = max(0, (datetime.now(timezone.utc).date() - stamp.date()).days)
     recovery = "오늘 5분만 다시 시작해도 충분해요." if inactive_days >= 3 else None
+    studied_today = db.query(LearningActivity.id).filter(
+        LearningActivity.user_id == user_id,
+        LearningActivity.created_at >= _day_start_utc(),
+    ).first() is not None or any(task["subject"] in LANGUAGE_CARDS and task["completed"] for task in tasks)
     unresolved = db.query(MistakeItem).filter(MistakeItem.user_id == user_id, MistakeItem.resolved_at == None).count()
     return {
         "minutes": budget,
         "primary_subject": primary,
         "tasks": tasks,
         "total_minutes": sum(task["minutes"] for task in tasks),
+        "studied_today": studied_today,
         "recovery_message": recovery,
         "unresolved_mistakes": unresolved,
     }
