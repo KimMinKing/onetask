@@ -12,6 +12,7 @@ import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
 import StudyDiagram from "@/components/StudyDiagram";
+import { isDailyFocus } from "@/lib/dailyFocusMarker";
 
 const STORAGE_KEY = "sqld_progress_v1";
 
@@ -149,7 +150,7 @@ export default function SqldPage() {
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 15_000);
     try {
-      await api.learning.complete("sqld", String(id), { completed: true, score: 100, duration_minutes: durationMinutes, title: SQLD_CURRICULUM[id - 1].title }, controller.signal);
+      await api.learning.complete("sqld", String(id), { completed: true, score: 100, duration_minutes: durationMinutes, title: SQLD_CURRICULUM[id - 1].title, daily_focus: isDailyFocus("sqld", id) }, controller.signal);
     } finally {
       window.clearTimeout(timeout);
     }

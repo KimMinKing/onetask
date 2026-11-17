@@ -13,6 +13,7 @@ import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
 import StudyDiagram from "@/components/StudyDiagram";
+import { isDailyFocus } from "@/lib/dailyFocusMarker";
 
 const total = RUST_CURRICULUM.length;
 
@@ -58,7 +59,7 @@ export default function RustPage() {
     setError("");
     try {
       await api.learning.complete("rust", String(current.id), {
-        completed: true, score: 100, duration_minutes: 0, title: current.title,
+        completed: true, score: 100, duration_minutes: 0, title: current.title, daily_focus: isDailyFocus("rust", current.id),
       });
       setCompleted((before) => new Set(before).add(current.id));
       if (current.id === total) clearStudyCheckpoint("rust");

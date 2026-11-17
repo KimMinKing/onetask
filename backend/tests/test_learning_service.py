@@ -93,7 +93,22 @@ def test_one_completed_lesson_finishes_today_without_requiring_every_subject():
     update_progress("sqld", "1", ProgressUpdate(completed=True), db, user)
     plan = build_today_plan(db, user.id, 15)
     assert plan["studied_today"] is True
+    assert plan["focus_completed_today"] is False
     assert any(task["subject"] == "zh" and not task["completed"] for task in plan["tasks"])
+
+
+def test_recommended_lesson_has_distinct_completion_status():
+    db = session()
+    user = User(username="daily_focus", hashed_password="x")
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+
+    update_progress("sqld", "1", ProgressUpdate(completed=True, daily_focus=True), db, user)
+    plan = build_today_plan(db, user.id, 15)
+    assert plan["studied_today"] is True
+    assert plan["focus_completed_today"] is True
+    assert next(task for task in plan["tasks"] if task["subject"] == "sqld")["unit_id"] == "2"
 
 
 def test_progress_and_report_are_isolated_by_user():

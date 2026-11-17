@@ -8,6 +8,7 @@ import { ENGLISH_EXPLANATIONS } from "./explanations";
 import StudyProse from "@/components/StudyProse";
 import StudyText from "@/components/StudyText";
 import StudyDiagram from "@/components/StudyDiagram";
+import { isDailyFocus } from "@/lib/dailyFocusMarker";
 import StudyFlowBar from "@/components/StudyFlowBar";
 import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
@@ -61,7 +62,7 @@ export default function EnglishBasicsPage() {
     setSaving(true); setError("");
     try {
       await api.learning.complete("english-basics", String(chapter.id), {
-        completed: true, score: 100, duration_minutes: 0, title: chapter.title,
+        completed: true, score: 100, duration_minutes: 0, title: chapter.title, daily_focus: isDailyFocus("english-basics", chapter.id),
       });
       setCompleted(previous => new Set(previous).add(chapter.id));
       if (chapter.id === ENGLISH_CHAPTERS.length) clearStudyCheckpoint("english-basics");

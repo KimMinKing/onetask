@@ -13,6 +13,11 @@ function lessonHref(href: string, minutes: number) {
   return `${href}${href.includes("?") ? "&" : "?"}study_minutes=${minutes}`;
 }
 
+function focusHref(task: TodayPlan["tasks"][number]) {
+  const url = lessonHref(task.href, task.minutes);
+  return task.unit_id ? `${url}&daily_focus=${encodeURIComponent(`${task.subject}:${task.unit_id}`)}` : url;
+}
+
 export default function TodayStudy() {
   const [minutes, setMinutes] = useState<Minutes>(15);
   const [plan, setPlan] = useState<TodayPlan | null>(null);
@@ -73,16 +78,18 @@ export default function TodayStudy() {
     {!loading && error && <div role="alert" className="mt-5 rounded-2xl border border-amber-800 bg-amber-950/20 p-4 text-sm text-amber-200">오늘 학습을 불러오지 못했습니다. <button type="button" onClick={() => load(minutes)} className="ml-1 font-bold underline">다시 시도</button></div>}
 
     {!loading && !error && plan?.studied_today && <div className="mt-5 rounded-2xl border border-emerald-700/50 bg-emerald-950/30 p-5">
-      <p className="text-lg font-bold text-emerald-200">오늘 한 걸음 완료 ✓</p>
-      <p className="mt-2 text-sm leading-6 text-stone-300">여기서 멈춰도 됩니다. 내일 다시 이 자리에서 이어가요.</p>
+      <p className="text-lg font-bold text-emerald-200">{plan.focus_completed_today ? "추천한 학습 완료 ✓" : "오늘 다른 학습을 했어요 ✓"}</p>
+      <p className="mt-2 text-sm leading-6 text-stone-300">{plan.focus_completed_today ? "여기서 멈춰도 됩니다. 내일 다시 이 자리에서 이어가요." : "오늘의 추천 단계는 아래에서 이어갈 수 있어요. 다른 공부도 오늘의 기록으로 남았습니다."}</p>
     </div>}
 
     {!loading && !error && plan && !plan.studied_today && focus && <div className="mt-5 rounded-2xl border border-emerald-600/50 bg-dark-100/90 p-5">
       <p className="text-xs font-bold text-emerald-300">지금 할 일 · 약 {focus.minutes}분</p>
       <h3 className="mt-2 text-lg font-black leading-7">{focus.title}</h3>
-      <p className="mt-2 text-sm leading-6 text-stone-300">이 단계 하나면 오늘의 시작으로 충분해요. 끝나면 자동으로 기록됩니다.</p>
-      <Link href={lessonHref(focus.href, focus.minutes)} className="mt-4 flex min-h-12 items-center justify-center rounded-xl bg-emerald-600 px-5 py-3 text-center text-sm font-black text-white hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200">바로 시작하기 →</Link>
+      <p className="mt-2 text-sm leading-6 text-stone-300">시간은 시작 목표예요. 다 못 끝내도 여기서 멈추고 같은 단계로 돌아올 수 있습니다.</p>
+      <Link href={focusHref(focus)} className="mt-4 flex min-h-12 items-center justify-center rounded-xl bg-emerald-600 px-5 py-3 text-center text-sm font-black text-white hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-200">바로 시작하기 →</Link>
     </div>}
+
+    {!loading && !error && plan?.studied_today && !plan.focus_completed_today && focus && <Link href={focusHref(focus)} className="mt-3 block rounded-xl border border-emerald-700 px-4 py-3 text-center text-sm font-bold text-emerald-200">추천 단계 이어서 하기 →</Link>}
 
     {!loading && !error && plan && !plan.studied_today && !focus && <p className="mt-5 rounded-2xl bg-dark-100 p-4 text-sm text-stone-300">지금 이어갈 단계가 없습니다. 학습 서가에서 과목을 골라 보세요.</p>}
 

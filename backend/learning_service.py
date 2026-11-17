@@ -155,6 +155,18 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
         LearningActivity.user_id == user_id,
         LearningActivity.created_at >= _day_start_utc(),
     ).first() is not None or any(task["subject"] in LANGUAGE_CARDS and task["completed"] for task in tasks)
+    focus_completed_today = db.query(LearningActivity.id).filter(
+        LearningActivity.user_id == user_id,
+        LearningActivity.created_at >= _day_start_utc(),
+        LearningActivity.activity_type == "daily_focus",
+    ).first() is not None
+    if budget == 5 or primary in LANGUAGE_CARDS:
+        focus_language = primary if budget != 5 and primary in LANGUAGE_CARDS else (
+            "en" if (datetime.now(KST).date() - date(1970, 1, 1)).days % 2 == 0 else "zh"
+        )
+        focus_completed_today = focus_completed_today or any(
+            task["subject"] == focus_language and task["completed"] for task in tasks
+        )
     unresolved = db.query(MistakeItem).filter(MistakeItem.user_id == user_id, MistakeItem.resolved_at == None).count()
     return {
         "minutes": budget,
@@ -162,6 +174,7 @@ def build_today_plan(db: Session, user_id: int, minutes: int | None = None) -> d
         "tasks": tasks,
         "total_minutes": sum(task["minutes"] for task in tasks),
         "studied_today": studied_today,
+        "focus_completed_today": focus_completed_today,
         "recovery_message": recovery,
         "unresolved_mistakes": unresolved,
     }

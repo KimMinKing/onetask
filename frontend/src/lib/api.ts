@@ -111,6 +111,7 @@ export interface TodayPlan {
   primary_subject: string;
   total_minutes: number;
   studied_today: boolean;
+  focus_completed_today: boolean;
   recovery_message: string | null;
   unresolved_mistakes: number;
   tasks: { id: string; subject: string; title: string; minutes: number; href: string; unit_id: string | null; completed: boolean }[];
@@ -497,7 +498,7 @@ export const api = {
   learning: {
     today: (minutes?: 5 | 15 | 30 | 60) => req<TodayPlan>(`/learning/today${minutes ? `?minutes=${minutes}` : ""}`),
     progress: (subject?: string) => req<LearningProgress[]>(`/learning/progress${subject ? `?subject=${subject}` : ""}`),
-    complete: (subject: string, unitId: string, data: { completed?: boolean; score?: number; last_position?: number; duration_minutes?: number; title?: string }, signal?: AbortSignal) =>
+    complete: (subject: string, unitId: string, data: { completed?: boolean; score?: number; last_position?: number; duration_minutes?: number; title?: string; daily_focus?: boolean }, signal?: AbortSignal) =>
       req<LearningProgress>(`/learning/progress/${subject}/${unitId}`, { method: "PUT", body: JSON.stringify(data), signal }),
     activity: (data: { client_event_id?: string; subject: string; activity_type: string; unit_id?: string; title?: string; duration_minutes?: number; correct_count?: number; total_count?: number; note?: string }) =>
       req<Record<string, unknown>>("/learning/activities", { method: "POST", body: JSON.stringify(data) }),

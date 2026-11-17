@@ -32,6 +32,7 @@ class ProgressUpdate(BaseModel):
     last_position: Optional[int] = Field(default=None, ge=0)
     duration_minutes: int = Field(default=0, ge=0, le=600)
     title: Optional[str] = Field(default=None, max_length=300)
+    daily_focus: bool = False
 
 
 class ActivityCreate(BaseModel):
@@ -105,7 +106,7 @@ def update_progress(subject: str, unit_id: str, data: ProgressUpdate, db: Sessio
     elif not data.completed:
         row.completed_at = None
     if data.completed and not was_completed:
-        db.add(LearningActivity(user_id=user.id, subject=subject, activity_type="lesson", unit_id=unit_id, title=data.title, duration_minutes=data.duration_minutes, correct_count=1, total_count=1))
+        db.add(LearningActivity(user_id=user.id, subject=subject, activity_type="daily_focus" if data.daily_focus else "lesson", unit_id=unit_id, title=data.title, duration_minutes=data.duration_minutes, correct_count=1, total_count=1))
     db.commit()
     db.refresh(row)
     return row

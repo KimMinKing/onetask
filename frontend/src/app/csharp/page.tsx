@@ -9,6 +9,7 @@ import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import { CSHARP_CURRICULUM } from "./curriculum";
 import StudyText from "@/components/StudyText";
 import StudyDiagram from "@/components/StudyDiagram";
+import { isDailyFocus } from "@/lib/dailyFocusMarker";
 
 const total = CSHARP_CURRICULUM.length;
 
@@ -67,7 +68,7 @@ export default function CSharpPage() {
     try {
       await api.learning.complete("csharp", String(id), {
         completed: true, score: 100,
-        duration_minutes: Math.floor((window.performance.now() - startedAt.current) / 60_000), title: current.title,
+        duration_minutes: Math.floor((window.performance.now() - startedAt.current) / 60_000), title: current.title, daily_focus: isDailyFocus("csharp", id),
       }, controller.signal);
       setCompleted(previous => new Set(previous).add(id));
       if (id === total) clearStudyCheckpoint("csharp");

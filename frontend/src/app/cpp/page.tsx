@@ -14,6 +14,7 @@ import { useStudyFlow } from "@/lib/useStudyFlow";
 import { clearStudyCheckpoint } from "@/lib/studyCheckpoint";
 import StudyText from "@/components/StudyText";
 import StudyDiagram from "@/components/StudyDiagram";
+import { isDailyFocus } from "@/lib/dailyFocusMarker";
 
 const STORAGE_KEY = "cpp_progress_v1";
 const total = CPP_CURRICULUM.length;
@@ -128,7 +129,7 @@ export default function CppPage() {
     const timeout = window.setTimeout(() => controller.abort(), 15_000);
     try {
       await api.learning.complete("cpp", String(id), {
-        completed: true, score: 100, duration_minutes: Math.floor((window.performance.now() - startedAt.current) / 60_000), title: current.title,
+        completed: true, score: 100, duration_minutes: Math.floor((window.performance.now() - startedAt.current) / 60_000), title: current.title, daily_focus: isDailyFocus("cpp", id),
       }, controller.signal);
       const next = { ...savedProgress(), ...progress, [id]: true };
       try { writeUserStorage(STORAGE_KEY, JSON.stringify(next)); } catch { /* Server progress is authoritative. */ }
