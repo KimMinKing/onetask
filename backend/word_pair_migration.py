@@ -1,4 +1,4 @@
-"""Apply the reviewed HSK4 sentence pairs once, without changing word identities."""
+"""Reconcile tracked Chinese sentence pairs without changing word identities."""
 
 import json
 import logging
@@ -8,8 +8,9 @@ from sqlalchemy import inspect, text
 
 
 CATALOG = Path(__file__).resolve().parent / "data" / "hsk4_word_pairs.json"
-# V2 re-applies the reviewed catalog once even when a server recorded V1;
-# a V1 marker alone does not prove the current rows still match the catalog.
+HSK35_CATALOG = Path(__file__).resolve().parent / "data" / "hsk35_word_pairs.json"
+# A marker records that a migration ran, not that later SQL or imports left the
+# content intact. Compare rows on every startup and repair only actual drift.
 MARKER = "hsk4_word_pairs_v2"
 logger = logging.getLogger(__name__)
 
@@ -35,10 +36,12 @@ def apply_hsk4_word_pairs(engine) -> int:
         return 0
     pairs = json.loads(CATALOG.read_text(encoding="utf-8"))
     with engine.begin() as connection:
-        if connection.execute(text("SELECT 1 FROM migration_markers WHERE name=:name"), {"name": MARKER}).first():
-            return 0
+        marker_present = connection.execute(text(
+            "SELECT 1 FROM migration_markers WHERE name=:name"
+        ), {"name": MARKER}).first() is not None
         rows = connection.execute(text(
-            "SELECT id, chinese, pinyin, hsk_level FROM words WHERE hsk_level=4"
+            "SELECT id, chinese, pinyin, hsk_level, meaning, example_zh, example_ko, example_pinyin "
+            "FROM words WHERE hsk_level=4"
         )).mappings().all()
         by_id = {row["id"]: row for row in rows}
         # A partially imported database is not ready for this one-time migration.
@@ -52,14 +55,21 @@ def apply_hsk4_word_pairs(engine) -> int:
                 logger.warning("HSK4 word-pair migration skipped: %s unmatched IDs (first: %s)",
                                len(mismatched), mismatched[:10])
             return 0
-        connection.execute(text("""
-            UPDATE words
-            SET meaning=:meaning, example_zh=:example_zh,
-                example_ko=:example_ko, example_pinyin=:example_pinyin
-            WHERE id=:id AND hsk_level=4 AND chinese=:chinese AND pinyin=:pinyin
-        """), pairs)
-        connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": MARKER})
-    return len(pairs)
+        changed = [pair for pair in pairs if any(
+            by_id[pair["id"]][field] != pair[field]
+            for field in ("meaning", "example_zh", "example_ko", "example_pinyin")
+        )]
+        if changed:
+            connection.execute(text("""
+                UPDATE words
+                SET meaning=:meaning, example_zh=:example_zh,
+                    example_ko=:example_ko, example_pinyin=:example_pinyin
+                WHERE id=:id AND hsk_level=4 AND chinese=:chinese AND pinyin=:pinyin
+            """), changed)
+            logger.warning("Reconciled %s HSK4 word/example/pinyin rows", len(changed))
+        if not marker_present:
+            connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": MARKER})
+    return len(changed)
 
 
 def apply_hsk35_examples(engine) -> int:
@@ -67,14 +77,14 @@ def apply_hsk35_examples(engine) -> int:
     if not inspector.has_table("words") or not inspector.has_table("migration_markers"):
         return 0
     marker = "hsk35_target_examples_v1"
-    pairs = [dict(hsk_level=level, id=word_id, chinese=chinese, pinyin=pinyin,
-                  example_zh=example_zh, example_ko=example_ko, example_pinyin=example_pinyin)
-             for level, word_id, chinese, pinyin, example_zh, example_ko, example_pinyin in HSK35_EXAMPLES]
+    pairs = json.loads(HSK35_CATALOG.read_text(encoding="utf-8"))
     with engine.begin() as connection:
-        if connection.execute(text("SELECT 1 FROM migration_markers WHERE name=:name"), {"name": marker}).first():
-            return 0
+        marker_present = connection.execute(text(
+            "SELECT 1 FROM migration_markers WHERE name=:name"
+        ), {"name": marker}).first() is not None
         rows = connection.execute(text(
-            "SELECT id, chinese, pinyin, hsk_level FROM words WHERE hsk_level IN (3, 5)"
+            "SELECT id, chinese, pinyin, hsk_level, example_zh, example_ko, example_pinyin "
+            "FROM words WHERE hsk_level IN (3, 5)"
         )).mappings().all()
         by_id = {row["id"]: row for row in rows}
         mismatched = [pair["id"] for pair in pairs
@@ -82,12 +92,39 @@ def apply_hsk35_examples(engine) -> int:
                       any(row[key] != pair[key] for key in ("chinese", "pinyin", "hsk_level"))]
         if mismatched:
             if rows:
-                logger.warning("HSK3/5 example migration skipped: unmatched IDs %s", mismatched)
+                logger.warning("HSK3/5 example migration skipped: %s unmatched IDs (first: %s)",
+                               len(mismatched), mismatched[:10])
             return 0
-        connection.execute(text("""
-            UPDATE words SET example_zh=:example_zh, example_ko=:example_ko,
-                example_pinyin=:example_pinyin
-            WHERE id=:id AND hsk_level=:hsk_level AND chinese=:chinese AND pinyin=:pinyin
-        """), pairs)
-        connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": marker})
-    return len(pairs)
+        sentence_changes = [pair for pair in pairs if
+                            by_id[pair["id"]]["example_zh"] != pair["example_zh"]]
+        pinyin_changes = [pair for pair in pairs if
+                          by_id[pair["id"]]["example_zh"] == pair["example_zh"]
+                          and by_id[pair["id"]]["example_pinyin"] != pair["example_pinyin"]]
+        manual_ids = {item[1] for item in HSK35_EXAMPLES}
+        translation_changes = [pair for pair in pairs if
+                               pair["id"] in manual_ids
+                               and by_id[pair["id"]]["example_zh"] == pair["example_zh"]
+                               and by_id[pair["id"]]["example_ko"] != pair["example_ko"]]
+        if sentence_changes:
+            connection.execute(text("""
+                UPDATE words SET example_zh=:example_zh, example_ko=:example_ko,
+                    example_pinyin=:example_pinyin
+                WHERE id=:id AND hsk_level=:hsk_level AND chinese=:chinese AND pinyin=:pinyin
+            """), sentence_changes)
+        if pinyin_changes:
+            connection.execute(text("""
+                UPDATE words SET example_pinyin=:example_pinyin
+                WHERE id=:id AND hsk_level=:hsk_level AND chinese=:chinese AND pinyin=:pinyin
+            """), pinyin_changes)
+        if translation_changes:
+            connection.execute(text("""
+                UPDATE words SET example_ko=:example_ko
+                WHERE id=:id AND hsk_level=:hsk_level AND chinese=:chinese AND pinyin=:pinyin
+            """), translation_changes)
+        changed_count = len({pair["id"] for pair in
+                             sentence_changes + pinyin_changes + translation_changes})
+        if changed_count:
+            logger.warning("Reconciled %s HSK3/5 example/pinyin rows", changed_count)
+        if not marker_present:
+            connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": marker})
+    return changed_count
