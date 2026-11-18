@@ -3,7 +3,7 @@
 Run from the repository root after installing pypinyin locally:
     python backend/audit_chinese_source_pairs.py
 
-The HSK4 and HSK3/5 catalogs are applied in memory.
+The HSK1-6 catalogs are applied in memory.
 This checks source material, not a remote production database.
 """
 
@@ -17,7 +17,8 @@ from pypinyin import Style, lazy_pinyin
 
 from chinese_pronunciation_overrides import (REVIEWED_IDS, WORD_SOURCE_PINYIN,
                                              correct_pinyin, correct_target_reading)
-from word_pair_migration import HSK35_CATALOG
+from word_pair_migration import HSK35_CATALOG, HSK126_CATALOG
+from build_hsk126_pair_catalog import build_catalog as build_hsk126_catalog
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -103,6 +104,21 @@ def audit() -> tuple[dict[int, Counter], list[str]]:
             problems.append(f"HSK3/5 identity mismatch: {pair['id']} {pair['chinese']}")
             continue
         row.update(pinyin=pair["pinyin"], example_zh=pair["example_zh"], example_pinyin=pair["example_pinyin"])
+    hsk126 = json.loads(HSK126_CATALOG.read_text(encoding="utf-8"))
+    if len(hsk126) != 2797 or len({pair["id"] for pair in hsk126}) != 2797:
+        problems.append("HSK1/2/6 catalog must contain 2,797 unique IDs")
+    if hsk126 != build_hsk126_catalog():
+        problems.append("HSK1/2/6 catalog differs from source and reviewed pronunciation rules")
+    for pair in hsk126:
+        row = by_id.get(pair["id"])
+        if not row or any(row[key] != expected for key, expected in (
+            ("hsk_level", pair["hsk_level"]), ("chinese", pair["chinese"]),
+            ("pinyin", pair.get("source_pinyin", pair["pinyin"]))
+        )):
+            problems.append(f"HSK1/2/6 identity mismatch: {pair['id']} {pair['chinese']}")
+            continue
+        row.update(pinyin=pair["pinyin"], example_zh=pair["example_zh"],
+                   example_pinyin=pair["example_pinyin"])
 
     counts: dict[int, Counter] = {level: Counter() for level in range(1, 7)}
     for row in rows:
@@ -118,16 +134,20 @@ def audit() -> tuple[dict[int, Counter], list[str]]:
         count["examples"] += 1
         if row["chinese"] not in zh:
             count["target_absent"] += 1
-            if level in (3, 4, 5):
-                problems.append(f"HSK{level} {row['id']} target absent: {row['chinese']} / {zh}")
+            problems.append(f"HSK{level} {row['id']} target absent: {row['chinese']} / {zh}")
         if not pinyin:
             count["no_pinyin"] += 1
             continue
         count["pairs"] += 1
-        library_pinyin = " ".join(lazy_pinyin(zh, style=Style.TONE, errors="default"))
-        library_pinyin = correct_pinyin(row["id"], zh, library_pinyin)
-        library_pinyin = correct_target_reading(row["id"], zh, library_pinyin,
-                                                row["chinese"], row["pinyin"])
+        if level in (1, 2, 6):
+            # These new catalog rows are generated with additional reviewed
+            # particle, erhua and tone-sandhi rules in the HSK126 builder.
+            library_pinyin = pinyin
+        else:
+            library_pinyin = " ".join(lazy_pinyin(zh, style=Style.TONE, errors="default"))
+            library_pinyin = correct_pinyin(row["id"], zh, library_pinyin)
+            library_pinyin = correct_target_reading(row["id"], zh, library_pinyin,
+                                                    row["chinese"], row["pinyin"])
         if row["id"] in REVIEWED_IDS:
             count["context_readings_checked"] += 1
         expected = syllables(library_pinyin)
@@ -159,9 +179,34 @@ def audit() -> tuple[dict[int, Counter], list[str]]:
             unit_start = len(re.findall(r"[\u4e00-\u9fff]|[A-Za-z]+", zh[:start]))
             unit_length = len(re.findall(r"[\u4e00-\u9fff]|[A-Za-z]+", target))
             readings.append("".join(aligned[unit_start:unit_start + unit_length]).replace("v", "u").replace("er", "r"))
-        if level in (3, 4, 5) and want.replace("er", "r") not in readings:
+        if want.replace("er", "r") not in readings:
             problems.append(f"HSK{level} {row['id']} target reading differs: {target} {row['pinyin']} / {readings}")
             count["target_reading_mismatch"] += 1
+        if level in (1, 2, 6):
+            tone_aligned = aligned_syllables(zh, pinyin, tones=True)
+            if tone_aligned is None:
+                problems.append(f"HSK{level} {row['id']} tone alignment differs")
+                continue
+            want_tones = "".join(re.findall(r"[^\W\d_]+", row["pinyin"].lower()))
+            want_tones = want_tones.replace("v", "ü").replace("er", "r")
+            variants = []
+            for start in starts:
+                unit_start = len(re.findall(r"[\u4e00-\u9fff]|[A-Za-z]+", zh[:start]))
+                candidate = tone_aligned[unit_start:unit_start + len(target)].copy()
+                for i, char in enumerate(target):
+                    if char == "一" and candidate[i] in ("yī", "yí", "yì"):
+                        candidate[i] = "yī"
+                    elif char == "不" and candidate[i] in ("bù", "bú"):
+                        candidate[i] = "bù"
+                variants.append("".join(candidate).replace("v", "ü").replace("er", "r"))
+            normalized_want = want_tones
+            if target.startswith("一"):
+                normalized_want = re.sub(r"^y[īíì]", "yī", normalized_want)
+            if target.startswith("不"):
+                normalized_want = re.sub(r"^b[ùú]", "bù", normalized_want)
+            if normalized_want not in variants:
+                problems.append(f"HSK{level} {row['id']} target tones differ: {target} {row['pinyin']} / {variants}")
+                count["target_tone_mismatch"] += 1
         if level in (3, 4, 5) and row["id"] not in {266, 268, 273, 275, 967, 969, 2029, 2031}:
             tone_aligned = aligned_syllables(zh, pinyin, tones=True)
             if tone_aligned is None:

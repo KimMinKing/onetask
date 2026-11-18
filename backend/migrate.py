@@ -5,7 +5,7 @@ from sqlalchemy import text
 from database import Base, engine
 import models  # noqa: F401 - registers metadata before create_all
 from migrations_runtime import ensure_runtime_migrations
-from word_pair_migration import apply_hsk4_word_pairs, apply_hsk35_examples
+from word_pair_migration import apply_hsk4_word_pairs, apply_hsk35_examples, apply_hsk126_word_pairs
 from english_beginner_words import apply_english_reviewed_words
 
 
@@ -15,6 +15,7 @@ def migrate() -> None:
         ensure_runtime_migrations(engine)
         apply_hsk4_word_pairs(engine)
         apply_hsk35_examples(engine)
+        apply_hsk126_word_pairs(engine)
         apply_english_reviewed_words(engine)
         return
 
@@ -28,6 +29,7 @@ def migrate() -> None:
             ensure_runtime_migrations(engine)
             apply_hsk4_word_pairs(engine)
             apply_hsk35_examples(engine)
+            apply_hsk126_word_pairs(engine)
             apply_english_reviewed_words(engine)
         finally:
             lock_connection.execute(text("SELECT pg_advisory_unlock(71005)"))

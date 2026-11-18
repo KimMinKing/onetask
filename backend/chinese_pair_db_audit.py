@@ -3,8 +3,7 @@
 Run inside the backend container after rebuilding it:
     python chinese_pair_db_audit.py
 
-HSK3/4/5 have 2,200 exact pairs. HSK1/2/6 currently lack example pinyin
-in the tracked source, so this audit reports their field coverage separately.
+All 4,997 HSK1-6 word/example pairs have tracked transcriptions.
 """
 
 import argparse
@@ -15,7 +14,9 @@ from types import SimpleNamespace
 
 from sqlalchemy import text
 
-from word_pair_migration import CATALOG, HSK35_CATALOG, HSK35_EXAMPLES
+from word_pair_migration import (CATALOG, HSK35_CATALOG, HSK35_EXAMPLES,
+                                 HSK126_CATALOG, HSK126_REVIEWED_EXAMPLE_IDS,
+                                 HSK126_REVIEWED_MEANING_IDS)
 from chinese_word_view import word_content
 
 
@@ -29,14 +30,15 @@ def audit_database(engine) -> PairAudit:
     hsk4 = json.loads(CATALOG.read_text(encoding="utf-8"))
     for row in hsk4:
         row["hsk_level"] = 4
-    catalog = hsk4 + json.loads(HSK35_CATALOG.read_text(encoding="utf-8"))
+    catalog = (hsk4 + json.loads(HSK35_CATALOG.read_text(encoding="utf-8")) +
+               json.loads(HSK126_CATALOG.read_text(encoding="utf-8")))
     expected_by_id = {row["id"]: row for row in catalog}
     manual_translation_ids = {item[1] for item in HSK35_EXAMPLES}
-    if len(expected_by_id) != 2200:
-        raise ValueError("Expected 2,200 unique HSK3/4/5 catalog IDs")
+    if len(expected_by_id) != 4997:
+        raise ValueError("Expected 4,997 unique HSK1-6 catalog IDs")
     with engine.connect() as connection:
         rows = connection.execute(text("""
-            SELECT id, hsk_level, chinese, pinyin, example_zh, example_ko, example_pinyin
+            SELECT id, hsk_level, chinese, pinyin, meaning, example_zh, example_ko, example_pinyin
             FROM words WHERE hsk_level BETWEEN 1 AND 6
         """)).mappings().all()
     by_id = {row["id"]: row for row in rows}
@@ -51,15 +53,15 @@ def audit_database(engine) -> PairAudit:
         if row["example_pinyin"]:
             count["pinyin"] += 1
         expected = expected_by_id.get(row["id"])
-        if level not in (3, 4, 5):
-            continue
         if expected is None:
             mismatches.append((level, row["id"], row["chinese"], ("extra_id",)))
             continue
         identity = ("hsk_level", "chinese", "pinyin")
         content = ("example_zh", "example_pinyin")
-        if level == 4 or row["id"] in manual_translation_ids:
+        if level == 4 or row["id"] in manual_translation_ids | HSK126_REVIEWED_EXAMPLE_IDS:
             content += ("example_ko",)
+        if row["id"] in HSK126_REVIEWED_MEANING_IDS:
+            content += ("meaning",)
         fields = tuple(field for field in identity + content
                        if row[field] != expected[field])
         if fields:
@@ -80,9 +82,8 @@ def main() -> int:
     for level, count in result.counts.items():
         print(f"HSK{level}: DB {count['words']} words, {count['examples']} examples, "
               f"{count['pinyin']} example pinyin fields")
-    print("HSK1/2/6: missing or unreviewed pinyin fields are coverage gaps, not verified matches")
     fields = Counter(field for _level, _id, _word, mismatched in result.mismatches for field in mismatched)
-    print(f"HSK3/4/5 catalog mismatches: {len(result.mismatches)} / 2200")
+    print(f"HSK1-6 catalog mismatches: {len(result.mismatches)} / 4997")
     if fields:
         print("By field:", ", ".join(f"{field} {count}" for field, count in fields.items()))
     for mismatch in result.mismatches[:20]:

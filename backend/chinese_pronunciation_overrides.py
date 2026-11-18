@@ -120,6 +120,17 @@ CROSS_WORD_READINGS = {
     "光滑": "guāng hua", "打扮": "dǎ ban", "收拾": "shōu shi",
     "粮食": "liáng shi", "明白": "míng bai", "厉害": "lì hai",
     "运气": "yùn qi", "戒指": "jiè zhi", "大方": "dà fang",
+    "耽误": "dān wu", "泄露": "xiè lòu", "玻璃": "bō li",
+    "周到": "zhōu dao", "帐篷": "zhàng peng", "行为": "xíng wéi",
+    "同事": "tóng shì", "发展": "fā zhǎn", "过分": "guò fèn",
+    "干净": "gān jìng", "散发": "sàn fā", "长辈": "zhǎng bèi",
+    "相关": "xiāng guān", "答应": "dā ying", "电子": "diàn zǐ",
+    "个体": "gè tǐ", "扎实": "zhā shi", "迷惑": "mí huo",
+    "委屈": "wěi qu", "规矩": "guī ju",
+    "疏忽": "shū hu", "发现": "fā xiàn", "宽敞": "kuān chang",
+    "姑娘": "gū niang", "叔叔": "shū shu", "分裂": "fēn liè",
+    "关系": "guān xì", "没关系": "méi guān xi",
+    "护士": "hù shi",
 }
 
 REVIEWED_IDS = (set(ADVERBIAL_DI) | set(COMPLEMENT_DE) | set(MUST_DEI)
@@ -174,6 +185,10 @@ def correct_pinyin(word_id: int, sentence: str, pinyin: str) -> str:
             if phrase == "为了" and sentence[max(0, match.start() - 1):match.end()] == "成为了":
                 continue
             if word_id == 1422 and phrase == "了解":  # 得到了 + 解放
+                continue
+            if phrase == "地方" and sentence[match.start():match.end() + 1] == "地方言":
+                continue  # 各地 + 方言
+            if phrase == "好处" and sentence[max(0, match.start() - 2):match.end()] == "恰到好处":
                 continue
             index = len(re.findall(r"[\u4e00-\u9fff]|[A-Za-z]+", sentence[:match.start()]))
             if units[index:index + len(phrase)] != list(phrase):

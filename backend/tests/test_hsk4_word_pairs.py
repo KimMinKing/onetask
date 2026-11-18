@@ -3,10 +3,14 @@ from pathlib import Path
 
 from sqlalchemy import create_engine, text
 
-from word_pair_migration import CATALOG, HSK35_CATALOG, HSK35_EXAMPLES, apply_hsk4_word_pairs, apply_hsk35_examples
+from word_pair_migration import (CATALOG, HSK35_CATALOG, HSK35_EXAMPLES,
+                                 HSK126_CATALOG, apply_hsk4_word_pairs,
+                                 apply_hsk35_examples, apply_hsk126_word_pairs)
 from hsk4_pair_audit import audit_hsk4_pairs
 from chinese_pair_db_audit import audit_database
 from chinese_pronunciation_overrides import WORD_SOURCE_PINYIN
+from chinese_word_view import canonical_pinyin, word_content
+from types import SimpleNamespace
 
 
 def test_hsk4_catalog_and_idempotent_migration():
@@ -116,22 +120,23 @@ def test_hsk35_replacements_name_the_taught_word_and_apply_once():
     assert translation == "custom translation"
 
 
-def test_all_2200_stored_example_pairs_match_their_catalog():
+def test_all_4997_stored_example_pairs_match_their_catalog():
     hsk4 = json.loads(Path(CATALOG).read_text(encoding="utf-8"))
     hsk35 = json.loads(Path(HSK35_CATALOG).read_text(encoding="utf-8"))
-    pairs = [dict(pair, hsk_level=4) for pair in hsk4] + hsk35
+    pairs = [dict(pair, hsk_level=4) for pair in hsk4] + hsk35 + json.loads(
+        Path(HSK126_CATALOG).read_text(encoding="utf-8"))
     engine = create_engine("sqlite://")
     with engine.begin() as connection:
         connection.execute(text("""
             CREATE TABLE words (
                 id INTEGER PRIMARY KEY, hsk_level INTEGER, chinese TEXT, pinyin TEXT,
-                example_zh TEXT, example_ko TEXT, example_pinyin TEXT
+                meaning TEXT, example_zh TEXT, example_ko TEXT, example_pinyin TEXT
             )
         """))
         connection.execute(text("""
-            INSERT INTO words (id, hsk_level, chinese, pinyin, example_zh, example_ko, example_pinyin)
-            VALUES (:id, :hsk_level, :chinese, :pinyin, :example_zh, :example_ko, :example_pinyin)
-        """), pairs)
+            INSERT INTO words (id, hsk_level, chinese, pinyin, meaning, example_zh, example_ko, example_pinyin)
+            VALUES (:id, :hsk_level, :chinese, :pinyin, :meaning, :example_zh, :example_ko, :example_pinyin)
+        """), [{**pair, "meaning": pair.get("meaning", "old")} for pair in pairs])
     assert audit_database(engine).mismatches == []
     with engine.begin() as connection:
         connection.execute(text("UPDATE words SET example_pinyin='wrong' WHERE id=584"))
@@ -141,6 +146,7 @@ def test_all_2200_stored_example_pairs_match_their_catalog():
 def test_legacy_lexical_readings_are_repaired_on_startup():
     hsk4 = [dict(pair, hsk_level=4) for pair in json.loads(Path(CATALOG).read_text(encoding="utf-8"))]
     hsk35 = json.loads(Path(HSK35_CATALOG).read_text(encoding="utf-8"))
+    hsk126 = json.loads(Path(HSK126_CATALOG).read_text(encoding="utf-8"))
     engine = create_engine("sqlite://")
     with engine.begin() as connection:
         connection.execute(text("""
@@ -155,7 +161,7 @@ def test_legacy_lexical_readings_are_repaired_on_startup():
                                example_zh, example_ko, example_pinyin)
             VALUES (:id, :hsk_level, :chinese, :pinyin, :meaning,
                     :example_zh, :example_ko, :example_pinyin)
-        """), [{**pair, "meaning": pair.get("meaning", "old")} for pair in hsk4 + hsk35])
+        """), [{**pair, "meaning": pair.get("meaning", "old")} for pair in hsk4 + hsk35 + hsk126])
         for word_id, old_pinyin in WORD_SOURCE_PINYIN.items():
             connection.execute(text("UPDATE words SET pinyin=:pinyin WHERE id=:id"),
                                {"id": word_id, "pinyin": old_pinyin})
@@ -165,3 +171,69 @@ def test_legacy_lexical_readings_are_repaired_on_startup():
     assert apply_hsk4_word_pairs(engine) == 0
     assert apply_hsk35_examples(engine) == 0
     assert audit_database(engine).mismatches == []
+
+
+def test_hsk126_migration_repairs_stale_rows_and_card_view():
+    pairs = json.loads(Path(HSK126_CATALOG).read_text(encoding="utf-8"))
+    assert len(pairs) == 2797
+    assert all(pair["chinese"] in pair["example_zh"] and pair["example_pinyin"]
+               for pair in pairs)
+    engine = create_engine("sqlite://")
+    with engine.begin() as connection:
+        connection.execute(text("""
+            CREATE TABLE words (
+                id INTEGER PRIMARY KEY, hsk_level INTEGER, chinese TEXT, pinyin TEXT,
+                meaning TEXT, example_zh TEXT, example_ko TEXT, example_pinyin TEXT
+            )
+        """))
+        connection.execute(text("CREATE TABLE migration_markers (name TEXT PRIMARY KEY)"))
+        connection.execute(text("""
+            INSERT INTO words (id, hsk_level, chinese, pinyin, meaning,
+                               example_zh, example_ko, example_pinyin)
+            VALUES (:id, :hsk_level, :chinese, :pinyin, :meaning,
+                    :example_zh, :example_ko, NULL)
+        """), [{**pair, "pinyin": pair.get("source_pinyin", pair["pinyin"])}
+                for pair in pairs])
+    changed = next(pair for pair in pairs if pair.get("source_pinyin"))
+    fine = next(pair for pair in pairs if pair["id"] == 4773)
+    with engine.begin() as connection:
+        connection.execute(text("""
+            UPDATE words SET example_zh='旧例句', example_ko='old translation'
+            WHERE id=4773
+        """))
+    with engine.connect() as connection:
+        old = dict(connection.execute(text("SELECT * FROM words WHERE id=:id"),
+                                      {"id": changed["id"]}).mappings().one())
+        old_fine = dict(connection.execute(text("SELECT * FROM words WHERE id=4773")).mappings().one())
+    card, stale = word_content(SimpleNamespace(**old))
+    assert stale and card["example_pinyin"] == changed["example_pinyin"]
+    assert canonical_pinyin(SimpleNamespace(**old)) == changed["pinyin"]
+    fine_card, fine_stale = word_content(SimpleNamespace(**old_fine))
+    assert fine_stale and fine_card["example_zh"] == fine["example_zh"]
+    assert fine_card["example_ko"] == "괜찮아요! 제가 할게요!"
+    with engine.begin() as connection:
+        connection.execute(text("UPDATE words SET pinyin='invalid' WHERE id=4773"))
+    assert apply_hsk126_word_pairs(engine) == 0
+    with engine.connect() as connection:
+        assert connection.execute(text("SELECT example_pinyin FROM words WHERE id=:id"),
+                                  {"id": changed["id"]}).scalar_one() is None
+    with engine.begin() as connection:
+        connection.execute(text("UPDATE words SET pinyin=:pinyin WHERE id=4773"),
+                           {"pinyin": fine.get("source_pinyin", fine["pinyin"])})
+    assert apply_hsk126_word_pairs(engine) == 2797
+    assert apply_hsk126_word_pairs(engine) == 0
+    with engine.connect() as connection:
+        row = connection.execute(text("SELECT pinyin, example_pinyin FROM words WHERE id=:id"),
+                                 {"id": changed["id"]}).one()
+    assert tuple(row) == (changed["pinyin"], changed["example_pinyin"])
+    with engine.connect() as connection:
+        repaired_fine = connection.execute(text("SELECT example_zh, example_ko FROM words WHERE id=4773")).one()
+    assert tuple(repaired_fine) == (fine["example_zh"], fine["example_ko"])
+    with engine.begin() as connection:
+        connection.execute(text("UPDATE words SET example_pinyin='broken' WHERE id=:id"),
+                           {"id": changed["id"]})
+    assert apply_hsk126_word_pairs(engine) == 1
+    with engine.connect() as connection:
+        repaired = connection.execute(text("SELECT example_pinyin FROM words WHERE id=:id"),
+                                      {"id": changed["id"]}).scalar_one()
+    assert repaired == changed["example_pinyin"]

@@ -10,6 +10,12 @@ from chinese_pronunciation_overrides import WORD_PINYIN_CORRECTIONS, WORD_SOURCE
 
 CATALOG = Path(__file__).resolve().parent / "data" / "hsk4_word_pairs.json"
 HSK35_CATALOG = Path(__file__).resolve().parent / "data" / "hsk35_word_pairs.json"
+HSK126_CATALOG = Path(__file__).resolve().parent / "data" / "hsk126_word_pairs.json"
+HSK126_REVIEWED_MEANING_IDS = {2710, 3900}
+HSK126_REVIEWED_EXAMPLE_IDS = {
+    2523, 2575, 2710, 2812, 2846, 3239, 3247, 3382, 3435,
+    3892, 3900, 4175, 4284, 4741, 4773, 4861, 4868, 4944,
+}
 # A marker records that a migration ran, not that later SQL or imports left the
 # content intact. Compare rows on every startup and repair only actual drift.
 MARKER = "hsk4_word_pairs_v2"
@@ -156,3 +162,62 @@ def apply_hsk35_examples(engine) -> int:
         if not marker_present:
             connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": marker})
     return changed_count
+
+
+def apply_hsk126_word_pairs(engine) -> int:
+    """Repair reviewed HSK1/2/6 text and all 2,797 missing transcriptions."""
+    inspector = inspect(engine)
+    if not inspector.has_table("words") or not inspector.has_table("migration_markers"):
+        return 0
+    pairs = json.loads(HSK126_CATALOG.read_text(encoding="utf-8"))
+    if len(pairs) != 2797 or len({pair["id"] for pair in pairs}) != 2797:
+        raise ValueError("HSK1/2/6 catalog must contain 2,797 unique IDs")
+    with engine.begin() as connection:
+        rows = connection.execute(text("""
+            SELECT id, hsk_level, chinese, pinyin, meaning, example_zh,
+                   example_ko, example_pinyin
+            FROM words WHERE hsk_level IN (1, 2, 6)
+        """)).mappings().all()
+        by_id = {row["id"]: row for row in rows}
+        mismatched = [pair["id"] for pair in pairs if
+                      (row := by_id.get(pair["id"])) is None or
+                      row["hsk_level"] != pair["hsk_level"] or
+                      row["chinese"] != pair["chinese"] or
+                      row["pinyin"] not in (pair["pinyin"], pair.get("source_pinyin"))]
+        if mismatched:
+            if rows:
+                logger.warning("HSK1/2/6 migration skipped: %s unmatched IDs (first: %s)",
+                               len(mismatched), mismatched[:10])
+            return 0
+        changed = 0
+        for pair in pairs:
+            row = by_id[pair["id"]]
+            updates = {}
+            if row["pinyin"] != pair["pinyin"]:
+                updates["pinyin"] = pair["pinyin"]
+            if row["example_pinyin"] != pair["example_pinyin"]:
+                updates["example_pinyin"] = pair["example_pinyin"]
+            if row["example_zh"] != pair["example_zh"]:
+                updates["example_zh"] = pair["example_zh"]
+                updates["example_ko"] = pair["example_ko"]
+            elif (pair["id"] in HSK126_REVIEWED_EXAMPLE_IDS and
+                  row["example_ko"] != pair["example_ko"]):
+                updates["example_ko"] = pair["example_ko"]
+            if pair["id"] in HSK126_REVIEWED_MEANING_IDS and row["meaning"] != pair["meaning"]:
+                updates["meaning"] = pair["meaning"]
+            if updates:
+                assignments = ", ".join(f"{field}=:{field}" for field in updates)
+                connection.execute(text(
+                    f"UPDATE words SET {assignments} WHERE id=:id AND hsk_level=:hsk_level "
+                    "AND chinese=:chinese AND pinyin=:old_pinyin"
+                ), {**updates, "id": pair["id"], "hsk_level": pair["hsk_level"],
+                    "chinese": pair["chinese"], "old_pinyin": row["pinyin"]})
+                changed += 1
+        marker = "hsk126_word_pairs_v1"
+        if connection.execute(text("SELECT 1 FROM migration_markers WHERE name=:name"),
+                              {"name": marker}).first() is None:
+            connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"),
+                               {"name": marker})
+    if changed:
+        logger.warning("Reconciled %s HSK1/2/6 word/example/pinyin rows", changed)
+    return changed

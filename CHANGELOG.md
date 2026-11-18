@@ -1,6 +1,20 @@
 # CHANGELOG — onetask
 
 ## 2026-11-18
+### 추가 완료: HSK 1·2·6급 예문 병음 전수 보완
+- 원본에서 예문 병음이 비어 있던 HSK 1급 149개, 2급 148개, 6급 2,500개에 예문과 일치하는 병음을 생성하고 문맥별 발음을 교정했다. 표제어가 예문에 없거나 발음이 달랐던 사례의 중국어 문장·한국어 번역 18개를 수정했다.
+- `分裂`, `欧洲`, `恶心`, `数` 등을 포함한 표제어 병음·뜻 오류를 바로잡고, `关系`와 `没关系`의 성조 차이, 一/不 변조, 조사·경성·儿화 발음을 구분했다.
+- 서버 시작 시 2,797개 항목을 ID·급수·단어·허용된 이전 병음으로 확인한 후 자동 복구한다. 카드 API는 DB가 아직 갱신되지 않았을 때도 검증된 목록의 예문·병음을 보여준다.
+- 원본 감사에서 HSK 1~6급 4,997개 모두 예문·병음 존재, 표제어 포함, 음절 정렬, 표제어 발음·성조 오류 0건. 백엔드 테스트 53건 통과. 실제 운영 DB와 화면은 서버에서 재빌드·감사 후 별도 확인이 필요하다.
+
+### 이번 변경 파일
+- `backend/build_hsk126_pair_catalog.py`, `backend/data/hsk126_word_pairs.json`, `backend/chinese_pronunciation_overrides.py`, `backend/data/hsk35_word_pairs.json`, `backend/data/hsk4_word_pairs.json` — 전체 급수 발음 교정과 목록 생성.
+- `backend/word_pair_migration.py`, `backend/migrate.py`, `backend/chinese_word_view.py`, `backend/chinese_pair_db_audit.py`, `backend/audit_chinese_source_pairs.py`, `backend/tests/test_hsk4_word_pairs.py` — 자동 복구, 화면 보정, 감사 및 회귀 검증.
+- `backend/WORD_PAIRS.md`, `CHANGELOG.md` — 배포 절차와 검증 범위 갱신.
+
+### 운영 확인
+- 서버에서 `git pull` 후 `docker compose up -d --build backend`와 `docker compose exec -T backend python chinese_pair_db_audit.py`를 실행하고, HSK 1~6급 카드 화면과 이미지를 확인한다. 수동 SQL은 필요하지 않다.
+
 ### 완료
 - HSK 3·4·5급 2,200개 예문을 다시 훑어 `地·得·着·了·都·儿`, 경성 및 다의자 발음을 문맥에 맞게 교정했다. 다른 카드의 단어가 예문에 나오는 경우도 교차 대조해 기존 목록 대비 432개 행을 바꿨다. `扇子` 등 단어 병음 9개와 `嚷` 예문도 바로잡았다. 단어 병음 변경은 백엔드 시작 시 기존 DB에 자동 반영한다.
 - 카드·검색·문장 퀴즈·예문 퀴즈·텔레그램 문제에서 교정 목록의 문장과 병음을 사용하게 했다. 원본 2,200쌍의 문장·병음 정렬 및 목표 단어 성조 검사는 오류 0건, 백엔드 테스트 52건 통과했다. 운영 서버 화면은 아직 직접 확인하지 못했다.
