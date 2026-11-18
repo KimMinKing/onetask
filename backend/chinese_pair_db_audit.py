@@ -7,13 +7,16 @@ HSK3/4/5 have 2,200 exact pairs. HSK1/2/6 currently lack example pinyin
 in the tracked source, so this audit reports their field coverage separately.
 """
 
+import argparse
 import json
 from collections import Counter
 from dataclasses import dataclass
+from types import SimpleNamespace
 
 from sqlalchemy import text
 
 from word_pair_migration import CATALOG, HSK35_CATALOG, HSK35_EXAMPLES
+from chinese_word_view import word_content
 
 
 @dataclass
@@ -70,6 +73,9 @@ def audit_database(engine) -> PairAudit:
 def main() -> int:
     from database import engine
 
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--word", help="also show DB and card API text for this Chinese word")
+    args = parser.parse_args()
     result = audit_database(engine)
     for level, count in result.counts.items():
         print(f"HSK{level}: DB {count['words']} words, {count['examples']} examples, "
@@ -81,6 +87,20 @@ def main() -> int:
         print("By field:", ", ".join(f"{field} {count}" for field, count in fields.items()))
     for mismatch in result.mismatches[:20]:
         print("  ", mismatch)
+    if args.word:
+        with engine.connect() as connection:
+            rows = connection.execute(text("""
+                SELECT id, hsk_level, chinese, pinyin, meaning,
+                       example_zh, example_ko, example_pinyin
+                FROM words WHERE chinese=:word ORDER BY hsk_level, id
+            """), {"word": args.word}).mappings().all()
+        for row in rows:
+            card, stale = word_content(SimpleNamespace(**row))
+            print(f"{row['id']} HSK{row['hsk_level']} {row['chinese']} (DB drift: {stale})")
+            print(f"  DB: {row['example_zh']} / {row['example_pinyin']}")
+            print(f"  Card API: {card['example_zh']} / {card['example_pinyin']}")
+        if not rows:
+            print(f"No word found: {args.word}")
     return 1 if result.mismatches else 0
 
 

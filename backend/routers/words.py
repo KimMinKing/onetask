@@ -14,6 +14,7 @@ from models import User, Word, WordCard
 from auth_utils import get_current_user, get_master_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from word_images import verified_image
+from chinese_word_view import word_content
 
 router = APIRouter(prefix="/words", tags=["words"])
 scheduler = Scheduler()
@@ -61,7 +62,8 @@ def _sync_card_to_db(wc: WordCard, c: Card, lapses_delta: int = 0):
 
 def _word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
     now = datetime.now(timezone.utc)
-    image_path, image_version = verified_image(word)
+    content, stale = word_content(word)
+    image_path, image_version = (None, None) if stale else verified_image(word)
     due = wc.due if wc else now
     if due.tzinfo is None:
         due = due.replace(tzinfo=timezone.utc)
@@ -69,10 +71,7 @@ def _word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
         "id": word.id,
         "chinese": word.chinese,
         "pinyin": word.pinyin,
-        "meaning": word.meaning,
-        "example_zh": word.example_zh,
-        "example_ko": word.example_ko,
-        "example_pinyin": word.example_pinyin,
+        **content,
         "audio_path": word.audio_path,
         "image_path": image_path,
         "image_version": image_version,

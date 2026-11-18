@@ -35,6 +35,11 @@ After rebuilding the backend image, run
 root to compare **all 601** production HSK 4 rows with the catalog. Also run
 `docker compose exec -T backend python chinese_pair_db_audit.py` to compare
 all 2,200 HSK 3/4/5 rows and report example/pinyin coverage at other levels.
+Add `--word 脱` to the second command to print that word's raw DB sentence and
+the card API sentence side by side. The card API resolves HSK 3/4/5 content
+from the tracked catalogs when a row is stale, and hides an old image until
+the database content is reconciled. A catalog identity mismatch hides the
+untrusted example instead of attaching it to another word.
 These commands are read-only. They report missing/extra IDs, word-identity
 mismatches, and mismatched Chinese/Korean examples and example pinyin. Keep the
 audit output if identities differ. `git pull` alone does not replace the running
