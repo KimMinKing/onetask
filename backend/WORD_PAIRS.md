@@ -14,14 +14,16 @@ word occurs in its example. The `厉害` example is transcribed explicitly so
 `说得` is `shuō de`, `厉害` is `lì hai`, and `一样` is `yí yàng`.
 
 `python backend/audit_chinese_source_pairs.py` checks each tracked sentence
-against its pinyin after applying the HSK 4 catalog and ten HSK 3/5 corrections.
+against its pinyin after applying the HSK 4 catalog and reviewed HSK 3/5 corrections.
 Install `pypinyin` locally for this source audit. The HSK 3/5 catalog is built
 with `python backend/build_hsk35_pair_catalog.py` from the exact dump sentences.
 
 `python migrate.py` compares all 601 HSK 4 and 1,599 HSK 3/5 catalog rows on
 every backend startup. It repairs changed content even when the old migration
-marker is already present. Word IDs, word readings and review cards remain
-unchanged; all expected identities must match before a catalog is applied.
+marker is already present. Word IDs and review cards remain unchanged. Nine
+explicitly reviewed word-pinyin fields are also repaired (`刚刚`, `起来`,
+`任务`, `面积`, `侵略`, `扇子`, `省略`, `使劲儿`, `位置`). All other word identities must match before a catalog
+is applied.
 Both reconciliations are transactional and idempotent. If an operating database
 has a different import or partial word set, the migration skips the catalog;
 investigate its identities before changing IDs by hand.
@@ -60,3 +62,13 @@ target around a particle or complement: 3239 `鞠躬`, 2523 `出洋相`, 2575
 (zhǎng), while the taught reading is `cháng` (long). Review these sentences
 and pronunciations before adding missing pinyin. Run the backend tests and
 `audit_word_images.py` against the real database after deployment.
+
+The contextual pronunciation pass also checks structural particles (`地`,
+`得`, `着`), tone sandhi, neutral tones, and merged 儿 syllables. It corrected
+432 HSK 3/4/5 catalog rows in this pass: 422 example-pinyin-only rows, six
+word-pinyin-only rows, three rows with both, and one example plus its pinyin.
+Examples include `一滴一滴地` → `yī dī yī dī de`, `我得去` → `wǒ děi qù`,
+`象征着` → `xiàng zhēng zhe`, and `扇子` → `shàn zi`. The source audit checks
+all 2,200 HSK 3/4/5 pairs after applying these contextual rules and cross-checks
+reviewed vocabulary words appearing in other cards' examples. It cannot
+verify the live site or the 2,797 examples without a stored pinyin field.

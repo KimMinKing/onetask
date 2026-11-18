@@ -1,13 +1,15 @@
 """Build exact HSK3/5 word/example/pinyin pairs from the tracked SQL dump.
 
-The ten reviewed replacements supersede examples where the taught word was
-absent. Run from the repository root: python backend/build_hsk35_pair_catalog.py
+Reviewed replacements supersede examples where the taught word was absent or
+used with another reading. Run from the repository root:
+python backend/build_hsk35_pair_catalog.py
 """
 
 import json
 from pathlib import Path
 
-from word_pair_migration import HSK35_EXAMPLES
+from word_pair_migration import HSK35_EXAMPLES, HSK35_PINYIN_CORRECTIONS
+from chinese_pronunciation_overrides import WORD_PINYIN_CORRECTIONS, correct_pinyin, correct_target_reading
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,6 +40,20 @@ def build_catalog() -> list[dict]:
             raise ValueError(f"Identity changed: {word_id} {chinese}")
         row.update(example_zh=example_zh, example_ko=example_ko,
                    example_pinyin=example_pinyin)
+    for word_id, (example_zh, example_pinyin) in HSK35_PINYIN_CORRECTIONS.items():
+        row = pairs[word_id]
+        if row["example_zh"] != example_zh:
+            raise ValueError(f"Pinyin correction sentence changed: {word_id}")
+        row["example_pinyin"] = example_pinyin
+    for row in pairs.values():
+        lexical = WORD_PINYIN_CORRECTIONS.get(row["id"])
+        if lexical:
+            if row["chinese"] != lexical[0]:
+                raise ValueError(f"Word-pinyin correction identity changed: {row['id']}")
+            row["pinyin"] = lexical[1]
+        row["example_pinyin"] = correct_pinyin(row["id"], row["example_zh"], row["example_pinyin"])
+        row["example_pinyin"] = correct_target_reading(row["id"], row["example_zh"],
+                                                       row["example_pinyin"], row["chinese"], row["pinyin"])
     if any(row["chinese"] not in row["example_zh"] for row in pairs.values()):
         raise ValueError("An HSK3/5 example does not include the taught word")
     return [pairs[word_id] for word_id in sorted(pairs)]

@@ -1,10 +1,11 @@
-"""Reconcile tracked Chinese sentence pairs without changing word identities."""
+"""Reconcile tracked Chinese examples and reviewed lexical readings by word ID."""
 
 import json
 import logging
 from pathlib import Path
 
 from sqlalchemy import inspect, text
+from chinese_pronunciation_overrides import WORD_PINYIN_CORRECTIONS, WORD_SOURCE_PINYIN
 
 
 CATALOG = Path(__file__).resolve().parent / "data" / "hsk4_word_pairs.json"
@@ -14,8 +15,8 @@ HSK35_CATALOG = Path(__file__).resolve().parent / "data" / "hsk35_word_pairs.jso
 MARKER = "hsk4_word_pairs_v2"
 logger = logging.getLogger(__name__)
 
-# These ten legacy HSK3/5 examples used a synonym or sub-word instead of the
-# vocabulary item itself. Each replacement names the taught word explicitly.
+# Reviewed HSK3/5 replacement examples name the taught word explicitly and
+# use the same pronunciation as its vocabulary entry.
 HSK35_EXAMPLES = [
     (3, 22, "帮忙", "bāng máng", "你能帮忙搬一下桌子吗？", "책상 옮기는 것 좀 도와줄 수 있어?", "nǐ néng bāng máng bān yí xià zhuō zi ma？"),
     (3, 151, "口", "kǒu", "他一开口，大家就笑了。", "그가 입을 열자 모두 웃었어.", "tā yì kāi kǒu，dà jiā jiù xiào le。"),
@@ -27,7 +28,17 @@ HSK35_EXAMPLES = [
     (5, 1545, "录音", "lù yīn", "请给这段话录音。", "이 말을 녹음해 주세요.", "qǐng gěi zhè duàn huà lù yīn。"),
     (5, 1657, "汽油", "qì yóu", "这辆车需要汽油。", "이 차에는 휘발유가 필요해.", "zhè liàng chē xū yào qì yóu。"),
     (5, 1733, "删除", "shān chú", "请删除这条旧消息。", "이 오래된 메시지를 삭제해 주세요.", "qǐng shān chú zhè tiáo jiù xiāo xī。"),
+    (5, 1701, "嚷", "rǎng", "他生气了，对着电话大声嚷，把旁边的人都吓了一跳。", "그가 화가 나서 전화에 대고 소리를 질러서 옆에 있던 사람들을 모두 깜짝 놀라게 했어.", "tā shēng qì le ， duì zhe diàn huà dà shēng rǎng ， bǎ páng biān de rén dōu xià le yī tiào 。"),
 ]
+
+# Exact sentence and corrected transcription. These words were present in the
+# old examples, but their sentence pinyin taught a different reading.
+HSK35_PINYIN_CORRECTIONS = {
+    60: ("他慢慢地走进了教室。", "tā màn màn de zǒu jìn le jiào shì。"),
+    268: ("你先等一会儿，我马上好。", "nǐ xiān děng yí huìr，wǒ mǎ shàng hǎo。"),
+    972: ("孩子发高烧，把父母急得不得了。", "hái zi fā gāo shāo，bǎ fù mǔ jí de bù dé liǎo。"),
+    1222: ("他每天干活儿很卖力，老板非常欣赏他。", "tā měi tiān gàn huór hěn mài lì，lǎo bǎn fēi cháng xīn shǎng tā。"),
+}
 
 
 def apply_hsk4_word_pairs(engine) -> int:
@@ -43,18 +54,26 @@ def apply_hsk4_word_pairs(engine) -> int:
             "SELECT id, chinese, pinyin, hsk_level, meaning, example_zh, example_ko, example_pinyin "
             "FROM words WHERE hsk_level=4"
         )).mappings().all()
-        by_id = {row["id"]: row for row in rows}
+        by_id = {row["id"]: dict(row) for row in rows}
         # A partially imported database is not ready for this one-time migration.
         mismatched = [pair["id"] for pair in pairs if
             (row := by_id.get(pair["id"])) is None
             or row["chinese"] != pair["chinese"]
-            or row["pinyin"] != pair["pinyin"]
+            or row["pinyin"] not in (pair["pinyin"], WORD_SOURCE_PINYIN.get(pair["id"]))
         ]
         if mismatched:
             if rows:
                 logger.warning("HSK4 word-pair migration skipped: %s unmatched IDs (first: %s)",
                                len(mismatched), mismatched[:10])
             return 0
+        lexical_changes = [pair for pair in pairs if by_id[pair["id"]]["pinyin"] != pair["pinyin"]]
+        for pair in lexical_changes:
+            old_pinyin = by_id[pair["id"]]["pinyin"]
+            connection.execute(text("""
+                UPDATE words SET pinyin=:pinyin
+                WHERE id=:id AND hsk_level=4 AND chinese=:chinese AND pinyin=:old_pinyin
+            """), {**pair, "old_pinyin": old_pinyin})
+            by_id[pair["id"]]["pinyin"] = pair["pinyin"]
         changed = [pair for pair in pairs if any(
             by_id[pair["id"]][field] != pair[field]
             for field in ("meaning", "example_zh", "example_ko", "example_pinyin")
@@ -69,7 +88,7 @@ def apply_hsk4_word_pairs(engine) -> int:
             logger.warning("Reconciled %s HSK4 word/example/pinyin rows", len(changed))
         if not marker_present:
             connection.execute(text("INSERT INTO migration_markers (name) VALUES (:name)"), {"name": MARKER})
-    return len(changed)
+    return len({pair["id"] for pair in changed + lexical_changes})
 
 
 def apply_hsk35_examples(engine) -> int:
@@ -86,15 +105,24 @@ def apply_hsk35_examples(engine) -> int:
             "SELECT id, chinese, pinyin, hsk_level, example_zh, example_ko, example_pinyin "
             "FROM words WHERE hsk_level IN (3, 5)"
         )).mappings().all()
-        by_id = {row["id"]: row for row in rows}
+        by_id = {row["id"]: dict(row) for row in rows}
         mismatched = [pair["id"] for pair in pairs
                       if (row := by_id.get(pair["id"])) is None or
-                      any(row[key] != pair[key] for key in ("chinese", "pinyin", "hsk_level"))]
+                      row["chinese"] != pair["chinese"] or row["hsk_level"] != pair["hsk_level"] or
+                      row["pinyin"] not in (pair["pinyin"], WORD_SOURCE_PINYIN.get(pair["id"]))]
         if mismatched:
             if rows:
                 logger.warning("HSK3/5 example migration skipped: %s unmatched IDs (first: %s)",
                                len(mismatched), mismatched[:10])
             return 0
+        lexical_changes = [pair for pair in pairs if by_id[pair["id"]]["pinyin"] != pair["pinyin"]]
+        for pair in lexical_changes:
+            old_pinyin = by_id[pair["id"]]["pinyin"]
+            connection.execute(text("""
+                UPDATE words SET pinyin=:pinyin
+                WHERE id=:id AND hsk_level=:hsk_level AND chinese=:chinese AND pinyin=:old_pinyin
+            """), {**pair, "old_pinyin": old_pinyin})
+            by_id[pair["id"]]["pinyin"] = pair["pinyin"]
         sentence_changes = [pair for pair in pairs if
                             by_id[pair["id"]]["example_zh"] != pair["example_zh"]]
         pinyin_changes = [pair for pair in pairs if
@@ -122,7 +150,7 @@ def apply_hsk35_examples(engine) -> int:
                 WHERE id=:id AND hsk_level=:hsk_level AND chinese=:chinese AND pinyin=:pinyin
             """), translation_changes)
         changed_count = len({pair["id"] for pair in
-                             sentence_changes + pinyin_changes + translation_changes})
+                             sentence_changes + pinyin_changes + translation_changes + lexical_changes})
         if changed_count:
             logger.warning("Reconciled %s HSK3/5 example/pinyin rows", changed_count)
         if not marker_present:

@@ -2,6 +2,8 @@
 
 ## 2026-11-18
 ### 완료
+- HSK 3·4·5급 2,200개 예문을 다시 훑어 `地·得·着·了·都·儿`, 경성 및 다의자 발음을 문맥에 맞게 교정했다. 다른 카드의 단어가 예문에 나오는 경우도 교차 대조해 기존 목록 대비 432개 행을 바꿨다. `扇子` 등 단어 병음 9개와 `嚷` 예문도 바로잡았다. 단어 병음 변경은 백엔드 시작 시 기존 DB에 자동 반영한다.
+- 카드·검색·문장 퀴즈·예문 퀴즈·텔레그램 문제에서 교정 목록의 문장과 병음을 사용하게 했다. 원본 2,200쌍의 문장·병음 정렬 및 목표 단어 성조 검사는 오류 0건, 백엔드 테스트 52건 통과했다. 운영 서버 화면은 아직 직접 확인하지 못했다.
 - 단어 카드 API가 DB의 오래된 예문·병음을 그대로 내보내던 경로를 수정했다. HSK 3·4·5급 2,200개는 단어 ID·표제어·단어 병음을 확인한 뒤 교정 목록의 중국어 예문과 예문 병음을 한 쌍으로 반환한다. DB가 오래된 동안은 해당 이미지도 숨겨 다른 단어의 그림이 섞이지 않게 한다. `脱`의 오래된 DB 행과 2,200개 전체의 교정 응답을 검사했다.
 - 운영 DB 감사 명령에 `--word 脱`처럼 단어 하나의 DB 원본 값과 카드 API에 표시될 값을 나란히 출력하는 옵션을 추가했다.
 - 중국어 원본 4,997행을 급수별로 전수 순회해 예문과 예문 병음의 음절 순서를 대조했다. 교정 기준으로 HSK 3급 299쌍, 4급 601쌍, 5급 1,300쌍의 문장·병음 불일치는 0개다. `厉害`의 경성·변조와 `系领带`의 다음자 등 자동 변환기가 잘못 판정하는 예외는 별도로 확인했다.
@@ -10,11 +12,15 @@
 - 백엔드 관련 검사 19개와 원본 전수 감사가 통과했다.
 
 ### 변경된 파일
+- `backend/chinese_pronunciation_overrides.py`, `backend/build_hsk4_pair_catalog.py`, `backend/build_hsk35_pair_catalog.py`, `backend/data/hsk4_word_pairs.json`, `backend/data/hsk35_word_pairs.json` — 문맥별 병음 교정 규칙과 재생성된 목록.
+- `backend/word_pair_migration.py`, `backend/chinese_word_view.py`, `backend/routers/words.py`, `backend/routers/search.py`, `backend/routers/quizzes.py`, `backend/telegram_daily_quiz.py` — 기존 DB 자동 교정과 화면·문제에 표시되는 교정 내용.
+- `backend/audit_chinese_source_pairs.py`, `backend/tests/test_hsk4_word_pairs.py`, `backend/tests/test_chinese_word_view.py`, `backend/WORD_PAIRS.md` — 2,200쌍 검사, 회귀 확인, 적용 절차.
 - `backend/word_pair_migration.py`, `backend/data/hsk35_word_pairs.json`, `backend/build_hsk35_pair_catalog.py` — HSK 3·4·5급 기준 데이터와 재교정.
 - `backend/audit_chinese_source_pairs.py`, `backend/chinese_pair_db_audit.py`, `backend/tests/test_hsk4_word_pairs.py` — 원본·운영 DB 전수 감사와 회귀 검사.
 - `backend/WORD_PAIRS.md`, `CHANGELOG.md` — 검증 결과 및 서버 적용 절차.
 
 ### 다음 세션
+- 운영 서버에서 백엔드를 재빌드한 뒤 `python chinese_pair_db_audit.py`로 DB 2,200행을 확인하고 카드 화면을 직접 점검한다. HSK 1·2·6급의 예문 병음 2,797개는 원본에 없어 별도 생성·검수가 필요하다.
 - 서버에서 백엔드 이미지를 재빌드한 뒤 `chinese_pair_db_audit.py`와 `hsk4_pair_audit.py` 결과가 0건인지 확인하고, HSK 4급 카드의 예문·병음 표시를 직접 확인한다.
 - HSK 1·2·6급의 누락된 예문 병음 2,797개는 다음자·경성·변조를 검수한 뒤 추가한다. HSK 6급의 목표 표현이 문장에 그대로 나오지 않는 예문 11개도 함께 검토한다.
 

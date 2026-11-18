@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from models import EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard, Word, WordCard
 from english_beginner_words import REVIEWED_WORDS
+from chinese_word_view import canonical_pinyin, word_content
 
 
 KST = ZoneInfo("Asia/Seoul")
@@ -47,7 +48,8 @@ def _load_candidates(db: Session, user_id: int, start: datetime, end: datetime) 
         WordCard.user_id == user_id, WordCard.last_review >= start, WordCard.last_review < end
     ).all()
     for card, word in zh_rows:
-        candidates.append(Candidate("중국어", f"{word.chinese} ({word.pinyin})", word.meaning, word.example_zh, card.lapses))
+        content, _ = word_content(word)
+        candidates.append(Candidate("중국어", f"{word.chinese} ({canonical_pinyin(word)})", content["meaning"], content["example_zh"], card.lapses))
 
     en_rows = db.query(EnglishWordCard, EnglishWord).join(
         EnglishWord, EnglishWord.id == EnglishWordCard.word_id

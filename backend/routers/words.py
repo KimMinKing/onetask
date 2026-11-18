@@ -14,7 +14,7 @@ from models import User, Word, WordCard
 from auth_utils import get_current_user, get_master_user
 from review_policy import DEFAULT_NEW_LIMIT, DEFAULT_REVIEW_LIMIT, apply_minimum_spacing, build_review_session, sort_review_queue
 from word_images import verified_image
-from chinese_word_view import word_content
+from chinese_word_view import canonical_pinyin, word_content
 
 router = APIRouter(prefix="/words", tags=["words"])
 scheduler = Scheduler()
@@ -70,7 +70,7 @@ def _word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
     return {
         "id": word.id,
         "chinese": word.chinese,
-        "pinyin": word.pinyin,
+        "pinyin": canonical_pinyin(word),
         **content,
         "audio_path": word.audio_path,
         "image_path": image_path,

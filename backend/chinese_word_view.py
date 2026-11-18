@@ -8,6 +8,7 @@ import json
 from functools import lru_cache
 
 from word_pair_migration import CATALOG, HSK35_CATALOG, HSK35_EXAMPLES
+from chinese_pronunciation_overrides import WORD_SOURCE_PINYIN
 
 
 MANUAL_HSK35_IDS = {item[1] for item in HSK35_EXAMPLES}
@@ -33,7 +34,9 @@ def word_content(word) -> tuple[dict[str, str | None], bool]:
     pair = _catalogs().get((word.hsk_level, word.id))
     if pair is None:
         return current, False
-    if (word.chinese, word.pinyin) != (pair["chinese"], pair["pinyin"]):
+    if word.chinese != pair["chinese"] or word.pinyin not in (
+        pair["pinyin"], WORD_SOURCE_PINYIN.get(word.id)
+    ):
         # The ID now belongs to another word. Do not display its old example.
         hidden = {**current, "example_zh": None, "example_ko": None,
                   "example_pinyin": None}
@@ -50,3 +53,13 @@ def word_content(word) -> tuple[dict[str, str | None], bool]:
             else word.example_ko,
         }
     return resolved, resolved != current
+
+
+def canonical_pinyin(word) -> str:
+    """Display the reviewed word reading while a legacy DB row is being repaired."""
+    pair = _catalogs().get((word.hsk_level, word.id))
+    if pair and word.chinese == pair["chinese"] and word.pinyin in (
+        pair["pinyin"], WORD_SOURCE_PINYIN.get(word.id)
+    ):
+        return pair["pinyin"]
+    return word.pinyin

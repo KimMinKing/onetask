@@ -10,6 +10,7 @@ from database import get_db
 from models import Word, EnglishWord, JapaneseWord, WordCard, EnglishWordCard, JapaneseWordCard, QuizAttempt, User
 from auth_utils import get_current_user
 from english_beginner_words import REVIEWED_WORDS
+from chinese_word_view import word_content
 
 router = APIRouter(prefix="/quizzes", tags=["quizzes"])
 
@@ -51,7 +52,7 @@ def _get_sentence_completion_quiz(db: Session, word_lang: str) -> Optional[QuizR
 
         word = random.choice(words_with_examples)
         # 단어를 찾아 빈칸으로 대체
-        example = word.example_zh or ""
+        example = word_content(word)[0]["example_zh"] or ""
         if word.chinese not in example:
             return None
 
@@ -152,13 +153,16 @@ def _get_example_quiz(db: Session, word_lang: str) -> Optional[QuizResponse]:
 
         word = random.choice(words_with_examples)
         # 올바른 예문과 오답 예문 준비
-        correct_example = word.example_zh or ""
+        correct_example = word_content(word)[0]["example_zh"] or ""
+        if not correct_example or word.chinese not in correct_example:
+            return None
         other_words = [w for w in words_with_examples if w.id != word.id]
 
         wrong_examples = []
         for ow in random.sample(other_words, min(3, len(other_words))):
-            if ow.example_zh:
-                wrong_examples.append(ow.example_zh)
+            other_example = word_content(ow)[0]["example_zh"]
+            if other_example:
+                wrong_examples.append(other_example)
 
         if len(wrong_examples) < 3:
             return None

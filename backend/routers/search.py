@@ -7,22 +7,22 @@ from database import get_db
 from models import User, Word, WordCard, EnglishWord, EnglishWordCard, JapaneseWord, JapaneseWordCard
 from auth_utils import get_current_user
 from english_beginner_words import REVIEWED_WORDS
+from chinese_word_view import canonical_pinyin, word_content
 
 router = APIRouter(prefix="/search", tags=["search"])
 
 
 def _zh_word_with_card(word: Word, wc: Optional[WordCard]) -> dict:
     now = datetime.now(timezone.utc)
+    content, _ = word_content(word)
     due = wc.due if wc else now
     if due.tzinfo is None:
         due = due.replace(tzinfo=timezone.utc)
     return {
         "id": word.id,
         "chinese": word.chinese,
-        "pinyin": word.pinyin,
-        "meaning": word.meaning,
-        "example_zh": word.example_zh,
-        "example_ko": word.example_ko,
+        "pinyin": canonical_pinyin(word),
+        **content,
         "hsk_level": word.hsk_level,
         "lang": "zh",
         "state": wc.state if wc else 0,

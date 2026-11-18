@@ -15,7 +15,7 @@
     "pinyin": "a",
     "example_zh": "这个地方真漂亮啊！",
     "example_ko": "이곳 정말 예쁘다!",
-    "example_pinyin": "zhè ge dì fāng zhēn piào liàng a ！"
+    "example_pinyin": "zhè ge dì fang zhēn piào liàng a ！"
   },
   {
     "id": 13,
@@ -159,7 +159,7 @@
     "pinyin": "bǐ jiào",
     "example_zh": "这家餐厅比较便宜，味道也好。",
     "example_ko": "이 식당은 비교적 저렴하고 맛도 좋아.",
-    "example_pinyin": "zhè jiā cān tīng bǐ jiào pián yi ， wèi dào yě hǎo 。"
+    "example_pinyin": "zhè jiā cān tīng bǐ jiào pián yi ， wèi dao yě hǎo 。"
   },
   {
     "id": 29,
@@ -213,7 +213,7 @@
     "pinyin": "bié ren",
     "example_zh": "别人的事情不要太管。",
     "example_ko": "남의 일에 너무 신경 쓰지 마.",
-    "example_pinyin": "bié rén de shì qíng bú yào tài guǎn 。"
+    "example_pinyin": "bié ren de shì qíng bú yào tài guǎn 。"
   },
   {
     "id": 35,
@@ -285,7 +285,7 @@
     "pinyin": "chà",
     "example_zh": "这道题我做得不太好，差了几分。",
     "example_ko": "이 문제 잘 못 풀었어, 몇 점 모자랐어.",
-    "example_pinyin": "zhè dào tí wǒ zuò dé bù tài hǎo ， chà le jǐ fēn 。"
+    "example_pinyin": "zhè dào tí wǒ zuò de bù tài hǎo ， chà le jǐ fēn 。"
   },
   {
     "id": 43,
@@ -384,7 +384,7 @@
     "pinyin": "cōng ming",
     "example_zh": "她很聪明，一学就会。",
     "example_ko": "그녀는 너무 똑똑해서, 한 번 배우면 바로 알아.",
-    "example_pinyin": "tā hěn cōng míng ， yī xué jiù huì 。"
+    "example_pinyin": "tā hěn cōng ming ， yī xué jiù huì 。"
   },
   {
     "id": 54,
@@ -393,7 +393,7 @@
     "pinyin": "dǎ sǎo",
     "example_zh": "周末我们一起来打扫一下屋子吧。",
     "example_ko": "주말에 같이 방 청소하자.",
-    "example_pinyin": "zhōu mò wǒ men yì qǐ lái dǎ sǎo yī xià wū zi ba 。"
+    "example_pinyin": "zhōu mò wǒ men yì qǐ lai dǎ sǎo yī xià wū zi ba 。"
   },
   {
     "id": 55,
@@ -420,7 +420,7 @@
     "pinyin": "dān xīn",
     "example_zh": "别担心，一切都会好的。",
     "example_ko": "걱정하지 마, 다 잘 될 거야.",
-    "example_pinyin": "bié dān xīn ， yī qiè dū huì hǎo de 。"
+    "example_pinyin": "bié dān xīn ， yī qiè dōu huì hǎo de 。"
   },
   {
     "id": 58,
@@ -447,7 +447,7 @@
     "pinyin": "de",
     "example_zh": "他慢慢地走进了教室。",
     "example_ko": "그는 천천히 교실로 걸어 들어왔어.",
-    "example_pinyin": "tā màn màn dì zǒu jìn le jiào shì 。"
+    "example_pinyin": "tā màn màn de zǒu jìn le jiào shì。"
   },
   {
     "id": 61,
@@ -465,7 +465,7 @@
     "pinyin": "dī",
     "example_zh": "这张桌子太低了，用起来不方便。",
     "example_ko": "이 책상 너무 낮아서 쓰기 불편해.",
-    "example_pinyin": "zhè zhāng zhuō zi tài dī le ， yòng qǐ lái bù fāng biàn 。"
+    "example_pinyin": "zhè zhāng zhuō zi tài dī le ， yòng qǐ lai bù fāng biàn 。"
   },
   {
     "id": 63,
@@ -474,7 +474,7 @@
     "pinyin": "dì fang",
     "example_zh": "你知道附近有没有好吃的地方？",
     "example_ko": "근처에 맛있는 곳 알아?",
-    "example_pinyin": "nǐ zhī dào fù jìn yǒu méi yǒu hǎo chī de dì fāng ？"
+    "example_pinyin": "nǐ zhī dào fù jìn yǒu méi yǒu hǎo chī de dì fang ？"
   },
   {
     "id": 64,
@@ -510,7 +510,7 @@
     "pinyin": "diàn zǐ",
     "example_zh": "现在很多人喜欢用电子书。",
     "example_ko": "요즘 많은 사람들이 전자책 쓰는 걸 좋아해.",
-    "example_pinyin": "xiàn zài hěn duō rén xǐ huān yòng diàn zi shū 。"
+    "example_pinyin": "xiàn zài hěn duō rén xǐ huān yòng diàn zǐ shū 。"
   },
   {
     "id": 68,
@@ -528,7 +528,7 @@
     "pinyin": "dōng",
     "example_zh": "太阳从东边升起来了。",
     "example_ko": "해가 동쪽에서 떠올랐어.",
-    "example_pinyin": "tài yáng cóng dōng biān shēng qǐ lái le 。"
+    "example_pinyin": "tài yáng cóng dōng biān shēng qǐ lai le 。"
   },
   {
     "id": 70,
@@ -582,7 +582,7 @@
     "pinyin": "è",
     "example_zh": "我肚子好饿，先去吃点东西吧。",
     "example_ko": "너무 배고파, 먼저 뭐 좀 먹자.",
-    "example_pinyin": "wǒ dǔ zi hǎo è ， xiān qù chī diǎn dōng xī ba 。"
+    "example_pinyin": "wǒ dù zi hǎo è ， xiān qù chī diǎn dōng xī ba 。"
   },
   {
     "id": 76,
@@ -591,7 +591,7 @@
     "pinyin": "ér qiě",
     "example_zh": "他不仅聪明，而且很努力。",
     "example_ko": "그는 똑똑할 뿐만 아니라 노력도 엄청 해.",
-    "example_pinyin": "tā bù jǐn cōng míng ， ér qiě hěn nǔ lì 。"
+    "example_pinyin": "tā bù jǐn cōng ming ， ér qiě hěn nǔ lì 。"
   },
   {
     "id": 77,
@@ -600,7 +600,7 @@
     "pinyin": "ěr duo",
     "example_zh": "她的耳朵很灵，什么都能听见。",
     "example_ko": "그녀는 귀가 밝아서 뭐든 다 들려.",
-    "example_pinyin": "tā de ěr duǒ hěn líng ， shén me dōu néng tīng jiàn 。"
+    "example_pinyin": "tā de ěr duo hěn líng ， shén me dōu néng tīng jiàn 。"
   },
   {
     "id": 78,
@@ -627,7 +627,7 @@
     "pinyin": "fāng biàn",
     "example_zh": "这里交通很方便，到哪儿都容易。",
     "example_ko": "여기 교통이 편해서 어디든 가기 쉬워.",
-    "example_pinyin": "zhè lǐ jiāo tōng hěn fāng biàn ， dào nǎ ér dōu róng yì 。"
+    "example_pinyin": "zhè lǐ jiāo tōng hěn fāng biàn ， dào nǎr dōu róng yì 。"
   },
   {
     "id": 81,
@@ -681,7 +681,7 @@
     "pinyin": "gān jìng",
     "example_zh": "桌子擦得干干净净的。",
     "example_ko": "책상을 깨끗하게 닦았어.",
-    "example_pinyin": "zhuō zi cā dé gān gān jìng jìng de 。"
+    "example_pinyin": "zhuō zi cā de gān gān jìng jìng de 。"
   },
   {
     "id": 87,
@@ -690,7 +690,7 @@
     "pinyin": "gǎn",
     "example_zh": "他敢一个人去那么远的地方旅行。",
     "example_ko": "그는 혼자서 그렇게 먼 곳으로 여행 갈 배짱이 있어.",
-    "example_pinyin": "tā gǎn yí gè rén qù nà me yuǎn de dì fāng lǚ xíng 。"
+    "example_pinyin": "tā gǎn yí gè rén qù nà me yuǎn de dì fang lǚ xíng 。"
   },
   {
     "id": 88,
@@ -753,7 +753,7 @@
     "pinyin": "gù shi",
     "example_zh": "奶奶每晚都给我讲故事。",
     "example_ko": "할머니는 매일 밤 내게 이야기를 들려줘.",
-    "example_pinyin": "nǎi nǎi měi wǎn dōu gěi wǒ jiǎng gù shì 。"
+    "example_pinyin": "nǎi nai měi wǎn dōu gěi wǒ jiǎng gù shi 。"
   },
   {
     "id": 95,
@@ -762,7 +762,7 @@
     "pinyin": "guā",
     "example_zh": "今天风刮得很大，出门要小心。",
     "example_ko": "오늘 바람이 많이 부니까 나갈 때 조심해.",
-    "example_pinyin": "jīn tiān fēng guā dé hěn dà ， chū mén yào xiǎo xīn 。"
+    "example_pinyin": "jīn tiān fēng guā de hěn dà ， chū mén yào xiǎo xīn 。"
   },
   {
     "id": 96,
@@ -825,7 +825,7 @@
     "pinyin": "guò qu",
     "example_zh": "过去的事就别再想了。",
     "example_ko": "지난 일은 더 이상 생각하지 마.",
-    "example_pinyin": "guò qù de shì jiù bié zài xiǎng le 。"
+    "example_pinyin": "guò qu de shì jiù bié zài xiǎng le 。"
   },
   {
     "id": 103,
@@ -834,7 +834,7 @@
     "pinyin": "hái shi",
     "example_zh": "你是喝茶还是喝咖啡？",
     "example_ko": "차 마실 거야, 커피 마실 거야?",
-    "example_pinyin": "nǐ shì hē chá hái shì hē kā fēi ？"
+    "example_pinyin": "nǐ shì hē chá hái shi hē kā fēi ？"
   },
   {
     "id": 104,
@@ -852,7 +852,7 @@
     "pinyin": "hé",
     "example_zh": "这条河很宽，游泳过去要很长时间。",
     "example_ko": "이 강 폭이 넓어서 헤엄쳐서 건너가려면 꽤 걸려.",
-    "example_pinyin": "zhè tiáo hé hěn kuān ， yóu yǒng guò qù yào hěn zhǎng shí jiān 。"
+    "example_pinyin": "zhè tiáo hé hěn kuān ， yóu yǒng guò qu yào hěn zhǎng shí jiān 。"
   },
   {
     "id": 106,
@@ -879,7 +879,7 @@
     "pinyin": "huā",
     "example_zh": "春天公园里的花开得很漂亮。",
     "example_ko": "봄에 공원에 꽃이 정말 예쁘게 펴.",
-    "example_pinyin": "chūn tiān gōng yuán lǐ de huā kāi dé hěn piào liàng 。"
+    "example_pinyin": "chūn tiān gōng yuán lǐ de huā kāi de hěn piào liàng 。"
   },
   {
     "id": 109,
@@ -1014,7 +1014,7 @@
     "pinyin": "jiǎn dān",
     "example_zh": "这道题很简单，你一定做得出来。",
     "example_ko": "이 문제는 정말 쉬워, 너 분명 풀 수 있어.",
-    "example_pinyin": "zhè dào tí hěn jiǎn dān ， nǐ yí dìng zuò dé chū lái 。"
+    "example_pinyin": "zhè dào tí hěn jiǎn dān ， nǐ yí dìng zuò de chū lái 。"
   },
   {
     "id": 124,
@@ -1041,7 +1041,7 @@
     "pinyin": "jiǎng",
     "example_zh": "老师讲得很清楚，大家都听懂了。",
     "example_ko": "선생님이 아주 명확하게 설명해서 다들 이해했어.",
-    "example_pinyin": "lǎo shī jiǎng dé hěn qīng chǔ ， dà jiā dōu tīng dǒng le 。"
+    "example_pinyin": "lǎo shī jiǎng de hěn qīng chu ， dà jiā dōu tīng dǒng le 。"
   },
   {
     "id": 127,
@@ -1050,7 +1050,7 @@
     "pinyin": "jiāo",
     "example_zh": "她在小学教语文。",
     "example_ko": "그녀는 초등학교에서 국어를 가르쳐.",
-    "example_pinyin": "tā zài xiǎo xué jiào yǔ wén 。"
+    "example_pinyin": "tā zài xiǎo xué jiāo yǔ wén 。"
   },
   {
     "id": 128,
@@ -1113,7 +1113,7 @@
     "pinyin": "jié hūn",
     "example_zh": "他们去年结婚了，现在生活得很幸福。",
     "example_ko": "그들은 작년에 결혼해서 지금 행복하게 살고 있어.",
-    "example_pinyin": "tā men qù nián jié hūn le ， xiàn zài shēng huó dé hěn xìng fú 。"
+    "example_pinyin": "tā men qù nián jié hūn le ， xiàn zài shēng huó de hěn xìng fú 。"
   },
   {
     "id": 135,
@@ -1221,7 +1221,7 @@
     "pinyin": "kě",
     "example_zh": "喝了这么多水还是渴。",
     "example_ko": "물을 이렇게 많이 마셨는데도 아직 목이 말라.",
-    "example_pinyin": "hē le zhè me duō shuǐ hái shì kě 。"
+    "example_pinyin": "hē le zhè me duō shuǐ hái shi kě 。"
   },
   {
     "id": 147,
@@ -1248,7 +1248,7 @@
     "pinyin": "kè rén",
     "example_zh": "今天来了很多客人，家里很热闹。",
     "example_ko": "오늘 손님이 많이 와서 집이 북적거려.",
-    "example_pinyin": "jīn tiān lái le hěn duō kè rén ， jiā lǐ hěn rè nào 。"
+    "example_pinyin": "jīn tiān lái le hěn duō kè rén ， jiā lǐ hěn rè nao 。"
   },
   {
     "id": 150,
@@ -1257,7 +1257,7 @@
     "pinyin": "kōng tiáo",
     "example_zh": "夏天开空调睡觉睡得更好。",
     "example_ko": "여름에 에어컨 켜고 자면 더 잘 자.",
-    "example_pinyin": "xià tiān kāi kōng tiáo shuì jiào shuì dé gèng hǎo 。"
+    "example_pinyin": "xià tiān kāi kōng tiáo shuì jiào shuì de gèng hǎo 。"
   },
   {
     "id": 151,
@@ -1275,7 +1275,7 @@
     "pinyin": "kū",
     "example_zh": "看到这个消息，她忍不住哭了起来。",
     "example_ko": "그 소식을 듣고 그녀는 참지 못하고 울었어.",
-    "example_pinyin": "kàn dào zhè ge xiāo xī ， tā rěn bú zhù kū le qǐ lái 。"
+    "example_pinyin": "kàn dào zhè ge xiāo xi ， tā rěn bu zhù kū le qǐ lai 。"
   },
   {
     "id": 153,
@@ -1284,7 +1284,7 @@
     "pinyin": "kù zi",
     "example_zh": "这条裤子很舒服，我很喜欢。",
     "example_ko": "이 바지 편해서 정말 좋아.",
-    "example_pinyin": "zhè tiáo kù zi hěn shū fú ， wǒ hěn xǐ huān 。"
+    "example_pinyin": "zhè tiáo kù zi hěn shū fu ， wǒ hěn xǐ huān 。"
   },
   {
     "id": 154,
@@ -1311,7 +1311,7 @@
     "pinyin": "lǎo",
     "example_zh": "这位老爷爷每天早上都在公园打太极拳。",
     "example_ko": "이 할아버지는 매일 아침 공원에서 태극권을 해.",
-    "example_pinyin": "zhè wèi lǎo yé yé měi tiān zǎo shàng dōu zài gōng yuán dǎ tài jí quán 。"
+    "example_pinyin": "zhè wèi lǎo yé ye měi tiān zǎo shàng dōu zài gōng yuán dǎ tài jí quán 。"
   },
   {
     "id": 157,
@@ -1455,7 +1455,7 @@
     "pinyin": "miàn bāo",
     "example_zh": "早上起来，我喜欢吃面包配牛奶。",
     "example_ko": "아침에 일어나면 빵이랑 우유 먹는 걸 좋아해.",
-    "example_pinyin": "zǎo shàng qǐ lái ， wǒ xǐ huān chī miàn bāo pèi niú nǎi 。"
+    "example_pinyin": "zǎo shàng qǐ lai ， wǒ xǐ huān chī miàn bāo pèi niú nǎi 。"
   },
   {
     "id": 173,
@@ -1473,7 +1473,7 @@
     "pinyin": "míng bai",
     "example_zh": "你明白我的意思吗？",
     "example_ko": "내 말 무슨 뜻인지 알겠어?",
-    "example_pinyin": "nǐ míng bái wǒ de yì si ma ？"
+    "example_pinyin": "nǐ míng bai wǒ de yì si ma ？"
   },
   {
     "id": 175,
@@ -1491,7 +1491,7 @@
     "pinyin": "nǎi nai",
     "example_zh": "我奶奶今年七十五岁了。",
     "example_ko": "우리 할머니 올해 75살이야.",
-    "example_pinyin": "wǒ nǎi nǎi jīn nián qī shí wǔ suì le 。"
+    "example_pinyin": "wǒ nǎi nai jīn nián qī shí wǔ suì le 。"
   },
   {
     "id": 177,
@@ -1518,7 +1518,7 @@
     "pinyin": "nán guò",
     "example_zh": "听到这个消息，他非常难过。",
     "example_ko": "이 소식을 듣고 그는 너무 슬펐어.",
-    "example_pinyin": "tīng dào zhè ge xiāo xī ， tā fēi cháng nán guò 。"
+    "example_pinyin": "tīng dào zhè ge xiāo xi ， tā fēi cháng nán guò 。"
   },
   {
     "id": 180,
@@ -1536,7 +1536,7 @@
     "pinyin": "nián qīng",
     "example_zh": "她看起来很年轻，根本不像四十岁。",
     "example_ko": "그녀는 너무 젊어 보여서 40살 같지가 않아.",
-    "example_pinyin": "tā kàn qǐ lái hěn nián qīng ， gēn běn bù xiàng sì shí suì 。"
+    "example_pinyin": "tā kàn qǐ lai hěn nián qīng ， gēn běn bù xiàng sì shí suì 。"
   },
   {
     "id": 182,
@@ -1581,7 +1581,7 @@
     "pinyin": "pàng",
     "example_zh": "最近吃得多动得少，有点胖了。",
     "example_ko": "요즘 많이 먹고 덜 움직이니까 좀 살쪘어.",
-    "example_pinyin": "zuì jìn chī dé duō dòng dé shǎo ， yǒu diǎn pàng le 。"
+    "example_pinyin": "zuì jìn chī de duō dòng de shǎo ， yǒu diǎn pàng le 。"
   },
   {
     "id": 187,
@@ -1599,7 +1599,7 @@
     "pinyin": "pú tao",
     "example_zh": "这里的葡萄很甜，你尝一颗。",
     "example_ko": "여기 포도 엄청 달아, 한 알 먹어봐.",
-    "example_pinyin": "zhè lǐ de pú táo hěn tián ， nǐ cháng yī kē 。"
+    "example_pinyin": "zhè lǐ de pú tao hěn tián ， nǐ cháng yī kē 。"
   },
   {
     "id": 189,
@@ -1608,7 +1608,7 @@
     "pinyin": "pǔ tōng huà",
     "example_zh": "他的普通话说得非常标准。",
     "example_ko": "그의 표준어 발음은 정말 정확해.",
-    "example_pinyin": "tā de pǔ tōng huà shuō dé fēi cháng biāo zhǔn 。"
+    "example_pinyin": "tā de pǔ tōng huà shuō de fēi cháng biāo zhǔn 。"
   },
   {
     "id": 190,
@@ -1662,7 +1662,7 @@
     "pinyin": "qīng chu",
     "example_zh": "你说得很清楚，我都听懂了。",
     "example_ko": "네가 명확하게 말해줘서 다 이해했어.",
-    "example_pinyin": "nǐ shuō dé hěn qīng chǔ ， wǒ dōu tīng dǒng le 。"
+    "example_pinyin": "nǐ shuō de hěn qīng chu ， wǒ dōu tīng dǒng le 。"
   },
   {
     "id": 196,
@@ -1698,7 +1698,7 @@
     "pinyin": "rè qíng",
     "example_zh": "他们对客人非常热情，招待得很好。",
     "example_ko": "그들은 손님에게 너무 친절하게 잘 대접해.",
-    "example_pinyin": "tā men duì kè rén fēi cháng rè qíng ， zhāo dài dé hěn hǎo 。"
+    "example_pinyin": "tā men duì kè rén fēi cháng rè qíng ， zhāo dài de hěn hǎo 。"
   },
   {
     "id": 200,
@@ -1725,7 +1725,7 @@
     "pinyin": "róng yì",
     "example_zh": "这道菜做起来很容易，你也可以学。",
     "example_ko": "이 요리 만들기 쉬워, 너도 배울 수 있어.",
-    "example_pinyin": "zhè dào cài zuò qǐ lái hěn róng yì ， nǐ yě kě yǐ xué 。"
+    "example_pinyin": "zhè dào cài zuò qǐ lai hěn róng yì ， nǐ yě kě yǐ xué 。"
   },
   {
     "id": 203,
@@ -1761,7 +1761,7 @@
     "pinyin": "shēng qì",
     "example_zh": "不要为小事生气，不值得。",
     "example_ko": "작은 일에 화내지 마, 그럴 가치 없어.",
-    "example_pinyin": "bú yào wèi xiǎo shì shēng qì ， bù zhí dé 。"
+    "example_pinyin": "bú yào wèi xiǎo shì shēng qì ， bù zhí de 。"
   },
   {
     "id": 207,
@@ -1806,7 +1806,7 @@
     "pinyin": "shū fu",
     "example_zh": "这张床睡起来很舒服。",
     "example_ko": "이 침대 자는 게 정말 편해.",
-    "example_pinyin": "zhè zhāng chuáng shuì qǐ lái hěn shū fú 。"
+    "example_pinyin": "zhè zhāng chuáng shuì qǐ lai hěn shū fu 。"
   },
   {
     "id": 212,
@@ -1815,7 +1815,7 @@
     "pinyin": "shū shu",
     "example_zh": "这是我叔叔，他是一名医生。",
     "example_ko": "이분이 우리 삼촌이야, 의사야.",
-    "example_pinyin": "zhè shì wǒ shū shū ， tā shì yī míng yī shēng 。"
+    "example_pinyin": "zhè shì wǒ shū shu ， tā shì yī míng yī shēng 。"
   },
   {
     "id": 213,
@@ -1941,7 +1941,7 @@
     "pinyin": "tián",
     "example_zh": "这个蛋糕吃起来好甜！",
     "example_ko": "이 케이크 엄청 달다!",
-    "example_pinyin": "zhè ge dàn gāo chī qǐ lái hǎo tián ！"
+    "example_pinyin": "zhè ge dàn gāo chī qǐ lai hǎo tián ！"
   },
   {
     "id": 227,
@@ -1968,7 +1968,7 @@
     "pinyin": "tóng yì",
     "example_zh": "我同意你的看法，你说得对。",
     "example_ko": "네 생각에 동의해, 맞는 말이야.",
-    "example_pinyin": "wǒ tóng yì nǐ de kàn fǎ ， nǐ shuō dé duì 。"
+    "example_pinyin": "wǒ tóng yì nǐ de kàn fǎ ， nǐ shuō de duì 。"
   },
   {
     "id": 230,
@@ -1977,7 +1977,7 @@
     "pinyin": "tóu fa",
     "example_zh": "她的头发又长又黑，很漂亮。",
     "example_ko": "그녀의 머리카락은 길고 검어서 예뻐.",
-    "example_pinyin": "tā de tóu fà yòu zhǎng yòu hēi ， hěn piào liàng 。"
+    "example_pinyin": "tā de tóu fa yòu zhǎng yòu hēi ， hěn piào liàng 。"
   },
   {
     "id": 231,
@@ -2148,7 +2148,7 @@
     "pinyin": "xiāng tóng",
     "example_zh": "这两件衣服的颜色相同，款式不同。",
     "example_ko": "이 두 옷은 색깔은 같은데 스타일이 달라.",
-    "example_pinyin": "zhè liǎng jiàn yī fú de yán sè xiàng tóng ， kuǎn shì bù tóng 。"
+    "example_pinyin": "zhè liǎng jiàn yī fú de yán sè xiāng tóng ， kuǎn shì bù tóng 。"
   },
   {
     "id": 250,
@@ -2166,7 +2166,7 @@
     "pinyin": "xiàng",
     "example_zh": "你看，他长得像他爸爸。",
     "example_ko": "봐봐, 그는 아빠를 닮았어.",
-    "example_pinyin": "nǐ kàn ， tā zhǎng dé xiàng tā bà bà 。"
+    "example_pinyin": "nǐ kàn ， tā zhǎng de xiàng tā bà bà 。"
   },
   {
     "id": 252,
@@ -2229,7 +2229,7 @@
     "pinyin": "xíng li xiāng",
     "example_zh": "出差的时候要带行李箱。",
     "example_ko": "출장 갈 때는 캐리어 챙겨야 해.",
-    "example_pinyin": "chū chāi de shí hòu yào dài xíng lǐ xiāng 。"
+    "example_pinyin": "chū chāi de shí hòu yào dài xíng li xiāng 。"
   },
   {
     "id": 259,
@@ -2292,7 +2292,7 @@
     "pinyin": "yé ye",
     "example_zh": "我爷爷每天早上去公园打太极拳。",
     "example_ko": "우리 할아버지는 매일 아침 공원에서 태극권을 해.",
-    "example_pinyin": "wǒ yé yé měi tiān zǎo shàng qù gōng yuán dǎ tài jí quán 。"
+    "example_pinyin": "wǒ yé ye měi tiān zǎo shàng qù gōng yuán dǎ tài jí quán 。"
   },
   {
     "id": 266,
@@ -2319,7 +2319,7 @@
     "pinyin": "yī huì r",
     "example_zh": "你先等一会儿，我马上好。",
     "example_ko": "잠깐 기다려, 금방 돼.",
-    "example_pinyin": "nǐ xiān děng yī huì er ， wǒ mǎ shàng hǎo 。"
+    "example_pinyin": "nǐ xiān děng yí huìr，wǒ mǎ shàng hǎo。"
   },
   {
     "id": 269,
@@ -2364,7 +2364,7 @@
     "pinyin": "yī bān",
     "example_zh": "这家餐厅的服务一般，味道还可以。",
     "example_ko": "이 식당 서비스는 그저 그런데, 맛은 괜찮아.",
-    "example_pinyin": "zhè jiā cān tīng de fú wù yì bān ， wèi dào hái kě yǐ 。"
+    "example_pinyin": "zhè jiā cān tīng de fú wù yì bān ， wèi dao hái kě yǐ 。"
   },
   {
     "id": 274,
@@ -2391,7 +2391,7 @@
     "pinyin": "yīn yuè",
     "example_zh": "她喜欢在睡前听一会儿音乐。",
     "example_ko": "그녀는 자기 전에 잠깐 음악 듣는 걸 좋아해.",
-    "example_pinyin": "tā xǐ huān zài shuì qián tīng yī huì er yīn yuè 。"
+    "example_pinyin": "tā xǐ huān zài shuì qián tīng yí huìr yīn yuè 。"
   },
   {
     "id": 277,
@@ -2490,7 +2490,7 @@
     "pinyin": "yuè liang",
     "example_zh": "晚上出门，可以看到月亮。",
     "example_ko": "저녁에 나가면 달을 볼 수 있어.",
-    "example_pinyin": "wǎn shàng chū mén ， kě yǐ kàn dào yuè liàng 。"
+    "example_pinyin": "wǎn shàng chū mén ， kě yǐ kàn dào yuè liang 。"
   },
   {
     "id": 288,
@@ -2526,7 +2526,7 @@
     "pinyin": "zhào gu",
     "example_zh": "妈妈照顾生病的孩子，整晚没睡。",
     "example_ko": "엄마는 아픈 아이를 돌보느라 밤새 못 잤어.",
-    "example_pinyin": "mā mā zhào gù shēng bìng de hái zi ， zhěng wǎn méi shuì 。"
+    "example_pinyin": "mā mā zhào gu shēng bìng de hái zi ， zhěng wǎn méi shuì 。"
   },
   {
     "id": 292,
@@ -2535,7 +2535,7 @@
     "pinyin": "zhào piàn",
     "example_zh": "这张照片是我在海边拍的。",
     "example_ko": "이 사진은 내가 바다에서 찍은 거야.",
-    "example_pinyin": "zhè zhāng zhào piān shì wǒ zài hǎi biān pāi de 。"
+    "example_pinyin": "zhè zhāng zhào piàn shì wǒ zài hǎi biān pāi de 。"
   },
   {
     "id": 293,
@@ -2553,7 +2553,7 @@
     "pinyin": "zhī",
     "example_zh": "树上停着两只鸟。",
     "example_ko": "나무 위에 새 두 마리가 앉아 있어.",
-    "example_pinyin": "shù shàng tíng zhe liǎng zhǐ niǎo 。"
+    "example_pinyin": "shù shàng tíng zhe liǎng zhī niǎo 。"
   },
   {
     "id": 295,
@@ -2697,7 +2697,7 @@
     "pinyin": "āi",
     "example_zh": "唉，这件事真的太麻烦了，不知道怎么处理。",
     "example_ko": "아이고, 이 일은 정말 너무 귀찮아서 어떻게 처리해야 할지 모르겠어.",
-    "example_pinyin": "āi ， zhè jiàn shì zhēn de tài má fán le ， bù zhī dào zěn me chǔ lǐ 。"
+    "example_pinyin": "āi ， zhè jiàn shì zhēn de tài má fan le ， bù zhī dào zěn me chǔ lǐ 。"
   },
   {
     "id": 912,
@@ -2742,7 +2742,7 @@
     "pinyin": "ān zhuāng",
     "example_zh": "新买的空调今天安装，师傅说两个小时就好。",
     "example_ko": "새로 산 에어컨을 오늘 설치하는데 기사님이 두 시간이면 된다고 했어.",
-    "example_pinyin": "xīn mǎi de kōng tiáo jīn tiān ān zhuāng ， shī fù shuō liǎng gè xiǎo shí jiù hǎo 。"
+    "example_pinyin": "xīn mǎi de kōng tiáo jīn tiān ān zhuāng ， shī fu shuō liǎng gè xiǎo shí jiù hǎo 。"
   },
   {
     "id": 917,
@@ -2760,7 +2760,7 @@
     "pinyin": "bǎ wò",
     "example_zh": "他对这次考试很有把握，因为准备得很充分。",
     "example_ko": "그는 이번 시험에 자신 있어, 준비를 충분히 했거든.",
-    "example_pinyin": "tā duì zhè cì kǎo shì hěn yǒu bǎ wò ， yīn wèi zhǔn bèi dé hěn chōng fèn 。"
+    "example_pinyin": "tā duì zhè cì kǎo shì hěn yǒu bǎ wò ， yīn wèi zhǔn bèi de hěn chōng fèn 。"
   },
   {
     "id": 919,
@@ -2769,7 +2769,7 @@
     "pinyin": "bǎi",
     "example_zh": "她把照片摆在桌子上，每天都能看到。",
     "example_ko": "그녀는 사진을 책상 위에 올려두어서 매일 볼 수 있어.",
-    "example_pinyin": "tā bǎ zhào piān bǎi zài zhuō zi shàng ， měi tiān dōu néng kàn dào 。"
+    "example_pinyin": "tā bǎ zhào piàn bǎi zài zhuō zi shàng ， měi tiān dōu néng kàn dào 。"
   },
   {
     "id": 920,
@@ -2823,7 +2823,7 @@
     "pinyin": "bāo hán",
     "example_zh": "这道题包含好几个知识点，需要仔细分析。",
     "example_ko": "이 문제는 여러 지식 포인트를 포함하고 있어서 꼼꼼히 분석해야 해.",
-    "example_pinyin": "zhè dào tí bāo hán hǎo jǐ gè zhī shí diǎn ， xū yào zǐ xì fēn xī 。"
+    "example_pinyin": "zhè dào tí bāo hán hǎo jǐ gè zhī shi diǎn ， xū yào zǐ xì fēn xī 。"
   },
   {
     "id": 926,
@@ -2877,7 +2877,7 @@
     "pinyin": "bǎo cún",
     "example_zh": "这些老照片要好好保存，以后可以留作纪念。",
     "example_ko": "이 오래된 사진들은 잘 보존해야 해, 나중에 기념으로 남길 수 있어.",
-    "example_pinyin": "zhè xiē lǎo zhào piān yào hǎo hǎo bǎo cún ， yǐ hòu kě yǐ liú zuò jì niàn 。"
+    "example_pinyin": "zhè xiē lǎo zhào piàn yào hǎo hǎo bǎo cún ， yǐ hòu kě yǐ liú zuò jì niàn 。"
   },
   {
     "id": 932,
@@ -2931,7 +2931,7 @@
     "pinyin": "bèi",
     "example_zh": "他把课文背得很熟，老师叫他当众朗读。",
     "example_ko": "그는 본문을 완벽히 외워서 선생님이 모두 앞에서 낭독하라고 했어.",
-    "example_pinyin": "tā bǎ kè wén bèi dé hěn shú ， lǎo shī jiào tā dāng zhòng lǎng dú 。"
+    "example_pinyin": "tā bǎ kè wén bèi de hěn shú ， lǎo shī jiào tā dāng zhòng lǎng dú 。"
   },
   {
     "id": 938,
@@ -3048,7 +3048,7 @@
     "pinyin": "biān pào",
     "example_zh": "春节放鞭炮是中国的传统习俗，热闹极了。",
     "example_ko": "춘절에 폭죽을 터뜨리는 건 중국의 전통 풍습이야, 정말 시끌벅적해.",
-    "example_pinyin": "chūn jié fàng biān pào shì zhōng guó de chuán tǒng xí sú ， rè nào jí le 。"
+    "example_pinyin": "chūn jié fàng biān pào shì zhōng guó de chuán tǒng xí sú ， rè nao jí le 。"
   },
   {
     "id": 951,
@@ -3066,7 +3066,7 @@
     "pinyin": "biàn",
     "example_zh": "你不舒服就便早点回家休息吧。",
     "example_ko": "불편하면 그냥 일찍 집에 가서 쉬어.",
-    "example_pinyin": "nǐ bù shū fú jiù biàn zǎo diǎn huí jiā xiū xī ba 。"
+    "example_pinyin": "nǐ bù shū fu jiù biàn zǎo diǎn huí jiā xiū xī ba 。"
   },
   {
     "id": 953,
@@ -3075,7 +3075,7 @@
     "pinyin": "biàn lùn",
     "example_zh": "两个人针对这个问题辩论了很久，各有道理。",
     "example_ko": "두 사람은 이 문제에 대해 오랫동안 토론했는데 각자 나름의 논리가 있었어.",
-    "example_pinyin": "liǎng gè rén zhēn duì zhè ge wèn tí biàn lùn le hěn jiǔ ， gè yǒu dào lǐ 。"
+    "example_pinyin": "liǎng gè rén zhēn duì zhè ge wèn tí biàn lùn le hěn jiǔ ， gè yǒu dào li 。"
   },
   {
     "id": 954,
@@ -3129,7 +3129,7 @@
     "pinyin": "biǎo xiàn",
     "example_zh": "他在比赛中表现得非常出色，赢得了大家的掌声。",
     "example_ko": "그는 경기에서 아주 훌륭하게 표현해서 모두의 박수를 받았어.",
-    "example_pinyin": "tā zài bǐ sài zhōng biǎo xiàn dé fēi cháng chū sè ， yíng dé le dà jiā de zhǎng shēng 。"
+    "example_pinyin": "tā zài bǐ sài zhōng biǎo xiàn de fēi cháng chū sè ， yíng dé le dà jiā de zhǎng shēng 。"
   },
   {
     "id": 960,
@@ -3147,7 +3147,7 @@
     "pinyin": "bìng dú",
     "example_zh": "手机上下载了病毒，导致所有数据都丢失了。",
     "example_ko": "스마트폰에 바이러스를 내려받아서 모든 데이터가 사라졌어.",
-    "example_pinyin": "shǒu jī shàng xià zài le bìng dú ， dǎo zhì suǒ yǒu shù jù dōu diū shī le 。"
+    "example_pinyin": "shǒu jī shàng xià zǎi le bìng dú ， dǎo zhì suǒ yǒu shù jù dōu diū shī le 。"
   },
   {
     "id": 962,
@@ -3156,7 +3156,7 @@
     "pinyin": "bō li",
     "example_zh": "小心，地上有碎玻璃，不要踩到。",
     "example_ko": "조심해, 바닥에 유리 조각이 있어, 밟지 마.",
-    "example_pinyin": "xiǎo xīn ， dì shàng yǒu suì bō lí ， bú yào cǎi dào 。"
+    "example_pinyin": "xiǎo xīn ， dì shàng yǒu suì bō li ， bú yào cǎi dào 。"
   },
   {
     "id": 963,
@@ -3192,7 +3192,7 @@
     "pinyin": "bù duàn",
     "example_zh": "她不断地练习，终于把这首曲子弹得很好了。",
     "example_ko": "그녀는 끊임없이 연습해서 결국 이 곡을 잘 연주하게 됐어.",
-    "example_pinyin": "tā bù duàn dì liàn xí ， zhōng yú bǎ zhè shǒu qǔ zi dàn dé hěn hǎo le 。"
+    "example_pinyin": "tā bù duàn de liàn xí ， zhōng yú bǎ zhè shǒu qǔ zi dàn de hěn hǎo le 。"
   },
   {
     "id": 967,
@@ -3246,7 +3246,7 @@
     "pinyin": "bù dé liǎo",
     "example_zh": "孩子发高烧，把父母急得不得了。",
     "example_ko": "아이가 고열이 나서 부모를 완전히 초조하게 만들었어.",
-    "example_pinyin": "hái zi fā gāo shāo ， bǎ fù mǔ jí dé bù dé le 。"
+    "example_pinyin": "hái zi fā gāo shāo，bǎ fù mǔ jí de bù dé liǎo。"
   },
   {
     "id": 973,
@@ -3255,7 +3255,7 @@
     "pinyin": "bù hǎo yì si",
     "example_zh": "迟到了，真的很不好意思，路上堵车了。",
     "example_ko": "늦었어, 정말 미안해, 길이 막혔어.",
-    "example_pinyin": "chí dào le ， zhēn de hěn bù hǎo yì sī ， lù shàng dǔ chē le 。"
+    "example_pinyin": "chí dào le ， zhēn de hěn bù hǎo yì si ， lù shàng dǔ chē le 。"
   },
   {
     "id": 974,
@@ -3282,7 +3282,7 @@
     "pinyin": "bù rú",
     "example_zh": "与其一个人发愁，不如和朋友聊聊，说不定有办法。",
     "example_ko": "혼자 걱정하느니 친구랑 얘기해봐, 혹시 방법이 있을 수도 있으니까.",
-    "example_pinyin": "yǔ qí yí gè rén fā chóu ， bù rú hé péng yǒu liáo liáo ， shuō bù dìng yǒu bàn fǎ 。"
+    "example_pinyin": "yǔ qí yí gè rén fā chóu ， bù rú hé péng yǒu liáo liáo ， shuō bu dìng yǒu bàn fǎ 。"
   },
   {
     "id": 977,
@@ -3336,7 +3336,7 @@
     "pinyin": "cǎi",
     "example_zh": "不小心踩到了别人的脚，赶紧道歉。",
     "example_ko": "실수로 다른 사람 발을 밟아서 얼른 사과했어.",
-    "example_pinyin": "bù xiǎo xīn cǎi dào le bié rén de jiǎo ， gǎn jǐn dào qiàn 。"
+    "example_pinyin": "bù xiǎo xīn cǎi dào le bié ren de jiǎo ， gǎn jǐn dào qiàn 。"
   },
   {
     "id": 983,
@@ -3480,7 +3480,7 @@
     "pinyin": "chā bié",
     "example_zh": "城市和农村之间的发展差别还是比较大的。",
     "example_ko": "도시와 농촌 사이의 발전 격차는 아직 꽤 커.",
-    "example_pinyin": "chéng shì hé nóng cūn zhī jiān de fā zhǎn chā bié hái shì bǐ jiào dà de 。"
+    "example_pinyin": "chéng shì hé nóng cūn zhī jiān de fā zhǎn chā bié hái shi bǐ jiào dà de 。"
   },
   {
     "id": 999,
@@ -3606,7 +3606,7 @@
     "pinyin": "chè dǐ",
     "example_zh": "他把问题彻底弄清楚了，才开始动手解决。",
     "example_ko": "그는 문제를 완전히 파악한 후에야 해결에 나섰어.",
-    "example_pinyin": "tā bǎ wèn tí chè dǐ nòng qīng chǔ le ， cái kāi shǐ dòng shǒu jiě jué 。"
+    "example_pinyin": "tā bǎ wèn tí chè dǐ nòng qīng chu le ， cái kāi shǐ dòng shǒu jiě jué 。"
   },
   {
     "id": 1013,
@@ -3615,7 +3615,7 @@
     "pinyin": "chén mò",
     "example_zh": "听到这个消息，大家都沉默了，不知道说什么好。",
     "example_ko": "이 소식을 들은 뒤 모두 침묵했어, 뭐라고 해야 할지 몰랐거든.",
-    "example_pinyin": "tīng dào zhè ge xiāo xī ， dà jiā dōu chén mò le ， bù zhī dào shuō shén me hǎo 。"
+    "example_pinyin": "tīng dào zhè ge xiāo xi ， dà jiā dōu chén mò le ， bù zhī dào shuō shén me hǎo 。"
   },
   {
     "id": 1014,
@@ -3624,7 +3624,7 @@
     "pinyin": "chèn",
     "example_zh": "趁现在有空，把这件事办了，免得以后麻烦。",
     "example_ko": "지금 시간 있을 때 이 일을 처리해둬, 나중에 번거로워지지 않게.",
-    "example_pinyin": "chèn xiàn zài yǒu kòng ， bǎ zhè jiàn shì bàn le ， miǎn de yǐ hòu má fán 。"
+    "example_pinyin": "chèn xiàn zài yǒu kòng ， bǎ zhè jiàn shì bàn le ， miǎn de yǐ hòu má fan 。"
   },
   {
     "id": 1015,
@@ -3633,7 +3633,7 @@
     "pinyin": "chēng",
     "example_zh": "这个地方大家都称它为\"小上海\"。",
     "example_ko": "이 지역은 모두가 \"작은 상하이\"라고 불러.",
-    "example_pinyin": "zhè ge dì fāng dà jiā dōu chēng tā wèi \" xiǎo shàng hǎi \"。"
+    "example_pinyin": "zhè ge dì fang dà jiā dōu chēng tā wèi \" xiǎo shàng hǎi \"。"
   },
   {
     "id": 1016,
@@ -3642,7 +3642,7 @@
     "pinyin": "chēng hu",
     "example_zh": "中国人见面时的称呼很讲究，要根据关系来定。",
     "example_ko": "중국 사람들이 만날 때 호칭이 까다로워, 관계에 따라 정해야 해.",
-    "example_pinyin": "zhōng guó rén jiàn miàn shí de chēng hū hěn jiǎng jiū ， yào gēn jù guān xì lái dìng 。"
+    "example_pinyin": "zhōng guó rén jiàn miàn shí de chēng hu hěn jiǎng jiu ， yào gēn jù guān xì lái dìng 。"
   },
   {
     "id": 1017,
@@ -3651,7 +3651,7 @@
     "pinyin": "chēng zàn",
     "example_zh": "老师称赞他的作文写得有创意，叫他去参加比赛。",
     "example_ko": "선생님이 그의 작문이 창의적이라고 칭찬하며 대회에 나가게 했어.",
-    "example_pinyin": "lǎo shī chēng zàn tā de zuò wén xiě dé yǒu chuàng yì ， jiào tā qù cān jiā bǐ sài 。"
+    "example_pinyin": "lǎo shī chēng zàn tā de zuò wén xiě de yǒu chuàng yì ， jiào tā qù cān jiā bǐ sài 。"
   },
   {
     "id": 1018,
@@ -3732,7 +3732,7 @@
     "pinyin": "chéng yǔ",
     "example_zh": "中国成语大多来自古代故事，意义深刻。",
     "example_ko": "중국 성어는 대부분 고대 이야기에서 나온 거야, 의미가 깊어.",
-    "example_pinyin": "zhōng guó chéng yǔ dà duō lái zì gǔ dài gù shì ， yì yì shēn kè 。"
+    "example_pinyin": "zhōng guó chéng yǔ dà duō lái zì gǔ dài gù shi ， yì yì shēn kè 。"
   },
   {
     "id": 1027,
@@ -3858,7 +3858,7 @@
     "pinyin": "chóng fù",
     "example_zh": "不要重复同样的错误，这次要汲取教训。",
     "example_ko": "똑같은 실수를 반복하지 마, 이번에는 교훈을 얻어야 해.",
-    "example_pinyin": "bú yào chóng fù tóng yàng de cuò wù ， zhè cì yào jí qǔ jiào xùn 。"
+    "example_pinyin": "bú yào chóng fù tóng yàng de cuò wù ， zhè cì yào jí qǔ jiào xun 。"
   },
   {
     "id": 1041,
@@ -3876,7 +3876,7 @@
     "pinyin": "chōu ti",
     "example_zh": "我把重要文件放在了书桌的抽屉里锁好了。",
     "example_ko": "중요한 서류를 책상 서랍에 넣어 잠궜어.",
-    "example_pinyin": "wǒ bǎ zhòng yào wén jiàn fàng zài le shū zhuō de chōu tì lǐ suǒ hǎo le 。"
+    "example_pinyin": "wǒ bǎ zhòng yào wén jiàn fàng zài le shū zhuō de chōu ti lǐ suǒ hǎo le 。"
   },
   {
     "id": 1043,
@@ -3894,7 +3894,7 @@
     "pinyin": "chǒu",
     "example_zh": "他觉得自己的字写得很丑，一直在练习书法。",
     "example_ko": "그는 자신의 글씨체가 못생겼다고 생각해서 계속 서예를 연습하고 있어.",
-    "example_pinyin": "tā jué de zì jǐ de zì xiě dé hěn chǒu ， yì zhí zài liàn xí shū fǎ 。"
+    "example_pinyin": "tā jué de zì jǐ de zì xiě de hěn chǒu ， yì zhí zài liàn xí shū fǎ 。"
   },
   {
     "id": 1045,
@@ -3948,7 +3948,7 @@
     "pinyin": "chū jí",
     "example_zh": "他刚开始学汉语，现在还是初级水平，但进步很快。",
     "example_ko": "그는 막 중국어를 배우기 시작해서 지금 초급 수준이지만 빠르게 발전하고 있어.",
-    "example_pinyin": "tā gāng kāi shǐ xué hàn yǔ ， xiàn zài hái shì chū jí shuǐ píng ， dàn jìn bù hěn kuài 。"
+    "example_pinyin": "tā gāng kāi shǐ xué hàn yǔ ， xiàn zài hái shi chū jí shuǐ píng ， dàn jìn bù hěn kuài 。"
   },
   {
     "id": 1051,
@@ -4038,7 +4038,7 @@
     "pinyin": "chuāng lián",
     "example_zh": "早上阳光太强，我把窗帘拉上，再睡一会儿。",
     "example_ko": "아침에 햇빛이 너무 강해서 커튼을 치고 좀 더 잤어.",
-    "example_pinyin": "zǎo shàng yáng guāng tài qiáng ， wǒ bǎ chuāng lián lā shàng ， zài shuì yī huì er 。"
+    "example_pinyin": "zǎo shàng yáng guāng tài qiáng ， wǒ bǎ chuāng lián lā shàng ， zài shuì yí huìr 。"
   },
   {
     "id": 1061,
@@ -4164,7 +4164,7 @@
     "pinyin": "cù",
     "example_zh": "这道凉拌黄瓜加了一点醋，味道更爽口了。",
     "example_ko": "이 오이무침에 식초를 조금 넣었더니 맛이 더 시원해졌어.",
-    "example_pinyin": "zhè dào liáng bàn huáng guā jiā le yì diǎn cù ， wèi dào gèng shuǎng kǒu le 。"
+    "example_pinyin": "zhè dào liáng bàn huáng guā jiā le yì diǎn cù ， wèi dao gèng shuǎng kǒu le 。"
   },
   {
     "id": 1075,
@@ -4200,7 +4200,7 @@
     "pinyin": "cún",
     "example_zh": "每个月我都会存一部分工资，留作紧急备用。",
     "example_ko": "매달 월급의 일부를 저금해두는데 긴급 상황을 대비해서야.",
-    "example_pinyin": "měi gè yuè wǒ dū huì cún yī bù fèn gōng zī ， liú zuò jǐn jí bèi yòng 。"
+    "example_pinyin": "měi gè yuè wǒ dōu huì cún yī bù fèn gōng zī ， liú zuò jǐn jí bèi yòng 。"
   },
   {
     "id": 1079,
@@ -4236,7 +4236,7 @@
     "pinyin": "dā ying",
     "example_zh": "她答应帮我翻译这封信，明天就能完成。",
     "example_ko": "그녀가 이 편지를 번역해주기로 했어, 내일이면 완성된대.",
-    "example_pinyin": "tā dā yìng bāng wǒ fān yì zhè fēng xìn ， míng tiān jiù néng wán chéng 。"
+    "example_pinyin": "tā dā ying bāng wǒ fān yì zhè fēng xìn ， míng tiān jiù néng wán chéng 。"
   },
   {
     "id": 1083,
@@ -4281,7 +4281,7 @@
     "pinyin": "dǎ ting",
     "example_zh": "我去附近打听了一下，附近有一家新开的餐厅。",
     "example_ko": "근처를 수소문해봤더니 근처에 새로 문 연 식당이 있더라고.",
-    "example_pinyin": "wǒ qù fù jìn dǎ tīng le yī xià ， fù jìn yǒu yī jiā xīn kāi de cān tīng 。"
+    "example_pinyin": "wǒ qù fù jìn dǎ ting le yī xià ， fù jìn yǒu yī jiā xīn kāi de cān tīng 。"
   },
   {
     "id": 1088,
@@ -4290,7 +4290,7 @@
     "pinyin": "dǎ zhāo hu",
     "example_zh": "路上碰到邻居，要主动打招呼，这是礼貌。",
     "example_ko": "길에서 이웃을 만나면 먼저 인사해야 해, 이게 예의야.",
-    "example_pinyin": "lù shàng pèng dào lín jū ， yào zhǔ dòng dǎ zhāo hū ， zhè shì lǐ mào 。"
+    "example_pinyin": "lù shàng pèng dào lín jū ， yào zhǔ dòng dǎ zhāo hu ， zhè shì lǐ mào 。"
   },
   {
     "id": 1089,
@@ -4299,7 +4299,7 @@
     "pinyin": "dà fang",
     "example_zh": "她为人大方，从不小气，朋友有困难都愿意帮。",
     "example_ko": "그녀는 소탈해서 인색하지 않고 친구가 어려움에 처하면 기꺼이 도와.",
-    "example_pinyin": "tā wéi rén dà fāng ， cóng bù xiǎo qì ， péng yǒu yǒu kùn nán dōu yuàn yì bāng 。"
+    "example_pinyin": "tā wéi rén dà fang ， cóng bù xiǎo qì ， péng yǒu yǒu kùn nan dōu yuàn yì bāng 。"
   },
   {
     "id": 1090,
@@ -4362,7 +4362,7 @@
     "pinyin": "dān chún",
     "example_zh": "她的想法很单纯，只是想帮助别人，没有其他目的。",
     "example_ko": "그녀의 생각은 정말 단순해서 그냥 다른 사람을 돕고 싶은 거야, 다른 목적 없어.",
-    "example_pinyin": "tā de xiǎng fǎ hěn dān chún ， zhǐ shì xiǎng bāng zhù bié rén ， méi yǒu qí tā mù dì 。"
+    "example_pinyin": "tā de xiǎng fǎ hěn dān chún ， zhǐ shì xiǎng bāng zhù bié ren ， méi yǒu qí tā mù dì 。"
   },
   {
     "id": 1097,
@@ -4407,7 +4407,7 @@
     "pinyin": "dān wu",
     "example_zh": "不好意思，耽误你时间了，事情比较复杂。",
     "example_ko": "미안해, 시간을 뺏었어, 일이 좀 복잡했어.",
-    "example_pinyin": "bù hǎo yì sī ， dān wù nǐ shí jiān le ， shì qíng bǐ jiào fù zá 。"
+    "example_pinyin": "bù hǎo yì si ， dān wu nǐ shí jiān le ， shì qíng bǐ jiào fù zá 。"
   },
   {
     "id": 1102,
@@ -4425,7 +4425,7 @@
     "pinyin": "dàn",
     "example_zh": "这个汤味道有点淡，能不能加点盐？",
     "example_ko": "이 국이 좀 싱거운데 소금 좀 더 넣을 수 있어?",
-    "example_pinyin": "zhè ge tāng wèi dào yǒu diǎn dàn ， néng bù néng jiā diǎn yán ？"
+    "example_pinyin": "zhè ge tāng wèi dao yǒu diǎn dàn ， néng bù néng jiā diǎn yán ？"
   },
   {
     "id": 1104,
@@ -4515,7 +4515,7 @@
     "pinyin": "dào li",
     "example_zh": "他说的道理很对，我完全赞同他的看法。",
     "example_ko": "그가 말한 이치가 맞아, 나는 그의 생각에 완전히 동의해.",
-    "example_pinyin": "tā shuō de dào lǐ hěn duì ， wǒ wán quán zàn tóng tā de kàn fǎ 。"
+    "example_pinyin": "tā shuō de dào li hěn duì ， wǒ wán quán zàn tóng tā de kàn fǎ 。"
   },
   {
     "id": 1114,
@@ -4569,7 +4569,7 @@
     "pinyin": "dī",
     "example_zh": "屋顶漏水了，一滴一滴地往下落，得赶紧修。",
     "example_ko": "지붕에서 물이 새서 한 방울씩 떨어지고 있어, 빨리 수리해야 해.",
-    "example_pinyin": "wū dǐng lòu shuǐ le ， yī dī yī dī dì wǎng xià luò ， dé gǎn jǐn xiū 。"
+    "example_pinyin": "wū dǐng lòu shuǐ le ， yī dī yī dī de wǎng xià luò ， děi gǎn jǐn xiū 。"
   },
   {
     "id": 1120,
@@ -4578,7 +4578,7 @@
     "pinyin": "dí què",
     "example_zh": "他的话的确有道理，我们应该重新考虑这个方案。",
     "example_ko": "그가 하는 말이 정말로 일리가 있어, 우리 이 방안을 다시 생각해봐야 해.",
-    "example_pinyin": "tā de huà dí què yǒu dào lǐ ， wǒ men yīng gāi chóng xīn kǎo lǜ zhè ge fāng àn 。"
+    "example_pinyin": "tā de huà dí què yǒu dào li ， wǒ men yīng gāi chóng xīn kǎo lǜ zhè ge fāng àn 。"
   },
   {
     "id": 1121,
@@ -4605,7 +4605,7 @@
     "pinyin": "dì dao",
     "example_zh": "这家餐厅的北京烤鸭味道很地道，很多老北京人都来吃。",
     "example_ko": "이 식당의 베이징 오리 요리는 정통 맛이라 베이징 토박이들도 많이 찾아와.",
-    "example_pinyin": "zhè jiā cān tīng de běi jīng kǎo yā wèi dào hěn dì dào ， hěn duō lǎo běi jīng rén dōu lái chī 。"
+    "example_pinyin": "zhè jiā cān tīng de běi jīng kǎo yā wèi dao hěn dì dao ， hěn duō lǎo běi jīng rén dōu lái chī 。"
   },
   {
     "id": 1124,
@@ -4668,7 +4668,7 @@
     "pinyin": "diǎn xin",
     "example_zh": "下午茶时间，同事们一起吃点心，聊聊天。",
     "example_ko": "오후 티 타임에 동료들이 함께 간식을 먹으며 수다를 떨어.",
-    "example_pinyin": "xià wǔ chá shí jiān ， tóng shì men yì qǐ chī diǎn xīn ， liáo liáo tiān 。"
+    "example_pinyin": "xià wǔ chá shí jiān ， tóng shì men yì qǐ chī diǎn xin ， liáo liáo tiān 。"
   },
   {
     "id": 1131,
@@ -4686,7 +4686,7 @@
     "pinyin": "diàn tái",
     "example_zh": "她在地方电台主持节目，声音很好听。",
     "example_ko": "그녀는 지방 라디오 방송국에서 프로그램을 진행하는데 목소리가 정말 좋아.",
-    "example_pinyin": "tā zài dì fāng diàn tái zhǔ chí jié mù ， shēng yīn hěn hǎo tīng 。"
+    "example_pinyin": "tā zài dì fang diàn tái zhǔ chí jié mù ， shēng yīn hěn hǎo tīng 。"
   },
   {
     "id": 1133,
@@ -4695,7 +4695,7 @@
     "pinyin": "diào",
     "example_zh": "周末他去河边钓鱼，放松心情，很舒服。",
     "example_ko": "주말에 그는 강가에 낚시하러 가서 마음을 풀어, 정말 편해.",
-    "example_pinyin": "zhōu mò tā qù hé biān diào yú ， fàng sōng xīn qíng ， hěn shū fú 。"
+    "example_pinyin": "zhōu mò tā qù hé biān diào yú ， fàng sōng xīn qíng ， hěn shū fu 。"
   },
   {
     "id": 1134,
@@ -4758,7 +4758,7 @@
     "pinyin": "dòu fu",
     "example_zh": "麻婆豆腐是很有名的川菜，又辣又香。",
     "example_ko": "마파두부는 매우 유명한 쓰촨 요리야, 맵고 향긋해.",
-    "example_pinyin": "má pó dòu fǔ shì hěn yǒu míng de chuān cài ， yòu là yòu xiāng 。"
+    "example_pinyin": "má pó dòu fu shì hěn yǒu míng de chuān cài ， yòu là yòu xiāng 。"
   },
   {
     "id": 1141,
@@ -4821,7 +4821,7 @@
     "pinyin": "duì dài",
     "example_zh": "对待工作要认真，不能马马虎虎，应付了事。",
     "example_ko": "일을 대할 때 진지해야 해, 대충대충 하면 안 돼.",
-    "example_pinyin": "duì dài gōng zuò yào rèn zhēn ， bù néng mǎ mǎ hǔ hǔ ， yìng fù liǎo shì 。"
+    "example_pinyin": "duì dài gōng zuò yào rèn zhēn ， bù néng mǎ mǎ hu hǔ ， yìng fu liǎo shì 。"
   },
   {
     "id": 1148,
@@ -4893,7 +4893,7 @@
     "pinyin": "duō yú",
     "example_zh": "这些材料是多余的，用不上，放在那里占地方。",
     "example_ko": "이 자료들은 여분이라 쓸 수 없어서 거기 놓여서 공간만 차지해.",
-    "example_pinyin": "zhè xiē cái liào shì duō yú de ， yòng bù shàng ， fàng zài nà lǐ zhàn dì fāng 。"
+    "example_pinyin": "zhè xiē cái liào shì duō yú de ， yòng bù shàng ， fàng zài nà lǐ zhàn dì fang 。"
   },
   {
     "id": 1156,
@@ -4947,7 +4947,7 @@
     "pinyin": "fā dǒu",
     "example_zh": "天气太冷了，他冷得直发抖，赶紧回屋里取暖。",
     "example_ko": "날씨가 너무 추워서 그가 추위에 계속 떨었어, 얼른 방에 들어가서 몸을 녹였어.",
-    "example_pinyin": "tiān qì tài lěng le ， tā lěng dé zhí fā dǒu ， gǎn jǐn huí wū lǐ qǔ nuǎn 。"
+    "example_pinyin": "tiān qì tài lěng le ， tā lěng de zhí fā dǒu ， gǎn jǐn huí wū lǐ qǔ nuǎn 。"
   },
   {
     "id": 1162,
@@ -4965,7 +4965,7 @@
     "pinyin": "fā míng",
     "example_zh": "爱迪生发明了电灯，改变了人类的生活方式。",
     "example_ko": "에디슨은 전구를 발명해서 인류의 생활 방식을 바꿨어.",
-    "example_pinyin": "ài dí shēng fà míng liǎo diàn dēng ， gǎi biàn le rén lèi de shēng huó fāng shì 。"
+    "example_pinyin": "ài dí shēng fā míng le diàn dēng ， gǎi biàn le rén lèi de shēng huó fāng shì 。"
   },
   {
     "id": 1164,
@@ -5046,7 +5046,7 @@
     "pinyin": "fǎn fù",
     "example_zh": "这道题他反复做了好几遍，终于弄清楚了。",
     "example_ko": "이 문제를 그가 반복해서 여러 번 풀었더니 결국 이해했어.",
-    "example_pinyin": "zhè dào tí tā fǎn fù zuò le hǎo jǐ biàn ， zhōng yú nòng qīng chǔ le 。"
+    "example_pinyin": "zhè dào tí tā fǎn fù zuò le hǎo jǐ biàn ， zhōng yú nòng qīng chu le 。"
   },
   {
     "id": 1173,
@@ -5109,7 +5109,7 @@
     "pinyin": "fáng dōng",
     "example_zh": "房东突然提高了房租，他不得不另找地方住。",
     "example_ko": "집주인이 갑자기 월세를 올려서 그는 어쩔 수 없이 다른 곳을 찾아야 했어.",
-    "example_pinyin": "fáng dōng tū rán tí gāo le fáng zū ， tā bù dé bù lìng zhǎo dì fāng zhù 。"
+    "example_pinyin": "fáng dōng tū rán tí gāo le fáng zū ， tā bù dé bù lìng zhǎo dì fang zhù 。"
   },
   {
     "id": 1180,
@@ -5136,7 +5136,7 @@
     "pinyin": "fēi",
     "example_zh": "这件事非你的错，是我没有说清楚。",
     "example_ko": "이 일은 네 잘못이 아니야, 내가 제대로 말하지 않은 거야.",
-    "example_pinyin": "zhè jiàn shì fēi nǐ de cuò ， shì wǒ méi yǒu shuō qīng chǔ 。"
+    "example_pinyin": "zhè jiàn shì fēi nǐ de cuò ， shì wǒ méi yǒu shuō qīng chu 。"
   },
   {
     "id": 1183,
@@ -5271,7 +5271,7 @@
     "pinyin": "fēng kuáng",
     "example_zh": "他疯狂地爱上了篮球，每天放学都去打球。",
     "example_ko": "그는 농구에 미쳐서 매일 방과 후 공을 치러 가.",
-    "example_pinyin": "tā fēng kuáng dì ài shàng le lán qiú ， měi tiān fàng xué dōu qù dǎ qiú 。"
+    "example_pinyin": "tā fēng kuáng de ài shàng le lán qiú ， měi tiān fàng xué dōu qù dǎ qiú 。"
   },
   {
     "id": 1198,
@@ -5316,7 +5316,7 @@
     "pinyin": "fú",
     "example_zh": "这幅画画得非常精美，挂在墙上显得很有品味。",
     "example_ko": "이 그림은 정말 정교하게 그려졌어, 벽에 걸면 품격 있어 보여.",
-    "example_pinyin": "zhè fú huà huà dé fēi cháng jīng měi ， guà zài qiáng shàng xiǎn de hěn yǒu pǐn wèi 。"
+    "example_pinyin": "zhè fú huà huà de fēi cháng jīng měi ， guà zài qiáng shàng xiǎn de hěn yǒu pǐn wèi 。"
   },
   {
     "id": 1203,
@@ -5379,7 +5379,7 @@
     "pinyin": "gǎi gé",
     "example_zh": "为了更好地发展，公司决定进行一次大胆的改革。",
     "example_ko": "더 나은 발전을 위해 회사는 대담한 개혁을 진행하기로 결정했어.",
-    "example_pinyin": "wèi le gèng hǎo dì fā zhǎn ， gōng sī jué dìng jìn xíng yī cì dà dǎn de gǎi gé 。"
+    "example_pinyin": "wèi le gèng hǎo de fā zhǎn ， gōng sī jué dìng jìn xíng yī cì dà dǎn de gǎi gé 。"
   },
   {
     "id": 1210,
@@ -5442,7 +5442,7 @@
     "pinyin": "gān cuì",
     "example_zh": "他干脆地拒绝了那个要求，态度很坚决。",
     "example_ko": "그는 솔직하게 그 요청을 거절했어, 태도가 매우 단호했어.",
-    "example_pinyin": "tā gān cuì dì jù jué le nà ge yāo qiú ， tài dù hěn jiān jué 。"
+    "example_pinyin": "tā gān cuì de jù jué le nà ge yāo qiú ， tài du hěn jiān jué 。"
   },
   {
     "id": 1217,
@@ -5487,7 +5487,7 @@
     "pinyin": "gǎn kuài",
     "example_zh": "领导说文件要今天交，赶快整理好发过去。",
     "example_ko": "리더가 서류를 오늘까지 제출하라고 했어, 빨리 정리해서 보내.",
-    "example_pinyin": "lǐng dǎo shuō wén jiàn yào jīn tiān jiāo ， gǎn kuài zhěng lǐ hǎo fā guò qù 。"
+    "example_pinyin": "lǐng dǎo shuō wén jiàn yào jīn tiān jiāo ， gǎn kuài zhěng lǐ hǎo fā guò qu 。"
   },
   {
     "id": 1222,
@@ -5496,7 +5496,7 @@
     "pinyin": "gàn huó r",
     "example_zh": "他每天干活儿很卖力，老板非常欣赏他。",
     "example_ko": "그는 매일 일을 열심히 해서 사장이 그를 매우 높이 평가해.",
-    "example_pinyin": "tā měi tiān gān huó er hěn mài lì ， lǎo bǎn fēi cháng xīn shǎng tā 。"
+    "example_pinyin": "tā měi tiān gàn huór hěn mài lì，lǎo bǎn fēi cháng xīn shǎng tā。"
   },
   {
     "id": 1223,
@@ -5532,7 +5532,7 @@
     "pinyin": "gǎo",
     "example_zh": "他搞不清楚这件事是怎么回事，很困惑。",
     "example_ko": "그는 이 일이 어떻게 된 건지 이해가 안 돼서 많이 혼란스러워.",
-    "example_pinyin": "tā gǎo bù qīng chǔ zhè jiàn shì shì zěn me huí shì ， hěn kùn huò 。"
+    "example_pinyin": "tā gǎo bù qīng chu zhè jiàn shì shì zěn me huí shì ， hěn kùn huò 。"
   },
   {
     "id": 1227,
@@ -5550,7 +5550,7 @@
     "pinyin": "gē bo",
     "example_zh": "搬重物的时候不小心，伤到了胳膊，去医院拍了X光。",
     "example_ko": "무거운 물건을 옮기다가 부주의해서 팔을 다쳐서 병원에 가서 X레이를 찍었어.",
-    "example_pinyin": "bān zhòng wù de shí hòu bù xiǎo xīn ， shāng dào le gē bó ， qù yī yuàn pāi le X guāng 。"
+    "example_pinyin": "bān zhòng wù de shí hòu bù xiǎo xīn ， shāng dào le gē bo ， qù yī yuàn pāi le X guāng 。"
   },
   {
     "id": 1229,
@@ -5631,7 +5631,7 @@
     "pinyin": "gēn",
     "example_zh": "这棵树的根扎得很深，风吹不倒。",
     "example_ko": "이 나무는 뿌리가 깊이 박혀 있어서 바람에 쓰러지지 않아.",
-    "example_pinyin": "zhè kē shù de gēn zhā dé hěn shēn ， fēng chuī bù dào 。"
+    "example_pinyin": "zhè kē shù de gēn zhā de hěn shēn ， fēng chuī bù dào 。"
   },
   {
     "id": 1238,
@@ -5703,7 +5703,7 @@
     "pinyin": "gōng zhǔ",
     "example_zh": "故事里的公主被巫婆施了魔法，沉睡了一百年。",
     "example_ko": "이야기 속 공주는 마녀에게 마법에 걸려 100년 동안 잠들었어.",
-    "example_pinyin": "gù shì lǐ de gōng zhǔ bèi wū pó shī le mó fǎ ， chén shuì le yì bǎi nián 。"
+    "example_pinyin": "gù shi lǐ de gōng zhǔ bèi wū pó shī le mó fǎ ， chén shuì le yì bǎi nián 。"
   },
   {
     "id": 1246,
@@ -5793,7 +5793,7 @@
     "pinyin": "gū gu",
     "example_zh": "我姑姑住在上海，每年春节我们都会去看她。",
     "example_ko": "우리 고모는 상하이에 살아서 매년 춘절에 우리는 그녀를 보러 가.",
-    "example_pinyin": "wǒ gū gū zhù zài shàng hǎi ， měi nián chūn jié wǒ men dū huì qù kàn tā 。"
+    "example_pinyin": "wǒ gū gu zhù zài shàng hǎi ， měi nián chūn jié wǒ men dōu huì qù kàn tā 。"
   },
   {
     "id": 1256,
@@ -5802,7 +5802,7 @@
     "pinyin": "gū niang",
     "example_zh": "这个姑娘唱歌唱得非常好，大家都被她的声音折服了。",
     "example_ko": "이 아가씨는 노래를 정말 잘해서 다들 그녀의 목소리에 반했어.",
-    "example_pinyin": "zhè ge gū niáng chàng gē chàng dé fēi cháng hǎo ， dà jiā dōu bèi tā de shēng yīn zhé fú le 。"
+    "example_pinyin": "zhè ge gū niang chàng gē chàng de fēi cháng hǎo ， dà jiā dōu bèi tā de shēng yīn zhé fú le 。"
   },
   {
     "id": 1257,
@@ -5901,7 +5901,7 @@
     "pinyin": "guāi",
     "example_zh": "她的孩子特别乖，从不惹麻烦，大人都很喜欢他。",
     "example_ko": "그녀의 아이는 특히 순해서 말썽을 피우지 않아서 어른들이 모두 좋아해.",
-    "example_pinyin": "tā de hái zi tè bié guāi ， cóng bù rě má fán ， dà rén dōu hěn xǐ huān tā 。"
+    "example_pinyin": "tā de hái zi tè bié guāi ， cóng bù rě má fan ， dà rén dōu hěn xǐ huān tā 。"
   },
   {
     "id": 1268,
@@ -5919,7 +5919,7 @@
     "pinyin": "guài bu de",
     "example_zh": "怪不得他今天不开心，原来是失恋了。",
     "example_ko": "어쩐지 그가 오늘 기분이 안 좋더라, 알고 보니 실연을 당했네.",
-    "example_pinyin": "guài bù dé tā jīn tiān bù kāi xīn ， yuán lái shì shī liàn le 。"
+    "example_pinyin": "guài bu de tā jīn tiān bù kāi xīn ， yuán lái shì shī liàn le 。"
   },
   {
     "id": 1270,
@@ -5937,7 +5937,7 @@
     "pinyin": "guān huái",
     "example_zh": "她非常关怀身边的人，总是默默帮助有困难的朋友。",
     "example_ko": "그녀는 주변 사람들을 정말 잘 보살피는데 항상 묵묵히 어려운 친구들을 도와.",
-    "example_pinyin": "tā fēi cháng guān huái shēn biān de rén ， zǒng shì mò mò bāng zhù yǒu kùn nán de péng yǒu 。"
+    "example_pinyin": "tā fēi cháng guān huái shēn biān de rén ， zǒng shì mò mò bāng zhù yǒu kùn nan de péng yǒu 。"
   },
   {
     "id": 1272,
@@ -6009,7 +6009,7 @@
     "pinyin": "guāng hua",
     "example_zh": "地板刚刚拖过，很光滑，走路要小心别滑倒。",
     "example_ko": "바닥을 방금 닦아서 매우 미끄러우니 걸을 때 미끄러지지 않도록 조심해.",
-    "example_pinyin": "dì bǎn gāng gāng tuō guò ， hěn guāng huá ， zǒu lù yào xiǎo xīn bié huá dào 。"
+    "example_pinyin": "dì bǎn gāng gāng tuō guò ， hěn guāng hua ， zǒu lù yào xiǎo xīn bié huá dào 。"
   },
   {
     "id": 1280,
@@ -6036,7 +6036,7 @@
     "pinyin": "guāng pán",
     "example_zh": "这张光盘里存有很多重要的照片和文件。",
     "example_ko": "이 CD에 중요한 사진과 서류가 많이 저장되어 있어.",
-    "example_pinyin": "zhè zhāng guāng pán lǐ cún yǒu hěn duō zhòng yào de zhào piān hé wén jiàn 。"
+    "example_pinyin": "zhè zhāng guāng pán lǐ cún yǒu hěn duō zhòng yào de zhào piàn hé wén jiàn 。"
   },
   {
     "id": 1283,
@@ -6072,7 +6072,7 @@
     "pinyin": "guǎng fàn",
     "example_zh": "他的知识面非常广泛，无论什么话题都能聊两句。",
     "example_ko": "그의 지식 범위는 매우 광범위해서 어떤 주제로도 한마디씩 할 수 있어.",
-    "example_pinyin": "tā de zhī shí miàn fēi cháng guǎng fàn ， wú lùn shén me huà tí dōu néng liáo liǎng jù 。"
+    "example_pinyin": "tā de zhī shi miàn fēi cháng guǎng fàn ， wú lùn shén me huà tí dōu néng liáo liǎng jù 。"
   },
   {
     "id": 1287,
@@ -6081,7 +6081,7 @@
     "pinyin": "guī ju",
     "example_zh": "在公共场所要守规矩，不能大声喧哗。",
     "example_ko": "공공장소에서는 규범을 지켜야 해, 큰 소리로 떠들면 안 돼.",
-    "example_pinyin": "zài gōng gòng chǎng suǒ yào shǒu guī jǔ ， bù néng dà shēng xuān huá 。"
+    "example_pinyin": "zài gōng gòng chǎng suǒ yào shǒu guī ju ， bù néng dà shēng xuān huá 。"
   },
   {
     "id": 1288,
@@ -6126,7 +6126,7 @@
     "pinyin": "gǔn",
     "example_zh": "皮球滚到了马路上，小朋友追过去把它捡起来。",
     "example_ko": "공이 도로로 굴러갔는데 아이가 뒤쫓아가서 주웠어.",
-    "example_pinyin": "pí qiú gǔn dào le mǎ lù shàng ， xiǎo péng yǒu zhuī guò qù bǎ tā jiǎn qǐ lái 。"
+    "example_pinyin": "pí qiú gǔn dào le mǎ lù shàng ， xiǎo péng yǒu zhuī guò qu bǎ tā jiǎn qǐ lai 。"
   },
   {
     "id": 1293,
@@ -6198,7 +6198,7 @@
     "pinyin": "hā",
     "example_zh": "他听到这个笑话，忍不住哈哈大笑起来。",
     "example_ko": "그는 이 농담을 듣고 참지 못하고 하하 크게 웃어버렸어.",
-    "example_pinyin": "tā tīng dào zhè ge xiào huà ， rěn bú zhù hā hā dà xiào qǐ lái 。"
+    "example_pinyin": "tā tīng dào zhè ge xiào huà ， rěn bu zhù hā hā dà xiào qǐ lai 。"
   },
   {
     "id": 1301,
@@ -6306,7 +6306,7 @@
     "pinyin": "hé tong",
     "example_zh": "签合同之前一定要仔细阅读每一条款。",
     "example_ko": "계약서에 서명하기 전에 반드시 모든 조항을 꼼꼼히 읽어야 해.",
-    "example_pinyin": "qiān hé tóng zhī qián yí dìng yào zǐ xì yuè dú měi yī tiáo kuǎn 。"
+    "example_pinyin": "qiān hé tong zhī qián yí dìng yào zǐ xì yuè dú měi yī tiáo kuǎn 。"
   },
   {
     "id": 1313,
@@ -6351,7 +6351,7 @@
     "pinyin": "héng",
     "example_zh": "这幅画挂得不对，是横的，应该是竖的。",
     "example_ko": "이 그림이 잘못 걸렸어, 가로로 됐는데 세로여야 해.",
-    "example_pinyin": "zhè fú huà guà dé bú duì ， shì héng de ， yīng gāi shì shù de 。"
+    "example_pinyin": "zhè fú huà guà de bú duì ， shì héng de ， yīng gāi shì shù de 。"
   },
   {
     "id": 1318,
@@ -6360,7 +6360,7 @@
     "pinyin": "hòu guǒ",
     "example_zh": "不考虑后果就行动，往往会带来很多麻烦。",
     "example_ko": "결과를 고려하지 않고 행동하면 많은 문제를 일으키기 쉬워.",
-    "example_pinyin": "bù kǎo lǜ hòu guǒ jiù xíng dòng ， wǎng wǎng huì dài lái hěn duō má fán 。"
+    "example_pinyin": "bù kǎo lǜ hòu guǒ jiù xíng dòng ， wǎng wǎng huì dài lái hěn duō má fan 。"
   },
   {
     "id": 1319,
@@ -6378,7 +6378,7 @@
     "pinyin": "hū xī",
     "example_zh": "在空气污染严重的地方，要减少户外活动，保护呼吸系统。",
     "example_ko": "공기오염이 심한 곳에서는 야외 활동을 줄이고 호흡기를 보호해야 해.",
-    "example_pinyin": "zài kōng qì wū rǎn yán zhòng de dì fāng ， yào jiǎn shǎo hù wài huó dòng ， bǎo hù hū xī xì tǒng 。"
+    "example_pinyin": "zài kōng qì wū rǎn yán zhòng de dì fang ， yào jiǎn shǎo hù wài huó dòng ， bǎo hù hū xī xì tǒng 。"
   },
   {
     "id": 1321,
@@ -6423,7 +6423,7 @@
     "pinyin": "hú xū",
     "example_zh": "他最近留起了胡须，看起来成熟了很多。",
     "example_ko": "그는 최근 수염을 기르기 시작해서 훨씬 성숙해 보여.",
-    "example_pinyin": "tā zuì jìn liú qǐ le hú xū ， kàn qǐ lái chéng shú le hěn duō 。"
+    "example_pinyin": "tā zuì jìn liú qǐ le hú xū ， kàn qǐ lai chéng shú le hěn duō 。"
   },
   {
     "id": 1326,
@@ -6432,7 +6432,7 @@
     "pinyin": "hú tu",
     "example_zh": "他被这么多选择弄得很糊涂，不知道该选哪个好。",
     "example_ko": "그는 이렇게 많은 선택지에 어리둥절해져서 어느 것을 골라야 할지 모르겠어.",
-    "example_pinyin": "tā bèi zhè me duō xuǎn zé nòng dé hěn hú tú ， bù zhī dào gāi xuǎn nǎ ge hǎo 。"
+    "example_pinyin": "tā bèi zhè me duō xuǎn zé nòng de hěn hú tu ， bù zhī dào gāi xuǎn nǎ ge hǎo 。"
   },
   {
     "id": 1327,
@@ -6459,7 +6459,7 @@
     "pinyin": "huá chuán",
     "example_zh": "夏天他喜欢去湖边划船，在水面上静静地漂流。",
     "example_ko": "여름에 그는 호숫가에 가서 보트를 타는 걸 좋아해, 수면 위에서 조용히 떠다녀.",
-    "example_pinyin": "xià tiān tā xǐ huān qù hú biān huá chuán ， zài shuǐ miàn shàng jìng jìng dì piāo liú 。"
+    "example_pinyin": "xià tiān tā xǐ huān qù hú biān huá chuán ， zài shuǐ miàn shàng jìng jìng de piāo liú 。"
   },
   {
     "id": 1330,
@@ -6558,7 +6558,7 @@
     "pinyin": "huáng hòu",
     "example_zh": "这部电视剧讲述了皇后与皇帝的宫廷故事，很受欢迎。",
     "example_ko": "이 TV 드라마는 황후와 황제의 궁중 이야기를 다루고 있어서 인기가 많아.",
-    "example_pinyin": "zhè bù diàn shì jù jiǎng shù le huáng hòu yǔ huáng dì de gōng tíng gù shì ， hěn shòu huān yíng 。"
+    "example_pinyin": "zhè bù diàn shì jù jiǎng shù le huáng hòu yǔ huáng dì de gōng tíng gù shi ， hěn shòu huān yíng 。"
   },
   {
     "id": 1341,
@@ -6621,7 +6621,7 @@
     "pinyin": "hūn lǐ",
     "example_zh": "他们的婚礼办得很隆重，请了很多亲朋好友。",
     "example_ko": "그들의 결혼식은 성대하게 열렸어, 친척과 친구들을 많이 초대했어.",
-    "example_pinyin": "tā men de hūn lǐ bàn dé hěn lóng zhòng ， qǐng le hěn duō qīn péng hǎo yǒu 。"
+    "example_pinyin": "tā men de hūn lǐ bàn de hěn lóng zhòng ， qǐng le hěn duō qīn péng hǎo yǒu 。"
   },
   {
     "id": 1348,
@@ -6657,7 +6657,7 @@
     "pinyin": "huǒ bàn",
     "example_zh": "他和伙伴们一起创业，经历了很多困难。",
     "example_ko": "그는 동료들과 함께 창업했는데 많은 어려움을 겪었어.",
-    "example_pinyin": "tā hé huǒ bàn men yì qǐ chuàng yè ， jīng lì le hěn duō kùn nán 。"
+    "example_pinyin": "tā hé huǒ bàn men yì qǐ chuàng yè ， jīng lì le hěn duō kùn nan 。"
   },
   {
     "id": 1352,
@@ -6666,7 +6666,7 @@
     "pinyin": "jī běn",
     "example_zh": "这些是基本知识，学好了才能进一步提高。",
     "example_ko": "이것들은 기본 지식이야, 잘 익혀야 한 단계 더 발전할 수 있어.",
-    "example_pinyin": "zhè xiē shì jī běn zhī shí ， xué hǎo le cái néng jìn yí bù tí gāo 。"
+    "example_pinyin": "zhè xiē shì jī běn zhī shi ， xué hǎo le cái néng jìn yí bù tí gāo 。"
   },
   {
     "id": 1353,
@@ -6873,7 +6873,7 @@
     "pinyin": "jiǎ zhuāng",
     "example_zh": "他假装没看到我，低头走过去了。",
     "example_ko": "그는 나를 못 본 척하며 고개를 숙이고 지나쳐 버렸어.",
-    "example_pinyin": "tā jiǎ zhuāng méi kàn dào wǒ ， dī tóu zǒu guò qù le 。"
+    "example_pinyin": "tā jiǎ zhuāng méi kàn dào wǒ ， dī tóu zǒu guò qu le 。"
   },
   {
     "id": 1376,
@@ -6909,7 +6909,7 @@
     "pinyin": "jiān",
     "example_zh": "她把鸡蛋煎得刚刚好，外焦里嫩，很香。",
     "example_ko": "그녀는 계란을 딱 알맞게 지져서 겉은 바삭하고 속은 부드러워, 정말 맛있어.",
-    "example_pinyin": "tā bǎ jī dàn jiān dé gāng gāng hǎo ， wài jiāo lǐ nèn ， hěn xiāng 。"
+    "example_pinyin": "tā bǎ jī dàn jiān de gāng gāng hǎo ， wài jiāo lǐ nèn ， hěn xiāng 。"
   },
   {
     "id": 1380,
@@ -6927,7 +6927,7 @@
     "pinyin": "jiān jué",
     "example_zh": "他坚决反对这个提案，态度非常明确。",
     "example_ko": "그는 이 제안에 단호하게 반대하며 태도가 매우 분명해.",
-    "example_pinyin": "tā jiān jué fǎn duì zhè ge tí àn ， tài dù fēi cháng míng què 。"
+    "example_pinyin": "tā jiān jué fǎn duì zhè ge tí àn ， tài du fēi cháng míng què 。"
   },
   {
     "id": 1382,
@@ -7062,7 +7062,7 @@
     "pinyin": "jiǎng jiu",
     "example_zh": "她做事很讲究，对每个细节都非常在意。",
     "example_ko": "그녀는 일 처리가 까다로워서 모든 세부 사항에 매우 신경 써.",
-    "example_pinyin": "tā zuò shì hěn jiǎng jiū ， duì měi gè xì jié dōu fēi cháng zài yì 。"
+    "example_pinyin": "tā zuò shì hěn jiǎng jiu ， duì měi gè xì jié dōu fēi cháng zài yì 。"
   },
   {
     "id": 1397,
@@ -7089,7 +7089,7 @@
     "pinyin": "jiàng yóu",
     "example_zh": "炒菜时加点酱油，颜色更好看，味道更鲜美。",
     "example_ko": "볶을 때 간장을 조금 넣으면 색이 더 예쁘고 맛이 더 감칠맛 있어.",
-    "example_pinyin": "chǎo cài shí jiā diǎn jiàng yóu ， yán sè gèng hǎo kàn ， wèi dào gèng xiān měi 。"
+    "example_pinyin": "chǎo cài shí jiā diǎn jiàng yóu ， yán sè gèng hǎo kàn ， wèi dao gèng xiān měi 。"
   },
   {
     "id": 1400,
@@ -7098,7 +7098,7 @@
     "pinyin": "jiāo",
     "example_zh": "她每天给阳台上的花浇水，花开得很茂盛。",
     "example_ko": "그녀는 매일 베란다 화분에 물을 줘서 꽃이 매우 잘 피어.",
-    "example_pinyin": "tā měi tiān gěi yáng tái shàng de huā jiāo shuǐ ， huā kāi dé hěn mào shèng 。"
+    "example_pinyin": "tā měi tiān gěi yáng tái shàng de huā jiāo shuǐ ， huā kāi de hěn mào shèng 。"
   },
   {
     "id": 1401,
@@ -7134,7 +7134,7 @@
     "pinyin": "jiāo shuǐ",
     "example_zh": "他用胶水把碎了的杯子粘起来，勉强还能用。",
     "example_ko": "그는 풀로 깨진 컵을 붙였는데 겨우 쓸 수는 있어.",
-    "example_pinyin": "tā yòng jiāo shuǐ bǎ suì le de bēi zi zhān qǐ lái ， miǎn qiǎng hái néng yòng 。"
+    "example_pinyin": "tā yòng jiāo shuǐ bǎ suì le de bēi zi zhān qǐ lai ， miǎn qiǎng hái néng yòng 。"
   },
   {
     "id": 1405,
@@ -7179,7 +7179,7 @@
     "pinyin": "jiào xun",
     "example_zh": "这次失败给了我们深刻的教训，以后一定要更加谨慎。",
     "example_ko": "이번 실패는 우리에게 깊은 교훈을 줬어, 앞으로 더욱 신중해야 해.",
-    "example_pinyin": "zhè cì shī bài gěi le wǒ men shēn kè de jiào xùn ， yǐ hòu yí dìng yào gèng jiā jǐn shèn 。"
+    "example_pinyin": "zhè cì shī bài gěi le wǒ men shēn kè de jiào xun ， yǐ hòu yí dìng yào gèng jiā jǐn shèn 。"
   },
   {
     "id": 1410,
@@ -7206,7 +7206,7 @@
     "pinyin": "jiē jìn",
     "example_zh": "随着考试日期接近，同学们都开始紧张起来了。",
     "example_ko": "시험일이 가까워지면서 학생들이 모두 긴장하기 시작했어.",
-    "example_pinyin": "suí zhe kǎo shì rì qī jiē jìn ， tóng xué men dōu kāi shǐ jǐn zhāng qǐ lái le 。"
+    "example_pinyin": "suí zhe kǎo shì rì qī jiē jìn ， tóng xué men dōu kāi shǐ jǐn zhāng qǐ lai le 。"
   },
   {
     "id": 1413,
@@ -7233,7 +7233,7 @@
     "pinyin": "jiē shi",
     "example_zh": "这张桌子做工很结实，用了十年还跟新的一样。",
     "example_ko": "이 탁자는 만듦새가 튼튼해서 10년을 써도 새것 같아.",
-    "example_pinyin": "zhè zhāng zhuō zi zuò gōng hěn jiē shí ， yòng le shí nián hái gēn xīn de yī yàng 。"
+    "example_pinyin": "zhè zhāng zhuō zi zuò gōng hěn jiē shi ， yòng le shí nián hái gēn xīn de yī yàng 。"
   },
   {
     "id": 1416,
@@ -7260,7 +7260,7 @@
     "pinyin": "jié gòu",
     "example_zh": "这篇文章的结构很清晰，层次分明，逻辑严密。",
     "example_ko": "이 글의 구조가 매우 명확하고 층차가 분명하며 논리가 엄밀해.",
-    "example_pinyin": "zhè piān wén zhāng de jié gòu hěn qīng xī ， céng cì fēn míng ， luó jí yán mì 。"
+    "example_pinyin": "zhè piān wén zhāng de jié gòu hěn qīng xī ， céng cì fēn míng ， luó ji yán mì 。"
   },
   {
     "id": 1419,
@@ -7341,7 +7341,7 @@
     "pinyin": "jiè zhi",
     "example_zh": "他在纪念日给她买了一枚钻石戒指，她非常感动。",
     "example_ko": "그는 기념일에 다이아몬드 반지를 사줬는데 그녀가 매우 감동받았어.",
-    "example_pinyin": "tā zài jì niàn rì gěi tā mǎi le yī méi zuàn shí jiè zhǐ ， tā fēi cháng gǎn dòng 。"
+    "example_pinyin": "tā zài jì niàn rì gěi tā mǎi le yī méi zuàn shí jiè zhi ， tā fēi cháng gǎn dòng 。"
   },
   {
     "id": 1428,
@@ -7431,7 +7431,7 @@
     "pinyin": "jīng lì",
     "example_zh": "他精力充沛，一天工作十几个小时都不觉得累。",
     "example_ko": "그는 에너지가 넘쳐서 하루에 십여 시간을 일해도 피곤함을 느끼지 않아.",
-    "example_pinyin": "tā jīng lì chōng pèi ， yī tiān gōng zuò shí jǐ gè xiǎo shí dōu bù jué dé lèi 。"
+    "example_pinyin": "tā jīng lì chōng pèi ， yī tiān gōng zuò shí jǐ gè xiǎo shí dōu bù jué de lèi 。"
   },
   {
     "id": 1438,
@@ -7449,7 +7449,7 @@
     "pinyin": "jīng yíng",
     "example_zh": "他经营着一家小餐厅，生意做得还不错。",
     "example_ko": "그는 작은 식당을 경영하고 있는데 장사가 꽤 잘 돼.",
-    "example_pinyin": "tā jīng yíng zhe yī jiā xiǎo cān tīng ， shēng yì zuò dé hái bú cuò 。"
+    "example_pinyin": "tā jīng yíng zhe yī jiā xiǎo cān tīng ， shēng yì zuò de hái bú cuò 。"
   },
   {
     "id": 1440,
@@ -7458,7 +7458,7 @@
     "pinyin": "jǐng sè",
     "example_zh": "山上的景色太美了，让人忍不住多待一会儿。",
     "example_ko": "산 위의 경치가 너무 아름다워서 저절로 좀 더 있고 싶어져.",
-    "example_pinyin": "shān shàng de jǐng sè tài měi le ， ràng rén rěn bú zhù duō dài yī huì er 。"
+    "example_pinyin": "shān shàng de jǐng sè tài měi le ， ràng rén rěn bu zhù duō dài yí huìr 。"
   },
   {
     "id": 1441,
@@ -7503,7 +7503,7 @@
     "pinyin": "jiù jiu",
     "example_zh": "我舅舅住在广州，每年暑假我都去他那里玩。",
     "example_ko": "우리 외삼촌은 광저우에 살아서 매년 여름방학에 나는 거기 가서 놀아.",
-    "example_pinyin": "wǒ jiù jiù zhù zài guǎng zhōu ， měi nián shǔ jià wǒ dōu qù tā nà lǐ wán 。"
+    "example_pinyin": "wǒ jiù jiu zhù zài guǎng zhōu ， měi nián shǔ jià wǒ dōu qù tā nà lǐ wán 。"
   },
   {
     "id": 1446,
@@ -7548,7 +7548,7 @@
     "pinyin": "jù tǐ",
     "example_zh": "请把你的想法说得更具体一些，不要太笼统。",
     "example_ko": "생각을 좀 더 구체적으로 말해줘, 너무 막연하게 하지 말고.",
-    "example_pinyin": "qǐng bǎ nǐ de xiǎng fǎ shuō dé gèng jù tǐ yī xiē ， bú yào tài lǒng tǒng 。"
+    "example_pinyin": "qǐng bǎ nǐ de xiǎng fǎ shuō de gèng jù tǐ yī xiē ， bú yào tài lǒng tǒng 。"
   },
   {
     "id": 1451,
@@ -7566,7 +7566,7 @@
     "pinyin": "jù huì",
     "example_zh": "他组织了一场同学聚会，大家聊了很多往日的故事。",
     "example_ko": "그는 동창 모임을 조직했는데 다들 과거 이야기를 많이 나눴어.",
-    "example_pinyin": "tā zǔ zhī le yī cháng tóng xué jù huì ， dà jiā liáo le hěn duō wǎng rì de gù shì 。"
+    "example_pinyin": "tā zǔ zhī le yī cháng tóng xué jù huì ， dà jiā liáo le hěn duō wǎng rì de gù shi 。"
   },
   {
     "id": 1453,
@@ -7593,7 +7593,7 @@
     "pinyin": "juān",
     "example_zh": "他每年都会捐出部分收入，帮助有困难的孩子上学。",
     "example_ko": "그는 매년 수입의 일부를 기부해서 어려운 아이들이 학교에 다닐 수 있게 도와.",
-    "example_pinyin": "tā měi nián dū huì juān chū bù fèn shōu rù ， bāng zhù yǒu kùn nán de hái zi shàng xué 。"
+    "example_pinyin": "tā měi nián dōu huì juān chū bù fèn shōu rù ， bāng zhù yǒu kùn nan de hái zi shàng xué 。"
   },
   {
     "id": 1456,
@@ -7656,7 +7656,7 @@
     "pinyin": "jūn yún",
     "example_zh": "要把颜料涂得均匀，这样颜色才会好看。",
     "example_ko": "물감을 균일하게 칠해야 해, 그래야 색이 예쁘게 나와.",
-    "example_pinyin": "yào bǎ yán liào tú dé jūn yún ， zhè yàng yán sè cái huì hǎo kàn 。"
+    "example_pinyin": "yào bǎ yán liào tú de jūn yún ， zhè yàng yán sè cái huì hǎo kàn 。"
   },
   {
     "id": 1463,
@@ -7701,7 +7701,7 @@
     "pinyin": "kāi xīn",
     "example_zh": "她今天特别开心，因为收到了很久没联系的老朋友的消息。",
     "example_ko": "그녀는 오늘 특히 기뻐, 오래 연락 못 한 옛 친구의 소식을 받아서야.",
-    "example_pinyin": "tā jīn tiān tè bié kāi xīn ， yīn wèi shōu dào le hěn jiǔ méi lián xì de lǎo péng yǒu de xiāo xī 。"
+    "example_pinyin": "tā jīn tiān tè bié kāi xīn ， yīn wèi shōu dào le hěn jiǔ méi lián xì de lǎo péng yǒu de xiāo xi 。"
   },
   {
     "id": 1468,
@@ -7719,7 +7719,7 @@
     "pinyin": "kàn bu qǐ",
     "example_zh": "不要看不起别人，每个人都有自己的长处。",
     "example_ko": "남을 얕보지 마, 모든 사람에게 자신의 장점이 있어.",
-    "example_pinyin": "bú yào kàn bù qǐ bié rén ， měi gè rén dōu yǒu zì jǐ de cháng chù 。"
+    "example_pinyin": "bú yào kàn bu qǐ bié ren ， měi gè rén dōu yǒu zì jǐ de cháng chù 。"
   },
   {
     "id": 1470,
@@ -7728,7 +7728,7 @@
     "pinyin": "kàn lai",
     "example_zh": "看来今天的会议要延期了，负责人还没到。",
     "example_ko": "보아하니 오늘 회의가 연기될 것 같아, 담당자가 아직 안 왔어.",
-    "example_pinyin": "kàn lái jīn tiān de huì yì yào yán qī le ， fù zé rén hái méi dào 。"
+    "example_pinyin": "kàn lai jīn tiān de huì yì yào yán qī le ， fù zé rén hái méi dào 。"
   },
   {
     "id": 1471,
@@ -7818,7 +7818,7 @@
     "pinyin": "kè fú",
     "example_zh": "他克服了重重困难，最终完成了这次艰难的旅程。",
     "example_ko": "그는 수많은 어려움을 극복하고 결국 이 힘든 여정을 마쳤어.",
-    "example_pinyin": "tā kè fú le chóng chóng kùn nán ， zuì zhōng wán chéng le zhè cì jiān nán de lǚ chéng 。"
+    "example_pinyin": "tā kè fú le chóng chóng kùn nan ， zuì zhōng wán chéng le zhè cì jiān nán de lǚ chéng 。"
   },
   {
     "id": 1481,
@@ -7836,7 +7836,7 @@
     "pinyin": "kè tīng",
     "example_zh": "他们家的客厅布置得很温馨，经常在里面看电视。",
     "example_ko": "그들의 거실은 아늑하게 꾸며져 있어서 자주 거기서 TV를 봐.",
-    "example_pinyin": "tā men jiā de kè tīng bù zhì dé hěn wēn xīn ， jīng cháng zài lǐ miàn kàn diàn shì 。"
+    "example_pinyin": "tā men jiā de kè tīng bù zhì de hěn wēn xīn ， jīng cháng zài lǐ miàn kàn diàn shì 。"
   },
   {
     "id": 1483,
@@ -7845,7 +7845,7 @@
     "pinyin": "kōng jiān",
     "example_zh": "这个房间空间不大，但装修得很合理，住着很舒服。",
     "example_ko": "이 방은 공간이 크지 않지만 인테리어가 합리적으로 되어 있어서 살기 편해.",
-    "example_pinyin": "zhè ge fáng jiān kōng jiān bù dà ， dàn zhuāng xiū dé hěn hé lǐ ， zhù zhe hěn shū fú 。"
+    "example_pinyin": "zhè ge fáng jiān kōng jiān bù dà ， dàn zhuāng xiū de hěn hé lǐ ， zhù zhe hěn shū fu 。"
   },
   {
     "id": 1484,
@@ -7872,7 +7872,7 @@
     "pinyin": "kòng zhì",
     "example_zh": "他控制不住自己的情绪，在公开场合发了脾气。",
     "example_ko": "그는 감정을 억제하지 못해서 공개 장소에서 화를 냈어.",
-    "example_pinyin": "tā kòng zhì bú zhù zì jǐ de qíng xù ， zài gōng kāi chǎng hé fā le pí qì 。"
+    "example_pinyin": "tā kòng zhì bú zhù zì jǐ de qíng xù ， zài gōng kāi chǎng hé fā le pí qi 。"
   },
   {
     "id": 1487,
@@ -7962,7 +7962,7 @@
     "pinyin": "láng",
     "example_zh": "寓言故事里，狼总是被描写成贪婪而危险的动物。",
     "example_ko": "우화에서 늑대는 항상 탐욕스럽고 위험한 동물로 묘사돼.",
-    "example_pinyin": "yù yán gù shì lǐ ， láng zǒng shì bèi miáo xiě chéng tān lán ér wēi xiǎn de dòng wù 。"
+    "example_pinyin": "yù yán gù shi lǐ ， láng zǒng shì bèi miáo xiě chéng tān lán ér wēi xiǎn de dòng wù 。"
   },
   {
     "id": 1497,
@@ -7989,7 +7989,7 @@
     "pinyin": "lǎo bǎi xìng",
     "example_zh": "政府出台的新政策主要是为了改善老百姓的生活。",
     "example_ko": "정부가 내놓은 새 정책은 주로 서민들의 생활 개선을 위한 거야.",
-    "example_pinyin": "zhèng fǔ chū tái de xīn zhèng cè zhǔ yào shì wèi le gǎi shàn lǎo bǎi xìng de shēng huó 。"
+    "example_pinyin": "zhèng fǔ chū tái de xīn zhèng cè zhǔ yào shi wèi le gǎi shàn lǎo bǎi xìng de shēng huó 。"
   },
   {
     "id": 1500,
@@ -8034,7 +8034,7 @@
     "pinyin": "lè guān",
     "example_zh": "她很乐观，无论遇到什么困难都能保持积极的心态。",
     "example_ko": "그녀는 낙관적이어서 어떤 어려움을 만나도 긍정적인 마음을 유지할 수 있어.",
-    "example_pinyin": "tā hěn lè guān ， wú lùn yù dào shén me kùn nán dōu néng bǎo chí jī jí de xīn tài 。"
+    "example_pinyin": "tā hěn lè guān ， wú lùn yù dào shén me kùn nan dōu néng bǎo chí jī jí de xīn tài 。"
   },
   {
     "id": 1505,
@@ -8151,7 +8151,7 @@
     "pinyin": "lì liang",
     "example_zh": "团结的力量是无穷的，大家一起努力一定能成功。",
     "example_ko": "단결의 힘은 무한해서 다 함께 노력하면 반드시 성공할 수 있어.",
-    "example_pinyin": "tuán jié de lì liàng shì wú qióng de ， dà jiā yì qǐ nǔ lì yí dìng néng chéng gōng 。"
+    "example_pinyin": "tuán jié de lì liang shì wú qióng de ， dà jiā yì qǐ nǔ lì yí dìng néng chéng gōng 。"
   },
   {
     "id": 1518,
@@ -8214,7 +8214,7 @@
     "pinyin": "lián hé",
     "example_zh": "两家公司联合起来，共同开拓新的市场。",
     "example_ko": "두 회사가 연합해서 함께 새로운 시장을 개척했어.",
-    "example_pinyin": "liǎng jiā gōng sī lián hé qǐ lái ， gòng tóng kāi tuò xīn de shì chǎng 。"
+    "example_pinyin": "liǎng jiā gōng sī lián hé qǐ lai ， gòng tóng kāi tuò xīn de shì chǎng 。"
   },
   {
     "id": 1525,
@@ -8241,7 +8241,7 @@
     "pinyin": "liáng shi",
     "example_zh": "这次旱灾导致粮食减产，政府紧急调配物资援助。",
     "example_ko": "이번 가뭄으로 식량 생산이 줄어서 정부가 긴급히 물자를 배분해서 지원했어.",
-    "example_pinyin": "zhè cì hàn zāi dǎo zhì liáng shí jiǎn chǎn ， zhèng fǔ jǐn jí diào pèi wù zī yuán zhù 。"
+    "example_pinyin": "zhè cì hàn zāi dǎo zhì liáng shi jiǎn chǎn ， zhèng fǔ jǐn jí diào pèi wù zī yuán zhù 。"
   },
   {
     "id": 1528,
@@ -8250,7 +8250,7 @@
     "pinyin": "liǎo bu qǐ",
     "example_zh": "他一个人把这件事办成了，真是了不起！",
     "example_ko": "그가 혼자서 이 일을 해냈어, 정말 대단해!",
-    "example_pinyin": "tā yí gè rén bǎ zhè jiàn shì bàn chéng le ， zhēn shì liǎo bù qǐ ！"
+    "example_pinyin": "tā yí gè rén bǎ zhè jiàn shì bàn chéng le ， zhēn shì liǎo bu qǐ ！"
   },
   {
     "id": 1529,
@@ -8304,7 +8304,7 @@
     "pinyin": "líng huó",
     "example_zh": "他处理问题很灵活，能根据情况随时调整方案。",
     "example_ko": "그는 문제 처리가 유연해서 상황에 따라 방안을 수시로 조정할 수 있어.",
-    "example_pinyin": "tā chǔ lǐ wèn tí hěn líng huó ， néng gēn jù qíng kuàng suí shí diào zhěng fāng àn 。"
+    "example_pinyin": "tā chǔ lǐ wèn tí hěn líng huó ， néng gēn jù qíng kuàng suí shí tiáo zhěng fāng àn 。"
   },
   {
     "id": 1535,
@@ -8331,7 +8331,7 @@
     "pinyin": "liú chuán",
     "example_zh": "这首民间故事流传了几百年，至今还有人传诵。",
     "example_ko": "이 민간 이야기는 수백 년간 전해져서 지금도 전하는 사람이 있어.",
-    "example_pinyin": "zhè shǒu mín jiān gù shì liú chuán le jǐ bǎi nián ， zhì jīn hái yǒu rén chuán sòng 。"
+    "example_pinyin": "zhè shǒu mín jiān gù shi liú chuán le jǐ bǎi nián ， zhì jīn hái yǒu rén chuán sòng 。"
   },
   {
     "id": 1538,
@@ -8349,7 +8349,7 @@
     "pinyin": "lóng",
     "example_zh": "龙在中国文化中象征着吉祥和力量，深受人们喜爱。",
     "example_ko": "용은 중국 문화에서 길상과 힘을 상징해서 사람들의 사랑을 많이 받아.",
-    "example_pinyin": "lóng zài zhōng guó wén huà zhōng xiàng zhēng zhe jí xiáng hé lì liàng ， shēn shòu rén men xǐ ài 。"
+    "example_pinyin": "lóng zài zhōng guó wén huà zhōng xiàng zhēng zhe jí xiáng hé lì liang ， shēn shòu rén men xǐ ài 。"
   },
   {
     "id": 1540,
@@ -8367,7 +8367,7 @@
     "pinyin": "lù",
     "example_zh": "他试图隐瞒，但真相最终还是露出来了。",
     "example_ko": "그는 숨기려 했지만 진실은 결국 드러났어.",
-    "example_pinyin": "tā shì tú yǐn mán ， dàn zhēn xiàng zuì zhōng hái shì lù chū lái le 。"
+    "example_pinyin": "tā shì tú yǐn mán ， dàn zhēn xiàng zuì zhōng hái shi lù chū lái le 。"
   },
   {
     "id": 1542,
@@ -8376,7 +8376,7 @@
     "pinyin": "lù dì",
     "example_zh": "海龟每年都会回到陆地上产卵，然后再回到海洋。",
     "example_ko": "바다거북은 매년 육지로 돌아와 알을 낳고 나서 다시 바다로 돌아가.",
-    "example_pinyin": "hǎi guī měi nián dū huì huí dào lù dì shàng chǎn luǎn ， rán hòu zài huí dào hǎi yáng 。"
+    "example_pinyin": "hǎi guī měi nián dōu huì huí dào lù dì shàng chǎn luǎn ， rán hòu zài huí dào hǎi yáng 。"
   },
   {
     "id": 1543,
@@ -8430,7 +8430,7 @@
     "pinyin": "luó ji",
     "example_zh": "他说话的逻辑很清晰，大家都能很容易理解他的意思。",
     "example_ko": "그가 말하는 논리가 매우 명확해서 다들 그의 말을 쉽게 이해할 수 있어.",
-    "example_pinyin": "tā shuō huà de luó jí hěn qīng xī ， dà jiā dōu néng hěn róng yì lǐ jiě tā de yì si 。"
+    "example_pinyin": "tā shuō huà de luó ji hěn qīng xī ， dà jiā dōu néng hěn róng yì lǐ jiě tā de yì si 。"
   },
   {
     "id": 1549,
@@ -8457,7 +8457,7 @@
     "pinyin": "mài kè fēng",
     "example_zh": "演讲时要靠近麦克风，这样声音才能清楚传出去。",
     "example_ko": "연설할 때 마이크에 가까이 해야 소리가 명확하게 전달돼.",
-    "example_pinyin": "yǎn jiǎng shí yào kào jìn mài kè fēng ， zhè yàng shēng yīn cái néng qīng chǔ chuán chū qù 。"
+    "example_pinyin": "yǎn jiǎng shí yào kào jìn mài kè fēng ， zhè yàng shēng yīn cái néng qīng chu chuán chū qù 。"
   },
   {
     "id": 1552,
@@ -8493,7 +8493,7 @@
     "pinyin": "máo bìng",
     "example_zh": "这台电脑有点毛病，一直运行得很慢，需要检修。",
     "example_ko": "이 컴퓨터에 결함이 좀 있어서 계속 느리게 작동해, 점검이 필요해.",
-    "example_pinyin": "zhè tái diàn nǎo yǒu diǎn máo bìng ， yì zhí yùn xíng dé hěn màn ， xū yào jiǎn xiū 。"
+    "example_pinyin": "zhè tái diàn nǎo yǒu diǎn máo bìng ， yì zhí yùn xíng de hěn màn ， xū yào jiǎn xiū 。"
   },
   {
     "id": 1556,
@@ -8511,7 +8511,7 @@
     "pinyin": "mào xiǎn",
     "example_zh": "他喜欢冒险，经常去陌生的地方探险。",
     "example_ko": "그는 모험을 좋아해서 자주 낯선 곳에 가서 탐험해.",
-    "example_pinyin": "tā xǐ huān mào xiǎn ， jīng cháng qù mò shēng de dì fāng tàn xiǎn 。"
+    "example_pinyin": "tā xǐ huān mào xiǎn ， jīng cháng qù mò shēng de dì fang tàn xiǎn 。"
   },
   {
     "id": 1558,
@@ -8529,7 +8529,7 @@
     "pinyin": "méi mao",
     "example_zh": "她的眉毛很浓，整个人看起来很精神。",
     "example_ko": "그녀의 눈썹이 진해서 전체적으로 매우 생기 있어 보여.",
-    "example_pinyin": "tā de méi máo hěn nóng ， zhěng gè rén kàn qǐ lái hěn jīng shén 。"
+    "example_pinyin": "tā de méi mao hěn nóng ， zhěng gè rén kàn qǐ lai hěn jīng shén 。"
   },
   {
     "id": 1560,
@@ -8592,7 +8592,7 @@
     "pinyin": "mì fēng",
     "example_zh": "蜜蜂每天辛勤地采蜜，是大自然的小英雄。",
     "example_ko": "벌은 매일 열심히 꿀을 모아서 자연의 작은 영웅이야.",
-    "example_pinyin": "mì fēng měi tiān xīn qín dì cǎi mì ， shì dà zì rán de xiǎo yīng xióng 。"
+    "example_pinyin": "mì fēng měi tiān xīn qín de cǎi mì ， shì dà zì rán de xiǎo yīng xióng 。"
   },
   {
     "id": 1567,
@@ -8619,7 +8619,7 @@
     "pinyin": "mián hua",
     "example_zh": "棉花是制作棉布的主要原料，广泛用于纺织业。",
     "example_ko": "면화는 면직물을 만드는 주요 원료야, 방직 산업에 널리 쓰여.",
-    "example_pinyin": "mián huā shì zhì zuò mián bù de zhǔ yào yuán liào ， guǎng fàn yòng yú fǎng zhī yè 。"
+    "example_pinyin": "mián hua shì zhì zuò mián bù de zhǔ yào yuán liào ， guǎng fàn yòng yú fǎng zhī yè 。"
   },
   {
     "id": 1570,
@@ -8628,13 +8628,13 @@
     "pinyin": "miàn duì",
     "example_zh": "他勇敢地面对了自己的恐惧，终于克服了心理障碍。",
     "example_ko": "그는 용감하게 자신의 두려움과 마주해서 결국 심리적 장벽을 극복했어.",
-    "example_pinyin": "tā yǒng gǎn dì miàn duì le zì jǐ de kǒng jù ， zhōng yú kè fú le xīn lǐ zhàng ài 。"
+    "example_pinyin": "tā yǒng gǎn de miàn duì le zì jǐ de kǒng jù ， zhōng yú kè fú le xīn lǐ zhàng ài 。"
   },
   {
     "id": 1571,
     "hsk_level": 5,
     "chinese": "面积",
-    "pinyin": "miàn ji",
+    "pinyin": "miàn jī",
     "example_zh": "中国的国土面积居世界第三，地形多样。",
     "example_ko": "중국의 국토 면적은 세계 3위야, 지형이 다양해.",
     "example_pinyin": "zhōng guó de guó tǔ miàn jī jū shì jiè dì sān ， dì xíng duō yàng 。"
@@ -8646,7 +8646,7 @@
     "pinyin": "miàn lín",
     "example_zh": "公司面临经营困难，管理层正在寻找解决办法。",
     "example_ko": "회사가 경영 어려움에 처해서 경영진이 해결 방법을 찾고 있어.",
-    "example_pinyin": "gōng sī miàn lín jīng yíng kùn nán ， guǎn lǐ céng zhèng zài xún zhǎo jiě jué bàn fǎ 。"
+    "example_pinyin": "gōng sī miàn lín jīng yíng kùn nan ， guǎn lǐ céng zhèng zài xún zhǎo jiě jué bàn fǎ 。"
   },
   {
     "id": 1573,
@@ -8691,7 +8691,7 @@
     "pinyin": "míng què",
     "example_zh": "他表达的意思很明确，大家都清楚地理解了他的要求。",
     "example_ko": "그가 표현하는 의미가 매우 명확해서 모두 그의 요구를 분명하게 이해했어.",
-    "example_pinyin": "tā biǎo dá de yì si hěn míng què ， dà jiā dōu qīng chǔ dì lǐ jiě le tā de yāo qiú 。"
+    "example_pinyin": "tā biǎo dá de yì si hěn míng què ， dà jiā dōu qīng chu de lǐ jiě le tā de yāo qiú 。"
   },
   {
     "id": 1578,
@@ -8736,7 +8736,7 @@
     "pinyin": "míng piàn",
     "example_zh": "初次见面时，他礼貌地递上了自己的名片。",
     "example_ko": "처음 만났을 때 그는 예의 바르게 자신의 명함을 건넸어.",
-    "example_pinyin": "chū cì jiàn miàn shí ， tā lǐ mào dì dì shàng le zì jǐ de míng piàn 。"
+    "example_pinyin": "chū cì jiàn miàn shí ， tā lǐ mào de dì shàng le zì jǐ de míng piàn 。"
   },
   {
     "id": 1583,
@@ -8799,7 +8799,7 @@
     "pinyin": "mó hu",
     "example_zh": "他的记忆有些模糊，想不起来那天发生了什么事。",
     "example_ko": "그의 기억이 좀 모호해서 그날 무슨 일이 있었는지 생각이 안 나.",
-    "example_pinyin": "tā de jì yì yǒu xiē mó hú ， xiǎng bù qǐ lái nà tiān fā shēng le shén me shì 。"
+    "example_pinyin": "tā de jì yì yǒu xiē mó hu ， xiǎng bù qǐ lai nà tiān fā shēng le shén me shì 。"
   },
   {
     "id": 1590,
@@ -8826,7 +8826,7 @@
     "pinyin": "mù biāo",
     "example_zh": "他给自己定下了一个明确的目标，然后一步一步地去实现。",
     "example_ko": "그는 스스로 명확한 목표를 세우고 한 걸음씩 실현해 나갔어.",
-    "example_pinyin": "tā gěi zì jǐ dìng xià le yí gè míng què de mù biāo ， rán hòu yí bù yí bù dì qù shí xiàn 。"
+    "example_pinyin": "tā gěi zì jǐ dìng xià le yí gè míng què de mù biāo ， rán hòu yí bù yí bù de qù shí xiàn 。"
   },
   {
     "id": 1593,
@@ -8907,7 +8907,7 @@
     "pinyin": "nèn",
     "example_zh": "这块豆腐非常嫩，口感滑溜，入口即化。",
     "example_ko": "이 두부는 매우 부드럽고 감촉이 매끄러워서 입에 넣으면 바로 녹아.",
-    "example_pinyin": "zhè kuài dòu fǔ fēi cháng nèn ， kǒu gǎn huá liū ， rù kǒu jí huà 。"
+    "example_pinyin": "zhè kuài dòu fu fēi cháng nèn ， kǒu gǎn huá liū ， rù kǒu jí huà 。"
   },
   {
     "id": 1602,
@@ -8979,7 +8979,7 @@
     "pinyin": "nóng",
     "example_zh": "这杯咖啡味道太浓了，再加点水稀释一下吧。",
     "example_ko": "이 커피가 너무 진해서 물을 조금 더 넣어서 희석해봐.",
-    "example_pinyin": "zhè bēi kā fēi wèi dào tài nóng le ， zài jiā diǎn shuǐ xī shì yī xià ba 。"
+    "example_pinyin": "zhè bēi kā fēi wèi dao tài nóng le ， zài jiā diǎn shuǐ xī shì yī xià ba 。"
   },
   {
     "id": 1610,
@@ -9024,7 +9024,7 @@
     "pinyin": "pāi",
     "example_zh": "他拍了很多照片，记录下了这次旅行的美好时光。",
     "example_ko": "그는 사진을 많이 찍어서 이번 여행의 아름다운 시간을 기록했어.",
-    "example_pinyin": "tā pāi le hěn duō zhào piān ， jì lù xià le zhè cì lǚ xíng de měi hǎo shí guāng 。"
+    "example_pinyin": "tā pāi le hěn duō zhào piàn ， jì lù xià le zhè cì lǚ xíng de měi hǎo shí guāng 。"
   },
   {
     "id": 1615,
@@ -9078,7 +9078,7 @@
     "pinyin": "péi yǎng",
     "example_zh": "公司注重培养年轻人才，每年都会提供大量培训机会。",
     "example_ko": "회사는 젊은 인재 육성을 중시해서 매년 많은 교육 기회를 제공해.",
-    "example_pinyin": "gōng sī zhù zhòng péi yǎng nián qīng rén cái ， měi nián dū huì tí gōng dà liàng péi xùn jī huì 。"
+    "example_pinyin": "gōng sī zhù zhòng péi yǎng nián qīng rén cái ， měi nián dōu huì tí gōng dà liàng péi xùn jī huì 。"
   },
   {
     "id": 1621,
@@ -9132,7 +9132,7 @@
     "pinyin": "pī",
     "example_zh": "他写了一批评论文章，批评了当前的教育体制。",
     "example_ko": "그는 비평 글 여러 편을 써서 현재의 교육 체제를 비판했어.",
-    "example_pinyin": "tā xiě le yī pī píng lùn wén zhāng ， pī píng liǎo dàng qián de jiào yù tǐ zhì 。"
+    "example_pinyin": "tā xiě le yī pī píng lùn wén zhāng ， pī píng le dàng qián de jiào yù tǐ zhì 。"
   },
   {
     "id": 1627,
@@ -9222,7 +9222,7 @@
     "pinyin": "píng",
     "example_zh": "凭他的实力，这次考试一定能考得很好。",
     "example_ko": "그의 실력에 의거하면 이번 시험을 반드시 잘 볼 수 있어.",
-    "example_pinyin": "píng tā de shí lì ， zhè cì kǎo shì yí dìng néng kǎo dé hěn hǎo 。"
+    "example_pinyin": "píng tā de shí lì ， zhè cì kǎo shì yí dìng néng kǎo de hěn hǎo 。"
   },
   {
     "id": 1637,
@@ -9321,7 +9321,7 @@
     "pinyin": "pò qiè",
     "example_zh": "他迫切地希望找到一份稳定的工作，尽快独立生活。",
     "example_ko": "그는 안정적인 직장을 하루빨리 찾아서 빨리 독립하기를 절박하게 원해.",
-    "example_pinyin": "tā pò qiè dì xī wàng zhǎo dào yī fèn wěn dìng de gōng zuò ， jǐn kuài dú lì shēng huó 。"
+    "example_pinyin": "tā pò qiè de xī wàng zhǎo dào yī fèn wěn dìng de gōng zuò ， jǐn kuài dú lì shēng huó 。"
   },
   {
     "id": 1648,
@@ -9339,7 +9339,7 @@
     "pinyin": "qī dài",
     "example_zh": "他满怀期待地等着结果，希望能有好消息传来。",
     "example_ko": "그는 기대를 품고 결과를 기다리며 좋은 소식이 오기를 바랐어.",
-    "example_pinyin": "tā mǎn huái qī dài dì děng zhe jié guǒ ， xī wàng néng yǒu hǎo xiāo xī chuán lái 。"
+    "example_pinyin": "tā mǎn huái qī dài de děng zhe jié guǒ ， xī wàng néng yǒu hǎo xiāo xi chuán lái 。"
   },
   {
     "id": 1650,
@@ -9402,7 +9402,7 @@
     "pinyin": "qì fēn",
     "example_zh": "今天的聚会气氛很热烈，大家都玩得很开心。",
     "example_ko": "오늘 모임의 분위기가 매우 활기찼어, 모두 즐겁게 놀았어.",
-    "example_pinyin": "jīn tiān de jù huì qì fēn hěn rè liè ， dà jiā dōu wán dé hěn kāi xīn 。"
+    "example_pinyin": "jīn tiān de jù huì qì fēn hěn rè liè ， dà jiā dōu wán de hěn kāi xīn 。"
   },
   {
     "id": 1657,
@@ -9429,7 +9429,7 @@
     "pinyin": "qiān zì",
     "example_zh": "合同签字之前，请仔细阅读所有条款。",
     "example_ko": "계약서에 서명하기 전에 모든 조항을 꼼꼼히 읽어주세요.",
-    "example_pinyin": "hé tóng qiān zì zhī qián ， qǐng zǐ xì yuè dú suǒ yǒu tiáo kuǎn 。"
+    "example_pinyin": "hé tong qiān zì zhī qián ， qǐng zǐ xì yuè dú suǒ yǒu tiáo kuǎn 。"
   },
   {
     "id": 1660,
@@ -9474,7 +9474,7 @@
     "pinyin": "qiāng",
     "example_zh": "士兵们端着枪，严守着边境线。",
     "example_ko": "병사들은 총을 들고 국경선을 엄중하게 지키고 있어.",
-    "example_pinyin": "shì bīng men duān zhe qiāng ， yán shǒu zhuó biān jìng xiàn 。"
+    "example_pinyin": "shì bīng men duān zhe qiāng ， yán shǒu zhe biān jìng xiàn 。"
   },
   {
     "id": 1665,
@@ -9483,7 +9483,7 @@
     "pinyin": "qiáng diào",
     "example_zh": "老师一再强调基础知识的重要性，让学生打好基础。",
     "example_ko": "선생님은 기초 지식의 중요성을 거듭 강조하며 학생들이 기초를 잘 다지게 했어.",
-    "example_pinyin": "lǎo shī yī zài qiáng diào jī chǔ zhī shí de zhòng yào xìng ， ràng xué shēng dǎ hǎo jī chǔ 。"
+    "example_pinyin": "lǎo shī yī zài qiáng diào jī chǔ zhī shi de zhòng yào xìng ， ràng xué shēng dǎ hǎo jī chǔ 。"
   },
   {
     "id": 1666,
@@ -9510,7 +9510,7 @@
     "pinyin": "qiāo qiāo",
     "example_zh": "他悄悄地打开门，不想吵醒睡觉的孩子。",
     "example_ko": "그는 살그머니 문을 열어서 자고 있는 아이를 깨우고 싶지 않았어.",
-    "example_pinyin": "tā qiāo qiāo dì dǎ kāi mén ， bù xiǎng chǎo xǐng shuì jiào de hái zi 。"
+    "example_pinyin": "tā qiāo qiāo de dǎ kāi mén ， bù xiǎng chǎo xǐng shuì jiào de hái zi 。"
   },
   {
     "id": 1669,
@@ -9519,7 +9519,7 @@
     "pinyin": "qiáo",
     "example_zh": "她悄悄地瞧了他一眼，然后把头转开了。",
     "example_ko": "그녀는 살짝 그를 쳐다보고 나서 고개를 돌렸어.",
-    "example_pinyin": "tā qiāo qiāo dì qiáo le tā yī yǎn ， rán hòu bǎ tóu zhuǎn kāi le 。"
+    "example_pinyin": "tā qiāo qiāo de qiáo le tā yī yǎn ， rán hòu bǎ tóu zhuǎn kāi le 。"
   },
   {
     "id": 1670,
@@ -9537,7 +9537,7 @@
     "pinyin": "qiē",
     "example_zh": "她把蔬菜切成小块，然后放入锅中翻炒。",
     "example_ko": "그녀는 채소를 작게 잘라서 냄비에 넣고 볶았어.",
-    "example_pinyin": "tā bǎ shū cài qiè chéng xiǎo kuài ， rán hòu fàng rù guō zhōng fān chǎo 。"
+    "example_pinyin": "tā bǎ shū cài qiē chéng xiǎo kuài ， rán hòu fàng rù guō zhōng fān chǎo 。"
   },
   {
     "id": 1672,
@@ -9570,10 +9570,10 @@
     "id": 1675,
     "hsk_level": 5,
     "chinese": "侵略",
-    "pinyin": "qīn lvè",
+    "pinyin": "qīn lüè",
     "example_zh": "历史上，侵略战争给人民带来了无尽的苦难。",
     "example_ko": "역사상 침략 전쟁은 인민에게 끝없는 고통을 가져다줬어.",
-    "example_pinyin": "lì shǐ shàng ， qīn lüè zhàn zhēng gěi rén mín dài lái liǎo wú jǐn de kǔ nàn 。"
+    "example_pinyin": "lì shǐ shàng ， qīn lüè zhàn zhēng gěi rén mín dài lái le wú jǐn de kǔ nàn 。"
   },
   {
     "id": 1676,
@@ -9627,7 +9627,7 @@
     "pinyin": "qīng shì",
     "example_zh": "不要轻视别人，每个人都有值得尊重的地方。",
     "example_ko": "남을 무시하지 마, 모든 사람에게는 존중받을 만한 면이 있어.",
-    "example_pinyin": "bú yào qīng shì bié rén ， měi gè rén dōu yǒu zhí de zūn zhòng de dì fāng 。"
+    "example_pinyin": "bú yào qīng shì bié ren ， měi gè rén dōu yǒu zhí de zūn zhòng de dì fang 。"
   },
   {
     "id": 1682,
@@ -9672,7 +9672,7 @@
     "pinyin": "qìng zhù",
     "example_zh": "大家聚在一起庆祝他的生日，气氛非常热闹。",
     "example_ko": "다들 모여서 그의 생일을 축하했는데 분위기가 매우 시끌벅적했어.",
-    "example_pinyin": "dà jiā jù zài yì qǐ qìng zhù tā de shēng rì ， qì fēn fēi cháng rè nào 。"
+    "example_pinyin": "dà jiā jù zài yì qǐ qìng zhù tā de shēng rì ， qì fēn fēi cháng rè nao 。"
   },
   {
     "id": 1687,
@@ -9717,7 +9717,7 @@
     "pinyin": "qù shì",
     "example_zh": "他的爷爷昨天去世了，享年90岁，家人都很悲痛。",
     "example_ko": "그의 할아버지가 어제 돌아가셨어, 향년 90세야, 가족들 모두 슬퍼해.",
-    "example_pinyin": "tā de yé yé zuó tiān qù shì le ， xiǎng nián 90 suì ， jiā rén dōu hěn bēi tòng 。"
+    "example_pinyin": "tā de yé ye zuó tiān qù shì le ， xiǎng nián 90 suì ， jiā rén dōu hěn bēi tòng 。"
   },
   {
     "id": 1692,
@@ -9726,7 +9726,7 @@
     "pinyin": "quān",
     "example_zh": "小朋友们围成一个圈，一起做游戏，玩得很开心。",
     "example_ko": "아이들이 원을 만들어 함께 게임을 하면서 즐겁게 놀았어.",
-    "example_pinyin": "xiǎo péng yǒu men wéi chéng yí gè quān ， yì qǐ zuò yóu xì ， wán dé hěn kāi xīn 。"
+    "example_pinyin": "xiǎo péng yǒu men wéi chéng yí gè quān ， yì qǐ zuò yóu xì ， wán de hěn kāi xīn 。"
   },
   {
     "id": 1693,
@@ -9805,9 +9805,9 @@
     "hsk_level": 5,
     "chinese": "嚷",
     "pinyin": "rǎng",
-    "example_zh": "他生气了，对着电话大声嚷嚷，把旁边的人都吓了一跳。",
+    "example_zh": "他生气了，对着电话大声嚷，把旁边的人都吓了一跳。",
     "example_ko": "그가 화가 나서 전화에 대고 소리를 질러서 옆에 있던 사람들을 모두 깜짝 놀라게 했어.",
-    "example_pinyin": "tā shēng qì le ， duì zhe diàn huà dà shēng rāng rang ， bǎ páng biān de rén dōu xià le yī tiào 。"
+    "example_pinyin": "tā shēng qì le ， duì zhe diàn huà dà shēng rǎng ， bǎ páng biān de rén dōu xià le yī tiào 。"
   },
   {
     "id": 1702,
@@ -9825,7 +9825,7 @@
     "pinyin": "rè ài",
     "example_zh": "他热爱自己的工作，每天都充满激情地去上班。",
     "example_ko": "그는 자신의 일을 열렬히 사랑해서 매일 열정 가득하게 출근해.",
-    "example_pinyin": "tā rè ài zì jǐ de gōng zuò ， měi tiān dōu chōng mǎn jī qíng dì qù shàng bān 。"
+    "example_pinyin": "tā rè ài zì jǐ de gōng zuò ， měi tiān dōu chōng mǎn jī qíng de qù shàng bān 。"
   },
   {
     "id": 1704,
@@ -9879,7 +9879,7 @@
     "pinyin": "rén shēng",
     "example_zh": "人生中总会遇到困难，重要的是保持积极的心态去面对。",
     "example_ko": "인생에서 항상 어려움을 만나게 돼, 중요한 건 긍정적인 마음을 유지하며 마주하는 거야.",
-    "example_pinyin": "rén shēng zhōng zǒng huì yù dào kùn nán ， zhòng yào de shì bǎo chí jī jí de xīn tài qù miàn duì 。"
+    "example_pinyin": "rén shēng zhōng zǒng huì yù dào kùn nan ， zhòng yào de shì bǎo chí jī jí de xīn tài qù miàn duì 。"
   },
   {
     "id": 1710,
@@ -9915,7 +9915,7 @@
     "pinyin": "rěn bu zhù",
     "example_zh": "他太想笑了，忍不住噗嗤一声笑出来了。",
     "example_ko": "그는 너무 웃고 싶어서 참을 수 없어서 픽 웃음이 터져버렸어.",
-    "example_pinyin": "tā tài xiǎng xiào le ， rěn bú zhù pū chī yī shēng xiào chū lái le 。"
+    "example_pinyin": "tā tài xiǎng xiào le ， rěn bu zhù pū chī yī shēng xiào chū lái le 。"
   },
   {
     "id": 1714,
@@ -9933,7 +9933,7 @@
     "pinyin": "rì chéng",
     "example_zh": "这周的日程安排得很满，每天都有不同的会议和活动。",
     "example_ko": "이번 주 일정이 매우 빽빽해서 매일 다른 회의와 활동이 있어.",
-    "example_pinyin": "zhè zhōu de rì chéng ān pái dé hěn mǎn ， měi tiān dōu yǒu bù tóng de huì yì hé huó dòng 。"
+    "example_pinyin": "zhè zhōu de rì chéng ān pái de hěn mǎn ， měi tiān dōu yǒu bù tóng de huì yì hé huó dòng 。"
   },
   {
     "id": 1716,
@@ -9969,7 +9969,7 @@
     "pinyin": "róng huà",
     "example_zh": "春天来了，山上的积雪开始融化，小溪里的水多了起来。",
     "example_ko": "봄이 왔어서 산 위의 눈이 녹기 시작하고 시냇물이 많아졌어.",
-    "example_pinyin": "chūn tiān lái le ， shān shàng de jī xuě kāi shǐ róng huà ， xiǎo xī lǐ de shuǐ duō le qǐ lái 。"
+    "example_pinyin": "chūn tiān lái le ， shān shàng de jī xuě kāi shǐ róng huà ， xiǎo xī lǐ de shuǐ duō le qǐ lai 。"
   },
   {
     "id": 1720,
@@ -10095,7 +10095,7 @@
     "pinyin": "shān chú",
     "example_zh": "请删除这条旧消息。",
     "example_ko": "이 오래된 메시지를 삭제해 주세요.",
-    "example_pinyin": "qǐng shān chú zhè tiáo jiù xiāo xī。"
+    "example_pinyin": "qǐng shān chú zhè tiáo jiù xiāo xi。"
   },
   {
     "id": 1734,
@@ -10113,7 +10113,7 @@
     "pinyin": "shàn liáng",
     "example_zh": "她是一个善良的人，从不计较别人的过错。",
     "example_ko": "그녀는 착한 사람이어서 다른 사람의 잘못을 따지지 않아.",
-    "example_pinyin": "tā shì yí gè shàn liáng de rén ， cóng bù jì jiào bié rén de guò cuò 。"
+    "example_pinyin": "tā shì yí gè shàn liáng de rén ， cóng bù jì jiào bié ren de guò cuò 。"
   },
   {
     "id": 1736,
@@ -10122,13 +10122,13 @@
     "pinyin": "shàn yú",
     "example_zh": "他善于表达，无论什么事情都能清楚地解释给别人听。",
     "example_ko": "그는 표현을 잘해서 무슨 일이든 명확하게 설명할 수 있어.",
-    "example_pinyin": "tā shàn yú biǎo dá ， wú lùn shén me shì qíng dōu néng qīng chǔ dì jiě shì gěi bié rén tīng 。"
+    "example_pinyin": "tā shàn yú biǎo dá ， wú lùn shén me shì qíng dōu néng qīng chu de jiě shì gěi bié ren tīng 。"
   },
   {
     "id": 1737,
     "hsk_level": 5,
     "chinese": "扇子",
-    "pinyin": "shān zi",
+    "pinyin": "shàn zi",
     "example_zh": "夏天她喜欢用扇子扇风，觉得比空调更自然。",
     "example_ko": "여름에 그녀는 부채로 바람을 부치는 걸 좋아하는데 에어컨보다 더 자연스럽게 느껴.",
     "example_pinyin": "xià tiān tā xǐ huān yòng shàn zi shān fēng ， jué de bǐ kōng tiáo gèng zì rán 。"
@@ -10185,7 +10185,7 @@
     "pinyin": "shé tou",
     "example_zh": "他不小心咬到了舌头，痛了好一会儿。",
     "example_ko": "그는 실수로 혀를 깨물어서 한동안 아팠어.",
-    "example_pinyin": "tā bù xiǎo xīn yǎo dào le shé tou ， tòng le hǎo yī huì er 。"
+    "example_pinyin": "tā bù xiǎo xīn yǎo dào le shé tou ， tòng le hǎo yí huìr 。"
   },
   {
     "id": 1744,
@@ -10194,7 +10194,7 @@
     "pinyin": "shě bu de",
     "example_zh": "他舍不得扔掉那件旧外套，虽然已经穿了很多年了。",
     "example_ko": "그는 그 낡은 외투를 버리기 아까워서 오래 입었는데도 버리지 못해.",
-    "example_pinyin": "tā shě bù dé rēng diào nà jiàn jiù wài tào ， suī rán yǐ jīng chuān le hěn duō nián le 。"
+    "example_pinyin": "tā shě bu de rēng diào nà jiàn jiù wài tào ， suī rán yǐ jīng chuān le hěn duō nián le 。"
   },
   {
     "id": 1745,
@@ -10266,7 +10266,7 @@
     "pinyin": "shēn cái",
     "example_zh": "她经常健身，保持了很好的身材，看起来很健康。",
     "example_ko": "그녀는 자주 운동해서 좋은 몸매를 유지하고 있어서 건강해 보여.",
-    "example_pinyin": "tā jīng cháng jiàn shēn ， bǎo chí le hěn hǎo de shēn cái ， kàn qǐ lái hěn jiàn kāng 。"
+    "example_pinyin": "tā jīng cháng jiàn shēn ， bǎo chí le hěn hǎo de shēn cái ， kàn qǐ lai hěn jiàn kāng 。"
   },
   {
     "id": 1753,
@@ -10284,7 +10284,7 @@
     "pinyin": "shén huà",
     "example_zh": "古代神话故事中，常常有各种神奇的生物和英雄。",
     "example_ko": "고대 신화 이야기에는 자주 다양한 신기한 생물과 영웅이 등장해.",
-    "example_pinyin": "gǔ dài shén huà gù shì zhōng ， cháng cháng yǒu gè zhǒng shén qí de shēng wù hé yīng xióng 。"
+    "example_pinyin": "gǔ dài shén huà gù shi zhōng ， cháng cháng yǒu gè zhǒng shén qí de shēng wù hé yīng xióng 。"
   },
   {
     "id": 1755,
@@ -10329,7 +10329,7 @@
     "pinyin": "shēng dòng",
     "example_zh": "他的讲解非常生动，学生们听得津津有味。",
     "example_ko": "그의 강의는 매우 생동감 있어서 학생들이 매우 재미있게 들어.",
-    "example_pinyin": "tā de jiǎng jiě fēi cháng shēng dòng ， xué shēng men tīng dé jīn jīn yǒu wèi 。"
+    "example_pinyin": "tā de jiǎng jiě fēi cháng shēng dòng ， xué shēng men tīng de jīn jīn yǒu wèi 。"
   },
   {
     "id": 1760,
@@ -10353,7 +10353,7 @@
     "id": 1762,
     "hsk_level": 5,
     "chinese": "省略",
-    "pinyin": "shěng lvè",
+    "pinyin": "shěng lüè",
     "example_zh": "这道题解答时可以省略中间步骤，直接写结果。",
     "example_ko": "이 문제를 풀 때 중간 단계를 생략하고 바로 결과를 적어도 돼.",
     "example_pinyin": "zhè dào tí jiě dá shí kě yǐ shěng lüè zhōng jiān bù zhòu ， zhí jiē xiě jié guǒ 。"
@@ -10392,7 +10392,7 @@
     "pinyin": "shī qù",
     "example_zh": "他在事故中失去了一条腿，但依然坚强地生活着。",
     "example_ko": "그는 사고에서 다리 하나를 잃었지만 여전히 강인하게 살아가고 있어.",
-    "example_pinyin": "tā zài shì gù zhōng shī qù le yī tiáo tuǐ ， dàn yī rán jiān qiáng dì shēng huó zhe 。"
+    "example_pinyin": "tā zài shì gù zhōng shī qù le yī tiáo tuǐ ， dàn yī rán jiān qiáng de shēng huó zhe 。"
   },
   {
     "id": 1767,
@@ -10410,7 +10410,7 @@
     "pinyin": "shí dài",
     "example_zh": "这是一个信息爆炸的时代，获取知识比以前容易多了。",
     "example_ko": "이건 정보 폭발의 시대야, 지식을 얻는 게 예전보다 훨씬 쉬워졌어.",
-    "example_pinyin": "zhè shì yí gè xìn xī bào zhà de shí dài ， huò qǔ zhī shí bǐ yǐ qián róng yì duō le 。"
+    "example_pinyin": "zhè shì yí gè xìn xī bào zhà de shí dài ， huò qǔ zhī shi bǐ yǐ qián róng yì duō le 。"
   },
   {
     "id": 1769,
@@ -10533,10 +10533,10 @@
     "id": 1782,
     "hsk_level": 5,
     "chinese": "使劲儿",
-    "pinyin": "shǐ jìn ér",
+    "pinyin": "shǐ jìnr",
     "example_zh": "他使劲儿推开了那扇沉重的门，终于进去了。",
     "example_ko": "그는 힘껏 그 무거운 문을 밀어서 드디어 들어갔어.",
-    "example_pinyin": "tā shǐ jìn ér tuī kāi le nà shàn chén zhòng de mén ， zhōng yú jìn qù le 。"
+    "example_pinyin": "tā shǐ jìnr tuī kāi le nà shàn chén zhòng de mén ， zhōng yú jìn qù le 。"
   },
   {
     "id": 1783,
@@ -10581,7 +10581,7 @@
     "pinyin": "shì de",
     "example_zh": "他跑起来似的，让人担心他是不是出了什么事。",
     "example_ko": "그가 달리는 것처럼 보여서 무슨 일이 생긴 게 아닌가 걱정됐어.",
-    "example_pinyin": "tā pǎo qǐ lái shì de ， ràng rén dān xīn tā shì bú shì chū le shén me shì 。"
+    "example_pinyin": "tā pǎo qǐ lai shì de ， ràng rén dān xīn tā shì bú shì chū le shén me shì 。"
   },
   {
     "id": 1788,
@@ -10725,7 +10725,7 @@
     "pinyin": "shū shì",
     "example_zh": "这把椅子坐起来非常舒适，长时间坐也不会腰酸。",
     "example_ko": "이 의자는 앉으면 매우 편안해서 오래 앉아도 허리가 아프지 않아.",
-    "example_pinyin": "zhè bǎ yǐ zi zuò qǐ lái fēi cháng shū shì ， zhǎng shí jiān zuò yě bú huì yāo suān 。"
+    "example_pinyin": "zhè bǎ yǐ zi zuò qǐ lai fēi cháng shū shì ， zhǎng shí jiān zuò yě bú huì yāo suān 。"
   },
   {
     "id": 1804,
@@ -10752,7 +10752,7 @@
     "pinyin": "shǔ biāo",
     "example_zh": "他换了一个新的无线鼠标，用起来更加方便。",
     "example_ko": "그는 새 무선 마우스로 바꿨는데 사용하기가 더 편리해.",
-    "example_pinyin": "tā huàn le yí gè xīn de wú xiàn shǔ biāo ， yòng qǐ lái gèng jiā fāng biàn 。"
+    "example_pinyin": "tā huàn le yí gè xīn de wú xiàn shǔ biāo ， yòng qǐ lai gèng jiā fāng biàn 。"
   },
   {
     "id": 1807,
@@ -10824,7 +10824,7 @@
     "pinyin": "shuō bu dìng",
     "example_zh": "今晚说不定会下雨，最好带把伞出门。",
     "example_ko": "오늘 저녁 아마 비가 올지도 몰라, 우산을 챙겨 나가는 게 좋아.",
-    "example_pinyin": "jīn wǎn shuō bù dìng huì xià yǔ ， zuì hǎo dài bǎ sǎn chū mén 。"
+    "example_pinyin": "jīn wǎn shuō bu dìng huì xià yǔ ， zuì hǎo dài bǎ sǎn chū mén 。"
   },
   {
     "id": 1815,
@@ -10842,7 +10842,7 @@
     "pinyin": "sī",
     "example_zh": "他生气地把那封信撕成了碎片，扔进了垃圾桶。",
     "example_ko": "그는 화가 나서 그 편지를 조각조각 찢어서 쓰레기통에 버렸어.",
-    "example_pinyin": "tā shēng qì dì bǎ nà fēng xìn sī chéng le suì piàn ， rēng jìn le lā jī tǒng 。"
+    "example_pinyin": "tā shēng qì de bǎ nà fēng xìn sī chéng le suì piàn ， rēng jìn le lā jī tǒng 。"
   },
   {
     "id": 1817,
@@ -10851,7 +10851,7 @@
     "pinyin": "sī chóu",
     "example_zh": "苏州的丝绸非常有名，质地光滑，色泽亮丽。",
     "example_ko": "쑤저우의 비단은 매우 유명해서 질감이 부드럽고 색택이 아름다워.",
-    "example_pinyin": "sū zhōu de sī chóu fēi cháng yǒu míng ， zhì dì guāng huá ， sè zé liàng lì 。"
+    "example_pinyin": "sū zhōu de sī chóu fēi cháng yǒu míng ， zhì dì guāng hua ， sè zé liàng lì 。"
   },
   {
     "id": 1818,
@@ -11022,7 +11022,7 @@
     "pinyin": "tài tai",
     "example_zh": "他带着太太一起参加了公司的年会，两人都打扮得很体面。",
     "example_ko": "그는 부인을 데리고 회사 연말 파티에 참석했는데 두 사람 모두 말끔하게 차려입었어.",
-    "example_pinyin": "tā dài zhe tài tài yì qǐ cān jiā le gōng sī de nián huì ， liǎng rén dōu dǎ bàn dé hěn tǐ miàn 。"
+    "example_pinyin": "tā dài zhe tài tai yì qǐ cān jiā le gōng sī de nián huì ， liǎng rén dōu dǎ ban de hěn tǐ miàn 。"
   },
   {
     "id": 1837,
@@ -11076,7 +11076,7 @@
     "pinyin": "táo bì",
     "example_zh": "他总是逃避困难，而不是面对并解决它们。",
     "example_ko": "그는 어려움을 직면하고 해결하지 않고 항상 피해.",
-    "example_pinyin": "tā zǒng shì táo bì kùn nán ， ér bú shì miàn duì bìng jiě jué tā men 。"
+    "example_pinyin": "tā zǒng shì táo bì kùn nan ， ér bú shì miàn duì bìng jiě jué tā men 。"
   },
   {
     "id": 1843,
@@ -11121,7 +11121,7 @@
     "pinyin": "téng ài",
     "example_zh": "爷爷非常疼爱他的孙子，经常带他出去玩。",
     "example_ko": "할아버지는 손자를 매우 아껴서 자주 데리고 나가서 놀아.",
-    "example_pinyin": "yé yé fēi cháng téng ài tā de sūn zi ， jīng cháng dài tā chū qù wán 。"
+    "example_pinyin": "yé ye fēi cháng téng ài tā de sūn zi ， jīng cháng dài tā chū qù wán 。"
   },
   {
     "id": 1848,
@@ -11148,7 +11148,7 @@
     "pinyin": "tí gāng",
     "example_zh": "写论文前先列好提纲，这样写起来更有条理。",
     "example_ko": "논문을 쓰기 전에 먼저 아웃라인을 잘 작성해야 써나가기가 더 체계적이야.",
-    "example_pinyin": "xiě lùn wén qián xiān liè hǎo tí gāng ， zhè yàng xiě qǐ lái gèng yǒu tiáo lǐ 。"
+    "example_pinyin": "xiě lùn wén qián xiān liè hǎo tí gāng ， zhè yàng xiě qǐ lai gèng yǒu tiáo lǐ 。"
   },
   {
     "id": 1851,
@@ -11193,7 +11193,7 @@
     "pinyin": "tǐ tiē",
     "example_zh": "他对妻子非常体贴，总是照顾好家里的大小事务。",
     "example_ko": "그는 아내에게 매우 세심해서 항상 집안 크고 작은 일을 잘 돌봐.",
-    "example_pinyin": "tā duì qī zǐ fēi cháng tǐ tiē ， zǒng shì zhào gù hǎo jiā lǐ de dà xiǎo shì wù 。"
+    "example_pinyin": "tā duì qī zǐ fēi cháng tǐ tiē ， zǒng shì zhào gu hǎo jiā lǐ de dà xiǎo shì wù 。"
   },
   {
     "id": 1856,
@@ -11247,7 +11247,7 @@
     "pinyin": "tiáo pí",
     "example_zh": "这个小孩非常调皮，总是惹麻烦，让父母头疼。",
     "example_ko": "이 아이는 매우 개구져서 항상 말썽을 피워서 부모를 골치 아프게 해.",
-    "example_pinyin": "zhè ge xiǎo hái fēi cháng tiáo pí ， zǒng shì rě má fán ， ràng fù mǔ tóu téng 。"
+    "example_pinyin": "zhè ge xiǎo hái fēi cháng tiáo pí ， zǒng shì rě má fan ， ràng fù mǔ tóu téng 。"
   },
   {
     "id": 1862,
@@ -11301,7 +11301,7 @@
     "pinyin": "tóng shí",
     "example_zh": "他同时负责三个项目，压力很大，但表现得很出色。",
     "example_ko": "그는 동시에 세 개의 프로젝트를 담당해서 스트레스가 크지만 훌륭하게 해내고 있어.",
-    "example_pinyin": "tā tóng shí fù zé sān gè xiàng mù ， yā lì hěn dà ， dàn biǎo xiàn dé hěn chū sè 。"
+    "example_pinyin": "tā tóng shí fù zé sān gè xiàng mù ， yā lì hěn dà ， dàn biǎo xiàn de hěn chū sè 。"
   },
   {
     "id": 1868,
@@ -11310,7 +11310,7 @@
     "pinyin": "tǒng yī",
     "example_zh": "公司统一了所有部门的工作流程，提高了整体效率。",
     "example_ko": "회사는 모든 부서의 업무 프로세스를 통일해서 전체 효율을 높였어.",
-    "example_pinyin": "gōng sī tǒng yī liǎo suǒ yǒu bù mén de gōng zuò liú chéng ， tí gāo le zhěng tǐ xiào lǜ 。"
+    "example_pinyin": "gōng sī tǒng yī le suǒ yǒu bù mén de gōng zuò liú chéng ， tí gāo le zhěng tǐ xiào lǜ 。"
   },
   {
     "id": 1869,
@@ -11382,7 +11382,7 @@
     "pinyin": "tǔ dòu",
     "example_zh": "他最喜欢吃土豆，无论是炒还是炖，都很香。",
     "example_ko": "그는 감자를 가장 좋아해서 볶든 삶든 다 맛있어.",
-    "example_pinyin": "tā zuì xǐ huān chī tǔ dòu ， wú lùn shì chǎo hái shì dùn ， dōu hěn xiāng 。"
+    "example_pinyin": "tā zuì xǐ huān chī tǔ dòu ， wú lùn shì chǎo hái shi dùn ， dōu hěn xiāng 。"
   },
   {
     "id": 1877,
@@ -11391,7 +11391,7 @@
     "pinyin": "tù",
     "example_zh": "他喝酒太多，最后吐了，被朋友送回家休息。",
     "example_ko": "그는 술을 너무 많이 마셔서 결국 토하고 친구가 집에 데려다줬어.",
-    "example_pinyin": "tā hē jiǔ tài duō ， zuì hòu tǔ le ， bèi péng yǒu sòng huí jiā xiū xī 。"
+    "example_pinyin": "tā hē jiǔ tài duō ， zuì hòu tù le ， bèi péng yǒu sòng huí jiā xiū xī 。"
   },
   {
     "id": 1878,
@@ -11526,7 +11526,7 @@
     "pinyin": "wán jù",
     "example_zh": "他给孩子买了很多玩具，但孩子最喜欢的还是那辆小汽车。",
     "example_ko": "그는 아이에게 장난감을 많이 사줬는데 아이가 가장 좋아하는 건 여전히 그 작은 자동차야.",
-    "example_pinyin": "tā gěi hái zi mǎi le hěn duō wán jù ， dàn hái zi zuì xǐ huān de hái shì nà liàng xiǎo qì chē 。"
+    "example_pinyin": "tā gěi hái zi mǎi le hěn duō wán jù ， dàn hái zi zuì xǐ huān de hái shi nà liàng xiǎo qì chē 。"
   },
   {
     "id": 1893,
@@ -11544,7 +11544,7 @@
     "pinyin": "wáng zǐ",
     "example_zh": "故事里的王子勇敢地打败了恶龙，救出了公主。",
     "example_ko": "이야기 속 왕자는 용감하게 악룡을 물리치고 공주를 구해냈어.",
-    "example_pinyin": "gù shì lǐ de wáng zǐ yǒng gǎn dì dǎ bài le è lóng ， jiù chū le gōng zhǔ 。"
+    "example_pinyin": "gù shi lǐ de wáng zǐ yǒng gǎn de dǎ bài le è lóng ， jiù chū le gōng zhǔ 。"
   },
   {
     "id": 1895,
@@ -11562,7 +11562,7 @@
     "pinyin": "wēi xiào",
     "example_zh": "她甜甜地微笑着，让周围的人都感到很温暖。",
     "example_ko": "그녀가 환하게 미소 지어서 주변 사람들을 모두 따뜻하게 만들어.",
-    "example_pinyin": "tā tián tián dì wēi xiào zhe ， ràng zhōu wéi de rén dōu gǎn dào hěn wēn nuǎn 。"
+    "example_pinyin": "tā tián tián de wēi xiào zhe ， ràng zhōu wéi de rén dōu gǎn dào hěn wēn nuǎn 。"
   },
   {
     "id": 1897,
@@ -11652,7 +11652,7 @@
     "pinyin": "wěi qu",
     "example_zh": "她被误会了，感到很委屈，忍不住流下了眼泪。",
     "example_ko": "그녀는 오해를 받아서 매우 억울하게 느껴서 참지 못하고 눈물을 흘렸어.",
-    "example_pinyin": "tā bèi wù huì le ， gǎn dào hěn wěi qū ， rěn bú zhù liú xià le yǎn lèi 。"
+    "example_pinyin": "tā bèi wù huì le ， gǎn dào hěn wěi qu ， rěn bu zhù liú xià le yǎn lèi 。"
   },
   {
     "id": 1907,
@@ -11676,7 +11676,7 @@
     "id": 1909,
     "hsk_level": 5,
     "chinese": "位置",
-    "pinyin": "wèi zhi",
+    "pinyin": "wèi zhì",
     "example_zh": "请找好自己的位置，然后坐下，活动马上开始。",
     "example_ko": "자신의 자리를 찾은 다음 앉아주세요, 행사가 곧 시작돼요.",
     "example_pinyin": "qǐng zhǎo hǎo zì jǐ de wèi zhì ， rán hòu zuò xià ， huó dòng mǎ shàng kāi shǐ 。"
@@ -11724,7 +11724,7 @@
     "pinyin": "wēn róu",
     "example_zh": "她性格温柔，说话轻声细语，让人感到很舒服。",
     "example_ko": "그녀는 성격이 온화해서 말을 조용하고 부드럽게 해서 편안하게 느껴져.",
-    "example_pinyin": "tā xìng gé wēn róu ， shuō huà qīng shēng xì yǔ ， ràng rén gǎn dào hěn shū fú 。"
+    "example_pinyin": "tā xìng gé wēn róu ， shuō huà qīng shēng xì yǔ ， ràng rén gǎn dào hěn shū fu 。"
   },
   {
     "id": 1915,
@@ -11733,7 +11733,7 @@
     "pinyin": "wén",
     "example_zh": "他一进厨房就闻到了饭菜的香味，肚子开始饿了。",
     "example_ko": "그는 주방에 들어가자마자 밥과 반찬의 향기를 맡아서 배가 고파지기 시작했어.",
-    "example_pinyin": "tā yī jìn chú fáng jiù wén dào le fàn cài de xiāng wèi ， dǔ zi kāi shǐ è le 。"
+    "example_pinyin": "tā yī jìn chú fáng jiù wén dào le fàn cài de xiāng wèi ， dù zi kāi shǐ è le 。"
   },
   {
     "id": 1916,
@@ -11778,7 +11778,7 @@
     "pinyin": "wěn",
     "example_zh": "他轻轻地吻了她的额头，表达了自己的深情。",
     "example_ko": "그는 그녀의 이마에 살며시 키스해서 자신의 깊은 정을 표현했어.",
-    "example_pinyin": "tā qīng qīng dì wěn le tā de é tóu ， biǎo dá le zì jǐ de shēn qíng 。"
+    "example_pinyin": "tā qīng qīng de wěn le tā de é tóu ， biǎo dá le zì jǐ de shēn qíng 。"
   },
   {
     "id": 1921,
@@ -11805,7 +11805,7 @@
     "pinyin": "wò shì",
     "example_zh": "她把卧室装饰得很温馨，挂了很多照片和小摆件。",
     "example_ko": "그녀는 침실을 아늑하게 꾸며서 사진과 작은 장식품을 많이 걸었어.",
-    "example_pinyin": "tā bǎ wò shì zhuāng shì dé hěn wēn xīn ， guà le hěn duō zhào piān hé xiǎo bǎi jiàn 。"
+    "example_pinyin": "tā bǎ wò shì zhuāng shì de hěn wēn xīn ， guà le hěn duō zhào piàn hé xiǎo bǎi jiàn 。"
   },
   {
     "id": 1924,
@@ -11814,7 +11814,7 @@
     "pinyin": "wū zi",
     "example_zh": "他住的屋子虽然小，但收拾得非常干净整洁。",
     "example_ko": "그가 사는 방은 작지만 매우 깔끔하게 정리되어 있어.",
-    "example_pinyin": "tā zhù de wū zi suī rán xiǎo ， dàn shōu shí dé fēi cháng gān jìng zhěng jié 。"
+    "example_pinyin": "tā zhù de wū zi suī rán xiǎo ， dàn shōu shi de fēi cháng gān jìng zhěng jié 。"
   },
   {
     "id": 1925,
@@ -11823,7 +11823,7 @@
     "pinyin": "wú nài",
     "example_zh": "他无奈地接受了这个结果，虽然不甘心，但没有办法。",
     "example_ko": "그는 어쩔 수 없이 이 결과를 받아들였어, 억울하지만 방법이 없었어.",
-    "example_pinyin": "tā wú nài dì jiē shòu le zhè ge jié guǒ ， suī rán bù gān xīn ， dàn méi yǒu bàn fǎ 。"
+    "example_pinyin": "tā wú nài de jiē shòu le zhè ge jié guǒ ， suī rán bù gān xīn ， dàn méi yǒu bàn fǎ 。"
   },
   {
     "id": 1926,
@@ -11886,7 +11886,7 @@
     "pinyin": "xī shōu",
     "example_zh": "他学习能力很强，能快速吸收新知识。",
     "example_ko": "그는 학습 능력이 강해서 새로운 지식을 빠르게 흡수할 수 있어.",
-    "example_pinyin": "tā xué xí néng lì hěn qiáng ， néng kuài sù xī shōu xīn zhī shí 。"
+    "example_pinyin": "tā xué xí néng lì hěn qiáng ， néng kuài sù xī shōu xīn zhī shi 。"
   },
   {
     "id": 1933,
@@ -11913,7 +11913,7 @@
     "pinyin": "xì jié",
     "example_zh": "他做事非常注重细节，每一个小地方都处理得很好。",
     "example_ko": "그는 일할 때 세부 사항을 매우 중시해서 모든 작은 부분을 잘 처리해.",
-    "example_pinyin": "tā zuò shì fēi cháng zhù zhòng xì jié ， měi yí gè xiǎo dì fāng dōu chǔ lǐ dé hěn hǎo 。"
+    "example_pinyin": "tā zuò shì fēi cháng zhù zhòng xì jié ， měi yí gè xiǎo dì fang dōu chǔ lǐ de hěn hǎo 。"
   },
   {
     "id": 1936,
@@ -11931,7 +11931,7 @@
     "pinyin": "xiā",
     "example_zh": "不要瞎说，没有证据就不能随便指责别人。",
     "example_ko": "함부로 말하지 마, 증거도 없이 마음대로 다른 사람을 비난하면 안 돼.",
-    "example_pinyin": "bú yào xiā shuō ， méi yǒu zhèng jù jiù bù néng suí biàn zhǐ zé bié rén 。"
+    "example_pinyin": "bú yào xiā shuō ， méi yǒu zhèng jù jiù bù néng suí biàn zhǐ zé bié ren 。"
   },
   {
     "id": 1938,
@@ -11949,7 +11949,7 @@
     "pinyin": "xià zǎi",
     "example_zh": "请从官网下载最新版本的软件，以获得最佳体验。",
     "example_ko": "최상의 경험을 위해 공식 사이트에서 최신 버전의 소프트웨어를 다운로드해주세요.",
-    "example_pinyin": "qǐng cóng guān wǎng xià zài zuì xīn bǎn běn de ruǎn jiàn ， yǐ huò dé zuì jiā tǐ yàn 。"
+    "example_pinyin": "qǐng cóng guān wǎng xià zǎi zuì xīn bǎn běn de ruǎn jiàn ， yǐ huò dé zuì jiā tǐ yàn 。"
   },
   {
     "id": 1940,
@@ -12039,7 +12039,7 @@
     "pinyin": "xiāng dāng",
     "example_zh": "这道菜的味道相当不错，值得再来吃一次。",
     "example_ko": "이 음식의 맛이 상당히 괜찮아서 또 먹으러 올 만해.",
-    "example_pinyin": "zhè dào cài de wèi dào xiāng dāng bù cuò ， zhí de zài lái chī yī cì 。"
+    "example_pinyin": "zhè dào cài de wèi dao xiāng dāng bù cuò ， zhí de zài lái chī yī cì 。"
   },
   {
     "id": 1950,
@@ -12084,7 +12084,7 @@
     "pinyin": "xiǎng xiàng",
     "example_zh": "他脑子里有很强的想象力，总是能想出别人想不到的方案。",
     "example_ko": "그는 상상력이 매우 풍부해서 항상 다른 사람이 생각하지 못하는 방안을 생각해내.",
-    "example_pinyin": "tā nǎo zi lǐ yǒu hěn qiáng de xiǎng xiàng lì ， zǒng shì néng xiǎng chū bié rén xiǎng bú dào de fāng àn 。"
+    "example_pinyin": "tā nǎo zi lǐ yǒu hěn qiáng de xiǎng xiàng lì ， zǒng shì néng xiǎng chū bié ren xiǎng bú dào de fāng àn 。"
   },
   {
     "id": 1955,
@@ -12102,7 +12102,7 @@
     "pinyin": "xiàng",
     "example_zh": "这份合同共有十项条款，每一项都需要仔细阅读。",
     "example_ko": "이 계약서에는 총 10개 조항이 있어서 모든 항목을 꼼꼼히 읽어야 해.",
-    "example_pinyin": "zhè fèn hé tóng gòng yǒu shí xiàng tiáo kuǎn ， měi yī xiàng dōu xū yào zǐ xì yuè dú 。"
+    "example_pinyin": "zhè fèn hé tong gòng yǒu shí xiàng tiáo kuǎn ， měi yī xiàng dōu xū yào zǐ xì yuè dú 。"
   },
   {
     "id": 1957,
@@ -12138,7 +12138,7 @@
     "pinyin": "xiàng qí",
     "example_zh": "他的爷爷很喜欢下象棋，每天和邻居对弈两局。",
     "example_ko": "그의 할아버지는 장기 두는 걸 매우 좋아해서 매일 이웃과 두 판을 둬.",
-    "example_pinyin": "tā de yé yé hěn xǐ huān xià xiàng qí ， měi tiān hé lín jū duì yì liǎng jú 。"
+    "example_pinyin": "tā de yé ye hěn xǐ huān xià xiàng qí ， měi tiān hé lín jū duì yì liǎng jú 。"
   },
   {
     "id": 1961,
@@ -12147,7 +12147,7 @@
     "pinyin": "xiàng zhēng",
     "example_zh": "龙在中国文化中象征着力量和好运。",
     "example_ko": "용은 중국 문화에서 힘과 행운을 상징해.",
-    "example_pinyin": "lóng zài zhōng guó wén huà zhōng xiàng zhēng zhuó lì liàng hé hǎo yùn 。"
+    "example_pinyin": "lóng zài zhōng guó wén huà zhōng xiàng zhēng zhe lì liang hé hǎo yùn 。"
   },
   {
     "id": 1962,
@@ -12165,7 +12165,7 @@
     "pinyin": "xiāo huà",
     "example_zh": "饭后适当散步有助于消化，对胃肠道有好处。",
     "example_ko": "식사 후 적당히 산책하면 소화를 돕고 소화기관에 좋아.",
-    "example_pinyin": "fàn hòu shì dàng sàn bù yǒu zhù yú xiāo huà ， duì wèi cháng dào yǒu hǎo chù 。"
+    "example_pinyin": "fàn hòu shì dàng sàn bù yǒu zhù yú xiāo huà ， duì wèi cháng dào yǒu hǎo chu 。"
   },
   {
     "id": 1964,
@@ -12219,7 +12219,7 @@
     "pinyin": "xiǎo mài",
     "example_zh": "中国北方以小麦为主要粮食，南方以水稻为主。",
     "example_ko": "중국 북부는 밀이 주요 식량이고 남부는 쌀이 주요 식량이야.",
-    "example_pinyin": "zhōng guó běi fāng yǐ xiǎo mài wéi zhǔ yào liáng shí ， nán fāng yǐ shuǐ dào wéi zhǔ 。"
+    "example_pinyin": "zhōng guó běi fāng yǐ xiǎo mài wéi zhǔ yào liáng shi ， nán fāng yǐ shuǐ dào wéi zhǔ 。"
   },
   {
     "id": 1970,
@@ -12255,7 +12255,7 @@
     "pinyin": "xiào shùn",
     "example_zh": "他非常孝顺，每逢节假日都会回家陪父母。",
     "example_ko": "그는 매우 효성스러워서 명절마다 집에 돌아가서 부모님 곁에 있어.",
-    "example_pinyin": "tā fēi cháng xiào shùn ， měi féng jié jià rì dū huì huí jiā péi fù mǔ 。"
+    "example_pinyin": "tā fēi cháng xiào shùn ， měi féng jié jià rì dōu huì huí jiā péi fù mǔ 。"
   },
   {
     "id": 1974,
@@ -12264,7 +12264,7 @@
     "pinyin": "xiē",
     "example_zh": "工作了三个小时，他出去歇了一会儿，喝了杯咖啡。",
     "example_ko": "3시간을 일하고 나서 그는 잠깐 쉬러 나갔다가 커피 한 잔을 마셨어.",
-    "example_pinyin": "gōng zuò le sān gè xiǎo shí ， tā chū qù xiē le yī huì er ， hē le bēi kā fēi 。"
+    "example_pinyin": "gōng zuò le sān gè xiǎo shí ， tā chū qù xiē le yí huìr ， hē le bēi kā fēi 。"
   },
   {
     "id": 1975,
@@ -12273,7 +12273,7 @@
     "pinyin": "xié",
     "example_zh": "那棵大树因为风吹得有些斜，需要加固支撑。",
     "example_ko": "그 큰 나무가 바람에 좀 기울어서 지지대를 보강해야 해.",
-    "example_pinyin": "nà kē dà shù yīn wèi fēng chuī dé yǒu xiē xié ， xū yào jiā gù zhī chēng 。"
+    "example_pinyin": "nà kē dà shù yīn wèi fēng chuī de yǒu xiē xié ， xū yào jiā gù zhī chēng 。"
   },
   {
     "id": 1976,
@@ -12426,7 +12426,7 @@
     "pinyin": "xìng zhì",
     "example_zh": "这件事的性质很严重，需要认真对待，不能马虎。",
     "example_ko": "이 일의 성질이 매우 심각해서 진지하게 대처해야 해, 대충 해서는 안 돼.",
-    "example_pinyin": "zhè jiàn shì de xìng zhì hěn yán zhòng ， xū yào rèn zhēn duì dài ， bù néng mǎ hǔ 。"
+    "example_pinyin": "zhè jiàn shì de xìng zhì hěn yán zhòng ， xū yào rèn zhēn duì dài ， bù néng mǎ hu 。"
   },
   {
     "id": 1993,
@@ -12471,7 +12471,7 @@
     "pinyin": "xióng wěi",
     "example_zh": "这座山雄伟壮观，山顶终年积雪，吸引了无数登山者。",
     "example_ko": "이 산은 웅장하고 장관이야, 산꼭대기에 일 년 내내 눈이 쌓여 있어서 수많은 등산객을 끌어들여.",
-    "example_pinyin": "zhè zuò shān xióng wěi zhuàng guān ， shān dǐng zhōng nián jī xuě ， xī yǐn liǎo wú shù dēng shān zhě 。"
+    "example_pinyin": "zhè zuò shān xióng wěi zhuàng guān ， shān dǐng zhōng nián jī xuě ， xī yǐn le wú shù dēng shān zhě 。"
   },
   {
     "id": 1998,
@@ -12498,7 +12498,7 @@
     "pinyin": "xū xīn",
     "example_zh": "学习时要保持虚心的态度，不耻下问。",
     "example_ko": "공부할 때 겸손한 태도를 유지해야 해, 아랫사람에게 배우기를 부끄러워해서는 안 돼.",
-    "example_pinyin": "xué xí shí yào bǎo chí xū xīn de tài dù ， bù chǐ xià wèn 。"
+    "example_pinyin": "xué xí shí yào bǎo chí xū xīn de tài du ， bù chǐ xià wèn 。"
   },
   {
     "id": 2001,
@@ -12507,7 +12507,7 @@
     "pinyin": "xù shù",
     "example_zh": "他详细叙述了事情的经过，让大家明白了发生了什么。",
     "example_ko": "그는 사건의 경위를 자세히 서술해서 모두가 무슨 일이 있었는지 이해하게 했어.",
-    "example_pinyin": "tā xiáng xì xù shù liǎo shì qíng de jīng guò ， ràng dà jiā míng bái le fā shēng le shén me 。"
+    "example_pinyin": "tā xiáng xì xù shù le shì qíng de jīng guò ， ràng dà jiā míng bai le fā shēng le shén me 。"
   },
   {
     "id": 2002,
@@ -12516,7 +12516,7 @@
     "pinyin": "xuān bù",
     "example_zh": "公司宣布了新的合并计划，消息一出，股价立刻上涨。",
     "example_ko": "회사가 새로운 합병 계획을 선포했는데 소식이 나오자마자 주가가 즉시 올랐어.",
-    "example_pinyin": "gōng sī xuān bù le xīn de hé bìng jì huà ， xiāo xī yī chū ， gǔ jià lì kè shàng zhǎng 。"
+    "example_pinyin": "gōng sī xuān bù le xīn de hé bìng jì huà ， xiāo xi yī chū ， gǔ jià lì kè shàng zhǎng 。"
   },
   {
     "id": 2003,
@@ -12624,7 +12624,7 @@
     "pinyin": "yàn huì",
     "example_zh": "公司每年都会举办年终宴会，庆祝一年来的成就。",
     "example_ko": "회사는 매년 연말 연회를 열어서 한 해의 성취를 축하해.",
-    "example_pinyin": "gōng sī měi nián dū huì jǔ bàn nián zhōng yàn huì ， qìng zhù yī nián lái de chéng jiù 。"
+    "example_pinyin": "gōng sī měi nián dōu huì jǔ bàn nián zhōng yàn huì ， qìng zhù yī nián lái de chéng jiù 。"
   },
   {
     "id": 2015,
@@ -12642,7 +12642,7 @@
     "pinyin": "yǎng",
     "example_zh": "被蚊子咬了之后，皮肤一直很痒，忍不住想抓。",
     "example_ko": "모기에 물린 후 피부가 계속 가려워서 참지 못하고 긁고 싶어.",
-    "example_pinyin": "bèi wén zi yǎo le zhī hòu ， pí fū yì zhí hěn yǎng ， rěn bú zhù xiǎng zhuā 。"
+    "example_pinyin": "bèi wén zi yǎo le zhī hòu ， pí fū yì zhí hěn yǎng ， rěn bu zhù xiǎng zhuā 。"
   },
   {
     "id": 2017,
@@ -12660,7 +12660,7 @@
     "pinyin": "yāo",
     "example_zh": "他长时间坐在电脑前，腰疼得很厉害，需要多休息。",
     "example_ko": "그는 오랫동안 컴퓨터 앞에 앉아서 허리가 많이 아파서 더 쉬어야 해.",
-    "example_pinyin": "tā zhǎng shí jiān zuò zài diàn nǎo qián ， yāo téng dé hěn lì hài ， xū yào duō xiū xī 。"
+    "example_pinyin": "tā zhǎng shí jiān zuò zài diàn nǎo qián ， yāo téng de hěn lì hai ， xū yào duō xiū xī 。"
   },
   {
     "id": 2019,
@@ -12696,7 +12696,7 @@
     "pinyin": "yào shi",
     "example_zh": "要是明天天气好，我们就去郊外野餐。",
     "example_ko": "만약 내일 날씨가 좋으면 우리는 교외로 소풍 가자.",
-    "example_pinyin": "yào shì míng tiān tiān qì hǎo ， wǒ men jiù qù jiāo wài yě cān 。"
+    "example_pinyin": "yào shi míng tiān tiān qì hǎo ， wǒ men jiù qù jiāo wài yě cān 。"
   },
   {
     "id": 2023,
@@ -12777,7 +12777,7 @@
     "pinyin": "yī zhì",
     "example_zh": "团队成员要意见一致，才能高效地合作。",
     "example_ko": "팀원들이 의견이 일치해야 효율적으로 협력할 수 있어.",
-    "example_pinyin": "tuán duì chéng yuán yào yì jiàn yí zhì ， cái néng gāo xiào dì hé zuò 。"
+    "example_pinyin": "tuán duì chéng yuán yào yì jiàn yí zhì ， cái néng gāo xiào de hé zuò 。"
   },
   {
     "id": 2032,
@@ -12894,7 +12894,7 @@
     "pinyin": "yīn sù",
     "example_zh": "成功的因素有很多，包括努力、天赋和运气。",
     "example_ko": "성공의 요소는 많아서 노력, 재능, 운이 포함돼.",
-    "example_pinyin": "chéng gōng de yīn sù yǒu hěn duō ， bāo kuò nǔ lì 、 tiān fù hé yùn qì 。"
+    "example_pinyin": "chéng gōng de yīn sù yǒu hěn duō ， bāo kuò nǔ lì 、 tiān fù hé yùn qi 。"
   },
   {
     "id": 2045,
@@ -12903,7 +12903,7 @@
     "pinyin": "yín",
     "example_zh": "她戴着一只银戒指，在阳光下闪闪发光。",
     "example_ko": "그녀는 은반지를 끼고 있는데 햇빛 아래 반짝반짝 빛나.",
-    "example_pinyin": "tā dài zhe yī zhī yín jiè zhǐ ， zài yáng guāng xià shǎn shǎn fā guāng 。"
+    "example_pinyin": "tā dài zhe yī zhī yín jiè zhi ， zài yáng guāng xià shǎn shǎn fā guāng 。"
   },
   {
     "id": 2046,
@@ -12912,7 +12912,7 @@
     "pinyin": "yīng jùn",
     "example_zh": "他长得非常英俊，在公司里很受女同事欢迎。",
     "example_ko": "그는 매우 잘생겨서 회사에서 여자 동료들에게 인기가 많아.",
-    "example_pinyin": "tā zhǎng dé fēi cháng yīng jùn ， zài gōng sī lǐ hěn shòu nǚ tóng shì huān yíng 。"
+    "example_pinyin": "tā zhǎng de fēi cháng yīng jùn ， zài gōng sī lǐ hěn shòu nǚ tóng shì huān yíng 。"
   },
   {
     "id": 2047,
@@ -12957,7 +12957,7 @@
     "pinyin": "yǐng zi",
     "example_zh": "傍晚时分，他的影子被夕阳拉得很长，投在地上。",
     "example_ko": "저녁 무렵 그의 그림자가 석양에 길게 늘어져서 바닥에 드리워졌어.",
-    "example_pinyin": "bàng wǎn shí fēn ， tā de yǐng zi bèi xī yáng lā dé hěn zhǎng ， tóu zài dì shàng 。"
+    "example_pinyin": "bàng wǎn shí fēn ， tā de yǐng zi bèi xī yáng lā de hěn zhǎng ， tóu zài dì shàng 。"
   },
   {
     "id": 2052,
@@ -12984,7 +12984,7 @@
     "pinyin": "yìng fu",
     "example_zh": "他有时候处理问题的方式有些应付，不够认真。",
     "example_ko": "그는 때때로 문제 처리 방식이 좀 대충이어서 충분히 진지하지 않아.",
-    "example_pinyin": "tā yǒu shí hòu chǔ lǐ wèn tí de fāng shì yǒu xiē yìng fù ， bù gòu rèn zhēn 。"
+    "example_pinyin": "tā yǒu shí hòu chǔ lǐ wèn tí de fāng shì yǒu xiē yìng fu ， bù gòu rèn zhēn 。"
   },
   {
     "id": 2055,
@@ -13002,7 +13002,7 @@
     "pinyin": "yìng yòng",
     "example_zh": "他把学到的知识应用到实际工作中，取得了很好的效果。",
     "example_ko": "그는 배운 지식을 실제 업무에 응용해서 좋은 효과를 거뒀어.",
-    "example_pinyin": "tā bǎ xué dào de zhī shí yìng yòng dào shí jì gōng zuò zhōng ， qǔ dé le hěn hǎo de xiào guǒ 。"
+    "example_pinyin": "tā bǎ xué dào de zhī shi yìng yòng dào shí jì gōng zuò zhōng ， qǔ dé le hěn hǎo de xiào guǒ 。"
   },
   {
     "id": 2057,
@@ -13011,7 +13011,7 @@
     "pinyin": "yōng bào",
     "example_zh": "久别重逢后，他们紧紧地拥抱在一起，激动不已。",
     "example_ko": "오랫동안 헤어졌다가 다시 만나서 그들은 꼭 껴안았어, 감격스러워했어.",
-    "example_pinyin": "jiǔ bié chóng féng hòu ， tā men jǐn jǐn dì yōng bào zài yì qǐ ， jī dòng bù yǐ 。"
+    "example_pinyin": "jiǔ bié chóng féng hòu ， tā men jǐn jǐn de yōng bào zài yì qǐ ， jī dòng bù yǐ 。"
   },
   {
     "id": 2058,
@@ -13110,7 +13110,7 @@
     "pinyin": "yóu yù",
     "example_zh": "他犹豫了很久，最终还是决定接受那份工作。",
     "example_ko": "그는 오랫동안 망설이다가 결국 그 직장을 수락하기로 결정했어.",
-    "example_pinyin": "tā yóu yù le hěn jiǔ ， zuì zhōng hái shì jué dìng jiē shòu nà fèn gōng zuò 。"
+    "example_pinyin": "tā yóu yù le hěn jiǔ ， zuì zhōng hái shi jué dìng jiē shòu nà fèn gōng zuò 。"
   },
   {
     "id": 2069,
@@ -13128,7 +13128,7 @@
     "pinyin": "yòu ér yuán",
     "example_zh": "她的孩子今年开始上幼儿园，适应得很快。",
     "example_ko": "그녀의 아이가 올해 유치원에 다니기 시작했는데 적응이 빨라.",
-    "example_pinyin": "tā de hái zi jīn nián kāi shǐ shàng yòu ér yuán ， shì yìng dé hěn kuài 。"
+    "example_pinyin": "tā de hái zi jīn nián kāi shǐ shàng yòu ér yuán ， shì yìng de hěn kuài 。"
   },
   {
     "id": 2071,
@@ -13263,7 +13263,7 @@
     "pinyin": "yùn qi",
     "example_zh": "他今天运气很好，找到了停车位，还遇到了老朋友。",
     "example_ko": "그는 오늘 운이 좋아서 주차 자리를 찾고 옛 친구도 만났어.",
-    "example_pinyin": "tā jīn tiān yùn qì hěn hǎo ， zhǎo dào le tíng chē wèi ， hái yù dào le lǎo péng yǒu 。"
+    "example_pinyin": "tā jīn tiān yùn qi hěn hǎo ， zhǎo dào le tíng chē wèi ， hái yù dào le lǎo péng yǒu 。"
   },
   {
     "id": 2086,
@@ -13299,7 +13299,7 @@
     "pinyin": "zài sān",
     "example_zh": "她再三叮嘱他出门要带钥匙，但他还是忘了。",
     "example_ko": "그녀는 외출할 때 열쇠를 챙기라고 거듭 당부했는데 그는 여전히 잊어버렸어.",
-    "example_pinyin": "tā zài sān dīng zhǔ tā chū mén yào dài yào shi ， dàn tā hái shì wàng le 。"
+    "example_pinyin": "tā zài sān dīng zhǔ tā chū mén yào dài yào shi ， dàn tā hái shi wàng le 。"
   },
   {
     "id": 2090,
@@ -13335,7 +13335,7 @@
     "pinyin": "zào chéng",
     "example_zh": "这次失误造成了很大的损失，需要认真总结教训。",
     "example_ko": "이번 실수가 큰 손실을 초래했어서 교훈을 진지하게 정리해야 해.",
-    "example_pinyin": "zhè cì shī wù zào chéng le hěn dà de sǔn shī ， xū yào rèn zhēn zǒng jié jiào xùn 。"
+    "example_pinyin": "zhè cì shī wù zào chéng le hěn dà de sǔn shī ， xū yào rèn zhēn zǒng jié jiào xun 。"
   },
   {
     "id": 2094,
@@ -13371,7 +13371,7 @@
     "pinyin": "zhān tiē",
     "example_zh": "她把照片粘贴在日记本上，留作美好的回忆。",
     "example_ko": "그녀는 사진을 일기장에 붙여서 아름다운 추억으로 남겼어.",
-    "example_pinyin": "tā bǎ zhào piān zhān tiē zài rì jì běn shàng ， liú zuò měi hǎo de huí yì 。"
+    "example_pinyin": "tā bǎ zhào piàn zhān tiē zài rì jì běn shàng ， liú zuò měi hǎo de huí yì 。"
   },
   {
     "id": 2098,
@@ -13398,7 +13398,7 @@
     "pinyin": "zhàn zhēng",
     "example_zh": "战争带来了无尽的苦难，和平才是人类最大的愿望。",
     "example_ko": "전쟁은 끝없는 고통을 가져다주니 평화야말로 인류 최대의 소망이야.",
-    "example_pinyin": "zhàn zhēng dài lái liǎo wú jǐn de kǔ nàn ， hé píng cái shì rén lèi zuì dà de yuàn wàng 。"
+    "example_pinyin": "zhàn zhēng dài lái le wú jǐn de kǔ nàn ， hé píng cái shì rén lèi zuì dà de yuàn wàng 。"
   },
   {
     "id": 2101,
@@ -13407,7 +13407,7 @@
     "pinyin": "zhàn xiàn",
     "example_zh": "我给他打电话，一直占线，可能他在和别人通话。",
     "example_ko": "그에게 전화했는데 계속 통화 중이야, 다른 사람과 통화 중인 것 같아.",
-    "example_pinyin": "wǒ gěi tā dǎ diàn huà ， yì zhí zhàn xiàn ， kě néng tā zài hé bié rén tōng huà 。"
+    "example_pinyin": "wǒ gěi tā dǎ diàn huà ， yì zhí zhàn xiàn ， kě néng tā zài hé bié ren tōng huà 。"
   },
   {
     "id": 2102,
@@ -13443,7 +13443,7 @@
     "pinyin": "zhāo dài",
     "example_zh": "他们热情地招待了从远方来的客人，安排了丰盛的晚宴。",
     "example_ko": "그들은 멀리서 온 손님을 열정적으로 접대해서 풍성한 저녁 만찬을 준비했어.",
-    "example_pinyin": "tā men rè qíng dì zhāo dài le cóng yuǎn fāng lái de kè rén ， ān pái le fēng shèng de wǎn yàn 。"
+    "example_pinyin": "tā men rè qíng de zhāo dài le cóng yuǎn fāng lái de kè rén ， ān pái le fēng shèng de wǎn yàn 。"
   },
   {
     "id": 2106,
@@ -13461,7 +13461,7 @@
     "pinyin": "zhào cháng",
     "example_zh": "虽然下大雨，但商店还是照常营业，没有关门。",
     "example_ko": "큰 비가 내렸지만 가게는 여전히 평소대로 영업하며 문을 닫지 않았어.",
-    "example_pinyin": "suī rán xià dà yǔ ， dàn shāng diàn hái shì zhào cháng yíng yè ， méi yǒu guān mén 。"
+    "example_pinyin": "suī rán xià dà yǔ ， dàn shāng diàn hái shi zhào cháng yíng yè ， méi yǒu guān mén 。"
   },
   {
     "id": 2108,
@@ -13839,7 +13839,7 @@
     "pinyin": "zhōng xīn",
     "example_zh": "购物中心里有很多商店和餐厅，非常热闹。",
     "example_ko": "쇼핑센터에 가게와 식당이 많아서 매우 시끌벅적해.",
-    "example_pinyin": "gòu wù zhōng xīn lǐ yǒu hěn duō shāng diàn hé cān tīng ， fēi cháng rè nào 。"
+    "example_pinyin": "gòu wù zhōng xīn lǐ yǒu hěn duō shāng diàn hé cān tīng ， fēi cháng rè nao 。"
   },
   {
     "id": 2150,
@@ -13857,7 +13857,7 @@
     "pinyin": "zhòng",
     "example_zh": "这个行李箱太重了，我一个人搬不动，需要帮忙。",
     "example_ko": "이 여행 가방이 너무 무거워서 나 혼자 못 들어서 도움이 필요해.",
-    "example_pinyin": "zhè ge xíng lǐ xiāng tài zhòng le ， wǒ yí gè rén bān bù dòng ， xū yào bāng máng 。"
+    "example_pinyin": "zhè ge xíng li xiāng tài zhòng le ， wǒ yí gè rén bān bù dòng ， xū yào bāng máng 。"
   },
   {
     "id": 2152,
@@ -13875,7 +13875,7 @@
     "pinyin": "zhōu dao",
     "example_zh": "她服务非常周到，客人的每一个需求都被满足了。",
     "example_ko": "그녀의 서비스는 매우 주도면밀해서 손님의 모든 수요가 충족됐어.",
-    "example_pinyin": "tā fú wù fēi cháng zhōu dào ， kè rén de měi yí gè xū qiú dōu bèi mǎn zú le 。"
+    "example_pinyin": "tā fú wù fēi cháng zhōu dao ， kè rén de měi yí gè xū qiú dōu bèi mǎn zú le 。"
   },
   {
     "id": 2154,
@@ -13911,7 +13911,7 @@
     "pinyin": "zhǔ chí",
     "example_zh": "她主持了这次颁奖典礼，表现得非常专业大方。",
     "example_ko": "그녀는 이번 시상식을 진행했는데 매우 전문적이고 당당하게 해냈어.",
-    "example_pinyin": "tā zhǔ chí le zhè cì bān jiǎng diǎn lǐ ， biǎo xiàn dé fēi cháng zhuān yè dà fāng 。"
+    "example_pinyin": "tā zhǔ chí le zhè cì bān jiǎng diǎn lǐ ， biǎo xiàn de fēi cháng zhuān yè dà fang 。"
   },
   {
     "id": 2158,
@@ -14037,7 +14037,7 @@
     "pinyin": "zhuāng shì",
     "example_zh": "她精心装饰了家里，把房间布置得非常温馨。",
     "example_ko": "그녀는 집을 정성껏 꾸며서 방을 매우 아늑하게 만들었어.",
-    "example_pinyin": "tā jīng xīn zhuāng shì le jiā lǐ ， bǎ fáng jiān bù zhì dé fēi cháng wēn xīn 。"
+    "example_pinyin": "tā jīng xīn zhuāng shì le jiā lǐ ， bǎ fáng jiān bù zhì de fēi cháng wēn xīn 。"
   },
   {
     "id": 2172,
@@ -14064,7 +14064,7 @@
     "pinyin": "zhuī qiú",
     "example_zh": "他一生都在追求真理和知识，从未停止学习。",
     "example_ko": "그는 평생 진리와 지식을 추구하며 배움을 멈추지 않았어.",
-    "example_pinyin": "tā yī shēng dōu zài zhuī qiú zhēn lǐ hé zhī shí ， cóng wèi tíng zhǐ xué xí 。"
+    "example_pinyin": "tā yī shēng dōu zài zhuī qiú zhēn lǐ hé zhī shi ， cóng wèi tíng zhǐ xué xí 。"
   },
   {
     "id": 2175,
@@ -14181,7 +14181,7 @@
     "pinyin": "zì sī",
     "example_zh": "他为人自私，只考虑自己的利益，不顾及别人的感受。",
     "example_ko": "그는 이기적이어서 자신의 이익만 생각하고 다른 사람의 감정을 배려하지 않아.",
-    "example_pinyin": "tā wéi rén zì sī ， zhǐ kǎo lǜ zì jǐ de lì yì ， bù gù jí bié rén de gǎn shòu 。"
+    "example_pinyin": "tā wéi rén zì sī ， zhǐ kǎo lǜ zì jǐ de lì yì ， bù gù jí bié ren de gǎn shòu 。"
   },
   {
     "id": 2188,
@@ -14325,7 +14325,7 @@
     "pinyin": "zuì",
     "example_zh": "他喝多了，醉得连路都走不稳，朋友扶着他回家了。",
     "example_ko": "그는 너무 많이 마셔서 취해서 걸음도 제대로 못 걸었어, 친구가 부축해서 집에 데려다줬어.",
-    "example_pinyin": "tā hē duō le ， zuì dé lián lù dōu zǒu bù wěn ， péng yǒu fú zhe tā huí jiā le 。"
+    "example_pinyin": "tā hē duō le ， zuì de lián lù dōu zǒu bù wěn ， péng yǒu fú zhe tā huí jiā le 。"
   },
   {
     "id": 2204,

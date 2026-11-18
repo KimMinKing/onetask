@@ -6,6 +6,7 @@ from sqlalchemy import create_engine, text
 from word_pair_migration import CATALOG, HSK35_CATALOG, HSK35_EXAMPLES, apply_hsk4_word_pairs, apply_hsk35_examples
 from hsk4_pair_audit import audit_hsk4_pairs
 from chinese_pair_db_audit import audit_database
+from chinese_pronunciation_overrides import WORD_SOURCE_PINYIN
 
 
 def test_hsk4_catalog_and_idempotent_migration():
@@ -18,6 +19,12 @@ def test_hsk4_catalog_and_idempotent_migration():
     assert lihai["meaning"] == "대단하다, 굉장하다"
     assert "说得太厉害了" in lihai["example_zh"]
     assert "shuō de tài lì hai le" in lihai["example_pinyin"]
+    doctor = next(pair for pair in pairs if pair["chinese"] == "大夫")
+    assert doctor["example_pinyin"] == "dù zi téng de lì hai，děi qù kàn dài fu。"
+    assert next(pair for pair in pairs if pair["id"] == 639)["pinyin"] == "qǐ lai"
+    assert "gāo xìng de" in next(pair for pair in pairs if pair["id"] == 319)["example_pinyin"]
+    assert "dōu huì zhǔ dòng dǎ zhāo hu" in next(
+        pair for pair in pairs if pair["id"] == 580)["example_pinyin"]
 
     engine = create_engine("sqlite://")
     with engine.begin() as connection:
@@ -59,11 +66,20 @@ def test_hsk4_catalog_and_idempotent_migration():
 
 
 def test_hsk35_replacements_name_the_taught_word_and_apply_once():
-    assert len(HSK35_EXAMPLES) == 10
+    assert len(HSK35_EXAMPLES) == 11
     assert all(word in example for _, _, word, _, example, _, _ in HSK35_EXAMPLES)
     pairs = json.loads(Path(HSK35_CATALOG).read_text(encoding="utf-8"))
     assert len(pairs) == 1599
     assert all(pair["chinese"] in pair["example_zh"] for pair in pairs)
+    readings = {pair["chinese"]: pair["example_pinyin"] for pair in pairs}
+    assert "màn màn de zǒu" in readings["地"]
+    assert "děng yí huìr" in readings["一会儿"]
+    assert "jí de bù dé liǎo" in readings["不得了"]
+    assert "gàn huór" in readings["干活儿"]
+    assert "guài bu de" in readings["怪不得"]
+    assert "shàn zi" in readings["扇子"]
+    assert "rǎng" in readings["嚷"]
+    assert "xù shù le" in next(pair for pair in pairs if pair["id"] == 2001)["example_pinyin"]
     engine = create_engine("sqlite://")
     with engine.begin() as connection:
         connection.execute(text("""
@@ -120,3 +136,32 @@ def test_all_2200_stored_example_pairs_match_their_catalog():
     with engine.begin() as connection:
         connection.execute(text("UPDATE words SET example_pinyin='wrong' WHERE id=584"))
     assert audit_database(engine).mismatches == [(4, 584, "厉害", ("example_pinyin",))]
+
+
+def test_legacy_lexical_readings_are_repaired_on_startup():
+    hsk4 = [dict(pair, hsk_level=4) for pair in json.loads(Path(CATALOG).read_text(encoding="utf-8"))]
+    hsk35 = json.loads(Path(HSK35_CATALOG).read_text(encoding="utf-8"))
+    engine = create_engine("sqlite://")
+    with engine.begin() as connection:
+        connection.execute(text("""
+            CREATE TABLE words (
+                id INTEGER PRIMARY KEY, hsk_level INTEGER, chinese TEXT, pinyin TEXT,
+                meaning TEXT, example_zh TEXT, example_ko TEXT, example_pinyin TEXT
+            )
+        """))
+        connection.execute(text("CREATE TABLE migration_markers (name TEXT PRIMARY KEY)"))
+        connection.execute(text("""
+            INSERT INTO words (id, hsk_level, chinese, pinyin, meaning,
+                               example_zh, example_ko, example_pinyin)
+            VALUES (:id, :hsk_level, :chinese, :pinyin, :meaning,
+                    :example_zh, :example_ko, :example_pinyin)
+        """), [{**pair, "meaning": pair.get("meaning", "old")} for pair in hsk4 + hsk35])
+        for word_id, old_pinyin in WORD_SOURCE_PINYIN.items():
+            connection.execute(text("UPDATE words SET pinyin=:pinyin WHERE id=:id"),
+                               {"id": word_id, "pinyin": old_pinyin})
+    assert len(audit_database(engine).mismatches) == len(WORD_SOURCE_PINYIN)
+    assert apply_hsk4_word_pairs(engine) == 3
+    assert apply_hsk35_examples(engine) == 6
+    assert apply_hsk4_word_pairs(engine) == 0
+    assert apply_hsk35_examples(engine) == 0
+    assert audit_database(engine).mismatches == []

@@ -15,6 +15,7 @@ import unicodedata
 from pathlib import Path
 
 from pypinyin import Style, lazy_pinyin
+from chinese_pronunciation_overrides import WORD_PINYIN_CORRECTIONS, correct_pinyin, correct_target_reading
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -54,6 +55,14 @@ MANUAL = {
     881: ("중국어", "我正在学中文。", "나는 지금 중국어를 배우고 있어."),
     885: ("돼지", "农场里有一头猪。", "농장에 돼지 한 마리가 있어."),
     908: ("산·건물 등을 세는 양사, 좌석", "窗外那座山看起来特别美。", "창밖의 저 산은 정말 아름다워 보여."),
+}
+
+# Sentence-level pronunciations that a generic character converter gets wrong.
+# Keep the exact sentence beside each override so changing the sentence forces
+# a fresh review instead of silently retaining an unrelated transcription.
+PINYIN_OVERRIDES = {
+    381: ("肚子疼得厉害，得去看大夫。", "dǔ zi téng de lì hai，děi qù kàn dài fu。"),
+    584: ("他中文说得太厉害了，跟母语者一样流利。", "tā zhōng wén shuō de tài lì hai le，gēn mǔ yǔ zhě yí yàng liú lì。"),
 }
 
 
@@ -126,6 +135,11 @@ def build_catalog() -> list[dict]:
 
     output = []
     for word_index, word in enumerate(words):
+        lexical = WORD_PINYIN_CORRECTIONS.get(word["id"])
+        if lexical:
+            if word["chinese"] != lexical[0]:
+                raise ValueError(f"Word-pinyin correction identity changed: {word['id']}")
+            word["pinyin"] = lexical[1]
         if word["id"] in MANUAL:
             meaning, example_zh, example_ko = MANUAL[word["id"]]
             example_pinyin = sentence_to_pinyin(example_zh)
@@ -139,12 +153,16 @@ def build_catalog() -> list[dict]:
                 example_pinyin = sentence_to_pinyin(example_zh)
         if word["chinese"] not in example_zh:
             raise ValueError(f"Example does not contain target word: {word['id']} {word['chinese']}")
-        if word["id"] == 584:
-            # 得 is the complement marker (de), 害 is neutral here, 一 changes
-            # tone before 样. The old sentence-level transcription missed all three.
-            example_pinyin = "tā zhōng wén shuō de tài lì hai le，gēn mǔ yǔ zhě yí yàng liú lì。"
-        if base_syllables(sentence_to_pinyin(example_zh)) != base_syllables(example_pinyin):
+        override = PINYIN_OVERRIDES.get(word["id"])
+        if override:
+            if override[0] != example_zh:
+                raise ValueError(f"Pinyin override sentence changed: {word['id']}")
+            example_pinyin = override[1]
+        if not override and base_syllables(sentence_to_pinyin(example_zh)) != base_syllables(example_pinyin):
             raise ValueError(f"Example/pinyin syllables differ: {word['id']} {word['chinese']}")
+        example_pinyin = correct_pinyin(word["id"], example_zh, example_pinyin)
+        example_pinyin = correct_target_reading(word["id"], example_zh, example_pinyin,
+                                                word["chinese"], word["pinyin"])
         output.append({**word, "meaning": meaning, "example_zh": example_zh,
                        "example_ko": example_ko, "example_pinyin": example_pinyin})
     return sorted(output, key=lambda row: row["id"])
